@@ -9,6 +9,7 @@ set(PROJ_COMMON_SOURCES
     ${CMAKE_CURRENT_LIST_DIR}/../common/Classes/Game.cpp
     ${CMAKE_CURRENT_LIST_DIR}/../common/Classes/jsb_spine_cloth.h
     ${CMAKE_CURRENT_LIST_DIR}/../common/Classes/jsb_spine_cloth.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/jni/main.cpp
 )
 ```
 3 如果替换文件(步骤1)，但是在xcode中，文件没有生效，那么需要把文件重新拖入工程。
