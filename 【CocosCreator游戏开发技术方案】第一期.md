@@ -11,5 +11,5 @@
  [立即下载]()
 </details>
 
- ![2021111101](F:\GitHub\ZheFengZhang\游戏开发技术方案\gif\2021111101.gif)
+ ![2021111101](F:\GitHub\ZheFengZhang\CococsCreator public technology solutions\gif\2021111101.gif)
 
