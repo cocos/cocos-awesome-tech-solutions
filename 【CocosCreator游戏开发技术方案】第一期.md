@@ -5,10 +5,16 @@
 ---
 *技术支持团队提供：*
 
-* (v3.3.0) 2D 光照
+* (v3.3.2) 2D 光照
 
-  > 工程 git 仓库地址: https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.2.2_2D_Light
+  > 工程 git 仓库地址: https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.3.2_2D_Light
+  
+  ![2021111101](F:\GitHub\ZheFengZhang\CococsCreator public technology solutions\gif\2021111101.gif)
 
+  
 
- ![2021111101](F:\GitHub\ZheFengZhang\CococsCreator public technology solutions\gif\2021111101.gif)
+* (v3.3.2) 2D 阴影
 
+  > 工程 git 仓库地址: https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.3.2_2D_ShadowMap
+
+  ![2021111102](F:\GitHub\ZheFengZhang\CococsCreator public technology solutions\gif\2021111102.gif)
