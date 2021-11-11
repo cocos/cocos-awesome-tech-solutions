@@ -1,0 +1,15 @@
+{
+  "__version__": "1.0.1",
+  "general": {
+    "designResolution": {
+      "fitHeight": true,
+      "fitWidth": true
+    }
+  },
+  "layer": [
+    {
+      "name": "1dmap",
+      "value": 2
+    }
+  ]
+}
