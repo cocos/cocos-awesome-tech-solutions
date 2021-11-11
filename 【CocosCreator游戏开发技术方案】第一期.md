@@ -9,8 +9,7 @@
 
   > 工程 git 仓库地址: https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.3.2_2D_Light
   >
-  > 素材来自：https://www.codeandweb.com/blog/2015/05/12/lighting-demo-cocos2d-x
-  >  https://github.com/CodeAndWeb/cocos2d-x-dynamic-lighting
+  > 素材来自：https://www.codeandweb.com/blog/2015/05/12/lighting-demo-cocos2d-x 、https://github.com/CodeAndWeb/cocos2d-x-dynamic-lighting
 
   ![2021111101](F:\GitHub\ZheFengZhang\CococsCreator public technology solutions\gif\2021111101.gif)
 
