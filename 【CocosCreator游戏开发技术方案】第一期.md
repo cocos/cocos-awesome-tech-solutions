@@ -12,7 +12,7 @@
   > 素材来自：https://www.codeandweb.com/blog/2015/05/12/lighting-demo-cocos2d-x
   >  https://github.com/CodeAndWeb/cocos2d-x-dynamic-lighting
 
-  ![2021111101](F:\GitHub\ZheFengZhang\CococsCreator public technology solutions\gif\2021111101.gif)
+  ![Image Text](https://forum.cocos.org/uploads/default/original/3X/c/4/c497caaa870db727c8441e519773accd59a31b37.gif)
 
   
 
@@ -22,7 +22,7 @@
   >
   > 素材来自：https://github.com/mattdesl/lwjgl-basics/wiki/2D-Pixel-Perfect-Shadows
   
-  ![2021111102](F:\GitHub\ZheFengZhang\CococsCreator public technology solutions\gif\2021111102.gif)
+  ![Image Text](https://forum.cocos.org/uploads/default/original/3X/5/a/5a5af7917c0762cfa697f88577af7008c2083c6c.gif)
 
 
 
@@ -30,4 +30,4 @@
 
   > 工程 git 仓库地址: https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.3.0_2D_spine_changeSlot_with_texture
   
-  ![2021111103](F:\GitHub\ZheFengZhang\CococsCreator public technology solutions\gif\2021111103.gif)
+  ![Image Text](https://forum.cocos.org/uploads/default/original/3X/5/8/58e075d2bfba69884893217aa9e76cccdffff95f.gif)
