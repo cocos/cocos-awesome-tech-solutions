@@ -1,0 +1,53 @@
+{
+  "__type__": "cc.Material",
+  "_name": "",
+  "_objFlags": 0,
+  "_native": "",
+  "_effectAsset": {
+    "__uuid__": "a9785e58-678e-4fce-85e2-0a7d5130e765",
+    "__expectedType__": "cc.EffectAsset"
+  },
+  "_techIdx": 0,
+  "_defines": [
+    {
+      "USE_TEXTURE": true,
+      "USE_2D_LIGHT": true
+    }
+  ],
+  "_states": [
+    {
+      "rasterizerState": {},
+      "depthStencilState": {},
+      "blendState": {
+        "targets": [
+          {}
+        ]
+      }
+    }
+  ],
+  "_props": [
+    {
+      "light_normal": {
+        "__uuid__": "86881bd3-d6c2-4913-bcdc-761298a0b1c6@6c48a",
+        "__expectedType__": "cc.Texture2D"
+      },
+      "light_ambientColor": {
+        "__type__": "cc.Color",
+        "r": 127,
+        "g": 127,
+        "b": 127,
+        "a": 255
+      },
+      "light_lightColor": {
+        "__type__": "cc.Color",
+        "r": 255,
+        "g": 255,
+        "b": 255,
+        "a": 255
+      },
+      "light_brightness": 0.5,
+      "light_radius": 15,
+      "light_halfRadius": 0.8
+    }
+  ]
+}

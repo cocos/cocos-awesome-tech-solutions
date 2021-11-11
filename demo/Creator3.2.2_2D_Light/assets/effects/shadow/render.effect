@@ -1,0 +1,165 @@
+// Copyright (c) 2017-2020 Xiamen Yaji Software Co., Ltd.
+CCEffect %{
+  techniques:
+  - passes:
+    - vert: shadow-rendervs:vert
+      frag: shadow-renderfs:frag
+      depthStencilState:
+        depthTest: false
+        depthWrite: false
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: src_alpha
+          blendDst: one_minus_src_alpha
+          blendDstAlpha: one_minus_src_alpha
+      rasterizerState:
+        cullMode: none
+      properties:
+        alphaThreshold:     { value: 0.5 }
+        light_shadow:       { value: white }
+        light_ambientColor: { value: [127, 127, 127, 127], editor: { type: color } }
+        light_lightColor:   { value: [255, 255, 255, 255], editor: { type: color } }
+        light_direction:    { value: [0.0, 0.0, -1.0, 0.1], editor: { type: vec4 } }
+        light_brightness:   { value: 3.0 }
+        light_cutoffRadius: { value: 0.4 }
+        light_halfRadius:   { value: 0.9 }          
+}%
+
+CCProgram shadow-rendervs %{
+  precision highp float;
+  #include <cc-global>
+  #if USE_LOCAL
+    #include <cc-local>
+  #endif
+  #if SAMPLE_FROM_RT
+    #include <common>
+  #endif
+  in vec3 a_position;
+  in vec2 a_texCoord;
+  in vec4 a_color;
+
+  out vec4 color;
+  out vec2 uv0;
+
+  vec4 vert () {
+    vec4 pos = vec4(a_position, 1);
+
+    #if USE_LOCAL
+      pos = cc_matWorld * pos;
+    #endif
+
+    #if USE_PIXEL_ALIGNMENT
+      pos = cc_matView * pos;
+      pos.xyz = floor(pos.xyz);
+      pos = cc_matProj * pos;
+    #else
+      pos = cc_matViewProj * pos;
+    #endif
+
+    uv0 = a_texCoord;
+    #if SAMPLE_FROM_RT
+      CC_HANDLE_RT_SAMPLE_FLIP(uv0);
+    #endif
+    color = a_color;
+
+    return pos;
+  }
+}%
+
+CCProgram shadow-renderfs %{
+  precision highp float;
+  #include <embedded-alpha>
+  #include <alpha-test>
+
+  in vec4 color;
+  
+  #if USE_TEXTURE
+    in vec2 uv0;
+    #pragma builtin(local)
+    layout(set = 2, binding = 10) uniform sampler2D cc_spriteTexture;
+  #endif
+
+  #if USE_2D_SHADOW
+    uniform sampler2D light_shadow;
+    uniform Constant {
+      vec4  light_ambientColor;
+      vec4  light_lightColor;
+      vec4  light_direction;
+      float light_brightness;
+      float light_cutoffRadius;
+      float light_halfRadius;
+      float light_unused;   
+    };
+
+    #define PI 3.14
+
+    // 获取1D阴影距离，如果小于R则返回1，大于R则返回0, 等于0即不可见。
+    float shadow_visible(vec2 uv) {
+      // 直角坐标转极坐标
+      vec2 norm = uv.st * 2.0 - 1.0;
+      float theta = atan(norm.y, norm.x);
+      float r = length(norm) * 1.0;	
+      float coord = (theta + PI) / (2.0*PI);
+
+      // 按理纹理的t值应该是0.0，由于我们使用camera截图，无法满足单像素的高度，所以目前是柱状图的纹理，默认取纹理中间即可
+      vec2 tc = vec2(coord, 0.5);
+
+      // 判断是否显示
+      return step(r, texture(light_shadow, tc).r);
+    }
+
+    vec4 light (vec4 col) {
+      // 计算光照偏移
+      vec2 uv0_offset = vec2(uv0.s, uv0.t);
+      uv0_offset.y = uv0_offset.y;
+
+      // 阴影
+      float visible = shadow_visible(uv0_offset);
+
+      // 计算光的强度
+      vec3 normal = vec3(0.0, 0.0, 1.0);
+      vec2 lightVec = vec2(uv0.x - light_direction.x, uv0.y - light_direction.y);      
+      float intercept = light_cutoffRadius * light_halfRadius;
+      float dx_1 = 0.5 / intercept;
+      float dx_2 = 0.5 / (light_cutoffRadius - intercept);
+      float offset = 0.5 + intercept * dx_2;
+
+      float lightDist = length(lightVec);
+      float falloffTermNear = clamp((1.0 - lightDist * dx_1), 0.0, 1.0);
+      float falloffTermFar  = clamp((offset - lightDist * dx_2), 0.0, 1.0);
+      float falloffSelect = step(intercept, lightDist);
+      float falloffTerm = (1.0 - falloffSelect) * falloffTermNear + falloffSelect * falloffTermFar;
+
+      vec4 diffuse = light_direction.w * light_brightness * falloffTerm * light_lightColor;
+
+      // 加上环境光，然后保持透明度为1
+      diffuse = diffuse + light_ambientColor;
+      // diffuse.a = diffuse.a * (1.0 - visible);
+
+      // 至少底色的0.5倍, 即原始颜色 * RBG(0.5, 0.5, 0.5)
+      return diffuse;
+    }    
+  #endif
+
+  vec4 frag () {
+    vec4 o = vec4(1, 1, 1, 1);
+
+    #if USE_TEXTURE
+      o *= CCSampleWithAlphaSeparated(cc_spriteTexture, uv0);
+      #if IS_GRAY
+        float gray  = 0.2126 * o.r + 0.7152 * o.g + 0.0722 * o.b;
+        o.r = o.g = o.b = gray;
+      #endif
+    #endif
+
+    o *= color;
+    ALPHA_TEST(o);
+
+    #if USE_2D_SHADOW
+    return light(o);
+    #else
+    return o;
+    #endif
+  }
+}%
