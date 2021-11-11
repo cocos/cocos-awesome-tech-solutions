@@ -1,4 +1,4 @@
-# 【CococsCreator 公开技术方案】第一期
+# CococsCreator 技术方案分享
 
 	技术方案来源自论坛、github 开源仓库、热心开发者、Cocos 引擎开发团队、cocos 技术支持团队。
 
@@ -18,3 +18,11 @@
   > 工程 git 仓库地址: https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.3.2_2D_ShadowMap
 
   ![2021111102](F:\GitHub\ZheFengZhang\CococsCreator public technology solutions\gif\2021111102.gif)
+
+
+
+* (v3.3.0) spine 使用非图集纹理进行局部换装
+
+  > 工程 git 仓库地址: https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.3.2_2D_ShadowMap
+  
+  ![2021111103](F:\GitHub\ZheFengZhang\CococsCreator public technology solutions\gif\2021111103.gif)
