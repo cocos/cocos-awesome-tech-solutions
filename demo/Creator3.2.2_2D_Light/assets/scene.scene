@@ -1920,7 +1920,6 @@
       "__id__": 49
     },
     "_enabled": true,
-    "__prefab": null,
     "rt": {
       "__uuid__": "5b8a6dba-072c-44c2-80fb-30eb691ae08c",
       "__expectedType__": "cc.RenderTexture"
