@@ -1,0 +1,14 @@
+{
+  "ver": "4.0.22",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "dfb24d20-524e-45cc-b256-dbe19b1c946f",
+  "files": [],
+  "subMetas": {},
+  "userData": {
+    "importAsPlugin": false,
+    "moduleId": "project:///assets/main-menu/scripts/listitem.js",
+    "importerSettings": 7,
+    "simulateGlobals": []
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "ver": "4.0.22",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "c9a33ddc-7ed6-488d-9ed3-420b1f0ec703",
+  "files": [],
+  "subMetas": {},
+  "userData": {
+    "importAsPlugin": false,
+    "moduleId": "project:///assets/cases/physics-setting.js",
+    "importerSettings": 7,
+    "simulateGlobals": []
+  }
+}
