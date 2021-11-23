@@ -1,2 +1,0 @@
-路径参考：
-D:\CocosDashboard_1.0.10\resources\.editors\Creator\3.3.2\resources\resources\3d\engine\cocos\physics-2d\box2d
