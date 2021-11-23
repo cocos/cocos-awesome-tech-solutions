@@ -1,16 +1,16 @@
-# CococsCreator 技术方案分享
+# CococsCreator-public-technology-solutions
 
- 技术方案来源自论坛、github 开源仓库、热心开发者、Cocos 引擎开发团队、cocos 技术支持团队。
+ Technical solutions are sourced from forums, github open source repository, enthusiastic developers, cocos engine development team, cocos technical support team. 
 
 ---
-*技术支持团队提供：*
+*The technical support team provides:*
 
-* (v3.3.2) 2D 光照
+* (v3.3.2) 2D lighting
 
-  > 工程 git 仓库地址: 
+  > Project git repository address:
   > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.3.2_2D_Light
   >
-  > 素材来自: 
+  > Source from:
   > https://www.codeandweb.com/blog/2015/05/12/lighting-demo-cocos2d-x
   > https://github.com/CodeAndWeb/cocos2d-x-dynamic-lighting
 
@@ -18,21 +18,21 @@
 
   
 
-* (v3.3.2) 2D 阴影
+* (v3.3.2) 2D Shadows
 
-  > 工程 git 仓库地址: 
+  > Project git repository address:
   > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.3.2_2D_ShadowMap
   >
-  > 素材来自: 
+  > Source from:
   > https://github.com/mattdesl/lwjgl-basics/wiki/2D-Pixel-Perfect-Shadows
   
   ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/2021111102.gif)
 
 
 
-* (v3.3.0) spine 使用非图集纹理进行局部换装
+* (v3.3.0) spine uses non-atlas textures for partial dressing
 
-  > 工程 git 仓库地址: 
+  > Project git repository address:
   > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.3.0_2D_spine_changeSlot_with_texture
   
   ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/2021111103.gif)
