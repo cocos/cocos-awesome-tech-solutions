@@ -1,0 +1,84 @@
+// Effect Syntax Guide: https://github.com/cocos-creator/docs-3d/blob/master/zh/material-system/effect-syntax.md
+
+CCEffect %{
+  techniques:
+  - name: opaque
+    passes:
+    - vert: grass-bend-vs:vert
+      frag: grass-bend-fs:frag
+      properties: &props
+        boundScale:            { value: 1, target: params.x }
+        heightOffset:     { value: 0, target: params.y }
+        heightStrength:        { value: 1, target: params.z }
+        extendStrength:       { value: 1, target: params.w }
+      rasterizerState:
+        cullMode: front
+}%
+
+CCProgram shared-ubo %{
+  uniform Params {
+    vec4 params;
+  };
+}%
+
+CCProgram grass-bend-vs %{
+
+precision highp float;
+#include <input-standard>
+#include <cc-global>
+#include <cc-local-batch>
+#include <input-standard>
+
+#include <shared-ubo>
+
+in vec3 a_color;
+
+out vec3 v_position;
+out vec3 v_normal;
+out vec2 v_uv;
+out vec3 v_color;
+
+vec4 vert () {
+  StandardVertInput In;
+  CCVertInput(In);
+
+  mat4 matWorld, matWorldIT;
+  CCGetWorldMatrixFull(matWorld, matWorldIT);
+
+  vec4 lPos = In.position;;
+
+  lPos.xyz *= params.x;
+
+  vec4 wPos = matWorld * lPos;
+
+  // v_color = a_color;
+  v_position = wPos.xyz;
+  v_normal = normalize((matWorldIT * vec4(In.normal, 0.0)).xyz);
+
+  v_uv = a_texCoord;
+
+  return cc_matProj * cc_matView * wPos;
+}
+
+}%
+
+CCProgram grass-bend-fs %{
+  precision highp float;
+
+  #include <shared-ubo>
+
+  in vec2 v_uv;
+  in vec3 v_normal;
+  in vec3 v_position;
+  // in vec3 v_color;
+
+  vec4 frag () {
+    //Bottom-facing normals
+		float mask = -v_normal.y * params.z;// * v_color.r;
+
+		float height = ((v_position.y) + params.y);
+		vec2 dir = (v_normal.xz * params.w) * 0.5 + 0.5;
+
+    return vec4(dir.x, height, dir.y, mask);
+  }
+}%

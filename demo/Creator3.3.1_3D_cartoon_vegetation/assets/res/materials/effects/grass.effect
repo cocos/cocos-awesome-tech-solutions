@@ -1,0 +1,412 @@
+// Effect Syntax Guide: https://github.com/cocos-creator/docs-3d/blob/master/zh/material-system/effect-syntax.md
+
+CCEffect %{
+  techniques:
+  - name: opaque
+    passes:
+    - vert: vs:vert
+      frag: fs:frag
+      properties: &props
+        alphaTest:     { value: 0.5, target: params.x }
+        shadowIntensity: { value: 0.4, target: params.y }
+
+        randMap:        { value: black }
+        randMapTiling:  { value: 1, target: params.z }
+
+        windMap:        { value: black }
+        windDirection: { value: [1, 1] }
+        windSpeed: { value: 4 }
+        windStrength: { value: 0.2 }
+        windSwinging: { value: 0.17 }
+        windRandObject: { value: 1 }
+        windRandVertex: { value: 1 }
+        windRandObjectStrength: { value: 0.709 }
+        windGustStrength: { value: 0.196 }
+        windGustFrequency: { value: 2.27 }
+        windGustTint: { value: 2.27 }
+
+        bendPushStrength: { value: 1, editor: { parent: USE_BEND } }
+	      bendFlattenStrength: { value: 1, editor: { parent: USE_BEND } }
+	      bendPerspectiveCorrection: { value: 1, editor: { parent: USE_BEND } }
+
+        mainTexture:    { value: white, editor: { parent: USE_MAIN_TXTURE } }
+        mainTiling:     { value: [0, 0, 1, 1] }
+        mainColor:      { value: [1, 1, 1, 1], editor: { type: color } }
+        mainColorScale: { value: [1, 1, 1, 1] }
+        hueColor:       { value: [1, 1, 1, 1], editor: { type: color } }
+        ambientOcclusion: { value: 0.704 }
+        randomDarken: { value: 0.287 }
+
+        translucency:  { value: 1 }
+        fixedNormal: { value: [0.5, 0.5, 1, 1], editor: { parent: USE_FIXED_NORMAL } }
+    - vert: shadow-caster-vs:vert
+      frag: shadow-caster-fs:frag
+      phase: shadow-caster
+      propertyIndex: 0
+      rasterizerState:
+        cullMode: back
+      properties: *props
+}%
+
+CCProgram shared-ubos %{
+  
+  #if USE_MAIN_TXTURE
+  uniform sampler2D mainTexture;
+  #endif
+
+  uniform Shared {
+    vec4 mainColor;
+    vec4 mainTiling;
+    vec4 mainColorScale;
+    vec4 fixedNormal;
+
+    vec4 params;
+  };
+
+  #include <wind>
+  #include <color>
+
+  #if USE_BEND
+    #include <bend>
+  #endif
+}%
+
+CCProgram get-mask %{
+  float getMask () {
+    #if Mask_Type == Mask_Channel_Color
+    return a_color.r;
+    #elif Mask_Type == Mask_Channel_Uv
+    return 1. - a_texCoord.y;
+    #else
+    return 0.;
+    #endif
+  }
+}%
+
+CCProgram get-rand %{
+  #include <shared-ubos>
+  
+  uniform sampler2D randMap;
+
+  float objectPosRand01(mat4 mat) {
+    return fract(mat[3][0] + mat[3][1] + mat[3][2]);
+  }
+
+  float getRand (mat4 mat) {
+    return objectPosRand01(mat);
+  }
+
+  float getRand (vec3 pos) {
+    return texture(randMap, pos.xz * params.z).r;
+  }
+  
+}%
+
+CCProgram shared-funcs %{
+  #include <cc-global>
+
+  #define Mask_Channel_Color 1
+  #define Mask_Channel_Uv 2
+
+  #pragma define Mask_Type options([Mask_Channel_Color, Mask_Channel_Uv])
+
+  #if USE_BEND
+  BendSettings getBendSettings (float mask) {
+    BendSettings s;
+    s.mode = 0;
+    s.mask = mask;
+    s.pushStrength = bendPushStrength;
+	  s.flattenStrength = bendFlattenStrength;
+	  s.perspectiveCorrection = bendPerspectiveCorrection;
+    return s;
+  }
+  #endif
+
+  float randomRange (vec2 seed, float minv, float maxv) {
+    float randomno = fract(sin(dot(seed, vec2(12.9898, 78.233)))*43758.5453);
+    return mix(minv, maxv, randomno);
+  }
+
+  void calcGrassOffset (in vec4 lPos, inout vec4 wPos, float rand, float mask) {
+    WindSettings w = getWinSettings(mask);
+    vec4 windOffset = getWindOffset(lPos.xyz, wPos.xyz, rand, w, windMap);
+
+    #if USE_BEND
+      BendSettings b = getBendSettings(mask);
+      vec4 bendOffset = getBendOffset(wPos.xyz, b);
+
+      vec3 offsets = mix(windOffset.xyz, bendOffset.xyz, bendOffset.a).xyz;
+      float bendCorrection = b.mask * b.perspectiveCorrection;
+    #else
+      vec3 offsets = windOffset.xyz;
+      float bendCorrection = 1.;
+    #endif
+
+    vec3 viewDirectionWS = normalize(cc_cameraPos.xyz - wPos.xyz);
+    float NdotV = dot(vec3(0, 1, 0), viewDirectionWS);
+
+    //Avoid pushing grass straight underneath the camera in a falloff of 4 units (1/0.25)
+    float dist = clamp(distance(wPos.xz, cc_cameraPos.xz) * 0.25, 0., 1.);
+
+    //Push grass away from camera position
+    vec2 pushVec = -viewDirectionWS.xz;
+    float perspMask = bendCorrection * dist * NdotV;
+    offsets.xz += pushVec.xy * perspMask;
+  
+    //Apply bend offset
+    wPos.xz += offsets.xz;
+    wPos.y -= offsets.y;
+  }
+
+  vec4 calcGrassVertexColor(in vec4 lPos, in vec4 wPos, float rand, float mask) {
+    return applyVertexColor(lPos.xyz, wPos.xyz, mainColor.xyz * mainColorScale.xyz, mask, ambientOcclusion, randomDarken, hueColor, rand);
+  }
+}%
+
+
+CCProgram vs %{
+  precision highp float;
+  #include <input-standard>
+  #include <cc-global>
+  #include <cc-local-batch>
+  #include <input-standard>
+  #include <cc-fog-vs>
+  #include <cc-shadow-map-vs>
+
+  in vec3 a_color;
+
+  #include <get-mask>
+  #include <get-rand>
+
+  #include <shared-ubos>
+  #include <shared-funcs>
+
+  out vec3 v_wPos;
+  out vec2 v_uv;
+  out vec4 v_color;
+
+  #if !USE_FIXED_NORMAL
+  out vec3 v_normal;
+  #endif
+
+  vec4 vert () {
+    StandardVertInput In;
+    CCVertInput(In);
+
+    mat4 matWorld, matWorldIT;
+    CCGetWorldMatrixFull(matWorld, matWorldIT);
+
+    vec4 lPos = In.position;
+    vec4 wPos = matWorld * lPos;
+
+    float mask = getMask();
+
+    float rand = getRand(wPos.xyz);
+    calcGrassOffset(lPos, wPos, rand, mask);
+
+    v_color = calcGrassVertexColor(lPos, wPos, rand, mask);
+
+    // debug mask
+    // v_color = vec4(mask);
+
+    // debug bend map
+    // vec2 uv = getBendMapUV(wPos.xyz);
+	  // v_color = texture(cc_grass_bend_map, uv);
+
+    v_wPos = wPos.xyz;
+
+    #if !USE_FIXED_NORMAL
+    v_normal = normalize((matWorldIT * vec4(In.normal, 0.0)).xyz);
+    #endif
+
+    v_uv = a_texCoord;
+
+    CC_TRANSFER_FOG(wPos);
+    CC_TRANSFER_SHADOW(wPos);
+
+    return cc_matProj * cc_matView * wPos;
+  }
+
+}%
+
+CCProgram fs %{
+  precision highp float;
+  #include <output>
+  #include <cc-fog-fs>
+  #include <gamma>
+
+  #if CC_RECEIVE_SHADOW
+    #include <cc-shadow-map-fs>
+  #endif
+
+  #include <shared-ubos>
+  #include <shared-funcs>
+
+  #include <phong>
+
+  in vec2 v_uv;
+  in vec4 v_color;
+
+  in vec3 v_wPos;
+
+  #if !USE_FIXED_NORMAL
+  in vec3 v_normal;
+  #endif
+
+  float getShadowAttenuation () {
+    float shadowAttenuation = 0.0;
+
+    #if CC_RECEIVE_SHADOW
+      float pcf = cc_shadowWHPBInfo.z + 0.001;
+      if (pcf > 2.) {shadowAttenuation = CCGetShadowFactorSoft2X(v_shadowPos);}
+      else if (pcf > 1.) {shadowAttenuation = CCGetShadowFactorSoft(v_shadowPos);}
+      else {shadowAttenuation = CCGetShadowFactorHard(v_shadowPos);}
+      shadowAttenuation = mix(shadowAttenuation, 1.0, cc_shadowNFLSInfo.w); 
+
+
+      // float pcf = cc_shadowWHPBInfo.z + 0.001;
+      // if (pcf > 3.0) {shadowAttenuation = CCGetShadowFactorX25(v_shadowPos);}
+      // else if (3.0 > pcf && pcf > 2.0) {shadowAttenuation = CCGetShadowFactorX9(v_shadowPos);}
+      // else if (2.0 > pcf && pcf > 1.0) {shadowAttenuation = CCGetShadowFactorX5(v_shadowPos);}
+      // else {shadowAttenuation = CCGetShadowFactorX1(v_shadowPos);}
+    #endif
+
+    return shadowAttenuation;
+  }
+
+  vec4 frag () {
+    #if USE_MAIN_TXTURE
+      vec2 uv = mainTiling.xy + mainTiling.zw * v_uv;
+      vec4 col = texture(mainTexture, uv);
+    #else
+      vec4 col = vec4(1.);
+    #endif
+
+    float alpha = col.a;
+    vec3 albedo = col.rgb;
+
+    if (alpha < params.x) {
+      discard;
+    }
+
+    // apply vertex color
+    albedo *= v_color.rgb;
+
+    // shadow
+    float shadowAttenuation = getShadowAttenuation();
+    // shadowAttenuation = 1. - min(shadowAttenuation, params.y);
+    shadowAttenuation = max(shadowAttenuation, params.y);
+
+    // lighting
+    vec3 viewDirection = normalize(cc_cameraPos.xyz - v_wPos);
+
+    #if USE_LIGHT
+
+      PhongSurface s;
+      s.diffuse = albedo;
+      s.specular = vec3(0.);
+      s.emissive = vec3(0.);
+      s.opacity = alpha;
+      s.glossiness = 10.;
+      s.position = v_wPos;
+
+      #if USE_FIXED_NORMAL
+        s.normal = fixedNormal.xyz;
+      #else
+        s.normal = v_normal;
+      #endif
+
+      s.viewDirection = viewDirection;
+
+      vec4 final = CCPhongShading(s);
+      final.rgb = final.rgb * shadowAttenuation;
+
+    #else
+      vec4 final = vec4(albedo * shadowAttenuation, alpha);
+    #endif
+
+    // translucency
+    Translucency(viewDirection, translucency, shadowAttenuation, final.rgb);
+    
+    // wind gust color
+    WindSettings wind = getWinSettings(v_color.r);
+    wind.gustStrength = 1.;
+    float gust = sampleGustMap(v_wPos, wind, windMap, 0.02, 2.);
+    final += (gust * v_color.a * windGustTint);
+
+    final = CC_APPLY_FOG(final);
+
+    // debug
+    // return vec4(s.normal, 1.);
+    // return v_color;
+
+    return final;
+  }
+}%
+
+CCProgram shadow-caster-vs %{
+  precision highp float;
+  #include <input-standard>
+  #include <cc-local-batch>
+  #include <cc-shadow>
+
+  in vec3 a_color;
+
+  #include <get-mask>
+  #include <get-rand>
+
+  #include <shared-ubos>
+  #include <shared-funcs>
+
+  out vec2 v_uv;
+
+  out vec2 v_clip_depth;
+  
+  vec4 vert () {
+    StandardVertInput In;
+    CCVertInput(In);
+
+    mat4 matWorld, matWorldIT;
+    CCGetWorldMatrixFull(matWorld, matWorldIT);
+
+    vec4 lPos = In.position;
+    vec4 wPos = matWorld * lPos;
+
+    float mask = getMask();
+
+    float rand = getRand(wPos.xyz);
+    calcGrassOffset(lPos, wPos, rand, mask);
+
+    vec4 clipPos = cc_matLightViewProj * wPos;
+
+    v_uv = a_texCoord;
+
+    v_clip_depth = clipPos.zw;
+
+    return clipPos;
+  }
+}%
+
+CCProgram shadow-caster-fs %{
+  precision highp float;
+  #include <packing>
+
+  #include <shared-ubos>
+
+  in vec2 v_uv;
+  in vec2 v_clip_depth;
+
+
+  vec4 frag () {
+    #if USE_MAIN_TXTURE
+    vec2 uv = mainTiling.xy + mainTiling.zw * v_uv;
+    vec4 baseColor = texture(mainTexture, uv);
+    #else
+    vec4 baseColor = vec4(1.);
+    #endif
+
+    if (baseColor.a < params.x) discard;
+
+    return packDepthToRGBA(v_clip_depth.x / v_clip_depth.y * 0.5 + 0.5);
+  }
+}%

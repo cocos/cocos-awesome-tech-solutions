@@ -1,0 +1,25 @@
+{
+  "__version__": "1.0.1",
+  "script": {
+    "useDefineForClassFields": false,
+    "allowDeclareFields": false
+  },
+  "general": {
+    "renderPipeline": "fd8ec536-a354-4a17-9c74-4f3883c378c8",
+    "designResolution": {
+      "width": 1280,
+      "height": 720,
+      "fitHeight": false
+    }
+  },
+  "layer": [
+    {
+      "name": "GrassBend",
+      "value": 1
+    },
+    {
+      "name": "canvas_19",
+      "value": 524288
+    }
+  ]
+}

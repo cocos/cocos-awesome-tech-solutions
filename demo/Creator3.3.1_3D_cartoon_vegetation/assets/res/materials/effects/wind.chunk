@@ -1,0 +1,94 @@
+#include <cc-global>
+
+uniform sampler2D windMap;
+uniform Wind {
+  vec2 windDirection;
+  float windStrength;
+  float windSpeed;
+  float windSwinging;
+  float windRandObject;
+  float windRandVertex;
+  float windRandObjectStrength;
+  float windGustStrength;
+  float windGustFrequency;
+  float windGustTint;
+};
+
+struct WindSettings
+{
+	float mask;
+	float ambientStrength;
+	float speed;
+	vec2 direction;
+	float swinging;
+
+	float randObject;
+	float randVertex;
+	float randObjectStrength;
+
+	float gustStrength;
+	float gustFrequency;
+};
+
+WindSettings getWinSettings (float mask) {
+  WindSettings s;
+
+  s.ambientStrength = windStrength;
+  s.speed = windSpeed;
+  s.direction = windDirection;
+  s.swinging = windSwinging;
+  s.mask = mask;
+  s.randObject = windRandObject;
+  s.randVertex = windRandVertex;
+  s.randObjectStrength = windRandObjectStrength;
+  s.gustStrength = windGustStrength;
+  s.gustFrequency = windGustFrequency;
+
+  return s;
+}
+
+//World-align UV moving in wind direction
+vec2 getGustingUV(vec3 wPos, WindSettings s, float speed) {
+	return (wPos.xz * s.gustFrequency * speed) + (cc_time.x * s.speed * s.gustFrequency * speed) * -s.direction.xy;
+}
+
+float sampleGustMap(vec3 wPos, WindSettings s, sampler2D windMap, float speed, float uvScale) {
+	vec2 gustUV = getGustingUV(wPos, s, speed) * uvScale;
+	float gust = texture(windMap, gustUV).r;
+
+	gust *= s.gustStrength * s.mask;
+
+	return gust;
+}
+
+vec4 getWindOffset (in vec3 positionOS, in vec3 wPos, float randOffset, WindSettings s, sampler2D windMap) {
+  vec4 offset = vec4(0.);
+
+	//Random offset per vertex
+	float f = length(positionOS.xz) * s.randVertex;
+	float strength = s.ambientStrength * 0.5 * mix(1., randOffset, s.randObjectStrength);
+	//Combine
+	float sine = sin(s.speed * (cc_time.x + (randOffset * s.randObject) + f));
+	//Remap from -1/1 to 0/1
+	sine = mix(sine * 0.5 + 0.5, sine, s.swinging);
+
+	//Apply gusting
+	float gust = sampleGustMap(wPos, s, windMap, 0.01, 1.);
+
+	//Scale sine
+	sine = sine * s.mask * strength;
+
+	//Mask by direction vector + gusting push
+	offset.xz = vec2(sine + gust);
+
+	//Summed offset strength
+	float windWeight = length(offset.xz) + 0.0001;
+	//Slightly negate the triangle-shape curve
+	windWeight = pow(windWeight, 1.5);
+	offset.y = windWeight * s.mask;
+
+	//Wind strength in alpha
+	offset.a = sine + gust;
+
+	return offset;
+}

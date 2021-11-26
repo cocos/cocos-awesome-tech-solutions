@@ -1,0 +1,93 @@
+{
+  "ver": "2.1.4",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "766814ca-33f2-410b-953d-abb2a7f14b45",
+  "files": [],
+  "subMetas": {
+    "72bf8": {
+      "importer": "gltf-mesh",
+      "uuid": "766814ca-33f2-410b-953d-abb2a7f14b45@72bf8",
+      "displayName": "",
+      "id": "72bf8",
+      "name": "tree.002.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "71db1": {
+      "importer": "gltf-material",
+      "uuid": "766814ca-33f2-410b-953d-abb2a7f14b45@71db1",
+      "displayName": "",
+      "id": "71db1",
+      "name": "material_0.001.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "351c5": {
+      "importer": "gltf-material",
+      "uuid": "766814ca-33f2-410b-953d-abb2a7f14b45@351c5",
+      "displayName": "",
+      "id": "351c5",
+      "name": "material_1.material",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "740c5": {
+      "importer": "gltf-scene",
+      "uuid": "766814ca-33f2-410b-953d-abb2a7f14b45@740c5",
+      "displayName": "",
+      "id": "740c5",
+      "name": "tree-lod1.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "legacyFbxImporter": false,
+    "redirect": "766814ca-33f2-410b-953d-abb2a7f14b45@740c5",
+    "assetFinder": {
+      "meshes": [
+        "766814ca-33f2-410b-953d-abb2a7f14b45@72bf8"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "766814ca-33f2-410b-953d-abb2a7f14b45@71db1",
+        "766814ca-33f2-410b-953d-abb2a7f14b45@351c5"
+      ],
+      "scenes": [
+        "766814ca-33f2-410b-953d-abb2a7f14b45@740c5"
+      ]
+    }
+  }
+}

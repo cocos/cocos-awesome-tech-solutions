@@ -1,0 +1,83 @@
+{
+  "__type__": "cc.Material",
+  "_name": "",
+  "_objFlags": 0,
+  "_native": "",
+  "_effectAsset": {
+    "__uuid__": "6344a1ee-c7fd-4789-be43-f6e278dd25f9",
+    "__expectedType__": "cc.EffectAsset"
+  },
+  "_techIdx": 0,
+  "_defines": [
+    {
+      "USE_INSTANCING": true,
+      "Mask_Type": 2,
+      "USE_MAIN_TXTURE": true,
+      "USE_BEND": true,
+      "USE_FIXED_NORMAL": true,
+      "USE_LIGHT": true
+    },
+    {}
+  ],
+  "_states": [
+    {
+      "rasterizerState": {
+        "cullMode": 0
+      },
+      "depthStencilState": {},
+      "blendState": {
+        "targets": [
+          {}
+        ]
+      }
+    },
+    {}
+  ],
+  "_props": [
+    {
+      "alphaTest": 0.8,
+      "shadowIntensity": 0.6,
+      "randMap": {
+        "__uuid__": "2d64cd14-7d1f-4386-b977-c463d0ab085e@6c48a",
+        "__expectedType__": "cc.Texture2D"
+      },
+      "randMapTiling": 0.015,
+      "windMap": {
+        "__uuid__": "2d64cd14-7d1f-4386-b977-c463d0ab085e@6c48a",
+        "__expectedType__": "cc.Texture2D"
+      },
+      "windDirection": {
+        "__type__": "cc.Vec2",
+        "x": 1,
+        "y": 0
+      },
+      "windStrength": 0.4,
+      "windSwinging": 0.4,
+      "windRandVertex": 0.4,
+      "windGustStrength": 0.35,
+      "windGustFrequency": 0.3,
+      "windGustTint": 0.85,
+      "mainTexture": {
+        "__uuid__": "ff77df07-1557-469f-bec6-48f32d03b1ce@6c48a",
+        "__expectedType__": "cc.Texture2D"
+      },
+      "mainColor": {
+        "__type__": "cc.Color",
+        "r": 153,
+        "g": 192,
+        "b": 94,
+        "a": 255
+      },
+      "hueColor": {
+        "__type__": "cc.Color",
+        "r": 255,
+        "g": 239,
+        "b": 78,
+        "a": 255
+      },
+      "randomDarken": 0.5,
+      "translucency": 0.57
+    },
+    {}
+  ]
+}
