@@ -4,6 +4,9 @@
     "target": "ES2015",
     "module": "ES2015",
     "strict": true,
+    "types": [
+      "./cc.d.ts"
+    ],
     "experimentalDecorators": true,
     "isolatedModules": true,
     "moduleResolution": "node",

@@ -84,7 +84,6 @@
   >
   > http://www.yini.org/liuyan/rgbcolor.htm
   > 
-
   > 切换画板
   ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/2021112901.gif)
   >
@@ -102,3 +101,33 @@
   >
   > 渐变色画笔(初步)
   ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/2021112906.gif)
+
+
+
+* (v3.3.2) 3D 寻路
+
+  > 工程 git 仓库地址: 
+  >
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.3.2_3D_Navigation
+  >
+  > 素材来自: 
+  >
+  > https://github.com/zhangyizhang/Extensions/tree/cocos/recastjs/demo
+  > 
+  > 添加障碍 (圆形障碍 & 方形障碍)
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/2021112911.gif)
+  > 
+  > 添加角色 并寻路
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/2021112912.gif)
+  > 
+  > 使用连接线 link 爬坡
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/2021112913.gif)
+
+
+* (v3.3.1) 区域截图
+
+  > 工程 git 仓库地址: 
+  >
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.3.1_PartialScreenshot
+
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/2021112603.gif)

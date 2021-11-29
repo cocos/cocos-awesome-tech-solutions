@@ -1,15 +1,13 @@
 /**
- * @class test
- * @author YI ZHANG
- * @date 2021/3/31
- * @desc
- */
-import {_decorator, systemEvent, Touch, Node,Component, geometry, math, Camera,
-    Material, NodePool, Vec3, EventKeyboard, macro, resources, Toggle, Asset,
-    MeshRenderer, RenderableComponent, Vec2, instantiate, SystemEvent } from 'cc';
+@class test
+@author YI ZHANG
+@date 2021/3/31
+@desc
+**/
+import {_decorator,systemEvent, Touch, Node,Component, geometry, math, Camera, Material, NodePool, Vec3, v3, EventKeyboard, macro, resources, Toggle, Asset, MeshRenderer, RenderableComponent, Vec2, instantiate, SystemEventType} from 'cc';
 import RecastDetourManager from "./recastdetourjs/tool/RecastDetourManager";
-import {IObstacle} from "cocos-recast/dist/INavigationEngine";
-import {RecastJSPlugin} from "cocos-recast";
+import {IObstacle} from "./navigation/INavigationEngine";
+import {RecastJSPlugin} from "./navigation/recastJsPlugin";
 
 const { ccclass, property } = _decorator;
 @ccclass('Test')
@@ -36,7 +34,6 @@ export class Test extends Component {
     private startLinkPos?: Vec3;
     private moveDis!: number;
     private boss: number = 0;
-    
     async start () {
         this.pool = new NodePool();
         this.roleNodeRoot = this.roleNode.parent!;
@@ -46,19 +43,18 @@ export class Test extends Component {
         this.moveDis = 0;
         this.recastDetourManager = await RecastDetourManager.getInstanceByNode(this.node,this.debugMaterial,1,this.node);
 
+
         this.node.on(Node.EventType.TOUCH_END,this.onTouch,this);
         this.node.on(Node.EventType.TOUCH_MOVE,this.onMove,this);
-        //@ts-ignore
-        systemEvent.on(SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
-        //@ts-ignore
-        systemEvent.on(SystemEvent.EventType.KEY_UP,this.onKeyUp, this);
+        systemEvent.on(SystemEventType.KEY_DOWN, this.onKeyDown,this);
+        systemEvent.on(SystemEventType.KEY_UP,this.onKeyUp,this);
         this.cylinderObstaclePool = new NodePool();
         this.boxObstaclePool = new NodePool();
         //this.node.children[0].active = false;
     }
 
     getRandomPos(){
-        return new Vec3((Math.random() - 0.5) * 100,2,(Math.random() - 0.5) * 100).add(this.node.getWorldPosition());
+        return v3((Math.random() - 0.5) * 100,2,(Math.random() - 0.5) * 100).add(this.node.getWorldPosition());
     }
 
     onKeyDown(event : EventKeyboard){
@@ -74,12 +70,12 @@ export class Test extends Component {
         }
     }
 
-    onKeyUp(event : EventKeyboard) {
-        if (event.keyCode == this.yKey) {
+    onKeyUp(event : EventKeyboard){
+        if(event.keyCode == this.yKey){
             this.yKey = 0;
             return;
         }
-        if (event.keyCode == this.xKey) {
+        if (event.keyCode == this.xKey){
             this.xKey = 0;
         }
     }
@@ -94,21 +90,22 @@ export class Test extends Component {
         })
     }
 
-    async loadRecast(assetBuffer : ArrayBuffer) {
+    async loadRecast(assetBuffer : ArrayBuffer)
+    {
         this.recastDetourManager = await RecastDetourManager.getInstanceByBin(assetBuffer,this.debugMaterial,1);
     }
 
-    saveBin () {
+    saveBin(){
         this.saveFile("solo_navmesh.bin",this.recastDetourManager.navigationPlugin.getNavmeshData());
     }
 
-    exportObj() {
+    exportObj(){
         let comps = this.node.getComponentsInChildren(MeshRenderer);
         let str = RecastJSPlugin.exportObj(comps);
         this.saveFile("scene.obj",str);
     }
 
-    saveFile(name : string,asset : ArrayBuffer | string) {
+    saveFile(name : string,asset : ArrayBuffer | string){
         let blob  = new Blob([asset],{type: 'application/octet-stream'});
         let a = document.createElement("a");
         a.href = window.URL.createObjectURL(blob);
@@ -117,8 +114,10 @@ export class Test extends Component {
         a.click();
     }
 
-    onTouch(touch : Touch) {
-        if (this.moveDis > 50) {
+
+
+    onTouch(touch : Touch){
+        if(this.moveDis > 50){
             this.moveDis = 0;
             return;
         }
@@ -134,7 +133,7 @@ export class Test extends Component {
         if(distance == Number.MIN_VALUE){
             return;
         }
-        let out = new Vec3();
+        let out = v3();
         ray.computeHit(out,distance);
         switch (this.type) {
             case 1 :
@@ -155,7 +154,7 @@ export class Test extends Component {
                 break;
             case 4:
                 let node1 = this.get(this.boxObstaclePool,this.boxObstacleNode);
-                this.recastDetourManager.addBoxObstacle(node1, out, new Vec3(1,1,1), 0);
+                this.recastDetourManager.addBoxObstacle(node1,out,v3(1,1,1),0);
                 break;
             case 5:
                 if(!this.startLinkPos){
@@ -167,29 +166,29 @@ export class Test extends Component {
                 this.startLinkPos = undefined;
                 break;
         }
-        if(this.type != 5) {
+        if(this.type != 5){
             this.startLinkPos = undefined;
         }
     }
 
-    onMove(touch : Touch) {
+    onMove(touch : Touch){
         let movePos = touch.getLocation().subtract(touch.getPreviousLocation());
         this.moveDis += movePos.length();
         this.updateRotation(movePos);
     }
 
-    updateRotation(movePos : Vec2) {
+    updateRotation(movePos : Vec2){
         let rotation = this.camera.node.eulerAngles;
         let y = rotation.y + -movePos.x / 5;
         let x = rotation.x + movePos.y / 5;
         this.camera.node.setRotationFromEuler(x,y,0);
     }
 
-    removeAllObstacle() {
+    removeAllObstacle(){
        this.recastDetourManager.removeAllObstacle();
     }
 
-    removeAllLink() {
+    removeAllLink(){
         this.recastDetourManager.removeAllLink();
     }
 
@@ -217,7 +216,7 @@ export class Test extends Component {
             xSpeed *= 0.7;
             ySpeed *= 0.7;
         }
-        let speed = new Vec3();
+        let speed = v3();
         if(ySpeed){
             speed.add(this.camera.node.forward.multiplyScalar(ySpeed));
         }
