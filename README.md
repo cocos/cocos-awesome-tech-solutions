@@ -14,6 +14,7 @@
   > 素材来自: 
   >
   > https://www.codeandweb.com/blog/2015/05/12/lighting-demo-cocos2d-x
+  >
   > https://github.com/CodeAndWeb/cocos2d-x-dynamic-lighting
 
   ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/2021111101.gif)
@@ -68,3 +69,36 @@
   > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.3.1_3D_cartoon_vegetation
 
   ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/2021112603.gif)
+
+
+
+* (v3.3.2) 画板
+
+  > 工程 git 仓库地址: 
+  >
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.3.2_2D_DrawingBoard
+  >
+  > 素材来自: 
+  >
+  > https://gitee.com/skyxu123/drawing-board
+  >
+  > http://www.yini.org/liuyan/rgbcolor.htm
+  > 
+
+  > 切换画板
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/2021112901.gif)
+  >
+  > 绘画
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/2021112902.gif)
+  >
+  > 撤销
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/2021112903.gif)
+  >
+  > 清屏
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/2021112904.gif)
+  >
+  > 橡皮擦
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/2021112905.gif)
+  >
+  > 渐变色画笔(初步)
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/2021112906.gif)
