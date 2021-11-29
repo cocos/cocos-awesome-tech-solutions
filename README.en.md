@@ -1,9 +1,9 @@
 # CococsCreator-public-technology-solutions
 
- Technical solutions are sourced from forums, github open source repository, enthusiastic developers, cocos engine development team, cocos technical support team. 
+ Technical solutions are sourced from forums, github open source repository, gitee open source repository, enthusiastic developers, cocos engine development team, cocos technical support team. 
 
 ---
-*The technical support team provides:*
+*The technical support team provides*
 
 * (v3.3.2) 2D lighting
 
@@ -20,6 +20,8 @@
 
   
 
+*The technical support team provides*
+
 * (v3.3.2) 2D Shadows
 
   > Project git repository address:
@@ -34,6 +36,8 @@
 
 
 
+*The technical support team provides*
+
 * (v3.3.0) spine uses non-atlas textures for partial dressing
 
   > Project git repository address:
@@ -44,27 +48,73 @@
 
 
 
-* (v3.3.2) box2d performance optimization (box2d wasm)
-
-  > Project git repository address:
-  >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.3.2_2D_Box2DJS_WebAssembly
-  
-  |  Platform  |  Before Optimization  | After Optimization  |  Performance Comparison  |
-  | :-----------------------: | :-----------------------: | :-----------------------: | :-----------------------: |
-  | macOS - Safari | ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/image/2021111901.jpeg)   | ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/image/2021111911.jpeg)   |  Performance UP **50%**  |
-  | Windows - Chrome |  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/image/2021111902.jpeg)  |  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/image/2021111912.jpeg)  |  Performance UP **67%**  |
-  | iOS - Safari |  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/image/2021111903.jpeg)  | ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/image/2021111913.jpeg)   | Performance UP **80%**   |
-  | Android - Chrome |  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/image/2021111904.jpeg)  |  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/image/2021111914.jpeg)  | Performance UP **60%**  |  
-  | iOS - WechatMiniGame |  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/image/2021111905.jpeg)  |  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/image/2021111915.jpeg)  | Performance UP **500%**  |  
-  | Android - WechatMiniGame | ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/image/2021111906.jpeg)   |  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/image/2021111916.jpeg)  | Performance UP **125%**  |
-
-
+*The engine development team provides, upgraded to version 3.3.1 by the technical support team*
 
 * (v3.3.1) 3D vegetation cartoon rendering and vegetation interaction
 
   > Project git repository address: 
   >
   > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.3.1_3D_cartoon_vegetation
+  >
+  > Source from:
+  > 
+  > https://gitee.com/mirrors_cocos-creator/cartoon-vegetation
 
   ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/2021112603.gif)
+
+
+
+*The Gitee user (skyxu123 随风) provides，additional functions by the technical support team*
+
+* (v3.3.2) Drawing board
+
+  > Project git repository address: 
+  >
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.3.2_2D_DrawingBoard
+  >
+  > Source from: 
+  >
+  > https://gitee.com/skyxu123/drawing-board
+  >
+  > http://www.yini.org/liuyan/rgbcolor.htm
+  > 
+  > Switching of the drawing board
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/2021112901.gif)
+  >
+  > Drawing
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/2021112902.gif)
+  >
+  > Undo
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/2021112903.gif)
+  >
+  > Clear
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/2021112904.gif)
+  >
+  > Erase
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/2021112905.gif)
+  >
+  > Gradient colour brushes(Preliminary program)
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/2021112906.gif)
+
+
+
+*The Github user (zhangyizhang) provides, upgraded to version 3.3.2 by the technical support team*
+
+* (v3.3.2) 3D Navigation
+
+  > Project git repository address: 
+  >
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.3.2_3D_Navigation
+  >
+  > Source from: 
+  >
+  > https://github.com/zhangyizhang/Extensions/tree/cocos/recastjs/demo
+  > 
+  > Adding barriers (Round Barrier & Square Barrier)
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/2021112911.gif)
+  > 
+  > Add a character and find your way around
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/2021112912.gif)
+  > 
+  > Climbing with connecting cable link
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/2021112913.gif)
