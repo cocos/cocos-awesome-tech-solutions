@@ -27,13 +27,13 @@
 # 效果预览
 
   > 添加障碍 (圆形障碍 & 方形障碍)
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/2021112911.gif)
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211129/2021112911.gif)
   > 
   > 添加角色 并寻路
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/2021112912.gif)
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211129/2021112912.gif)
   > 
   > 使用连接线 link 爬坡
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/2021112913.gif)
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211129/2021112913.gif)
 
 # TODO List
 

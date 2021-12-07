@@ -16,7 +16,7 @@
   > https://www.codeandweb.com/blog/2015/05/12/lighting-demo-cocos2d-x
   > https://github.com/CodeAndWeb/cocos2d-x-dynamic-lighting
 
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/2021111101.gif)
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211111/2021111101.gif)
 
   
 
@@ -32,7 +32,7 @@
   >
   > https://github.com/mattdesl/lwjgl-basics/wiki/2D-Pixel-Perfect-Shadows
   
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/2021111102.gif)
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211111/2021111102.gif)
 
 
 
@@ -44,7 +44,7 @@
   >
   > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.3.0_2D_spine_changeSlot_with_texture
   
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/2021111103.gif)
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211111/2021111103.gif)
 
 
 
@@ -60,7 +60,7 @@
   > 
   > https://gitee.com/mirrors_cocos-creator/cartoon-vegetation
 
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/2021112603.gif)
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211126/2021112603.gif)
 
 
 
@@ -79,22 +79,22 @@
   > http://www.yini.org/liuyan/rgbcolor.htm
   > 
   > Switching of the drawing board
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/2021112901.gif)
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211129/2021112901.gif)
   >
   > Drawing
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/2021112902.gif)
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211129/2021112902.gif)
   >
   > Undo
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/2021112903.gif)
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211129/2021112903.gif)
   >
   > Clear
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/2021112904.gif)
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211129/2021112904.gif)
   >
   > Erase
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/2021112905.gif)
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211129/2021112905.gif)
   >
   > Gradient colour brushes(Preliminary program)
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/2021112906.gif)
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211129/2021112906.gif)
 
 
 
@@ -111,10 +111,10 @@
   > https://github.com/zhangyizhang/Extensions/tree/cocos/recastjs/demo
   > 
   > Adding barriers (Round Barrier & Square Barrier)
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/2021112911.gif)
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211129/2021112911.gif)
   > 
   > Add a character and find your way around
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/2021112912.gif)
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211129/2021112912.gif)
   > 
   > Climbing with connecting cable link
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/2021112913.gif)
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211129/2021112913.gif)
