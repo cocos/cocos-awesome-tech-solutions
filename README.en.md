@@ -118,3 +118,20 @@
   > 
   > Climbing with connecting cable link
   ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211129/2021112913.gif)
+
+
+
+*The Github user (kirikayakazuto) provides, upgraded to version 3.3.2 by the technical support team*
+
+* (v3.3.2) Sprite Split
+
+  > Project git repository address: 
+  >
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.3.2_2D_SpriteSplit
+  >
+  > Source from: 
+  >
+  > https://github.com/kirikayakazuto/CocosCreator_UIFrameWork/tree/SplitTexture/assets/Script/test
+  > https://forum.cocos.org/t/topic/103699
+  
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211208/2021120801.gif)

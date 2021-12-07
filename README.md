@@ -119,3 +119,20 @@
   > 
   > 使用连接线 link 爬坡
   ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211129/2021112913.gif)
+
+
+
+*Github用户(kirikayakazuto)提供，由技术支持团队升级至3.3.2版本*
+
+* (v3.3.2) 图片分割
+
+  > 工程 git 仓库地址: 
+  >
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.3.2_2D_SpriteSplit
+  >
+  > 素材来自: 
+  >
+  > https://github.com/kirikayakazuto/CocosCreator_UIFrameWork/tree/SplitTexture/assets/Script/test
+  > https://forum.cocos.org/t/topic/103699
+  
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211208/2021120801.gif)
