@@ -1,0 +1,68 @@
+// Effect Syntax Guide: https://github.com/cocos-creator/docs-3d/blob/master/zh/material-system/effect-syntax.md
+
+CCEffect %{
+  techniques:
+  - name: opaque
+    passes:
+    - vert: general-vs:vert # builtin header
+      frag: plane-fs:frag
+      properties: &props
+        mainTexture:    { value: white }
+        mainColor:      { value: [1, 1, 1, 1], editor: { type: color } }
+  - name: transparent
+    passes:
+    - vert: general-vs:vert # builtin header
+      frag: plane-fs:frag
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: src_alpha
+          blendDst: one_minus_src_alpha
+          blendSrcAlpha: src_alpha
+          blendDstAlpha: one_minus_src_alpha
+      properties: *props
+}%
+
+CCProgram plane-fs %{
+  precision highp float;
+  #include <output>
+  #include <cc-fog-fs>
+
+  #if USE_TEXTURE
+    in vec2 v_uv;
+    uniform sampler2D mainTexture;
+  #endif
+
+  // in float factor_fog;
+
+  uniform Constant {
+    vec4 mainColor;
+  };
+
+  vec4 frag () {
+    vec2 uv = v_uv;
+    vec4 o = mainColor;
+
+    float speed = 0.5;
+    uv -= vec2(0.5, 0.5);  
+    //旋转矩阵公式  
+    uv = vec2(uv.x * cos(speed * cc_time.x) - uv.y * sin(speed * cc_time.x),  uv.x * sin(speed * cc_time.x) + uv.y * cos(speed * cc_time.x));  
+    if(abs(uv.x)>0.5 || abs(uv.y)>0.5){
+      uv = vec2(0.0, 0.0);  
+    }
+    //恢复纹理位置  
+    uv += vec2(0.5, 0.5);  
+
+    
+    vec4 col = texture(mainTexture, uv);
+    if (col.r > 0.3) {
+      o *= col;
+    } else {
+      o.a = 0.0;
+      o *= col;
+    }
+    o = CC_APPLY_FOG_BASE(o, CC_FOG_FACTOR);
+    return CCFragOutput(o);
+  }
+}%
+

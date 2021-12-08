@@ -16,3 +16,19 @@
   > https://github.com/ifengzp/cocos-awesome/tree/master/assets/Scene/Circle_avatar
   
   ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/image/20211208/2021120801.jpg)
+
+
+
+*Gitee(carlosyzy)提供，由技术支持团队升级至3.3.0版本*
+
+* (v3.3.0) 人物护盾
+
+  > 工程 git 仓库地址: 
+  >
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/shader/Creator3.3.0_3D_CharacterShield
+  >
+  > 素材来自: 
+  >
+  > https://gitee.com/carlosyzy/Creator3D_Shield/tree/master/project
+  
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211209/2021120901.gif)

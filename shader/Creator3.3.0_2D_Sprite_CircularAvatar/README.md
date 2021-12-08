@@ -8,6 +8,6 @@
     - Web
     - Android
     - iOS
-    - Windows
     - macOS
+    - Windows
     - WechatMiniGame
