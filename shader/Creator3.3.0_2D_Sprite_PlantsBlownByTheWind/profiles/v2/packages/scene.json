@@ -1,4 +1,6 @@
 {
+  "__version__": "1.0.0",
+  "current-scene": "4c207ed3-c769-4b1f-8403-4075bfefe9dd",
   "gizmos-infos": {
     "is2D": true,
     "is3DIcon": false,
@@ -33,10 +35,10 @@
         "z": 0
       }
     },
-    "af6fd621-cbd1-4f57-8c9b-fba5fed4c3ef": {
+    "4c207ed3-c769-4b1f-8403-4075bfefe9dd": {
       "position": {
-        "x": 480.00000000000006,
-        "y": 320,
+        "x": 480.0000000000001,
+        "y": 320.00000000000006,
         "z": 5000
       },
       "rotation": {
@@ -53,19 +55,6 @@
     }
   },
   "camera-uuids": [
-    "af6fd621-cbd1-4f57-8c9b-fba5fed4c3ef"
-  ],
-  "float-window": {
-    "position": {
-      "cc": {
-        "Camera": {
-          "dock": false,
-          "top": null,
-          "bottom": 10,
-          "left": null,
-          "right": 10
-        }
-      }
-    }
-  }
+    "f46876e4-e81b-4931-b493-6d367be385e7"
+  ]
 }

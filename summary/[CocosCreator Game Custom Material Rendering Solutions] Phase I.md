@@ -48,3 +48,21 @@
   > https://github.com/ifengzp/cocos-awesome/tree/master/assets/Scene/Water_spread
   
   ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211209/2021120902.gif)
+
+
+
+*The CocosCreator Chinese forum user (ifengzp) provides, upgraded to version 3.3.0 by the technical support team*
+
+* (v3.3.0) Plants Blown By The Wind
+
+  > Project git repository address: 
+  >
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/shader/Creator3.3.0_2D_Sprite_PlantsBlownByTheWind
+  >
+  > Source from: 
+  >
+  > https://forum.cocos.org/t/topic/123866
+  
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211209/2021120903.gif)
+
+*CocosCreator中文论坛用户(ID: 468179984)提供，由技术支持团队升级至3.3.0版本*

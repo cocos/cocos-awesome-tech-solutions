@@ -48,3 +48,19 @@
   > https://github.com/ifengzp/cocos-awesome/tree/master/assets/Scene/Water_spread
   
   ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211209/2021120902.gif)
+
+
+
+*CocosCreator中文论坛用户(ID: 468179984)提供，由技术支持团队升级至3.3.0版本*
+
+* (v3.3.0) 植物受风摆动
+
+  > 工程 git 仓库地址: 
+  >
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/shader/Creator3.3.0_2D_Sprite_PlantsBlownByTheWind
+  >
+  > 素材来自: 
+  >
+  > https://forum.cocos.org/t/topic/123866
+  
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211209/2021120903.gif)
