@@ -32,3 +32,19 @@
   > https://gitee.com/carlosyzy/Creator3D_Shield/tree/master/project
 
   ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211209/2021120901.gif)
+
+
+
+*The Github user (ifengzp) provides, upgraded to version 3.3.0 by the technical support team*
+
+* (v3.3.0) Water Ripple
+
+  > Project git repository address: 
+  >
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/shader/Creator3.3.0_2D_Sprite_WaterRipple
+  >
+  > Source from: 
+  >
+  > https://github.com/ifengzp/cocos-awesome/tree/master/assets/Scene/Water_spread
+  
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211209/2021120902.gif)
