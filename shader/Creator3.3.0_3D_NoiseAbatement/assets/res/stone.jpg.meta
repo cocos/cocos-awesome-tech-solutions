@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "0718d996-39bf-4ab4-bb63-496666fef467",
+  "files": [
+    ".jpg",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "0718d996-39bf-4ab4-bb63-496666fef467@6c48a",
+      "displayName": "stone",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.21",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "0718d996-39bf-4ab4-bb63-496666fef467"
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "0718d996-39bf-4ab4-bb63-496666fef467@6c48a",
+    "hasAlpha": false
+  }
+}

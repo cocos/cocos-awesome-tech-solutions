@@ -65,4 +65,18 @@
   
   ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211209/2021120903.gif)
 
-*CocosCreator中文论坛用户(ID: 468179984)提供，由技术支持团队升级至3.3.0版本*
+
+
+*The Gitee user (carlosyzy) provides, upgraded to version 3.3.0 by the technical support team*
+
+* (v3.3.0) 3D Noise Abatement
+
+  > Project git repository address: 
+  >
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/shader/Creator3.3.0_3D_NoiseAbatement
+  >
+  > Source from: 
+  >
+  > https://gitee.com/carlosyzy/Creator3D_Shader_Noise_Dissolve
+  
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211210/2021121001.gif)
