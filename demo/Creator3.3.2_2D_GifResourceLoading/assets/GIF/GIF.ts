@@ -127,11 +127,12 @@ class GIF {
         let spriteFrame = new SpriteFrame();
         let image = new Image();
         image.src = dataUrl;
-        image.width = image.height = 100;
-        texture.image = new ImageAsset(image);
+        image.width = this._canvas.width;
+        image.height = this._canvas.height;
+        let img = new ImageAsset(image);
+        img.onLoaded();
+        texture.image = img;
         spriteFrame.texture = texture;
-        // texture.initWithElement(image);
-        // spriteFrame.setTexture(texture);
         return spriteFrame;
     }
     private date2SpriteFrame(data, width, height) {
@@ -275,8 +276,8 @@ class GIF {
             }
             this._spriteFrames[index] = this.date2SpriteFrame(this._lastData, this._canvas.width, this._canvas.height);
         } else {
-            let dataUrl = this.putImageDataWeb(imageData, frame)
-            this._spriteFrames[index] = this.dataUrl2SpriteFrame(dataUrl);
+            let dataUrl = this.putImageDataWeb(imageData, frame);
+	    this._spriteFrames[index] = this.dataUrl2SpriteFrame(dataUrl);
         }
         return this._spriteFrames[index];
     }

@@ -755,7 +755,7 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -100,
+      "x": -175,
       "y": 0,
       "z": 0
     },
@@ -965,7 +965,7 @@
     },
     "_enabled": true,
     "__prefab": null,
-    "path": "gif/duck2",
+    "path": "gif/adam",
     "_id": "71zRITpTdH+7r+T3vWNPeL"
   },
   {
@@ -1101,7 +1101,7 @@
     },
     "_enabled": true,
     "__prefab": null,
-    "path": "gif/duck3",
+    "path": "gif/light",
     "_id": "51gAKrNKJMxolzo5bxCC4+"
   },
   {
