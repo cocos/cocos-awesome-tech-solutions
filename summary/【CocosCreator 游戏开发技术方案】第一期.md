@@ -136,3 +136,23 @@
   > https://forum.cocos.org/t/topic/103699
   
   ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211208/2021120801.gif)
+
+
+
+*Github用户(shachaf、baibai2013、newGy、2van、waiter)提供，由技术支持团队升级至3.3.2版本*
+
+* (v3.3.2) Gif图片资源加载
+
+  > 工程 git 仓库地址: 
+  >
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.3.2_2D_GifResourceLoading
+  >
+  > 素材来自: 
+  >
+  > https://github.com/shachaf/jsgif
+  > https://github.com/baibai2013/cocos-creator-gifLib
+  > https://github.com/newGy/cocos-creator-gif-2.4.4
+  > https://github.com/2van/cocos-creator-gif
+  > https://github.com/waiter/Cocos-GIF
+  
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211216/2021121601.gif)

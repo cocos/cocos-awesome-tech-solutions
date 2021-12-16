@@ -10,19 +10,13 @@ export class GifSupport extends Component {
     localGif: Node | null = null;
 
     start() {
-        find('Canvas/loading').active = true;
         find('Canvas/btnPlay').active = false;
 
         this.localGif.children.map(n => {
             n.getComponent(CCGIF).preload();
         });
 
-        find('Canvas/loading').active = false;
-        find('Canvas/btnPlay').active = true;
-
-        // 远程Gif加载
-        let url = "https://n.sinaimg.cn/tech/transform/280/w128h152/20210528/d2fb-kquziih9543861.gif";
-        this.remoteGif.getComponent(CCGIF).loadUrl(url);
+        find('Canvas/btnPlay').active = true;        
     }
 
     playAll() {
@@ -32,7 +26,9 @@ export class GifSupport extends Component {
             v.getComponent(CCGIF).play(true);
         });
 
-        
+        // 远程Gif加载
+        let url = "https://n.sinaimg.cn/tech/transform/280/w128h152/20210528/d2fb-kquziih9543861.gif";
+        this.remoteGif.getComponent(CCGIF).loadUrl(url);
     }
 }
 

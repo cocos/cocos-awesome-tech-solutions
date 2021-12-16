@@ -6,7 +6,7 @@
     "@types/node": "^14.14.7",
     "typescript": "^4.0.5"
   },
-  "name": "hw-demo",
+  "name": "cartoon_vegetation",
   "scripts": {
     "file-browser": "file-browser",
     "test-hlsl": "cd test-hlsl&tsc --watch "

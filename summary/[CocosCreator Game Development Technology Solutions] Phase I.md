@@ -135,3 +135,23 @@
   > https://forum.cocos.org/t/topic/103699
   
   ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211208/2021120801.gif)
+
+
+
+*The Github user (shachaf、baibai2013、newGy、2van、waiter) provides, upgraded to version 3.3.2 by the technical support team*
+
+* (v3.3.2) Gif Resource Loading
+
+  > Project git repository address: 
+  >
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.3.2_2D_GifResourceLoading
+  >
+  > Source from: 
+  >
+  > https://github.com/shachaf/jsgif
+  > https://github.com/baibai2013/cocos-creator-gifLib
+  > https://github.com/newGy/cocos-creator-gif-2.4.4
+  > https://github.com/2van/cocos-creator-gif
+  > https://github.com/waiter/Cocos-GIF
+  
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211216/2021121601.gif)
