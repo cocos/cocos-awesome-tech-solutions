@@ -155,3 +155,19 @@
   > https://github.com/waiter/Cocos-GIF
   
   ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211216/2021121601.gif)
+
+
+
+*The Github user (caogtaa) provides, upgraded to version 3.3.2 by the technical support team*
+
+* (v3.3.2) 2D Fluids
+
+  > Project git repository address: 
+  >
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.3.2_2D_Fluids
+  >
+  > Source from: 
+  >
+  > https://github.com/caogtaa/CCTricks/tree/caogtaa/20200709_metaballs
+  
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211216/2021121602.gif)

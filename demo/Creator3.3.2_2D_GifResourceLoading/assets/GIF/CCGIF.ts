@@ -1,4 +1,4 @@
-import { _decorator, Component, Sprite, SpriteFrame, resources, assetManager } from 'cc';
+import { _decorator, Component, Sprite, SpriteFrame, resources, assetManager, CCString } from 'cc';
 const { ccclass, property ,executeInEditMode,requireComponent} = _decorator;
 
 import { GIFCache } from "./GIF";
@@ -6,8 +6,9 @@ import { GIFCache } from "./GIF";
 // @executeInEditMode
 @requireComponent(Sprite)
 export default class CCGIF extends Component {
-    @property(String)
+    @property
     path: string = '';
+    
     public delays = [];
     public gifSp: Sprite;
     public frames: SpriteFrame[] = [];
