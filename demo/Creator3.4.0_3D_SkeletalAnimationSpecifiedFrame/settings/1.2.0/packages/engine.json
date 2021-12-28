@@ -1,0 +1,18 @@
+{
+  "modules": {
+    "cache": {},
+    "includeModules": [
+      "base",
+      "gfx-webgl",
+      "gfx-webgl2",
+      "ui",
+      "particle",
+      "physics-cannon",
+      "physics-framework",
+      "audio",
+      "tween",
+      "terrain"
+    ]
+  },
+  "__version__": "1.0.1"
+}
