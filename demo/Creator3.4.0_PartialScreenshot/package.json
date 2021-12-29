@@ -1,9 +1,9 @@
 {
   "creator": {
-    "version": "3.3.1"
+    "version": "3.4.0"
   },
-  "name": "PartialScreenshot",
+  "name": "GameFramework",
   "type": "3d",
   "uuid": "cdfd7bfa-dd3b-4d62-8bcb-7ee40b928c0e",
-  "version": "3.3.1"
+  "version": "3.4.0"
 }
