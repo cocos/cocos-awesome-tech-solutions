@@ -189,3 +189,11 @@
   > https://www.mixamo.com/#/?page=1&type=Character
   
   ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211228/2021122801.gif)
+
+  - DragonBones
+  >
+  > Project git repository address: 
+  >
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.4.0_2D_DragonBonesSpecifiedFrame
+  
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211228/2021122802.gif)
