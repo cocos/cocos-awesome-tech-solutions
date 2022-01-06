@@ -39,11 +39,11 @@
 
 *技术支持团队提供*
 
-* (v3.3.0) spine 使用非图集纹理进行局部换装
+* (v3.4.0) spine 使用非图集纹理进行局部换装
 
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.3.0_2D_spine_changeSlot_with_texture
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_spine_changeSlot_with_texture
   
   ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211111/2021111103.gif)
 
