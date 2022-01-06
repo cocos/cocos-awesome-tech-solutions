@@ -1,0 +1,13 @@
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "dd671742-064c-4f70-8ea0-f711e4938c84",
+  "files": [],
+  "subMetas": {},
+  "userData": {
+    "moduleId": "project:///assets/libs/advanced-pipeline/stages/grass/src/grass-bender-renderer.js",
+    "importerSettings": 4,
+    "simulateGlobals": []
+  }
+}

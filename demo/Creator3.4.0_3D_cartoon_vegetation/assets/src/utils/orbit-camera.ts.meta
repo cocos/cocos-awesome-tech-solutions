@@ -1,0 +1,13 @@
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "6be7df01-865a-4916-86ed-324c4c5ef55a",
+  "files": [],
+  "subMetas": {},
+  "userData": {
+    "moduleId": "project:///assets/src/utils/orbit-camera.js",
+    "importerSettings": 4,
+    "simulateGlobals": []
+  }
+}

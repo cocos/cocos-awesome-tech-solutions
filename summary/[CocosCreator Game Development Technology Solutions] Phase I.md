@@ -48,13 +48,13 @@
 
 
 
-*The engine development team provides, upgraded to version 3.3.1 by the technical support team*
+*The engine development team provides, upgraded to version 3.4.0 by the technical support team*
 
-* (v3.3.1) 3D vegetation cartoon rendering and vegetation interaction
+* (v3.4.0) 3D vegetation cartoon rendering and vegetation interaction
 
   > Project git repository address: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.3.1_3D_cartoon_vegetation
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.4.0_3D_cartoon_vegetation
   >
   > Source from:
   > 

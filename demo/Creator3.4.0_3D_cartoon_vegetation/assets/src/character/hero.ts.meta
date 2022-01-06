@@ -1,0 +1,13 @@
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "75021440-1059-4ee8-bf6c-1e4f88c92f42",
+  "files": [],
+  "subMetas": {},
+  "userData": {
+    "moduleId": "project:///assets/src/character/hero.js",
+    "importerSettings": 4,
+    "simulateGlobals": []
+  }
+}

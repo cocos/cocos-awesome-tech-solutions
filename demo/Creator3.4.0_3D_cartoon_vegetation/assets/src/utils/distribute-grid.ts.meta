@@ -1,0 +1,13 @@
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "b62e7997-a371-4bad-b811-0bbeb5b0bc16",
+  "files": [],
+  "subMetas": {},
+  "userData": {
+    "moduleId": "project:///assets/src/utils/distribute-grid.js",
+    "importerSettings": 4,
+    "simulateGlobals": []
+  }
+}

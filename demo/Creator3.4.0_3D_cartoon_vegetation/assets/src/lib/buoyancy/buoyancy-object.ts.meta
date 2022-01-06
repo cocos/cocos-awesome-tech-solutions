@@ -1,0 +1,13 @@
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "65ff055d-7327-497b-a923-d07dc4ee8b27",
+  "files": [],
+  "subMetas": {},
+  "userData": {
+    "moduleId": "project:///assets/src/lib/buoyancy/buoyancy-object.js",
+    "importerSettings": 4,
+    "simulateGlobals": []
+  }
+}
