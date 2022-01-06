@@ -1,6 +1,5 @@
 {
   "__type__": "cc.RenderTexture",
-  "_name": "",
   "_objFlags": 0,
   "_native": "",
   "_format": 35,
@@ -11,6 +10,10 @@
   "_wrapT": 0,
   "_wrapR": 0,
   "_anisotropy": 0,
-  "_width": 960,
-  "_height": 640
+  "content": {
+    "base": "2,2,0,0,0,0",
+    "w": 960,
+    "h": 640,
+    "n": ""
+  }
 }

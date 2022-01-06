@@ -23,11 +23,11 @@
 
 *技术支持团队提供*
 
-* (v3.3.2) 2D 阴影
+* (v3.4.0) 2D 阴影
 
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.3.2_2D_ShadowMap
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_ShadowMap
   >
   > 素材来自: 
   >
