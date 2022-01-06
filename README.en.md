@@ -64,13 +64,13 @@
 
 
 
-*The Gitee user (skyxu123 随风) provides，additional functions by the technical support team*
+*The Gitee user (skyxu123 随风) provides，upgraded to version 3.4.0 by the technical support team with additional features*
 
-* (v3.3.2) Drawing board
+* (v3.4.0) Drawing board
 
   > Project git repository address: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.3.2_2D_DrawingBoard
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.4.0_2D_DrawingBoard
   >
   > Source from: 
   >

@@ -65,13 +65,13 @@
 
 
 
-*Gitee用户(skyxu123 随风)提供，由技术支持团队补充功能*
+*Gitee用户(skyxu123 随风)提供，由技术支持团队升级至3.4.0版本并补充功能*
 
-* (v3.3.2) 画板
+* (v3.4.0) 画板
 
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.3.2_2D_DrawingBoard
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.4.0_2D_DrawingBoard
   >
   > 素材来自: 
   >
@@ -172,7 +172,12 @@
   > https://github.com/caogtaa/CCTricks/tree/caogtaa/20200709_metaballs
   
   ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211216/2021121602.gif)
-  
+
+
+
+
+*技术支持团队提供*
+
 * （v3.4.0）区域截图、截图保存
 
   > 工程 git 仓库地址: https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_PartialScreenshot
