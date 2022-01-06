@@ -172,29 +172,3 @@
   > https://github.com/caogtaa/CCTricks/tree/caogtaa/20200709_metaballs
   
   ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211216/2021121602.gif)
-
-
-
-*技术支持团队提供*
-
-* (v3.4.0) 动画指定帧播放
-
-  - 骨骼动画
-  >
-  > 工程 git 仓库地址: 
-  >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.4.0_3D_SkeletalAnimationSpecifiedFrame
-  >
-  > 素材来自: 
-  >
-  > https://www.mixamo.com/#/?page=1&type=Character
-  
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211228/2021122801.gif)
-
-  - 龙骨动画
-  >
-  > 工程 git 仓库地址: 
-  >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.4.0_2D_DragonBonesSpecifiedFrame
-  
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211228/2021122802.gif)
