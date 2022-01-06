@@ -98,13 +98,13 @@
 
 
 
-*The Github user (zhangyizhang) provides, upgraded to version 3.3.2 by the technical support team*
+*The Github user (zhangyizhang) provides, upgraded to version 3.4.0 by the technical support team*
 
-* (v3.3.2) 3D Navigation
+* (v3.4.0) 3D Navigation
 
   > Project git repository address: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.3.2_3D_Navigation
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.3.2_3D_Navigation
   >
   > Source from: 
   >

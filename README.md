@@ -99,13 +99,13 @@
 
 
 
-*Github用户(zhangyizhang)提供，由技术支持团队升级至3.3.2版本*
+*Github用户(zhangyizhang)提供，由技术支持团队升级至3.4.0版本*
 
-* (v3.3.2) 3D 寻路
+* (v3.4.0) 3D 寻路
 
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.3.2_3D_Navigation
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_3D_Navigation
   >
   > 素材来自: 
   >
