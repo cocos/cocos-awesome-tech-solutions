@@ -121,13 +121,13 @@
 
 
 
-*The Github user (kirikayakazuto) provides, upgraded to version 3.3.2 by the technical support team*
+*The Github user (kirikayakazuto) provides, upgraded to version 3.4.0 by the technical support team*
 
-* (v3.3.2) Sprite Split
+* (v3.4.0) Sprite Split
 
   > Project git repository address: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.3.2_2D_SpriteSplit
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_SpriteSplit
   >
   > Source from: 
   >
