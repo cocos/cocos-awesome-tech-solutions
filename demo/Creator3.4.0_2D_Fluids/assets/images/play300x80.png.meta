@@ -1,8 +1,8 @@
 {
-  "ver": "1.0.21",
+  "ver": "1.0.22",
   "importer": "image",
   "imported": true,
-  "uuid": "8da216fe-a798-4057-8161-9ed1e7fe4fdf",
+  "uuid": "fabc53df-9258-4a57-b873-0f97a1e92014",
   "files": [
     ".png",
     ".json"
@@ -10,8 +10,8 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "8da216fe-a798-4057-8161-9ed1e7fe4fdf@6c48a",
-      "displayName": "wall",
+      "uuid": "fabc53df-9258-4a57-b873-0f97a1e92014@6c48a",
+      "displayName": "play300x80",
       "id": "6c48a",
       "name": "texture",
       "userData": {
@@ -20,7 +20,7 @@
         "wrapModeT": "clamp-to-edge",
         "wrapModeS": "clamp-to-edge",
         "mipfilter": "none",
-        "imageUuidOrDatabaseUri": "8da216fe-a798-4057-8161-9ed1e7fe4fdf",
+        "imageUuidOrDatabaseUri": "fabc53df-9258-4a57-b873-0f97a1e92014",
         "anisotropy": 0,
         "isUuid": true
       },
@@ -33,8 +33,8 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "8da216fe-a798-4057-8161-9ed1e7fe4fdf@f9941",
-      "displayName": "wall",
+      "uuid": "fabc53df-9258-4a57-b873-0f97a1e92014@f9941",
+      "displayName": "play300x80",
       "id": "f9941",
       "name": "spriteFrame",
       "userData": {
@@ -46,15 +46,15 @@
         "offsetY": 0,
         "trimX": 0,
         "trimY": 0,
-        "width": 500,
-        "height": 22,
-        "rawWidth": 500,
-        "rawHeight": 22,
+        "width": 300,
+        "height": 80,
+        "rawWidth": 300,
+        "rawHeight": 80,
         "borderTop": 0,
         "borderBottom": 0,
         "borderLeft": 0,
         "borderRight": 0,
-        "imageUuidOrDatabaseUri": "8da216fe-a798-4057-8161-9ed1e7fe4fdf@6c48a",
+        "imageUuidOrDatabaseUri": "fabc53df-9258-4a57-b873-0f97a1e92014@6c48a",
         "packable": true,
         "isUuid": true,
         "atlasUuid": ""
@@ -70,6 +70,6 @@
   "userData": {
     "type": "sprite-frame",
     "hasAlpha": true,
-    "redirect": "8da216fe-a798-4057-8161-9ed1e7fe4fdf@f9941"
+    "redirect": "fabc53df-9258-4a57-b873-0f97a1e92014@f9941"
   }
 }

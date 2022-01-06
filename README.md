@@ -159,13 +159,13 @@
 
 
 
-*Github用户(caogtaa)提供，由技术支持团队升级至3.3.2版本*
+*Github用户(caogtaa)提供，由技术支持团队升级至3.4.0版本*
 
-* (v3.3.2) 2D 流体
+* (v3.4.0) 2D 流体
 
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.3.2_2D_Fluids
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.4.0_2D_Fluids
   >
   > 素材来自: 
   >

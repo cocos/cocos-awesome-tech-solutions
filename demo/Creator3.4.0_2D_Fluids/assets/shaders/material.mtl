@@ -21,12 +21,13 @@
         "depthFunc": 7
       },
       "blendState": {
-        "blendColor": [
-          1,
-          1,
-          1,
-          1
-        ],
+        "blendColor": {
+          "__type__": "cc.Color",
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
         "targets": [
           {
             "blendDst": 3,

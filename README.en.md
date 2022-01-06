@@ -158,13 +158,13 @@
 
 
 
-*The Github user (caogtaa) provides, upgraded to version 3.3.2 by the technical support team*
+*The Github user (caogtaa) provides, upgraded to version 3.4.0 by the technical support team*
 
-* (v3.3.2) 2D Fluids
+* (v3.4.0) 2D Fluids
 
   > Project git repository address: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.3.2_2D_Fluids
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.4.0_2D_Fluids
   >
   > Source from: 
   >
