@@ -5,11 +5,11 @@
 ---
 *The technical support team provides*
 
-* (v3.3.2) 2D lighting
+* (v3.4.0) 2D lighting
 
   > Project git repository address:
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.3.2_2D_Light
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_Light
   >
   > Source from:
   >
