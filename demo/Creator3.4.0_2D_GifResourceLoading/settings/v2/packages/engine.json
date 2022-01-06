@@ -104,7 +104,8 @@
       "tween",
       "tiled-map",
       "spine",
-      "dragon-bones"
+      "dragon-bones",
+      "marionette"
     ],
     "noDeprecatedFeatures": {
       "value": false,

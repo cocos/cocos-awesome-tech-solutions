@@ -139,13 +139,13 @@
 
 
 
-*Github用户(shachaf、baibai2013、newGy、2van、waiter)提供，由技术支持团队升级至3.3.2版本*
+*Github用户(shachaf、baibai2013、newGy、2van、waiter)提供，由技术支持团队升级至3.4.0版本*
 
-* (v3.3.2) Gif图片资源加载
+* (v3.4.0) Gif图片资源加载
 
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.3.2_2D_GifResourceLoading
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_GifResourceLoading
   >
   > 素材来自: 
   >

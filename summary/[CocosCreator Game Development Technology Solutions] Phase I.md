@@ -138,13 +138,13 @@
 
 
 
-*The Github user (shachaf、baibai2013、newGy、2van、waiter) provides, upgraded to version 3.3.2 by the technical support team*
+*The Github user (shachaf、baibai2013、newGy、2van、waiter) provides, upgraded to version 3.4.0 by the technical support team*
 
-* (v3.3.2) Gif Resource Loading
+* (v3.4.0) Gif Resource Loading
 
   > Project git repository address: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.3.2_2D_GifResourceLoading
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_GifResourceLoading
   >
   > Source from: 
   >
