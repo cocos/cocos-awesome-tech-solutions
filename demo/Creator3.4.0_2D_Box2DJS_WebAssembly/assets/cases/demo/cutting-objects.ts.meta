@@ -1,0 +1,13 @@
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "1df7ae2a-c4aa-4792-a540-87ff07df934c",
+  "files": [],
+  "subMetas": {},
+  "userData": {
+    "moduleId": "project:///assets/cases/demo/cutting-objects.js",
+    "importerSettings": 7,
+    "simulateGlobals": []
+  }
+}

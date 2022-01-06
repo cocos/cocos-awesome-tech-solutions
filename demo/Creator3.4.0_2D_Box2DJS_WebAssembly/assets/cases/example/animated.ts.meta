@@ -1,0 +1,13 @@
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "948f7a40-ceff-4753-9df1-3919bf01338d",
+  "files": [],
+  "subMetas": {},
+  "userData": {
+    "moduleId": "project:///assets/cases/example/animated.js",
+    "importerSettings": 7,
+    "simulateGlobals": []
+  }
+}

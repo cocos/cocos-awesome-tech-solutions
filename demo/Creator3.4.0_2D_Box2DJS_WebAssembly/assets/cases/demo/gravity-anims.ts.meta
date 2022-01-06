@@ -1,0 +1,13 @@
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "0c277994-7875-46a0-9fec-731b179ac8b4",
+  "files": [],
+  "subMetas": {},
+  "userData": {
+    "moduleId": "project:///assets/cases/demo/gravity-anims.js",
+    "importerSettings": 7,
+    "simulateGlobals": []
+  }
+}

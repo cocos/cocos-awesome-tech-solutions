@@ -1,0 +1,13 @@
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "614813a1-2153-426e-bb47-09dc07090971",
+  "files": [],
+  "subMetas": {},
+  "userData": {
+    "moduleId": "project:///assets/cases/demo/manifold.js",
+    "importerSettings": 7,
+    "simulateGlobals": []
+  }
+}
