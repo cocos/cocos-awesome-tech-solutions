@@ -171,3 +171,35 @@
   > https://github.com/caogtaa/CCTricks/tree/caogtaa/20200709_metaballs
   
   ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211216/2021121602.gif)
+
+
+
+*The technical support team provides*
+
+* (v3.4.0) Specify A Frame For Animation
+
+  - Skeletal Animation
+  >
+  > Project git repository address: 
+  >
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_3D_SkeletalAnimationSpecifiedFrame
+  >
+  > Source from: 
+  >
+  > https://www.mixamo.com/#/?page=1&type=Character
+  
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211228/2021122801.gif)
+
+  - DragonBones
+  >
+  > Project git repository address: 
+  >
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_DragonBonesSpecifiedFrame
+  
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211228/2021122802.gif)
+
+  - Spine
+  >
+  > Project git repository address: 
+  >
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_SpineSpecifiedFrame
