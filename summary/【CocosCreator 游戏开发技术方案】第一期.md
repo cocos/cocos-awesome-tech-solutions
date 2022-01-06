@@ -55,7 +55,7 @@
 
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.4.0_3D_cartoon_vegetation
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_3D_cartoon_vegetation
   >
   > 素材来自:
   > 
@@ -71,7 +71,7 @@
 
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.4.0_2D_DrawingBoard
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_DrawingBoard
   >
   > 素材来自: 
   >
@@ -171,7 +171,7 @@
   >
   > https://github.com/caogtaa/CCTricks/tree/caogtaa/20200709_metaballs
   
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211216/2021121602.gif)
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211216/2021121602.gif)
 
 
 

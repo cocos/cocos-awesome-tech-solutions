@@ -54,7 +54,7 @@
 
   > Project git repository address: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.4.0_3D_cartoon_vegetation
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_3D_cartoon_vegetation
   >
   > Source from:
   > 
@@ -70,7 +70,7 @@
 
   > Project git repository address: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.4.0_2D_DrawingBoard
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_DrawingBoard
   >
   > Source from: 
   >
@@ -164,7 +164,7 @@
 
   > Project git repository address: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.4.0_2D_Fluids
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_Fluids
   >
   > Source from: 
   >
