@@ -203,3 +203,5 @@
   > Project git repository address: 
   >
   > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_SpineSpecifiedFrame
+
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211228/2021122803.gif)
