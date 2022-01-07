@@ -17,7 +17,7 @@
   >
   > https://github.com/CodeAndWeb/cocos2d-x-dynamic-lighting
 
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211111/2021111101.gif)
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211111/2021111101.gif)
 
   
 
@@ -33,7 +33,7 @@
   >
   > https://github.com/mattdesl/lwjgl-basics/wiki/2D-Pixel-Perfect-Shadows
   
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211111/2021111102.gif)
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211111/2021111102.gif)
 
 
 
@@ -45,7 +45,7 @@
   >
   > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_spine_changeSlot_with_texture
   
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211111/2021111103.gif)
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211111/2021111103.gif)
 
 
 
@@ -61,7 +61,7 @@
   > 
   > https://gitee.com/mirrors_cocos-creator/cartoon-vegetation
 
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211126/2021112603.gif)
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211126/2021112603.gif)
 
 
 
@@ -80,22 +80,22 @@
   > http://www.yini.org/liuyan/rgbcolor.htm
   > 
   > 切换画板
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211129/2021112901.gif)
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211129/2021112901.gif)
   >
   > 绘画
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211129/2021112902.gif)
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211129/2021112902.gif)
   >
   > 撤销
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211129/2021112903.gif)
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211129/2021112903.gif)
   >
   > 清屏
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211129/2021112904.gif)
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211129/2021112904.gif)
   >
   > 橡皮擦
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211129/2021112905.gif)
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211129/2021112905.gif)
   >
   > 渐变色画笔(初步)
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211129/2021112906.gif)
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211129/2021112906.gif)
 
 
 
@@ -112,13 +112,13 @@
   > https://github.com/zhangyizhang/Extensions/tree/cocos/recastjs/demo
   > 
   > 添加障碍 (圆形障碍 & 方形障碍)
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211129/2021112911.gif)
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211129/2021112911.gif)
   > 
   > 添加角色 并寻路
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211129/2021112912.gif)
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211129/2021112912.gif)
   > 
   > 使用连接线 link 爬坡
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211129/2021112913.gif)
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211129/2021112913.gif)
 
 
 
@@ -135,7 +135,7 @@
   > https://github.com/kirikayakazuto/CocosCreator_UIFrameWork/tree/SplitTexture/assets/Script/test
   > https://forum.cocos.org/t/topic/103699
   
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211208/2021120801.gif)
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211208/2021120801.gif)
 
 
 
@@ -155,7 +155,7 @@
   > https://github.com/2van/cocos-creator-gif
   > https://github.com/waiter/Cocos-GIF
   
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211216/2021121601.gif)
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211216/2021121601.gif)
 
 
 
