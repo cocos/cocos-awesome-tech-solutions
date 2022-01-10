@@ -205,3 +205,17 @@
   > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_SpineSpecifiedFrame
 
   ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211228/2021122803.gif)
+
+
+
+*The technical support team provides*
+
+* （v3.4.0）Partial Area Screenshot And Saving
+
+  > Project git repository address:  https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_PartialScreenshot
+
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211228/2021122804.gif) 
+ 
+  > Note: Currently Cocos Creator version 3.0.0 ~ 3.4.0 does not support interface jsb.saveImageData, the Engine Team plans to support in version 3.5.0, to save imageData as a local png file need to refer to the following PR ans customizated the engine code. https://gitee.com/zzf2019/engine-native/ commit/1ddb6ec9627a8320cd3545d353d8861da33282a8 (this PR only supports saving png, and only supports ios, android)
+  >
+  > Cocos Creator 3.4.0 also has a readPixels bug, need to merge PR manually: https://github.com/cocos-creator/engine/pull/9900/files
