@@ -1,0 +1,188 @@
+{
+  "__type__": "cc.EffectAsset",
+  "_name": "editor/terrain-circle-brush",
+  "_objFlags": 0,
+  "_native": "",
+  "techniques": [
+    {
+      "name": "transparent",
+      "passes": [
+        {
+          "blendState": {
+            "targets": [
+              {
+                "blend": true,
+                "blendSrc": 2,
+                "blendDst": 4,
+                "blendDstAlpha": 4
+              }
+            ]
+          },
+          "program": "editor/terrain-circle-brush|terrain-brush-vs:vert|terrain-brush-fs:frag",
+          "depthStencilState": {
+            "depthTest": true,
+            "depthWrite": false
+          },
+          "properties": {
+            "BrushPos": {
+              "value": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "type": 16
+            },
+            "BrushParams": {
+              "value": [
+                2.5,
+                2.5,
+                0,
+                0
+              ],
+              "type": 16
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "shaders": [
+    {
+      "blocks": [
+        {
+          "name": "TexCoords",
+          "members": [
+            {
+              "name": "BrushPos",
+              "type": 16,
+              "count": 1
+            },
+            {
+              "name": "BrushParams",
+              "type": 16,
+              "count": 1
+            }
+          ],
+          "defines": [],
+          "stageFlags": 16,
+          "binding": 0
+        }
+      ],
+      "samplerTextures": [],
+      "samplers": [],
+      "textures": [],
+      "buffers": [],
+      "images": [],
+      "subpassInputs": [],
+      "attributes": [
+        {
+          "name": "a_position",
+          "defines": [],
+          "format": 32,
+          "location": 0
+        }
+      ],
+      "varyings": [
+        {
+          "name": "wposition",
+          "type": 16,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 17,
+          "location": 0
+        }
+      ],
+      "fragColors": [
+        {
+          "name": "cc_FragColor",
+          "typename": "vec4",
+          "type": 16,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 16,
+          "location": 0
+        }
+      ],
+      "hash": 3548526317,
+      "glsl4": {
+        "vert": "\nprecision mediump float;\nlayout(set = 0, binding = 0) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(set = 0, binding = 1) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nlayout(set = 2, binding = 0) uniform CCLocal {\n  highp mat4 cc_matWorld;\n  highp mat4 cc_matWorldIT;\n  highp vec4 cc_lightingMapUVParam;\n};\nlayout(location = 0) in vec3 a_position;\nlayout(location = 0) out vec4 wposition;\nvec4 vert () {\n  vec3 worldPos;\n  worldPos.x = cc_matWorld[3][0] + a_position.x;\n  worldPos.y = cc_matWorld[3][1] + a_position.y;\n  worldPos.z = cc_matWorld[3][2] + a_position.z;\n  worldPos.y += 0.01;\n  vec4 pos = vec4(worldPos, 1);\n  pos = cc_matViewProj * pos;\n  wposition = vec4(worldPos, 1);\n  return pos;\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision mediump float;\nlayout(set = 0, binding = 0) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(set = 0, binding = 1) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nvec4 CCFragOutput (vec4 color) {\n  return color;\n}\nlayout(location = 0) in vec4 wposition;\nlayout(set = 1, binding = 0) uniform TexCoords {\n  vec4 BrushPos;\n  vec4 BrushParams;\n};\nvec4 frag () {\n  float Radius = BrushParams.x;\n  float Falloff = BrushParams.y;\n  float Distance = length(wposition.xz - BrushPos.xz);\n  float k = 0.0;\n  #if LINEAR\n    if (Distance <= Radius) {\n      k = 1.0;\n    }\n    else if (Distance > Radius + Falloff) {\n      k = 0.0;\n    }\n    else {\n      k = max(0.0, 1.0 - (Distance - Radius) / Falloff);\n    }\n  #elif SMOOTH\n    if (Distance <= Radius) {\n      k = 1.0;\n    }\n    else if (Distance > Radius + Falloff) {\n      k = 0.0;\n    }\n    else {\n      float y = (Distance - Radius) / Falloff;\n      k = sqrt(1.0 - y * y);\n    }\n  #elif SPHERICAL\n    if (Distance <= Radius) {\n      k = 1.0;\n    }\n    else if (Distance > Radius + Falloff) {\n      k = 0.0;\n    }\n    else {\n      k = max(0.0, 1.0 - (Distance - Radius) / Falloff);\n    }\n    k = k*k*(3.0 - 2.0 * k);\n  #elif TIP\n    if (Distance <= Radius) {\n      k = 1.0;\n    }\n    else if (Distance > Radius + Falloff) {\n      k = 0.0;\n    }\n    else {\n      float y = (Falloff + Radius - Distance) / Falloff;\n      k = 1.0 - sqrt(1.0 - y * y);\n    }\n  #endif\n  vec4 color = vec4(0.0, 0.0, 0.0, 0.0);\n  color.rgb = vec3(100, 100, 135) / 255.0;\n  color.a = 0.85 * k;\n  return CCFragOutput(color);\n}\nlayout(location = 0) out vec4 cc_FragColor;\nvoid main() { cc_FragColor = frag(); }"
+      },
+      "glsl3": {
+        "vert": "\nprecision mediump float;\nlayout(std140) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(std140) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nlayout(std140) uniform CCLocal {\n  highp mat4 cc_matWorld;\n  highp mat4 cc_matWorldIT;\n  highp vec4 cc_lightingMapUVParam;\n};\nin vec3 a_position;\nout vec4 wposition;\nvec4 vert () {\n  vec3 worldPos;\n  worldPos.x = cc_matWorld[3][0] + a_position.x;\n  worldPos.y = cc_matWorld[3][1] + a_position.y;\n  worldPos.z = cc_matWorld[3][2] + a_position.z;\n  worldPos.y += 0.01;\n  vec4 pos = vec4(worldPos, 1);\n  pos = cc_matViewProj * pos;\n  wposition = vec4(worldPos, 1);\n  return pos;\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision mediump float;\nlayout(std140) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(std140) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nvec4 CCFragOutput (vec4 color) {\n  return color;\n}\nin vec4 wposition;\nlayout(std140) uniform TexCoords {\n  vec4 BrushPos;\n  vec4 BrushParams;\n};\nvec4 frag () {\n  float Radius = BrushParams.x;\n  float Falloff = BrushParams.y;\n  float Distance = length(wposition.xz - BrushPos.xz);\n  float k = 0.0;\n  #if LINEAR\n    if (Distance <= Radius) {\n      k = 1.0;\n    }\n    else if (Distance > Radius + Falloff) {\n      k = 0.0;\n    }\n    else {\n      k = max(0.0, 1.0 - (Distance - Radius) / Falloff);\n    }\n  #elif SMOOTH\n    if (Distance <= Radius) {\n      k = 1.0;\n    }\n    else if (Distance > Radius + Falloff) {\n      k = 0.0;\n    }\n    else {\n      float y = (Distance - Radius) / Falloff;\n      k = sqrt(1.0 - y * y);\n    }\n  #elif SPHERICAL\n    if (Distance <= Radius) {\n      k = 1.0;\n    }\n    else if (Distance > Radius + Falloff) {\n      k = 0.0;\n    }\n    else {\n      k = max(0.0, 1.0 - (Distance - Radius) / Falloff);\n    }\n    k = k*k*(3.0 - 2.0 * k);\n  #elif TIP\n    if (Distance <= Radius) {\n      k = 1.0;\n    }\n    else if (Distance > Radius + Falloff) {\n      k = 0.0;\n    }\n    else {\n      float y = (Falloff + Radius - Distance) / Falloff;\n      k = 1.0 - sqrt(1.0 - y * y);\n    }\n  #endif\n  vec4 color = vec4(0.0, 0.0, 0.0, 0.0);\n  color.rgb = vec3(100, 100, 135) / 255.0;\n  color.a = 0.85 * k;\n  return CCFragOutput(color);\n}\nlayout(location = 0) out vec4 cc_FragColor;\nvoid main() { cc_FragColor = frag(); }"
+      },
+      "glsl1": {
+        "vert": "\nprecision mediump float;\nuniform highp mat4 cc_matViewProj;\nuniform highp mat4 cc_matWorld;\nattribute vec3 a_position;\nvarying vec4 wposition;\nvec4 vert () {\n  vec3 worldPos;\n  worldPos.x = cc_matWorld[3][0] + a_position.x;\n  worldPos.y = cc_matWorld[3][1] + a_position.y;\n  worldPos.z = cc_matWorld[3][2] + a_position.z;\n  worldPos.y += 0.01;\n  vec4 pos = vec4(worldPos, 1);\n  pos = cc_matViewProj * pos;\n  wposition = vec4(worldPos, 1);\n  return pos;\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision mediump float;\nvec4 CCFragOutput (vec4 color) {\n  return color;\n}\nvarying vec4 wposition;\n   uniform vec4 BrushPos;\n   uniform vec4 BrushParams;\nvec4 frag () {\n  float Radius = BrushParams.x;\n  float Falloff = BrushParams.y;\n  float Distance = length(wposition.xz - BrushPos.xz);\n  float k = 0.0;\n  #if LINEAR\n    if (Distance <= Radius) {\n      k = 1.0;\n    }\n    else if (Distance > Radius + Falloff) {\n      k = 0.0;\n    }\n    else {\n      k = max(0.0, 1.0 - (Distance - Radius) / Falloff);\n    }\n  #elif SMOOTH\n    if (Distance <= Radius) {\n      k = 1.0;\n    }\n    else if (Distance > Radius + Falloff) {\n      k = 0.0;\n    }\n    else {\n      float y = (Distance - Radius) / Falloff;\n      k = sqrt(1.0 - y * y);\n    }\n  #elif SPHERICAL\n    if (Distance <= Radius) {\n      k = 1.0;\n    }\n    else if (Distance > Radius + Falloff) {\n      k = 0.0;\n    }\n    else {\n      k = max(0.0, 1.0 - (Distance - Radius) / Falloff);\n    }\n    k = k*k*(3.0 - 2.0 * k);\n  #elif TIP\n    if (Distance <= Radius) {\n      k = 1.0;\n    }\n    else if (Distance > Radius + Falloff) {\n      k = 0.0;\n    }\n    else {\n      float y = (Falloff + Radius - Distance) / Falloff;\n      k = 1.0 - sqrt(1.0 - y * y);\n    }\n  #endif\n  vec4 color = vec4(0.0, 0.0, 0.0, 0.0);\n  color.rgb = vec3(100, 100, 135) / 255.0;\n  color.a = 0.85 * k;\n  return CCFragOutput(color);\n}\nvoid main() { gl_FragColor = frag(); }"
+      },
+      "builtins": {
+        "globals": {
+          "blocks": [
+            {
+              "name": "CCGlobal",
+              "defines": []
+            },
+            {
+              "name": "CCCamera",
+              "defines": []
+            }
+          ],
+          "samplerTextures": [],
+          "buffers": [],
+          "images": []
+        },
+        "locals": {
+          "blocks": [
+            {
+              "name": "CCLocal",
+              "defines": []
+            }
+          ],
+          "samplerTextures": [],
+          "buffers": [],
+          "images": []
+        },
+        "statistics": {
+          "CC_EFFECT_USED_VERTEX_UNIFORM_VECTORS": 48,
+          "CC_EFFECT_USED_FRAGMENT_UNIFORM_VECTORS": 41
+        }
+      },
+      "defines": [
+        {
+          "name": "LINEAR",
+          "type": "boolean",
+          "defines": []
+        },
+        {
+          "name": "SMOOTH",
+          "type": "boolean",
+          "defines": [
+            "!LINEAR"
+          ]
+        },
+        {
+          "name": "SPHERICAL",
+          "type": "boolean",
+          "defines": [
+            "!LINEAR",
+            "!SMOOTH"
+          ]
+        },
+        {
+          "name": "TIP",
+          "type": "boolean",
+          "defines": [
+            "!LINEAR",
+            "!SMOOTH",
+            "!SPHERICAL"
+          ]
+        }
+      ],
+      "name": "editor/terrain-circle-brush|terrain-brush-vs:vert|terrain-brush-fs:frag"
+    }
+  ],
+  "combinations": [],
+  "hideInEditor": true
+}

@@ -1,0 +1,287 @@
+{
+  "__type__": "cc.EffectAsset",
+  "_name": "pipeline/smaa",
+  "_objFlags": 0,
+  "_native": "",
+  "techniques": [
+    {
+      "name": "smaa",
+      "passes": [
+        {
+          "program": "pipeline/smaa|smaa-edge-vs:vert|smaa-edge-fs:frag",
+          "depthStencilState": {
+            "depthTest": false,
+            "depthWrite": false
+          },
+          "properties": {
+            "u_texSampler": {
+              "type": 28,
+              "samplerHash": 650
+            }
+          }
+        },
+        {
+          "program": "pipeline/smaa|smaa-blend-vs:vert|smaa-blend-fs:frag",
+          "depthStencilState": {
+            "depthTest": false,
+            "depthWrite": false
+          },
+          "properties": {
+            "u_edgeTexSampler": {
+              "type": 28,
+              "samplerHash": 650
+            },
+            "u_areaTexSampler": {
+              "type": 28,
+              "samplerHash": 650
+            },
+            "u_searchTexSampler": {
+              "type": 28,
+              "samplerHash": 645
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "shaders": [
+    {
+      "blocks": [],
+      "samplerTextures": [
+        {
+          "name": "u_texSampler",
+          "type": 28,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 16,
+          "binding": 0
+        }
+      ],
+      "samplers": [],
+      "textures": [],
+      "buffers": [],
+      "images": [],
+      "subpassInputs": [],
+      "attributes": [
+        {
+          "name": "a_position",
+          "defines": [],
+          "format": 21,
+          "location": 0
+        },
+        {
+          "name": "a_texCoord",
+          "defines": [],
+          "format": 21,
+          "location": 1
+        }
+      ],
+      "varyings": [
+        {
+          "name": "v_uv",
+          "type": 14,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 17,
+          "location": 0
+        },
+        {
+          "name": "v_offsets",
+          "type": 16,
+          "count": 3,
+          "defines": [],
+          "stageFlags": 17,
+          "location": 1
+        }
+      ],
+      "fragColors": [
+        {
+          "name": "cc_FragColor",
+          "typename": "vec4",
+          "type": 16,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 16,
+          "location": 0
+        }
+      ],
+      "hash": 129139011,
+      "glsl4": {
+        "vert": "\nprecision highp float;\nlayout(set = 0, binding = 0) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(set = 0, binding = 1) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nlayout(location = 0) in vec2 a_position;\nlayout(location = 1) in vec2 a_texCoord;\nlayout(location = 0) out vec2 v_uv;\nlayout(location = 1) out vec4 v_offsets[3];\nvec4 vert () {\n  vec4 pos = vec4(a_position, 0.0, 1.0);\n  v_uv = a_texCoord * cc_screenScale.xy;\n  v_offsets[0] = v_uv.xyxy + cc_nativeSize.zwzw * vec4(-1.0, 0.0, 0.0, 1.0);\n  v_offsets[1] = v_uv.xyxy + cc_nativeSize.zwzw * vec4( 1.0, 0.0, 0.0, -1.0);\n  v_offsets[2] = v_uv.xyxy + cc_nativeSize.zwzw * vec4(-2.0, 0.0, 0.0, 2.0);\n  return pos;\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision highp float;\nlayout(set = 0, binding = 0) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(set = 0, binding = 1) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nvec3 ACESToneMap (vec3 color) {\n  color = min(color, vec3(8.0));\n  const float A = 2.51;\n  const float B = 0.03;\n  const float C = 2.43;\n  const float D = 0.59;\n  const float E = 0.14;\n  return (color * (A * color + B)) / (color * (C * color + D) + E);\n}\nlayout(location = 0) in vec2 v_uv;\nlayout(location = 1) in vec4 v_offsets[3];\nlayout(set = 1, binding = 0) uniform sampler2D u_texSampler;\nvec3 ToLDR(vec3 color) {\n#if CC_USE_HDR\n  color *= cc_exposure.x * 1024.0;\n  color = ACESToneMap(color);\n  color = sqrt(color);\n#endif\n  return color;\n}\nvec4 frag () {\n  vec2 threshold = vec2(0.1, 0.1);\n  vec4 delta;\n  vec3 C = ToLDR(texture(u_texSampler, v_uv).rgb);\n  vec3 Cleft = ToLDR(texture(u_texSampler, v_offsets[0].xy).rgb);\n  vec3 t = abs(C - Cleft);\n  delta.x = max(max(t.r, t.g), t.b);\n  vec3 Ctop = ToLDR(texture(u_texSampler, v_offsets[0].zw).rgb);\n  t = abs(C - Ctop);\n  delta.y = max(max(t.r, t.g), t.b);\n  vec2 edges = step(threshold, delta.xy);\n  if (dot(edges, vec2(1.0, 1.0)) == 0.0)\n    discard;\n  vec3 Cright = ToLDR(texture(u_texSampler, v_offsets[1].xy).rgb);\n  t = abs(C - Cright);\n  delta.z = max(max(t.r, t.g), t.b);\n  vec3 Cbottom = ToLDR(texture(u_texSampler, v_offsets[1].zw).rgb);\n  t = abs(C - Cbottom);\n  delta.w = max(max(t.r, t.g), t.b);\n  float maxDelta = max(max(max(delta.x, delta.y), delta.z), delta.w);\n  vec3 Cleftleft = ToLDR(texture(u_texSampler, v_offsets[2].xy).rgb);\n  t = abs(C - Cleftleft);\n  delta.z = max(max(t.r, t.g), t.b);\n  vec3 Ctoptop = ToLDR(texture(u_texSampler, v_offsets[2].zw).rgb);\n  t = abs(C - Ctoptop);\n  delta.w = max(max(t.r, t.g), t.b);\n  maxDelta = max(max(maxDelta, delta.z), delta.w);\n  edges.xy *= step(0.5 * maxDelta, delta.xy);\n  vec4 o = vec4(edges, 0.0, 0.0);\n  return o;\n}\nlayout(location = 0) out vec4 cc_FragColor;\nvoid main() { cc_FragColor = frag(); }"
+      },
+      "glsl3": {
+        "vert": "\nprecision highp float;\nlayout(std140) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(std140) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nin vec2 a_position;\nin vec2 a_texCoord;\nout vec2 v_uv;\nout vec4 v_offsets[3];\nvec4 vert () {\n  vec4 pos = vec4(a_position, 0.0, 1.0);\n  v_uv = a_texCoord * cc_screenScale.xy;\n  v_offsets[0] = v_uv.xyxy + cc_nativeSize.zwzw * vec4(-1.0, 0.0, 0.0, 1.0);\n  v_offsets[1] = v_uv.xyxy + cc_nativeSize.zwzw * vec4( 1.0, 0.0, 0.0, -1.0);\n  v_offsets[2] = v_uv.xyxy + cc_nativeSize.zwzw * vec4(-2.0, 0.0, 0.0, 2.0);\n  return pos;\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision highp float;\nlayout(std140) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(std140) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nvec3 ACESToneMap (vec3 color) {\n  color = min(color, vec3(8.0));\n  const float A = 2.51;\n  const float B = 0.03;\n  const float C = 2.43;\n  const float D = 0.59;\n  const float E = 0.14;\n  return (color * (A * color + B)) / (color * (C * color + D) + E);\n}\nin vec2 v_uv;\nin vec4 v_offsets[3];\nuniform sampler2D u_texSampler;\nvec3 ToLDR(vec3 color) {\n#if CC_USE_HDR\n  color *= cc_exposure.x * 1024.0;\n  color = ACESToneMap(color);\n  color = sqrt(color);\n#endif\n  return color;\n}\nvec4 frag () {\n  vec2 threshold = vec2(0.1, 0.1);\n  vec4 delta;\n  vec3 C = ToLDR(texture(u_texSampler, v_uv).rgb);\n  vec3 Cleft = ToLDR(texture(u_texSampler, v_offsets[0].xy).rgb);\n  vec3 t = abs(C - Cleft);\n  delta.x = max(max(t.r, t.g), t.b);\n  vec3 Ctop = ToLDR(texture(u_texSampler, v_offsets[0].zw).rgb);\n  t = abs(C - Ctop);\n  delta.y = max(max(t.r, t.g), t.b);\n  vec2 edges = step(threshold, delta.xy);\n  if (dot(edges, vec2(1.0, 1.0)) == 0.0)\n    discard;\n  vec3 Cright = ToLDR(texture(u_texSampler, v_offsets[1].xy).rgb);\n  t = abs(C - Cright);\n  delta.z = max(max(t.r, t.g), t.b);\n  vec3 Cbottom = ToLDR(texture(u_texSampler, v_offsets[1].zw).rgb);\n  t = abs(C - Cbottom);\n  delta.w = max(max(t.r, t.g), t.b);\n  float maxDelta = max(max(max(delta.x, delta.y), delta.z), delta.w);\n  vec3 Cleftleft = ToLDR(texture(u_texSampler, v_offsets[2].xy).rgb);\n  t = abs(C - Cleftleft);\n  delta.z = max(max(t.r, t.g), t.b);\n  vec3 Ctoptop = ToLDR(texture(u_texSampler, v_offsets[2].zw).rgb);\n  t = abs(C - Ctoptop);\n  delta.w = max(max(t.r, t.g), t.b);\n  maxDelta = max(max(maxDelta, delta.z), delta.w);\n  edges.xy *= step(0.5 * maxDelta, delta.xy);\n  vec4 o = vec4(edges, 0.0, 0.0);\n  return o;\n}\nlayout(location = 0) out vec4 cc_FragColor;\nvoid main() { cc_FragColor = frag(); }"
+      },
+      "glsl1": {
+        "vert": "\nprecision highp float;\nuniform mediump vec4 cc_nativeSize;\nuniform mediump vec4 cc_screenScale;\nattribute vec2 a_position;\nattribute vec2 a_texCoord;\nvarying vec2 v_uv;\nvarying vec4 v_offsets[3];\nvec4 vert () {\n  vec4 pos = vec4(a_position, 0.0, 1.0);\n  v_uv = a_texCoord * cc_screenScale.xy;\n  v_offsets[0] = v_uv.xyxy + cc_nativeSize.zwzw * vec4(-1.0, 0.0, 0.0, 1.0);\n  v_offsets[1] = v_uv.xyxy + cc_nativeSize.zwzw * vec4( 1.0, 0.0, 0.0, -1.0);\n  v_offsets[2] = v_uv.xyxy + cc_nativeSize.zwzw * vec4(-2.0, 0.0, 0.0, 2.0);\n  return pos;\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision highp float;\nuniform mediump vec4 cc_exposure;\nvec3 ACESToneMap (vec3 color) {\n  color = min(color, vec3(8.0));\n  const float A = 2.51;\n  const float B = 0.03;\n  const float C = 2.43;\n  const float D = 0.59;\n  const float E = 0.14;\n  return (color * (A * color + B)) / (color * (C * color + D) + E);\n}\nvarying vec2 v_uv;\nvarying vec4 v_offsets[3];\nuniform sampler2D u_texSampler;\nvec3 ToLDR(vec3 color) {\n#if CC_USE_HDR\n  color *= cc_exposure.x * 1024.0;\n  color = ACESToneMap(color);\n  color = sqrt(color);\n#endif\n  return color;\n}\nvec4 frag () {\n  vec2 threshold = vec2(0.1, 0.1);\n  vec4 delta;\n  vec3 C = ToLDR(texture2D(u_texSampler, v_uv).rgb);\n  vec3 Cleft = ToLDR(texture2D(u_texSampler, v_offsets[0].xy).rgb);\n  vec3 t = abs(C - Cleft);\n  delta.x = max(max(t.r, t.g), t.b);\n  vec3 Ctop = ToLDR(texture2D(u_texSampler, v_offsets[0].zw).rgb);\n  t = abs(C - Ctop);\n  delta.y = max(max(t.r, t.g), t.b);\n  vec2 edges = step(threshold, delta.xy);\n  if (dot(edges, vec2(1.0, 1.0)) == 0.0)\n    discard;\n  vec3 Cright = ToLDR(texture2D(u_texSampler, v_offsets[1].xy).rgb);\n  t = abs(C - Cright);\n  delta.z = max(max(t.r, t.g), t.b);\n  vec3 Cbottom = ToLDR(texture2D(u_texSampler, v_offsets[1].zw).rgb);\n  t = abs(C - Cbottom);\n  delta.w = max(max(t.r, t.g), t.b);\n  float maxDelta = max(max(max(delta.x, delta.y), delta.z), delta.w);\n  vec3 Cleftleft = ToLDR(texture2D(u_texSampler, v_offsets[2].xy).rgb);\n  t = abs(C - Cleftleft);\n  delta.z = max(max(t.r, t.g), t.b);\n  vec3 Ctoptop = ToLDR(texture2D(u_texSampler, v_offsets[2].zw).rgb);\n  t = abs(C - Ctoptop);\n  delta.w = max(max(t.r, t.g), t.b);\n  maxDelta = max(max(maxDelta, delta.z), delta.w);\n  edges.xy *= step(0.5 * maxDelta, delta.xy);\n  vec4 o = vec4(edges, 0.0, 0.0);\n  return o;\n}\nvoid main() { gl_FragColor = frag(); }"
+      },
+      "builtins": {
+        "globals": {
+          "blocks": [
+            {
+              "name": "CCGlobal",
+              "defines": []
+            },
+            {
+              "name": "CCCamera",
+              "defines": []
+            }
+          ],
+          "samplerTextures": [],
+          "buffers": [],
+          "images": []
+        },
+        "locals": {
+          "blocks": [],
+          "samplerTextures": [],
+          "buffers": [],
+          "images": []
+        },
+        "statistics": {
+          "CC_EFFECT_USED_VERTEX_UNIFORM_VECTORS": 39,
+          "CC_EFFECT_USED_FRAGMENT_UNIFORM_VECTORS": 39
+        }
+      },
+      "defines": [
+        {
+          "name": "CC_USE_HDR",
+          "type": "boolean",
+          "defines": []
+        }
+      ],
+      "name": "pipeline/smaa|smaa-edge-vs:vert|smaa-edge-fs:frag"
+    },
+    {
+      "blocks": [],
+      "samplerTextures": [
+        {
+          "name": "u_edgeTexSampler",
+          "type": 28,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 16,
+          "binding": 0
+        },
+        {
+          "name": "u_areaTexSampler",
+          "type": 28,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 16,
+          "binding": 1
+        },
+        {
+          "name": "u_searchTexSampler",
+          "type": 28,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 16,
+          "binding": 2
+        }
+      ],
+      "samplers": [],
+      "textures": [],
+      "buffers": [],
+      "images": [],
+      "subpassInputs": [],
+      "attributes": [
+        {
+          "name": "a_position",
+          "defines": [],
+          "format": 21,
+          "location": 0
+        },
+        {
+          "name": "a_texCoord",
+          "defines": [],
+          "format": 21,
+          "location": 1
+        }
+      ],
+      "varyings": [
+        {
+          "name": "v_uv",
+          "type": 14,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 17,
+          "location": 0
+        },
+        {
+          "name": "v_offsets",
+          "type": 16,
+          "count": 3,
+          "defines": [],
+          "stageFlags": 17,
+          "location": 1
+        },
+        {
+          "name": "v_pixCoord",
+          "type": 14,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 17,
+          "location": 2
+        }
+      ],
+      "fragColors": [
+        {
+          "name": "cc_FragColor",
+          "typename": "vec4",
+          "type": 16,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 16,
+          "location": 0
+        }
+      ],
+      "hash": 3431817192,
+      "glsl4": {
+        "vert": "\nprecision highp float;\nlayout(set = 0, binding = 0) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(set = 0, binding = 1) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nlayout(location = 0) in vec2 a_position;\nlayout(location = 1) in vec2 a_texCoord;\nlayout(location = 0) out vec2 v_uv;\nlayout(location = 1) out vec4 v_offsets[3];\nlayout(location = 2) out vec2 v_pixCoord;\nvec4 vert () {\n  vec4 pos = vec4(a_position, 0.0, 1.0);\n  v_uv = a_texCoord * cc_screenScale.xy;\n  v_pixCoord = v_uv * cc_nativeSize.xy;\n  v_offsets[0] = v_uv.xyxy + cc_nativeSize.zwzw * vec4(-0.25, 0.125, 1.25, 0.125);\n  v_offsets[1] = v_uv.xyxy + cc_nativeSize.zwzw * vec4(-0.125, 0.25, -0.125, -1.25);\n  v_offsets[2] = vec4(v_offsets[0].xz, v_offsets[1].yw) + vec4(-2.0, 2.0, -2.0, 2.0) * cc_nativeSize.zzww * float(8);\n  return pos;\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision highp float;\nlayout(set = 0, binding = 0) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(set = 0, binding = 1) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nlayout(location = 0) in vec2 v_uv;\nlayout(location = 1) in vec4 v_offsets[3];\nlayout(location = 2) in vec2 v_pixCoord;\nlayout(set = 1, binding = 0) uniform sampler2D u_edgeTexSampler;\nlayout(set = 1, binding = 1) uniform sampler2D u_areaTexSampler;\nlayout(set = 1, binding = 2) uniform sampler2D u_searchTexSampler;\nfloat SMAASearchLength(vec2 e, float bias, float scale) {\n  e.r = bias + e.r * scale;\n  return 255.0 * texture(u_searchTexSampler, e).r;\n}\nfloat SMAASearchXLeft(vec2 texcoord, float end) {\n  vec2 e = vec2(0.0, 1.0);\n  for (int i = 0; i < 8; ++i) {\n      e = texture(u_edgeTexSampler, texcoord).rg;\n      texcoord -= vec2( 2.0, 0.0 ) * cc_nativeSize.zw;\n      if (!(texcoord.x > end && e.g > 0.8281 && e.r == 0.0))\n        break;\n  }\n  texcoord.x += 0.25 * cc_nativeSize.z;\n  texcoord.x += cc_nativeSize.z;\n  texcoord.x += 2.0 * cc_nativeSize.z;\n  texcoord.x -= cc_nativeSize.z * SMAASearchLength(e, 0.0, 0.5);\n  return texcoord.x;\n}\nfloat SMAASearchXRight(vec2 texcoord, float end) {\n  vec2 e = vec2(0.0, 1.0);\n  for (int i = 0; i < 8; ++i) {\n      e = texture(u_edgeTexSampler, texcoord).rg;\n      texcoord += vec2( 2.0, 0.0 ) * cc_nativeSize.zw;\n      if (!(texcoord.x < end && e.g > 0.8281 && e.r == 0.0))\n        break;\n  }\n  texcoord.x -= 0.25 * cc_nativeSize.z;\n  texcoord.x -= cc_nativeSize.z;\n  texcoord.x -= 2.0 * cc_nativeSize.z;\n  texcoord.x += cc_nativeSize.z * SMAASearchLength(e, 0.5, 0.5);\n  return texcoord.x;\n}\nfloat SMAASearchYUp(vec2 texcoord, float end) {\n    vec2 e = vec2(1.0, 0.0);\n    for (int i = 0; i < 8; ++i) {\n        e = texture(u_edgeTexSampler, texcoord).rg;\n        texcoord += vec2( 0.0, 2.0 ) * cc_nativeSize.zw;\n        if (!(texcoord.y > end && e.r > 0.8281 && e.g == 0.0))\n          break;\n    }\n    texcoord.y -= 0.25 * cc_nativeSize.w;\n    texcoord.y -= cc_nativeSize.w;\n    texcoord.y -= 2.0 * cc_nativeSize.w;\n    texcoord.y += cc_nativeSize.w * SMAASearchLength(e.gr, 0.0, 0.5);\n    return texcoord.y;\n}\nfloat SMAASearchYDown(vec2 texcoord, float end) {\n    vec2 e = vec2(1.0, 0.0);\n    for (int i = 0; i < 8; ++i) {\n        e = texture(u_edgeTexSampler, texcoord).rg;\n        texcoord -= vec2( 0.0, 2.0 ) * cc_nativeSize.zw;\n        if (!(texcoord.y < end && e.r > 0.8281 && e.g == 0.0))\n          break;\n    }\n    texcoord.y += 0.25 * cc_nativeSize.w;\n    texcoord.y += cc_nativeSize.w;\n    texcoord.y += 2.0 * cc_nativeSize.w;\n    texcoord.y -= cc_nativeSize.w * SMAASearchLength(e.gr, 0.5, 0.5);\n    return texcoord.y;\n}\nvec2 Round(vec2 x) {\n  return sign(x) * floor(abs(x) + 0.5);\n}\nvec2 SMAAArea(vec2 dist, float e1, float e2) {\n    vec2 texcoord = float(16) * Round(4.0 * vec2(e1, e2)) + dist;\n    texcoord = (1.0 / vec2(160.0, 560.0)) * texcoord + 0.5 * (1.0 / vec2(160.0, 560.0));\n    return texture(u_areaTexSampler, texcoord).rg;\n}\nvec4 frag () {\n  vec4 weights = vec4(0.0);\n  vec2 e = texture(u_edgeTexSampler, v_uv).rg;\n  vec2 d;\n  vec2 coords;\n  if ( e.g > 0.0 ) {\n      coords.x = SMAASearchXLeft(v_offsets[0].xy, v_offsets[2].x);\n      coords.y = v_offsets[1].y;\n      d.x = coords.x;\n      float e1 = texture(u_edgeTexSampler, coords).r;\n      coords.x = SMAASearchXRight(v_offsets[0].zw, v_offsets[2].y);\n      d.y = coords.x;\n      d = d / cc_nativeSize.z - v_pixCoord.x;\n      vec2 sqrt_d = sqrt(abs(d));\n      coords.y -= 1.0 * cc_nativeSize.w;\n      float e2 = texture(u_edgeTexSampler, coords + vec2(cc_nativeSize.z, 0.0)).r;\n      weights.rg = SMAAArea(sqrt_d, e1, e2);\n  }\n  if ( e.r > 0.0 ) {\n      coords.y = SMAASearchYUp(v_offsets[1].xy, v_offsets[2].z);\n      coords.x = v_offsets[0].x;\n      d.x = coords.y;\n      float e1 = texture(u_edgeTexSampler, coords).g;\n      coords.y = SMAASearchYDown(v_offsets[1].zw, v_offsets[2].w);\n      d.y = coords.y;\n      d = d / cc_nativeSize.w - v_pixCoord.y;\n      vec2 sqrt_d = sqrt(abs(d));\n      coords.y -= 1.0 * cc_nativeSize.w;\n      float e2 = texture(u_edgeTexSampler, coords + vec2(0.0, cc_nativeSize.w)).g;\n      weights.ba = SMAAArea(sqrt_d, e1, e2);\n  }\n  return weights;\n}\nlayout(location = 0) out vec4 cc_FragColor;\nvoid main() { cc_FragColor = frag(); }"
+      },
+      "glsl3": {
+        "vert": "\nprecision highp float;\nlayout(std140) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(std140) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nin vec2 a_position;\nin vec2 a_texCoord;\nout vec2 v_uv;\nout vec4 v_offsets[3];\nout vec2 v_pixCoord;\nvec4 vert () {\n  vec4 pos = vec4(a_position, 0.0, 1.0);\n  v_uv = a_texCoord * cc_screenScale.xy;\n  v_pixCoord = v_uv * cc_nativeSize.xy;\n  v_offsets[0] = v_uv.xyxy + cc_nativeSize.zwzw * vec4(-0.25, 0.125, 1.25, 0.125);\n  v_offsets[1] = v_uv.xyxy + cc_nativeSize.zwzw * vec4(-0.125, 0.25, -0.125, -1.25);\n  v_offsets[2] = vec4(v_offsets[0].xz, v_offsets[1].yw) + vec4(-2.0, 2.0, -2.0, 2.0) * cc_nativeSize.zzww * float(8);\n  return pos;\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision highp float;\nlayout(std140) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(std140) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nin vec2 v_uv;\nin vec4 v_offsets[3];\nin vec2 v_pixCoord;\nuniform sampler2D u_edgeTexSampler;\nuniform sampler2D u_areaTexSampler;\nuniform sampler2D u_searchTexSampler;\nfloat SMAASearchLength(vec2 e, float bias, float scale) {\n  e.r = bias + e.r * scale;\n  return 255.0 * texture(u_searchTexSampler, e).r;\n}\nfloat SMAASearchXLeft(vec2 texcoord, float end) {\n  vec2 e = vec2(0.0, 1.0);\n  for (int i = 0; i < 8; ++i) {\n      e = texture(u_edgeTexSampler, texcoord).rg;\n      texcoord -= vec2( 2.0, 0.0 ) * cc_nativeSize.zw;\n      if (!(texcoord.x > end && e.g > 0.8281 && e.r == 0.0))\n        break;\n  }\n  texcoord.x += 0.25 * cc_nativeSize.z;\n  texcoord.x += cc_nativeSize.z;\n  texcoord.x += 2.0 * cc_nativeSize.z;\n  texcoord.x -= cc_nativeSize.z * SMAASearchLength(e, 0.0, 0.5);\n  return texcoord.x;\n}\nfloat SMAASearchXRight(vec2 texcoord, float end) {\n  vec2 e = vec2(0.0, 1.0);\n  for (int i = 0; i < 8; ++i) {\n      e = texture(u_edgeTexSampler, texcoord).rg;\n      texcoord += vec2( 2.0, 0.0 ) * cc_nativeSize.zw;\n      if (!(texcoord.x < end && e.g > 0.8281 && e.r == 0.0))\n        break;\n  }\n  texcoord.x -= 0.25 * cc_nativeSize.z;\n  texcoord.x -= cc_nativeSize.z;\n  texcoord.x -= 2.0 * cc_nativeSize.z;\n  texcoord.x += cc_nativeSize.z * SMAASearchLength(e, 0.5, 0.5);\n  return texcoord.x;\n}\nfloat SMAASearchYUp(vec2 texcoord, float end) {\n    vec2 e = vec2(1.0, 0.0);\n    for (int i = 0; i < 8; ++i) {\n        e = texture(u_edgeTexSampler, texcoord).rg;\n        texcoord += vec2( 0.0, 2.0 ) * cc_nativeSize.zw;\n        if (!(texcoord.y > end && e.r > 0.8281 && e.g == 0.0))\n          break;\n    }\n    texcoord.y -= 0.25 * cc_nativeSize.w;\n    texcoord.y -= cc_nativeSize.w;\n    texcoord.y -= 2.0 * cc_nativeSize.w;\n    texcoord.y += cc_nativeSize.w * SMAASearchLength(e.gr, 0.0, 0.5);\n    return texcoord.y;\n}\nfloat SMAASearchYDown(vec2 texcoord, float end) {\n    vec2 e = vec2(1.0, 0.0);\n    for (int i = 0; i < 8; ++i) {\n        e = texture(u_edgeTexSampler, texcoord).rg;\n        texcoord -= vec2( 0.0, 2.0 ) * cc_nativeSize.zw;\n        if (!(texcoord.y < end && e.r > 0.8281 && e.g == 0.0))\n          break;\n    }\n    texcoord.y += 0.25 * cc_nativeSize.w;\n    texcoord.y += cc_nativeSize.w;\n    texcoord.y += 2.0 * cc_nativeSize.w;\n    texcoord.y -= cc_nativeSize.w * SMAASearchLength(e.gr, 0.5, 0.5);\n    return texcoord.y;\n}\nvec2 Round(vec2 x) {\n  return sign(x) * floor(abs(x) + 0.5);\n}\nvec2 SMAAArea(vec2 dist, float e1, float e2) {\n    vec2 texcoord = float(16) * Round(4.0 * vec2(e1, e2)) + dist;\n    texcoord = (1.0 / vec2(160.0, 560.0)) * texcoord + 0.5 * (1.0 / vec2(160.0, 560.0));\n    return texture(u_areaTexSampler, texcoord).rg;\n}\nvec4 frag () {\n  vec4 weights = vec4(0.0);\n  vec2 e = texture(u_edgeTexSampler, v_uv).rg;\n  vec2 d;\n  vec2 coords;\n  if ( e.g > 0.0 ) {\n      coords.x = SMAASearchXLeft(v_offsets[0].xy, v_offsets[2].x);\n      coords.y = v_offsets[1].y;\n      d.x = coords.x;\n      float e1 = texture(u_edgeTexSampler, coords).r;\n      coords.x = SMAASearchXRight(v_offsets[0].zw, v_offsets[2].y);\n      d.y = coords.x;\n      d = d / cc_nativeSize.z - v_pixCoord.x;\n      vec2 sqrt_d = sqrt(abs(d));\n      coords.y -= 1.0 * cc_nativeSize.w;\n      float e2 = texture(u_edgeTexSampler, coords + vec2(cc_nativeSize.z, 0.0)).r;\n      weights.rg = SMAAArea(sqrt_d, e1, e2);\n  }\n  if ( e.r > 0.0 ) {\n      coords.y = SMAASearchYUp(v_offsets[1].xy, v_offsets[2].z);\n      coords.x = v_offsets[0].x;\n      d.x = coords.y;\n      float e1 = texture(u_edgeTexSampler, coords).g;\n      coords.y = SMAASearchYDown(v_offsets[1].zw, v_offsets[2].w);\n      d.y = coords.y;\n      d = d / cc_nativeSize.w - v_pixCoord.y;\n      vec2 sqrt_d = sqrt(abs(d));\n      coords.y -= 1.0 * cc_nativeSize.w;\n      float e2 = texture(u_edgeTexSampler, coords + vec2(0.0, cc_nativeSize.w)).g;\n      weights.ba = SMAAArea(sqrt_d, e1, e2);\n  }\n  return weights;\n}\nlayout(location = 0) out vec4 cc_FragColor;\nvoid main() { cc_FragColor = frag(); }"
+      },
+      "glsl1": {
+        "vert": "\nprecision highp float;\nuniform mediump vec4 cc_nativeSize;\nuniform mediump vec4 cc_screenScale;\nattribute vec2 a_position;\nattribute vec2 a_texCoord;\nvarying vec2 v_uv;\nvarying vec4 v_offsets[3];\nvarying vec2 v_pixCoord;\nvec4 vert () {\n  vec4 pos = vec4(a_position, 0.0, 1.0);\n  v_uv = a_texCoord * cc_screenScale.xy;\n  v_pixCoord = v_uv * cc_nativeSize.xy;\n  v_offsets[0] = v_uv.xyxy + cc_nativeSize.zwzw * vec4(-0.25, 0.125, 1.25, 0.125);\n  v_offsets[1] = v_uv.xyxy + cc_nativeSize.zwzw * vec4(-0.125, 0.25, -0.125, -1.25);\n  v_offsets[2] = vec4(v_offsets[0].xz, v_offsets[1].yw) + vec4(-2.0, 2.0, -2.0, 2.0) * cc_nativeSize.zzww * float(8);\n  return pos;\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision highp float;\nuniform mediump vec4 cc_nativeSize;\nvarying vec2 v_uv;\nvarying vec4 v_offsets[3];\nvarying vec2 v_pixCoord;\nuniform sampler2D u_edgeTexSampler;\nuniform sampler2D u_areaTexSampler;\nuniform sampler2D u_searchTexSampler;\nfloat SMAASearchLength(vec2 e, float bias, float scale) {\n  e.r = bias + e.r * scale;\n  return 255.0 * texture2D(u_searchTexSampler, e).r;\n}\nfloat SMAASearchXLeft(vec2 texcoord, float end) {\n  vec2 e = vec2(0.0, 1.0);\n  for (int i = 0; i < 8; ++i) {\n      e = texture2D(u_edgeTexSampler, texcoord).rg;\n      texcoord -= vec2( 2.0, 0.0 ) * cc_nativeSize.zw;\n      if (!(texcoord.x > end && e.g > 0.8281 && e.r == 0.0))\n        break;\n  }\n  texcoord.x += 0.25 * cc_nativeSize.z;\n  texcoord.x += cc_nativeSize.z;\n  texcoord.x += 2.0 * cc_nativeSize.z;\n  texcoord.x -= cc_nativeSize.z * SMAASearchLength(e, 0.0, 0.5);\n  return texcoord.x;\n}\nfloat SMAASearchXRight(vec2 texcoord, float end) {\n  vec2 e = vec2(0.0, 1.0);\n  for (int i = 0; i < 8; ++i) {\n      e = texture2D(u_edgeTexSampler, texcoord).rg;\n      texcoord += vec2( 2.0, 0.0 ) * cc_nativeSize.zw;\n      if (!(texcoord.x < end && e.g > 0.8281 && e.r == 0.0))\n        break;\n  }\n  texcoord.x -= 0.25 * cc_nativeSize.z;\n  texcoord.x -= cc_nativeSize.z;\n  texcoord.x -= 2.0 * cc_nativeSize.z;\n  texcoord.x += cc_nativeSize.z * SMAASearchLength(e, 0.5, 0.5);\n  return texcoord.x;\n}\nfloat SMAASearchYUp(vec2 texcoord, float end) {\n    vec2 e = vec2(1.0, 0.0);\n    for (int i = 0; i < 8; ++i) {\n        e = texture2D(u_edgeTexSampler, texcoord).rg;\n        texcoord += vec2( 0.0, 2.0 ) * cc_nativeSize.zw;\n        if (!(texcoord.y > end && e.r > 0.8281 && e.g == 0.0))\n          break;\n    }\n    texcoord.y -= 0.25 * cc_nativeSize.w;\n    texcoord.y -= cc_nativeSize.w;\n    texcoord.y -= 2.0 * cc_nativeSize.w;\n    texcoord.y += cc_nativeSize.w * SMAASearchLength(e.gr, 0.0, 0.5);\n    return texcoord.y;\n}\nfloat SMAASearchYDown(vec2 texcoord, float end) {\n    vec2 e = vec2(1.0, 0.0);\n    for (int i = 0; i < 8; ++i) {\n        e = texture2D(u_edgeTexSampler, texcoord).rg;\n        texcoord -= vec2( 0.0, 2.0 ) * cc_nativeSize.zw;\n        if (!(texcoord.y < end && e.r > 0.8281 && e.g == 0.0))\n          break;\n    }\n    texcoord.y += 0.25 * cc_nativeSize.w;\n    texcoord.y += cc_nativeSize.w;\n    texcoord.y += 2.0 * cc_nativeSize.w;\n    texcoord.y -= cc_nativeSize.w * SMAASearchLength(e.gr, 0.5, 0.5);\n    return texcoord.y;\n}\nvec2 Round(vec2 x) {\n  return sign(x) * floor(abs(x) + 0.5);\n}\nvec2 SMAAArea(vec2 dist, float e1, float e2) {\n    vec2 texcoord = float(16) * Round(4.0 * vec2(e1, e2)) + dist;\n    texcoord = (1.0 / vec2(160.0, 560.0)) * texcoord + 0.5 * (1.0 / vec2(160.0, 560.0));\n    return texture2D(u_areaTexSampler, texcoord).rg;\n}\nvec4 frag () {\n  vec4 weights = vec4(0.0);\n  vec2 e = texture2D(u_edgeTexSampler, v_uv).rg;\n  vec2 d;\n  vec2 coords;\n  if ( e.g > 0.0 ) {\n      coords.x = SMAASearchXLeft(v_offsets[0].xy, v_offsets[2].x);\n      coords.y = v_offsets[1].y;\n      d.x = coords.x;\n      float e1 = texture2D(u_edgeTexSampler, coords).r;\n      coords.x = SMAASearchXRight(v_offsets[0].zw, v_offsets[2].y);\n      d.y = coords.x;\n      d = d / cc_nativeSize.z - v_pixCoord.x;\n      vec2 sqrt_d = sqrt(abs(d));\n      coords.y -= 1.0 * cc_nativeSize.w;\n      float e2 = texture2D(u_edgeTexSampler, coords + vec2(cc_nativeSize.z, 0.0)).r;\n      weights.rg = SMAAArea(sqrt_d, e1, e2);\n  }\n  if ( e.r > 0.0 ) {\n      coords.y = SMAASearchYUp(v_offsets[1].xy, v_offsets[2].z);\n      coords.x = v_offsets[0].x;\n      d.x = coords.y;\n      float e1 = texture2D(u_edgeTexSampler, coords).g;\n      coords.y = SMAASearchYDown(v_offsets[1].zw, v_offsets[2].w);\n      d.y = coords.y;\n      d = d / cc_nativeSize.w - v_pixCoord.y;\n      vec2 sqrt_d = sqrt(abs(d));\n      coords.y -= 1.0 * cc_nativeSize.w;\n      float e2 = texture2D(u_edgeTexSampler, coords + vec2(0.0, cc_nativeSize.w)).g;\n      weights.ba = SMAAArea(sqrt_d, e1, e2);\n  }\n  return weights;\n}\nvoid main() { gl_FragColor = frag(); }"
+      },
+      "builtins": {
+        "globals": {
+          "blocks": [
+            {
+              "name": "CCGlobal",
+              "defines": []
+            },
+            {
+              "name": "CCCamera",
+              "defines": []
+            }
+          ],
+          "samplerTextures": [],
+          "buffers": [],
+          "images": []
+        },
+        "locals": {
+          "blocks": [],
+          "samplerTextures": [],
+          "buffers": [],
+          "images": []
+        },
+        "statistics": {
+          "CC_EFFECT_USED_VERTEX_UNIFORM_VECTORS": 39,
+          "CC_EFFECT_USED_FRAGMENT_UNIFORM_VECTORS": 39
+        }
+      },
+      "defines": [],
+      "name": "pipeline/smaa|smaa-blend-vs:vert|smaa-blend-fs:frag"
+    }
+  ],
+  "combinations": [],
+  "hideInEditor": false
+}
