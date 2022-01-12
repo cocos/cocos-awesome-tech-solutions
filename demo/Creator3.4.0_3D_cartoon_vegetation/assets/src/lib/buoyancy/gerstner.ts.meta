@@ -1,0 +1,13 @@
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "7451295f-0b70-47f5-b4a9-84568e3ba13b",
+  "files": [],
+  "subMetas": {},
+  "userData": {
+    "moduleId": "project:///assets/src/lib/buoyancy/gerstner.js",
+    "importerSettings": 4,
+    "simulateGlobals": []
+  }
+}

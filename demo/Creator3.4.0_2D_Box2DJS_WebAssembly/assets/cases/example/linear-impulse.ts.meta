@@ -1,0 +1,13 @@
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "a096b6b1-adff-4500-a239-a3df655f0dd1",
+  "files": [],
+  "subMetas": {},
+  "userData": {
+    "moduleId": "project:///assets/cases/example/linear-impulse.js",
+    "importerSettings": 7,
+    "simulateGlobals": []
+  }
+}

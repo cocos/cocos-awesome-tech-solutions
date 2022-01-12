@@ -5,11 +5,11 @@
  ---
 *The technical support team provides:*
 
-* (v3.3.2) box2d performance optimization (box2d wasm)
+* (v3.4.0) box2d performance optimization (box2d wasm)
 
   > Project git repository address:
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.3.2_2D_Box2DJS_WebAssembly
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_Box2DJS_WebAssembly
   
   |  Platform  |  Before Optimization  | After Optimization  |  Performance Comparison  |
   | :-----------------------: | :-----------------------: | :-----------------------: | :-----------------------: |

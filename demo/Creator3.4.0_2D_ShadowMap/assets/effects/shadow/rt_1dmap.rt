@@ -1,0 +1,19 @@
+{
+  "__type__": "cc.RenderTexture",
+  "_objFlags": 0,
+  "_native": "",
+  "_format": 35,
+  "_minFilter": 2,
+  "_magFilter": 2,
+  "_mipFilter": 0,
+  "_wrapS": 0,
+  "_wrapT": 0,
+  "_wrapR": 0,
+  "_anisotropy": 0,
+  "content": {
+    "base": "2,2,0,0,0,0",
+    "w": 960,
+    "h": 640,
+    "n": ""
+  }
+}

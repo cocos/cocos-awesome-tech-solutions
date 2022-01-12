@@ -1,0 +1,13 @@
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "1c5028c5-128f-49a6-981c-a886809862a6",
+  "files": [],
+  "subMetas": {},
+  "userData": {
+    "moduleId": "project:///assets/cases/demo/gravity.js",
+    "importerSettings": 7,
+    "simulateGlobals": []
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "b9481e83-06da-47b4-a2cb-bb3f6820e5f6",
+  "files": [],
+  "subMetas": {},
+  "userData": {
+    "moduleId": "project:///assets/cases/example/joints/relative-joint-linear-offset.js",
+    "importerSettings": 7,
+    "simulateGlobals": []
+  }
+}

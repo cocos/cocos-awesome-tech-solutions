@@ -1,0 +1,13 @@
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "4d42e3d7-2518-4e37-9593-46f0c2d125d6",
+  "files": [],
+  "subMetas": {},
+  "userData": {
+    "moduleId": "project:///assets/cases/demo/raycast.js",
+    "importerSettings": 7,
+    "simulateGlobals": []
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "9d80119c-1e5d-4cb1-bd66-96b19c286412",
+  "files": [],
+  "subMetas": {},
+  "userData": {
+    "moduleId": "project:///assets/cases/demo/gravity-radial.js",
+    "importerSettings": 7,
+    "simulateGlobals": []
+  }
+}
