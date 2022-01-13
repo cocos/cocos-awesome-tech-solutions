@@ -49,22 +49,6 @@
 
 
 
-*引擎开发团队提供，技术支持团队升级至3.4.0版本*
-
-* (v3.4.0) 3D植被卡通渲染与植被交互
-
-  > 工程 git 仓库地址: 
-  >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_3D_cartoon_vegetation
-  >
-  > 素材来自:
-  > 
-  > https://gitee.com/mirrors_cocos-creator/cartoon-vegetation
-
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211126/2021112603.gif)
-
-
-
 *Gitee用户(skyxu123 随风)提供，由技术支持团队升级至3.4.0版本并补充功能*
 
 * (v3.4.0) 画板
