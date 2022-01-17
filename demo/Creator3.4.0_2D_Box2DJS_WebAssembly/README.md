@@ -11,6 +11,8 @@
  > Windows: D:\CocosDashboard_1.0.20\resources\.editors\Creator\3.4.0\resources\resources\3d\engine\cocos\physics-2d\box2d
  >
  > macOS: /Applications/CocosCreator/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/cocos/physics-2d/box2d
+ >
+ > 备注: 与3.4.0版本比较，修改了box2d下的 shapes/polygon-shape-2d.ts、shapes/shape-2d.ts、physics-contact.ts、physics-world.ts、rigid-body.ts 文件。
 
  - 3 拷贝**back**文件夹下的 build-templates 文件夹到项目下。
 
