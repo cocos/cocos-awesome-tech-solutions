@@ -22,7 +22,6 @@
     iOS
     Windows
     macOS
-    微信小游戏
 
 # 效果预览
 

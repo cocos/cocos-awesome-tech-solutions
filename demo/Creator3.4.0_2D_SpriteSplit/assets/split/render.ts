@@ -25,7 +25,10 @@ class AssemblerSplit implements IAssembler {
         com.renderData.vertexCount = points.length;
         com.renderData.indicesCount = com.renderData.vertexCount + (com.renderData.vertexCount - 3) * 2;
         com.renderData.vData = new Float32Array(com.renderData.vertexCount * 9);
+
+        let material = com.renderData.material;
         com.renderData.clear();
+        com.renderData.material = material;
     }
 
     updateRenderData(com: SplitRender) {
@@ -36,6 +39,7 @@ class AssemblerSplit implements IAssembler {
             this.updateVertexData(com);
             this.updateUvs(com);
             this.updateColor(com);
+            renderData.updateRenderData(com, com.spriteFrame);
         }
     }
 
@@ -60,6 +64,8 @@ class AssemblerSplit implements IAssembler {
                 verts[i * floatsPerVert + 1] = b * polygon[i].x + d * polygon[i].y + ty;
             }
         }
+
+        // @ts-ignore
         com.node._uiProps.uiTransformDirty = false;
     }
 
