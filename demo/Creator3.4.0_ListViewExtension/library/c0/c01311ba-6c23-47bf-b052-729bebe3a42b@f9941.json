@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "btn_purple",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 60
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 200,
+      "height": 60
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "c01311ba-6c23-47bf-b052-729bebe3a42b@6c48a",
+    "packable": true
+  }
+}

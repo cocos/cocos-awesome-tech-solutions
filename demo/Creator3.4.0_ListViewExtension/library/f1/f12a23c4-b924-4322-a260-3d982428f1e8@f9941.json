@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "default_radio_button_off",
+    "atlas": "",
+    "rect": {
+      "x": 3,
+      "y": 3,
+      "width": 26,
+      "height": 26
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 32,
+      "height": 32
+    },
+    "rotated": false,
+    "capInsets": [
+      13,
+      13,
+      13,
+      13
+    ],
+    "texture": "f12a23c4-b924-4322-a260-3d982428f1e8@6c48a",
+    "packable": true
+  }
+}

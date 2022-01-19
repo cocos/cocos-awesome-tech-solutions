@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "bot_frame",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 622,
+      "height": 217
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 622,
+      "height": 217
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "d87be67e-395c-47ac-bd29-0bff0b6e4fc8@6c48a",
+    "packable": true
+  }
+}

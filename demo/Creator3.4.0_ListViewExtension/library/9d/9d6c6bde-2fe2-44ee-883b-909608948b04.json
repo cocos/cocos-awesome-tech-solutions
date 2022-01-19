@@ -1,0 +1,633 @@
+{
+  "__type__": "cc.EffectAsset",
+  "_name": "editor/gizmo",
+  "_objFlags": 0,
+  "_native": "",
+  "techniques": [
+    {
+      "passes": [
+        {
+          "rasterizerState": {
+            "cullMode": 0
+          },
+          "blendState": {
+            "targets": [
+              {
+                "blend": true,
+                "blendSrc": 2,
+                "blendDst": 4,
+                "blendDstAlpha": 4
+              }
+            ]
+          },
+          "program": "editor/gizmo|gizmo-vs:vert|gizmo-fs:frag",
+          "priority": 245,
+          "depthStencilState": {
+            "depthTest": false,
+            "depthWrite": false
+          }
+        }
+      ]
+    },
+    {
+      "passes": [
+        {
+          "rasterizerState": {
+            "cullMode": 0
+          },
+          "blendState": {
+            "targets": [
+              {
+                "blend": true,
+                "blendSrc": 2,
+                "blendDst": 4,
+                "blendDstAlpha": 4
+              }
+            ]
+          },
+          "program": "editor/gizmo|line-vs:vert|line-fs:front",
+          "priority": 245,
+          "depthStencilState": {
+            "depthTest": false,
+            "depthWrite": false
+          }
+        }
+      ]
+    },
+    {
+      "passes": [
+        {
+          "blendState": {
+            "targets": [
+              {
+                "blend": true,
+                "blendSrc": 2,
+                "blendDst": 4,
+                "blendDstAlpha": 4
+              }
+            ]
+          },
+          "program": "editor/gizmo|line-vs:vert|line-fs:front",
+          "priority": 245,
+          "depthStencilState": {
+            "depthTest": true,
+            "depthWrite": false
+          }
+        },
+        {
+          "blendState": {
+            "targets": [
+              {
+                "blend": true,
+                "blendSrc": 2,
+                "blendDst": 4,
+                "blendDstAlpha": 4
+              }
+            ]
+          },
+          "program": "editor/gizmo|line-vs:vert|line-fs:back",
+          "priority": 245,
+          "depthStencilState": {
+            "depthTest": true,
+            "depthWrite": false,
+            "depthFunc": 4
+          }
+        }
+      ]
+    },
+    {
+      "passes": [
+        {
+          "rasterizerState": {
+            "cullMode": 0
+          },
+          "blendState": {
+            "targets": [
+              {
+                "blend": true,
+                "blendSrc": 2,
+                "blendDst": 4,
+                "blendDstAlpha": 4
+              }
+            ]
+          },
+          "program": "editor/gizmo|sprite-vs:vert|sprite-fs:frag",
+          "priority": 245,
+          "depthStencilState": {
+            "depthTest": false,
+            "depthWrite": false
+          }
+        }
+      ]
+    }
+  ],
+  "shaders": [
+    {
+      "blocks": [
+        {
+          "name": "Constant",
+          "members": [
+            {
+              "name": "mainColor",
+              "type": 16,
+              "count": 1
+            }
+          ],
+          "defines": [],
+          "stageFlags": 16,
+          "binding": 0
+        }
+      ],
+      "samplerTextures": [],
+      "samplers": [],
+      "textures": [],
+      "buffers": [],
+      "images": [],
+      "subpassInputs": [],
+      "attributes": [
+        {
+          "name": "a_position",
+          "defines": [],
+          "format": 32,
+          "location": 0
+        },
+        {
+          "name": "a_normal",
+          "defines": [],
+          "format": 32,
+          "location": 1
+        }
+      ],
+      "varyings": [
+        {
+          "name": "normal_w",
+          "type": 15,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 17,
+          "location": 0
+        },
+        {
+          "name": "pos_w",
+          "type": 15,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 17,
+          "location": 1
+        },
+        {
+          "name": "pos_l",
+          "type": 15,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 17,
+          "location": 2
+        },
+        {
+          "name": "right",
+          "type": 15,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 17,
+          "location": 3
+        },
+        {
+          "name": "up",
+          "type": 15,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 17,
+          "location": 4
+        },
+        {
+          "name": "forward",
+          "type": 15,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 17,
+          "location": 5
+        }
+      ],
+      "fragColors": [
+        {
+          "name": "cc_FragColor",
+          "typename": "vec4",
+          "type": 16,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 16,
+          "location": 0
+        }
+      ],
+      "hash": 892926012,
+      "glsl4": {
+        "vert": "\nprecision mediump float;\nlayout(set = 2, binding = 0) uniform CCLocal {\n  highp mat4 cc_matWorld;\n  highp mat4 cc_matWorldIT;\n  highp vec4 cc_lightingMapUVParam;\n};\nlayout(set = 0, binding = 0) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(set = 0, binding = 1) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nlayout(location = 0) in vec3 a_position;\nlayout(location = 1) in vec3 a_normal;\nlayout(location = 0) out vec3 normal_w;\nlayout(location = 1) out vec3 pos_w;\nlayout(location = 2) out vec3 pos_l;\nlayout(location = 3) out vec3 right;\nlayout(location = 4) out vec3 up;\nlayout(location = 5) out vec3 forward;\nvec4 vert () {\n  vec4 pos = vec4(a_position, 1);\n  vec4 normal = vec4(a_normal, 0);\n  pos_l = a_position;\n  pos_w = (cc_matWorld * pos).xyz;\n  normal_w = (cc_matWorldIT * normal).xyz;\n  right = vec3(cc_matView[0][0], cc_matView[1][0], cc_matView[2][0]);\n  up = vec3(cc_matView[0][1], cc_matView[1][1], cc_matView[2][1]);\n  forward = vec3(cc_matView[0][2], cc_matView[1][2], cc_matView[2][2]);\n  return cc_matProj * (cc_matView * cc_matWorld) * pos;\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision mediump float;\nmat3 transposeMat3 (mat3 v) {\n  mat3 tmp;\n  tmp[0] = vec3(v[0].x, v[1].x, v[2].x);\n  tmp[1] = vec3(v[0].y, v[1].y, v[2].y);\n  tmp[2] = vec3(v[0].z, v[1].z, v[2].z);\n  return tmp;\n}\nvoid ClipQuadToHorizon (inout vec3 L[5], out int n) {\n  int config = 0;\n  if (L[0].z > 0.0) config += 1;\n  if (L[1].z > 0.0) config += 2;\n  if (L[2].z > 0.0) config += 4;\n  if (L[3].z > 0.0) config += 8;\n  config = 15;\n  n = 0;\n  if (config == 0)\n  {\n  }\n  else if (config == 1) {\n    n = 3;\n    L[1] = -L[1].z * L[0] + L[0].z * L[1];\n    L[2] = -L[3].z * L[0] + L[0].z * L[3];\n  }\n  else if (config == 2) {\n    n = 3;\n    L[0] = -L[0].z * L[1] + L[1].z * L[0];\n    L[2] = -L[2].z * L[1] + L[1].z * L[2];\n  }\n  else if (config == 3) {\n    n = 4;\n    L[2] = -L[2].z * L[1] + L[1].z * L[2];\n    L[3] = -L[3].z * L[0] + L[0].z * L[3];\n  }\n  else if (config == 4) {\n    n = 3;\n    L[0] = -L[3].z * L[2] + L[2].z * L[3];\n    L[1] = -L[1].z * L[2] + L[2].z * L[1];\n  }\n  else if (config == 5) {\n    n = 0;\n  }\n  else if (config == 6) {\n    n = 4;\n    L[0] = -L[0].z * L[1] + L[1].z * L[0];\n    L[3] = -L[3].z * L[2] + L[2].z * L[3];\n  }\n  else if (config == 7) {\n    n = 5;\n    L[4] = -L[3].z * L[0] + L[0].z * L[3];\n    L[3] = -L[3].z * L[2] + L[2].z * L[3];\n  }\n  else if (config == 8) {\n    n = 3;\n    L[0] = -L[0].z * L[3] + L[3].z * L[0];\n    L[1] = -L[2].z * L[3] + L[3].z * L[2];\n    L[2] =  L[3];\n  }\n  else if (config == 9) {\n    n = 4;\n    L[1] = -L[1].z * L[0] + L[0].z * L[1];\n    L[2] = -L[2].z * L[3] + L[3].z * L[2];\n  }\n  else if (config == 10) {\n    n = 0;\n  }\n  else if (config == 11) {\n    n = 5;\n    L[4] = L[3];\n    L[3] = -L[2].z * L[3] + L[3].z * L[2];\n    L[2] = -L[2].z * L[1] + L[1].z * L[2];\n  }\n  else if (config == 12) {\n    n = 4;\n    L[1] = -L[1].z * L[2] + L[2].z * L[1];\n    L[0] = -L[0].z * L[3] + L[3].z * L[0];\n  }\n  else if (config == 13) {\n    n = 5;\n    L[4] = L[3];\n    L[3] = L[2];\n    L[2] = -L[1].z * L[2] + L[2].z * L[1];\n    L[1] = -L[1].z * L[0] + L[0].z * L[1];\n  }\n  else if (config == 14) {\n    n = 5;\n    L[4] = -L[0].z * L[3] + L[3].z * L[0];\n    L[0] = -L[0].z * L[1] + L[1].z * L[0];\n  }\n  else if (config == 15) {\n    n = 4;\n  }\n  if (n == 3) L[3] = L[0];\n  if (n == 4) L[4] = L[0];\n}\nfloat IntegrateEdge (vec3 v1, vec3 v2) {\n  float cosTheta = dot(v1, v2);\n  float theta = acos(cosTheta);\n  return cross(v1, v2).z * ((theta > 0.001) ? theta/sin(theta) : 4.0);\n}\nvec3 LTC_Evaluate (vec3 N, vec3 V, vec3 P, mat3 Minv, vec3 points[4]) {\n  vec3 T1, T2;\n  T1 = normalize(V - N*dot(V, N));\n  T2 = cross(N, T1);\n  Minv = Minv * transposeMat3(mat3(T1, T2, N));\n  vec3 L[5];\n  L[0] = Minv * (points[0] - P);\n  L[1] = Minv * (points[1] - P);\n  L[2] = Minv * (points[2] - P);\n  L[3] = Minv * (points[3] - P);\n  int n;\n  ClipQuadToHorizon(L, n);\n  if (n == 0) return vec3(0, 0, 0);\n  L[0] = normalize(L[0]);\n  L[1] = normalize(L[1]);\n  L[2] = normalize(L[2]);\n  L[3] = normalize(L[3]);\n  L[4] = normalize(L[4]);\n  float sum = 0.0;\n  sum += IntegrateEdge(L[0], L[1]);\n  sum += IntegrateEdge(L[1], L[2]);\n  sum += IntegrateEdge(L[2], L[3]);\n  if (n >= 4) sum += IntegrateEdge(L[3], L[4]);\n  if (n == 5) sum += IntegrateEdge(L[4], L[0]);\n  sum = max(0.0, sum);\n  vec3 Lo_i = vec3(sum, sum, sum);\n  return Lo_i;\n}\nlayout(set = 0, binding = 0) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(set = 0, binding = 1) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nvec4 CCFragOutput (vec4 color) {\n  return color;\n}\nlayout(location = 0) in vec3 normal_w;\nlayout(location = 1) in vec3 pos_w;\nlayout(location = 2) in vec3 pos_l;\nlayout(location = 3) in vec3 right;\nlayout(location = 4) in vec3 up;\nlayout(location = 5) in vec3 forward;\nlayout(set = 1, binding = 0) uniform Constant {\n  vec4 mainColor;\n};\nvec4 frag () {\n  vec3 N = normalize(normal_w) * (float(gl_FrontFacing) * 2.0 - 1.0);\n  vec3 V = normalize(cc_cameraPos.xyz - pos_w);\n  vec3 points [4];\n  points[0] = (forward * 3.0 + right + up) * 40.0;\n  points[1] = (forward * 3.0 - right + up) * 40.0;\n  points[2] = (forward * 3.0 - right - up) * 40.0;\n  points[3] = (forward * 3.0 + right - up) * 40.0;\n  vec3 diffuse = sqrt(mainColor.rgb * LTC_Evaluate(N, V, pos_l, mat3(1), points));\n  #if USE_FORWARD_PIPELINE\n    return CCFragOutput(vec4(diffuse, mainColor.a));\n  #else\n    return vec4(diffuse, mainColor.a);\n  #endif\n}\nlayout(location = 0) out vec4 cc_FragColor;\nvoid main() { cc_FragColor = frag(); }"
+      },
+      "glsl3": {
+        "vert": "\nprecision mediump float;\nlayout(std140) uniform CCLocal {\n  highp mat4 cc_matWorld;\n  highp mat4 cc_matWorldIT;\n  highp vec4 cc_lightingMapUVParam;\n};\nlayout(std140) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(std140) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nin vec3 a_position;\nin vec3 a_normal;\nout vec3 normal_w;\nout vec3 pos_w;\nout vec3 pos_l;\nout vec3 right;\nout vec3 up;\nout vec3 forward;\nvec4 vert () {\n  vec4 pos = vec4(a_position, 1);\n  vec4 normal = vec4(a_normal, 0);\n  pos_l = a_position;\n  pos_w = (cc_matWorld * pos).xyz;\n  normal_w = (cc_matWorldIT * normal).xyz;\n  right = vec3(cc_matView[0][0], cc_matView[1][0], cc_matView[2][0]);\n  up = vec3(cc_matView[0][1], cc_matView[1][1], cc_matView[2][1]);\n  forward = vec3(cc_matView[0][2], cc_matView[1][2], cc_matView[2][2]);\n  return cc_matProj * (cc_matView * cc_matWorld) * pos;\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision mediump float;\nmat3 transposeMat3 (mat3 v) {\n  mat3 tmp;\n  tmp[0] = vec3(v[0].x, v[1].x, v[2].x);\n  tmp[1] = vec3(v[0].y, v[1].y, v[2].y);\n  tmp[2] = vec3(v[0].z, v[1].z, v[2].z);\n  return tmp;\n}\nvoid ClipQuadToHorizon (inout vec3 L[5], out int n) {\n  int config = 0;\n  if (L[0].z > 0.0) config += 1;\n  if (L[1].z > 0.0) config += 2;\n  if (L[2].z > 0.0) config += 4;\n  if (L[3].z > 0.0) config += 8;\n  config = 15;\n  n = 0;\n  if (config == 0)\n  {\n  }\n  else if (config == 1) {\n    n = 3;\n    L[1] = -L[1].z * L[0] + L[0].z * L[1];\n    L[2] = -L[3].z * L[0] + L[0].z * L[3];\n  }\n  else if (config == 2) {\n    n = 3;\n    L[0] = -L[0].z * L[1] + L[1].z * L[0];\n    L[2] = -L[2].z * L[1] + L[1].z * L[2];\n  }\n  else if (config == 3) {\n    n = 4;\n    L[2] = -L[2].z * L[1] + L[1].z * L[2];\n    L[3] = -L[3].z * L[0] + L[0].z * L[3];\n  }\n  else if (config == 4) {\n    n = 3;\n    L[0] = -L[3].z * L[2] + L[2].z * L[3];\n    L[1] = -L[1].z * L[2] + L[2].z * L[1];\n  }\n  else if (config == 5) {\n    n = 0;\n  }\n  else if (config == 6) {\n    n = 4;\n    L[0] = -L[0].z * L[1] + L[1].z * L[0];\n    L[3] = -L[3].z * L[2] + L[2].z * L[3];\n  }\n  else if (config == 7) {\n    n = 5;\n    L[4] = -L[3].z * L[0] + L[0].z * L[3];\n    L[3] = -L[3].z * L[2] + L[2].z * L[3];\n  }\n  else if (config == 8) {\n    n = 3;\n    L[0] = -L[0].z * L[3] + L[3].z * L[0];\n    L[1] = -L[2].z * L[3] + L[3].z * L[2];\n    L[2] =  L[3];\n  }\n  else if (config == 9) {\n    n = 4;\n    L[1] = -L[1].z * L[0] + L[0].z * L[1];\n    L[2] = -L[2].z * L[3] + L[3].z * L[2];\n  }\n  else if (config == 10) {\n    n = 0;\n  }\n  else if (config == 11) {\n    n = 5;\n    L[4] = L[3];\n    L[3] = -L[2].z * L[3] + L[3].z * L[2];\n    L[2] = -L[2].z * L[1] + L[1].z * L[2];\n  }\n  else if (config == 12) {\n    n = 4;\n    L[1] = -L[1].z * L[2] + L[2].z * L[1];\n    L[0] = -L[0].z * L[3] + L[3].z * L[0];\n  }\n  else if (config == 13) {\n    n = 5;\n    L[4] = L[3];\n    L[3] = L[2];\n    L[2] = -L[1].z * L[2] + L[2].z * L[1];\n    L[1] = -L[1].z * L[0] + L[0].z * L[1];\n  }\n  else if (config == 14) {\n    n = 5;\n    L[4] = -L[0].z * L[3] + L[3].z * L[0];\n    L[0] = -L[0].z * L[1] + L[1].z * L[0];\n  }\n  else if (config == 15) {\n    n = 4;\n  }\n  if (n == 3) L[3] = L[0];\n  if (n == 4) L[4] = L[0];\n}\nfloat IntegrateEdge (vec3 v1, vec3 v2) {\n  float cosTheta = dot(v1, v2);\n  float theta = acos(cosTheta);\n  return cross(v1, v2).z * ((theta > 0.001) ? theta/sin(theta) : 4.0);\n}\nvec3 LTC_Evaluate (vec3 N, vec3 V, vec3 P, mat3 Minv, vec3 points[4]) {\n  vec3 T1, T2;\n  T1 = normalize(V - N*dot(V, N));\n  T2 = cross(N, T1);\n  Minv = Minv * transposeMat3(mat3(T1, T2, N));\n  vec3 L[5];\n  L[0] = Minv * (points[0] - P);\n  L[1] = Minv * (points[1] - P);\n  L[2] = Minv * (points[2] - P);\n  L[3] = Minv * (points[3] - P);\n  int n;\n  ClipQuadToHorizon(L, n);\n  if (n == 0) return vec3(0, 0, 0);\n  L[0] = normalize(L[0]);\n  L[1] = normalize(L[1]);\n  L[2] = normalize(L[2]);\n  L[3] = normalize(L[3]);\n  L[4] = normalize(L[4]);\n  float sum = 0.0;\n  sum += IntegrateEdge(L[0], L[1]);\n  sum += IntegrateEdge(L[1], L[2]);\n  sum += IntegrateEdge(L[2], L[3]);\n  if (n >= 4) sum += IntegrateEdge(L[3], L[4]);\n  if (n == 5) sum += IntegrateEdge(L[4], L[0]);\n  sum = max(0.0, sum);\n  vec3 Lo_i = vec3(sum, sum, sum);\n  return Lo_i;\n}\nlayout(std140) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(std140) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nvec4 CCFragOutput (vec4 color) {\n  return color;\n}\nin vec3 normal_w;\nin vec3 pos_w;\nin vec3 pos_l;\nin vec3 right;\nin vec3 up;\nin vec3 forward;\nlayout(std140) uniform Constant {\n  vec4 mainColor;\n};\nvec4 frag () {\n  vec3 N = normalize(normal_w) * (float(gl_FrontFacing) * 2.0 - 1.0);\n  vec3 V = normalize(cc_cameraPos.xyz - pos_w);\n  vec3 points [4];\n  points[0] = (forward * 3.0 + right + up) * 40.0;\n  points[1] = (forward * 3.0 - right + up) * 40.0;\n  points[2] = (forward * 3.0 - right - up) * 40.0;\n  points[3] = (forward * 3.0 + right - up) * 40.0;\n  vec3 diffuse = sqrt(mainColor.rgb * LTC_Evaluate(N, V, pos_l, mat3(1), points));\n  #if USE_FORWARD_PIPELINE\n    return CCFragOutput(vec4(diffuse, mainColor.a));\n  #else\n    return vec4(diffuse, mainColor.a);\n  #endif\n}\nlayout(location = 0) out vec4 cc_FragColor;\nvoid main() { cc_FragColor = frag(); }"
+      },
+      "glsl1": {
+        "vert": "\nprecision mediump float;\nuniform highp mat4 cc_matWorld;\n  uniform highp mat4 cc_matWorldIT;\nuniform highp mat4 cc_matView;\n  uniform highp mat4 cc_matProj;\nattribute vec3 a_position;\nattribute vec3 a_normal;\nvarying vec3 normal_w;\nvarying vec3 pos_w;\nvarying vec3 pos_l;\nvarying vec3 right;\nvarying vec3 up;\nvarying vec3 forward;\nvec4 vert () {\n  vec4 pos = vec4(a_position, 1);\n  vec4 normal = vec4(a_normal, 0);\n  pos_l = a_position;\n  pos_w = (cc_matWorld * pos).xyz;\n  normal_w = (cc_matWorldIT * normal).xyz;\n  right = vec3(cc_matView[0][0], cc_matView[1][0], cc_matView[2][0]);\n  up = vec3(cc_matView[0][1], cc_matView[1][1], cc_matView[2][1]);\n  forward = vec3(cc_matView[0][2], cc_matView[1][2], cc_matView[2][2]);\n  return cc_matProj * (cc_matView * cc_matWorld) * pos;\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision mediump float;\nmat3 transposeMat3 (mat3 v) {\n  mat3 tmp;\n  tmp[0] = vec3(v[0].x, v[1].x, v[2].x);\n  tmp[1] = vec3(v[0].y, v[1].y, v[2].y);\n  tmp[2] = vec3(v[0].z, v[1].z, v[2].z);\n  return tmp;\n}\nvoid ClipQuadToHorizon (inout vec3 L[5], out int n) {\n  int config = 0;\n  if (L[0].z > 0.0) config += 1;\n  if (L[1].z > 0.0) config += 2;\n  if (L[2].z > 0.0) config += 4;\n  if (L[3].z > 0.0) config += 8;\n  config = 15;\n  n = 0;\n  if (config == 0)\n  {\n  }\n  else if (config == 1) {\n    n = 3;\n    L[1] = -L[1].z * L[0] + L[0].z * L[1];\n    L[2] = -L[3].z * L[0] + L[0].z * L[3];\n  }\n  else if (config == 2) {\n    n = 3;\n    L[0] = -L[0].z * L[1] + L[1].z * L[0];\n    L[2] = -L[2].z * L[1] + L[1].z * L[2];\n  }\n  else if (config == 3) {\n    n = 4;\n    L[2] = -L[2].z * L[1] + L[1].z * L[2];\n    L[3] = -L[3].z * L[0] + L[0].z * L[3];\n  }\n  else if (config == 4) {\n    n = 3;\n    L[0] = -L[3].z * L[2] + L[2].z * L[3];\n    L[1] = -L[1].z * L[2] + L[2].z * L[1];\n  }\n  else if (config == 5) {\n    n = 0;\n  }\n  else if (config == 6) {\n    n = 4;\n    L[0] = -L[0].z * L[1] + L[1].z * L[0];\n    L[3] = -L[3].z * L[2] + L[2].z * L[3];\n  }\n  else if (config == 7) {\n    n = 5;\n    L[4] = -L[3].z * L[0] + L[0].z * L[3];\n    L[3] = -L[3].z * L[2] + L[2].z * L[3];\n  }\n  else if (config == 8) {\n    n = 3;\n    L[0] = -L[0].z * L[3] + L[3].z * L[0];\n    L[1] = -L[2].z * L[3] + L[3].z * L[2];\n    L[2] =  L[3];\n  }\n  else if (config == 9) {\n    n = 4;\n    L[1] = -L[1].z * L[0] + L[0].z * L[1];\n    L[2] = -L[2].z * L[3] + L[3].z * L[2];\n  }\n  else if (config == 10) {\n    n = 0;\n  }\n  else if (config == 11) {\n    n = 5;\n    L[4] = L[3];\n    L[3] = -L[2].z * L[3] + L[3].z * L[2];\n    L[2] = -L[2].z * L[1] + L[1].z * L[2];\n  }\n  else if (config == 12) {\n    n = 4;\n    L[1] = -L[1].z * L[2] + L[2].z * L[1];\n    L[0] = -L[0].z * L[3] + L[3].z * L[0];\n  }\n  else if (config == 13) {\n    n = 5;\n    L[4] = L[3];\n    L[3] = L[2];\n    L[2] = -L[1].z * L[2] + L[2].z * L[1];\n    L[1] = -L[1].z * L[0] + L[0].z * L[1];\n  }\n  else if (config == 14) {\n    n = 5;\n    L[4] = -L[0].z * L[3] + L[3].z * L[0];\n    L[0] = -L[0].z * L[1] + L[1].z * L[0];\n  }\n  else if (config == 15) {\n    n = 4;\n  }\n  if (n == 3) L[3] = L[0];\n  if (n == 4) L[4] = L[0];\n}\nfloat IntegrateEdge (vec3 v1, vec3 v2) {\n  float cosTheta = dot(v1, v2);\n  float theta = acos(cosTheta);\n  return cross(v1, v2).z * ((theta > 0.001) ? theta/sin(theta) : 4.0);\n}\nvec3 LTC_Evaluate (vec3 N, vec3 V, vec3 P, mat3 Minv, vec3 points[4]) {\n  vec3 T1, T2;\n  T1 = normalize(V - N*dot(V, N));\n  T2 = cross(N, T1);\n  Minv = Minv * transposeMat3(mat3(T1, T2, N));\n  vec3 L[5];\n  L[0] = Minv * (points[0] - P);\n  L[1] = Minv * (points[1] - P);\n  L[2] = Minv * (points[2] - P);\n  L[3] = Minv * (points[3] - P);\n  int n;\n  ClipQuadToHorizon(L, n);\n  if (n == 0) return vec3(0, 0, 0);\n  L[0] = normalize(L[0]);\n  L[1] = normalize(L[1]);\n  L[2] = normalize(L[2]);\n  L[3] = normalize(L[3]);\n  L[4] = normalize(L[4]);\n  float sum = 0.0;\n  sum += IntegrateEdge(L[0], L[1]);\n  sum += IntegrateEdge(L[1], L[2]);\n  sum += IntegrateEdge(L[2], L[3]);\n  if (n >= 4) sum += IntegrateEdge(L[3], L[4]);\n  if (n == 5) sum += IntegrateEdge(L[4], L[0]);\n  sum = max(0.0, sum);\n  vec3 Lo_i = vec3(sum, sum, sum);\n  return Lo_i;\n}\nuniform highp vec4 cc_cameraPos;\nvec4 CCFragOutput (vec4 color) {\n  return color;\n}\nvarying vec3 normal_w;\nvarying vec3 pos_w;\nvarying vec3 pos_l;\nvarying vec3 right;\nvarying vec3 up;\nvarying vec3 forward;\n   uniform vec4 mainColor;\nvec4 frag () {\n  vec3 N = normalize(normal_w) * (float(gl_FrontFacing) * 2.0 - 1.0);\n  vec3 V = normalize(cc_cameraPos.xyz - pos_w);\n  vec3 points [4];\n  points[0] = (forward * 3.0 + right + up) * 40.0;\n  points[1] = (forward * 3.0 - right + up) * 40.0;\n  points[2] = (forward * 3.0 - right - up) * 40.0;\n  points[3] = (forward * 3.0 + right - up) * 40.0;\n  vec3 diffuse = sqrt(mainColor.rgb * LTC_Evaluate(N, V, pos_l, mat3(1), points));\n  #if USE_FORWARD_PIPELINE\n    return CCFragOutput(vec4(diffuse, mainColor.a));\n  #else\n    return vec4(diffuse, mainColor.a);\n  #endif\n}\nvoid main() { gl_FragColor = frag(); }"
+      },
+      "builtins": {
+        "globals": {
+          "blocks": [
+            {
+              "name": "CCGlobal",
+              "defines": []
+            },
+            {
+              "name": "CCCamera",
+              "defines": []
+            }
+          ],
+          "samplerTextures": [],
+          "buffers": [],
+          "images": []
+        },
+        "locals": {
+          "blocks": [
+            {
+              "name": "CCLocal",
+              "defines": []
+            }
+          ],
+          "samplerTextures": [],
+          "buffers": [],
+          "images": []
+        },
+        "statistics": {
+          "CC_EFFECT_USED_VERTEX_UNIFORM_VECTORS": 48,
+          "CC_EFFECT_USED_FRAGMENT_UNIFORM_VECTORS": 40
+        }
+      },
+      "defines": [
+        {
+          "name": "USE_FORWARD_PIPELINE",
+          "type": "boolean",
+          "defines": []
+        }
+      ],
+      "name": "editor/gizmo|gizmo-vs:vert|gizmo-fs:frag"
+    },
+    {
+      "blocks": [
+        {
+          "name": "Constant",
+          "members": [
+            {
+              "name": "mainColor",
+              "type": 16,
+              "count": 1
+            }
+          ],
+          "defines": [],
+          "stageFlags": 16,
+          "binding": 0
+        }
+      ],
+      "samplerTextures": [],
+      "samplers": [],
+      "textures": [],
+      "buffers": [],
+      "images": [],
+      "subpassInputs": [],
+      "attributes": [
+        {
+          "name": "a_position",
+          "defines": [],
+          "format": 32,
+          "location": 0
+        },
+        {
+          "name": "a_lineDistance",
+          "defines": [
+            "USE_DASHED_LINE"
+          ],
+          "format": 11,
+          "location": 1
+        }
+      ],
+      "varyings": [
+        {
+          "name": "lineDistance",
+          "type": 13,
+          "count": 1,
+          "defines": [
+            "USE_DASHED_LINE"
+          ],
+          "stageFlags": 17,
+          "location": 0
+        }
+      ],
+      "fragColors": [
+        {
+          "name": "cc_FragColor",
+          "typename": "vec4",
+          "type": 16,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 16,
+          "location": 0
+        }
+      ],
+      "hash": 3311122715,
+      "glsl4": {
+        "vert": "\nprecision mediump float;\nlayout(set = 2, binding = 0) uniform CCLocal {\n  highp mat4 cc_matWorld;\n  highp mat4 cc_matWorldIT;\n  highp vec4 cc_lightingMapUVParam;\n};\nlayout(set = 0, binding = 0) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(set = 0, binding = 1) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nlayout(location = 0) in highp vec3 a_position;\n#if USE_DASHED_LINE\nlayout(location = 1) in float a_lineDistance;\nlayout(location = 0) out float lineDistance;\n#endif\nvec4 vert () {\n  vec4 pos = cc_matProj * (cc_matView * cc_matWorld) * vec4(a_position, 1);\n  pos.z -= 0.000001;\n  #if USE_DASHED_LINE\n  lineDistance = a_lineDistance;\n  #endif\n  return pos;\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision mediump float;\nlayout(set = 0, binding = 0) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(set = 0, binding = 1) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nvec4 CCFragOutput (vec4 color) {\n  return color;\n}\nlayout(set = 1, binding = 0) uniform Constant {\n  vec4 mainColor;\n};\nlayout(location = 0) in float lineDistance;\nvec4 front() {\n  #if USE_FORWARD_PIPELINE\n    return CCFragOutput(mainColor);\n  #else\n      #if USE_DASHED_LINE\n          if (mod(lineDistance, 10.0) > 5.0) {\n              discard;\n          }\n      #endif\n    return mainColor;\n  #endif\n}\nlayout(location = 0) out vec4 cc_FragColor;\nvoid main() { cc_FragColor = front(); }"
+      },
+      "glsl3": {
+        "vert": "\nprecision mediump float;\nlayout(std140) uniform CCLocal {\n  highp mat4 cc_matWorld;\n  highp mat4 cc_matWorldIT;\n  highp vec4 cc_lightingMapUVParam;\n};\nlayout(std140) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(std140) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nin highp vec3 a_position;\n#if USE_DASHED_LINE\nin float a_lineDistance;\nout float lineDistance;\n#endif\nvec4 vert () {\n  vec4 pos = cc_matProj * (cc_matView * cc_matWorld) * vec4(a_position, 1);\n  pos.z -= 0.000001;\n  #if USE_DASHED_LINE\n  lineDistance = a_lineDistance;\n  #endif\n  return pos;\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision mediump float;\nlayout(std140) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(std140) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nvec4 CCFragOutput (vec4 color) {\n  return color;\n}\nlayout(std140) uniform Constant {\n  vec4 mainColor;\n};\nin float lineDistance;\nvec4 front() {\n  #if USE_FORWARD_PIPELINE\n    return CCFragOutput(mainColor);\n  #else\n      #if USE_DASHED_LINE\n          if (mod(lineDistance, 10.0) > 5.0) {\n              discard;\n          }\n      #endif\n    return mainColor;\n  #endif\n}\nlayout(location = 0) out vec4 cc_FragColor;\nvoid main() { cc_FragColor = front(); }"
+      },
+      "glsl1": {
+        "vert": "\nprecision mediump float;\nuniform highp mat4 cc_matWorld;\nuniform highp mat4 cc_matView;\n  uniform highp mat4 cc_matProj;\nattribute highp vec3 a_position;\n#if USE_DASHED_LINE\nattribute float a_lineDistance;\nvarying float lineDistance;\n#endif\nvec4 vert () {\n  vec4 pos = cc_matProj * (cc_matView * cc_matWorld) * vec4(a_position, 1);\n  pos.z -= 0.000001;\n  #if USE_DASHED_LINE\n  lineDistance = a_lineDistance;\n  #endif\n  return pos;\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision mediump float;\nvec4 CCFragOutput (vec4 color) {\n  return color;\n}\n    uniform vec4 mainColor;\nvarying float lineDistance;\nvec4 front() {\n  #if USE_FORWARD_PIPELINE\n    return CCFragOutput(mainColor);\n  #else\n      #if USE_DASHED_LINE\n          if (mod(lineDistance, 10.0) > 5.0) {\n              discard;\n          }\n      #endif\n    return mainColor;\n  #endif\n}\nvoid main() { gl_FragColor = front(); }"
+      },
+      "builtins": {
+        "globals": {
+          "blocks": [
+            {
+              "name": "CCGlobal",
+              "defines": []
+            },
+            {
+              "name": "CCCamera",
+              "defines": []
+            }
+          ],
+          "samplerTextures": [],
+          "buffers": [],
+          "images": []
+        },
+        "locals": {
+          "blocks": [
+            {
+              "name": "CCLocal",
+              "defines": []
+            }
+          ],
+          "samplerTextures": [],
+          "buffers": [],
+          "images": []
+        },
+        "statistics": {
+          "CC_EFFECT_USED_VERTEX_UNIFORM_VECTORS": 48,
+          "CC_EFFECT_USED_FRAGMENT_UNIFORM_VECTORS": 40
+        }
+      },
+      "defines": [
+        {
+          "name": "USE_DASHED_LINE",
+          "type": "boolean",
+          "defines": []
+        },
+        {
+          "name": "USE_FORWARD_PIPELINE",
+          "type": "boolean",
+          "defines": []
+        }
+      ],
+      "name": "editor/gizmo|line-vs:vert|line-fs:front"
+    },
+    {
+      "blocks": [
+        {
+          "name": "Constant",
+          "members": [
+            {
+              "name": "mainColor",
+              "type": 16,
+              "count": 1
+            }
+          ],
+          "defines": [],
+          "stageFlags": 16,
+          "binding": 0
+        }
+      ],
+      "samplerTextures": [],
+      "samplers": [],
+      "textures": [],
+      "buffers": [],
+      "images": [],
+      "subpassInputs": [],
+      "attributes": [
+        {
+          "name": "a_position",
+          "defines": [],
+          "format": 32,
+          "location": 0
+        },
+        {
+          "name": "a_lineDistance",
+          "defines": [
+            "USE_DASHED_LINE"
+          ],
+          "format": 11,
+          "location": 1
+        }
+      ],
+      "varyings": [
+        {
+          "name": "lineDistance",
+          "type": 13,
+          "count": 1,
+          "defines": [
+            "USE_DASHED_LINE"
+          ],
+          "stageFlags": 17,
+          "location": 0
+        }
+      ],
+      "fragColors": [
+        {
+          "name": "cc_FragColor",
+          "typename": "vec4",
+          "type": 16,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 16,
+          "location": 0
+        }
+      ],
+      "hash": 672372387,
+      "glsl4": {
+        "vert": "\nprecision mediump float;\nlayout(set = 2, binding = 0) uniform CCLocal {\n  highp mat4 cc_matWorld;\n  highp mat4 cc_matWorldIT;\n  highp vec4 cc_lightingMapUVParam;\n};\nlayout(set = 0, binding = 0) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(set = 0, binding = 1) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nlayout(location = 0) in highp vec3 a_position;\n#if USE_DASHED_LINE\nlayout(location = 1) in float a_lineDistance;\nlayout(location = 0) out float lineDistance;\n#endif\nvec4 vert () {\n  vec4 pos = cc_matProj * (cc_matView * cc_matWorld) * vec4(a_position, 1);\n  pos.z -= 0.000001;\n  #if USE_DASHED_LINE\n  lineDistance = a_lineDistance;\n  #endif\n  return pos;\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision mediump float;\nlayout(set = 0, binding = 0) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(set = 0, binding = 1) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nvec4 CCFragOutput (vec4 color) {\n  return color;\n}\nlayout(set = 1, binding = 0) uniform Constant {\n  vec4 mainColor;\n};\nlayout(location = 0) in float lineDistance;\nvec4 back() {\n  #if USE_FORWARD_PIPELINE\n    return CCFragOutput(vec4(mainColor.rgb, mainColor.a * 0.2));\n  #else\n    return vec4(mainColor.rgb, mainColor.a * 0.2);\n  #endif\n}\nlayout(location = 0) out vec4 cc_FragColor;\nvoid main() { cc_FragColor = back(); }"
+      },
+      "glsl3": {
+        "vert": "\nprecision mediump float;\nlayout(std140) uniform CCLocal {\n  highp mat4 cc_matWorld;\n  highp mat4 cc_matWorldIT;\n  highp vec4 cc_lightingMapUVParam;\n};\nlayout(std140) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(std140) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nin highp vec3 a_position;\n#if USE_DASHED_LINE\nin float a_lineDistance;\nout float lineDistance;\n#endif\nvec4 vert () {\n  vec4 pos = cc_matProj * (cc_matView * cc_matWorld) * vec4(a_position, 1);\n  pos.z -= 0.000001;\n  #if USE_DASHED_LINE\n  lineDistance = a_lineDistance;\n  #endif\n  return pos;\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision mediump float;\nlayout(std140) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(std140) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nvec4 CCFragOutput (vec4 color) {\n  return color;\n}\nlayout(std140) uniform Constant {\n  vec4 mainColor;\n};\nin float lineDistance;\nvec4 back() {\n  #if USE_FORWARD_PIPELINE\n    return CCFragOutput(vec4(mainColor.rgb, mainColor.a * 0.2));\n  #else\n    return vec4(mainColor.rgb, mainColor.a * 0.2);\n  #endif\n}\nlayout(location = 0) out vec4 cc_FragColor;\nvoid main() { cc_FragColor = back(); }"
+      },
+      "glsl1": {
+        "vert": "\nprecision mediump float;\nuniform highp mat4 cc_matWorld;\nuniform highp mat4 cc_matView;\n  uniform highp mat4 cc_matProj;\nattribute highp vec3 a_position;\n#if USE_DASHED_LINE\nattribute float a_lineDistance;\nvarying float lineDistance;\n#endif\nvec4 vert () {\n  vec4 pos = cc_matProj * (cc_matView * cc_matWorld) * vec4(a_position, 1);\n  pos.z -= 0.000001;\n  #if USE_DASHED_LINE\n  lineDistance = a_lineDistance;\n  #endif\n  return pos;\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision mediump float;\nvec4 CCFragOutput (vec4 color) {\n  return color;\n}\n    uniform vec4 mainColor;\nvarying float lineDistance;\nvec4 back() {\n  #if USE_FORWARD_PIPELINE\n    return CCFragOutput(vec4(mainColor.rgb, mainColor.a * 0.2));\n  #else\n    return vec4(mainColor.rgb, mainColor.a * 0.2);\n  #endif\n}\nvoid main() { gl_FragColor = back(); }"
+      },
+      "builtins": {
+        "globals": {
+          "blocks": [
+            {
+              "name": "CCGlobal",
+              "defines": []
+            },
+            {
+              "name": "CCCamera",
+              "defines": []
+            }
+          ],
+          "samplerTextures": [],
+          "buffers": [],
+          "images": []
+        },
+        "locals": {
+          "blocks": [
+            {
+              "name": "CCLocal",
+              "defines": []
+            }
+          ],
+          "samplerTextures": [],
+          "buffers": [],
+          "images": []
+        },
+        "statistics": {
+          "CC_EFFECT_USED_VERTEX_UNIFORM_VECTORS": 48,
+          "CC_EFFECT_USED_FRAGMENT_UNIFORM_VECTORS": 40
+        }
+      },
+      "defines": [
+        {
+          "name": "USE_DASHED_LINE",
+          "type": "boolean",
+          "defines": []
+        },
+        {
+          "name": "USE_FORWARD_PIPELINE",
+          "type": "boolean",
+          "defines": []
+        }
+      ],
+      "name": "editor/gizmo|line-vs:vert|line-fs:back"
+    },
+    {
+      "blocks": [
+        {
+          "name": "Constant",
+          "members": [
+            {
+              "name": "mainColor",
+              "type": 16,
+              "count": 1
+            }
+          ],
+          "defines": [],
+          "stageFlags": 16,
+          "binding": 0
+        }
+      ],
+      "samplerTextures": [
+        {
+          "name": "mainTexture",
+          "type": 28,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 16,
+          "binding": 1
+        }
+      ],
+      "samplers": [],
+      "textures": [],
+      "buffers": [],
+      "images": [],
+      "subpassInputs": [],
+      "attributes": [
+        {
+          "name": "a_position",
+          "defines": [],
+          "format": 32,
+          "location": 0
+        },
+        {
+          "name": "a_texCoord",
+          "defines": [],
+          "format": 21,
+          "location": 1
+        }
+      ],
+      "varyings": [
+        {
+          "name": "uv0",
+          "type": 14,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 17,
+          "location": 0
+        }
+      ],
+      "fragColors": [
+        {
+          "name": "cc_FragColor",
+          "typename": "vec4",
+          "type": 16,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 16,
+          "location": 0
+        }
+      ],
+      "hash": 4121064576,
+      "glsl4": {
+        "vert": "\nprecision mediump float;\nlayout(set = 2, binding = 0) uniform CCLocal {\n  highp mat4 cc_matWorld;\n  highp mat4 cc_matWorldIT;\n  highp vec4 cc_lightingMapUVParam;\n};\nlayout(set = 0, binding = 0) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(set = 0, binding = 1) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nlayout(location = 0) in vec3 a_position;\nlayout(location = 1) in vec2 a_texCoord;\nlayout(location = 0) out vec2 uv0;\nvec4 vert () {\n  vec4 pos = vec4(a_position, 1);\n  pos = cc_matProj * (cc_matView * cc_matWorld) * pos;\n  uv0 = a_texCoord;\n  return pos;\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision mediump float;\nlayout(set = 0, binding = 0) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(set = 0, binding = 1) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nlayout(location = 0) in vec2 uv0;\nlayout(set = 1, binding = 0) uniform Constant {\n  vec4 mainColor;\n};\nlayout(set = 1, binding = 1) uniform sampler2D mainTexture;\nvec4 frag () {\n  vec4 o = vec4(1, 1, 1, 1);\n  o *= texture(mainTexture, uv0);\n  o *= mainColor;\n  return o;\n}\nlayout(location = 0) out vec4 cc_FragColor;\nvoid main() { cc_FragColor = frag(); }"
+      },
+      "glsl3": {
+        "vert": "\nprecision mediump float;\nlayout(std140) uniform CCLocal {\n  highp mat4 cc_matWorld;\n  highp mat4 cc_matWorldIT;\n  highp vec4 cc_lightingMapUVParam;\n};\nlayout(std140) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(std140) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nin vec3 a_position;\nin vec2 a_texCoord;\nout vec2 uv0;\nvec4 vert () {\n  vec4 pos = vec4(a_position, 1);\n  pos = cc_matProj * (cc_matView * cc_matWorld) * pos;\n  uv0 = a_texCoord;\n  return pos;\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision mediump float;\nlayout(std140) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(std140) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nin vec2 uv0;\nlayout(std140) uniform Constant {\n  vec4 mainColor;\n};\nuniform sampler2D mainTexture;\nvec4 frag () {\n  vec4 o = vec4(1, 1, 1, 1);\n  o *= texture(mainTexture, uv0);\n  o *= mainColor;\n  return o;\n}\nlayout(location = 0) out vec4 cc_FragColor;\nvoid main() { cc_FragColor = frag(); }"
+      },
+      "glsl1": {
+        "vert": "\nprecision mediump float;\nuniform highp mat4 cc_matWorld;\nuniform highp mat4 cc_matView;\n  uniform highp mat4 cc_matProj;\nattribute vec3 a_position;\nattribute vec2 a_texCoord;\nvarying vec2 uv0;\nvec4 vert () {\n  vec4 pos = vec4(a_position, 1);\n  pos = cc_matProj * (cc_matView * cc_matWorld) * pos;\n  uv0 = a_texCoord;\n  return pos;\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision mediump float;\nvarying vec2 uv0;\n  uniform vec4 mainColor;\nuniform sampler2D mainTexture;\nvec4 frag () {\n  vec4 o = vec4(1, 1, 1, 1);\n  o *= texture2D(mainTexture, uv0);\n  o *= mainColor;\n  return o;\n}\nvoid main() { gl_FragColor = frag(); }"
+      },
+      "builtins": {
+        "globals": {
+          "blocks": [
+            {
+              "name": "CCGlobal",
+              "defines": []
+            },
+            {
+              "name": "CCCamera",
+              "defines": []
+            }
+          ],
+          "samplerTextures": [],
+          "buffers": [],
+          "images": []
+        },
+        "locals": {
+          "blocks": [
+            {
+              "name": "CCLocal",
+              "defines": []
+            }
+          ],
+          "samplerTextures": [],
+          "buffers": [],
+          "images": []
+        },
+        "statistics": {
+          "CC_EFFECT_USED_VERTEX_UNIFORM_VECTORS": 48,
+          "CC_EFFECT_USED_FRAGMENT_UNIFORM_VECTORS": 40
+        }
+      },
+      "defines": [],
+      "name": "editor/gizmo|sprite-vs:vert|sprite-fs:frag"
+    }
+  ],
+  "combinations": [],
+  "hideInEditor": true
+}

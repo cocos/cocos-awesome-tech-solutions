@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "btn_raid",
+    "atlas": "",
+    "rect": {
+      "x": 6,
+      "y": 6,
+      "width": 73,
+      "height": 104
+    },
+    "offset": {
+      "x": 1,
+      "y": -3
+    },
+    "originalSize": {
+      "width": 83,
+      "height": 110
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "a129992a-64bd-4c45-bf05-e035ed1b6279@6c48a",
+    "packable": true
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "haibao_shadow",
+    "atlas": "",
+    "rect": {
+      "x": 2,
+      "y": 4,
+      "width": 249,
+      "height": 119
+    },
+    "offset": {
+      "x": -1.5,
+      "y": 0.5
+    },
+    "originalSize": {
+      "width": 256,
+      "height": 128
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "0c2bef11-b494-4511-9c56-f5195e65f929@6c48a",
+    "packable": true
+  }
+}

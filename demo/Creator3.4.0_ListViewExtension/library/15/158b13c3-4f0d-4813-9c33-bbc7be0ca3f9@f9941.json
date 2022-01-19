@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "att_earth",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 36,
+      "height": 36
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 36,
+      "height": 36
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "158b13c3-4f0d-4813-9c33-bbc7be0ca3f9@6c48a",
+    "packable": true
+  }
+}

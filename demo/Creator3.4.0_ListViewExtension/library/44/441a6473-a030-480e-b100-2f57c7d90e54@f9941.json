@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "banner_gradient",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 181,
+      "height": 33
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 181,
+      "height": 33
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "441a6473-a030-480e-b100-2f57c7d90e54@6c48a",
+    "packable": true
+  }
+}

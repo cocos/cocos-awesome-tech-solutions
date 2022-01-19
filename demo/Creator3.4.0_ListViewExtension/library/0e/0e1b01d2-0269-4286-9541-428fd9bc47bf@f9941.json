@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "text_be_vip",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 117,
+      "height": 39
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 117,
+      "height": 39
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "0e1b01d2-0269-4286-9541-428fd9bc47bf@6c48a",
+    "packable": true
+  }
+}

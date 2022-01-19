@@ -1,0 +1,73 @@
+{
+  "imports": {
+    "cce:/internal/x/cc": "./mods/cce/internal/x/cc.js",
+    "cce:/internal/x/prerequisite-imports": "./mods/cce/internal/x/prerequisite-imports.js"
+  },
+  "scopes": {
+    "./mods/fs/0/assets/migrate-canvas.js": {
+      "cc": "./mods/cce/internal/x/cc.js"
+    },
+    "./mods/fs/0/assets/resources/uiTest/scripts/EnergyCounter.js": {
+      "cc": "./mods/cce/internal/x/cc.js"
+    },
+    "./mods/fs/0/assets/resources/uiTest/scripts/HomeUI.js": {
+      "cc": "./mods/cce/internal/x/cc.js",
+      "__unresolved_1": "./mods/fs/0/assets/resources/uiTest/scripts/BackPackUI.js",
+      "__unresolved_0": "./mods/cce/internal/code-quality/cr.js"
+    },
+    "./mods/fs/0/assets/resources/uiTest/scripts/BackPackUI.js": {
+      "cc": "./mods/cce/internal/x/cc.js"
+    },
+    "./mods/fs/0/assets/resources/uiTest/scripts/PanelTransition.js": {
+      "cc": "./mods/cce/internal/x/cc.js"
+    },
+    "./mods/fs/0/assets/resources/uiTest/scripts/ChargeUI.js": {
+      "cc": "./mods/cce/internal/x/cc.js"
+    },
+    "./mods/fs/0/assets/resources/uiTest/scripts/ButtonScaler.js": {
+      "cc": "./mods/cce/internal/x/cc.js"
+    },
+    "./mods/fs/0/assets/resources/uiTest/scripts/ShopUI.js": {
+      "cc": "./mods/cce/internal/x/cc.js"
+    },
+    "./mods/fs/0/assets/scripts/list-view-ctrl.js": {
+      "cc": "./mods/cce/internal/x/cc.js"
+    },
+    "./mods/fs/0/assets/resources/uiTest/scripts/HeroSlot.js": {
+      "cc": "./mods/cce/internal/x/cc.js"
+    },
+    "./mods/fs/0/assets/resources/uiTest/scripts/SubBtnsUI.js": {
+      "cc": "./mods/cce/internal/x/cc.js"
+    },
+    "./mods/cce/internal/x/cc.js": {
+      "__unresolved_0": "cce:/internal/x/cc-fu/base",
+      "__unresolved_1": "cce:/internal/x/cc-fu/gfx-webgl",
+      "__unresolved_2": "cce:/internal/x/cc-fu/gfx-webgl2",
+      "__unresolved_3": "cce:/internal/x/cc-fu/3d",
+      "__unresolved_4": "cce:/internal/x/cc-fu/2d",
+      "__unresolved_5": "cce:/internal/x/cc-fu/ui",
+      "__unresolved_6": "cce:/internal/x/cc-fu/particle",
+      "__unresolved_7": "cce:/internal/x/cc-fu/physics-ammo",
+      "__unresolved_8": "cce:/internal/x/cc-fu/physics-framework",
+      "__unresolved_9": "cce:/internal/x/cc-fu/wait-for-ammo-instantiation",
+      "__unresolved_10": "cce:/internal/x/cc-fu/physics-2d-box2d",
+      "__unresolved_11": "cce:/internal/x/cc-fu/physics-2d-framework",
+      "__unresolved_12": "cce:/internal/x/cc-fu/intersection-2d",
+      "__unresolved_13": "cce:/internal/x/cc-fu/primitive",
+      "__unresolved_14": "cce:/internal/x/cc-fu/profiler",
+      "__unresolved_15": "cce:/internal/x/cc-fu/particle-2d",
+      "__unresolved_16": "cce:/internal/x/cc-fu/audio",
+      "__unresolved_17": "cce:/internal/x/cc-fu/video",
+      "__unresolved_18": "cce:/internal/x/cc-fu/webview",
+      "__unresolved_19": "cce:/internal/x/cc-fu/tween",
+      "__unresolved_20": "cce:/internal/x/cc-fu/terrain",
+      "__unresolved_21": "cce:/internal/x/cc-fu/tiled-map",
+      "__unresolved_22": "cce:/internal/x/cc-fu/spine",
+      "__unresolved_23": "cce:/internal/x/cc-fu/dragon-bones"
+    },
+    "./mods/cce/internal/x/prerequisite-imports.js": {
+      "__unresolved_0": "./mods/fs/0/assets/migrate-canvas.js",
+      "__unresolved_1": "./mods/fs/0/assets/scripts/list-view-ctrl.js"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "shop_chain",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 33,
+      "height": 398
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 33,
+      "height": 398
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "84122a76-903d-4578-824a-28ac0cd2460a@6c48a",
+    "packable": true
+  }
+}

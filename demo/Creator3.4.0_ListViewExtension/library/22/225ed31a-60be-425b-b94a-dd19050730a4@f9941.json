@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "haibao_outline",
+    "atlas": "",
+    "rect": {
+      "x": 2,
+      "y": 4,
+      "width": 504,
+      "height": 382
+    },
+    "offset": {
+      "x": -2,
+      "y": 61
+    },
+    "originalSize": {
+      "width": 512,
+      "height": 512
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "225ed31a-60be-425b-b94a-dd19050730a4@6c48a",
+    "packable": true
+  }
+}

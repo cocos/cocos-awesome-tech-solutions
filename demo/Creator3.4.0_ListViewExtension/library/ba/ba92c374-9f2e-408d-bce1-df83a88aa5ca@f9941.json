@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "btn_expand",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 98,
+      "height": 30
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 98,
+      "height": 30
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "ba92c374-9f2e-408d-bce1-df83a88aa5ca@6c48a",
+    "packable": true
+  }
+}

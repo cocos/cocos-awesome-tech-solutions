@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "btns_hero",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 186,
+      "height": 48
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 186,
+      "height": 48
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "df9586cb-c875-421a-9323-3af3bc892966@6c48a",
+    "packable": true
+  }
+}

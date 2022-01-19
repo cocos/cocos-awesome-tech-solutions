@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "bg_panel_wood",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 511,
+      "height": 415
+    },
+    "offset": {
+      "x": -0.5,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 512,
+      "height": 415
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "650a9e2d-9446-4ae7-9138-187849ebfa69@6c48a",
+    "packable": true
+  }
+}

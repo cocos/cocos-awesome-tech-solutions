@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "bg_gradient_mask",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 256,
+      "height": 153
+    },
+    "offset": {
+      "x": 0,
+      "y": 21.5
+    },
+    "originalSize": {
+      "width": 256,
+      "height": 196
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "528baa60-6d70-4e46-8cbb-bc0f97d1503e@6c48a",
+    "packable": true
+  }
+}

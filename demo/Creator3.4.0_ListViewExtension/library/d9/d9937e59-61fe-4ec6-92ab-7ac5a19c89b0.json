@@ -1,0 +1,109 @@
+{
+  "__type__": "cc.EffectAsset",
+  "_name": "builtin-occlusion-query",
+  "_objFlags": 0,
+  "_native": "",
+  "techniques": [
+    {
+      "passes": [
+        {
+          "rasterizerState": {
+            "cullMode": 2
+          },
+          "blendState": {
+            "targets": [
+              {
+                "blendColorMask": 0
+              }
+            ]
+          },
+          "program": "builtin-occlusion-query|occlusion-query-vs:vert|occlusion-query-fs:frag",
+          "depthStencilState": {
+            "depthTest": true,
+            "depthWrite": false
+          }
+        }
+      ]
+    }
+  ],
+  "shaders": [
+    {
+      "blocks": [],
+      "samplerTextures": [],
+      "samplers": [],
+      "textures": [],
+      "buffers": [],
+      "images": [],
+      "subpassInputs": [],
+      "attributes": [
+        {
+          "name": "a_position",
+          "defines": [],
+          "format": 32,
+          "location": 0
+        }
+      ],
+      "varyings": [],
+      "fragColors": [
+        {
+          "name": "cc_FragColor",
+          "typename": "vec4",
+          "type": 16,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 16,
+          "location": 0
+        }
+      ],
+      "hash": 1571978323,
+      "glsl4": {
+        "vert": "\nprecision highp float;\nlayout(set = 0, binding = 0) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(set = 0, binding = 1) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nlayout(set = 2, binding = 0) uniform CCWorldBound {\n  highp vec4 cc_worldBoundCenter;\n  highp vec4 cc_worldBoundHalfExtents;\n};\nlayout(location = 0) in vec3 a_position;\nvec4 vert () {\n  vec4 position;\n  position = vec4(a_position, 1.0);\n  position *= cc_worldBoundHalfExtents;\n  position += cc_worldBoundCenter;\n  position = cc_matViewProj * position;\n  return position;\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision mediump float;\nvec4 frag () {\n  return vec4(1, 0, 0, 1);\n}\nlayout(location = 0) out vec4 cc_FragColor;\nvoid main() { cc_FragColor = frag(); }"
+      },
+      "glsl3": {
+        "vert": "\nprecision highp float;\nlayout(std140) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(std140) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nlayout(std140) uniform CCWorldBound {\n  highp vec4 cc_worldBoundCenter;\n  highp vec4 cc_worldBoundHalfExtents;\n};\nin vec3 a_position;\nvec4 vert () {\n  vec4 position;\n  position = vec4(a_position, 1.0);\n  position *= cc_worldBoundHalfExtents;\n  position += cc_worldBoundCenter;\n  position = cc_matViewProj * position;\n  return position;\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision mediump float;\nvec4 frag () {\n  return vec4(1, 0, 0, 1);\n}\nlayout(location = 0) out vec4 cc_FragColor;\nvoid main() { cc_FragColor = frag(); }"
+      },
+      "glsl1": {
+        "vert": "\nprecision highp float;\nuniform highp mat4 cc_matViewProj;\nuniform highp vec4 cc_worldBoundCenter;\n  uniform highp vec4 cc_worldBoundHalfExtents;\nattribute vec3 a_position;\nvec4 vert () {\n  vec4 position;\n  position = vec4(a_position, 1.0);\n  position *= cc_worldBoundHalfExtents;\n  position += cc_worldBoundCenter;\n  position = cc_matViewProj * position;\n  return position;\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision mediump float;\nvec4 frag () {\n  return vec4(1, 0, 0, 1);\n}\nvoid main() { gl_FragColor = frag(); }"
+      },
+      "builtins": {
+        "globals": {
+          "blocks": [
+            {
+              "name": "CCGlobal",
+              "defines": []
+            },
+            {
+              "name": "CCCamera",
+              "defines": []
+            }
+          ],
+          "samplerTextures": [],
+          "buffers": [],
+          "images": []
+        },
+        "locals": {
+          "blocks": [
+            {
+              "name": "CCWorldBound",
+              "defines": []
+            }
+          ],
+          "samplerTextures": [],
+          "buffers": [],
+          "images": []
+        },
+        "statistics": {
+          "CC_EFFECT_USED_VERTEX_UNIFORM_VECTORS": 41,
+          "CC_EFFECT_USED_FRAGMENT_UNIFORM_VECTORS": 0
+        }
+      },
+      "defines": [],
+      "name": "builtin-occlusion-query|occlusion-query-vs:vert|occlusion-query-fs:frag"
+    }
+  ],
+  "combinations": [],
+  "hideInEditor": false
+}

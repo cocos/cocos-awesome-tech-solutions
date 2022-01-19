@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "bg_panel_red",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 564,
+      "height": 378
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 564,
+      "height": 378
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      89,
+      0,
+      125
+    ],
+    "texture": "1526b69b-91c6-46c2-b416-8afd171acbe2@6c48a",
+    "packable": true
+  }
+}

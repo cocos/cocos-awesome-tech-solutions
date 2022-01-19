@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "ic_drakan",
+    "atlas": "",
+    "rect": {
+      "x": 29,
+      "y": 33,
+      "width": 94,
+      "height": 94
+    },
+    "offset": {
+      "x": 1,
+      "y": -5
+    },
+    "originalSize": {
+      "width": 150,
+      "height": 150
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "d4ef7dc6-2b19-4e99-ad09-7f6c6870d582@6c48a",
+    "packable": true
+  }
+}

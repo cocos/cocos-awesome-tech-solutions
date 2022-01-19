@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "banner_subscribe",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 540,
+      "height": 122
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 540,
+      "height": 122
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "9fb9a7d5-fcf4-4b79-91a4-c1df2b65780c@6c48a",
+    "packable": true
+  }
+}

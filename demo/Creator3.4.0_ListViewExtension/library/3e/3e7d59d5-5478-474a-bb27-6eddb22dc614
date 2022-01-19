@@ -1,0 +1,44 @@
+
+import { _decorator, Component, Node } from 'cc';
+const { ccclass, property } = _decorator;
+
+/**
+ * Predefined variables
+ * Name = <%Name%>
+ * DateTime = <%DateTime%>
+ * Author = <%Author%>
+ * FileBasename = <%FileBasename%>
+ * FileBasenameNoExtension = <%FileBasenameNoExtension%>
+ * URL = <%URL%>
+ * ManualUrl = <%ManualUrl%>
+ *
+ */
+ 
+@ccclass('<%Name%>')
+export class <%Name%> extends Component {
+    // [1]
+    // dummy = '';
+
+    // [2]
+    // @property
+    // serializableDummy = 0;
+
+    start () {
+        // [3]
+    }
+
+    // update (deltaTime: number) {
+    //     // [4]
+    // }
+}
+
+/**
+ * [1] Class member could be defined like this.
+ * [2] Use `property` decorator if your want the member to be serializable.
+ * [3] Your initialization goes here.
+ * [4] Your update function goes here.
+ *
+ * Learn more about scripting: <%ManualUrl%>scripting/
+ * Learn more about CCClass: <%ManualUrl%>scripting/ccclass.html
+ * Learn more about life-cycle callbacks: <%ManualUrl%>scripting/life-cycle-callbacks.html
+ */

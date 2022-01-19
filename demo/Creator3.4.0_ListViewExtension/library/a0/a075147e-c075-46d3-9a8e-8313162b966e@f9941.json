@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "d_highlight",
+    "atlas": "",
+    "rect": {
+      "x": 5,
+      "y": 6,
+      "width": 57,
+      "height": 50
+    },
+    "offset": {
+      "x": 0.5,
+      "y": -2
+    },
+    "originalSize": {
+      "width": 66,
+      "height": 58
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "texture": "a075147e-c075-46d3-9a8e-8313162b966e@6c48a",
+    "packable": true
+  }
+}
