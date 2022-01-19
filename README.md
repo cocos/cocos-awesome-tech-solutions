@@ -13,9 +13,8 @@
   >
   > 素材来自: 
   >
-  > https://www.codeandweb.com/blog/2015/05/12/lighting-demo-cocos2d-x
-  >
-  > https://github.com/CodeAndWeb/cocos2d-x-dynamic-lighting
+  > https://www.codeandweb.com/blog/2015/05/12/lighting-demo-cocos2d-x    
+  > https://github.com/CodeAndWeb/cocos2d-x-dynamic-lighting    
 
   ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211111/2021111101.gif)
 
@@ -44,6 +43,10 @@
   > 工程 git 仓库地址: 
   >
   > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_spine_changeSlot_with_texture
+  >
+  > 素材来自: 
+  > 
+  > https://blog.csdn.net/xjw532881071/article/details/107766975
   
   ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211111/2021111103.gif)
 
@@ -59,8 +62,7 @@
   >
   > 素材来自: 
   >
-  > https://gitee.com/skyxu123/drawing-board
-  >
+  > https://gitee.com/skyxu123/drawing-board    
   > http://www.yini.org/liuyan/rgbcolor.htm
   > 
   > 切换画板
@@ -116,7 +118,7 @@
   >
   > 素材来自: 
   >
-  > https://github.com/kirikayakazuto/CocosCreator_UIFrameWork/tree/SplitTexture/assets/Script/test
+  > https://github.com/kirikayakazuto/CocosCreator_UIFrameWork/tree/SplitTexture/assets/Script/test    
   > https://forum.cocos.org/t/topic/103699
   
   ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211208/2021120801.gif)
@@ -133,11 +135,11 @@
   >
   > 素材来自: 
   >
-  > https://github.com/shachaf/jsgif
-  > https://github.com/baibai2013/cocos-creator-gifLib
-  > https://github.com/newGy/cocos-creator-gif-2.4.4
-  > https://github.com/2van/cocos-creator-gif
-  > https://github.com/waiter/Cocos-GIF
+  > https://github.com/shachaf/jsgif    
+  > https://github.com/baibai2013/cocos-creator-gifLib    
+  > https://github.com/newGy/cocos-creator-gif-2.4.4    
+  > https://github.com/2van/cocos-creator-gif    
+  > https://github.com/waiter/Cocos-GIF    
   
   ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211216/2021121601.gif)
 
@@ -208,10 +210,28 @@
 
 
 
-*技术支持团队提供*
+*网络游戏防沉迷实名认证系统 SDK 接入由 Github 用户(zihuyishi)提供，技术支持团队负责接入调试、实名认证客户端制作以及文档撰写*
 
 * (v3.4.0) 实名认证接入
 
   > 工程 git 仓库地址: 
   >
   > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_RealNameAuthentication
+  >
+  > 素材来自: 
+  >
+  > https://github.com/zihuyishi/realname-nppa-java-demo    
+  > http://www.uustory.com/?p=2419    
+  > https://wlc.nppa.gov.cn/fcm_company/index.html#/login?redirect=%2F    
+
+
+
+*技术支持团队提供*
+
+* (v3.4.0) 列表视图扩展
+
+  > 工程 git 仓库地址: 
+  >
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_ListViewExtension
+
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20220119/2022011901.gif)

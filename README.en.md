@@ -13,8 +13,8 @@
   >
   > Source from:
   >
-  > https://www.codeandweb.com/blog/2015/05/12/lighting-demo-cocos2d-x
-  > https://github.com/CodeAndWeb/cocos2d-x-dynamic-lighting
+  > https://www.codeandweb.com/blog/2015/05/12/lighting-demo-cocos2d-x    
+  > https://github.com/CodeAndWeb/cocos2d-x-dynamic-lighting    
 
   ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211111/2021111101.gif)
 
@@ -43,6 +43,10 @@
   > Project git repository address:
   >
   > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_spine_changeSlot_with_texture
+  >
+  > Source from:
+  >
+  > https://blog.csdn.net/xjw532881071/article/details/107766975
   
   ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211111/2021111103.gif)
 
@@ -74,9 +78,8 @@
   >
   > Source from: 
   >
-  > https://gitee.com/skyxu123/drawing-board
-  >
-  > http://www.yini.org/liuyan/rgbcolor.htm
+  > https://gitee.com/skyxu123/drawing-board    
+  > http://www.yini.org/liuyan/rgbcolor.htm    
   > 
   > Switching of the drawing board
   ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211129/2021112901.gif)
@@ -131,8 +134,8 @@
   >
   > Source from: 
   >
-  > https://github.com/kirikayakazuto/CocosCreator_UIFrameWork/tree/SplitTexture/assets/Script/test
-  > https://forum.cocos.org/t/topic/103699
+  > https://github.com/kirikayakazuto/CocosCreator_UIFrameWork/tree/SplitTexture/assets/Script/test    
+  > https://forum.cocos.org/t/topic/103699    
   
   ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211208/2021120801.gif)
 
@@ -148,11 +151,11 @@
   >
   > Source from: 
   >
-  > https://github.com/shachaf/jsgif
-  > https://github.com/baibai2013/cocos-creator-gifLib
-  > https://github.com/newGy/cocos-creator-gif-2.4.4
-  > https://github.com/2van/cocos-creator-gif
-  > https://github.com/waiter/Cocos-GIF
+  > https://github.com/shachaf/jsgif    
+  > https://github.com/baibai2013/cocos-creator-gifLib    
+  > https://github.com/newGy/cocos-creator-gif-2.4.4    
+  > https://github.com/2van/cocos-creator-gif    
+  > https://github.com/waiter/Cocos-GIF    
   
   ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211216/2021121601.gif)
 
@@ -219,3 +222,31 @@
   > Note: Currently Cocos Creator version 3.0.0 ~ 3.4.0 does not support interface jsb.saveImageData, the Engine Team plans to support in version 3.5.0, to save imageData as a local png file need to refer to the following PR ans customizated the engine code. https://gitee.com/zzf2019/engine-native/ commit/1ddb6ec9627a8320cd3545d353d8861da33282a8 (this PR only supports saving png, and only supports ios, android)
   >
   > Cocos Creator 3.4.0 also has a readPixels bug, need to merge PR manually: https://github.com/cocos-creator/engine/pull/9900/files
+
+
+
+*Online game anti-addiction real-name authentication system SDK access provided by Github users (zihuyishi), technical support team is responsible for access debugging, real-name authentication client production and documentation*
+
+* (v3.4.0) Real Name Authentication
+
+  > Project git repository address:
+  >
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_RealNameAuthentication
+  >
+  > Source from:
+  >
+  > https://github.com/zihuyishi/realname-nppa-java-demo    
+  > http://www.uustory.com/?p=2419    
+  > https://wlc.nppa.gov.cn/fcm_company/index.html#/login?redirect=%2F    
+  
+
+
+*The technical support team provides*
+
+* (v3.4.0) ListView Extension
+
+  > Project git repository address:
+  >
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_ListViewExtension
+
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20220119/2022011901.gif)

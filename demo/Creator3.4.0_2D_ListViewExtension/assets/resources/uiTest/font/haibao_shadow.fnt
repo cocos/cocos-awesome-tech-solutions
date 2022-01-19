@@ -1,0 +1,18 @@
+info face="DFPHaiBaoW12-GB5" size=40 bold=0 italic=0 charset="" unicode=0 stretchH=100 smooth=1 aa=1 padding=0,0,0,0 spacing=2,2
+common lineHeight=40 base=32 scaleW=256 scaleH=128 pages=1 packed=0
+page id=0 file="haibao_shadow.png"
+chars count=14
+char id=32     x=41    y=84    width=0     height=0     xoffset=0     yoffset=34    xadvance=13    page=0 chnl=0 letter="space"
+char id=46     x=21    y=84    width=18    height=18    xoffset=1     yoffset=23    xadvance=11    page=0 chnl=0 letter="."
+char id=48     x=47    y=2     width=42    height=39    xoffset=1     yoffset=-3    xadvance=35    page=0 chnl=0 letter="0"
+char id=49     x=2     y=84    width=17    height=39    xoffset=14    yoffset=-3    xadvance=35    page=0 chnl=0 letter="1"
+char id=50     x=213   y=43    width=39    height=39    xoffset=3     yoffset=-3    xadvance=35    page=0 chnl=0 letter="2"
+char id=51     x=88    y=43    width=40    height=39    xoffset=2     yoffset=-3    xadvance=35    page=0 chnl=0 letter="3"
+char id=52     x=91    y=2     width=42    height=39    xoffset=1     yoffset=-3    xadvance=35    page=0 chnl=0 letter="4"
+char id=53     x=130   y=43    width=40    height=39    xoffset=2     yoffset=-3    xadvance=35    page=0 chnl=0 letter="5"
+char id=54     x=2     y=43    width=41    height=39    xoffset=2     yoffset=-3    xadvance=35    page=0 chnl=0 letter="6"
+char id=55     x=135   y=2     width=42    height=39    xoffset=1     yoffset=-3    xadvance=35    page=0 chnl=0 letter="7"
+char id=56     x=45    y=43    width=41    height=39    xoffset=2     yoffset=-3    xadvance=35    page=0 chnl=0 letter="8"
+char id=57     x=179   y=2     width=42    height=39    xoffset=1     yoffset=-3    xadvance=35    page=0 chnl=0 letter="9"
+char id=76     x=172   y=43    width=39    height=39    xoffset=2     yoffset=-3    xadvance=32    page=0 chnl=0 letter="L"
+char id=86     x=2     y=2     width=43    height=39    xoffset=1     yoffset=-3    xadvance=35    page=0 chnl=0 letter="V"
