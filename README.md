@@ -224,6 +224,7 @@
   > http://www.uustory.com/?p=2419    
   > https://wlc.nppa.gov.cn/fcm_company/index.html#/login?redirect=%2F    
 
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/image/20220110/2022011011.png)
 
 
 *技术支持团队提供*
