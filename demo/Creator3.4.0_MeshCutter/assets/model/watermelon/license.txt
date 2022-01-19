@@ -1,0 +1,11 @@
+Model Information:
+* title:	Watermelon
+* source:	https://sketchfab.com/3d-models/watermelon-23428abd790b4df4b7506d653f563905
+* author:	Shahriar Shahrabi (https://sketchfab.com/shahriyarshahrabi)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Watermelon" (https://sketchfab.com/3d-models/watermelon-23428abd790b4df4b7506d653f563905) by Shahriar Shahrabi (https://sketchfab.com/shahriyarshahrabi) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -1,0 +1,12 @@
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "16b9011d-7862-4b19-ac8e-d913b64f1cc2",
+  "files": [],
+  "subMetas": {},
+  "userData": {
+    "moduleId": "project:///assets/script/shatter/FastHull.js",
+    "simulateGlobals": []
+  }
+}

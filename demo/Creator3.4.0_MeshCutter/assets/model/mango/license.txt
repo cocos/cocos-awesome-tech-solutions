@@ -1,0 +1,11 @@
+Model Information:
+* title:	Mango
+* source:	https://sketchfab.com/3d-models/mango-e5fd174d7a2e4ac894e3e69a4550d1e2
+* author:	Meerschaum Digital (https://sketchfab.com/meerschaumdigital)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Mango" (https://sketchfab.com/3d-models/mango-e5fd174d7a2e4ac894e3e69a4550d1e2) by Meerschaum Digital (https://sketchfab.com/meerschaumdigital) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
