@@ -1,0 +1,16 @@
+{
+  "options": {
+    "web-desktop": {
+      "configID": "7a575e",
+      "services": []
+    },
+    "android": {
+      "configID": "7a575e",
+      "services": []
+    }
+  },
+  "builder-options": {
+    "configID": "7a575e",
+    "services": []
+  }
+}
