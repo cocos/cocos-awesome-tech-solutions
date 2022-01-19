@@ -1,9 +1,7 @@
 - 此方案受 github 社区开源方案 [mesh-cutter](https://github.com/hugoscurti/mesh-cutter) 所启发，使用 ts 语言在 CocosCreator 3.4.0 版本上实现相似功能。
-已支持的功能：
-
-- [x] 支持自由切割使用 builtin-unlit 材质的模型
 
 当前方案需要注意的点:
+- 目前只支持切割使用了 builtin-unlit 材质的模型；
 - 引擎模块需要使用基于 Bullet 的物理引擎；
 - 材质设置 CullMode 为 None 能一定程度改善碎块 mesh 穿模的情况，但是性能会有所下降；
 - 目前没有对旋转后的模型节点进行切割功能适配，所以需要确保模型的没有旋转；
