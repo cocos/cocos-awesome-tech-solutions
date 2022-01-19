@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, ScrollView, Label, Vec3, UITransform, instantiate, error } from "cc";
+import { _decorator, Component, Node, ScrollView, Label, Vec3, UITransform, instantiate, error, game, sys } from "cc";
 const { ccclass, property, menu } = _decorator;
 
 const _temp_vec3 = new Vec3();
@@ -33,6 +33,11 @@ export class ListViewCtrl extends Component {
         this._updateTimer = 0;
         this._updateInterval = 0.2;
         this._lastContentPosY = 0; // use this variable to detect if we are scrolling up or down
+
+        // 目前在 macOS 平台存在浏览器预览，帧率偏低的问题，暂时通过限帧来处理。
+        if (sys.platform = sys.Platform.MACOS) {
+            game.frameRate = 61;
+        }
     }
 
     // 初始化 item

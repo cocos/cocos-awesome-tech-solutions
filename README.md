@@ -235,3 +235,5 @@
   > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_ListViewExtension
 
   ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20220119/2022011901.gif)
+  
+  > 备注: 因为目前在 Mac 平台的浏览器上存在帧率偏低以及帧率波动较大的问题，可以临时通过限制帧率`game.frameRate=61;`的方式来处理。
