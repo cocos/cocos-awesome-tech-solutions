@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, Material, Sprite, EventTouch, UITransform, Vec2 } from 'cc';
+import { _decorator, Component, Node, Material, Sprite, EventTouch, UITransform, Vec2, macro } from 'cc';
 const { ccclass, property } = _decorator;
 
 @ccclass('WaterSpread')
@@ -13,17 +13,13 @@ export class WaterSpread extends Component {
 
     onLoad() {
         this.material = this.bg!.getComponent(Sprite)!.customMaterial!;
-        this.bg.on(Node.EventType.TOUCH_END, this.touchStartEvent, this);
-    }
 
-    touchStartEvent(evt: EventTouch) {
-        let pos = evt.getUILocation();
-        let width = this.bg.getComponent(UITransform)!.contentSize.width;
-        let height = this.bg.getComponent(UITransform)!.contentSize.height;
-        if (this.material) {
-            this.material.setProperty('center', new Vec2(pos.x / width, (height - pos.y) / height));
-        }
-        this.waveOffset = 0.0;
+        this.schedule(() => {
+            this.waveOffset = 0.0;
+            if (this.material) {
+                this.material.setProperty('center', new Vec2(0.5, 0.5));
+            }
+        }, 1, Infinity);
     }
 
     update(dt: number) {
