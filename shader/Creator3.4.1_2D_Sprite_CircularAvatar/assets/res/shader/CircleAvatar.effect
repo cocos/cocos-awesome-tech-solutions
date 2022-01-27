@@ -1,0 +1,121 @@
+CCEffect %{
+  techniques:
+  - passes:
+    - vert: sprite-vs:vert
+      frag: sprite-fs:frag
+      depthStencilState:
+        depthTest: false
+        depthWrite: false
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: src_alpha
+          blendDst: one_minus_src_alpha
+          blendDstAlpha: one_minus_src_alpha
+      rasterizerState:
+        cullMode: none
+      properties:
+        alphaThreshold: { value: 0.5 }
+        # 自定义参数
+        wh_ratio: {
+          value: 1, editor: { tooltip: "宽高比" }
+        }
+        blur: {
+          value: 0.01, editor: { tooltip: "光圈模糊程度" }
+        }
+        radius: {
+          value: 0.5, editor: { tooltip: "光圈半径" }
+        }
+        center: {
+          value: [0.5, 0.5], editor: { tooltip: "光圈起点" }
+        }
+}%
+
+
+CCProgram sprite-vs %{
+  precision highp float;
+  #include <cc-global>
+  #if USE_LOCAL
+    #include <cc-local>
+  #endif
+
+  in vec3 a_position;
+  in vec2 a_texCoord;
+  in vec4 a_color;
+
+  out vec4 v_color;
+  out vec2 v_uv0;
+
+  #if USE_TEXTURE
+    in vec2 a_uv0;
+  #endif
+
+  vec4 vert () {
+    vec4 pos = vec4(a_position, 1);
+
+    #if USE_LOCAL
+      pos = cc_matWorld * pos;
+    #endif
+
+    #if USE_PIXEL_ALIGNMENT
+      pos = cc_matView * pos;
+      pos.xyz = floor(pos.xyz);
+      pos = cc_matProj * pos;
+    #else
+      pos = cc_matViewProj * pos;
+    #endif
+
+    #if USE_TEXTURE
+      v_uv0 = a_uv0;
+    #endif
+
+    v_color = a_color;
+    v_uv0 = a_texCoord;
+
+    return pos;
+  }
+}%
+
+CCProgram sprite-fs %{
+  precision highp float;
+  #include <embedded-alpha>
+  #include <alpha-test>
+
+  in vec4 v_color;
+  in vec2 v_uv0;
+
+  #if USE_TEXTURE
+    #pragma builtin(local)
+    layout(set = 2, binding = 10) uniform sampler2D cc_spriteTexture;
+  #endif
+
+  uniform ARGS{
+    float radius;
+    float blur;
+    vec2 center;
+    float wh_ratio;
+  };
+
+  vec4 frag () {
+    vec4 o = vec4(1, 1, 1, 1);
+    o *= CCSampleWithAlphaSeparated(cc_spriteTexture, v_uv0);
+    o *= v_color;
+
+    ALPHA_TEST(o);
+
+    // 圆心在纹理中心 vec2(0.5, 0.5), 让让圆心距离超过半径的像素丢弃或者透明度设置为0
+    float circle = radius * radius;
+    float rx = center.x * wh_ratio;
+    float ry = center.y;
+    float uv_x = v_uv0.x * wh_ratio;
+    float uv_y = v_uv0.y;
+    // 使用勾股定理计算圆外的像素
+    float a2 = (uv_x - rx) * (uv_x - rx);
+    float b2 = (uv_y - ry) * (uv_y - ry);
+    float dis = a2 + b2;
+    // 使用内部插值函数 smoothstep(min, max, x) 优化边缘锯齿，达到边缘羽化效果
+    o.a = smoothstep(circle, circle - blur, dis) * o.a;
+
+    return o;
+  }
+}%

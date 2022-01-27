@@ -1,7 +1,0 @@
-{
-  "options": {
-    "android": {
-      "makeAfterBuild": true
-    }
-  }
-}

@@ -1,0 +1,7 @@
+
+library/
+temp/
+local/
+*.DS_Store
+build/
+native/
