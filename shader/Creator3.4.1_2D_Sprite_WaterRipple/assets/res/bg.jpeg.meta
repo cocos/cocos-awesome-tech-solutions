@@ -11,7 +11,7 @@
     "6c48a": {
       "importer": "texture",
       "uuid": "b55dbeb1-3175-4214-ab98-dd571a6a055f@6c48a",
-      "displayName": "bg2",
+      "displayName": "bg",
       "id": "6c48a",
       "name": "texture",
       "userData": {
@@ -34,7 +34,7 @@
     "f9941": {
       "importer": "sprite-frame",
       "uuid": "b55dbeb1-3175-4214-ab98-dd571a6a055f@f9941",
-      "displayName": "bg2",
+      "displayName": "bg",
       "id": "f9941",
       "name": "spriteFrame",
       "userData": {
