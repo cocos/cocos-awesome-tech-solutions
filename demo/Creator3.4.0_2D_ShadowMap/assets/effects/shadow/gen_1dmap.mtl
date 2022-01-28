@@ -10,6 +10,7 @@
   "_techIdx": 0,
   "_defines": [
     {
+      "SAMPLE_FROM_RT": true,
       "USE_TEXTURE": true,
       "USE_2D_SHADOW": true
     }

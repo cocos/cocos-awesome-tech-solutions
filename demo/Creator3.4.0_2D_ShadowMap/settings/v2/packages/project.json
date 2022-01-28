@@ -8,7 +8,11 @@
   },
   "layer": [
     {
-      "name": "1dmap",
+      "name": "shadow",
+      "value": 4
+    },
+    {
+      "name": "cast",
       "value": 2
     }
   ]
