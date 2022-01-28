@@ -4,7 +4,7 @@ import { EDITOR } from 'cc/env';
 const { ccclass, property, executeInEditMode } = _decorator;
 
 @ccclass('Light')
-// @executeInEditMode
+@executeInEditMode
 export class Light extends Component {
     @property([Node])
     bodys_normal: Node[] = [];
@@ -20,9 +20,6 @@ export class Light extends Component {
 
     @property(Material)
     eff_normal: Material = null!;
-
-    @property(Label)
-    target_info: Label = null!;
 
     onLoad() {
         /*
@@ -78,8 +75,7 @@ export class Light extends Component {
     updateLight() {
         // 光源位置
         let lightPos = this.getwpos(this.node)
-        this.target_info.string = `${Math.floor(lightPos.x * 1000) / 1000}, ${Math.floor(lightPos.y * 1000) / 1000}, ${Math.floor(lightPos.z * 1000) / 1000}`;
-        // console.log(lightPos)
+
         for (var idx in this.bodys_normal) {
             let node = this.bodys_normal[idx];
             if (null == node) return;

@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "default_scrollbar_bg",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 30,
+      "height": 15
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 30,
+      "height": 15
+    },
+    "rotated": false,
+    "capInsets": [
+      10,
+      4,
+      10,
+      4
+    ],
+    "texture": "28765e2f-040a-4c65-8e8c-f9d0bb79d863@6c48a",
+    "packable": true
+  }
+}

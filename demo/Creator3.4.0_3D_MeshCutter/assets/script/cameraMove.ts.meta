@@ -1,0 +1,12 @@
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "8257b45d-704b-448a-a43a-55cb5defec72",
+  "files": [],
+  "subMetas": {},
+  "userData": {
+    "moduleId": "project:///assets/extension/cameraMove.js",
+    "simulateGlobals": []
+  }
+}

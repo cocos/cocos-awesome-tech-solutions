@@ -1,0 +1,12 @@
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "dddd9e79-8450-42a2-adbc-6b5ba49d4d1e",
+  "files": [],
+  "subMetas": {},
+  "userData": {
+    "moduleId": "project:///assets/script/shatter/TouchSplit.js",
+    "simulateGlobals": []
+  }
+}

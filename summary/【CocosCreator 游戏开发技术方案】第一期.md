@@ -13,9 +13,8 @@
   >
   > 素材来自: 
   >
-  > https://www.codeandweb.com/blog/2015/05/12/lighting-demo-cocos2d-x
-  >
-  > https://github.com/CodeAndWeb/cocos2d-x-dynamic-lighting
+  > https://www.codeandweb.com/blog/2015/05/12/lighting-demo-cocos2d-x    
+  > https://github.com/CodeAndWeb/cocos2d-x-dynamic-lighting    
 
   ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211111/2021111101.gif)
 
@@ -44,24 +43,12 @@
   > 工程 git 仓库地址: 
   >
   > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_spine_changeSlot_with_texture
+  >
+  > 素材来自: 
+  > 
+  > https://blog.csdn.net/xjw532881071/article/details/107766975
   
   ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211111/2021111103.gif)
-
-
-
-*引擎开发团队提供，技术支持团队升级至3.4.0版本*
-
-* (v3.4.0) 3D植被卡通渲染与植被交互
-
-  > 工程 git 仓库地址: 
-  >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_3D_cartoon_vegetation
-  >
-  > 素材来自:
-  > 
-  > https://gitee.com/mirrors_cocos-creator/cartoon-vegetation
-
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211126/2021112603.gif)
 
 
 
@@ -75,8 +62,7 @@
   >
   > 素材来自: 
   >
-  > https://gitee.com/skyxu123/drawing-board
-  >
+  > https://gitee.com/skyxu123/drawing-board    
   > http://www.yini.org/liuyan/rgbcolor.htm
   > 
   > 切换画板
@@ -132,7 +118,7 @@
   >
   > 素材来自: 
   >
-  > https://github.com/kirikayakazuto/CocosCreator_UIFrameWork/tree/SplitTexture/assets/Script/test
+  > https://github.com/kirikayakazuto/CocosCreator_UIFrameWork/tree/SplitTexture/assets/Script/test    
   > https://forum.cocos.org/t/topic/103699
   
   ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211208/2021120801.gif)
@@ -149,11 +135,11 @@
   >
   > 素材来自: 
   >
-  > https://github.com/shachaf/jsgif
-  > https://github.com/baibai2013/cocos-creator-gifLib
-  > https://github.com/newGy/cocos-creator-gif-2.4.4
-  > https://github.com/2van/cocos-creator-gif
-  > https://github.com/waiter/Cocos-GIF
+  > https://github.com/shachaf/jsgif    
+  > https://github.com/baibai2013/cocos-creator-gifLib    
+  > https://github.com/newGy/cocos-creator-gif-2.4.4    
+  > https://github.com/2van/cocos-creator-gif    
+  > https://github.com/waiter/Cocos-GIF    
   
   ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211216/2021121601.gif)
 

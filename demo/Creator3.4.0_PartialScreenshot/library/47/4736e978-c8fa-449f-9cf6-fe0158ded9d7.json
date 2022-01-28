@@ -1,0 +1,131 @@
+{
+  "__type__": "cc.EffectAsset",
+  "_name": "editor/grid-stroke",
+  "_objFlags": 0,
+  "_native": "",
+  "techniques": [
+    {
+      "passes": [
+        {
+          "rasterizerState": {
+            "cullMode": 0
+          },
+          "blendState": {
+            "targets": [
+              {
+                "blend": true,
+                "blendSrc": 2,
+                "blendDst": 4,
+                "blendDstAlpha": 4
+              }
+            ]
+          },
+          "program": "editor/grid-stroke|grid-vs:vert|grid-fs:frag",
+          "priority": 244,
+          "depthStencilState": {
+            "depthTest": true,
+            "depthWrite": false
+          }
+        }
+      ]
+    }
+  ],
+  "shaders": [
+    {
+      "blocks": [],
+      "samplerTextures": [],
+      "samplers": [],
+      "textures": [],
+      "buffers": [],
+      "images": [],
+      "subpassInputs": [],
+      "attributes": [
+        {
+          "name": "a_texCoord",
+          "defines": [],
+          "format": 21,
+          "location": 0
+        },
+        {
+          "name": "a_position",
+          "defines": [],
+          "format": 32,
+          "location": 1
+        }
+      ],
+      "varyings": [
+        {
+          "name": "uv",
+          "type": 14,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 17,
+          "location": 0
+        },
+        {
+          "name": "pos_w",
+          "type": 15,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 17,
+          "location": 1
+        }
+      ],
+      "fragColors": [
+        {
+          "name": "cc_FragColor",
+          "typename": "vec4",
+          "type": 16,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 16,
+          "location": 0
+        }
+      ],
+      "hash": 1084980065,
+      "glsl4": {
+        "vert": "\nprecision mediump float;\nlayout(set = 0, binding = 0) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(set = 0, binding = 1) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nlayout(location = 0) in vec2 a_texCoord;\nlayout(location = 1) in vec3 a_position;\nlayout(location = 0) out vec2 uv;\nlayout(location = 1) out vec3 pos_w;\nvec4 vert () {\n  uv = a_texCoord;\n  pos_w = a_position;\n  vec2 forward = vec2(cc_matView[0][2], cc_matView[2][2]);\n  float dist = abs(cc_cameraPos.y);\n  vec2 scale = vec2(1.0 - a_texCoord.y, a_texCoord.y);\n  pos_w.xz += scale * vec2((a_texCoord.x * 2.0 - 1.0) * dist * 0.002);\n  vec4 pos = cc_matViewProj * vec4(pos_w, 1.0);\n  pos.z += 0.00011;\n  return pos;\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision mediump float;\nlayout(set = 0, binding = 0) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(set = 0, binding = 1) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nvec4 CCFragOutput (vec4 color) {\n  return color;\n}\nlayout(location = 0) in vec2 uv;\nlayout(location = 1) in vec3 pos_w;\nvec4 frag () {\n  float alpha = sqrt(0.5 - abs(uv.x - 0.5));\n  float scale = abs(normalize(cc_cameraPos.xyz - pos_w).y);\n  if (scale < 0.5) alpha *= max(0.3, scale / 0.5);\n  return CCFragOutput(vec4(0.5, 0.5, 0.5, alpha));\n}\nlayout(location = 0) out vec4 cc_FragColor;\nvoid main() { cc_FragColor = frag(); }"
+      },
+      "glsl3": {
+        "vert": "\nprecision mediump float;\nlayout(std140) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(std140) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nin vec2 a_texCoord;\nin vec3 a_position;\nout vec2 uv;\nout vec3 pos_w;\nvec4 vert () {\n  uv = a_texCoord;\n  pos_w = a_position;\n  vec2 forward = vec2(cc_matView[0][2], cc_matView[2][2]);\n  float dist = abs(cc_cameraPos.y);\n  vec2 scale = vec2(1.0 - a_texCoord.y, a_texCoord.y);\n  pos_w.xz += scale * vec2((a_texCoord.x * 2.0 - 1.0) * dist * 0.002);\n  vec4 pos = cc_matViewProj * vec4(pos_w, 1.0);\n  pos.z += 0.00011;\n  return pos;\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision mediump float;\nlayout(std140) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(std140) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nvec4 CCFragOutput (vec4 color) {\n  return color;\n}\nin vec2 uv;\nin vec3 pos_w;\nvec4 frag () {\n  float alpha = sqrt(0.5 - abs(uv.x - 0.5));\n  float scale = abs(normalize(cc_cameraPos.xyz - pos_w).y);\n  if (scale < 0.5) alpha *= max(0.3, scale / 0.5);\n  return CCFragOutput(vec4(0.5, 0.5, 0.5, alpha));\n}\nlayout(location = 0) out vec4 cc_FragColor;\nvoid main() { cc_FragColor = frag(); }"
+      },
+      "glsl1": {
+        "vert": "\nprecision mediump float;\nuniform highp mat4 cc_matView;\n  uniform highp mat4 cc_matViewProj;\n  uniform highp vec4 cc_cameraPos;\nattribute vec2 a_texCoord;\nattribute vec3 a_position;\nvarying vec2 uv;\nvarying vec3 pos_w;\nvec4 vert () {\n  uv = a_texCoord;\n  pos_w = a_position;\n  vec2 forward = vec2(cc_matView[0][2], cc_matView[2][2]);\n  float dist = abs(cc_cameraPos.y);\n  vec2 scale = vec2(1.0 - a_texCoord.y, a_texCoord.y);\n  pos_w.xz += scale * vec2((a_texCoord.x * 2.0 - 1.0) * dist * 0.002);\n  vec4 pos = cc_matViewProj * vec4(pos_w, 1.0);\n  pos.z += 0.00011;\n  return pos;\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision mediump float;\nuniform highp vec4 cc_cameraPos;\nvec4 CCFragOutput (vec4 color) {\n  return color;\n}\nvarying vec2 uv;\nvarying vec3 pos_w;\nvec4 frag () {\n  float alpha = sqrt(0.5 - abs(uv.x - 0.5));\n  float scale = abs(normalize(cc_cameraPos.xyz - pos_w).y);\n  if (scale < 0.5) alpha *= max(0.3, scale / 0.5);\n  return CCFragOutput(vec4(0.5, 0.5, 0.5, alpha));\n}\nvoid main() { gl_FragColor = frag(); }"
+      },
+      "builtins": {
+        "globals": {
+          "blocks": [
+            {
+              "name": "CCGlobal",
+              "defines": []
+            },
+            {
+              "name": "CCCamera",
+              "defines": []
+            }
+          ],
+          "samplerTextures": [],
+          "buffers": [],
+          "images": []
+        },
+        "locals": {
+          "blocks": [],
+          "samplerTextures": [],
+          "buffers": [],
+          "images": []
+        },
+        "statistics": {
+          "CC_EFFECT_USED_VERTEX_UNIFORM_VECTORS": 39,
+          "CC_EFFECT_USED_FRAGMENT_UNIFORM_VECTORS": 39
+        }
+      },
+      "defines": [],
+      "name": "editor/grid-stroke|grid-vs:vert|grid-fs:frag"
+    }
+  ],
+  "combinations": [],
+  "hideInEditor": true
+}
