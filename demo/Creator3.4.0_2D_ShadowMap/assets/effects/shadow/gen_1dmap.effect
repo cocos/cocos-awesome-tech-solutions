@@ -36,6 +36,7 @@ CCProgram shadow-castvs %{
 
   out vec4 color;
   out vec2 uv0;
+  out float flipY;
 
   vec4 vert () {
     vec4 pos = vec4(a_position, 1);
@@ -53,8 +54,10 @@ CCProgram shadow-castvs %{
     #endif
 
     uv0 = a_texCoord;
+
     #if SAMPLE_FROM_RT
       CC_HANDLE_RT_SAMPLE_FLIP(uv0);
+      flipY = cc_cameraPos.w;
     #endif
     color = a_color;
 
@@ -68,11 +71,12 @@ CCProgram shadow-castfs %{
   #include <alpha-test>
 
   in vec4 color;
+  in float flipY;
   
   #if USE_TEXTURE
     in vec2 uv0;
     #pragma builtin(local)
-    layout(set = 2, binding = 10) uniform sampler2D cc_spriteTexture;
+    layout(set = 2, binding = 11) uniform sampler2D cc_spriteTexture;
   #endif
 
   #if USE_2D_SHADOW
@@ -100,7 +104,12 @@ CCProgram shadow-castfs %{
         vec2 coord = vec2(-r * sin(theta), -r * cos(theta))/2.0 + 0.5;      
         
         // origin offset
-        coord += light_position;
+        if (flipY > 1.0) {
+          coord += vec2(light_position.x, light_position.y);          
+        }
+        else {
+          coord += vec2(light_position.x, 0.0 - light_position.y);
+        }        
 
         // sample the occlusion map
 		    vec4 data = texture(cc_spriteTexture, coord);
