@@ -1,0 +1,678 @@
+{
+  "cce:/internal/x/cc": {
+    "mTimestamp": 10408.575625002384,
+    "chunkId": "quick-pack:/cce/internal/x/cc.js",
+    "imports": [
+      {
+        "value": "cce:/internal/x/cc-fu/base",
+        "rewritten": "__unresolved_0",
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 14
+          },
+          "end": {
+            "line": 1,
+            "column": 42
+          }
+        }
+      },
+      {
+        "value": "cce:/internal/x/cc-fu/gfx-webgl",
+        "rewritten": "__unresolved_1",
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 14
+          },
+          "end": {
+            "line": 2,
+            "column": 47
+          }
+        }
+      },
+      {
+        "value": "cce:/internal/x/cc-fu/gfx-webgl2",
+        "rewritten": "__unresolved_2",
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 14
+          },
+          "end": {
+            "line": 3,
+            "column": 48
+          }
+        }
+      },
+      {
+        "value": "cce:/internal/x/cc-fu/3d",
+        "rewritten": "__unresolved_3",
+        "loc": {
+          "start": {
+            "line": 4,
+            "column": 14
+          },
+          "end": {
+            "line": 4,
+            "column": 40
+          }
+        }
+      },
+      {
+        "value": "cce:/internal/x/cc-fu/2d",
+        "rewritten": "__unresolved_4",
+        "loc": {
+          "start": {
+            "line": 5,
+            "column": 14
+          },
+          "end": {
+            "line": 5,
+            "column": 40
+          }
+        }
+      },
+      {
+        "value": "cce:/internal/x/cc-fu/ui",
+        "rewritten": "__unresolved_5",
+        "loc": {
+          "start": {
+            "line": 6,
+            "column": 14
+          },
+          "end": {
+            "line": 6,
+            "column": 40
+          }
+        }
+      },
+      {
+        "value": "cce:/internal/x/cc-fu/particle",
+        "rewritten": "__unresolved_6",
+        "loc": {
+          "start": {
+            "line": 7,
+            "column": 14
+          },
+          "end": {
+            "line": 7,
+            "column": 46
+          }
+        }
+      },
+      {
+        "value": "cce:/internal/x/cc-fu/particle-2d",
+        "rewritten": "__unresolved_7",
+        "loc": {
+          "start": {
+            "line": 8,
+            "column": 14
+          },
+          "end": {
+            "line": 8,
+            "column": 49
+          }
+        }
+      },
+      {
+        "value": "cce:/internal/x/cc-fu/physics-framework",
+        "rewritten": "__unresolved_8",
+        "loc": {
+          "start": {
+            "line": 9,
+            "column": 14
+          },
+          "end": {
+            "line": 9,
+            "column": 55
+          }
+        }
+      },
+      {
+        "value": "cce:/internal/x/cc-fu/physics-2d-framework",
+        "rewritten": "__unresolved_9",
+        "loc": {
+          "start": {
+            "line": 10,
+            "column": 14
+          },
+          "end": {
+            "line": 10,
+            "column": 58
+          }
+        }
+      },
+      {
+        "value": "cce:/internal/x/cc-fu/intersection-2d",
+        "rewritten": "__unresolved_10",
+        "loc": {
+          "start": {
+            "line": 11,
+            "column": 14
+          },
+          "end": {
+            "line": 11,
+            "column": 53
+          }
+        }
+      },
+      {
+        "value": "cce:/internal/x/cc-fu/primitive",
+        "rewritten": "__unresolved_11",
+        "loc": {
+          "start": {
+            "line": 12,
+            "column": 14
+          },
+          "end": {
+            "line": 12,
+            "column": 47
+          }
+        }
+      },
+      {
+        "value": "cce:/internal/x/cc-fu/profiler",
+        "rewritten": "__unresolved_12",
+        "loc": {
+          "start": {
+            "line": 13,
+            "column": 14
+          },
+          "end": {
+            "line": 13,
+            "column": 46
+          }
+        }
+      },
+      {
+        "value": "cce:/internal/x/cc-fu/audio",
+        "rewritten": "__unresolved_13",
+        "loc": {
+          "start": {
+            "line": 14,
+            "column": 14
+          },
+          "end": {
+            "line": 14,
+            "column": 43
+          }
+        }
+      },
+      {
+        "value": "cce:/internal/x/cc-fu/video",
+        "rewritten": "__unresolved_14",
+        "loc": {
+          "start": {
+            "line": 15,
+            "column": 14
+          },
+          "end": {
+            "line": 15,
+            "column": 43
+          }
+        }
+      },
+      {
+        "value": "cce:/internal/x/cc-fu/terrain",
+        "rewritten": "__unresolved_15",
+        "loc": {
+          "start": {
+            "line": 16,
+            "column": 14
+          },
+          "end": {
+            "line": 16,
+            "column": 45
+          }
+        }
+      },
+      {
+        "value": "cce:/internal/x/cc-fu/webview",
+        "rewritten": "__unresolved_16",
+        "loc": {
+          "start": {
+            "line": 17,
+            "column": 14
+          },
+          "end": {
+            "line": 17,
+            "column": 45
+          }
+        }
+      },
+      {
+        "value": "cce:/internal/x/cc-fu/tween",
+        "rewritten": "__unresolved_17",
+        "loc": {
+          "start": {
+            "line": 18,
+            "column": 14
+          },
+          "end": {
+            "line": 18,
+            "column": 43
+          }
+        }
+      },
+      {
+        "value": "cce:/internal/x/cc-fu/tiled-map",
+        "rewritten": "__unresolved_18",
+        "loc": {
+          "start": {
+            "line": 19,
+            "column": 14
+          },
+          "end": {
+            "line": 19,
+            "column": 47
+          }
+        }
+      },
+      {
+        "value": "cce:/internal/x/cc-fu/spine",
+        "rewritten": "__unresolved_19",
+        "loc": {
+          "start": {
+            "line": 20,
+            "column": 14
+          },
+          "end": {
+            "line": 20,
+            "column": 43
+          }
+        }
+      },
+      {
+        "value": "cce:/internal/x/cc-fu/dragon-bones",
+        "rewritten": "__unresolved_20",
+        "loc": {
+          "start": {
+            "line": 21,
+            "column": 14
+          },
+          "end": {
+            "line": 21,
+            "column": 50
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "specifierOrURL": "cce:/internal/x/cc-fu/base",
+        "isExternal": true
+      },
+      {
+        "specifierOrURL": "cce:/internal/x/cc-fu/gfx-webgl",
+        "isExternal": true
+      },
+      {
+        "specifierOrURL": "cce:/internal/x/cc-fu/gfx-webgl2",
+        "isExternal": true
+      },
+      {
+        "specifierOrURL": "cce:/internal/x/cc-fu/3d",
+        "isExternal": true
+      },
+      {
+        "specifierOrURL": "cce:/internal/x/cc-fu/2d",
+        "isExternal": true
+      },
+      {
+        "specifierOrURL": "cce:/internal/x/cc-fu/ui",
+        "isExternal": true
+      },
+      {
+        "specifierOrURL": "cce:/internal/x/cc-fu/particle",
+        "isExternal": true
+      },
+      {
+        "specifierOrURL": "cce:/internal/x/cc-fu/particle-2d",
+        "isExternal": true
+      },
+      {
+        "specifierOrURL": "cce:/internal/x/cc-fu/physics-framework",
+        "isExternal": true
+      },
+      {
+        "specifierOrURL": "cce:/internal/x/cc-fu/physics-2d-framework",
+        "isExternal": true
+      },
+      {
+        "specifierOrURL": "cce:/internal/x/cc-fu/intersection-2d",
+        "isExternal": true
+      },
+      {
+        "specifierOrURL": "cce:/internal/x/cc-fu/primitive",
+        "isExternal": true
+      },
+      {
+        "specifierOrURL": "cce:/internal/x/cc-fu/profiler",
+        "isExternal": true
+      },
+      {
+        "specifierOrURL": "cce:/internal/x/cc-fu/audio",
+        "isExternal": true
+      },
+      {
+        "specifierOrURL": "cce:/internal/x/cc-fu/video",
+        "isExternal": true
+      },
+      {
+        "specifierOrURL": "cce:/internal/x/cc-fu/terrain",
+        "isExternal": true
+      },
+      {
+        "specifierOrURL": "cce:/internal/x/cc-fu/webview",
+        "isExternal": true
+      },
+      {
+        "specifierOrURL": "cce:/internal/x/cc-fu/tween",
+        "isExternal": true
+      },
+      {
+        "specifierOrURL": "cce:/internal/x/cc-fu/tiled-map",
+        "isExternal": true
+      },
+      {
+        "specifierOrURL": "cce:/internal/x/cc-fu/spine",
+        "isExternal": true
+      },
+      {
+        "specifierOrURL": "cce:/internal/x/cc-fu/dragon-bones",
+        "isExternal": true
+      }
+    ]
+  },
+  "cce:/internal/x/prerequisite-imports": {
+    "mTimestamp": 22360.45983400196,
+    "chunkId": "quick-pack:/cce/internal/x/prerequisite-imports.js",
+    "imports": [
+      {
+        "value": "file:///Users/zzf520/Documents/GitHub/CococsCreator-public-technology-solutions/demo/Creator3.4.0_3D_MeshCutter/assets/migrate-canvas.ts",
+        "rewritten": "__unresolved_0",
+        "loc": {
+          "start": {
+            "line": 5,
+            "column": 35
+          },
+          "end": {
+            "line": 5,
+            "column": 173
+          }
+        }
+      },
+      {
+        "value": "file:///Users/zzf520/Documents/GitHub/CococsCreator-public-technology-solutions/demo/Creator3.4.0_3D_MeshCutter/assets/script/cameraMove.ts",
+        "rewritten": "__unresolved_1",
+        "loc": {
+          "start": {
+            "line": 5,
+            "column": 189
+          },
+          "end": {
+            "line": 5,
+            "column": 330
+          }
+        }
+      },
+      {
+        "value": "file:///Users/zzf520/Documents/GitHub/CococsCreator-public-technology-solutions/demo/Creator3.4.0_3D_MeshCutter/assets/script/shatter/FastHull.ts",
+        "rewritten": "__unresolved_2",
+        "loc": {
+          "start": {
+            "line": 5,
+            "column": 346
+          },
+          "end": {
+            "line": 5,
+            "column": 493
+          }
+        }
+      },
+      {
+        "value": "file:///Users/zzf520/Documents/GitHub/CococsCreator-public-technology-solutions/demo/Creator3.4.0_3D_MeshCutter/assets/script/shatter/TouchSplit.ts",
+        "rewritten": "__unresolved_3",
+        "loc": {
+          "start": {
+            "line": 5,
+            "column": 509
+          },
+          "end": {
+            "line": 5,
+            "column": 658
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "file:///Users/zzf520/Documents/GitHub/CococsCreator-public-technology-solutions/demo/Creator3.4.0_3D_MeshCutter/assets/migrate-canvas.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/zzf520/Documents/GitHub/CococsCreator-public-technology-solutions/demo/Creator3.4.0_3D_MeshCutter/assets/script/cameraMove.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/zzf520/Documents/GitHub/CococsCreator-public-technology-solutions/demo/Creator3.4.0_3D_MeshCutter/assets/script/shatter/FastHull.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/zzf520/Documents/GitHub/CococsCreator-public-technology-solutions/demo/Creator3.4.0_3D_MeshCutter/assets/script/shatter/TouchSplit.ts"
+      }
+    ]
+  },
+  "file:///Users/zzf520/Documents/GitHub/CococsCreator-public-technology-solutions/demo/Creator3.4.0_3D_MeshCutter/assets/migrate-canvas.ts": {
+    "mTimestamp": {
+      "mtime": 1644203699851.7185,
+      "uuid": "ebe6c6c4-4eee-4249-b7c4-9ab3998339fc"
+    },
+    "chunkId": "assets/migrate-canvas.js",
+    "imports": [
+      {
+        "value": "cc"
+      },
+      {
+        "value": "cc",
+        "loc": {
+          "start": {
+            "line": 14,
+            "column": 85
+          },
+          "end": {
+            "line": 14,
+            "column": 89
+          }
+        }
+      },
+      {
+        "value": "cc/env",
+        "loc": {
+          "start": {
+            "line": 15,
+            "column": 23
+          },
+          "end": {
+            "line": 15,
+            "column": 31
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "specifierOrURL": "cc/env",
+        "isExternal": true
+      }
+    ]
+  },
+  "file:///Users/zzf520/Documents/GitHub/CococsCreator-public-technology-solutions/demo/Creator3.4.0_3D_MeshCutter/assets/script/shatter/TouchSplit.ts": {
+    "mTimestamp": {
+      "mtime": 1644203699959.3538,
+      "uuid": "dddd9e79-8450-42a2-adbc-6b5ba49d4d1e"
+    },
+    "chunkId": "assets/script/shatter/TouchSplit.js",
+    "imports": [
+      {
+        "value": "cce:/internal/code-quality/cr.mjs",
+        "rewritten": "__unresolved_0"
+      },
+      {
+        "value": "cc"
+      },
+      {
+        "value": "cc",
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 316
+          },
+          "end": {
+            "line": 1,
+            "column": 320
+          }
+        }
+      },
+      {
+        "value": "./FastHull",
+        "rewritten": "__unresolved_1",
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 25
+          },
+          "end": {
+            "line": 2,
+            "column": 37
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/code-quality/cr.mjs"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/zzf520/Documents/GitHub/CococsCreator-public-technology-solutions/demo/Creator3.4.0_3D_MeshCutter/assets/script/shatter/FastHull.ts"
+      }
+    ]
+  },
+  "file:///Users/zzf520/Documents/GitHub/CococsCreator-public-technology-solutions/demo/Creator3.4.0_3D_MeshCutter/assets/script/cameraMove.ts": {
+    "mTimestamp": {
+      "mtime": 1644203699958.9814,
+      "uuid": "8257b45d-704b-448a-a43a-55cb5defec72"
+    },
+    "chunkId": "assets/script/cameraMove.js",
+    "imports": [
+      {
+        "value": "cc"
+      },
+      {
+        "value": "cc",
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 89
+          },
+          "end": {
+            "line": 1,
+            "column": 93
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      }
+    ]
+  },
+  "file:///Users/zzf520/Documents/GitHub/CococsCreator-public-technology-solutions/demo/Creator3.4.0_3D_MeshCutter/assets/script/shatter/FastHull.ts": {
+    "mTimestamp": {
+      "mtime": 1644203699959.2334,
+      "uuid": "16b9011d-7862-4b19-ac8e-d913b64f1cc2"
+    },
+    "chunkId": "assets/script/shatter/FastHull.js",
+    "imports": [
+      {
+        "value": "cc"
+      },
+      {
+        "value": "cc",
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 69
+          },
+          "end": {
+            "line": 1,
+            "column": 73
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      }
+    ]
+  },
+  "cce:/internal/code-quality/cr.mjs": {
+    "mTimestamp": 1644203989418,
+    "chunkId": "quick-pack:/cce/internal/code-quality/cr.js",
+    "imports": [],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": []
+  }
+}

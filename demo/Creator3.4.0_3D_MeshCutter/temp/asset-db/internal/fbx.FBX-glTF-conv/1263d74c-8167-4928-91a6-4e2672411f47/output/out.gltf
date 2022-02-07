@@ -1,0 +1,717 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 1321,
+      "max": [
+        0.5,
+        1.0,
+        0.5
+      ],
+      "min": [
+        -0.5,
+        -1.0,
+        -0.5
+      ],
+      "name": "capsule/POSITION",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 12,
+      "componentType": 5126,
+      "count": 1321,
+      "name": "capsule/NORMAL",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 24,
+      "componentType": 5126,
+      "count": 1321,
+      "name": "capsule/TEXCOORD_0",
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 32,
+      "componentType": 5126,
+      "count": 1321,
+      "name": "capsule/TEXCOORD_1",
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5125,
+      "count": 6144,
+      "name": "capsule/INDICES",
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 121,
+      "max": [
+        5.0,
+        0.0,
+        5.0
+      ],
+      "min": [
+        -5.0,
+        0.0,
+        -5.0
+      ],
+      "name": "plane/POSITION",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 12,
+      "componentType": 5126,
+      "count": 121,
+      "name": "plane/NORMAL",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 24,
+      "componentType": 5126,
+      "count": 121,
+      "name": "plane/TEXCOORD_0",
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 32,
+      "componentType": 5126,
+      "count": 121,
+      "name": "plane/TEXCOORD_1",
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5125,
+      "count": 600,
+      "name": "plane/INDICES",
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 130,
+      "max": [
+        0.5,
+        0.5,
+        0.5000000596046448
+      ],
+      "min": [
+        -0.5,
+        -0.5000000596046448,
+        -0.4999999701976776
+      ],
+      "name": "cone/POSITION",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 4,
+      "byteOffset": 12,
+      "componentType": 5126,
+      "count": 130,
+      "name": "cone/NORMAL",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 4,
+      "byteOffset": 24,
+      "componentType": 5126,
+      "count": 130,
+      "name": "cone/TEXCOORD_0",
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 4,
+      "byteOffset": 32,
+      "componentType": 5126,
+      "count": 130,
+      "name": "cone/TEXCOORD_1",
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5125,
+      "count": 216,
+      "name": "cone/INDICES",
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5126,
+      "count": 1297,
+      "max": [
+        0.5,
+        0.10000000149011612,
+        0.5
+      ],
+      "min": [
+        -0.5,
+        -0.10000000149011612,
+        -0.5
+      ],
+      "name": "torus/POSITION",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 6,
+      "byteOffset": 12,
+      "componentType": 5126,
+      "count": 1297,
+      "name": "torus/NORMAL",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 6,
+      "byteOffset": 24,
+      "componentType": 5126,
+      "count": 1297,
+      "name": "torus/TEXCOORD_0",
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 6,
+      "byteOffset": 32,
+      "componentType": 5126,
+      "count": 1297,
+      "name": "torus/TEXCOORD_1",
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 7,
+      "componentType": 5125,
+      "count": 6144,
+      "name": "torus/INDICES",
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 8,
+      "componentType": 5126,
+      "count": 1235,
+      "max": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "min": [
+        -0.5,
+        -0.5,
+        -0.5
+      ],
+      "name": "sphere/POSITION",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 8,
+      "byteOffset": 12,
+      "componentType": 5126,
+      "count": 1235,
+      "name": "sphere/NORMAL",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 8,
+      "byteOffset": 24,
+      "componentType": 5126,
+      "count": 1235,
+      "name": "sphere/TEXCOORD_0",
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 8,
+      "byteOffset": 32,
+      "componentType": 5126,
+      "count": 1235,
+      "name": "sphere/TEXCOORD_1",
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 9,
+      "componentType": 5125,
+      "count": 6144,
+      "name": "sphere/INDICES",
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 10,
+      "componentType": 5126,
+      "count": 4,
+      "max": [
+        0.5,
+        0.5,
+        0.0
+      ],
+      "min": [
+        -0.5,
+        -0.5,
+        0.0
+      ],
+      "name": "quad/POSITION",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 10,
+      "byteOffset": 12,
+      "componentType": 5126,
+      "count": 4,
+      "name": "quad/NORMAL",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 10,
+      "byteOffset": 24,
+      "componentType": 5126,
+      "count": 4,
+      "name": "quad/TEXCOORD_0",
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 10,
+      "byteOffset": 32,
+      "componentType": 5126,
+      "count": 4,
+      "name": "quad/TEXCOORD_1",
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 11,
+      "componentType": 5125,
+      "count": 6,
+      "name": "quad/INDICES",
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 12,
+      "componentType": 5126,
+      "count": 260,
+      "max": [
+        0.5,
+        1.0,
+        0.5
+      ],
+      "min": [
+        -0.5,
+        -1.0,
+        -0.5
+      ],
+      "name": "cylinder/POSITION",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 12,
+      "byteOffset": 12,
+      "componentType": 5126,
+      "count": 260,
+      "name": "cylinder/NORMAL",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 12,
+      "byteOffset": 24,
+      "componentType": 5126,
+      "count": 260,
+      "name": "cylinder/TEXCOORD_0",
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 12,
+      "byteOffset": 32,
+      "componentType": 5126,
+      "count": 260,
+      "name": "cylinder/TEXCOORD_1",
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 13,
+      "componentType": 5125,
+      "count": 384,
+      "name": "cylinder/INDICES",
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 14,
+      "componentType": 5126,
+      "count": 24,
+      "max": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "min": [
+        -0.5,
+        -0.5,
+        -0.5
+      ],
+      "name": "box/POSITION",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 14,
+      "byteOffset": 12,
+      "componentType": 5126,
+      "count": 24,
+      "name": "box/NORMAL",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 14,
+      "byteOffset": 24,
+      "componentType": 5126,
+      "count": 24,
+      "name": "box/TEXCOORD_0",
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 14,
+      "byteOffset": 32,
+      "componentType": 5126,
+      "count": 24,
+      "name": "box/TEXCOORD_1",
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 15,
+      "componentType": 5125,
+      "count": 36,
+      "name": "box/INDICES",
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "copyright": "Copyright (c) 2018-2020 Chukong Technologies Inc.",
+    "generator": "FBX-glTF-conv",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 52840,
+      "byteStride": 40,
+      "name": "capsule",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 24576,
+      "byteOffset": 52840
+    },
+    {
+      "buffer": 0,
+      "byteLength": 4840,
+      "byteOffset": 77416,
+      "byteStride": 40,
+      "name": "plane",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2400,
+      "byteOffset": 82256
+    },
+    {
+      "buffer": 0,
+      "byteLength": 5200,
+      "byteOffset": 84656,
+      "byteStride": 40,
+      "name": "cone",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 864,
+      "byteOffset": 89856
+    },
+    {
+      "buffer": 0,
+      "byteLength": 51880,
+      "byteOffset": 90720,
+      "byteStride": 40,
+      "name": "torus",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 24576,
+      "byteOffset": 142600
+    },
+    {
+      "buffer": 0,
+      "byteLength": 49400,
+      "byteOffset": 167176,
+      "byteStride": 40,
+      "name": "sphere",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 24576,
+      "byteOffset": 216576
+    },
+    {
+      "buffer": 0,
+      "byteLength": 160,
+      "byteOffset": 241152,
+      "byteStride": 40,
+      "name": "quad",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 24,
+      "byteOffset": 241312
+    },
+    {
+      "buffer": 0,
+      "byteLength": 10400,
+      "byteOffset": 241336,
+      "byteStride": 40,
+      "name": "cylinder",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1536,
+      "byteOffset": 251736
+    },
+    {
+      "buffer": 0,
+      "byteLength": 960,
+      "byteOffset": 253272,
+      "byteStride": 40,
+      "name": "box",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 144,
+      "byteOffset": 254232
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 254376,
+      "uri": "out.bin"
+    }
+  ],
+  "extras": {
+    "FBX-glTF-conv": {
+      "animationFrameRate": 30.0
+    }
+  },
+  "meshes": [
+    {
+      "name": "capsule",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2,
+            "TEXCOORD_1": 3
+          },
+          "indices": 4
+        }
+      ]
+    },
+    {
+      "name": "plane",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 6,
+            "POSITION": 5,
+            "TEXCOORD_0": 7,
+            "TEXCOORD_1": 8
+          },
+          "indices": 9
+        }
+      ]
+    },
+    {
+      "name": "cone",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 11,
+            "POSITION": 10,
+            "TEXCOORD_0": 12,
+            "TEXCOORD_1": 13
+          },
+          "indices": 14
+        }
+      ]
+    },
+    {
+      "name": "torus",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 16,
+            "POSITION": 15,
+            "TEXCOORD_0": 17,
+            "TEXCOORD_1": 18
+          },
+          "indices": 19
+        }
+      ]
+    },
+    {
+      "name": "sphere",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 21,
+            "POSITION": 20,
+            "TEXCOORD_0": 22,
+            "TEXCOORD_1": 23
+          },
+          "indices": 24
+        }
+      ]
+    },
+    {
+      "name": "quad",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 26,
+            "POSITION": 25,
+            "TEXCOORD_0": 27,
+            "TEXCOORD_1": 28
+          },
+          "indices": 29
+        }
+      ]
+    },
+    {
+      "name": "cylinder",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 31,
+            "POSITION": 30,
+            "TEXCOORD_0": 32,
+            "TEXCOORD_1": 33
+          },
+          "indices": 34
+        }
+      ]
+    },
+    {
+      "name": "box",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 36,
+            "POSITION": 35,
+            "TEXCOORD_0": 37,
+            "TEXCOORD_1": 38
+          },
+          "indices": 39
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "name": "group"
+    },
+    {
+      "mesh": 0,
+      "name": "capsule",
+      "scale": [
+        100.00000762939453,
+        100.00000762939453,
+        100.00000762939453
+      ]
+    },
+    {
+      "mesh": 1,
+      "name": "plane",
+      "scale": [
+        100.00000762939453,
+        100.00000762939453,
+        100.00000762939453
+      ]
+    },
+    {
+      "mesh": 2,
+      "name": "cone",
+      "scale": [
+        100.00000762939453,
+        100.00000762939453,
+        100.00000762939453
+      ]
+    },
+    {
+      "mesh": 3,
+      "name": "torus",
+      "scale": [
+        100.00000762939453,
+        100.00000762939453,
+        100.00000762939453
+      ]
+    },
+    {
+      "mesh": 4,
+      "name": "sphere",
+      "scale": [
+        100.00000762939453,
+        100.00000762939453,
+        100.00000762939453
+      ]
+    },
+    {
+      "mesh": 5,
+      "name": "quad",
+      "scale": [
+        100.00000762939453,
+        100.00000762939453,
+        100.00000762939453
+      ]
+    },
+    {
+      "mesh": 6,
+      "name": "cylinder",
+      "scale": [
+        100.00000762939453,
+        100.00000762939453,
+        100.00000762939453
+      ]
+    },
+    {
+      "mesh": 7,
+      "name": "box",
+      "scale": [
+        100.00000762939453,
+        100.00000762939453,
+        100.00000762939453
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ]
+    }
+  ]
+}

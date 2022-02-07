@@ -1,0 +1,206 @@
+{
+  "__type__": "cc.EffectAsset",
+  "_name": "builtin-sprite-gpu",
+  "_objFlags": 0,
+  "_native": "",
+  "techniques": [
+    {
+      "passes": [
+        {
+          "blendState": {
+            "targets": [
+              {
+                "blend": true,
+                "blendSrc": 2,
+                "blendDst": 4,
+                "blendDstAlpha": 4
+              }
+            ]
+          },
+          "rasterizerState": {
+            "cullMode": 0
+          },
+          "program": "builtin-sprite-gpu|sprite-vs-gpu:vert|sprite-fs-gpu:frag",
+          "depthStencilState": {
+            "depthTest": false,
+            "depthWrite": false
+          }
+        }
+      ]
+    }
+  ],
+  "shaders": [
+    {
+      "blocks": [],
+      "samplerTextures": [],
+      "samplers": [],
+      "textures": [],
+      "buffers": [],
+      "images": [],
+      "subpassInputs": [],
+      "attributes": [
+        {
+          "name": "a_position",
+          "defines": [],
+          "format": 32,
+          "location": 0
+        },
+        {
+          "name": "a_texCoord",
+          "defines": [],
+          "format": 21,
+          "location": 1
+        },
+        {
+          "name": "a_batch_id",
+          "defines": [],
+          "format": 11,
+          "location": 2
+        }
+      ],
+      "varyings": [
+        {
+          "name": "v_uv0",
+          "type": 14,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 17,
+          "location": 0
+        },
+        {
+          "name": "v_uvMode",
+          "type": 13,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 17,
+          "location": 1
+        },
+        {
+          "name": "v_uvSizeOffset",
+          "type": 16,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 17,
+          "location": 2
+        },
+        {
+          "name": "v_uvParams0",
+          "type": 16,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 17,
+          "location": 3
+        },
+        {
+          "name": "v_uvParams1",
+          "type": 16,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 17,
+          "location": 4
+        },
+        {
+          "name": "v_color",
+          "type": 16,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 17,
+          "location": 5
+        }
+      ],
+      "fragColors": [
+        {
+          "name": "cc_FragColor",
+          "typename": "vec4",
+          "type": 16,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 16,
+          "location": 0
+        }
+      ],
+      "hash": 2450198964,
+      "glsl4": {
+        "vert": "\nprecision highp float;\nstruct SpriteVertexData {\n  vec4 position;\n  vec4 color;\n};\nstruct SpriteFragmentData {\n  vec2 uv;\n};\nlayout(set = 0, binding = 0) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(set = 0, binding = 1) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nlayout(location = 0) in vec3 a_position;\nlayout(location = 1) in vec2 a_texCoord;\nlayout(location = 2) in float a_batch_id;\nlayout(location = 0) out vec2 v_uv0;\nlayout(location = 1) out float v_uvMode;\nlayout(location = 2) out vec4 v_uvSizeOffset;\nlayout(location = 3) out vec4 v_uvParams0;\nlayout(location = 4) out vec4 v_uvParams1;\nstruct SpriteVertexInternalData {\n  vec4 rotation;\n  vec3 translation;\n  vec3 scale;\n  vec4 uvSizeOffset;\n  float uvMode;\n  vec4 uvParams;\n  float filltype;\n};\nlayout(set = 2, binding = 5) uniform CCUILocal {\n  vec4 cc_local_data[(CC_DEVICE_MAX_VERTEX_UNIFORM_VECTORS - CC_EFFECT_USED_VERTEX_UNIFORM_VECTORS) / 5 * 5];\n};\nvec3 VectorTransformQuat (vec3 v, vec4 q) {\n  return v + 2.0 * cross(q.xyz, cross(q.xyz, v) + q.w * v);\n}\nvoid CCSpriteInput(out SpriteVertexData i0) {\n  vec4 data0 = cc_local_data[int(a_batch_id) * 5];\n  vec4 data1 = cc_local_data[int(a_batch_id) * 5 + 1];\n  vec4 data2 = cc_local_data[int(a_batch_id) * 5 + 2];\n  vec4 data3 = cc_local_data[int(a_batch_id) * 5 + 3];\n  vec4 data4 = cc_local_data[int(a_batch_id) * 5 + 4];\n  float rg = data0.w;\n  float r = floor(rg);\n  float ba = data2.z;\n  float b = floor(ba);\n  SpriteVertexInternalData i1;\n  i1.rotation = data1;\n  i1.translation = data0.xyz;\n  i1.scale = vec3(data2.xy, 1.0);\n  i1.uvSizeOffset = data3;\n  i1.filltype = fract(data2.w) * 10.0;\n  i1.uvMode = data2.w;\n  i1.uvParams = data4;\n  i0.position = vec4(VectorTransformQuat(a_position * i1.scale, i1.rotation) + i1.translation, 1.0);\n  i0.color = vec4(r * (1.0 / 255.0), rg - r, b * (1.0 / 255.0), ba - b);\n  vec2 uvWithRotation;\n  if (i1.uvSizeOffset.x < 0.0) {\n    i1.uvSizeOffset.x = abs(i1.uvSizeOffset.x);\n    uvWithRotation = vec2(1.0 - a_texCoord.y, a_texCoord.x);\n  } else {\n    uvWithRotation = a_texCoord;\n  }\n  if (i1.uvMode >= 3.0) {\n    v_uv0 = uvWithRotation;\n    v_uvSizeOffset = i1.uvSizeOffset;\n    v_uvParams0 = vec4(i1.uvParams.xy, i1.filltype, 0);\n    if (i1.filltype >= 2.0) {\n      v_uvParams1 = i1.uvParams;\n    } else if (i1.filltype >= 1.0) {\n      v_uvParams0 = vec4(1.0 - v_uvParams0.y, 1.0 - v_uvParams0.x, v_uvParams0.zw);\n    }\n  } else if (i1.uvMode >= 2.0) {\n    v_uv0 = uvWithRotation * i1.uvParams.xy;\n    v_uv0.y -= fract(i1.uvParams.y);\n    v_uvSizeOffset = i1.uvSizeOffset;\n  } else if (i1.uvMode >= 1.0) {\n    v_uv0 = uvWithRotation;\n    v_uvSizeOffset = i1.uvSizeOffset;\n    vec4 params0 = fract(i1.uvParams);\n    vec4 params1 = floor(i1.uvParams) / 2048.0;\n    v_uvParams0 = vec4(params0.xy, params1.xy);\n    v_uvParams1 = vec4(params0.zw, params1.zw);\n  } else {\n    v_uv0 = uvWithRotation * i1.uvSizeOffset.xy + i1.uvSizeOffset.zw;\n  }\n  v_uvMode = i1.uvMode;\n  #if SAMPLE_FROM_RT\n    v_uv0 = cc_cameraPos.w > 1.0 ? vec2(v_uv0.x, 1.0 - v_uv0.y) : v_uv0;\n  #endif\n}\nlayout(location = 5) out vec4 v_color;\nvec4 vert () {\n  SpriteVertexData i;\n  CCSpriteInput(i);\n  v_color = i.color;\n  vec4 pos = i.position;\n  #if USE_PIXEL_ALIGNMENT\n    pos = cc_matView * pos;\n    pos.xyz = floor(pos.xyz);\n    pos = cc_matProj * pos;\n  #else\n    pos = cc_matViewProj * pos;\n  #endif\n  return pos;\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision highp float;\nstruct SpriteVertexData {\n  vec4 position;\n  vec4 color;\n};\nstruct SpriteFragmentData {\n  vec2 uv;\n};\nvec4 CCSampleWithAlphaSeparated(sampler2D tex, vec2 uv) {\n#if CC_USE_EMBEDDED_ALPHA\n  return vec4(texture(tex, uv).rgb, texture(tex, uv + vec2(0.0, 0.5)).r);\n#else\n  return texture(tex, uv);\n#endif\n}\nlayout(location = 0) in vec2 v_uv0;\nlayout(location = 1) in float v_uvMode;\nlayout(location = 2) in vec4 v_uvSizeOffset;\nlayout(location = 3) in vec4 v_uvParams0;\nlayout(location = 4) in vec4 v_uvParams1;\nvec2 evalSlicedUV(vec2 uv) {\n  vec4 p0 = mix(vec4(0.0), v_uvParams0, step(v_uvParams0.xyxy, uv.xyxy));\n        p0 = mix(       p0, v_uvParams1, step(v_uvParams1.xyxy, uv.xyxy));\n  vec4 p1 = mix(vec4(1.0), v_uvParams1, step(uv.xyxy, v_uvParams1.xyxy));\n        p1 = mix(       p1, v_uvParams0, step(uv.xyxy, v_uvParams0.xyxy));\n  vec2 k = (p1.zw - p0.zw) / (p1.xy - p0.xy);\n  vec2 b = (p1.xy * p0.zw - p0.xy * p1.zw) / (p1.xy - p0.xy);\n  return k * uv + b;\n}\nfloat evalFilledUV(vec2 uv, float mode) {\n  float alpha = 1.0;\n  if (mode >= 2.0) {\n    float start = v_uvParams1.x;\n    float range = v_uvParams1.y;\n    vec2 dir = uv - v_uvParams1.zw;\n    float angle = -atan(dir.y, dir.x) * 0.3183098861838;\n    if (range < 0.0) {\n      angle += mix(0.0, -2.0, step(start, angle));\n      alpha = step(start + range, angle);\n    } else {\n      angle += mix(0.0, 2.0, step(angle, start));\n      alpha = step(angle, start + range);\n    }\n  } else if (mode >= 1.0) {\n    if (uv.y >= v_uvParams0.x && uv.y <= v_uvParams0.y) {\n      alpha = 1.0;\n    } else {\n      alpha = 0.0;\n    }\n  } else {\n    if (uv.x >= v_uvParams0.x && uv.x <= v_uvParams0.y) {\n      alpha = 1.0;\n    } else {\n      alpha = 0.0;\n    }\n  }\n  return alpha;\n}\nvoid CCSpriteInput(out SpriteFragmentData i) {\n  #if USE_TEXTURE\n    if(v_uvMode >= 3.0) {\n      i.uv = v_uv0 * v_uvSizeOffset.xy + v_uvSizeOffset.zw;\n    } else if (v_uvMode >= 2.0) {\n      i.uv = fract(v_uv0) * v_uvSizeOffset.xy + v_uvSizeOffset.zw;\n    } else if (v_uvMode >= 1.0) {\n      i.uv = evalSlicedUV(v_uv0) * v_uvSizeOffset.xy + v_uvSizeOffset.zw;\n    } else {\n      i.uv = v_uv0;\n    }\n  #endif\n}\nvec4 CCSpriteSample(sampler2D tex, vec2 uv) {\n  vec4 o = CCSampleWithAlphaSeparated(tex, uv);\n  if (v_uvMode >= 3.0) {\n    o.a *= evalFilledUV(v_uv0, v_uvParams0.z);\n  }\n  return o;\n}\nvec3 SRGBToLinear (vec3 gamma) {\n  return gamma * gamma;\n}\nlayout(location = 5) in vec4 v_color;\n#if USE_TEXTURE\n  layout(set = 2, binding = 11) uniform sampler2D cc_spriteTexture;\n#endif\nvec4 frag () {\n  SpriteFragmentData i;\n  CCSpriteInput(i);\n  #if USE_TEXTURE\n    vec4 color = v_color * CCSpriteSample(cc_spriteTexture, i.uv);\n  #else\n    vec4 color = v_color;\n  #endif\n  #if IS_GRAY\n    color.rgb = SRGBToLinear(color.rgb);\n    color.rgb = vec3(dot(color.rgb, vec3(0.2126, 0.7152, 0.0722)));\n    color.rgb = sqrt(color.rgb);\n  #endif\n  return color;\n}\nlayout(location = 0) out vec4 cc_FragColor;\nvoid main() { cc_FragColor = frag(); }"
+      },
+      "glsl3": {
+        "vert": "\nprecision highp float;\nstruct SpriteVertexData {\n  vec4 position;\n  vec4 color;\n};\nstruct SpriteFragmentData {\n  vec2 uv;\n};\nlayout(std140) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(std140) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nin vec3 a_position;\nin vec2 a_texCoord;\nin float a_batch_id;\nout vec2 v_uv0;\nout float v_uvMode;\nout vec4 v_uvSizeOffset;\nout vec4 v_uvParams0;\nout vec4 v_uvParams1;\nstruct SpriteVertexInternalData {\n  vec4 rotation;\n  vec3 translation;\n  vec3 scale;\n  vec4 uvSizeOffset;\n  float uvMode;\n  vec4 uvParams;\n  float filltype;\n};\nlayout(std140) uniform CCUILocal {\n  vec4 cc_local_data[(CC_DEVICE_MAX_VERTEX_UNIFORM_VECTORS - CC_EFFECT_USED_VERTEX_UNIFORM_VECTORS) / 5 * 5];\n};\nvec3 VectorTransformQuat (vec3 v, vec4 q) {\n  return v + 2.0 * cross(q.xyz, cross(q.xyz, v) + q.w * v);\n}\nvoid CCSpriteInput(out SpriteVertexData i0) {\n  vec4 data0 = cc_local_data[int(a_batch_id) * 5];\n  vec4 data1 = cc_local_data[int(a_batch_id) * 5 + 1];\n  vec4 data2 = cc_local_data[int(a_batch_id) * 5 + 2];\n  vec4 data3 = cc_local_data[int(a_batch_id) * 5 + 3];\n  vec4 data4 = cc_local_data[int(a_batch_id) * 5 + 4];\n  float rg = data0.w;\n  float r = floor(rg);\n  float ba = data2.z;\n  float b = floor(ba);\n  SpriteVertexInternalData i1;\n  i1.rotation = data1;\n  i1.translation = data0.xyz;\n  i1.scale = vec3(data2.xy, 1.0);\n  i1.uvSizeOffset = data3;\n  i1.filltype = fract(data2.w) * 10.0;\n  i1.uvMode = data2.w;\n  i1.uvParams = data4;\n  i0.position = vec4(VectorTransformQuat(a_position * i1.scale, i1.rotation) + i1.translation, 1.0);\n  i0.color = vec4(r * (1.0 / 255.0), rg - r, b * (1.0 / 255.0), ba - b);\n  vec2 uvWithRotation;\n  if (i1.uvSizeOffset.x < 0.0) {\n    i1.uvSizeOffset.x = abs(i1.uvSizeOffset.x);\n    uvWithRotation = vec2(1.0 - a_texCoord.y, a_texCoord.x);\n  } else {\n    uvWithRotation = a_texCoord;\n  }\n  if (i1.uvMode >= 3.0) {\n    v_uv0 = uvWithRotation;\n    v_uvSizeOffset = i1.uvSizeOffset;\n    v_uvParams0 = vec4(i1.uvParams.xy, i1.filltype, 0);\n    if (i1.filltype >= 2.0) {\n      v_uvParams1 = i1.uvParams;\n    } else if (i1.filltype >= 1.0) {\n      v_uvParams0 = vec4(1.0 - v_uvParams0.y, 1.0 - v_uvParams0.x, v_uvParams0.zw);\n    }\n  } else if (i1.uvMode >= 2.0) {\n    v_uv0 = uvWithRotation * i1.uvParams.xy;\n    v_uv0.y -= fract(i1.uvParams.y);\n    v_uvSizeOffset = i1.uvSizeOffset;\n  } else if (i1.uvMode >= 1.0) {\n    v_uv0 = uvWithRotation;\n    v_uvSizeOffset = i1.uvSizeOffset;\n    vec4 params0 = fract(i1.uvParams);\n    vec4 params1 = floor(i1.uvParams) / 2048.0;\n    v_uvParams0 = vec4(params0.xy, params1.xy);\n    v_uvParams1 = vec4(params0.zw, params1.zw);\n  } else {\n    v_uv0 = uvWithRotation * i1.uvSizeOffset.xy + i1.uvSizeOffset.zw;\n  }\n  v_uvMode = i1.uvMode;\n  #if SAMPLE_FROM_RT\n    v_uv0 = cc_cameraPos.w > 1.0 ? vec2(v_uv0.x, 1.0 - v_uv0.y) : v_uv0;\n  #endif\n}\nout vec4 v_color;\nvec4 vert () {\n  SpriteVertexData i;\n  CCSpriteInput(i);\n  v_color = i.color;\n  vec4 pos = i.position;\n  #if USE_PIXEL_ALIGNMENT\n    pos = cc_matView * pos;\n    pos.xyz = floor(pos.xyz);\n    pos = cc_matProj * pos;\n  #else\n    pos = cc_matViewProj * pos;\n  #endif\n  return pos;\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision highp float;\nstruct SpriteVertexData {\n  vec4 position;\n  vec4 color;\n};\nstruct SpriteFragmentData {\n  vec2 uv;\n};\nvec4 CCSampleWithAlphaSeparated(sampler2D tex, vec2 uv) {\n#if CC_USE_EMBEDDED_ALPHA\n  return vec4(texture(tex, uv).rgb, texture(tex, uv + vec2(0.0, 0.5)).r);\n#else\n  return texture(tex, uv);\n#endif\n}\nin vec2 v_uv0;\nin float v_uvMode;\nin vec4 v_uvSizeOffset;\nin vec4 v_uvParams0;\nin vec4 v_uvParams1;\nvec2 evalSlicedUV(vec2 uv) {\n  vec4 p0 = mix(vec4(0.0), v_uvParams0, step(v_uvParams0.xyxy, uv.xyxy));\n        p0 = mix(       p0, v_uvParams1, step(v_uvParams1.xyxy, uv.xyxy));\n  vec4 p1 = mix(vec4(1.0), v_uvParams1, step(uv.xyxy, v_uvParams1.xyxy));\n        p1 = mix(       p1, v_uvParams0, step(uv.xyxy, v_uvParams0.xyxy));\n  vec2 k = (p1.zw - p0.zw) / (p1.xy - p0.xy);\n  vec2 b = (p1.xy * p0.zw - p0.xy * p1.zw) / (p1.xy - p0.xy);\n  return k * uv + b;\n}\nfloat evalFilledUV(vec2 uv, float mode) {\n  float alpha = 1.0;\n  if (mode >= 2.0) {\n    float start = v_uvParams1.x;\n    float range = v_uvParams1.y;\n    vec2 dir = uv - v_uvParams1.zw;\n    float angle = -atan(dir.y, dir.x) * 0.3183098861838;\n    if (range < 0.0) {\n      angle += mix(0.0, -2.0, step(start, angle));\n      alpha = step(start + range, angle);\n    } else {\n      angle += mix(0.0, 2.0, step(angle, start));\n      alpha = step(angle, start + range);\n    }\n  } else if (mode >= 1.0) {\n    if (uv.y >= v_uvParams0.x && uv.y <= v_uvParams0.y) {\n      alpha = 1.0;\n    } else {\n      alpha = 0.0;\n    }\n  } else {\n    if (uv.x >= v_uvParams0.x && uv.x <= v_uvParams0.y) {\n      alpha = 1.0;\n    } else {\n      alpha = 0.0;\n    }\n  }\n  return alpha;\n}\nvoid CCSpriteInput(out SpriteFragmentData i) {\n  #if USE_TEXTURE\n    if(v_uvMode >= 3.0) {\n      i.uv = v_uv0 * v_uvSizeOffset.xy + v_uvSizeOffset.zw;\n    } else if (v_uvMode >= 2.0) {\n      i.uv = fract(v_uv0) * v_uvSizeOffset.xy + v_uvSizeOffset.zw;\n    } else if (v_uvMode >= 1.0) {\n      i.uv = evalSlicedUV(v_uv0) * v_uvSizeOffset.xy + v_uvSizeOffset.zw;\n    } else {\n      i.uv = v_uv0;\n    }\n  #endif\n}\nvec4 CCSpriteSample(sampler2D tex, vec2 uv) {\n  vec4 o = CCSampleWithAlphaSeparated(tex, uv);\n  if (v_uvMode >= 3.0) {\n    o.a *= evalFilledUV(v_uv0, v_uvParams0.z);\n  }\n  return o;\n}\nvec3 SRGBToLinear (vec3 gamma) {\n  return gamma * gamma;\n}\nin vec4 v_color;\n#if USE_TEXTURE\n  uniform sampler2D cc_spriteTexture;\n#endif\nvec4 frag () {\n  SpriteFragmentData i;\n  CCSpriteInput(i);\n  #if USE_TEXTURE\n    vec4 color = v_color * CCSpriteSample(cc_spriteTexture, i.uv);\n  #else\n    vec4 color = v_color;\n  #endif\n  #if IS_GRAY\n    color.rgb = SRGBToLinear(color.rgb);\n    color.rgb = vec3(dot(color.rgb, vec3(0.2126, 0.7152, 0.0722)));\n    color.rgb = sqrt(color.rgb);\n  #endif\n  return color;\n}\nlayout(location = 0) out vec4 cc_FragColor;\nvoid main() { cc_FragColor = frag(); }"
+      },
+      "glsl1": {
+        "vert": "\nprecision highp float;\nstruct SpriteVertexData {\n  vec4 position;\n  vec4 color;\n};\nstruct SpriteFragmentData {\n  vec2 uv;\n};\nuniform highp mat4 cc_matView;\n  uniform highp mat4 cc_matProj;\n  uniform highp mat4 cc_matViewProj;\n  uniform highp vec4 cc_cameraPos;\nattribute vec3 a_position;\nattribute vec2 a_texCoord;\nattribute float a_batch_id;\nvarying vec2 v_uv0;\nvarying float v_uvMode;\nvarying vec4 v_uvSizeOffset;\nvarying vec4 v_uvParams0;\nvarying vec4 v_uvParams1;\nstruct SpriteVertexInternalData {\n  vec4 rotation;\n  vec3 translation;\n  vec3 scale;\n  vec4 uvSizeOffset;\n  float uvMode;\n  vec4 uvParams;\n  float filltype;\n};\nuniform vec4 cc_local_data[(CC_DEVICE_MAX_VERTEX_UNIFORM_VECTORS - CC_EFFECT_USED_VERTEX_UNIFORM_VECTORS) / 5 * 5];\nvec3 VectorTransformQuat (vec3 v, vec4 q) {\n  return v + 2.0 * cross(q.xyz, cross(q.xyz, v) + q.w * v);\n}\nvoid CCSpriteInput(out SpriteVertexData i0) {\n  vec4 data0 = cc_local_data[int(a_batch_id) * 5];\n  vec4 data1 = cc_local_data[int(a_batch_id) * 5 + 1];\n  vec4 data2 = cc_local_data[int(a_batch_id) * 5 + 2];\n  vec4 data3 = cc_local_data[int(a_batch_id) * 5 + 3];\n  vec4 data4 = cc_local_data[int(a_batch_id) * 5 + 4];\n  float rg = data0.w;\n  float r = floor(rg);\n  float ba = data2.z;\n  float b = floor(ba);\n  SpriteVertexInternalData i1;\n  i1.rotation = data1;\n  i1.translation = data0.xyz;\n  i1.scale = vec3(data2.xy, 1.0);\n  i1.uvSizeOffset = data3;\n  i1.filltype = fract(data2.w) * 10.0;\n  i1.uvMode = data2.w;\n  i1.uvParams = data4;\n  i0.position = vec4(VectorTransformQuat(a_position * i1.scale, i1.rotation) + i1.translation, 1.0);\n  i0.color = vec4(r * (1.0 / 255.0), rg - r, b * (1.0 / 255.0), ba - b);\n  vec2 uvWithRotation;\n  if (i1.uvSizeOffset.x < 0.0) {\n    i1.uvSizeOffset.x = abs(i1.uvSizeOffset.x);\n    uvWithRotation = vec2(1.0 - a_texCoord.y, a_texCoord.x);\n  } else {\n    uvWithRotation = a_texCoord;\n  }\n  if (i1.uvMode >= 3.0) {\n    v_uv0 = uvWithRotation;\n    v_uvSizeOffset = i1.uvSizeOffset;\n    v_uvParams0 = vec4(i1.uvParams.xy, i1.filltype, 0);\n    if (i1.filltype >= 2.0) {\n      v_uvParams1 = i1.uvParams;\n    } else if (i1.filltype >= 1.0) {\n      v_uvParams0 = vec4(1.0 - v_uvParams0.y, 1.0 - v_uvParams0.x, v_uvParams0.zw);\n    }\n  } else if (i1.uvMode >= 2.0) {\n    v_uv0 = uvWithRotation * i1.uvParams.xy;\n    v_uv0.y -= fract(i1.uvParams.y);\n    v_uvSizeOffset = i1.uvSizeOffset;\n  } else if (i1.uvMode >= 1.0) {\n    v_uv0 = uvWithRotation;\n    v_uvSizeOffset = i1.uvSizeOffset;\n    vec4 params0 = fract(i1.uvParams);\n    vec4 params1 = floor(i1.uvParams) / 2048.0;\n    v_uvParams0 = vec4(params0.xy, params1.xy);\n    v_uvParams1 = vec4(params0.zw, params1.zw);\n  } else {\n    v_uv0 = uvWithRotation * i1.uvSizeOffset.xy + i1.uvSizeOffset.zw;\n  }\n  v_uvMode = i1.uvMode;\n  #if SAMPLE_FROM_RT\n    v_uv0 = cc_cameraPos.w > 1.0 ? vec2(v_uv0.x, 1.0 - v_uv0.y) : v_uv0;\n  #endif\n}\nvarying vec4 v_color;\nvec4 vert () {\n  SpriteVertexData i;\n  CCSpriteInput(i);\n  v_color = i.color;\n  vec4 pos = i.position;\n  #if USE_PIXEL_ALIGNMENT\n    pos = cc_matView * pos;\n    pos.xyz = floor(pos.xyz);\n    pos = cc_matProj * pos;\n  #else\n    pos = cc_matViewProj * pos;\n  #endif\n  return pos;\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision highp float;\nstruct SpriteVertexData {\n  vec4 position;\n  vec4 color;\n};\nstruct SpriteFragmentData {\n  vec2 uv;\n};\nvec4 CCSampleWithAlphaSeparated(sampler2D tex, vec2 uv) {\n#if CC_USE_EMBEDDED_ALPHA\n  return vec4(texture2D(tex, uv).rgb, texture2D(tex, uv + vec2(0.0, 0.5)).r);\n#else\n  return texture2D(tex, uv);\n#endif\n}\nvarying vec2 v_uv0;\nvarying float v_uvMode;\nvarying vec4 v_uvSizeOffset;\nvarying vec4 v_uvParams0;\nvarying vec4 v_uvParams1;\nvec2 evalSlicedUV(vec2 uv) {\n  vec4 p0 = mix(vec4(0.0), v_uvParams0, step(v_uvParams0.xyxy, uv.xyxy));\n        p0 = mix(       p0, v_uvParams1, step(v_uvParams1.xyxy, uv.xyxy));\n  vec4 p1 = mix(vec4(1.0), v_uvParams1, step(uv.xyxy, v_uvParams1.xyxy));\n        p1 = mix(       p1, v_uvParams0, step(uv.xyxy, v_uvParams0.xyxy));\n  vec2 k = (p1.zw - p0.zw) / (p1.xy - p0.xy);\n  vec2 b = (p1.xy * p0.zw - p0.xy * p1.zw) / (p1.xy - p0.xy);\n  return k * uv + b;\n}\nfloat evalFilledUV(vec2 uv, float mode) {\n  float alpha = 1.0;\n  if (mode >= 2.0) {\n    float start = v_uvParams1.x;\n    float range = v_uvParams1.y;\n    vec2 dir = uv - v_uvParams1.zw;\n    float angle = -atan(dir.y, dir.x) * 0.3183098861838;\n    if (range < 0.0) {\n      angle += mix(0.0, -2.0, step(start, angle));\n      alpha = step(start + range, angle);\n    } else {\n      angle += mix(0.0, 2.0, step(angle, start));\n      alpha = step(angle, start + range);\n    }\n  } else if (mode >= 1.0) {\n    if (uv.y >= v_uvParams0.x && uv.y <= v_uvParams0.y) {\n      alpha = 1.0;\n    } else {\n      alpha = 0.0;\n    }\n  } else {\n    if (uv.x >= v_uvParams0.x && uv.x <= v_uvParams0.y) {\n      alpha = 1.0;\n    } else {\n      alpha = 0.0;\n    }\n  }\n  return alpha;\n}\nvoid CCSpriteInput(out SpriteFragmentData i) {\n  #if USE_TEXTURE\n    if(v_uvMode >= 3.0) {\n      i.uv = v_uv0 * v_uvSizeOffset.xy + v_uvSizeOffset.zw;\n    } else if (v_uvMode >= 2.0) {\n      i.uv = fract(v_uv0) * v_uvSizeOffset.xy + v_uvSizeOffset.zw;\n    } else if (v_uvMode >= 1.0) {\n      i.uv = evalSlicedUV(v_uv0) * v_uvSizeOffset.xy + v_uvSizeOffset.zw;\n    } else {\n      i.uv = v_uv0;\n    }\n  #endif\n}\nvec4 CCSpriteSample(sampler2D tex, vec2 uv) {\n  vec4 o = CCSampleWithAlphaSeparated(tex, uv);\n  if (v_uvMode >= 3.0) {\n    o.a *= evalFilledUV(v_uv0, v_uvParams0.z);\n  }\n  return o;\n}\nvec3 SRGBToLinear (vec3 gamma) {\n  return gamma * gamma;\n}\nvarying vec4 v_color;\n#if USE_TEXTURE\n  uniform sampler2D cc_spriteTexture;\n#endif\nvec4 frag () {\n  SpriteFragmentData i;\n  CCSpriteInput(i);\n  #if USE_TEXTURE\n    vec4 color = v_color * CCSpriteSample(cc_spriteTexture, i.uv);\n  #else\n    vec4 color = v_color;\n  #endif\n  #if IS_GRAY\n    color.rgb = SRGBToLinear(color.rgb);\n    color.rgb = vec3(dot(color.rgb, vec3(0.2126, 0.7152, 0.0722)));\n    color.rgb = sqrt(color.rgb);\n  #endif\n  return color;\n}\nvoid main() { gl_FragColor = frag(); }"
+      },
+      "builtins": {
+        "globals": {
+          "blocks": [
+            {
+              "name": "CCGlobal",
+              "defines": []
+            },
+            {
+              "name": "CCCamera",
+              "defines": []
+            }
+          ],
+          "samplerTextures": [],
+          "buffers": [],
+          "images": []
+        },
+        "locals": {
+          "blocks": [
+            {
+              "name": "CCUILocal",
+              "defines": []
+            }
+          ],
+          "samplerTextures": [
+            {
+              "name": "cc_spriteTexture",
+              "defines": [
+                "USE_TEXTURE"
+              ]
+            }
+          ],
+          "buffers": [],
+          "images": []
+        },
+        "statistics": {
+          "CC_EFFECT_USED_VERTEX_UNIFORM_VECTORS": 39,
+          "CC_EFFECT_USED_FRAGMENT_UNIFORM_VECTORS": 0
+        }
+      },
+      "defines": [
+        {
+          "name": "SAMPLE_FROM_RT",
+          "type": "boolean",
+          "defines": []
+        },
+        {
+          "name": "USE_PIXEL_ALIGNMENT",
+          "type": "boolean",
+          "defines": []
+        },
+        {
+          "name": "CC_USE_EMBEDDED_ALPHA",
+          "type": "boolean",
+          "defines": []
+        },
+        {
+          "name": "USE_TEXTURE",
+          "type": "boolean",
+          "defines": []
+        },
+        {
+          "name": "IS_GRAY",
+          "type": "boolean",
+          "defines": []
+        }
+      ],
+      "name": "builtin-sprite-gpu|sprite-vs-gpu:vert|sprite-fs-gpu:frag"
+    }
+  ],
+  "combinations": [],
+  "hideInEditor": false
+}

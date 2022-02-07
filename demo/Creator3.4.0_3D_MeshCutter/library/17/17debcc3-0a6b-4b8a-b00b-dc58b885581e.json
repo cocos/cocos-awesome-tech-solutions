@@ -1,0 +1,1064 @@
+{
+  "__type__": "cc.EffectAsset",
+  "_name": "builtin-particle-trail",
+  "_objFlags": 0,
+  "_native": "",
+  "techniques": [
+    {
+      "name": "add",
+      "passes": [
+        {
+          "rasterizerState": {
+            "cullMode": 0
+          },
+          "blendState": {
+            "targets": [
+              {
+                "blend": true,
+                "blendSrc": 2,
+                "blendDst": 1,
+                "blendSrcAlpha": 2,
+                "blendDstAlpha": 1
+              }
+            ]
+          },
+          "program": "builtin-particle-trail|particle-trail:vs_main|tinted-fs:add",
+          "depthStencilState": {
+            "depthTest": true,
+            "depthWrite": false
+          },
+          "properties": {
+            "mainTexture": {
+              "value": "grey",
+              "type": 28
+            },
+            "mainTiling_Offset": {
+              "value": [
+                1,
+                1,
+                0,
+                0
+              ],
+              "type": 16
+            },
+            "frameTile_velLenScale": {
+              "value": [
+                1,
+                1,
+                0,
+                0
+              ],
+              "type": 16
+            },
+            "tintColor": {
+              "value": [
+                0.5,
+                0.5,
+                0.5,
+                0.5
+              ],
+              "editor": {
+                "type": "color"
+              },
+              "type": 16
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "alpha-blend",
+      "passes": [
+        {
+          "rasterizerState": {
+            "cullMode": 0
+          },
+          "blendState": {
+            "targets": [
+              {
+                "blend": true,
+                "blendSrc": 1,
+                "blendDst": 4,
+                "blendSrcAlpha": 1,
+                "blendDstAlpha": 4
+              }
+            ]
+          },
+          "program": "builtin-particle-trail|particle-trail:vs_main|tinted-fs:add",
+          "depthStencilState": {
+            "depthTest": true,
+            "depthWrite": false
+          },
+          "properties": {
+            "mainTexture": {
+              "value": "grey",
+              "type": 28
+            },
+            "mainTiling_Offset": {
+              "value": [
+                1,
+                1,
+                0,
+                0
+              ],
+              "type": 16
+            },
+            "frameTile_velLenScale": {
+              "value": [
+                1,
+                1,
+                0,
+                0
+              ],
+              "type": 16
+            },
+            "tintColor": {
+              "value": [
+                0.5,
+                0.5,
+                0.5,
+                0.5
+              ],
+              "editor": {
+                "type": "color"
+              },
+              "type": 16
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "add-multiply",
+      "passes": [
+        {
+          "rasterizerState": {
+            "cullMode": 0
+          },
+          "blendState": {
+            "targets": [
+              {
+                "blend": true,
+                "blendSrc": 1,
+                "blendDst": 4,
+                "blendSrcAlpha": 1,
+                "blendDstAlpha": 4
+              }
+            ]
+          },
+          "program": "builtin-particle-trail|particle-trail:vs_main|tinted-fs:multiply",
+          "depthStencilState": {
+            "depthTest": true,
+            "depthWrite": false
+          },
+          "properties": {
+            "mainTexture": {
+              "value": "grey",
+              "type": 28
+            },
+            "mainTiling_Offset": {
+              "value": [
+                1,
+                1,
+                0,
+                0
+              ],
+              "type": 16
+            },
+            "frameTile_velLenScale": {
+              "value": [
+                1,
+                1,
+                0,
+                0
+              ],
+              "type": 16
+            },
+            "tintColor": {
+              "value": [
+                0.5,
+                0.5,
+                0.5,
+                0.5
+              ],
+              "editor": {
+                "type": "color"
+              },
+              "type": 16
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "add-smooth",
+      "passes": [
+        {
+          "rasterizerState": {
+            "cullMode": 0
+          },
+          "blendState": {
+            "targets": [
+              {
+                "blend": true,
+                "blendSrc": 1,
+                "blendDst": 4,
+                "blendSrcAlpha": 1,
+                "blendDstAlpha": 4
+              }
+            ]
+          },
+          "program": "builtin-particle-trail|particle-trail:vs_main|no-tint-fs:addSmooth",
+          "depthStencilState": {
+            "depthTest": true,
+            "depthWrite": false
+          },
+          "properties": {
+            "mainTexture": {
+              "value": "grey",
+              "type": 28
+            },
+            "mainTiling_Offset": {
+              "value": [
+                1,
+                1,
+                0,
+                0
+              ],
+              "type": 16
+            },
+            "frameTile_velLenScale": {
+              "value": [
+                1,
+                1,
+                0,
+                0
+              ],
+              "type": 16
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "premultiply-blend",
+      "passes": [
+        {
+          "rasterizerState": {
+            "cullMode": 0
+          },
+          "blendState": {
+            "targets": [
+              {
+                "blend": true,
+                "blendSrc": 1,
+                "blendDst": 4,
+                "blendSrcAlpha": 1,
+                "blendDstAlpha": 4
+              }
+            ]
+          },
+          "program": "builtin-particle-trail|particle-trail:vs_main|no-tint-fs:premultiplied",
+          "depthStencilState": {
+            "depthTest": true,
+            "depthWrite": false
+          },
+          "properties": {
+            "mainTexture": {
+              "value": "grey",
+              "type": 28
+            },
+            "mainTiling_Offset": {
+              "value": [
+                1,
+                1,
+                0,
+                0
+              ],
+              "type": 16
+            },
+            "frameTile_velLenScale": {
+              "value": [
+                1,
+                1,
+                0,
+                0
+              ],
+              "type": 16
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "shaders": [
+    {
+      "blocks": [
+        {
+          "name": "Constants",
+          "members": [
+            {
+              "name": "mainTiling_Offset",
+              "type": 16,
+              "count": 1
+            },
+            {
+              "name": "frameTile_velLenScale",
+              "type": 16,
+              "count": 1
+            },
+            {
+              "name": "scale",
+              "type": 16,
+              "count": 1
+            },
+            {
+              "name": "nodeRotation",
+              "type": 16,
+              "count": 1
+            }
+          ],
+          "defines": [],
+          "stageFlags": 1,
+          "binding": 0
+        },
+        {
+          "name": "FragConstants",
+          "members": [
+            {
+              "name": "tintColor",
+              "type": 16,
+              "count": 1
+            }
+          ],
+          "defines": [],
+          "stageFlags": 16,
+          "binding": 1
+        }
+      ],
+      "samplerTextures": [
+        {
+          "name": "mainTexture",
+          "type": 28,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 16,
+          "binding": 2
+        }
+      ],
+      "samplers": [],
+      "textures": [],
+      "buffers": [],
+      "images": [],
+      "subpassInputs": [],
+      "attributes": [
+        {
+          "name": "a_position",
+          "defines": [],
+          "format": 32,
+          "location": 0
+        },
+        {
+          "name": "a_texCoord",
+          "defines": [],
+          "format": 44,
+          "location": 1
+        },
+        {
+          "name": "a_texCoord1",
+          "defines": [],
+          "format": 32,
+          "location": 2
+        },
+        {
+          "name": "a_texCoord2",
+          "defines": [],
+          "format": 32,
+          "location": 3
+        },
+        {
+          "name": "a_color",
+          "defines": [],
+          "format": 44,
+          "location": 4
+        }
+      ],
+      "varyings": [
+        {
+          "name": "uv",
+          "type": 14,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 17,
+          "location": 0
+        },
+        {
+          "name": "color",
+          "type": 16,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 17,
+          "location": 1
+        },
+        {
+          "name": "vBarycentric",
+          "type": 15,
+          "count": 1,
+          "defines": [
+            "CC_DRAW_WIRE_FRAME"
+          ],
+          "stageFlags": 17,
+          "location": 2
+        }
+      ],
+      "fragColors": [
+        {
+          "name": "cc_FragColor",
+          "typename": "vec4",
+          "type": 16,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 16,
+          "location": 0
+        }
+      ],
+      "hash": 1437790364,
+      "glsl4": {
+        "vert": "\nprecision mediump float;\nlayout(set = 1, binding = 0) uniform Constants {\n  vec4 mainTiling_Offset;\n  vec4 frameTile_velLenScale;\n  vec4 scale;\n  vec4 nodeRotation;\n};\nlayout(set = 0, binding = 0) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(set = 0, binding = 1) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nlayout(set = 2, binding = 0) uniform CCLocal {\n  highp mat4 cc_matWorld;\n  highp mat4 cc_matWorldIT;\n  highp vec4 cc_lightingMapUVParam;\n};\nlayout(location = 0) out mediump vec2 uv;\nlayout(location = 1) out mediump vec4 color;\nlayout(location = 0) in vec3 a_position;\nlayout(location = 1) in vec4 a_texCoord;\nlayout(location = 2) in vec3 a_texCoord1;\nlayout(location = 3) in vec3 a_texCoord2;\nlayout(location = 4) in vec4 a_color;\n#if CC_DRAW_WIRE_FRAME\n  layout(location = 2) out vec3 vBarycentric;\n#endif\nvec4 vs_main() {\n  highp vec4 pos = vec4(a_position, 1);\n  vec4 velocity = vec4(a_texCoord1.xyz, 0);\n  #if !CC_USE_WORLD_SPACE\n    pos = cc_matWorld * pos;\n    velocity = cc_matWorld * velocity;\n  #endif\n  float vertOffset = (a_texCoord.x - 0.5) * a_texCoord.y;\n  vec3 camUp = normalize(cross(pos.xyz - cc_cameraPos.xyz, velocity.xyz));\n  pos.xyz += camUp * vertOffset;\n  pos = cc_matViewProj * pos;\n  uv = a_texCoord.zw * mainTiling_Offset.xy + mainTiling_Offset.zw;;\n  color = a_color;\n  #if CC_DRAW_WIRE_FRAME\n    vBarycentric = a_texCoord2;\n  #endif\n  return pos;\n}\nvoid main() { gl_Position = vs_main(); }",
+        "frag": "\n  precision mediump float;\n  layout(set = 0, binding = 0) uniform CCGlobal {\n    highp   vec4 cc_time;\n    mediump vec4 cc_screenSize;\n    mediump vec4 cc_nativeSize;\n  };\n  layout(set = 0, binding = 1) uniform CCCamera {\n    highp   mat4 cc_matView;\n    highp   mat4 cc_matViewInv;\n    highp   mat4 cc_matProj;\n    highp   mat4 cc_matProjInv;\n    highp   mat4 cc_matViewProj;\n    highp   mat4 cc_matViewProjInv;\n    highp   vec4 cc_cameraPos;\n    mediump vec4 cc_screenScale;\n    mediump vec4 cc_exposure;\n    mediump vec4 cc_mainLitDir;\n    mediump vec4 cc_mainLitColor;\n    mediump vec4 cc_ambientSky;\n    mediump vec4 cc_ambientGround;\n    mediump vec4 cc_fogColor;\n    mediump vec4 cc_fogBase;\n    mediump vec4 cc_fogAdd;\n    mediump vec4 cc_nearFar;\n    mediump vec4 cc_viewPort;\n  };\n  vec4 CCFragOutput (vec4 color) {\n    return color;\n  }\n  layout(location = 0) in vec2 uv;\n  layout(location = 1) in vec4 color;\n  #if CC_DRAW_WIRE_FRAME\n    layout(location = 2) in vec3 vBarycentric;\n  #endif\n  layout(set = 1, binding = 2) uniform sampler2D mainTexture;\n  layout(set = 1, binding = 1) uniform FragConstants {\n    vec4 tintColor;\n  };\n  vec4 add () {\n    vec4 col = 2.0 * color * tintColor * texture(mainTexture, uv);\n#if CC_DRAW_WIRE_FRAME\n    if (any(lessThan(vBarycentric, vec3(0.02)))) {\n        col = vec4(0., 1., 1., 1.);\n    }\n#endif\n    return CCFragOutput(col);\n  }\nlayout(location = 0) out vec4 cc_FragColor;\nvoid main() { cc_FragColor = add(); }"
+      },
+      "glsl3": {
+        "vert": "\nprecision mediump float;\nlayout(std140) uniform Constants {\n  vec4 mainTiling_Offset;\n  vec4 frameTile_velLenScale;\n  vec4 scale;\n  vec4 nodeRotation;\n};\nlayout(std140) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(std140) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nlayout(std140) uniform CCLocal {\n  highp mat4 cc_matWorld;\n  highp mat4 cc_matWorldIT;\n  highp vec4 cc_lightingMapUVParam;\n};\nout mediump vec2 uv;\nout mediump vec4 color;\nin vec3 a_position;\nin vec4 a_texCoord;\nin vec3 a_texCoord1;\nin vec3 a_texCoord2;\nin vec4 a_color;\n#if CC_DRAW_WIRE_FRAME\n  out vec3 vBarycentric;\n#endif\nvec4 vs_main() {\n  highp vec4 pos = vec4(a_position, 1);\n  vec4 velocity = vec4(a_texCoord1.xyz, 0);\n  #if !CC_USE_WORLD_SPACE\n    pos = cc_matWorld * pos;\n    velocity = cc_matWorld * velocity;\n  #endif\n  float vertOffset = (a_texCoord.x - 0.5) * a_texCoord.y;\n  vec3 camUp = normalize(cross(pos.xyz - cc_cameraPos.xyz, velocity.xyz));\n  pos.xyz += camUp * vertOffset;\n  pos = cc_matViewProj * pos;\n  uv = a_texCoord.zw * mainTiling_Offset.xy + mainTiling_Offset.zw;;\n  color = a_color;\n  #if CC_DRAW_WIRE_FRAME\n    vBarycentric = a_texCoord2;\n  #endif\n  return pos;\n}\nvoid main() { gl_Position = vs_main(); }",
+        "frag": "\n  precision mediump float;\n  layout(std140) uniform CCGlobal {\n    highp   vec4 cc_time;\n    mediump vec4 cc_screenSize;\n    mediump vec4 cc_nativeSize;\n  };\n  layout(std140) uniform CCCamera {\n    highp   mat4 cc_matView;\n    highp   mat4 cc_matViewInv;\n    highp   mat4 cc_matProj;\n    highp   mat4 cc_matProjInv;\n    highp   mat4 cc_matViewProj;\n    highp   mat4 cc_matViewProjInv;\n    highp   vec4 cc_cameraPos;\n    mediump vec4 cc_screenScale;\n    mediump vec4 cc_exposure;\n    mediump vec4 cc_mainLitDir;\n    mediump vec4 cc_mainLitColor;\n    mediump vec4 cc_ambientSky;\n    mediump vec4 cc_ambientGround;\n    mediump vec4 cc_fogColor;\n    mediump vec4 cc_fogBase;\n    mediump vec4 cc_fogAdd;\n    mediump vec4 cc_nearFar;\n    mediump vec4 cc_viewPort;\n  };\n  vec4 CCFragOutput (vec4 color) {\n    return color;\n  }\n  in vec2 uv;\n  in vec4 color;\n  #if CC_DRAW_WIRE_FRAME\n    in vec3 vBarycentric;\n  #endif\n  uniform sampler2D mainTexture;\n  layout(std140) uniform FragConstants {\n    vec4 tintColor;\n  };\n  vec4 add () {\n    vec4 col = 2.0 * color * tintColor * texture(mainTexture, uv);\n#if CC_DRAW_WIRE_FRAME\n    if (any(lessThan(vBarycentric, vec3(0.02)))) {\n        col = vec4(0., 1., 1., 1.);\n    }\n#endif\n    return CCFragOutput(col);\n  }\nlayout(location = 0) out vec4 cc_FragColor;\nvoid main() { cc_FragColor = add(); }"
+      },
+      "glsl1": {
+        "vert": "\nprecision mediump float;\n   uniform vec4 mainTiling_Offset;\nuniform highp mat4 cc_matViewProj;\n  uniform highp vec4 cc_cameraPos;\nuniform highp mat4 cc_matWorld;\nvarying mediump vec2 uv;\nvarying mediump vec4 color;\nattribute vec3 a_position;\nattribute vec4 a_texCoord;\nattribute vec3 a_texCoord1;\nattribute vec3 a_texCoord2;\nattribute vec4 a_color;\n#if CC_DRAW_WIRE_FRAME\n  varying vec3 vBarycentric;\n#endif\nvec4 vs_main() {\n  highp vec4 pos = vec4(a_position, 1);\n  vec4 velocity = vec4(a_texCoord1.xyz, 0);\n  #if !CC_USE_WORLD_SPACE\n    pos = cc_matWorld * pos;\n    velocity = cc_matWorld * velocity;\n  #endif\n  float vertOffset = (a_texCoord.x - 0.5) * a_texCoord.y;\n  vec3 camUp = normalize(cross(pos.xyz - cc_cameraPos.xyz, velocity.xyz));\n  pos.xyz += camUp * vertOffset;\n  pos = cc_matViewProj * pos;\n  uv = a_texCoord.zw * mainTiling_Offset.xy + mainTiling_Offset.zw;;\n  color = a_color;\n  #if CC_DRAW_WIRE_FRAME\n    vBarycentric = a_texCoord2;\n  #endif\n  return pos;\n}\nvoid main() { gl_Position = vs_main(); }",
+        "frag": "\n  precision mediump float;\n  vec4 CCFragOutput (vec4 color) {\n    return color;\n  }\n  varying vec2 uv;\n  varying vec4 color;\n  #if CC_DRAW_WIRE_FRAME\n    varying vec3 vBarycentric;\n  #endif\n  uniform sampler2D mainTexture;\n      uniform vec4 tintColor;\n  vec4 add () {\n    vec4 col = 2.0 * color * tintColor * texture2D(mainTexture, uv);\n#if CC_DRAW_WIRE_FRAME\n    if (any(lessThan(vBarycentric, vec3(0.02)))) {\n        col = vec4(0., 1., 1., 1.);\n    }\n#endif\n    return CCFragOutput(col);\n  }\nvoid main() { gl_FragColor = add(); }"
+      },
+      "builtins": {
+        "globals": {
+          "blocks": [
+            {
+              "name": "CCGlobal",
+              "defines": []
+            },
+            {
+              "name": "CCCamera",
+              "defines": []
+            }
+          ],
+          "samplerTextures": [],
+          "buffers": [],
+          "images": []
+        },
+        "locals": {
+          "blocks": [
+            {
+              "name": "CCLocal",
+              "defines": []
+            }
+          ],
+          "samplerTextures": [],
+          "buffers": [],
+          "images": []
+        },
+        "statistics": {
+          "CC_EFFECT_USED_VERTEX_UNIFORM_VECTORS": 52,
+          "CC_EFFECT_USED_FRAGMENT_UNIFORM_VECTORS": 40
+        }
+      },
+      "defines": [
+        {
+          "name": "CC_RENDER_MODE",
+          "type": "number",
+          "defines": [],
+          "range": [
+            0,
+            4
+          ]
+        },
+        {
+          "name": "CC_DRAW_WIRE_FRAME",
+          "type": "boolean",
+          "defines": []
+        },
+        {
+          "name": "CC_USE_WORLD_SPACE",
+          "type": "boolean",
+          "defines": []
+        }
+      ],
+      "name": "builtin-particle-trail|particle-trail:vs_main|tinted-fs:add"
+    },
+    {
+      "blocks": [
+        {
+          "name": "Constants",
+          "members": [
+            {
+              "name": "mainTiling_Offset",
+              "type": 16,
+              "count": 1
+            },
+            {
+              "name": "frameTile_velLenScale",
+              "type": 16,
+              "count": 1
+            },
+            {
+              "name": "scale",
+              "type": 16,
+              "count": 1
+            },
+            {
+              "name": "nodeRotation",
+              "type": 16,
+              "count": 1
+            }
+          ],
+          "defines": [],
+          "stageFlags": 1,
+          "binding": 0
+        },
+        {
+          "name": "FragConstants",
+          "members": [
+            {
+              "name": "tintColor",
+              "type": 16,
+              "count": 1
+            }
+          ],
+          "defines": [],
+          "stageFlags": 16,
+          "binding": 1
+        }
+      ],
+      "samplerTextures": [
+        {
+          "name": "mainTexture",
+          "type": 28,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 16,
+          "binding": 2
+        }
+      ],
+      "samplers": [],
+      "textures": [],
+      "buffers": [],
+      "images": [],
+      "subpassInputs": [],
+      "attributes": [
+        {
+          "name": "a_position",
+          "defines": [],
+          "format": 32,
+          "location": 0
+        },
+        {
+          "name": "a_texCoord",
+          "defines": [],
+          "format": 44,
+          "location": 1
+        },
+        {
+          "name": "a_texCoord1",
+          "defines": [],
+          "format": 32,
+          "location": 2
+        },
+        {
+          "name": "a_texCoord2",
+          "defines": [],
+          "format": 32,
+          "location": 3
+        },
+        {
+          "name": "a_color",
+          "defines": [],
+          "format": 44,
+          "location": 4
+        }
+      ],
+      "varyings": [
+        {
+          "name": "uv",
+          "type": 14,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 17,
+          "location": 0
+        },
+        {
+          "name": "color",
+          "type": 16,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 17,
+          "location": 1
+        },
+        {
+          "name": "vBarycentric",
+          "type": 15,
+          "count": 1,
+          "defines": [
+            "CC_DRAW_WIRE_FRAME"
+          ],
+          "stageFlags": 17,
+          "location": 2
+        }
+      ],
+      "fragColors": [
+        {
+          "name": "cc_FragColor",
+          "typename": "vec4",
+          "type": 16,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 16,
+          "location": 0
+        }
+      ],
+      "hash": 1577621763,
+      "glsl4": {
+        "vert": "\nprecision mediump float;\nlayout(set = 1, binding = 0) uniform Constants {\n  vec4 mainTiling_Offset;\n  vec4 frameTile_velLenScale;\n  vec4 scale;\n  vec4 nodeRotation;\n};\nlayout(set = 0, binding = 0) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(set = 0, binding = 1) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nlayout(set = 2, binding = 0) uniform CCLocal {\n  highp mat4 cc_matWorld;\n  highp mat4 cc_matWorldIT;\n  highp vec4 cc_lightingMapUVParam;\n};\nlayout(location = 0) out mediump vec2 uv;\nlayout(location = 1) out mediump vec4 color;\nlayout(location = 0) in vec3 a_position;\nlayout(location = 1) in vec4 a_texCoord;\nlayout(location = 2) in vec3 a_texCoord1;\nlayout(location = 3) in vec3 a_texCoord2;\nlayout(location = 4) in vec4 a_color;\n#if CC_DRAW_WIRE_FRAME\n  layout(location = 2) out vec3 vBarycentric;\n#endif\nvec4 vs_main() {\n  highp vec4 pos = vec4(a_position, 1);\n  vec4 velocity = vec4(a_texCoord1.xyz, 0);\n  #if !CC_USE_WORLD_SPACE\n    pos = cc_matWorld * pos;\n    velocity = cc_matWorld * velocity;\n  #endif\n  float vertOffset = (a_texCoord.x - 0.5) * a_texCoord.y;\n  vec3 camUp = normalize(cross(pos.xyz - cc_cameraPos.xyz, velocity.xyz));\n  pos.xyz += camUp * vertOffset;\n  pos = cc_matViewProj * pos;\n  uv = a_texCoord.zw * mainTiling_Offset.xy + mainTiling_Offset.zw;;\n  color = a_color;\n  #if CC_DRAW_WIRE_FRAME\n    vBarycentric = a_texCoord2;\n  #endif\n  return pos;\n}\nvoid main() { gl_Position = vs_main(); }",
+        "frag": "\n  precision mediump float;\n  layout(set = 0, binding = 0) uniform CCGlobal {\n    highp   vec4 cc_time;\n    mediump vec4 cc_screenSize;\n    mediump vec4 cc_nativeSize;\n  };\n  layout(set = 0, binding = 1) uniform CCCamera {\n    highp   mat4 cc_matView;\n    highp   mat4 cc_matViewInv;\n    highp   mat4 cc_matProj;\n    highp   mat4 cc_matProjInv;\n    highp   mat4 cc_matViewProj;\n    highp   mat4 cc_matViewProjInv;\n    highp   vec4 cc_cameraPos;\n    mediump vec4 cc_screenScale;\n    mediump vec4 cc_exposure;\n    mediump vec4 cc_mainLitDir;\n    mediump vec4 cc_mainLitColor;\n    mediump vec4 cc_ambientSky;\n    mediump vec4 cc_ambientGround;\n    mediump vec4 cc_fogColor;\n    mediump vec4 cc_fogBase;\n    mediump vec4 cc_fogAdd;\n    mediump vec4 cc_nearFar;\n    mediump vec4 cc_viewPort;\n  };\n  vec4 CCFragOutput (vec4 color) {\n    return color;\n  }\n  layout(location = 0) in vec2 uv;\n  layout(location = 1) in vec4 color;\n  #if CC_DRAW_WIRE_FRAME\n    layout(location = 2) in vec3 vBarycentric;\n  #endif\n  layout(set = 1, binding = 2) uniform sampler2D mainTexture;\n  layout(set = 1, binding = 1) uniform FragConstants {\n    vec4 tintColor;\n  };\n  vec4 multiply () {\n    vec4 col;\n    vec4 texColor = texture(mainTexture, uv);\n    col.rgb = tintColor.rgb * texColor.rgb * color.rgb * vec3(2.0);\n    col.a = (1.0 - texColor.a) * (tintColor.a * color.a * 2.0);\n#if CC_DRAW_WIRE_FRAME\n    if (any(lessThan(vBarycentric, vec3(0.02)))) {\n        col = vec4(0., 1., 1., col.a);\n    }\n#endif\n    return CCFragOutput(col);\n  }\nlayout(location = 0) out vec4 cc_FragColor;\nvoid main() { cc_FragColor = multiply(); }"
+      },
+      "glsl3": {
+        "vert": "\nprecision mediump float;\nlayout(std140) uniform Constants {\n  vec4 mainTiling_Offset;\n  vec4 frameTile_velLenScale;\n  vec4 scale;\n  vec4 nodeRotation;\n};\nlayout(std140) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(std140) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nlayout(std140) uniform CCLocal {\n  highp mat4 cc_matWorld;\n  highp mat4 cc_matWorldIT;\n  highp vec4 cc_lightingMapUVParam;\n};\nout mediump vec2 uv;\nout mediump vec4 color;\nin vec3 a_position;\nin vec4 a_texCoord;\nin vec3 a_texCoord1;\nin vec3 a_texCoord2;\nin vec4 a_color;\n#if CC_DRAW_WIRE_FRAME\n  out vec3 vBarycentric;\n#endif\nvec4 vs_main() {\n  highp vec4 pos = vec4(a_position, 1);\n  vec4 velocity = vec4(a_texCoord1.xyz, 0);\n  #if !CC_USE_WORLD_SPACE\n    pos = cc_matWorld * pos;\n    velocity = cc_matWorld * velocity;\n  #endif\n  float vertOffset = (a_texCoord.x - 0.5) * a_texCoord.y;\n  vec3 camUp = normalize(cross(pos.xyz - cc_cameraPos.xyz, velocity.xyz));\n  pos.xyz += camUp * vertOffset;\n  pos = cc_matViewProj * pos;\n  uv = a_texCoord.zw * mainTiling_Offset.xy + mainTiling_Offset.zw;;\n  color = a_color;\n  #if CC_DRAW_WIRE_FRAME\n    vBarycentric = a_texCoord2;\n  #endif\n  return pos;\n}\nvoid main() { gl_Position = vs_main(); }",
+        "frag": "\n  precision mediump float;\n  layout(std140) uniform CCGlobal {\n    highp   vec4 cc_time;\n    mediump vec4 cc_screenSize;\n    mediump vec4 cc_nativeSize;\n  };\n  layout(std140) uniform CCCamera {\n    highp   mat4 cc_matView;\n    highp   mat4 cc_matViewInv;\n    highp   mat4 cc_matProj;\n    highp   mat4 cc_matProjInv;\n    highp   mat4 cc_matViewProj;\n    highp   mat4 cc_matViewProjInv;\n    highp   vec4 cc_cameraPos;\n    mediump vec4 cc_screenScale;\n    mediump vec4 cc_exposure;\n    mediump vec4 cc_mainLitDir;\n    mediump vec4 cc_mainLitColor;\n    mediump vec4 cc_ambientSky;\n    mediump vec4 cc_ambientGround;\n    mediump vec4 cc_fogColor;\n    mediump vec4 cc_fogBase;\n    mediump vec4 cc_fogAdd;\n    mediump vec4 cc_nearFar;\n    mediump vec4 cc_viewPort;\n  };\n  vec4 CCFragOutput (vec4 color) {\n    return color;\n  }\n  in vec2 uv;\n  in vec4 color;\n  #if CC_DRAW_WIRE_FRAME\n    in vec3 vBarycentric;\n  #endif\n  uniform sampler2D mainTexture;\n  layout(std140) uniform FragConstants {\n    vec4 tintColor;\n  };\n  vec4 multiply () {\n    vec4 col;\n    vec4 texColor = texture(mainTexture, uv);\n    col.rgb = tintColor.rgb * texColor.rgb * color.rgb * vec3(2.0);\n    col.a = (1.0 - texColor.a) * (tintColor.a * color.a * 2.0);\n#if CC_DRAW_WIRE_FRAME\n    if (any(lessThan(vBarycentric, vec3(0.02)))) {\n        col = vec4(0., 1., 1., col.a);\n    }\n#endif\n    return CCFragOutput(col);\n  }\nlayout(location = 0) out vec4 cc_FragColor;\nvoid main() { cc_FragColor = multiply(); }"
+      },
+      "glsl1": {
+        "vert": "\nprecision mediump float;\n   uniform vec4 mainTiling_Offset;\nuniform highp mat4 cc_matViewProj;\n  uniform highp vec4 cc_cameraPos;\nuniform highp mat4 cc_matWorld;\nvarying mediump vec2 uv;\nvarying mediump vec4 color;\nattribute vec3 a_position;\nattribute vec4 a_texCoord;\nattribute vec3 a_texCoord1;\nattribute vec3 a_texCoord2;\nattribute vec4 a_color;\n#if CC_DRAW_WIRE_FRAME\n  varying vec3 vBarycentric;\n#endif\nvec4 vs_main() {\n  highp vec4 pos = vec4(a_position, 1);\n  vec4 velocity = vec4(a_texCoord1.xyz, 0);\n  #if !CC_USE_WORLD_SPACE\n    pos = cc_matWorld * pos;\n    velocity = cc_matWorld * velocity;\n  #endif\n  float vertOffset = (a_texCoord.x - 0.5) * a_texCoord.y;\n  vec3 camUp = normalize(cross(pos.xyz - cc_cameraPos.xyz, velocity.xyz));\n  pos.xyz += camUp * vertOffset;\n  pos = cc_matViewProj * pos;\n  uv = a_texCoord.zw * mainTiling_Offset.xy + mainTiling_Offset.zw;;\n  color = a_color;\n  #if CC_DRAW_WIRE_FRAME\n    vBarycentric = a_texCoord2;\n  #endif\n  return pos;\n}\nvoid main() { gl_Position = vs_main(); }",
+        "frag": "\n  precision mediump float;\n  vec4 CCFragOutput (vec4 color) {\n    return color;\n  }\n  varying vec2 uv;\n  varying vec4 color;\n  #if CC_DRAW_WIRE_FRAME\n    varying vec3 vBarycentric;\n  #endif\n  uniform sampler2D mainTexture;\n      uniform vec4 tintColor;\n  vec4 multiply () {\n    vec4 col;\n    vec4 texColor = texture2D(mainTexture, uv);\n    col.rgb = tintColor.rgb * texColor.rgb * color.rgb * vec3(2.0);\n    col.a = (1.0 - texColor.a) * (tintColor.a * color.a * 2.0);\n#if CC_DRAW_WIRE_FRAME\n    if (any(lessThan(vBarycentric, vec3(0.02)))) {\n        col = vec4(0., 1., 1., col.a);\n    }\n#endif\n    return CCFragOutput(col);\n  }\nvoid main() { gl_FragColor = multiply(); }"
+      },
+      "builtins": {
+        "globals": {
+          "blocks": [
+            {
+              "name": "CCGlobal",
+              "defines": []
+            },
+            {
+              "name": "CCCamera",
+              "defines": []
+            }
+          ],
+          "samplerTextures": [],
+          "buffers": [],
+          "images": []
+        },
+        "locals": {
+          "blocks": [
+            {
+              "name": "CCLocal",
+              "defines": []
+            }
+          ],
+          "samplerTextures": [],
+          "buffers": [],
+          "images": []
+        },
+        "statistics": {
+          "CC_EFFECT_USED_VERTEX_UNIFORM_VECTORS": 52,
+          "CC_EFFECT_USED_FRAGMENT_UNIFORM_VECTORS": 40
+        }
+      },
+      "defines": [
+        {
+          "name": "CC_RENDER_MODE",
+          "type": "number",
+          "defines": [],
+          "range": [
+            0,
+            4
+          ]
+        },
+        {
+          "name": "CC_DRAW_WIRE_FRAME",
+          "type": "boolean",
+          "defines": []
+        },
+        {
+          "name": "CC_USE_WORLD_SPACE",
+          "type": "boolean",
+          "defines": []
+        }
+      ],
+      "name": "builtin-particle-trail|particle-trail:vs_main|tinted-fs:multiply"
+    },
+    {
+      "blocks": [
+        {
+          "name": "Constants",
+          "members": [
+            {
+              "name": "mainTiling_Offset",
+              "type": 16,
+              "count": 1
+            },
+            {
+              "name": "frameTile_velLenScale",
+              "type": 16,
+              "count": 1
+            },
+            {
+              "name": "scale",
+              "type": 16,
+              "count": 1
+            },
+            {
+              "name": "nodeRotation",
+              "type": 16,
+              "count": 1
+            }
+          ],
+          "defines": [],
+          "stageFlags": 1,
+          "binding": 0
+        }
+      ],
+      "samplerTextures": [
+        {
+          "name": "mainTexture",
+          "type": 28,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 16,
+          "binding": 1
+        }
+      ],
+      "samplers": [],
+      "textures": [],
+      "buffers": [],
+      "images": [],
+      "subpassInputs": [],
+      "attributes": [
+        {
+          "name": "a_position",
+          "defines": [],
+          "format": 32,
+          "location": 0
+        },
+        {
+          "name": "a_texCoord",
+          "defines": [],
+          "format": 44,
+          "location": 1
+        },
+        {
+          "name": "a_texCoord1",
+          "defines": [],
+          "format": 32,
+          "location": 2
+        },
+        {
+          "name": "a_texCoord2",
+          "defines": [],
+          "format": 32,
+          "location": 3
+        },
+        {
+          "name": "a_color",
+          "defines": [],
+          "format": 44,
+          "location": 4
+        }
+      ],
+      "varyings": [
+        {
+          "name": "uv",
+          "type": 14,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 17,
+          "location": 0
+        },
+        {
+          "name": "color",
+          "type": 16,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 17,
+          "location": 1
+        },
+        {
+          "name": "vBarycentric",
+          "type": 15,
+          "count": 1,
+          "defines": [
+            "CC_DRAW_WIRE_FRAME"
+          ],
+          "stageFlags": 1,
+          "location": 2
+        }
+      ],
+      "fragColors": [
+        {
+          "name": "cc_FragColor",
+          "typename": "vec4",
+          "type": 16,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 16,
+          "location": 0
+        }
+      ],
+      "hash": 1428325067,
+      "glsl4": {
+        "vert": "\nprecision mediump float;\nlayout(set = 1, binding = 0) uniform Constants {\n  vec4 mainTiling_Offset;\n  vec4 frameTile_velLenScale;\n  vec4 scale;\n  vec4 nodeRotation;\n};\nlayout(set = 0, binding = 0) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(set = 0, binding = 1) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nlayout(set = 2, binding = 0) uniform CCLocal {\n  highp mat4 cc_matWorld;\n  highp mat4 cc_matWorldIT;\n  highp vec4 cc_lightingMapUVParam;\n};\nlayout(location = 0) out mediump vec2 uv;\nlayout(location = 1) out mediump vec4 color;\nlayout(location = 0) in vec3 a_position;\nlayout(location = 1) in vec4 a_texCoord;\nlayout(location = 2) in vec3 a_texCoord1;\nlayout(location = 3) in vec3 a_texCoord2;\nlayout(location = 4) in vec4 a_color;\n#if CC_DRAW_WIRE_FRAME\n  layout(location = 2) out vec3 vBarycentric;\n#endif\nvec4 vs_main() {\n  highp vec4 pos = vec4(a_position, 1);\n  vec4 velocity = vec4(a_texCoord1.xyz, 0);\n  #if !CC_USE_WORLD_SPACE\n    pos = cc_matWorld * pos;\n    velocity = cc_matWorld * velocity;\n  #endif\n  float vertOffset = (a_texCoord.x - 0.5) * a_texCoord.y;\n  vec3 camUp = normalize(cross(pos.xyz - cc_cameraPos.xyz, velocity.xyz));\n  pos.xyz += camUp * vertOffset;\n  pos = cc_matViewProj * pos;\n  uv = a_texCoord.zw * mainTiling_Offset.xy + mainTiling_Offset.zw;;\n  color = a_color;\n  #if CC_DRAW_WIRE_FRAME\n    vBarycentric = a_texCoord2;\n  #endif\n  return pos;\n}\nvoid main() { gl_Position = vs_main(); }",
+        "frag": "\nprecision mediump float;\nlayout(set = 0, binding = 0) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(set = 0, binding = 1) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nvec4 CCFragOutput (vec4 color) {\n  return color;\n}\nlayout(location = 0) in vec2 uv;\nlayout(location = 1) in vec4 color;\nlayout(set = 1, binding = 1) uniform sampler2D mainTexture;\nvec4 addSmooth () {\n  vec4 col = color * texture(mainTexture, uv);\n  col.rgb *= col.a;\n  return CCFragOutput(col);\n}\nlayout(location = 0) out vec4 cc_FragColor;\nvoid main() { cc_FragColor = addSmooth(); }"
+      },
+      "glsl3": {
+        "vert": "\nprecision mediump float;\nlayout(std140) uniform Constants {\n  vec4 mainTiling_Offset;\n  vec4 frameTile_velLenScale;\n  vec4 scale;\n  vec4 nodeRotation;\n};\nlayout(std140) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(std140) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nlayout(std140) uniform CCLocal {\n  highp mat4 cc_matWorld;\n  highp mat4 cc_matWorldIT;\n  highp vec4 cc_lightingMapUVParam;\n};\nout mediump vec2 uv;\nout mediump vec4 color;\nin vec3 a_position;\nin vec4 a_texCoord;\nin vec3 a_texCoord1;\nin vec3 a_texCoord2;\nin vec4 a_color;\n#if CC_DRAW_WIRE_FRAME\n  out vec3 vBarycentric;\n#endif\nvec4 vs_main() {\n  highp vec4 pos = vec4(a_position, 1);\n  vec4 velocity = vec4(a_texCoord1.xyz, 0);\n  #if !CC_USE_WORLD_SPACE\n    pos = cc_matWorld * pos;\n    velocity = cc_matWorld * velocity;\n  #endif\n  float vertOffset = (a_texCoord.x - 0.5) * a_texCoord.y;\n  vec3 camUp = normalize(cross(pos.xyz - cc_cameraPos.xyz, velocity.xyz));\n  pos.xyz += camUp * vertOffset;\n  pos = cc_matViewProj * pos;\n  uv = a_texCoord.zw * mainTiling_Offset.xy + mainTiling_Offset.zw;;\n  color = a_color;\n  #if CC_DRAW_WIRE_FRAME\n    vBarycentric = a_texCoord2;\n  #endif\n  return pos;\n}\nvoid main() { gl_Position = vs_main(); }",
+        "frag": "\nprecision mediump float;\nlayout(std140) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(std140) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nvec4 CCFragOutput (vec4 color) {\n  return color;\n}\nin vec2 uv;\nin vec4 color;\nuniform sampler2D mainTexture;\nvec4 addSmooth () {\n  vec4 col = color * texture(mainTexture, uv);\n  col.rgb *= col.a;\n  return CCFragOutput(col);\n}\nlayout(location = 0) out vec4 cc_FragColor;\nvoid main() { cc_FragColor = addSmooth(); }"
+      },
+      "glsl1": {
+        "vert": "\nprecision mediump float;\n   uniform vec4 mainTiling_Offset;\nuniform highp mat4 cc_matViewProj;\n  uniform highp vec4 cc_cameraPos;\nuniform highp mat4 cc_matWorld;\nvarying mediump vec2 uv;\nvarying mediump vec4 color;\nattribute vec3 a_position;\nattribute vec4 a_texCoord;\nattribute vec3 a_texCoord1;\nattribute vec3 a_texCoord2;\nattribute vec4 a_color;\n#if CC_DRAW_WIRE_FRAME\n  varying vec3 vBarycentric;\n#endif\nvec4 vs_main() {\n  highp vec4 pos = vec4(a_position, 1);\n  vec4 velocity = vec4(a_texCoord1.xyz, 0);\n  #if !CC_USE_WORLD_SPACE\n    pos = cc_matWorld * pos;\n    velocity = cc_matWorld * velocity;\n  #endif\n  float vertOffset = (a_texCoord.x - 0.5) * a_texCoord.y;\n  vec3 camUp = normalize(cross(pos.xyz - cc_cameraPos.xyz, velocity.xyz));\n  pos.xyz += camUp * vertOffset;\n  pos = cc_matViewProj * pos;\n  uv = a_texCoord.zw * mainTiling_Offset.xy + mainTiling_Offset.zw;;\n  color = a_color;\n  #if CC_DRAW_WIRE_FRAME\n    vBarycentric = a_texCoord2;\n  #endif\n  return pos;\n}\nvoid main() { gl_Position = vs_main(); }",
+        "frag": "\nprecision mediump float;\nvec4 CCFragOutput (vec4 color) {\n  return color;\n}\nvarying vec2 uv;\nvarying vec4 color;\nuniform sampler2D mainTexture;\nvec4 addSmooth () {\n  vec4 col = color * texture2D(mainTexture, uv);\n  col.rgb *= col.a;\n  return CCFragOutput(col);\n}\nvoid main() { gl_FragColor = addSmooth(); }"
+      },
+      "builtins": {
+        "globals": {
+          "blocks": [
+            {
+              "name": "CCGlobal",
+              "defines": []
+            },
+            {
+              "name": "CCCamera",
+              "defines": []
+            }
+          ],
+          "samplerTextures": [],
+          "buffers": [],
+          "images": []
+        },
+        "locals": {
+          "blocks": [
+            {
+              "name": "CCLocal",
+              "defines": []
+            }
+          ],
+          "samplerTextures": [],
+          "buffers": [],
+          "images": []
+        },
+        "statistics": {
+          "CC_EFFECT_USED_VERTEX_UNIFORM_VECTORS": 52,
+          "CC_EFFECT_USED_FRAGMENT_UNIFORM_VECTORS": 39
+        }
+      },
+      "defines": [
+        {
+          "name": "CC_RENDER_MODE",
+          "type": "number",
+          "defines": [],
+          "range": [
+            0,
+            4
+          ]
+        },
+        {
+          "name": "CC_DRAW_WIRE_FRAME",
+          "type": "boolean",
+          "defines": []
+        },
+        {
+          "name": "CC_USE_WORLD_SPACE",
+          "type": "boolean",
+          "defines": []
+        }
+      ],
+      "name": "builtin-particle-trail|particle-trail:vs_main|no-tint-fs:addSmooth"
+    },
+    {
+      "blocks": [
+        {
+          "name": "Constants",
+          "members": [
+            {
+              "name": "mainTiling_Offset",
+              "type": 16,
+              "count": 1
+            },
+            {
+              "name": "frameTile_velLenScale",
+              "type": 16,
+              "count": 1
+            },
+            {
+              "name": "scale",
+              "type": 16,
+              "count": 1
+            },
+            {
+              "name": "nodeRotation",
+              "type": 16,
+              "count": 1
+            }
+          ],
+          "defines": [],
+          "stageFlags": 1,
+          "binding": 0
+        }
+      ],
+      "samplerTextures": [
+        {
+          "name": "mainTexture",
+          "type": 28,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 16,
+          "binding": 1
+        }
+      ],
+      "samplers": [],
+      "textures": [],
+      "buffers": [],
+      "images": [],
+      "subpassInputs": [],
+      "attributes": [
+        {
+          "name": "a_position",
+          "defines": [],
+          "format": 32,
+          "location": 0
+        },
+        {
+          "name": "a_texCoord",
+          "defines": [],
+          "format": 44,
+          "location": 1
+        },
+        {
+          "name": "a_texCoord1",
+          "defines": [],
+          "format": 32,
+          "location": 2
+        },
+        {
+          "name": "a_texCoord2",
+          "defines": [],
+          "format": 32,
+          "location": 3
+        },
+        {
+          "name": "a_color",
+          "defines": [],
+          "format": 44,
+          "location": 4
+        }
+      ],
+      "varyings": [
+        {
+          "name": "uv",
+          "type": 14,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 17,
+          "location": 0
+        },
+        {
+          "name": "color",
+          "type": 16,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 17,
+          "location": 1
+        },
+        {
+          "name": "vBarycentric",
+          "type": 15,
+          "count": 1,
+          "defines": [
+            "CC_DRAW_WIRE_FRAME"
+          ],
+          "stageFlags": 1,
+          "location": 2
+        }
+      ],
+      "fragColors": [
+        {
+          "name": "cc_FragColor",
+          "typename": "vec4",
+          "type": 16,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 16,
+          "location": 0
+        }
+      ],
+      "hash": 1371359874,
+      "glsl4": {
+        "vert": "\nprecision mediump float;\nlayout(set = 1, binding = 0) uniform Constants {\n  vec4 mainTiling_Offset;\n  vec4 frameTile_velLenScale;\n  vec4 scale;\n  vec4 nodeRotation;\n};\nlayout(set = 0, binding = 0) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(set = 0, binding = 1) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nlayout(set = 2, binding = 0) uniform CCLocal {\n  highp mat4 cc_matWorld;\n  highp mat4 cc_matWorldIT;\n  highp vec4 cc_lightingMapUVParam;\n};\nlayout(location = 0) out mediump vec2 uv;\nlayout(location = 1) out mediump vec4 color;\nlayout(location = 0) in vec3 a_position;\nlayout(location = 1) in vec4 a_texCoord;\nlayout(location = 2) in vec3 a_texCoord1;\nlayout(location = 3) in vec3 a_texCoord2;\nlayout(location = 4) in vec4 a_color;\n#if CC_DRAW_WIRE_FRAME\n  layout(location = 2) out vec3 vBarycentric;\n#endif\nvec4 vs_main() {\n  highp vec4 pos = vec4(a_position, 1);\n  vec4 velocity = vec4(a_texCoord1.xyz, 0);\n  #if !CC_USE_WORLD_SPACE\n    pos = cc_matWorld * pos;\n    velocity = cc_matWorld * velocity;\n  #endif\n  float vertOffset = (a_texCoord.x - 0.5) * a_texCoord.y;\n  vec3 camUp = normalize(cross(pos.xyz - cc_cameraPos.xyz, velocity.xyz));\n  pos.xyz += camUp * vertOffset;\n  pos = cc_matViewProj * pos;\n  uv = a_texCoord.zw * mainTiling_Offset.xy + mainTiling_Offset.zw;;\n  color = a_color;\n  #if CC_DRAW_WIRE_FRAME\n    vBarycentric = a_texCoord2;\n  #endif\n  return pos;\n}\nvoid main() { gl_Position = vs_main(); }",
+        "frag": "\nprecision mediump float;\nlayout(set = 0, binding = 0) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(set = 0, binding = 1) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nvec4 CCFragOutput (vec4 color) {\n  return color;\n}\nlayout(location = 0) in vec2 uv;\nlayout(location = 1) in vec4 color;\nlayout(set = 1, binding = 1) uniform sampler2D mainTexture;\nvec4 premultiplied () {\n  vec4 col = color * texture(mainTexture, uv) * color.a;\n  return CCFragOutput(col);\n}\nlayout(location = 0) out vec4 cc_FragColor;\nvoid main() { cc_FragColor = premultiplied(); }"
+      },
+      "glsl3": {
+        "vert": "\nprecision mediump float;\nlayout(std140) uniform Constants {\n  vec4 mainTiling_Offset;\n  vec4 frameTile_velLenScale;\n  vec4 scale;\n  vec4 nodeRotation;\n};\nlayout(std140) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(std140) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nlayout(std140) uniform CCLocal {\n  highp mat4 cc_matWorld;\n  highp mat4 cc_matWorldIT;\n  highp vec4 cc_lightingMapUVParam;\n};\nout mediump vec2 uv;\nout mediump vec4 color;\nin vec3 a_position;\nin vec4 a_texCoord;\nin vec3 a_texCoord1;\nin vec3 a_texCoord2;\nin vec4 a_color;\n#if CC_DRAW_WIRE_FRAME\n  out vec3 vBarycentric;\n#endif\nvec4 vs_main() {\n  highp vec4 pos = vec4(a_position, 1);\n  vec4 velocity = vec4(a_texCoord1.xyz, 0);\n  #if !CC_USE_WORLD_SPACE\n    pos = cc_matWorld * pos;\n    velocity = cc_matWorld * velocity;\n  #endif\n  float vertOffset = (a_texCoord.x - 0.5) * a_texCoord.y;\n  vec3 camUp = normalize(cross(pos.xyz - cc_cameraPos.xyz, velocity.xyz));\n  pos.xyz += camUp * vertOffset;\n  pos = cc_matViewProj * pos;\n  uv = a_texCoord.zw * mainTiling_Offset.xy + mainTiling_Offset.zw;;\n  color = a_color;\n  #if CC_DRAW_WIRE_FRAME\n    vBarycentric = a_texCoord2;\n  #endif\n  return pos;\n}\nvoid main() { gl_Position = vs_main(); }",
+        "frag": "\nprecision mediump float;\nlayout(std140) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(std140) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nvec4 CCFragOutput (vec4 color) {\n  return color;\n}\nin vec2 uv;\nin vec4 color;\nuniform sampler2D mainTexture;\nvec4 premultiplied () {\n  vec4 col = color * texture(mainTexture, uv) * color.a;\n  return CCFragOutput(col);\n}\nlayout(location = 0) out vec4 cc_FragColor;\nvoid main() { cc_FragColor = premultiplied(); }"
+      },
+      "glsl1": {
+        "vert": "\nprecision mediump float;\n   uniform vec4 mainTiling_Offset;\nuniform highp mat4 cc_matViewProj;\n  uniform highp vec4 cc_cameraPos;\nuniform highp mat4 cc_matWorld;\nvarying mediump vec2 uv;\nvarying mediump vec4 color;\nattribute vec3 a_position;\nattribute vec4 a_texCoord;\nattribute vec3 a_texCoord1;\nattribute vec3 a_texCoord2;\nattribute vec4 a_color;\n#if CC_DRAW_WIRE_FRAME\n  varying vec3 vBarycentric;\n#endif\nvec4 vs_main() {\n  highp vec4 pos = vec4(a_position, 1);\n  vec4 velocity = vec4(a_texCoord1.xyz, 0);\n  #if !CC_USE_WORLD_SPACE\n    pos = cc_matWorld * pos;\n    velocity = cc_matWorld * velocity;\n  #endif\n  float vertOffset = (a_texCoord.x - 0.5) * a_texCoord.y;\n  vec3 camUp = normalize(cross(pos.xyz - cc_cameraPos.xyz, velocity.xyz));\n  pos.xyz += camUp * vertOffset;\n  pos = cc_matViewProj * pos;\n  uv = a_texCoord.zw * mainTiling_Offset.xy + mainTiling_Offset.zw;;\n  color = a_color;\n  #if CC_DRAW_WIRE_FRAME\n    vBarycentric = a_texCoord2;\n  #endif\n  return pos;\n}\nvoid main() { gl_Position = vs_main(); }",
+        "frag": "\nprecision mediump float;\nvec4 CCFragOutput (vec4 color) {\n  return color;\n}\nvarying vec2 uv;\nvarying vec4 color;\nuniform sampler2D mainTexture;\nvec4 premultiplied () {\n  vec4 col = color * texture2D(mainTexture, uv) * color.a;\n  return CCFragOutput(col);\n}\nvoid main() { gl_FragColor = premultiplied(); }"
+      },
+      "builtins": {
+        "globals": {
+          "blocks": [
+            {
+              "name": "CCGlobal",
+              "defines": []
+            },
+            {
+              "name": "CCCamera",
+              "defines": []
+            }
+          ],
+          "samplerTextures": [],
+          "buffers": [],
+          "images": []
+        },
+        "locals": {
+          "blocks": [
+            {
+              "name": "CCLocal",
+              "defines": []
+            }
+          ],
+          "samplerTextures": [],
+          "buffers": [],
+          "images": []
+        },
+        "statistics": {
+          "CC_EFFECT_USED_VERTEX_UNIFORM_VECTORS": 52,
+          "CC_EFFECT_USED_FRAGMENT_UNIFORM_VECTORS": 39
+        }
+      },
+      "defines": [
+        {
+          "name": "CC_RENDER_MODE",
+          "type": "number",
+          "defines": [],
+          "range": [
+            0,
+            4
+          ]
+        },
+        {
+          "name": "CC_DRAW_WIRE_FRAME",
+          "type": "boolean",
+          "defines": []
+        },
+        {
+          "name": "CC_USE_WORLD_SPACE",
+          "type": "boolean",
+          "defines": []
+        }
+      ],
+      "name": "builtin-particle-trail|particle-trail:vs_main|no-tint-fs:premultiplied"
+    }
+  ],
+  "combinations": [],
+  "hideInEditor": false
+}

@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "default_progressbar",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 30,
+      "height": 15
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 30,
+      "height": 15
+    },
+    "rotated": false,
+    "capInsets": [
+      10,
+      4,
+      10,
+      4
+    ],
+    "texture": "24a704da-2867-446d-8d1a-5e920c75e09d@6c48a",
+    "packable": true
+  }
+}
