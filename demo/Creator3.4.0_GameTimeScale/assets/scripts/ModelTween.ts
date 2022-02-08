@@ -26,7 +26,6 @@ export class NewComponent extends Component {
         const maxY = 12;
         const mixX = 0;
         const maxX = 0;
-        const playTime = 3;
         var progressX = function (start, end, current, t) {
             //@ts-ignore
             current = cc.bezier(start, mixX, maxX, end, t);
