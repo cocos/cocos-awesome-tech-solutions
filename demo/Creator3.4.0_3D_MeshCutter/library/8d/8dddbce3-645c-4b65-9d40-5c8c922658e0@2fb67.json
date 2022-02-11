@@ -1,0 +1,38 @@
+{
+  "__type__": "cc.Material",
+  "_name": "fr_caraOrange",
+  "_objFlags": 0,
+  "_native": "",
+  "_effectAsset": {
+    "__uuid__": "1baf0fc9-befa-459c-8bdd-af1a450a0319",
+    "__expectedType__": "cc.EffectAsset"
+  },
+  "_techIdx": 0,
+  "_defines": [
+    {
+      "USE_NORMAL_MAP": true
+    }
+  ],
+  "_states": [
+    {
+      "rasterizerState": {
+        "cullMode": 0
+      },
+      "blendState": {
+        "targets": [
+          {}
+        ]
+      },
+      "depthStencilState": {}
+    }
+  ],
+  "_props": [
+    {
+      "normalMap": {
+        "__uuid__": "8dddbce3-645c-4b65-9d40-5c8c922658e0@0089c",
+        "__expectedType__": "cc.Texture2D"
+      },
+      "normalStrenth": 1
+    }
+  ]
+}

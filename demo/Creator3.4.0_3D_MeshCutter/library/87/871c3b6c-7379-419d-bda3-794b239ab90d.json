@@ -1,0 +1,159 @@
+{
+  "__type__": "cc.EffectAsset",
+  "_name": "util/profiler",
+  "_objFlags": 0,
+  "_native": "",
+  "techniques": [
+    {
+      "passes": [
+        {
+          "blendState": {
+            "targets": [
+              {
+                "blend": true,
+                "blendSrc": 2,
+                "blendDst": 4,
+                "blendDstAlpha": 4
+              }
+            ]
+          },
+          "rasterizerState": {
+            "cullMode": 0
+          },
+          "program": "util/profiler|profiler-vs:vert|profiler-fs:frag",
+          "priority": 255,
+          "depthStencilState": {
+            "depthTest": false,
+            "depthWrite": false
+          }
+        }
+      ]
+    }
+  ],
+  "shaders": [
+    {
+      "blocks": [
+        {
+          "name": "Constants",
+          "members": [
+            {
+              "name": "offset",
+              "type": 16,
+              "count": 1
+            }
+          ],
+          "defines": [],
+          "stageFlags": 1,
+          "binding": 0
+        },
+        {
+          "name": "PerFrameInfo",
+          "members": [
+            {
+              "name": "digits",
+              "type": 16,
+              "count": 20
+            }
+          ],
+          "defines": [],
+          "stageFlags": 1,
+          "binding": 1
+        }
+      ],
+      "samplerTextures": [
+        {
+          "name": "mainTexture",
+          "type": 28,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 16,
+          "binding": 2
+        }
+      ],
+      "samplers": [],
+      "textures": [],
+      "buffers": [],
+      "images": [],
+      "subpassInputs": [],
+      "attributes": [
+        {
+          "name": "a_position",
+          "defines": [],
+          "format": 32,
+          "location": 0
+        },
+        {
+          "name": "a_color",
+          "defines": [],
+          "format": 44,
+          "location": 1
+        }
+      ],
+      "varyings": [
+        {
+          "name": "v_uv",
+          "type": 14,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 17,
+          "location": 0
+        }
+      ],
+      "fragColors": [
+        {
+          "name": "cc_FragColor",
+          "typename": "vec4",
+          "type": 16,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 16,
+          "location": 0
+        }
+      ],
+      "hash": 179162168,
+      "glsl4": {
+        "vert": "\nprecision mediump float;\nlayout(set = 0, binding = 0) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(set = 0, binding = 1) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nlayout(location = 0) in vec3 a_position;\nlayout(location = 1) in vec4 a_color;\nlayout(location = 0) out vec2 v_uv;\nlayout(set = 1, binding = 0) uniform Constants {\n  vec4 offset;\n};\nlayout(set = 1, binding = 1) uniform PerFrameInfo {\n  vec4 digits[8 * 10 / 4];\n};\nfloat getComponent(vec4 v, float i) {\n  if (i < 1.0) { return v.x; }\n  else if (i < 2.0) { return v.y; }\n  else if (i < 3.0) { return v.z; }\n  else { return v.w; }\n}\nvec4 vert () {\n  mat2 proj = mat2(cc_matProj[0].xy, cc_matProj[1].xy);\n  proj /= abs(proj[1].x + proj[1].y);\n  vec2 position = proj * a_position.xy + offset.xy;\n  v_uv = a_color.xy;\n  if (a_color.z >= 0.0) {\n    float n = getComponent(digits[int(a_color.z)], a_color.w);\n    v_uv += vec2(offset.z * n, 0.0);\n  }\n  return vec4(position, 0.0, 1.0);\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision mediump float;\nlayout(set = 0, binding = 0) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(set = 0, binding = 1) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nvec4 CCFragOutput (vec4 color) {\n  return color;\n}\nlayout(location = 0) in vec2 v_uv;\nlayout(set = 1, binding = 2) uniform sampler2D mainTexture;\nvec4 frag () {\n  return CCFragOutput(texture(mainTexture, v_uv));\n}\nlayout(location = 0) out vec4 cc_FragColor;\nvoid main() { cc_FragColor = frag(); }"
+      },
+      "glsl3": {
+        "vert": "\nprecision mediump float;\nlayout(std140) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(std140) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nin vec3 a_position;\nin vec4 a_color;\nout vec2 v_uv;\nlayout(std140) uniform Constants {\n  vec4 offset;\n};\nlayout(std140) uniform PerFrameInfo {\n  vec4 digits[8 * 10 / 4];\n};\nfloat getComponent(vec4 v, float i) {\n  if (i < 1.0) { return v.x; }\n  else if (i < 2.0) { return v.y; }\n  else if (i < 3.0) { return v.z; }\n  else { return v.w; }\n}\nvec4 vert () {\n  mat2 proj = mat2(cc_matProj[0].xy, cc_matProj[1].xy);\n  proj /= abs(proj[1].x + proj[1].y);\n  vec2 position = proj * a_position.xy + offset.xy;\n  v_uv = a_color.xy;\n  if (a_color.z >= 0.0) {\n    float n = getComponent(digits[int(a_color.z)], a_color.w);\n    v_uv += vec2(offset.z * n, 0.0);\n  }\n  return vec4(position, 0.0, 1.0);\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision mediump float;\nlayout(std140) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(std140) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nvec4 CCFragOutput (vec4 color) {\n  return color;\n}\nin vec2 v_uv;\nuniform sampler2D mainTexture;\nvec4 frag () {\n  return CCFragOutput(texture(mainTexture, v_uv));\n}\nlayout(location = 0) out vec4 cc_FragColor;\nvoid main() { cc_FragColor = frag(); }"
+      },
+      "glsl1": {
+        "vert": "\nprecision mediump float;\nuniform highp mat4 cc_matProj;\nattribute vec3 a_position;\nattribute vec4 a_color;\nvarying vec2 v_uv;\n   uniform vec4 offset;\n    uniform vec4 digits[20];\nfloat getComponent(vec4 v, float i) {\n  if (i < 1.0) { return v.x; }\n  else if (i < 2.0) { return v.y; }\n  else if (i < 3.0) { return v.z; }\n  else { return v.w; }\n}\nvec4 vert () {\n  mat2 proj = mat2(cc_matProj[0].xy, cc_matProj[1].xy);\n  proj /= abs(proj[1].x + proj[1].y);\n  vec2 position = proj * a_position.xy + offset.xy;\n  v_uv = a_color.xy;\n  if (a_color.z >= 0.0) {\n    float n = getComponent(digits[int(a_color.z)], a_color.w);\n    v_uv += vec2(offset.z * n, 0.0);\n  }\n  return vec4(position, 0.0, 1.0);\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision mediump float;\nvec4 CCFragOutput (vec4 color) {\n  return color;\n}\nvarying vec2 v_uv;\nuniform sampler2D mainTexture;\nvec4 frag () {\n  return CCFragOutput(texture2D(mainTexture, v_uv));\n}\nvoid main() { gl_FragColor = frag(); }"
+      },
+      "builtins": {
+        "globals": {
+          "blocks": [
+            {
+              "name": "CCGlobal",
+              "defines": []
+            },
+            {
+              "name": "CCCamera",
+              "defines": []
+            }
+          ],
+          "samplerTextures": [],
+          "buffers": [],
+          "images": []
+        },
+        "locals": {
+          "blocks": [],
+          "samplerTextures": [],
+          "buffers": [],
+          "images": []
+        },
+        "statistics": {
+          "CC_EFFECT_USED_VERTEX_UNIFORM_VECTORS": 60,
+          "CC_EFFECT_USED_FRAGMENT_UNIFORM_VECTORS": 39
+        }
+      },
+      "defines": [],
+      "name": "util/profiler|profiler-vs:vert|profiler-fs:frag"
+    }
+  ],
+  "combinations": [],
+  "hideInEditor": false
+}

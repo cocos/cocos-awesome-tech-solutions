@@ -1,0 +1,150 @@
+{
+  "__type__": "cc.EffectAsset",
+  "_name": "pipeline/skybox",
+  "_objFlags": 0,
+  "_native": "",
+  "techniques": [
+    {
+      "passes": [
+        {
+          "rasterizerState": {
+            "cullMode": 0
+          },
+          "program": "pipeline/skybox|sky-vs:vert|sky-fs:frag",
+          "priority": 245,
+          "depthStencilState": {
+            "depthTest": true,
+            "depthWrite": false
+          }
+        }
+      ]
+    }
+  ],
+  "shaders": [
+    {
+      "blocks": [],
+      "samplerTextures": [],
+      "samplers": [],
+      "textures": [],
+      "buffers": [],
+      "images": [],
+      "subpassInputs": [],
+      "attributes": [
+        {
+          "name": "a_position",
+          "defines": [],
+          "format": 32,
+          "location": 0
+        },
+        {
+          "name": "a_normal",
+          "defines": [],
+          "format": 32,
+          "location": 1
+        },
+        {
+          "name": "a_texCoord",
+          "defines": [],
+          "format": 21,
+          "location": 2
+        },
+        {
+          "name": "a_tangent",
+          "defines": [],
+          "format": 44,
+          "location": 3
+        }
+      ],
+      "varyings": [
+        {
+          "name": "viewDir",
+          "type": 16,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 17,
+          "location": 0
+        }
+      ],
+      "fragColors": [
+        {
+          "name": "cc_FragColor",
+          "typename": "vec4",
+          "type": 16,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 16,
+          "location": 0
+        }
+      ],
+      "hash": 3653711100,
+      "glsl4": {
+        "vert": "\nprecision highp float;\nlayout(set = 0, binding = 0) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(set = 0, binding = 1) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nstruct StandardVertInput {\n  highp vec4 position;\n  vec3 normal;\n  vec4 tangent;\n};\nlayout(location = 0) in vec3 a_position;\nlayout(location = 1) in vec3 a_normal;\nlayout(location = 2) in vec2 a_texCoord;\nlayout(location = 3) in vec4 a_tangent;\nlayout(location = 0) out mediump vec4 viewDir;\nvec4 vert () {\n    viewDir = vec4(a_position, 1.0);\n  mat4 matViewRotOnly = mat4(mat3(cc_matView));\n  vec4 pos = matViewRotOnly * viewDir;\n  if (cc_matProj[3].w > 0.0) {\n    mat4 matProj = cc_matProj;\n    vec2 scale = vec2(48.0, 24.0);\n    matProj[0].xy *= scale;\n    matProj[1].xy *= scale;\n    matProj[2].zw = vec2(-1.0);\n    matProj[3].zw = vec2(0.0);\n    pos = matProj * pos;\n  } else {\n    pos = cc_matProj * pos;\n  }\n  pos.z = 0.99999 * pos.w;\n  return pos;\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision mediump float;\nlayout(set = 0, binding = 0) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(set = 0, binding = 1) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nlayout(set = 0, binding = 4) uniform samplerCube cc_environment;\nvec3 unpackRGBE (vec4 rgbe) {\n  return rgbe.rgb * pow(1.1, rgbe.a * 255.0 - 128.0);\n}\nvec3 SRGBToLinear (vec3 gamma) {\n  return gamma * gamma;\n}\nvec3 ACESToneMap (vec3 color) {\n  color = min(color, vec3(8.0));\n  const float A = 2.51;\n  const float B = 0.03;\n  const float C = 2.43;\n  const float D = 0.59;\n  const float E = 0.14;\n  return (color * (A * color + B)) / (color * (C * color + D) + E);\n}\nvec4 CCFragOutput (vec4 color) {\n  #if CC_USE_HDR\n    color.rgb = ACESToneMap(color.rgb);\n  #endif\n  color.rgb = sqrt(color.rgb);\n  return color;\n}\nlayout(location = 0) in mediump vec4 viewDir;\nvec4 frag () {\n  #if USE_RGBE_CUBEMAP\n    vec3 c = unpackRGBE(texture(cc_environment, viewDir.xyz));\n  #else\n    vec3 c = SRGBToLinear(texture(cc_environment, viewDir.xyz).rgb);\n  #endif\n  return CCFragOutput(vec4(c * cc_ambientSky.w, 1.0));\n}\nlayout(location = 0) out vec4 cc_FragColor;\nvoid main() { cc_FragColor = frag(); }"
+      },
+      "glsl3": {
+        "vert": "\nprecision highp float;\nlayout(std140) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(std140) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nstruct StandardVertInput {\n  highp vec4 position;\n  vec3 normal;\n  vec4 tangent;\n};\nin vec3 a_position;\nin vec3 a_normal;\nin vec2 a_texCoord;\nin vec4 a_tangent;\nout mediump vec4 viewDir;\nvec4 vert () {\n    viewDir = vec4(a_position, 1.0);\n  mat4 matViewRotOnly = mat4(mat3(cc_matView));\n  vec4 pos = matViewRotOnly * viewDir;\n  if (cc_matProj[3].w > 0.0) {\n    mat4 matProj = cc_matProj;\n    vec2 scale = vec2(48.0, 24.0);\n    matProj[0].xy *= scale;\n    matProj[1].xy *= scale;\n    matProj[2].zw = vec2(-1.0);\n    matProj[3].zw = vec2(0.0);\n    pos = matProj * pos;\n  } else {\n    pos = cc_matProj * pos;\n  }\n  pos.z = 0.99999 * pos.w;\n  return pos;\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision mediump float;\nlayout(std140) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n};\nlayout(std140) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nuniform samplerCube cc_environment;\nvec3 unpackRGBE (vec4 rgbe) {\n  return rgbe.rgb * pow(1.1, rgbe.a * 255.0 - 128.0);\n}\nvec3 SRGBToLinear (vec3 gamma) {\n  return gamma * gamma;\n}\nvec3 ACESToneMap (vec3 color) {\n  color = min(color, vec3(8.0));\n  const float A = 2.51;\n  const float B = 0.03;\n  const float C = 2.43;\n  const float D = 0.59;\n  const float E = 0.14;\n  return (color * (A * color + B)) / (color * (C * color + D) + E);\n}\nvec4 CCFragOutput (vec4 color) {\n  #if CC_USE_HDR\n    color.rgb = ACESToneMap(color.rgb);\n  #endif\n  color.rgb = sqrt(color.rgb);\n  return color;\n}\nin mediump vec4 viewDir;\nvec4 frag () {\n  #if USE_RGBE_CUBEMAP\n    vec3 c = unpackRGBE(texture(cc_environment, viewDir.xyz));\n  #else\n    vec3 c = SRGBToLinear(texture(cc_environment, viewDir.xyz).rgb);\n  #endif\n  return CCFragOutput(vec4(c * cc_ambientSky.w, 1.0));\n}\nlayout(location = 0) out vec4 cc_FragColor;\nvoid main() { cc_FragColor = frag(); }"
+      },
+      "glsl1": {
+        "vert": "\nprecision highp float;\nuniform highp mat4 cc_matView;\n  uniform highp mat4 cc_matProj;\nstruct StandardVertInput {\n  highp vec4 position;\n  vec3 normal;\n  vec4 tangent;\n};\nattribute vec3 a_position;\nattribute vec3 a_normal;\nattribute vec2 a_texCoord;\nattribute vec4 a_tangent;\nvarying mediump vec4 viewDir;\nvec4 vert () {\n    viewDir = vec4(a_position, 1.0);\n  mat4 matViewRotOnly = mat4(mat3(cc_matView));\n  vec4 pos = matViewRotOnly * viewDir;\n  if (cc_matProj[3].w > 0.0) {\n    mat4 matProj = cc_matProj;\n    vec2 scale = vec2(48.0, 24.0);\n    matProj[0].xy *= scale;\n    matProj[1].xy *= scale;\n    matProj[2].zw = vec2(-1.0);\n    matProj[3].zw = vec2(0.0);\n    pos = matProj * pos;\n  } else {\n    pos = cc_matProj * pos;\n  }\n  pos.z = 0.99999 * pos.w;\n  return pos;\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision mediump float;\nuniform mediump vec4 cc_ambientSky;\nuniform samplerCube cc_environment;\nvec3 unpackRGBE (vec4 rgbe) {\n  return rgbe.rgb * pow(1.1, rgbe.a * 255.0 - 128.0);\n}\nvec3 SRGBToLinear (vec3 gamma) {\n  return gamma * gamma;\n}\nvec3 ACESToneMap (vec3 color) {\n  color = min(color, vec3(8.0));\n  const float A = 2.51;\n  const float B = 0.03;\n  const float C = 2.43;\n  const float D = 0.59;\n  const float E = 0.14;\n  return (color * (A * color + B)) / (color * (C * color + D) + E);\n}\nvec4 CCFragOutput (vec4 color) {\n  #if CC_USE_HDR\n    color.rgb = ACESToneMap(color.rgb);\n  #endif\n  color.rgb = sqrt(color.rgb);\n  return color;\n}\nvarying mediump vec4 viewDir;\nvec4 frag () {\n  #if USE_RGBE_CUBEMAP\n    vec3 c = unpackRGBE(textureCube(cc_environment, viewDir.xyz));\n  #else\n    vec3 c = SRGBToLinear(textureCube(cc_environment, viewDir.xyz).rgb);\n  #endif\n  return CCFragOutput(vec4(c * cc_ambientSky.w, 1.0));\n}\nvoid main() { gl_FragColor = frag(); }"
+      },
+      "builtins": {
+        "globals": {
+          "blocks": [
+            {
+              "name": "CCGlobal",
+              "defines": []
+            },
+            {
+              "name": "CCCamera",
+              "defines": []
+            }
+          ],
+          "samplerTextures": [
+            {
+              "name": "cc_environment",
+              "defines": []
+            }
+          ],
+          "buffers": [],
+          "images": []
+        },
+        "locals": {
+          "blocks": [],
+          "samplerTextures": [],
+          "buffers": [],
+          "images": []
+        },
+        "statistics": {
+          "CC_EFFECT_USED_VERTEX_UNIFORM_VECTORS": 39,
+          "CC_EFFECT_USED_FRAGMENT_UNIFORM_VECTORS": 39
+        }
+      },
+      "defines": [
+        {
+          "name": "CC_USE_IBL",
+          "type": "number",
+          "defines": [],
+          "range": [
+            0,
+            2
+          ]
+        },
+        {
+          "name": "CC_USE_HDR",
+          "type": "boolean",
+          "defines": []
+        },
+        {
+          "name": "USE_RGBE_CUBEMAP",
+          "type": "boolean",
+          "defines": []
+        }
+      ],
+      "name": "pipeline/skybox|sky-vs:vert|sky-fs:frag"
+    }
+  ],
+  "combinations": [],
+  "hideInEditor": false
+}
