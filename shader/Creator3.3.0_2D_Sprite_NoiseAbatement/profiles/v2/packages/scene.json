@@ -1,4 +1,6 @@
 {
+  "__version__": "1.0.0",
+  "current-scene": "3b3c0ba1-653e-442a-841d-9b7001b7f28a",
   "gizmos-infos": {
     "is2D": true,
     "is3DIcon": false,
@@ -33,9 +35,9 @@
         "z": 0
       }
     },
-    "af6fd621-cbd1-4f57-8c9b-fba5fed4c3ef": {
+    "3b3c0ba1-653e-442a-841d-9b7001b7f28a": {
       "position": {
-        "x": 480,
+        "x": 480.00000000000006,
         "y": 320,
         "z": 5000
       },
@@ -53,21 +55,8 @@
     }
   },
   "camera-uuids": [
-    "af6fd621-cbd1-4f57-8c9b-fba5fed4c3ef"
+    "f46876e4-e81b-4931-b493-6d367be385e7"
   ],
-  "float-window": {
-    "position": {
-      "cc": {
-        "Camera": {
-          "dock": false,
-          "top": null,
-          "bottom": 10,
-          "left": null,
-          "right": 10
-        }
-      }
-    }
-  },
   "camera": {
     "fov": 45,
     "far": 10000,
