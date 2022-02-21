@@ -179,9 +179,9 @@ export class NodeQ {
         // bottom right
         this.nodes[NodeQ.BOTTOM_RIGHT] = new NodeQ({
             x: bx_b_w_h,
-        y: by_b_h_h,
-        width: b_w_h,
-        height: b_h_h
+            y: by_b_h_h,
+            width: b_w_h,
+            height: b_h_h
         },
         depth, this._maxDepth, this._maxChildren);
     }
@@ -229,9 +229,7 @@ export class BoundsNode extends NodeQ {
         this.children.push(item);
 
         var len = this.children.length;
-        if (!(this._depth >= this._maxDepth) &&
-            len > this._maxChildren) {
-
+        if (!(this._depth >= this._maxDepth) && len > this._maxChildren) {
             this.subdivide();
 
             var i;

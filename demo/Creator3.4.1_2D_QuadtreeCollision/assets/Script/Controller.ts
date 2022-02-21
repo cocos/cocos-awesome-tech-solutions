@@ -8,8 +8,10 @@ import { QuadTree, NodeQ, BoundsNode } from "./QuadTree";
 export default class NewClass extends Component {
     @property(Prefab)
     nodePrefab: Prefab | null = null;
+
     private nodes: Array<Node> = [];
     private tree: QuadTree<Node> = null;
+
     start() {
         var bounds = {
             x: 0,
@@ -20,15 +22,14 @@ export default class NewClass extends Component {
         this.tree = new QuadTree(bounds, true);
 
         for (let i = 0; i < 150; i++) {
-        let newNode = instantiate(this.nodePrefab);
-        this.node.addChild(newNode);
-        this.nodes.push(newNode);
+            let newNode = instantiate(this.nodePrefab);
+            this.node.addChild(newNode);
+            this.nodes.push(newNode);
         }
         this.tree.insert(this.nodes);
     }
 
-    update(dt) {
-
+    update(dt: number) {
         for (let i in this.nodes) {
             // @ts-ignore
             this.nodes[i].getComponent(NodeX).setIsCollision(false);
@@ -42,7 +43,6 @@ export default class NewClass extends Component {
             let items = this.tree.retrieve(curNode);
             for (let i in items) {
                 let item = items[i];
-
                 if (item.uuid == curNode.uuid) {
                     continue;
                 }
@@ -56,7 +56,6 @@ export default class NewClass extends Component {
                 }
 
                 let isCollision = this.isCollision(curNode, item);
-
                 // @ts-ignore
                 if (!curScript.isCollision) {
                     // @ts-ignore
@@ -73,14 +72,18 @@ export default class NewClass extends Component {
     }
 
     isCollision(node1: Node, node2: Node) {
-        let node1Left = node1.getPosition().x;
-        let node2Left = node2.getPosition().x;
-        let node1Top = node1.getPosition().y - node1.getComponent(UITransform).height;
-        let node2Top = node2.getPosition().y - node2.getComponent(UITransform).height;
+        let nodePos1 = node1.getPosition();
+        let nodePos2 = node2.getPosition();
+        let node1Left = nodePos1.x;
+        let node2Left = nodePos2.x;
+        let nodeTrans1 = node1.getComponent(UITransform);
+        let nodeTrans2 = node2.getComponent(UITransform);
+        let node1Top = nodePos1.y - nodeTrans1.height;
+        let node2Top = nodePos2.y - nodeTrans2.height;
 
-        return node1Left < node2Left + node2.getComponent(UITransform).width &&
-            node1Left + node1.getComponent(UITransform).width > node2Left &&
-            node1Top < node2Top + node2.getComponent(UITransform).height &&
-            node1Top + node1.getComponent(UITransform).height > node2Top
+        return node1Left < node2Left + nodeTrans2.width &&
+            node1Left + nodeTrans1.width > node2Left &&
+            node1Top < node2Top + nodeTrans2.height &&
+            node1Top + nodeTrans1.height > node2Top
     }
 }
