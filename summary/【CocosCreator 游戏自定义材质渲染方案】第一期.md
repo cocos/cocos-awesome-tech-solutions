@@ -89,7 +89,7 @@
 
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/shader/Creator3.4.1_Sprite_NoiseAbatement
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/shader/Creator3.4.1_2D_Sprite_NoiseAbatement
   >
   > 素材来自: 
   >
