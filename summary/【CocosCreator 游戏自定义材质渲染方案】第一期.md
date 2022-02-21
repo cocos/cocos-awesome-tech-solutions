@@ -15,7 +15,7 @@
   >
   > https://github.com/ifengzp/cocos-awesome/tree/master/assets/Scene/Circle_avatar
   
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/image/20211208/2021120801.jpg)
+  <img src = "../image/20211208/2021120801.jpg">
 
 
 
@@ -31,7 +31,7 @@
   >
   > https://gitee.com/carlosyzy/Creator3D_Shield/tree/master/project
   
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211209/2021120901.gif)
+  <img src = "../gif/20211209/2021120901.gif">
 
 
 
@@ -47,7 +47,7 @@
   >
   > https://github.com/ifengzp/cocos-awesome/tree/master/assets/Scene/Water_spread
   
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211209/2021120902.gif)
+  <img src = "../gif/20211209/2021120902.gif">
 
 
 
@@ -63,8 +63,7 @@
   >
   > https://forum.cocos.org/t/topic/123866
   
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211209/2021120903.gif)
-
+  <img src = "../gif/20211209/2021120903.gif">
 
 
 *Gitee 用户(carlosyzy)提供，由技术支持团队升级至 3.4.1 版本*
@@ -79,7 +78,7 @@
   >
   > https://gitee.com/carlosyzy/Creator3D_Shader_Noise_Dissolve
   
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211210/2021121001.gif)
+  <img src = "../gif/20211210/2021121001.gif">
 
 
 
@@ -89,10 +88,10 @@
 
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/shader/Creator3.4.1_Sprite_NoiseAbatement
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/shader/Creator3.4.1_2D_Sprite_NoiseAbatement
   >
   > 素材来自: 
   >
   > https://github.com/ifengzp/cocos-awesome/tree/master/assets/Scene/Dissolve_color
   
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20220221/2022022101.gif)
+  <img src = "../gif/20220221/2022022101.gif">
