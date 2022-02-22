@@ -18,43 +18,12 @@ CCEffect %{
         cullMode: none
       properties:
         alphaThreshold: { value: 0.5 }
-
-        # time : {
-        #         value: 0.0,
-        #         editor: {
-        #           tooltip: "时间"
-        #         } 
-        # } 
-        wind_num: { 
-          value: 1.0,
-          editor: {
-            tooltip: "风力值"
-          }
-        }
-        radian: { 
-          value: 1.0,
-          editor: {
-            tooltip: "旋转值"
-          }
-        }
-        Flexibility: {
-          value: 1.0,
-          editor: {
-            tooltip: "柔韧度,数值越大越容易弯曲"
-          }
-        }
-        value_1: {
-          value: 0.5,
-          editor: {
-            tooltip: "参数1"
-          }
-        }
-        value_2: {
-          value: 4.0,
-          editor: {
-            tooltip: "参数2"
-          }
-        }
+        # 自定义参数
+        wind_num: { value: 1.0, editor: { tooltip: "风力值" }}
+        radian: { value: 1.0, editor: { tooltip: "旋转值" }}
+        Flexibility: { value: 1.0, editor: { tooltip: "柔韧度,数值越大越容易弯曲" }}
+        value_1: { value: 0.5, editor: { tooltip: "参数1" }}
+        value_2: { value: 4.0, editor: { tooltip: "参数2" }}
 }%
 
 
@@ -109,12 +78,8 @@ CCProgram sprite-fs %{
   #if USE_TEXTURE
     in vec2 v_uv0;
     #pragma builtin(local)
-    layout(set = 2, binding = 10) uniform sampler2D cc_spriteTexture;
+    layout(set = 2, binding = 11) uniform sampler2D cc_spriteTexture;
   #endif
-
-  // uniform inputData{
-  //   float time;
-  // };
 
   uniform mxd {
     float wind_num;
@@ -149,14 +114,11 @@ CCProgram sprite-fs %{
     // 使用pow函数，让距离中心点越长的地方摆动幅度越明显且成抛物线形态(中心点以下部位不参与偏移)
 
     // x轴偏移量
-    float ofunlit_fset_x = value_1 * pow(height, value_2) * wind_x;
-    // x新的坐标
-    float new_x =  v_uv0.x + ofunlit_fset_x;
+    float offset_x = value_1 * pow(height, value_2) * wind_x;
+    float new_x =  v_uv0.x + offset_x;
     // 通过三角函数,计算出Y轴偏移量
-    // y的新坐标
-    float ofunlit_fset_y = pow(ofunlit_fset_x, 2.0)  *  2.0;
-
-    float new_y =  v_uv0.y - ofunlit_fset_y;
+    float offset_y = pow(offset_x, 2.0)  *  2.0;
+    float new_y =  v_uv0.y - offset_y;
  
     ////////////////////////风量抖动算法_____________________________
 
@@ -167,8 +129,8 @@ CCProgram sprite-fs %{
       // fract函数是GLSL内建函数，取小数部分
       o *= CCSampleWithAlphaSeparated(cc_spriteTexture, fract(vec2(new_x, new_y)));
 
-      if(new_x <0.0 || new_x>1.0 || new_y<0.0){
-       o = vec4(0.0, 0.0, 0.0, 0.0);
+      if (new_x < 0.0 || new_x > 1.0 || new_y < 0.0) {
+        o = vec4(0.0, 0.0, 0.0, 0.0);
       }
 
       #if CC_USE_ALPHA_ATLAS_TEXTURE
