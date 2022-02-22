@@ -46,7 +46,6 @@ CCProgram unlit-vs %{
   out vec2 v_uv;
   out vec2 v_uv1;
   out vec3 v_color;
-  // out float factor_fog;
 
   vec4 vert () {
     StandardVertInput In;
@@ -83,7 +82,6 @@ CCProgram unlit-fs %{
   in vec3 position;
   uniform sampler2D noiseTexture;
   uniform sampler2D mainTexture;
-  in float factor_fog;
 
   uniform Constant {
     vec4 mainColor;

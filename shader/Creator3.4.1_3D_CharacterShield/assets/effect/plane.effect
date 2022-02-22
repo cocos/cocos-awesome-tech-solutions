@@ -33,8 +33,6 @@ CCProgram plane-fs %{
     uniform sampler2D mainTexture;
   #endif
 
-  // in float factor_fog;
-
   uniform Constant {
     vec4 mainColor;
   };
