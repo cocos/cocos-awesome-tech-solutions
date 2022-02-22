@@ -1,5 +1,5 @@
 import { _decorator, Component, Material, CCFloat, Sprite, find } from 'cc';
-import { WindManager } from './wind_manager';
+import { WindManager } from './WindManager';
 const { ccclass, property } = _decorator;
 
 @ccclass('BranchesShook')
@@ -25,7 +25,7 @@ export class BranchesShook extends Component {
     start () {
         this.material = this.node.getComponent(Sprite)!.getMaterial(0)!;
 
-        this.WeatherManager = find('wind_manager')!.getComponent(WindManager)!;
+        this.WeatherManager = find('WindManager')!.getComponent(WindManager)!;
     }
 
     update (dt: any) {
