@@ -10,7 +10,7 @@
   },
   {
     "__type__": "cc.Scene",
-    "_name": "noiseAbatement",
+    "_name": "NoiseAbatement3D",
     "_objFlags": 0,
     "_parent": null,
     "_children": [
