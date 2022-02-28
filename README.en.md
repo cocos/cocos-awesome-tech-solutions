@@ -295,3 +295,19 @@
   > https://github.com/kirikayakazuto/CocosCreator_UIFrameWork/tree/SplitTexture
 
   ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20220120/2022012002.gif)
+
+   *Courtesy of forum user (tuyazuo)，upgraded to version 3.4.0 by the technical support team*
+
+* (v3.4.0) 横竖屏切换
+
+  > Project git repository address: 
+  >
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.4.0_2D_ScreenSwitch
+  >
+  > Demo from: 
+  >
+  > https://forum.cocos.org/t/topic/79780
+  
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20220224/20220224.gif)
+
+  > Note: The current 3.0.0 ~ 3.4.1 versions of the ios platform will shift the click position after calling the native trans-screen function, so you need to merge the pr manually: https://github.com/cocos-creator/engine-native/pull/4265, the merged pr file is included in the demo.
