@@ -1,0 +1,147 @@
+{
+  "log": {
+    "level": 4
+  },
+  "common": {
+    "outputName": "android",
+    "mainBundleCompressionType": "merge_dep",
+    "platform": "android"
+  },
+  "BuildTaskManager": {
+    "taskMap": {
+      "1646211218376": {
+        "id": "1646211218376",
+        "progress": 1,
+        "state": "success",
+        "message": "2022-3-2 16:59 Build success in 332237 ms!",
+        "options": {
+          "name": "SpriteStreamer",
+          "platform": "mac",
+          "buildPath": "project://build",
+          "debug": false,
+          "md5Cache": false,
+          "sourceMaps": false,
+          "replaceSplashScreen": false,
+          "mainBundleCompressionType": "merge_dep",
+          "mainBundleIsRemote": false,
+          "mergeStartScene": false,
+          "experimentalEraseModules": false,
+          "compressTexture": true,
+          "packAutoAtlas": true,
+          "startScene": "45dce3ff-b979-47cd-a4f0-37169983b4ef",
+          "scenes": [
+            {
+              "url": "db://assets/SpriteStreamer.scene",
+              "uuid": "45dce3ff-b979-47cd-a4f0-37169983b4ef",
+              "inBundle": false
+            }
+          ],
+          "outputName": "mac",
+          "packages": {
+            "mac": {
+              "renderBackEnd": {
+                "metal": true
+              },
+              "targetVersion": "10.14",
+              "supportM1": false,
+              "skipUpdateXcodeProject": false,
+              "packageName": "com.chengen.testa"
+            },
+            "native": {
+              "polyfills": {
+                "asyncFunctions": true
+              },
+              "encrypted": false,
+              "xxteaKey": "b2rCkd1tFElZFp9Q",
+              "compressZip": false,
+              "makeAfterBuild": false,
+              "JobSystem": "tbb"
+            },
+            "cocos-service": {
+              "configID": "b58522",
+              "services": []
+            }
+          }
+        },
+        "time": "2022-3-2 16:53",
+        "dirty": false
+      },
+      "1646213751950": {
+        "id": "1646213751950",
+        "progress": 1,
+        "state": "success",
+        "message": "2022-3-2 17:47 Build success in 670583 ms!",
+        "options": {
+          "name": "SpriteStreamer",
+          "platform": "android",
+          "buildPath": "project://build",
+          "debug": false,
+          "md5Cache": false,
+          "sourceMaps": false,
+          "replaceSplashScreen": false,
+          "mainBundleCompressionType": "merge_dep",
+          "mainBundleIsRemote": false,
+          "mergeStartScene": false,
+          "experimentalEraseModules": false,
+          "compressTexture": true,
+          "packAutoAtlas": true,
+          "startScene": "45dce3ff-b979-47cd-a4f0-37169983b4ef",
+          "scenes": [
+            {
+              "url": "db://assets/SpriteStreamer.scene",
+              "uuid": "45dce3ff-b979-47cd-a4f0-37169983b4ef",
+              "inBundle": false
+            }
+          ],
+          "outputName": "android",
+          "packages": {
+            "android": {
+              "packageName": "com.test.spritestreamer",
+              "orientation": {
+                "portrait": false,
+                "upsideDown": false,
+                "landscapeRight": true,
+                "landscapeLeft": true
+              },
+              "apiLevel": "android-26",
+              "appABIs": [
+                "arm64-v8a"
+              ],
+              "useDebugKeystore": true,
+              "keystorePath": "",
+              "keystorePassword": "",
+              "keystoreAlias": "",
+              "keystoreAliasPassword": "",
+              "appBundle": false,
+              "androidInstant": false,
+              "remoteUrl": "",
+              "sdkPath": "",
+              "ndkPath": "",
+              "renderBackEnd": {
+                "vulkan": false,
+                "gles3": true,
+                "gles2": true
+              }
+            },
+            "native": {
+              "polyfills": {
+                "asyncFunctions": true
+              },
+              "encrypted": false,
+              "xxteaKey": "b2rCkd1tFElZFp9Q",
+              "compressZip": false,
+              "makeAfterBuild": true,
+              "JobSystem": "tbb"
+            },
+            "cocos-service": {
+              "configID": "b58522",
+              "services": []
+            }
+          }
+        },
+        "time": "2022-3-2 17:35",
+        "dirty": false
+      }
+    }
+  }
+}
