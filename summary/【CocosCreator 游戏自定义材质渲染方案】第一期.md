@@ -95,3 +95,19 @@
   > https://github.com/ifengzp/cocos-awesome/tree/master/assets/Scene/Dissolve_color
   
   <img src = "../gif/20220221/2022022101.gif">
+
+
+
+*Github 用户(ifengzp)提供，由技术支持团队升级至 3.4.1 版本*
+
+* (v3.4.1) 镜面光泽
+
+  > 工程 git 仓库地址: 
+  >
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/shader/Creator3.4.1_2D_Sprite_MirrorShine
+  >
+  > 素材来自: 
+  >
+  > https://github.com/ifengzp/cocos-awesome/tree/master/assets/Scene/Specular_gloss
+  
+  <img src = "../gif/20220302/2022030201.gif">
