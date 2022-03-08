@@ -1,6 +1,6 @@
 # CococsCreator 技术方案分享
 
- 技术方案来源自论坛、github 开源仓库、gitee 开源仓库、热心开发者、Cocos 引擎开发团队、cocos 技术支持团队。
+ 技术方案来源自论坛、github 开源仓库、gitee 开源仓库、热心开发者、Cocos 引擎开发团队、Cocos 技术支持团队。
 
 ---
 *技术支持团队提供*
