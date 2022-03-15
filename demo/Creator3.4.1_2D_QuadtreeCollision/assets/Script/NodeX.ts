@@ -13,7 +13,7 @@ export default class NodeX extends Component {
     }
 
     update(dt) {
-        let speed = 3;
+        let speed = 1.5;
         
         let pos = this.node.getPosition();
         pos.x += Math.random() * speed;
