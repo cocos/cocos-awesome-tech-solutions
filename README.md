@@ -312,3 +312,15 @@
   ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20220224/20220224.gif)
 
   > 备注: 目前 3.0.0 ~ 3.4.1 版本在 ios 平台调用原生转屏功能后，点击位置会发生偏移，需要手动合并 pr: https://github.com/cocos-creator/engine-native/pull/4265, Demo 中有附带合并 pr 后的文件。
+
+* (v3.4.1) 四叉树碰撞优化
+
+  > 工程 git 仓库地址: 
+  >
+  > https://github.com/cocos/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.1_2D_QuadtreeCollision
+  >
+  > Demo 来自: 
+  >
+  > 四叉树方案来自：https://github.com/xjz1994/Collision
+  
+  ![Image Text](https://forum.cocos.org/uploads/default/original/3X/3/e/3e2ee25fec90d566d76b2d7df63f593e6051f260.gif)
