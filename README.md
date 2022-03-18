@@ -1,6 +1,6 @@
 # CococsCreator 技术方案分享
 
- 技术方案来源自论坛、github 开源仓库、gitee 开源仓库、热心开发者、Cocos 引擎开发团队、cocos 技术支持团队。
+ 技术方案来源自论坛、github 开源仓库、gitee 开源仓库、热心开发者、Cocos 引擎开发团队、Cocos 技术支持团队。
 
 ---
 *技术支持团队提供*
@@ -151,7 +151,7 @@
 
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/demo/Creator3.4.0_2D_Fluids
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_Fluids
   >
   > 素材来自: 
   >
@@ -295,3 +295,32 @@
   > https://sketchfab.com/search?features=downloadable&licenses=322a749bcfa841b29dff1e8a1bb74b0b&licenses=b9ddc40b93e34cdca1fc152f39b9f375&licenses=72360ff1740d419791934298b8b6d270&licenses=bbfe3f7dbcdd4122b966b85b9786a989&licenses=2628dbe5140a4e9592126c8df566c0b7&licenses=34b725081a6a4184957efaec2cb84ed3&licenses=7c23a1ba438d4306920229c12afcb5f9&licenses=783b685da9bf457d81e829fa283f3567&licenses=5b54cf13b1a4422ca439696eb152070d&q=tag%3Afruit&sort_by=-likeCount&type=models
 
   ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20220215/20220215.gif)
+
+
+  *论坛用户(tuyazuo)提供，由技术支持团队升级至3.4.0版本*
+
+* (v3.4.0) 横竖屏切换
+
+  > 工程 git 仓库地址: 
+  >
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_ScreenSwitch
+  >
+  > Demo 来自: 
+  >
+  > https://forum.cocos.org/t/topic/79780
+  
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20220224/20220224.gif)
+
+  > 备注: 目前 3.0.0 ~ 3.4.1 版本在 ios 平台调用原生转屏功能后，点击位置会发生偏移，需要手动合并 pr: https://github.com/cocos-creator/engine-native/pull/4265, Demo 中有附带合并 pr 后的文件。
+
+* (v3.4.1) 四叉树碰撞优化
+
+  > 工程 git 仓库地址: 
+  >
+  > https://github.com/cocos/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.1_2D_QuadtreeCollision
+  >
+  > Demo 来自: 
+  >
+  > 四叉树方案来自：https://github.com/xjz1994/Collision
+  
+  ![Image Text](https://forum.cocos.org/uploads/default/original/3X/3/e/3e2ee25fec90d566d76b2d7df63f593e6051f260.gif)

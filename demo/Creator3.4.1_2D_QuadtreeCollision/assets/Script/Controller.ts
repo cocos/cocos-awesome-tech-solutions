@@ -1,11 +1,11 @@
-import { _decorator, Component, Prefab, Node, instantiate, UITransform } from 'cc';
+import { _decorator, Component, Prefab, Node, instantiate, UITransform, director } from 'cc';
 import NodeX from './NodeX';
 const { ccclass, property } = _decorator;
 
 import { QuadTree, NodeQ, BoundsNode } from "./QuadTree";
 
 @ccclass('Controller')
-export default class NewClass extends Component {
+export default class Controller extends Component {
     @property(Prefab)
     nodePrefab: Prefab | null = null;
 
@@ -21,7 +21,7 @@ export default class NewClass extends Component {
         }
         this.tree = new QuadTree(bounds, true);
 
-        for (let i = 0; i < 150; i++) {
+        for (let i = 0; i < 250; i++) {
             let newNode = instantiate(this.nodePrefab);
             this.node.addChild(newNode);
             this.nodes.push(newNode);
@@ -31,7 +31,7 @@ export default class NewClass extends Component {
 
     update(dt: number) {
         for (let i in this.nodes) {
-            // @ts-ignore
+
             this.nodes[i].getComponent(NodeX).setIsCollision(false);
         }
 
@@ -55,17 +55,17 @@ export default class NewClass extends Component {
                     continue;
                 }
 
-                let isCollision = this.isCollision(curNode, item);
+                let isCollisionBox = this.isCollision(curNode, item);
                 // @ts-ignore
                 if (!curScript.isCollision) {
                     // @ts-ignore
-                    curScript.setIsCollision(isCollision);
+                    curScript.setIsCollision(isCollisionBox);
                 }
 
                 // @ts-ignore
                 if (!itemScript.isCollision) {
                     // @ts-ignore
-                    itemScript.setIsCollision(isCollision);
+                    itemScript.setIsCollision(isCollisionBox);
                 }
             }
         }
@@ -85,5 +85,9 @@ export default class NewClass extends Component {
             node1Left + nodeTrans1.width > node2Left &&
             node1Top < node2Top + nodeTrans2.height &&
             node1Top + nodeTrans1.height > node2Top
+    }
+
+    onClickOff() {
+        director.loadScene("NoOptimization");
     }
 }

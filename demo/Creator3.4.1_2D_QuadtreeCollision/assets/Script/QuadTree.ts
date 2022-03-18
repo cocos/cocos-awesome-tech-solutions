@@ -85,23 +85,6 @@ export class NodeQ {
             }
             this.children.length = 0;
         }
-
-        if (this.nodes.length) {
-            var index = this._findIndex(item);
-            this.nodes[index].insert(item);
-            return;
-        }
-        this.children.push(item);
-
-        var len = this.children.length;
-        if (!(this._depth >= this._maxDepth) && len > this._maxChildren) {
-            this.subdivide();
-            var i;
-            for (i = 0; i < len; i++) {
-                this.insert(this.children[i]);
-            }
-            this.children.length = 0;
-        }
     }
 
     public retrieve(item) {
