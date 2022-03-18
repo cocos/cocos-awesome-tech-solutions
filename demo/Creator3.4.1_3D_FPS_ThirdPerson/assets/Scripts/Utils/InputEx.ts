@@ -39,10 +39,6 @@ export class InputEx {
             mouseMove.y = 0;
             mouseClick = [];
         })
-
-        if ((game.canvas as HTMLCanvasElement).requestPointerLock) {
-            (game.canvas as HTMLCanvasElement).requestPointerLock();
-        }
     }
 
     static UnRegisterEvent() {
@@ -145,6 +141,10 @@ export class InputEx {
     }
 
     private static onMouseDown(event: EventMouse) {
+        if (game.canvas.requestPointerLock) {
+            game.canvas.requestPointerLock();
+        }
+                
         if (mouseHold.indexOf(event.getButton()) >= 0) return;
         mouseHold.unshift(event.getButton());
     }
