@@ -70,7 +70,10 @@
       "__id__": 3
     },
     "_materials": [
-      null,
+      {
+        "__uuid__": "52d63741-c58c-42ec-b565-75660ebd8d10",
+        "__expectedType__": "cc.Material"
+      },
       null
     ],
     "_visFlags": 0,
@@ -612,7 +615,7 @@
     "__type__": "cc.ParticleSystemRenderer",
     "_renderMode": 4,
     "_velocityScale": 1,
-    "_lengthScale": 0.1,
+    "_lengthScale": 1,
     "_mesh": {
       "__uuid__": "1263d74c-8167-4928-91a6-4e2672411f47@a804a",
       "__expectedType__": "cc.Mesh"
