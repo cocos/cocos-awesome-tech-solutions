@@ -1,7 +1,7 @@
 
 import { SmoothDampV3 } from './Utils/MathEx'
 import { InputEx } from './Utils/InputEx';
-import { _decorator, Component, Node, Vec3, RigidBody, KeyCode, AudioSource, ICollisionEvent, BoxCollider, Label } from 'cc';
+import { _decorator, Component, Node, Vec3, RigidBody, KeyCode, AudioSource, ICollisionEvent, BoxCollider, Label, PhysicsSystem } from 'cc';
 import { TimeEx } from './Utils/TimeEx';
 
 const { ccclass, property } = _decorator;
@@ -39,6 +39,7 @@ export class PlayerMovementScript extends Component {
     private grounded: boolean = false;
 
     start() {
+        PhysicsSystem.instance.autoSimulation = false;
         InputEx.RegisterEvent();
         this.collider.on('onCollisionStay', this.OnCollisionStay, this);
         this.collider.on('onCollisionExit', this.OnCollisionExit, this);
@@ -159,12 +160,14 @@ export class PlayerMovementScript extends Component {
 
     update(dt: number) {
         TimeEx.deltaTime = dt;
-        this.Jumping();
-        this.Crouching();
-        this.WalkingSound();
+        PhysicsSystem.instance.step(TimeEx.deltaTime);
+        PhysicsSystem.instance.emitEvents();
     }
 
     lateUpdate() {
+        this.Jumping();
+        this.Crouching();
+        this.WalkingSound();
         this.RaycastForMeleeAttacks();
         this.PlayerMovementLogic();
     }

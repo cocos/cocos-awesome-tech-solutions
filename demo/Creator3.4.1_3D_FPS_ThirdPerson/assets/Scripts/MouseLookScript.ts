@@ -87,7 +87,7 @@ export class MouseLookScript extends Component {
     }
 
     update(dt: number) {
-        this.MouseInputMovement();
+
     }
 
     lateUpdate() {
@@ -100,6 +100,7 @@ export class MouseLookScript extends Component {
         else {
             this.mouseSensitvity = this.mouseSensitvity_notAiming;
         }
+        this.MouseInputMovement();
         this.ApplyingStuff();
     }
 }

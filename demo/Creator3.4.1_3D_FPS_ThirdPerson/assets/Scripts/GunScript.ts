@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, animation, KeyCode, CameraComponent, Vec3, Vec2, math, quat, Quat, AudioSource, instantiate, Texture2D, Prefab } from 'cc';
+import { _decorator, Component, Node, animation, KeyCode, CameraComponent, Vec3, Vec2, math, quat, Quat, AudioSource, instantiate, Texture2D, Prefab, PhysicsSystem } from 'cc';
 import { InputEx } from './Utils/InputEx';
 import { SmoothDamp, SmoothDampV3 } from './Utils/MathEx';
 import { MouseLookScript } from './MouseLookScript';
@@ -380,18 +380,18 @@ export class GunScript extends Component {
     }
 
     update(deltaTime: number) {
+    }
+
+    lateUpdate() {
         this.GiveCameraScriptMySensitvity();
-        this.PositionGun();
         this.Shooting();
         //this.MeeleAttack();
         this.LockCameraWhileMelee();
         //this.Sprint();
         //this.CrossHairExpansionWhenWalking();
-    }
-
-    lateUpdate() {
         this.Animations();
         this.RotationGun();
+        this.PositionGun();
         this.MeeleAnimationsStates();
 
         if (InputEx.GetAxis("Fire2") != 0 && !this.reloading && !this.meeleAttack) {
