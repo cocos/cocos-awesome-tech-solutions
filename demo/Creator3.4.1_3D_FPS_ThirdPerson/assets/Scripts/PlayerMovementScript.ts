@@ -161,6 +161,7 @@ export class PlayerMovementScript extends Component {
     update(dt: number) {
         TimeEx.deltaTime = dt;
         PhysicsSystem.instance.step(TimeEx.deltaTime);
+        PhysicsSystem.instance.emitEvents();
     }
 
     lateUpdate() {
