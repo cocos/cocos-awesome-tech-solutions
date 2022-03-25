@@ -73,3 +73,23 @@
   > https://github.com/kirikayakazuto/CocosCreator_UIFrameWork/tree/SplitTexture
 
   ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20220120/2022012002.gif)
+  
+
+*Github用户(2youyou2)提供，由技术支持团队升级至3.4.2版本*
+
+* (v3.4.2) Raphael
+
+  > 工程 git 仓库地址: 
+  >
+  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.2_Raphael
+  >
+  > 素材来自:
+  >
+  > https://github.com/2youyou2/raphael-example
+
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20220324/1.gif)
+
+  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20220324/2.gif)
+
+
+
