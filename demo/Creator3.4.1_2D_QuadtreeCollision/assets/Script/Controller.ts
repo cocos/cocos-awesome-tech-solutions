@@ -2,7 +2,7 @@ import { _decorator, Component, Prefab, Node, instantiate, UITransform, director
 import NodeX from './NodeX';
 const { ccclass, property } = _decorator;
 
-import { QuadTree, NodeQ, BoundsNode } from "./QuadTree";
+import { QuadTree, NodeQ } from "./QuadTree";
 
 @ccclass('Controller')
 export default class Controller extends Component {
@@ -14,8 +14,8 @@ export default class Controller extends Component {
 
     start() {
         var bounds = {
-            x: 0,
-            y: 0,
+            x: -screen.width / 2,
+            y: -screen.height/2,
             width: screen.width,
             height: screen.height
         }
@@ -41,6 +41,7 @@ export default class Controller extends Component {
         for (let i in this.nodes) {
             let curNode = this.nodes[i];
             let items = this.tree.retrieve(curNode);
+            console.log("item=",items.length);
             for (let i in items) {
                 let item = items[i];
                 if (item.uuid == curNode.uuid) {
@@ -54,7 +55,6 @@ export default class Controller extends Component {
                 if (curScript.isCollision && itemScript.isCollision) {
                     continue;
                 }
-
                 let isCollisionBox = this.isCollision(curNode, item);
                 // @ts-ignore
                 if (!curScript.isCollision) {

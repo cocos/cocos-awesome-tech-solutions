@@ -53,13 +53,28 @@ export class Compare extends Component {
                 if (!itemScript.isCollision) {
                     itemScript.setIsCollision(isCollisionBox);
                 }
-
+               
             }
         }
     }
 
     onClickOpen() {
         director.loadScene("main");
+    }
+    isCollision(node1: Node, node2: Node) {
+        let nodePos1 = node1.getPosition();
+        let nodePos2 = node2.getPosition();
+        let node1Left = nodePos1.x;
+        let node2Left = nodePos2.x;
+        let nodeTrans1 = node1.getComponent(UITransform);
+        let nodeTrans2 = node2.getComponent(UITransform);
+        let node1Top = nodePos1.y - nodeTrans1.height;
+        let node2Top = nodePos2.y - nodeTrans2.height;
+
+        return node1Left < node2Left + nodeTrans2.width &&
+            node1Left + nodeTrans1.width > node2Left &&
+            node1Top < node2Top + nodeTrans2.height &&
+            node1Top + nodeTrans1.height > node2Top
     }
 }
 

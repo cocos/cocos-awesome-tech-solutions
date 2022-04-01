@@ -7,9 +7,7 @@ export class QuadTree<T> {
         var node;
         if (pointQuad) {
             node = new NodeQ(bounds, 0, maxDepth, maxChildren);
-        } else {
-            node = new BoundsNode(bounds, 0, maxDepth, maxChildren);
-        }
+        } 
         this.root = node;
     }
     
@@ -69,18 +67,22 @@ export class NodeQ {
 
     public insert(item) {
         if (this.nodes.length) {
-            var index = this._findIndex(item);
-            this.nodes[index].insert(item);
+         let   indexes = this._findIndex(item);
+     
+            for(let i=0; i<indexes.length; i++) {
+                this.nodes[indexes[i]].insert(item);     
+            }
             return;
         }
         this.children.push(item);
 
         var len = this.children.length;
+
         if (!(this._depth >= this._maxDepth) && len > this._maxChildren) {
             this.subdivide();
             
-            var i;
-            for (i = 0; i < len; i++) {
+           
+            for (let i = 0; i < len; i++) {
                 this.insert(this.children[i]);
             }
             this.children.length = 0;
@@ -88,38 +90,79 @@ export class NodeQ {
     }
 
     public retrieve(item) {
+        let  indexes = this._findIndex(item);
+        let returnObjects = this.children;
         if (this.nodes.length) {
-            var index = this._findIndex(item);
-            return this.nodes[index].retrieve(item);
+            for(var i=0; i<indexes.length; i++) {
+                returnObjects = returnObjects.concat(this.nodes[indexes[i]].retrieve(item));
+            }
         }
-
-        return this.children;
+        returnObjects = returnObjects.filter(function(item, index) {
+            return returnObjects.indexOf(item) >= index;
+        });
+        return returnObjects
     }
-
+    /**
+     * 检测新加入的节点位于原点的什么位置
+     * @param item 新加入的节点
+     * @returns 
+     */
     public _findIndex(item) {
-        var b = this._bounds;
-        var left = (item.x > b.x + b.width / 2) ? false : true;
-        var top = (item.y > b.y + b.height / 2) ? false : true;
+        // var b = this._bounds;
+        // var left = (item.x > b.x + b.width / 2) ? false : true;
+        // var top = (item.y > b.y + b.height / 2) ? false : true;
 
-        // top left
-        var index = NodeQ.TOP_LEFT;
-        if (left) {
-            // left side
-            if (!top) {
-                // bottom left
-                index = NodeQ.BOTTOM_LEFT;
-            }
-        } else {
-            //right side
-            if (top) {
-                // top right
-                index = NodeQ.TOP_RIGHT;
-            } else {
-            //bottom right
-                index = NodeQ.BOTTOM_RIGHT;
-            }
+        // // top left
+        // var index = NodeQ.TOP_LEFT;
+        // if (left) {
+        //     // left side
+            // if (!top) {
+            //     // bottom left
+            //     index = NodeQ.BOTTOM_LEFT;
+            // }
+        // } else {
+        //     //right side
+        //     if (top) {
+        //         // top right
+        //         index = NodeQ.TOP_RIGHT;
+        //     } else {
+        //     //bottom right
+        //         index = NodeQ.BOTTOM_RIGHT;
+        //     }
+        // }
+        // return index;
+
+        let _bounds_node = this._bounds;
+        var indexes = [],
+            verticalMidpoint    = _bounds_node.x + (_bounds_node.width/2),
+            horizontalMidpoint  = _bounds_node.y + (_bounds_node.height/2);    
+
+        var startIsNorth = item.y < horizontalMidpoint,
+            startIsWest  = item.x < verticalMidpoint,
+            endIsEast    = item.x + item.width > verticalMidpoint,
+            endIsSouth   = item.y + item.height > horizontalMidpoint;    
+
+        //top-right quad
+        if(startIsNorth && endIsEast) {
+            indexes.push(0);
         }
-        return index;
+        
+        //top-left quad
+        if(startIsWest && startIsNorth) {
+            indexes.push(1);
+        }
+
+        //bottom-left quad
+        if(startIsWest && endIsSouth) {
+            indexes.push(2);
+        }
+
+        //bottom-right quad
+        if(endIsEast && endIsSouth) {
+            indexes.push(3);
+        }
+     
+        return indexes;
     }
 
     public subdivide() {
@@ -174,8 +217,8 @@ export class NodeQ {
 
         var len = this.nodes.length;
 
-        var i;
-        for (i = 0; i < len; i++) {
+        
+        for (let i = 0; i < len; i++) {
         this.nodes[i].clear();
         }
 
@@ -183,124 +226,3 @@ export class NodeQ {
     }
 }
 
-export class BoundsNode extends NodeQ {
-    protected _stuckChildren = null;
-    protected _out = [];
-
-    public constructor(bounds, depth, maxChildren, maxDepth) {
-        super(bounds, depth, maxChildren, maxDepth);
-    }
-
-    public insert(item) {
-        if (this.nodes.length) {
-            var index = this._findIndex(item);
-            var node = this.nodes[index];
-
-            //todo: make _bounds bounds
-            if (item.x >= node._bounds.x &&
-                item.x + item.width <= node._bounds.x + node._bounds.width &&
-                item.y >= node._bounds.y &&
-                item.y + item.height <= node._bounds.y + node._bounds.height) {
-
-                this.nodes[index].insert(item);
-            } else {
-                this._stuckChildren.push(item);
-            }
-
-            return;
-        }
-        this.children.push(item);
-
-        var len = this.children.length;
-        if (!(this._depth >= this._maxDepth) && len > this._maxChildren) {
-            this.subdivide();
-
-            var i;
-            for (i = 0; i < len; i++) {
-                this.insert(this.children[i]);
-            }
-
-            this.children.length = 0;
-        }
-    }
-
-    public getChildren() {
-        return this.children.concat(this._stuckChildren);
-    }
-
-    public retrieve(item) {
-        var out = this._out;
-        out.length = 0;
-        if (this.nodes.length) {
-            var index = this._findIndex(item);
-            var node = this.nodes[index];
-
-            if (item.x >= node._bounds.x &&
-                item.x + item.width <= node._bounds.x + node._bounds.width &&
-                item.y >= node._bounds.y &&
-                item.y + item.height <= node._bounds.y + node._bounds.height) {
-
-                out.push.apply(out, this.nodes[index].retrieve(item));
-            } else {
-                //Part of the item are overlapping multiple child nodes. For each of the overlapping nodes, return all containing objects.
-                if (item.x <= this.nodes[NodeQ.TOP_RIGHT]._bounds.x) {
-                    if (item.y <= this.nodes[NodeQ.BOTTOM_LEFT]._bounds.y) {
-                        out.push.apply(out, this.nodes[NodeQ.TOP_LEFT].getAllContent());
-                    }
-
-                    if (item.y + item.height > this.nodes[NodeQ.BOTTOM_LEFT]._bounds.y) {
-                        out.push.apply(out, this.nodes[NodeQ.BOTTOM_LEFT].getAllContent());
-                    }
-                }
-
-                if (item.x + item.width > this.nodes[NodeQ.TOP_RIGHT]._bounds.x) {//position+width bigger than middle x
-                    if (item.y <= this.nodes[NodeQ.BOTTOM_RIGHT]._bounds.y) {
-                        out.push.apply(out, this.nodes[NodeQ.TOP_RIGHT].getAllContent());
-                    }
-
-                    if (item.y + item.height > this.nodes[NodeQ.BOTTOM_RIGHT]._bounds.y) {
-                        out.push.apply(out, this.nodes[NodeQ.BOTTOM_RIGHT].getAllContent());
-                    }
-                }
-            }
-        }
-
-        out.push.apply(out, this._stuckChildren);
-        out.push.apply(out, this.children);
-
-        return out;
-    }
-
-    public getAllContent() {
-        var out = this._out;
-        if (this.nodes.length) {
-            var i;
-            for (i = 0; i < this.nodes.length; i++) {
-                this.nodes[i].getAllContent();
-            }
-        }
-        out.push.apply(out, this._stuckChildren);
-        out.push.apply(out, this.children);
-        return out;
-    }
-
-    public clear() {
-        this._stuckChildren.length = 0;
-
-        // array
-        this.children.length = 0;
-
-        var len = this.nodes.length;
-        if (!len) {
-            return;
-        }
-
-        var i;
-        for (i = 0; i < len; i++) {
-            this.nodes[i].clear();
-        }
-
-        //array
-        this.nodes.length = 0;
-    }
-}
