@@ -2,7 +2,7 @@ import { _decorator, Component, Prefab, Node, instantiate, UITransform, director
 import NodeX from './NodeX';
 const { ccclass, property } = _decorator;
 
-import { QuadTree, NodeQ } from "./QuadTree";
+import { Quadtree } from "./QuadTree";
 
 @ccclass('Controller')
 export default class Controller extends Component {
@@ -10,67 +10,55 @@ export default class Controller extends Component {
     nodePrefab: Prefab | null = null;
 
     private nodes: Array<Node> = [];
-    private tree: QuadTree<Node> = null;
+    private tree: Quadtree = null;
 
     start() {
         var bounds = {
-            x: -screen.width / 2,
-            y: -screen.height/2,
+            x: 0,
+            y:0,
             width: screen.width,
             height: screen.height
         }
-        this.tree = new QuadTree(bounds, true);
+        this.tree = new Quadtree(bounds, true);
 
         for (let i = 0; i < 250; i++) {
             let newNode = instantiate(this.nodePrefab);
             this.node.addChild(newNode);
             this.nodes.push(newNode);
+             this.tree.insert(newNode);
         }
-        this.tree.insert(this.nodes);
+    }
+    
+    update(dt: number) {
+       
+        this.quadTreeCheck();
     }
 
-    update(dt: number) {
-        for (let i in this.nodes) {
-
-            this.nodes[i].getComponent(NodeX).setIsCollision(false);
+    /**
+     * 四叉树碰撞检测
+     */
+     quadTreeCheck() {
+        for (let node of this.nodes) {
+            node.getComponent(NodeX).setIsCollision(false)
+            this.tree.insert(node);
         }
-
-        this.tree.clear();
-        this.tree.insert(this.nodes);
-
-        for (let i in this.nodes) {
-            let curNode = this.nodes[i];
-            let items = this.tree.retrieve(curNode);
-            console.log("item=",items.length);
-            for (let i in items) {
-                let item = items[i];
-                if (item.uuid == curNode.uuid) {
-                    continue;
+        for (let i = 0; i < this.nodes.length; i++) {
+            let node = this.nodes[i]
+            let targetNodes = this.tree.retrieve(node)
+            console.log("targetNodes=",targetNodes.length);
+            for (let j = 0; j < targetNodes.length; j++) {
+                let targetNode = targetNodes[j]
+                if (targetNode === node) continue
+                let isCollision: any = this.isCollision(targetNode,node)
+                if (isCollision) {
+                    node.getComponent(NodeX).setIsCollision(isCollision)
+                    targetNode.getComponent(NodeX).setIsCollision(isCollision)
                 }
 
-                let curScript = curNode.getComponent(NodeX);
-                let itemScript = item.getComponent(NodeX);
-
-                // @ts-ignore
-                if (curScript.isCollision && itemScript.isCollision) {
-                    continue;
-                }
-                let isCollisionBox = this.isCollision(curNode, item);
-                // @ts-ignore
-                if (!curScript.isCollision) {
-                    // @ts-ignore
-                    curScript.setIsCollision(isCollisionBox);
-                }
-
-                // @ts-ignore
-                if (!itemScript.isCollision) {
-                    // @ts-ignore
-                    itemScript.setIsCollision(isCollisionBox);
-                }
             }
         }
+        this.tree.clear();
     }
-
     isCollision(node1: Node, node2: Node) {
         let nodePos1 = node1.getPosition();
         let nodePos2 = node2.getPosition();
