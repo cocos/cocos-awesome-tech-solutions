@@ -3,6 +3,17 @@ import NodeX from './NodeX';
 const { ccclass, property } = _decorator;
 
 import { Quadtree } from "./QuadTree";
+/**
+ * Predefined variables
+ * Name = Controller
+ * DateTime = Mon Mar 14 2022 11:59:37 GMT+0800 (中国标准时间)
+ * Author = 热心网友蒋先生
+ * FileBasename = Controller.ts
+ * FileBasenameNoExtension = Controller
+ * URL = db://assets/Controller.ts
+ * ManualUrl = https://docs.cocos.com/creator/3.4/manual/zh/
+ *
+ */
 
 @ccclass('Controller')
 export default class Controller extends Component {

@@ -7,7 +7,7 @@ const { ccclass, property } = _decorator;
  * Predefined variables
  * Name = Compare
  * DateTime = Mon Mar 14 2022 11:59:37 GMT+0800 (中国标准时间)
- * Author = 蒋立鑫
+ * Author = 热心网友蒋先生
  * FileBasename = Compare.ts
  * FileBasenameNoExtension = Compare
  * URL = db://assets/Compare.ts

@@ -31,7 +31,7 @@ export class Quadtree {
      */
     split() {
 
-        var nextLevel = this.level + 1,
+        let nextLevel = this.level + 1,
             subWidth = this.bounds.width / 2,
             subHeight = this.bounds.height / 2,
             x = this.bounds.x,
@@ -80,11 +80,11 @@ export class Quadtree {
     getIndex(node:Node) {
         let pRect = node.getComponent(UITransform);
         let pRectPos = node.getPosition();
-        var indexes = [],
+        let indexes = [],
             verticalMidpoint = this.bounds.x + (this.bounds.width / 2),
             horizontalMidpoint = this.bounds.y + (this.bounds.height / 2);
 
-        var startIsNorth = pRectPos.y < horizontalMidpoint,
+        let startIsNorth = pRectPos.y < horizontalMidpoint,
             startIsWest = pRectPos.x < verticalMidpoint,
             endIsEast = pRectPos.x + pRect.width > verticalMidpoint,
             endIsSouth = pRectPos.y + pRect.height > horizontalMidpoint;
@@ -121,14 +121,14 @@ export class Quadtree {
      */
     insert(node:Node) {
 
-        var i = 0,
+        let i = 0,
             indexes;
 
         //if we have subnodes, call insert on matching subnodes
         if (this.nodes.length) {
-            indexes = this.getIndex(node);
+           let indexes = this.getIndex(node);
 
-            for (i = 0; i < indexes.length; i++) {
+            for (let i = 0; i < indexes.length; i++) {
                 this.nodes[indexes[i]].insert(node);
             }
             return;
@@ -148,7 +148,7 @@ export class Quadtree {
             //add all objects to their corresponding subnode
             for (i = 0; i < this.objects.length; i++) {
                 indexes = this.getIndex(this.objects[i]);
-                for (var k = 0; k < indexes.length; k++) {
+                for (let k = 0; k < indexes.length; k++) {
                     this.nodes[indexes[k]].insert(this.objects[i]);
                 }
             }
@@ -166,12 +166,12 @@ export class Quadtree {
      */
     retrieve(node) {
 
-        var indexes = this.getIndex(node),
+        let indexes = this.getIndex(node),
             returnObjects = this.objects;
 
         //if we have subnodes, retrieve their objects
         if (this.nodes.length) {
-            for (var i = 0; i < indexes.length; i++) {
+            for (let i = 0; i < indexes.length; i++) {
                 returnObjects = returnObjects.concat(this.nodes[indexes[i]].retrieve(node));
             }
         }
@@ -192,7 +192,7 @@ export class Quadtree {
 
         this.objects = [];
 
-        for (var i = 0; i < this.nodes.length; i++) {
+        for (let i = 0; i < this.nodes.length; i++) {
             if (this.nodes.length) {
                 this.nodes[i].clear();
             }
