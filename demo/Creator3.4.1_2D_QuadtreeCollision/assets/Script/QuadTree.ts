@@ -8,10 +8,10 @@ export class Quadtree {
     public nodes: Array<Quadtree>;
     /**
      * Quadtree Constructor
-     * @param Object bounds            bounds of the node { x, y, width, height }
-     * @param Integer max_objects      (optional) max objects a node can hold before splitting into 4 subnodes (default: 10)
-     * @param Integer max_levels       (optional) total max levels inside root Quadtree (default: 4) 
-     * @param Integer level            (optional) depth level, required for subnodes (default: 0)
+     * @param Object bounds             节点的边界 { x, y, width, height }
+     * @param Integer max_objects      (可选)一个节点在分裂成4个子节点之前可以容纳的最大对象(默认：10)
+     * @param Integer max_levels       (可选)根四叉树内的最大级别总数(默认：4) 
+     * @param Integer level           (可选）深度等级，对子节点来说是必需的（默认：0）。
      */
     public constructor(bounds, max_objects?, max_levels?, level?) {
 
@@ -27,7 +27,7 @@ export class Quadtree {
 
 
     /**
-     * Split the node into 4 subnodes
+     *将该节点分成4个子节点
      */
     split() {
 
@@ -37,7 +37,7 @@ export class Quadtree {
             x = this.bounds.x,
             y = this.bounds.y;
 
-        //top right node
+        //右上角节点
         this.nodes[0] = new Quadtree({
             x: x + subWidth,
             y: y,
@@ -45,7 +45,7 @@ export class Quadtree {
             height: subHeight
         }, this.max_objects, this.max_levels, nextLevel);
 
-        //top left node
+        //左上角节点
         this.nodes[1] = new Quadtree({
             x: x,
             y: y,
@@ -53,7 +53,7 @@ export class Quadtree {
             height: subHeight
         }, this.max_objects, this.max_levels, nextLevel);
 
-        //bottom left node
+        //左下角节点
         this.nodes[2] = new Quadtree({
             x: x,
             y: y + subHeight,
@@ -61,7 +61,7 @@ export class Quadtree {
             height: subHeight
         }, this.max_objects, this.max_levels, nextLevel);
 
-        //bottom right node
+        //右下角节点
         this.nodes[3] = new Quadtree({
             x: x + subWidth,
             y: y + subHeight,
@@ -72,10 +72,9 @@ export class Quadtree {
 
 
     /**
-     * Determine which node the object belongs to
-     * @param Object pRect      bounds of the area to be checked, with x, y, width, height
-     * @return Array            an array of indexes of the intersecting subnodes 
-     *                          (0-3 = top-right, top-left, bottom-left, bottom-right / ne, nw, sw, se)
+     * 确定该对象属于哪个节点
+     * @param Object pRect     要检查的区域的边界，包括x、y、宽度、高度
+     * @return Array          相交的子节点的索引数组 (0-3 = 右上、左上、左下、右下/NE、NW、SW、SE)
      */
     getIndex(node:Node) {
         let pRect = node.getComponent(UITransform);
@@ -89,22 +88,22 @@ export class Quadtree {
             endIsEast = pRectPos.x + pRect.width > verticalMidpoint,
             endIsSouth = pRectPos.y + pRect.height > horizontalMidpoint;
 
-        //top-right quad
+        //右上角四边形
         if (startIsNorth && endIsEast) {
             indexes.push(0);
         }
 
-        //top-left quad
+        //左上角四边形
         if (startIsWest && startIsNorth) {
             indexes.push(1);
         }
 
-        //bottom-left quad
+        //左下角四边形
         if (startIsWest && endIsSouth) {
             indexes.push(2);
         }
 
-        //bottom-right quad
+        //右下角四边形
         if (endIsEast && endIsSouth) {
             indexes.push(3);
         }
@@ -114,17 +113,15 @@ export class Quadtree {
 
 
     /**
-     * Insert the object into the node. If the node
-     * exceeds the capacity, it will split and add all
-     * objects to their corresponding subnodes.
-     * @param Object pRect        bounds of the object to be added { x, y, width, height }
+     * 将该对象插入节点。如果该节点超过容量，它就会分裂并将所有的对象到它们相应的子节点。
+     * @param Object pRect       要添加的对象的边界 { x, y, width, height }
      */
     insert(node:Node) {
 
         let i = 0,
             indexes;
 
-        //if we have subnodes, call insert on matching subnodes
+        //如果我们有子节点，在匹配的子节点上调用插入。
         if (this.nodes.length) {
            let indexes = this.getIndex(node);
 
@@ -134,18 +131,18 @@ export class Quadtree {
             return;
         }
 
-        //otherwise, store object here
+        //否则，将对象存储在这里
         this.objects.push(node);
 
-        //max_objects reached
+        //max_objects 达成
         if (this.objects.length > this.max_objects && this.level < this.max_levels) {
 
-            //split if we don't already have subnodes
+            //如果我们还没有子节点，就进行分割
             if (!this.nodes.length) {
                 this.split();
             }
 
-            //add all objects to their corresponding subnode
+            //将所有对象添加到其相应的子节点中
             for (i = 0; i < this.objects.length; i++) {
                 indexes = this.getIndex(this.objects[i]);
                 for (let k = 0; k < indexes.length; k++) {
@@ -153,30 +150,30 @@ export class Quadtree {
                 }
             }
 
-            //clean up this node
+            //清理这个节点
             this.objects = [];
         }
     };
 
 
     /**
-     * Return all objects that could collide with the given object
-     * @param Object pRect      bounds of the object to be checked { x, y, width, height }
-     * @return Array            array with all detected objects
+     * 返回所有可能与给定对象发生碰撞的对象。
+     * @param Object node     要检查的对象的边界 { x, y, width, height }
+     * @return Array            包含所有检测到的对象的数组
      */
     retrieve(node) {
 
         let indexes = this.getIndex(node),
             returnObjects = this.objects;
 
-        //if we have subnodes, retrieve their objects
+        //如果我们有子节点，检索它们的对象
         if (this.nodes.length) {
             for (let i = 0; i < indexes.length; i++) {
                 returnObjects = returnObjects.concat(this.nodes[indexes[i]].retrieve(node));
             }
         }
 
-        //remove duplicates
+        //删除重复的内容
         returnObjects = returnObjects.filter(function (item, index) {
             return returnObjects.indexOf(item) >= index;
         });
@@ -186,7 +183,7 @@ export class Quadtree {
 
 
     /**
-     * Clear the quadtree
+     * 清除四叉树
      */
     clear() {
 
