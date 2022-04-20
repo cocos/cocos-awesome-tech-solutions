@@ -26,22 +26,22 @@
 # 效果预览
 
   > 切换画板
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211129/2021112901.gif)
+  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/main/gif/20211129/2021112901.gif)
   >
   > 绘画
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211129/2021112902.gif)
+  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/main/gif/20211129/2021112902.gif)
   >
   > 撤销
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211129/2021112903.gif)
+  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/main/gif/20211129/2021112903.gif)
   >
   > 清屏
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211129/2021112904.gif)
+  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/main/gif/20211129/2021112904.gif)
   >
   > 橡皮擦
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211129/2021112905.gif)
+  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/main/gif/20211129/2021112905.gif)
   >
   > 渐变色画笔(初步)
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211129/2021112906.gif)
+  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/main/gif/20211129/2021112906.gif)
 
 
 # TODO List

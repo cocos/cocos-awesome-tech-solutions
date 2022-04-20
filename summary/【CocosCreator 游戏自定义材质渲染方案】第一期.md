@@ -9,13 +9,13 @@
 
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/shader/Creator3.3.0_2D_Sprite_CircularAvatar
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/main/shader/Creator3.3.0_2D_Sprite_CircularAvatar
   >
   > 素材来自: 
   >
   > https://github.com/ifengzp/cocos-awesome/tree/master/assets/Scene/Circle_avatar
   
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/image/20211208/2021120801.jpg)
+  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/main/image/20211208/2021120801.jpg)
 
 
 
@@ -25,13 +25,13 @@
 
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/shader/Creator3.3.0_3D_CharacterShield
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/main/shader/Creator3.3.0_3D_CharacterShield
   >
   > 素材来自: 
   >
   > https://gitee.com/carlosyzy/Creator3D_Shield/tree/master/project
   
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211209/2021120901.gif)
+  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/main/gif/20211209/2021120901.gif)
 
 
 
@@ -41,13 +41,13 @@
 
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/shader/Creator3.3.0_2D_Sprite_WaterRipple
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/main/shader/Creator3.3.0_2D_Sprite_WaterRipple
   >
   > 素材来自: 
   >
   > https://github.com/ifengzp/cocos-awesome/tree/master/assets/Scene/Water_spread
   
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211209/2021120902.gif)
+  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/main/gif/20211209/2021120902.gif)
 
 
 
@@ -57,13 +57,13 @@
 
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/shader/Creator3.3.0_2D_Sprite_PlantsBlownByTheWind
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/main/shader/Creator3.3.0_2D_Sprite_PlantsBlownByTheWind
   >
   > 素材来自: 
   >
   > https://forum.cocos.org/t/topic/123866
   
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211209/2021120903.gif)
+  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/main/gif/20211209/2021120903.gif)
 
 
 
@@ -73,10 +73,10 @@
 
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/shader/Creator3.3.0_3D_NoiseAbatement
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/main/shader/Creator3.3.0_3D_NoiseAbatement
   >
   > 素材来自: 
   >
   > https://gitee.com/carlosyzy/Creator3D_Shader_Noise_Dissolve
   
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/main/gif/20211210/2021121001.gif)
+  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/main/gif/20211210/2021121001.gif)
