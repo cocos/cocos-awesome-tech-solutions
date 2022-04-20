@@ -19,4 +19,4 @@ TODO：
 
 当前效果演示:
 
-![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20220120/20220120001.gif)
+![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/gif/20220120/20220120001.gif)

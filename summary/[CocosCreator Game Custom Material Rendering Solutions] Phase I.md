@@ -9,13 +9,13 @@
 
   > Project git repository address: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/shader/Creator3.3.0_2D_Sprite_CircularAvatar
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/main/shader/Creator3.3.0_2D_Sprite_CircularAvatar
   >
   > Source from: 
   >
   > https://github.com/ifengzp/cocos-awesome/tree/master/assets/Scene/Circle_avatar
 
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/image/20211208/2021120801.jpg)
+  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/image/20211208/2021120801.jpg)
 
 
 
@@ -25,13 +25,13 @@
 
   > Project git repository address: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/shader/Creator3.3.0_3D_CharacterShield
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/main/shader/Creator3.3.0_3D_CharacterShield
   >
   > Source from: 
   >
   > https://gitee.com/carlosyzy/Creator3D_Shield/tree/master/project
 
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211209/2021120901.gif)
+  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/gif/20211209/2021120901.gif)
 
 
 
@@ -41,13 +41,13 @@
 
   > Project git repository address: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/shader/Creator3.3.0_2D_Sprite_WaterRipple
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/main/shader/Creator3.3.0_2D_Sprite_WaterRipple
   >
   > Source from: 
   >
   > https://github.com/ifengzp/cocos-awesome/tree/master/assets/Scene/Water_spread
   
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211209/2021120902.gif)
+  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/gif/20211209/2021120902.gif)
 
 
 
@@ -57,13 +57,13 @@
 
   > Project git repository address: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/shader/Creator3.3.0_2D_Sprite_PlantsBlownByTheWind
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/main/shader/Creator3.3.0_2D_Sprite_PlantsBlownByTheWind
   >
   > Source from: 
   >
   > https://forum.cocos.org/t/topic/123866
   
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211209/2021120903.gif)
+  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/gif/20211209/2021120903.gif)
 
 
 
@@ -73,10 +73,10 @@
 
   > Project git repository address: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/main/shader/Creator3.3.0_3D_NoiseAbatement
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/main/shader/Creator3.3.0_3D_NoiseAbatement
   >
   > Source from: 
   >
   > https://gitee.com/carlosyzy/Creator3D_Shader_Noise_Dissolve
   
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211210/2021121001.gif)
+  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/gif/20211210/2021121001.gif)

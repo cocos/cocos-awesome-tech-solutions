@@ -9,14 +9,14 @@
 
   > Project git repository address:
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_Light
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_Light
   >
   > Source from:
   >
   > https://www.codeandweb.com/blog/2015/05/12/lighting-demo-cocos2d-x    
   > https://github.com/CodeAndWeb/cocos2d-x-dynamic-lighting    
 
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211111/2021111101.gif)
+  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/gif/20211111/2021111101.gif)
 
   
 
@@ -26,13 +26,13 @@
 
   > Project git repository address:
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_ShadowMap
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_ShadowMap
   >
   > Source from:
   >
   > https://github.com/mattdesl/lwjgl-basics/wiki/2D-Pixel-Perfect-Shadows
   
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211111/2021111102.gif)
+  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/gif/20211111/2021111102.gif)
 
 
 
@@ -42,13 +42,13 @@
 
   > Project git repository address:
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_spine_changeSlot_with_texture
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_spine_changeSlot_with_texture
   >
   > Source from:
   >
   > https://blog.csdn.net/xjw532881071/article/details/107766975
   
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211111/2021111103.gif)
+  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/gif/20211111/2021111103.gif)
 
 
 
@@ -58,13 +58,13 @@
 
   > Project git repository address: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_3D_cartoon_vegetation
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.0_3D_cartoon_vegetation
   >
   > Source from:
   > 
   > https://gitee.com/mirrors_cocos-creator/cartoon-vegetation
 
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211126/2021112603.gif)
+  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/gif/20211126/2021112603.gif)
 
 
 
@@ -74,7 +74,7 @@
 
   > Project git repository address: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_DrawingBoard
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_DrawingBoard
   >
   > Source from: 
   >
@@ -82,22 +82,22 @@
   > http://www.yini.org/liuyan/rgbcolor.htm    
   > 
   > Switching of the drawing board
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211129/2021112901.gif)
+  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/gif/20211129/2021112901.gif)
   >
   > Drawing
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211129/2021112902.gif)
+  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/gif/20211129/2021112902.gif)
   >
   > Undo
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211129/2021112903.gif)
+  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/gif/20211129/2021112903.gif)
   >
   > Clear
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211129/2021112904.gif)
+  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/gif/20211129/2021112904.gif)
   >
   > Erase
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211129/2021112905.gif)
+  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/gif/20211129/2021112905.gif)
   >
   > Gradient colour brushes(Preliminary program)
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211129/2021112906.gif)
+  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/gif/20211129/2021112906.gif)
 
 
 
@@ -107,20 +107,20 @@
 
   > Project git repository address: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.3.2_3D_Navigation
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.3.2_3D_Navigation
   >
   > Source from: 
   >
   > https://github.com/zhangyizhang/Extensions/tree/cocos/recastjs/demo
   > 
   > Adding barriers (Round Barrier & Square Barrier)
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211129/2021112911.gif)
+  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/gif/20211129/2021112911.gif)
   > 
   > Add a character and find your way around
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211129/2021112912.gif)
+  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/gif/20211129/2021112912.gif)
   > 
   > Climbing with connecting cable link
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211129/2021112913.gif)
+  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/gif/20211129/2021112913.gif)
 
 
 
@@ -130,14 +130,14 @@
 
   > Project git repository address: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_SpriteSplit
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_SpriteSplit
   >
   > Source from: 
   >
   > https://github.com/kirikayakazuto/CocosCreator_UIFrameWork/tree/SplitTexture/assets/Script/test    
   > https://forum.cocos.org/t/topic/103699    
   
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211208/2021120801.gif)
+  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/gif/20211208/2021120801.gif)
 
 
 
@@ -147,7 +147,7 @@
 
   > Project git repository address: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_GifResourceLoading
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_GifResourceLoading
   >
   > Source from: 
   >
@@ -157,7 +157,7 @@
   > https://github.com/2van/cocos-creator-gif    
   > https://github.com/waiter/Cocos-GIF    
   
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211216/2021121601.gif)
+  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/gif/20211216/2021121601.gif)
 
 
 
@@ -167,13 +167,13 @@
 
   > Project git repository address: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_Fluids
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_Fluids
   >
   > Source from: 
   >
   > https://github.com/caogtaa/CCTricks/tree/caogtaa/20200709_metaballs
   
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211216/2021121602.gif)
+  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/gif/20211216/2021121602.gif)
 
 
 
@@ -185,29 +185,29 @@
   >
   > Project git repository address: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_3D_SkeletalAnimationSpecifiedFrame
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.0_3D_SkeletalAnimationSpecifiedFrame
   >
   > Source from: 
   >
   > https://www.mixamo.com/#/?page=1&type=Character
   
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211228/2021122801.gif)
+  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/gif/20211228/2021122801.gif)
 
   - DragonBones
   >
   > Project git repository address: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_DragonBonesSpecifiedFrame
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_DragonBonesSpecifiedFrame
   
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211228/2021122802.gif)
+  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/gif/20211228/2021122802.gif)
 
   - Spine
   >
   > Project git repository address: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_SpineSpecifiedFrame
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_SpineSpecifiedFrame
 
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211228/2021122803.gif)
+  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/gif/20211228/2021122803.gif)
 
 
 
@@ -215,9 +215,9 @@
 
 * （v3.4.0）Partial Area Screenshot And Saving
 
-  > Project git repository address:  https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_PartialScreenshot
+  > Project git repository address:  https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.0_PartialScreenshot
 
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20211228/2021122804.gif) 
+  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/gif/20211228/2021122804.gif) 
  
   > Note: Currently Cocos Creator version 3.0.0 ~ 3.4.0 does not support interface jsb.saveImageData, the Engine Team plans to support in version 3.5.0, to save imageData as a local png file need to refer to the following PR ans customizated the engine code. https://gitee.com/zzf2019/engine-native/ commit/1ddb6ec9627a8320cd3545d353d8861da33282a8 (this PR only supports saving png, and only supports ios, android)
   >

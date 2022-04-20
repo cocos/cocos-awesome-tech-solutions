@@ -9,7 +9,7 @@
 
   > Project git repository address:
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_RealNameAuthentication
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.0_RealNameAuthentication
   >
   > Source from:
   >
@@ -17,7 +17,7 @@
   > http://www.uustory.com/?p=2419    
   > https://wlc.nppa.gov.cn/fcm_company/index.html#/login?redirect=%2F    
   
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/image/20220110/2022011011.png)
+  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/image/20220110/2022011011.png)
 
 
 
@@ -27,9 +27,9 @@
 
   > Project git repository address:
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_ListViewExtension
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_ListViewExtension
 
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20220119/2022011901.gif)
+  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/gif/20220119/2022011901.gif)
 
   > Note: Because of the current low and fluctuating frame rate on Mac browsers, this can be temporarily handled by limiting the frame rate to `game.frameRate=61;`.
 
@@ -41,13 +41,13 @@
 
   > Project git repository address:
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_3D_MeshCutter
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.0_3D_MeshCutter
   >
   > Source from:
   >
   > https://sketchfab.com/search?features=downloadable&licenses=322a749bcfa841b29dff1e8a1bb74b0b&licenses=b9ddc40b93e34cdca1fc152f39b9f375&licenses=72360ff1740d419791934298b8b6d270&licenses=bbfe3f7dbcdd4122b966b85b9786a989&licenses=2628dbe5140a4e9592126c8df566c0b7&licenses=34b725081a6a4184957efaec2cb84ed3&licenses=7c23a1ba438d4306920229c12afcb5f9&licenses=783b685da9bf457d81e829fa283f3567&licenses=5b54cf13b1a4422ca439696eb152070d&q=tag%3Afruit&sort_by=-likeCount&type=models
 
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20220120/2022012001.gif)
+  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/gif/20220120/2022012001.gif)
 
   > - Currently only models with builtin-unlit materials are supported for cutting.
   > - the engine module requires a Bullet-based physics engine.
@@ -66,10 +66,10 @@
 
   > Project git repository address:
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_Mask_Polygon
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_Mask_Polygon
   >
   > Source from:
   >
   > https://github.com/kirikayakazuto/CocosCreator_UIFrameWork/tree/SplitTexture
 
-  ![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/gif/20220120/2022012002.gif)
+  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/gif/20220120/2022012002.gif)

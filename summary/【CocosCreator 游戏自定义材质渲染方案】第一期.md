@@ -9,7 +9,7 @@
 
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/shader/Creator3.4.1_2D_Sprite_CircularAvatar
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/shader/Creator3.4.1_2D_Sprite_CircularAvatar
   >
   > 素材来自: 
   >
@@ -25,7 +25,7 @@
 
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/shader/Creator3.4.1_3D_CharacterShield
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/shader/Creator3.4.1_3D_CharacterShield
   >
   > 素材来自: 
   >
@@ -41,7 +41,7 @@
 
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/shader/Creator3.4.1_2D_Sprite_WaterRipple
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/shader/Creator3.4.1_2D_Sprite_WaterRipple
   >
   > 素材来自: 
   >
@@ -57,7 +57,7 @@
 
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/shader/Creator3.4.1_2D_Sprite_PlantsBlownByTheWind
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/shader/Creator3.4.1_2D_Sprite_PlantsBlownByTheWind
   >
   > 素材来自: 
   >
@@ -72,7 +72,7 @@
 
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/shader/Creator3.4.1_3D_NoiseAbatement
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/shader/Creator3.4.1_3D_NoiseAbatement
   >
   > 素材来自: 
   >
@@ -88,7 +88,7 @@
 
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/shader/Creator3.4.1_2D_Sprite_NoiseAbatement
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/shader/Creator3.4.1_2D_Sprite_NoiseAbatement
   >
   > 素材来自: 
   >
@@ -104,7 +104,7 @@
 
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/shader/Creator3.4.1_2D_Sprite_MirrorShine
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/shader/Creator3.4.1_2D_Sprite_MirrorShine
   >
   > 素材来自: 
   >
