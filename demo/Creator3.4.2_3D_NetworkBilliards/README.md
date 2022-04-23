@@ -1,5 +1,5 @@
 客户端：CocosCreator 3.4.2
-服务端：NodeJS
+服务端：Node.js
 联网方式：WebSocket
 
 服务器启动方式：
