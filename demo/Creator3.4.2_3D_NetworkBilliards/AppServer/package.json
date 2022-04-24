@@ -1,0 +1,16 @@
+{
+  "name": "wss",
+  "version": "1.0.0",
+  "description": "myTestWebSocket",
+  "main": "index.js",
+  "dependencies": {
+    "mysql": "^2.18.1",
+    "nodejs-websocket": "^1.7.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node AppServer.js"
+  },
+  "author": "zzf",
+  "license": "ISC"
+}
