@@ -29,7 +29,7 @@
 #include "cocos/bindings/manual/jsb_classtype.h"
 #include "cocos/bindings/manual/jsb_global.h"
 #include "cocos/bindings/manual/jsb_module_register.h"
-#include "./jsb_spine_cloth.h"
+#include "./jsb_spine_cloth.cpp"
 
 #if (CC_PLATFORM == CC_PLATFORM_MAC_IOS)
     #include "platform/Device.h"
