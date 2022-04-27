@@ -19,4 +19,8 @@ TODO：
 
 当前效果演示:
 
+<<<<<<< Updated upstream
 ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/gif/20220120/20220120001.gif)
+=======
+![Image Text](https://forum.cocos.org/uploads/default/original/3X/a/e/aeb830fb69570824e5443a28268849240cf44bcc.gif)
+>>>>>>> Stashed changes
