@@ -327,3 +327,32 @@
   > 四叉树方案来自：https://github.com/xjz1994/Collision
   
   ![Image Text](https://forum.cocos.org/uploads/default/original/3X/3/e/3e2ee25fec90d566d76b2d7df63f593e6051f260.gif)
+
+*youyou提供，技术支持团队升级项目*
+
+* (v3.4.2) raphael (Graphics 拓展和 SVG 加载)
+
+  > 工程 git 仓库地址: 
+  >
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.2_Raphael
+  >
+  > 需知：目前引擎有一处 bug，会导致 svg 场景渲染异常。详细问题描述可以看一下 [issues](https://github.com/cocos/cocos-engine/issues/10900)，解决问题的办法是参考下图中红色代码定制一下引擎：
+![图片|549x500](https://forum.cocos.org/uploads/default/original/3X/7/3/7324f0b63f08a3d99ce3cc5b08360908fa541414.png) 
+
+*技术支持团队提供*
+
+* (v3.4.2) 检测模型是否具有第二套 UV 的插件
+
+  > 工程 git 仓库地址: 
+  >
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.2_LightmapUV
+  >
+  > 背景: 
+  >
+  > 生成光照贴图，模型除了本身的 UV，还需要另外包含一套 UV，详情参考：https://docs.cocos.com/creator/manual/zh/concepts/scene/light/lightmap.html 。所以如何快速判断模型是否具有第二套 UV 是关键的一个步骤。
+  
+  > 使用说明:
+ 1. 在拓展中添加check2uv
+  ![2022042401|690x459](https://forum.cocos.org/uploads/default/optimized/3X/a/1/a142a172484de50c90f6d3fb1667282dc2661215_2_1380x918.png) 
+ 2. 刷新拓展，可以在控制台看到检测的结果
+  ![2022042402|690x346](https://forum.cocos.org/uploads/default/original/3X/a/3/a3951f8fa963a75535650c43be84be60a098a0f5.png) 
