@@ -26,15 +26,6 @@
 # 效果预览
 
   > 添加障碍 (圆形障碍 & 方形障碍)
-<<<<<<< Updated upstream
-  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/main/gif/20211129/2021112911.gif)
-  > 
-  > 添加角色 并寻路
-  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/main/gif/20211129/2021112912.gif)
-  > 
-  > 使用连接线 link 爬坡
-  ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/main/gif/20211129/2021112913.gif)
-=======
   ![Image Text](https://forum.cocos.org/uploads/default/original/3X/3/5/35d8b9c64bc9b6db33e159a22b6d4931d54e3830.gif)
   > 
   > 添加角色 并寻路
@@ -43,7 +34,6 @@
   > 使用连接线 link 爬坡
   ![Image Text](https://forum.cocos.org/uploads/default/original/3X/8/9/8923769b5dcbb446f4c01f9f443dee9971188302.gif)
   需注意目前 3.4.x 版本引擎还不支持加载 obj 格式模型资源，所以需要使用第三方 DCC 工具重新导出成 fbx 方可使用。
->>>>>>> Stashed changes
 
 # TODO List
 
