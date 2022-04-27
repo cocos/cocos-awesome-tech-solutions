@@ -32,7 +32,7 @@
   >
   > https://github.com/mattdesl/lwjgl-basics/wiki/2D-Pixel-Perfect-Shadows
   
-  ![Image Text](http://download.cocos.org/CocosTest/zhefengzhang/NoDelete/shadow.gif)
+  ![Image Text](https://download.cocos.org/CocosTest/zhefengzhang/NoDelete/shadow.gif)
 
 
 
