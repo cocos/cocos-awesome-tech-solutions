@@ -50,6 +50,7 @@ export class Main extends Component {
             this.isLoop = false;
             this.skeletalAnimState.setTime(beginTime);
             this.skeletalAnimState.play();
+            this.skeletalAnimState.time = beginTime;
 
             if (endTime >= this.skeletalAnimState.duration) endTime = this.skeletalAnimState.duration;
             this.setPlayTime = endTime;
