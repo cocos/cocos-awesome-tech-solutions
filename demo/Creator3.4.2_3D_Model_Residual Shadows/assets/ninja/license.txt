@@ -1,0 +1,11 @@
+Model Information:
+* title:	Ninja
+* source:	https://sketchfab.com/3d-models/ninja-79c6a037c4864aeeb170db9feab8e600
+* author:	histrix88 (https://sketchfab.com/histrix88)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Ninja" (https://sketchfab.com/3d-models/ninja-79c6a037c4864aeeb170db9feab8e600) by histrix88 (https://sketchfab.com/histrix88) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
