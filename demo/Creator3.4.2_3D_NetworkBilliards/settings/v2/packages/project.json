@@ -1,0 +1,33 @@
+{
+  "__version__": "1.0.1",
+  "custom_joint_texture_layouts": [],
+  "layer": [
+    {
+      "name": "billiard",
+      "value": 1
+    },
+    {
+      "name": "hole",
+      "value": 2
+    }
+  ],
+  "physics": {
+    "collisionGroups": [
+      {
+        "index": 1,
+        "name": "Hole"
+      },
+      {
+        "index": 2,
+        "name": "Ball"
+      }
+    ],
+    "collisionMatrix": {
+      "0": 4,
+      "1": 4,
+      "2": 7
+    },
+    "autoSimulation": false,
+    "fixedTimeStep": 0.0166667
+  }
+}

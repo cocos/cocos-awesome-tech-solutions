@@ -160,6 +160,7 @@ export class PlayerMovementScript extends Component {
 
     update(dt: number) {
         TimeEx.deltaTime = dt;
+        this.PlayerMovementLogic();
         PhysicsSystem.instance.step(TimeEx.deltaTime);
         PhysicsSystem.instance.emitEvents();
     }
@@ -169,6 +170,5 @@ export class PlayerMovementScript extends Component {
         this.Crouching();
         this.WalkingSound();
         this.RaycastForMeleeAttacks();
-        this.PlayerMovementLogic();
     }
 }

@@ -11,51 +11,51 @@
 
 ## 接入流程
 
-![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/image/20220110/2022011001.jpg)
+![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/image/20220110/2022011001.jpg)
 
 ## 步骤
     
-1. 登录[网络游戏防沉迷实名认证系统](https://wlc.nppa.gov.cn/fcm_company/index.html), 阅读用户操作指引等相关内容，完成企业注册工作。详情查看：[网络游戏防沉迷实名认证系统企业接入操作手册](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/demo/Creator3.4.0_RealNameAuthentication/file/%E7%BD%91%E7%BB%9C%E6%B8%B8%E6%88%8F%E9%98%B2%E6%B2%89%E8%BF%B7%E5%AE%9E%E5%90%8D%E8%AE%A4%E8%AF%81%E7%B3%BB%E7%BB%9F%E4%BC%81%E4%B8%9A%E6%8E%A5%E5%85%A5%E6%93%8D%E4%BD%9C%E6%89%8B%E5%86%8C.pdf)    
+1. 登录[网络游戏防沉迷实名认证系统](https://wlc.nppa.gov.cn/fcm_company/index.html), 阅读用户操作指引等相关内容，完成企业注册工作。详情查看：[网络游戏防沉迷实名认证系统企业接入操作手册](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/demo/Creator3.4.0_RealNameAuthentication/file/%E7%BD%91%E7%BB%9C%E6%B8%B8%E6%88%8F%E9%98%B2%E6%B2%89%E8%BF%B7%E5%AE%9E%E5%90%8D%E8%AE%A4%E8%AF%81%E7%B3%BB%E7%BB%9F%E4%BC%81%E4%B8%9A%E6%8E%A5%E5%85%A5%E6%93%8D%E4%BD%9C%E6%89%8B%E5%86%8C.pdf)    
 *备注：IP 白名单填写的 IP 不是本地 IP (10.0.0.0 - 10.255.255.255、172.16.0.0 - 172.31.255.255、192.168.0.0 - 192.168.255.255)，应该是公网 IP，本机的公网 IP 可以通过[IP查询](https://www.ip138.com/)查询*
 
 2. 注册相关的具体流程 略。通过`用户名 + 密码 + 短信验证码`登录网络游戏防沉迷实名认证系统。
 
 3. 进行测试工具接口测试。在`网络游戏防沉迷实名认证系统 -> 数据共享 -> 测试工具`中进行简单的数据测试，其中应用标识 (APPID)、游戏备案识别码 (bizId)、用户密钥 (Secret Key)为企业注册成功后获得。*后续的`接口测试`会使用到喔!*
-![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/image/20220110/2022011002.png)    
+![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/image/20220110/2022011002.png)    
 我们模拟操作一下测试工具接口测试，选择`实名认证`, 填写`{"ai": "1000000000010"}`点击生成报文，发送请求。 会得到`报文消息密文`以及`反馈 (Response)`。
-![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/image/20220110/2022011003.png)    
+![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/image/20220110/2022011003.png)    
 
 4. 进行接口测试之前，我们先了解一下本次方案需要的工程。`RealNameAuthentication`为基于`Cocos Creator 3.4.0`版本创建的工程，作为客户端。`websocketServer`为基于`Android Studio`创建的工程，用于模拟服务端(本地搭建的 WebSocket 服务器)。
 
 5. 测试服务器。使用`Android Studio`打开`websocketServer`工程。先确保一下需要导入的 jar 依赖库是否导入成功。
-![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/image/20220110/2022011005.png) 
+![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/image/20220110/2022011005.png) 
 
 6. 在 Demo.java 中配置 APPID、bizId、Secret Key 等参数，这些在进行测试工具接口测试时有介绍。另外 CheckUrl、QueryUrl 为实名认证接口和实名认证结果查询接口。          
 *备注: Demo.java 的位置 websocketServer/src/main/java/demo/Demo.java*    
 *备注: CheckUrl 实名认证接口为`"https://wlc.nppa.gov.cn/test/authentication/check/" + 测试码`组成，测试码为`实名认证接口`开始测试时动态生成的，测试实现1小时。*      
 *备注: QueryUrl 实名认证结果查询接口为`"https://wlc.nppa.gov.cn/test/authentication/query/" + 测试码`组成，测试码为`实名认证结果查询接口`开始测试时动态生成的，测试实现1小时。*    
 *备注: DataUploadUrl 数据上报接口为`"https://wlc.nppa.gov.cn/test/collection/loginout/" + 测试码`组成，测试码为`数据上报接口`开始测试时动态生成的，测试实现1小时。*   
-![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/image/20220110/2022011006.png)
-![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/image/20220110/2022011004.png)
+![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/image/20220110/2022011006.png)
+![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/image/20220110/2022011004.png)
 运行 `Demo`, 可以获取我们的测试结果
-![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/image/20220110/2022011007.png)
+![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/image/20220110/2022011007.png)
 *备注: Demo 只是模拟接口测试的数据，因为使用的测试码是过期的，所以提示`TEST TASK NOT EXIST`, 这个是正常的*
 
 7. 通过服务器 Demo 测试，启动本地服务器。在 NppaUtils.java 中配置 APPID、bizId、Secret Key、CheckUrl、QueryUrl 等参数。
-![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/image/20220110/2022011008.png)
+![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/image/20220110/2022011008.png)
 运行 `EchoServer`, 本地服务器搭建完成
-![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/image/20220110/2022011009.png)
+![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/image/20220110/2022011009.png)
 
 8. 测试客户端。使用`Cocos Creator 3.4.0`打开`RealNameAuthentication`工程。在 NewComponent 脚本中需要修改一下本地的 IP
-![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/image/20220110/2022011010.png)
+![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/image/20220110/2022011010.png)
 测试客户端
-![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/image/20220110/2022011011.png)
-![Image Text](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/image/20220110/2022011012.png)
+![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/image/20220110/2022011011.png)
+![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/image/20220110/2022011012.png)
 *备注: 目前是模拟接口测试测试客户端，因为使用的测试码是过期的，所以提示`TEST TASK NOT EXIST`, 这个是正常的*
 
 9. 使用`Cocos Creator 3.4.0`构建发布，发布 Android 和 iOS 平台。
 
-10. 进行接口测试。在`网络游戏防沉迷实名认证系统 -> 数据共享 -> 接口测试 -> 开始测试`可以获取测试码，修改`android studio`工程下的配置，进行测试。详情查看：[网络游戏防沉迷实名认证系统测试系统说明](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/demo/Creator3.4.0_RealNameAuthentication/file/%E7%BD%91%E7%BB%9C%E6%B8%B8%E6%88%8F%E9%98%B2%E6%B2%89%E8%BF%B7%E5%AE%9E%E5%90%8D%E8%AE%A4%E8%AF%81%E7%B3%BB%E7%BB%9F%E6%B5%8B%E8%AF%95%E7%B3%BB%E7%BB%9F%E8%AF%B4%E6%98%8E.pdf)
+10. 进行接口测试。在`网络游戏防沉迷实名认证系统 -> 数据共享 -> 接口测试 -> 开始测试`可以获取测试码，修改`android studio`工程下的配置，进行测试。详情查看：[网络游戏防沉迷实名认证系统测试系统说明](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/demo/Creator3.4.0_RealNameAuthentication/file/%E7%BD%91%E7%BB%9C%E6%B8%B8%E6%88%8F%E9%98%B2%E6%B2%89%E8%BF%B7%E5%AE%9E%E5%90%8D%E8%AE%A4%E8%AF%81%E7%B3%BB%E7%BB%9F%E6%B5%8B%E8%AF%95%E7%B3%BB%E7%BB%9F%E8%AF%B4%E6%98%8E.pdf)
 
 11. 接口参数说明
 #### 请求报文数据
@@ -143,4 +143,4 @@ websocket服务端启动 -> 客户端启动 -> 登录请求 -> 实名认证 -> �
 "https://wlc.nppa.gov.cn/test/authentication/check/"   ->   "https://wlc.nppa.gov.cn/idcard/authentication/check/"    
 "https://wlc.nppa.gov.cn/test/authentication/query/"   ->   "https://wlc.nppa.gov.cn/idcard/authentication/query/"    
 "https://wlc.nppa.gov.cn/test/collection/loginout/"   ->   "https://wlc.nppa.gov.cn/behavior/collection/loginout/"    
-详情查看：[网络游戏防沉迷实名认证系统接口对接技术规范](https://github.com/cocos-creator/CococsCreator-public-technology-solutions/blob/3.4.0-release/demo/Creator3.4.0_RealNameAuthentication/file/%E7%BD%91%E7%BB%9C%E6%B8%B8%E6%88%8F%E9%98%B2%E6%B2%89%E8%BF%B7%E5%AE%9E%E5%90%8D%E8%AE%A4%E8%AF%81%E7%B3%BB%E7%BB%9F%E6%8E%A5%E5%8F%A3%E5%AF%B9%E6%8E%A5%E6%8A%80%E6%9C%AF%E8%A7%84%E8%8C%83.pdf) 
+详情查看：[网络游戏防沉迷实名认证系统接口对接技术规范](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/demo/Creator3.4.0_RealNameAuthentication/file/%E7%BD%91%E7%BB%9C%E6%B8%B8%E6%88%8F%E9%98%B2%E6%B2%89%E8%BF%B7%E5%AE%9E%E5%90%8D%E8%AE%A4%E8%AF%81%E7%B3%BB%E7%BB%9F%E6%8E%A5%E5%8F%A3%E5%AF%B9%E6%8E%A5%E6%8A%80%E6%9C%AF%E8%A7%84%E8%8C%83.pdf) 

@@ -1,0 +1,26 @@
+{
+    "package_version": 2,
+    "version": "1.0.0",
+    "name": "check2uv",
+    "description": "i18n:check2uv.description",
+    "main": "./dist/main.js",
+    "dependencies": {
+        "fs-extra": "^10.0.0"
+    },
+    "devDependencies": {
+        "@types/node": "^16.0.1",
+        "@types/fs-extra": "^9.0.5",
+        "typescript": "^4.3.4"
+    },
+    "contributions": {
+        "scene":{
+            "script":"dist/scene.js"
+        }
+    },
+    "author": "Cocos Creator",
+    "editor": ">=3.4.2",
+    "scripts": {
+        "build": "tsc -b",
+        "watch": "tsc -w"
+    }
+}

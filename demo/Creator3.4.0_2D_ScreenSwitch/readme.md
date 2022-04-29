@@ -1,8 +1,8 @@
-本方案基于 CocosCreator 3.4.0 版本实现。
+This solution is based on CocosCreator version 3.4.0.
 
 - android
-    - 构建出 android 包之后，修改 AppActivity.java 文件中的代码，添加 setOrientation 函数。
-    函数代码如下：
+    - After building out the android package, modify the code in the `AppActivity.java` file to add the `setOrientation` function.
+    The function code is as follows:
     ```
     public static void setOrientation(String dir) {
         if (dir.equals("V"))
@@ -12,8 +12,8 @@
     }
     ```
 - ios
-    - 构建出 ios 包之后，修改 AppDelegate.mm 文件中的代码，添加 setOrientation 函数。
-    函数代码如下：
+    - After building out the ios package, modify the code in the `AppDelegate.mm` file to add the `setOrientation` function.
+    The function code is as follows:
     ```
     UIInterfaceOrientationMask oMask = UIInterfaceOrientationMaskLandscape;
     
@@ -34,13 +34,13 @@
     }
     ```
 
-    继续修改 ViewController.mm 文件，注释
+    Continue to modify the ViewController.mm file
     ```
     namespace {
         cc::Device::Orientation _lastOrientation;
     }
     ```
-    之后修改 viewWillTransitionToSize 函数的代码为：
+    Then modify the code of the viewWillTransitionToSize function as follows:
     ```
     cc::Device::Orientation orientation = _lastOrientation;
     // reference: https://developer.apple.com/documentation/uikit/uiinterfaceorientation?language=objc

@@ -1,0 +1,5 @@
+#app {
+    color: var(--color-normal-contrast-weakest);
+    margin: auto;
+    width: 180px;
+}
