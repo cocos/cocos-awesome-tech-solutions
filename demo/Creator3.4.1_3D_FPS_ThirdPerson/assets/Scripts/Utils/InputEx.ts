@@ -137,14 +137,16 @@ export class InputEx {
     }
 
     private static onMouseMove(event: EventMouse) {
-        mouseMove = event.getDelta();
+        if (document.pointerLockElement == game.canvas) {
+            mouseMove = event.getDelta();
+        }
     }
 
     private static onMouseDown(event: EventMouse) {
         if (game.canvas.requestPointerLock) {
             game.canvas.requestPointerLock();
         }
-                
+
         if (mouseHold.indexOf(event.getButton()) >= 0) return;
         mouseHold.unshift(event.getButton());
     }
