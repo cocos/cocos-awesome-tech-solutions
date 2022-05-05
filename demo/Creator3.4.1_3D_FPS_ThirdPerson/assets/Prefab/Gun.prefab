@@ -611,6 +611,7 @@
     "bulletsIHave": 99999,
     "bulletsInTheGun": 20,
     "amountOfBulletsPerLoad": 20,
+    "crosshair": null,
     "_id": ""
   },
   {

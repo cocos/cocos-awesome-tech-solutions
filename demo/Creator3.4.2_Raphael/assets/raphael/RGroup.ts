@@ -264,7 +264,7 @@ export class RGroup extends Component {
     //group
     _lineWidth;
     public get lineWidth() {
-        return this._lineWidth || 5;
+        return this._lineWidth || 2;
     }
     public set lineWidth(value) {
         this._lineWidth = value;

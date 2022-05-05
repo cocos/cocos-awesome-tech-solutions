@@ -1,0 +1,13 @@
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "44559f13-3fad-4b86-854b-18e01d3f4e60",
+  "files": [],
+  "subMetas": {},
+  "userData": {
+    "moduleId": "project:///assets/shared-res/first-person-camera.js",
+    "importerSettings": 0,
+    "simulateGlobals": []
+  }
+}
