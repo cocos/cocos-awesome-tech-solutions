@@ -1,0 +1,28 @@
+{
+  "modules": {
+    "includeModules": [
+      "2d",
+      "3d",
+      "audio",
+      "base",
+      "dragon-bones",
+      "gfx-webgl",
+      "gfx-webgl2",
+      "intersection-2d",
+      "marionette",
+      "particle",
+      "particle-2d",
+      "physics-2d-box2d",
+      "physics-ammo",
+      "primitive",
+      "profiler",
+      "spine",
+      "terrain",
+      "tiled-map",
+      "tween",
+      "ui",
+      "video",
+      "webview"
+    ]
+  }
+}
