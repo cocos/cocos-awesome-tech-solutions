@@ -103,18 +103,21 @@ CCProgram sprite-fs %{
 
     ALPHA_TEST(o);
 
-    // 圆心在纹理中心 vec2(0.5, 0.5), 让让圆心距离超过半径的像素丢弃或者透明度设置为0
-    float circle = radius * radius;
+    // 像素点距离纹理坐标原点的长度超过圆的半径时，设置像素透明度为 0，需要依赖透明度混合，所以必须开启 blendState
     float rx = center.x * wh_ratio;
     float ry = center.y;
     float uv_x = v_uv0.x * wh_ratio;
     float uv_y = v_uv0.y;
-    // 使用勾股定理计算圆外的像素
+    // 使用勾股定理计算渲染到屏幕上的圆的真实半径
     float a2 = (uv_x - rx) * (uv_x - rx);
     float b2 = (uv_y - ry) * (uv_y - ry);
-    float dis = a2 + b2;
-    // 使用内部插值函数 smoothstep(min, max, x) 优化边缘锯齿，达到边缘羽化效果
-    o.a = smoothstep(circle, circle - blur, dis) * o.a;
+    // 得出渲染后圆上的像素点到纹理坐标原点的距离，即为屏幕上圆形在渲染时的半径
+    float dis = sqrt(a2 + b2);
+    /* 使用平滑插值函数 smoothstep(min, max, x) 
+    当 x = min 时返回 0，当 x = max 时返回 1。当 x = min 与 max 之间的数，则返回 0 ~ 1 之间的平滑插值
+    在这里使用它可以优化边缘像素锯齿
+    */
+    o.a = smoothstep(radius, radius - blur, dis) * o.a;
 
     return o;
   }
