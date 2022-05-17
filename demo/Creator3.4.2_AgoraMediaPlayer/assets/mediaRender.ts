@@ -56,13 +56,16 @@ export class mediaRender extends Component {
 
     onPlay()
     {
+        this.isShow = true;
         jsb.MediaPlayer.getInstance().play();
     }
 
+    isShow = false;
     time = 0;
     update (deltaTime: number) {
+        
         this.time += deltaTime;
-        if (this.time > 0.1)
+        if (this.isShow && this.time > 0.1)
         {
             this.time = 0;
             this.resetTexture();

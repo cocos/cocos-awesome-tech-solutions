@@ -17,7 +17,7 @@ MediaPlayer::MediaPlayer()
 
 MediaPlayer::~MediaPlayer()
 {
-    CC_LOG_ERROR("Destruct MediaPlayer %p", this);
+    CC_LOG_INFO("Destruct MediaPlayer %p", this);
     s_SharedMediaPlayer = nullptr;
 }
 
@@ -66,7 +66,7 @@ cc::Data MediaPlayer::getFrameData()
     int height = 0;
     unsigned char* data = getOneFrame(witdh, height);
     if (data == nullptr || data[0]=='\0'){
-//        CC_LOG_ERROR("MediaPlayer getFrameData null");
+        CC_LOG_INFO("MediaPlayer getFrameData null");
         
         return cc::Data::NULL_DATA;
     }
@@ -74,7 +74,9 @@ cc::Data MediaPlayer::getFrameData()
     CC_LOG_INFO("MediaPlayer getFrameData");
     
     cc::Data ret;
-    ret.fastSet(data, witdh * height * 4);
+    unsigned char * cData = (unsigned char *) malloc(witdh * height * 4);
+    memcpy(cData, data, witdh * height * 4);
+    ret.fastSet(cData, witdh * height * 4);
 
     return ret;
 }

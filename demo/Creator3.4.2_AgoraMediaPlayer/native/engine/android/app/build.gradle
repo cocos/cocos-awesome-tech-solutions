@@ -94,5 +94,5 @@ dependencies {
     implementation fileTree(dir: "${COCOS_ENGINE_PATH}/cocos/platform/android/java/libs", include: ['*.jar'])
     implementation project(':libservice')
     implementation project(':libcocos')
-    implementation 'io.agora:player:1.3.0'
+    implementation 'io.agora:player:1.3.0.1'
 }
