@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, Sprite, Texture2D, UITransform, ImageAsset, Color } from 'cc';
+import { _decorator, Component, Node, Sprite, Texture2D, UITransform, ImageAsset, Color, macro, SpriteFrame } from 'cc';
 const { ccclass, property } = _decorator;
 
 /**
@@ -13,94 +13,76 @@ const { ccclass, property } = _decorator;
  * ManualUrl = https://docs.cocos.com/creator/3.4/manual/zh/
  *
  */
- 
+
 @ccclass('mediaRender')
 export class mediaRender extends Component {
-    // [1]
-    // dummy = '';
-
-    // [2]
-    // @property
-    // serializableDummy = 0;
-
-    sprite : Sprite = null;
-    texture : Texture2D = null;
-    img : ImageAsset = null;
+    sprite: Sprite = null;
+    texture: Texture2D = null;
+    raw: Uint8Array = null;
     width = 1920;
     height = 1080;
 
-    start () {
+    start() {
+        this.raw = new Uint8Array(this.width * this.height * 4);
         this.sprite = this.node.getComponent(Sprite);
-        this.texture = new Texture2D();
-        this.img = new ImageAsset();
-        this.img.reset({
-            _data: null,
+
+        var image = new ImageAsset();
+        image.reset({
+            _data: this.raw,
             width: this.width,
             height: this.height,
             format: Texture2D.PixelFormat.RGBA8888,
             _compressed: false
         });
-        this.texture.image = this.img;
-        this.sprite.spriteFrame.texture = this.texture;
+
+        this.texture = new Texture2D();
+        this.texture.image = image;
+        
+        let spriteFrame = new SpriteFrame();
+        spriteFrame.packable = false;
+        spriteFrame.texture = this.texture;
+        this.sprite.spriteFrame = spriteFrame;
+
+        this.schedule(() => {
+            // @ts-ignore
+            var size = jsb.MediaPlayer.getInstance().getFrameData(this.raw, this.width, this.height);
+            if (size.width == 0) return;
+            let image = new ImageAsset({
+                _data: this.raw,
+                width: size.width,
+                height: size.height,
+                format: Texture2D.PixelFormat.RGBA8888,
+                _compressed: false
+            });
+
+
+            if (this.texture) {
+                this.texture.destroy();
+                this.texture = null;
+            }
+
+            this.texture = new Texture2D();
+            this.texture.image = image;
+   
+            let spriteFrame = new SpriteFrame();
+            spriteFrame.packable = false;
+            spriteFrame.texture = this.texture;
+            this.sprite.spriteFrame = spriteFrame;
+        }, 0.1, macro.REPEAT_FOREVER);        
     }
 
-    onStop()
-    {
+    onStop() {
+        // @ts-ignore
         jsb.MediaPlayer.getInstance().stop();
     }
 
-    onOpen()
-    {
+    onOpen() {
+        // @ts-ignore
         jsb.MediaPlayer.getInstance().open();
     }
 
-    onPlay()
-    {
-        this.isShow = true;
+    onPlay() {
+        // @ts-ignore
         jsb.MediaPlayer.getInstance().play();
     }
-
-    isShow = false;
-    time = 0;
-    update (deltaTime: number) {
-        
-        this.time += deltaTime;
-        if (this.isShow && this.time > 0.1)
-        {
-            this.time = 0;
-            this.resetTexture();
-        }
-       
-    }
-
-    resetTexture()
-    {
-        let data = jsb.MediaPlayer.getInstance().getFrameData();
-        if (data === null || data == undefined || data == "" || data.byteLength == 0)
-        {
-            return;
-        }
-
-        let dataNew = new Uint8Array(data);
-
-        let image = new ImageAsset({
-            _data: dataNew,
-            width: this.width,
-            height: this.height,
-            format: Texture2D.PixelFormat.RGBA8888,
-            _compressed: false
-        });
-        this.texture.image = image;
-    }
 }
-
-/**
- * [1] Class member could be defined like this.
- * [2] Use `property` decorator if your want the member to be serializable.
- * [3] Your initialization goes here.
- * [4] Your update function goes here.
- *
- * Learn more about scripting: https://docs.cocos.com/creator/3.4/manual/zh/scripting/
- * Learn more about CCClass: https://docs.cocos.com/creator/3.4/manual/zh/scripting/decorator.html
- * Learn more about life-cycle callbacks: https://docs.cocos.com/creator/3.4/manual/zh/scripting/life-cycle-callbacks.html
- */

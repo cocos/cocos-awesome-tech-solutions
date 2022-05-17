@@ -51,7 +51,7 @@ void MediaPlayer::stop()
 void MediaPlayer::open()
 {
     CC_LOG_INFO("MediaPlayer open");
-    media_player_->open("rtmp://mobliestream.c3tv.com:554/live/goodtv.sdp", 0);
+    media_player_->open("http://download.cocos.org/CocosTest/test-case/movie.mp4", 0);
 }
 
 void MediaPlayer::play()
@@ -60,23 +60,14 @@ void MediaPlayer::play()
     media_player_->play();
 }
 
-cc::Data MediaPlayer::getFrameData()
+void MediaPlayer::getFrameData(void* ptr, size_t len, int& width, int& height)
 {
-    int witdh = 0;
-    int height = 0;
-    unsigned char* data = getOneFrame(witdh, height);
-    if (data == nullptr || data[0]=='\0'){
-        CC_LOG_INFO("MediaPlayer getFrameData null");
-        
-        return cc::Data::NULL_DATA;
+    unsigned char* data = getOneFrame(width, height);
+    if (data == nullptr){
+        width = 0;
+        height = 0;
+        return;
     }
-
-    CC_LOG_INFO("MediaPlayer getFrameData");
-    
-    cc::Data ret;
-    unsigned char * cData = (unsigned char *) malloc(witdh * height * 4);
-    memcpy(cData, data, witdh * height * 4);
-    ret.fastSet(cData, witdh * height * 4);
-
-    return ret;
+    memcpy(ptr, data, width * height * 4);
+    delete[] data;
 }

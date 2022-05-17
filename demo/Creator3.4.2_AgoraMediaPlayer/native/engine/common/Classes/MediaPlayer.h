@@ -13,16 +13,9 @@ public:
     void stop();
     void open();
     void play();
-    cc::Data getFrameData();
-    /**
-    * Returns a shared instance of the director.
-    * @js _getInstance
-    */
+    void getFrameData(void* ptr, size_t len, int& width, int& height);
     static MediaPlayer* getInstance();
-
-    /** @private */
     MediaPlayer();
-    /** @private */
     ~MediaPlayer();
     bool init();
 };

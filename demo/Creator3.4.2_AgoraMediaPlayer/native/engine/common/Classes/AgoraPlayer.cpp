@@ -17,6 +17,7 @@
 //extern HelloWorld* test;
 
 #ifdef ANDROID
+#include <thread>
 #include <android/log.h>
 #define XLOGD(...) __android_log_print(ANDROID_LOG_DEBUG,"[player_cpp]",__VA_ARGS__)
 #define XLOGI(...) __android_log_print(ANDROID_LOG_INFO,"[player_cpp]",__VA_ARGS__)
@@ -37,6 +38,7 @@
 static unsigned char* frame_data = nullptr;
 static int frame_width = 0;
 static int frame_height = 0;
+static std::mutex safe;
 
 unsigned char* I420ToRGB(unsigned char* src, int width, int height){
     const int R = 0;
@@ -70,9 +72,13 @@ unsigned char* I420ToRGB(unsigned char* src, int width, int height){
 }
 
 extern unsigned char* getOneFrame(int& width, int& height) {
+    safe.lock();
     width = frame_width;
     height = frame_height;
-    return frame_data;
+    unsigned char* ret = frame_data;
+    frame_data = nullptr;
+    safe.unlock();
+    return ret;
 }
 
 static JavaVM *gJVM = nullptr;
@@ -121,9 +127,15 @@ public:
 
     void onFrame(const agora::media::base::VideoFrame* frame) {
         XLOGI("onFrame video %d,%d,%d,%d,%lld", frame->type, frame->yStride, frame->height, frame->width, frame->renderTimeMs);
+        safe.lock();
+        if (frame_data != nullptr) {
+            safe.unlock();
+            return;
+        }
         frame_data = I420ToRGB(frame->yBuffer, frame->width, frame->height);
         frame_width = frame->width;
         frame_height = frame->height;
+        safe.unlock();
     }
 
     void onFrame(const agora::media::base::AudioPcmFrame* frame) {

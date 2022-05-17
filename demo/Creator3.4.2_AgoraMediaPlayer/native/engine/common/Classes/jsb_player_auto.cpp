@@ -21,10 +21,21 @@ static bool js_player_MediaPlayer_getFrameData(se::State& s) // NOLINT(readabili
     const auto& args = s.args();
     size_t argc = args.size();
     CC_UNUSED bool ok = true;
-    if (argc == 0) {
-        cc::Data result = cobj->getFrameData();
+    if (argc == 3) {
+        auto v = args[0];
+
+        SE_PRECONDITION2(v.isObject() && v.toObject()->isTypedArray(), false, "Convert parameter to Data failed!");
+        uint8_t *ptr    = nullptr;
+        size_t   length = 0;
+        bool     ok     = v.toObject()->getTypedArrayData(&ptr, &length);
+
+        int width =  args[1].toNumber();
+        int height =  args[2].toNumber();
+        cobj->getFrameData(ptr, length, width, height);
+
+        cc::Size result(width, height);
         ok &= nativevalue_to_se(result, s.rval(), nullptr /*ctx*/);
-        SE_PRECONDITION2(ok, false, "js_player_MediaPlayer_getFrameData : Error processing arguments");
+        SE_PRECONDITION2(ok, false, "js_engine_FileUtils_getFileSize : Error processing arguments");
         SE_HOLD_RETURN_VALUE(result, s.thisObject(), s.rval());
         return true;
     }
