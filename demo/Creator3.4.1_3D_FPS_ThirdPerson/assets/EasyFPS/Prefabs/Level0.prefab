@@ -381,7 +381,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Wall",
+    "_name": "CubeWall",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2
@@ -1849,7 +1849,7 @@
     },
     "_illuminanceHDR": 90000,
     "_illuminance": 90000,
-    "_illuminanceLDR": 1.6927083333333335,
+    "_illuminanceLDR": 2.34375,
     "_id": ""
   },
   {
