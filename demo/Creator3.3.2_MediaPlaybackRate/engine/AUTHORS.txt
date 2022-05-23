@@ -1,0 +1,101 @@
+Cocos Creator authors
+
+(Ordered by join time)
+
+Contributors:
+
+    @Marssssssss
+    @finscn
+    @feijing566
+    @devhacker520
+    @drelaptop
+    @benloong
+    @RazgrizHsu
+    @zty8023ys
+    @kissSimple
+    @id-ilych
+    @wzxjiang
+    @nshmura
+    @jrosich
+    @caogtaa
+    @Ronsku
+    @FengXuner
+    @yoki0805
+    @yeshao2069
+    @xduooo
+    @wangyhzzz
+    @unace
+    @simon129
+    @random634
+    @qinhanlei
+    @ohsayan
+    @sarhassan12
+    @lijjLyb
+    @lhx6538665
+    @krapnikkk
+    @k8w
+    @jcs090218
+    @hieubuiduc
+    @haxpor
+    @gaolizheng
+    @gamedevgarage
+    @endless3000
+    @chen-gaoyuan
+    @caochao
+    @Y-way
+    @MatrixLife
+    @HengHuH
+
+Core Engine Developers:
+
+    Guo Jiawei (@jareguo)
+
+    Huang Yanbin (@knoxHuang)
+
+    Lai Jiaxin (@JayceLai)
+
+    Li Nan (@shrinktofit)
+
+    Ling Huabin (@pandamicro)
+
+    Liu Hang (@caryliu1999)
+
+    Liu Yaqiong (@JoneLau)
+
+    Jiang Zhan (@PatriceJiang)
+
+    Wang Hao (@holycanvas)
+
+    Wang Jianing (@LinYunMo)
+
+    Wang Sizhong (@MSoft1115)
+
+    Wang Yibin (@Mee-gu)
+
+    Wu Yunxiao (@YunHsiao)
+
+    Yang Cheng (@troublemaker52025)
+
+    Yin Kaile (@2youyou2)
+
+    Zhang Xiaoming (@minggo)
+
+    Zheng Jianpei (@PPpro)
+
+Retired Engine Developers
+
+    Weiliang Wang (@jerrywwl)
+
+    Johnny Wu (@jwu)
+
+    Huabing Xu (@dabingnn)
+
+    Guanghui Qu (@zilongshanren)
+
+    Lan Wanjun (@sunnylanwanjun)
+
+    Xuguang Zhu (@zxg0622)
+
+    Yexin Dong
+
+Thanks to all developers who report & trace bugs, discuss the engine usage in forum!
