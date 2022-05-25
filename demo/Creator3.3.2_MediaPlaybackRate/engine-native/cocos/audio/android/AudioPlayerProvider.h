@@ -66,8 +66,6 @@ public:
 
     void resume();
 
-    void setPlaybackRate(float rate);
-
 private:
     struct AudioFileInfo {
         std::string              url;

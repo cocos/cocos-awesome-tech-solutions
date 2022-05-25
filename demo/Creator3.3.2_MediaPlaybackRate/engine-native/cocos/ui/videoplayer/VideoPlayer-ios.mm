@@ -65,7 +65,6 @@ typedef NS_ENUM(NSInteger, PlayerbackState) {
 - (float)duration;
 - (void)setVisible:(BOOL)visible;
 - (void)setKeepRatioEnabled:(BOOL)enabled;
-- (void)setPlaybackRate:(float)rate;
 - (void)setFullScreenEnabled:(BOOL)enabled;
 - (void)showPlaybackControls:(BOOL)value;
 - (BOOL)isFullScreenEnabled;
@@ -82,7 +81,6 @@ typedef NS_ENUM(NSInteger, PlayerbackState) {
     int _width;
     int _height;
     bool _keepRatioEnabled;
-    float _playbackRate;
     bool _fullscreen;
     CGRect _restoreRect;
     PlayerbackState _state;
@@ -92,7 +90,6 @@ typedef NS_ENUM(NSInteger, PlayerbackState) {
 - (id)init:(void *)videoPlayer {
     if (self = [super init]) {
         _keepRatioEnabled = FALSE;
-        _playbackRate = 1.0;
         _left = _top = _width = _height = 0;
 
         [self initPlayerController];
@@ -107,7 +104,6 @@ typedef NS_ENUM(NSInteger, PlayerbackState) {
     [self setFrame:_left:_top:_width:_height];
     [self showPlaybackControls:TRUE];
     [self setKeepRatioEnabled:_keepRatioEnabled];
-    [self setPlaybackRate:_playbackRate];
     _state = PlayerbackStateUnknown;
 }
 
@@ -189,14 +185,9 @@ typedef NS_ENUM(NSInteger, PlayerbackState) {
         self.playerController.videoGravity = AVLayerVideoGravityResize;
 }
 
-- (void)setPlaybackRate:(float)rate {
-    _playbackRate = rate;
-}
-
 - (void)play {
     if (self.playerController.player && ![self isPlaying]) {
         [self.playerController.player play];
-        self.playerController.player.rate = _playbackRate;
         _state = PlayerbackStatePlaying;
         _videoPlayer->onPlayEvent((int)VideoPlayer::EventType::PLAYING);
     }
@@ -333,13 +324,6 @@ void VideoPlayer::setKeepAspectRatioEnabled(bool enable) {
     if (_keepAspectRatioEnabled != enable) {
         _keepAspectRatioEnabled = enable;
         [((UIVideoViewWrapperIos *)_videoView) setKeepRatioEnabled:enable];
-    }
-}
-
-void VideoPlayer::setPlaybackRate(float rate) {
-    if (_playbackRate != rate) {
-        _playbackRate = rate;
-        [((UIVideoViewWrapperIos *)_videoView) setPlaybackRate:rate];
     }
 }
 

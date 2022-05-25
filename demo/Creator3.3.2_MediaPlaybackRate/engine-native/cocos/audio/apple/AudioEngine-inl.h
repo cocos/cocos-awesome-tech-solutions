@@ -45,9 +45,8 @@ public:
     ~AudioEngineImpl();
 
     bool  init();
-    int   play2d(const std::string &fileFullPath, bool loop, float volume, float playbackRate);
+    int   play2d(const std::string &fileFullPath, bool loop, float volume);
     void  setVolume(int audioID, float volume);
-    void  setPlaybackRate(int audioID, float playbackRate);
     void  setLoop(int audioID, bool loop);
     bool  pause(int audioID);
     bool  resume(int audioID);

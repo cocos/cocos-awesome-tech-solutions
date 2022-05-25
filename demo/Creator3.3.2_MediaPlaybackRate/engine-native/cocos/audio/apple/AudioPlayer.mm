@@ -153,7 +153,7 @@ bool AudioPlayer::play2d() {
 
         alSourcei(_alSource, AL_BUFFER, 0);
         CHECK_AL_ERROR_DEBUG();
-        alSourcef(_alSource, AL_PITCH, _playbackRate);
+        alSourcef(_alSource, AL_PITCH, 1.0f);
         CHECK_AL_ERROR_DEBUG();
         alSourcef(_alSource, AL_GAIN, _volume);
         CHECK_AL_ERROR_DEBUG();

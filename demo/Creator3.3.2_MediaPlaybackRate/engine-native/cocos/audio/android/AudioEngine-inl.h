@@ -52,9 +52,8 @@ public:
     ~AudioEngineImpl() override;
 
     bool  init();
-    int   play2d(const std::string &filePath, bool loop, float volume, float playbackRate);
+    int   play2d(const std::string &filePath, bool loop, float volume);
     void  setVolume(int audioID, float volume);
-    void  setPlaybackRate(int audioID, float rate);
     void  setLoop(int audioID, bool loop);
     void  pause(int audioID);
     void  resume(int audioID);

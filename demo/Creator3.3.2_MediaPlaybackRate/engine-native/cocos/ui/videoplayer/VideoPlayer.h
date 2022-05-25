@@ -113,8 +113,6 @@ public:
      * both dimensions fit the visible bounds of the view exactly.
      */
     virtual void setKeepAspectRatioEnabled(bool enable);
-    
-    virtual void setPlaybackRate(float rate);
 
     /**
      * Indicates whether the video player keep aspect ratio when displaying the video.
@@ -165,7 +163,6 @@ protected:
     bool _fullScreenDirty;
     bool _fullScreenEnabled;
     bool _keepAspectRatioEnabled;
-    float _playbackRate;
 
     std::string _videoURL;
     Source      _videoSource;

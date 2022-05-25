@@ -61,7 +61,6 @@ protected:
 
     float _volume;
     bool _loop;
-    float _playbackRate;
     std::function<void(int, const std::string &)> _finishCallbak;
 
     bool _isDestroyed;

@@ -55,7 +55,6 @@ private:
 
     void pause();
     void resume();
-    void setPlaybackRate(float rate);
 
 private:
     SLEngineItf _engineItf;
@@ -64,7 +63,6 @@ private:
     SLObjectItf _playObj;
     SLPlayItf _playItf;
     SLVolumeItf _volumeItf;
-    SLPlaybackRateItf _playbackRateItf;
     SLAndroidSimpleBufferQueueItf _bufferQueueItf;
 
     int _numChannels;

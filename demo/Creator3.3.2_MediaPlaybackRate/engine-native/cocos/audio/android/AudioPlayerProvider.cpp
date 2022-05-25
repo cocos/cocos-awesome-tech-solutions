@@ -164,7 +164,6 @@ IAudioPlayer *AudioPlayerProvider::getAudioPlayer(const std::string &audioFilePa
                     ALOGE("FileInfo (%p), preloadEffect (%s) failed", &info, audioFilePath.c_str());
                 }
             } else {
-                // 大于100kb，用UrlAudioPlayer
                 player = createUrlAudioPlayer(info);
                 ALOGV_IF(player == nullptr, "%s, %d: player is nullptr, path: %s", __FUNCTION__, __LINE__, audioFilePath.c_str());
             }
@@ -349,7 +348,6 @@ AudioPlayerProvider::AudioFileInfo AudioPlayerProvider::getFileInfo(
     return info;
 }
 
-// 判断音乐长度是否小于100kb
 bool AudioPlayerProvider::isSmallFile(const AudioFileInfo &info) { //NOLINT(readability-convert-member-functions-to-static)
     //REFINE: If file size is smaller than 100k, we think it's a small file. This value should be set by developers.
     auto &      audioFileInfo = const_cast<AudioFileInfo &>(info);
@@ -445,13 +443,6 @@ void AudioPlayerProvider::resume() {
 
     if (_pcmAudioService != nullptr) {
         _pcmAudioService->resume();
-    }
-}
-
-void AudioPlayerProvider::setPlaybackRate(float rate)
-{
-    if (_pcmAudioService != nullptr) {
-        _pcmAudioService->setPlaybackRate(rate);
     }
 }
 

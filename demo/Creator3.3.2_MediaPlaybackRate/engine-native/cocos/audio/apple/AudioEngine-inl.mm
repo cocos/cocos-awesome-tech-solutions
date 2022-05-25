@@ -343,7 +343,7 @@ AudioCache *AudioEngineImpl::preload(const std::string &filePath, std::function<
     return audioCache;
 }
 
-int AudioEngineImpl::play2d(const std::string &filePath, bool loop, float volume, float playbackRate) {
+int AudioEngineImpl::play2d(const std::string &filePath, bool loop, float volume) {
     if (s_ALDevice == nullptr) {
         return AudioEngine::INVALID_AUDIO_ID;
     }
@@ -361,7 +361,6 @@ int AudioEngineImpl::play2d(const std::string &filePath, bool loop, float volume
     player->_alSource = alSource;
     player->_loop = loop;
     player->_volume = volume;
-    player->_playbackRate = playbackRate;
 
     auto audioCache = preload(filePath, nullptr);
     if (audioCache == nullptr) {
@@ -429,23 +428,6 @@ void AudioEngineImpl::setVolume(int audioID, float volume) {
 
     if (player->_ready) {
         alSourcef(_audioPlayers[audioID]->_alSource, AL_GAIN, volume);
-
-        auto error = alGetError();
-        if (error != AL_NO_ERROR) {
-            ALOGE("%s: audio id = %d, error = %x", __PRETTY_FUNCTION__, audioID, error);
-        }
-    }
-}
-
-void AudioEngineImpl::setPlaybackRate(int audioID, float playbackRate) {
-    if (!checkAudioIdValid(audioID)) {
-        return;
-    }
-    auto player = _audioPlayers[audioID];
-    player->_playbackRate = playbackRate;
-
-    if (player->_ready) {
-        alSourcef(_audioPlayers[audioID]->_alSource, AL_PITCH, playbackRate);
 
         auto error = alGetError();
         if (error != AL_NO_ERROR) {

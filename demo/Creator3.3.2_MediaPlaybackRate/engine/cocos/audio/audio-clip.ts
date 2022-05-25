@@ -137,13 +137,6 @@ export class AudioClip extends Asset {
     }
 
     /**
-     * @deprecated since v3.1.0, please use AudioSource.prototype.getPlaybackRate() instead.
-     */
-     public getPlaybackRate () {
-        return this._player ? this._player.playbackRate : 0;
-    }
-
-    /**
      * @deprecated since v3.1.0, please use AudioSource.prototype.getLoop() instead.
      */
     public getLoop () {
@@ -163,12 +156,6 @@ export class AudioClip extends Asset {
     public setVolume (volume: number) {
         if (this._player) {
             this._player.volume = volume;
-        }
-    }
-
-    public setPlaybackRate (playbackRate: number) {
-        if (this._player) {
-            this._player.playbackRate = playbackRate;
         }
     }
 

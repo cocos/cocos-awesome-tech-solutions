@@ -2,7 +2,7 @@ import { EDITOR } from 'internal:constants';
 import { systemInfo } from 'pal/system-info';
 import { AudioEvent, AudioState, AudioType } from '../type';
 import { EventTarget } from '../../../cocos/core/event/event-target';
-import { clamp, clamp01 } from '../../../cocos/core';
+import { clamp01 } from '../../../cocos/core';
 import { enqueueOperation, OperationInfo, OperationQueueable } from '../operation-queue';
 import AudioTimer from '../audio-timer';
 
@@ -150,7 +150,6 @@ export class AudioPlayerWeb implements OperationQueueable {
     private _gainNode: GainNode;
     private _currentTimer = 0;
     private _volume = 1;
-    private _playbackRate = 1;
     private _loop = false;
     private _state: AudioState = AudioState.INIT;
     private _audioTimer: AudioTimer;
@@ -260,14 +259,6 @@ export class AudioPlayerWeb implements OperationQueueable {
         this._volume = val;
         audioContextAgent!.setGainValue(this._gainNode, val);
     }
-    get playbackRate (): number {
-        return this._playbackRate;
-    }
-    set playbackRate (val: number) {
-        val = clamp(val, 0.25, 3.0);
-        this._playbackRate = val;
-        if (this._sourceNode) this._sourceNode.playbackRate.value = val;
-    }
     get duration (): number {
         return this._audioBuffer.duration;
     }
@@ -305,7 +296,6 @@ export class AudioPlayerWeb implements OperationQueueable {
                 // one AudioBufferSourceNode can't start twice
                 this._stopSourceNode();
                 this._sourceNode = audioContextAgent!.createBufferSource(this._audioBuffer, this.loop);
-                this._sourceNode.playbackRate.value = this.playbackRate;
                 this._sourceNode.connect(this._gainNode);
                 this._sourceNode.start(0, this._audioTimer.currentTime);
                 this._state = AudioState.PLAYING;

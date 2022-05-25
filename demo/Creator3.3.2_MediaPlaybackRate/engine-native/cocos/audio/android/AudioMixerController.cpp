@@ -131,10 +131,6 @@ void AudioMixerController::initTrack(Track *track, std::vector<Track *> &tracksT
         _mixer->setParameter(name, AudioMixer::VOLUME, AudioMixer::VOLUME0, &lVolume);
         _mixer->setParameter(name, AudioMixer::VOLUME, AudioMixer::VOLUME1, &rVolume);
 
-        // 这里设置了播放倍速，没起效果
-        float playbackRate = track->getPlaybackRate();
-        _mixer->setParameter(name, AudioMixer::TIMESTRETCH, AudioMixer::PLAYBACK_RATE, &playbackRate);
-
         track->setVolumeDirty(false);
         track->setInitialized(true);
     }
@@ -197,10 +193,6 @@ void AudioMixerController::mixOneFrame() {
 
                 _mixer->setParameter(name, AudioMixer::VOLUME, AudioMixer::VOLUME0, &lVolume);
                 _mixer->setParameter(name, AudioMixer::VOLUME, AudioMixer::VOLUME1, &rVolume);
-
-                // 这里设置了播放倍速，没起效果
-                float playbackRate = track->getPlaybackRate();
-                _mixer->setParameter(name, AudioMixer::TIMESTRETCH, AudioMixer::PLAYBACK_RATE, &playbackRate);
 
                 track->setVolumeDirty(false);
             }

@@ -244,20 +244,6 @@ let VideoPlayer = cc.Class({
         },
 
         /**
-         * !#en set playbackRate.
-         * !#zh 视频倍速播放速率
-         * @property {Float} playbackRate
-         */
-         playbackRate: {
-            tooltip: CC_DEV && 'i18n:COMPONENT.videoplayer.playbackRate',
-            default: 1.0,
-            type: cc.Float,
-            notify: function () {
-                this._impl.setPlaybackRate(this.playbackRate);
-            }
-        },
-
-        /**
          * !#en Whether play video in fullscreen mode.
          * !#zh 是否全屏播放视频
          * @property {Boolean} isFullscreen
@@ -321,7 +307,6 @@ let VideoPlayer = cc.Class({
 
             impl.seekTo(this.currentTime);
             impl.setKeepAspectRatioEnabled(this.keepAspectRatio);
-            impl.setPlaybackRate(this.playbackRate);
             impl.setFullScreenEnabled(this.isFullscreen);
             this.pause();
 
