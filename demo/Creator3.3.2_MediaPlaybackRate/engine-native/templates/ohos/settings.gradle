@@ -1,3 +1,0 @@
-include ':libcocos',':entry'
-project(':libcocos').projectDir = new File(ENGINE_ROOT, 'cocos/platform/ohos/libcocos')
-rootProject.name = "CocosGame"
