@@ -283,6 +283,7 @@
   ![Image Text](https://forum.cocos.org/uploads/default/original/3X/b/3/b3d1e7f7385e70018ab4073dc98bdf3255fca92d.gif)
 
 
+
 *技术支持团队提供*
 
 * (3.4.1) tween 执行贝塞尔运动以及运动变速
@@ -298,7 +299,8 @@
   ![Image Text](https://forum.cocos.org/uploads/default/original/3X/3/7/379c5083d58cb32dbb2bad62c1ea64d0d1719dea.gif)
 
 
-  *论坛用户(tuyazuo)提供，由技术支持团队升级至3.4.0版本*
+
+*论坛用户(tuyazuo)提供，由技术支持团队升级至3.4.0版本*
 
 * (v3.4.0) 横竖屏切换
 
@@ -314,6 +316,8 @@
 
   > 备注: 目前 3.0.0 ~ 3.4.1 版本在 ios 平台调用原生转屏功能后，点击位置会发生偏移，需要手动合并 pr: https://github.com/cocos-creator/engine-native/pull/4265, Demo 中有附带合并 pr 后的文件。
 
+
+
 *用户 **xjz1994** 提供开源方案，由技术支持团队升级至 3.4.1 版本*
 
 * (v3.4.1) 四叉树碰撞优化
@@ -328,6 +332,8 @@
   
   ![Image Text](https://forum.cocos.org/uploads/default/original/3X/3/e/3e2ee25fec90d566d76b2d7df63f593e6051f260.gif)
 
+
+
 *youyou提供，技术支持团队升级项目*
 
 * (v3.4.2) raphael (Graphics 拓展和 SVG 加载)
@@ -338,6 +344,8 @@
   >
   > 需知：目前引擎有一处 bug，会导致 svg 场景渲染异常。详细问题描述可以看一下 [issues](https://github.com/cocos/cocos-engine/issues/10900)，解决问题的办法是参考下图中红色代码定制一下引擎：
 ![图片|549x500](https://forum.cocos.org/uploads/default/original/3X/7/3/7324f0b63f08a3d99ce3cc5b08360908fa541414.png) 
+
+
 
 *技术支持团队提供*
 
@@ -356,3 +364,17 @@
   ![2022042401|690x459](https://forum.cocos.org/uploads/default/optimized/3X/a/1/a142a172484de50c90f6d3fb1667282dc2661215_2_1380x918.png) 
  2. 刷新拓展，可以在控制台看到检测的结果
   ![2022042402|690x346](https://forum.cocos.org/uploads/default/original/3X/a/3/a3951f8fa963a75535650c43be84be60a098a0f5.png) 
+
+
+
+*技术支持团队提供*
+
+* (v3.4.2) 音视频倍数播放
+
+  > 工程 git 仓库地址: 
+  >
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.2_MediaPlaybackRate
+  >
+  > 需知：需要自定义引擎。且原生(iOS、Android)和 web 对于音频倍数和视频倍数播放的支持各不相同，所以实际的播放需要以平台以及设备为主。    
+  ![2022052601|690x459](https://forum.cocos.org/uploads/default/original/3X/c/6/c6c684d740ab3155ddd24ab3e8a3d7659df13305.png)    
+  ![2022052602|690x459](https://forum.cocos.org/uploads/default/original/3X/7/4/745e7b80c83827f7843bbdb5fdd148a62ca179df.png) 
