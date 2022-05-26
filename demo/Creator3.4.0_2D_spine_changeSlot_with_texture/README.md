@@ -1,5 +1,5 @@
 # 简介
-基于 CocosCreator 3.4.0 版本创建的 spine 局部贴图换装方案测试工程。
+基于 CocosCreator 3.4.0 版本创建的 **spine 局部贴图换装** 工程。
 # 测试方法
  - 1  编译成 Android / iOS 后，拷贝backNative/engine/common/Classes下的3个文件，替换native/engine/common/Classes的3个文件 (Game.cpp、jsb_spine_cloth.cpp、jsb_spine_cloth.h)
 

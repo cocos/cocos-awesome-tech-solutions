@@ -1,5 +1,5 @@
 # 简介
-基于 CocosCreator 3.4.0 版本创建的 Box2D wasm方案测试工程。
+基于 CocosCreator 3.4.0 版本创建的 **Box2D wasm** 工程。
 # 测试方法
 
  - 1 拷贝**back**文件夹下的 index.js 脚本，替换 Cocos Creator 3.4.0 版本引擎的源码路径下的 index.js 脚本。
