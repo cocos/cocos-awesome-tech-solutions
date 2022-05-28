@@ -378,3 +378,15 @@
   > 需知：需要自定义引擎。且原生(iOS、Android)和 web 对于音频倍数和视频倍数播放的支持各不相同，所以实际的播放需要以平台以及设备为主。    
   ![2022052601|690x459](https://forum.cocos.org/uploads/default/original/3X/c/6/c6c684d740ab3155ddd24ab3e8a3d7659df13305.png)    
   ![2022052602|690x459](https://forum.cocos.org/uploads/default/original/3X/7/4/745e7b80c83827f7843bbdb5fdd148a62ca179df.png) 
+
+
+
+*技术支持团队提供*
+
+* (v3.4.2) 声网视频流渲染 SDK 接入
+
+  > 工程 git 仓库地址: 
+  >
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.2_AgoraMediaPlayer
+  >
+  > 需知：
