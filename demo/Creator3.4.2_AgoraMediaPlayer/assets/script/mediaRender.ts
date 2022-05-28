@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, Sprite, Texture2D, UITransform, ImageAsset, Color, macro, SpriteFrame } from 'cc';
+import { _decorator, Component, Node, Texture2D, ImageAsset, macro, Material, find, Sprite, MeshRenderer } from 'cc';
 const { ccclass, property } = _decorator;
 
 /**
@@ -16,35 +16,25 @@ const { ccclass, property } = _decorator;
 
 @ccclass('mediaRender')
 export class mediaRender extends Component {
-    sprite: Sprite = null;
     texture: Texture2D = null;
     raw: Uint8Array = null;
     width = 1920;
     height = 1080;
 
+    @property(Node)
+    cubeNode !: Node;
+    materials : Material[] = [];
+
     start() {
         this.raw = new Uint8Array(this.width * this.height * 4);
-        this.sprite = this.node.getComponent(Sprite);
 
-        var image = new ImageAsset();
-        image.reset({
-            _data: this.raw,
-            width: this.width,
-            height: this.height,
-            format: Texture2D.PixelFormat.RGBA8888,
-            _compressed: false
-        });
-
-        this.texture = new Texture2D();
-        this.texture.image = image;
-        
-        let spriteFrame = new SpriteFrame();
-        spriteFrame.packable = false;
-        spriteFrame.texture = this.texture;
-        this.sprite.spriteFrame = spriteFrame;
+        let meshRenderers = this.cubeNode.getComponentsInChildren(MeshRenderer);
+        for (let x in meshRenderers) {
+            this.materials.push(meshRenderers[x].getMaterial(0));
+        }
 
         this.schedule(() => {
-            // @ts-ignore
+            //@ts-ignore
             var size = jsb.MediaPlayer.getInstance().getFrameData(this.raw, this.width, this.height);
             if (size.width == 0) return;
             let image = new ImageAsset({
@@ -55,7 +45,6 @@ export class mediaRender extends Component {
                 _compressed: false
             });
 
-
             if (this.texture) {
                 this.texture.destroy();
                 this.texture = null;
@@ -63,11 +52,10 @@ export class mediaRender extends Component {
 
             this.texture = new Texture2D();
             this.texture.image = image;
-   
-            let spriteFrame = new SpriteFrame();
-            spriteFrame.packable = false;
-            spriteFrame.texture = this.texture;
-            this.sprite.spriteFrame = spriteFrame;
+            
+            for (let x in this.materials) {
+                this.materials[x].setProperty('mainTexture', this.texture);
+            }
         }, 0.1, macro.REPEAT_FOREVER);        
     }
 
