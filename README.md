@@ -389,4 +389,4 @@
   >
   > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.2_AgoraMediaPlayer
   >
-  > 需知：
+  > 需知：目前对接了 android 端。iOS 端 SDK 后续考虑接入。
