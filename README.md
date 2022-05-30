@@ -375,6 +375,12 @@
   >
   > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.2_MediaPlaybackRate
   >
+  > 素材来自:
+  > 
+  > https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLMediaElement/playbackRate
+  > https://developer.android.google.cn/reference/android/media/MediaPlayer#setPlaybackParams(android.media.PlaybackParams)
+  > https://developer.apple.com/documentation/avfoundation/avplayer/1388846-rate
+  >
   > 需知：需要自定义引擎。且原生(iOS、Android)和 web 对于音频倍数和视频倍数播放的支持各不相同，所以实际的播放需要以平台以及设备为主。    
   ![2022052601|690x459](https://forum.cocos.org/uploads/default/original/3X/c/6/c6c684d740ab3155ddd24ab3e8a3d7659df13305.png)    
   ![2022052602|690x459](https://forum.cocos.org/uploads/default/original/3X/7/4/745e7b80c83827f7843bbdb5fdd148a62ca179df.png) 
@@ -390,3 +396,19 @@
   > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.2_AgoraMediaPlayer
   >
   > 需知：目前对接了 android 端。iOS 端 SDK 后续考虑接入。
+
+
+
+*Github用户(kirikayakazuto)提供，由技术支持团队升级至3.5.0版本*
+
+* (v3.5.0) TiledMap 自动寻路
+
+  > 工程 git 仓库地址: 
+  >
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.5.0_2D_TileMap_PathFinding
+  >
+  > 素材来源: 
+  >
+  > https://github.com/kirikayakazuto/Cocos_RPG#cocos-creator--tilemap-%E8%87%AA%E5%8A%A8%E5%AF%BB%E8%B7%AF
+
+  ![2022042402|690x346](https://forum.cocos.org/uploads/default/original/3X/3/6/3683684ff16aa9204293f0d23eb380027880eddf.gif)
