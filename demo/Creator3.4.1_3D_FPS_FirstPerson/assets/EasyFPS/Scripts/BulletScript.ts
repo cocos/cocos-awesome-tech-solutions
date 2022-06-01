@@ -23,13 +23,13 @@ export class BulletScript extends Component {
             let quat = new Quat;
             Quat.fromViewUp(quat, new Vec3(result.hitNormal.x, result.hitNormal.y, result.hitNormal.z), new Vec3(0, 1, 0));
 
-            if (result.collider.node.name.indexOf('Cube') >= 0) {
+            if (result.collider.node.name.indexOf('Wall') >= 0) {
                 let effect = instantiate(this.decalHitWall);
                 effect.setWorldPosition(result.hitPoint.add(result.hitNormal.clone().multiplyScalar(this.floatInfrontOfWall)));
                 effect.setWorldRotation(quat);
                 effect.parent = this.node.parent;
             }
-            else {
+            else if (result.collider.node.name.indexOf('Enemies') >= 0){
                 let effect = instantiate(this.bloodEffect);
                 effect.setWorldPosition(result.hitPoint.add(result.hitNormal.clone().multiplyScalar(this.floatInfrontOfWall)));
                 effect.setWorldRotation(quat);

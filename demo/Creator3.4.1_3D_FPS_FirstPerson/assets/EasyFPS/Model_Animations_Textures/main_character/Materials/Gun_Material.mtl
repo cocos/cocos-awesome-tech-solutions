@@ -12,7 +12,6 @@
     {
       "USE_NORMAL_MAP": true,
       "USE_ALBEDO_MAP": true,
-      "USE_PBR_MAP": true,
       "USE_METALLIC_ROUGHNESS_MAP": true,
       "USE_OCCLUSION_MAP": true,
       "USE_EMISSIVE_MAP": true
@@ -37,6 +36,10 @@
     {
       "mainTexture": {
         "__uuid__": "7472092d-c44f-4f03-aea7-fd674c85d705@6c48a",
+        "__expectedType__": "cc.Texture2D"
+      },
+      "normalMap": {
+        "__uuid__": "e5b1342d-0989-4de7-940a-6aae809c5719@6c48a",
         "__expectedType__": "cc.Texture2D"
       },
       "metallicRoughnessMap": {

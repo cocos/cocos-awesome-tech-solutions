@@ -70,7 +70,10 @@
       "__id__": 3
     },
     "_materials": [
-      null,
+      {
+        "__uuid__": "c9cdfb25-5e15-4466-ad38-bf042a127a11",
+        "__expectedType__": "cc.Material"
+      },
       null
     ],
     "_visFlags": 0,

@@ -62,7 +62,7 @@
       "y": 1,
       "z": 1
     },
-    "_layer": 8388608,
+    "_layer": 1073741824,
     "_euler": {
       "__type__": "cc.Vec3",
       "x": 0,
@@ -578,7 +578,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "CCPropertyOverrideInfo",
@@ -588,7 +588,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -633,7 +633,7 @@
       "y": 1,
       "z": 0.9999999999999999
     },
-    "_layer": 8388608,
+    "_layer": 1073741824,
     "_euler": {
       "__type__": "cc.Vec3",
       "x": 5.78481797813196e-15,
@@ -1057,7 +1057,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1073,7 +1073,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1089,7 +1089,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1105,7 +1105,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1121,7 +1121,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1137,7 +1137,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1153,7 +1153,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1169,7 +1169,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1185,7 +1185,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1201,7 +1201,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1217,7 +1217,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1233,7 +1233,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1249,7 +1249,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1265,7 +1265,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1281,7 +1281,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1297,7 +1297,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1313,7 +1313,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1329,7 +1329,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1345,7 +1345,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1361,7 +1361,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1377,7 +1377,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1393,7 +1393,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1409,7 +1409,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1425,7 +1425,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1441,7 +1441,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1457,7 +1457,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1473,7 +1473,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1489,7 +1489,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1505,7 +1505,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1521,7 +1521,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1537,7 +1537,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1553,7 +1553,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1569,7 +1569,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1585,7 +1585,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1601,7 +1601,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1617,7 +1617,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1633,7 +1633,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1649,7 +1649,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1665,7 +1665,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1681,7 +1681,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1697,7 +1697,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1713,7 +1713,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1729,7 +1729,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1745,7 +1745,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1761,7 +1761,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1777,7 +1777,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1793,7 +1793,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1809,7 +1809,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1825,7 +1825,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1841,7 +1841,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1857,7 +1857,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1873,7 +1873,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1889,7 +1889,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1905,7 +1905,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1921,7 +1921,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1937,7 +1937,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1953,7 +1953,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1969,7 +1969,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1985,7 +1985,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -2001,7 +2001,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -2017,7 +2017,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -2033,7 +2033,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -2049,7 +2049,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -2065,7 +2065,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -2081,7 +2081,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -2097,7 +2097,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -2113,7 +2113,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -2129,7 +2129,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -2145,7 +2145,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -2161,7 +2161,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -2177,7 +2177,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -2193,7 +2193,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -2209,7 +2209,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -2225,7 +2225,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -2241,7 +2241,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -2257,7 +2257,7 @@
     "propertyPath": [
       "_layer"
     ],
-    "value": 8388608
+    "value": 1073741824
   },
   {
     "__type__": "cc.TargetInfo",
@@ -2317,7 +2317,7 @@
       "y": 1,
       "z": 1
     },
-    "_layer": 8388608,
+    "_layer": 1073741824,
     "_euler": {
       "__type__": "cc.Vec3",
       "x": 0,
@@ -2396,7 +2396,7 @@
       "y": 1,
       "z": 1
     },
-    "_layer": 8388608,
+    "_layer": 1073741824,
     "_euler": {
       "__type__": "cc.Vec3",
       "x": 0,
@@ -2476,7 +2476,7 @@
       "y": 0.01,
       "z": 10
     },
-    "_layer": 8388608,
+    "_layer": 1073741824,
     "_euler": {
       "__type__": "cc.Vec3",
       "x": 0,
@@ -2581,7 +2581,7 @@
       "y": 0.1,
       "z": 0.1
     },
-    "_layer": 8388608,
+    "_layer": 1073741824,
     "_euler": {
       "__type__": "cc.Vec3",
       "x": 0,

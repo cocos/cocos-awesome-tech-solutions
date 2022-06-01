@@ -12,7 +12,7 @@ export class PlayerMovementScript extends Component {
     maxSpeed: number = 3.0;
     @property({ tooltip: "停止耗时限定" })
     deaccelerationSpeed: number = 0.2;
-    @property({ tooltip: "加速速率" })
+    @property({ tooltip: "加速速率"})
     accelerationSpeed: number = 100000.0;
     @property({ tooltip: "跳跃使用的力度" })
     jumpForce: number = 15000.0;
@@ -37,8 +37,10 @@ export class PlayerMovementScript extends Component {
     private slowdownV: Vec3 = new Vec3();
     private horizontalMovement: Vec3 = new Vec3();
     private grounded: boolean = false;
+    static speed = 0;
 
     start() {
+        PlayerMovementScript.speed = this.accelerationSpeed;
         PhysicsSystem.instance.autoSimulation = false;
         InputEx.RegisterEvent();
         this.collider.on('onCollisionStay', this.OnCollisionStay, this);
@@ -86,6 +88,7 @@ export class PlayerMovementScript extends Component {
             this.rigidBody.applyForce(Vec3.UP.clone().multiplyScalar(this.jumpForce))
             this.walkSound.stop();
             this.runSound.stop();
+            //缺少音效
         }
     }
 
@@ -114,17 +117,23 @@ export class PlayerMovementScript extends Component {
         }
 
         if (this.grounded) {
-            this.rigidBody.applyLocalForce(new Vec3(InputEx.GetAxis("Horizontal") * this.accelerationSpeed * TimeEx.deltaTime, 0, InputEx.GetAxis("Vertical") * this.accelerationSpeed * TimeEx.deltaTime));
-        } else {
-            this.rigidBody.applyLocalForce(new Vec3(InputEx.GetAxis("Horizontal") * this.accelerationSpeed / 2 * TimeEx.deltaTime, 0, InputEx.GetAxis("Vertical") * this.accelerationSpeed / 2 * TimeEx.deltaTime));
-        }
-
-        if (this.grounded && InputEx.GetAxis("Horizontal") == 0 && InputEx.GetAxis("Vertical") == 0) {
             let finalSpeed = SmoothDampV3(velocity,
                 new Vec3(0, 0, 0),
                 this.slowdownV,
                 this.deaccelerationSpeed);
             this.rigidBody.setLinearVelocity(finalSpeed);
+        }
+
+        if (this.grounded) {
+            this.rigidBody.applyLocalForce(new Vec3(InputEx.GetAxis("Horizontal") * this.accelerationSpeed * TimeEx.deltaTime, 0, InputEx.GetAxis("Vertical") * this.accelerationSpeed * TimeEx.deltaTime));
+        } else {
+            this.rigidBody.applyLocalForce(new Vec3(InputEx.GetAxis("Horizontal") * this.accelerationSpeed / 2 * TimeEx.deltaTime, 0, InputEx.GetAxis("Vertical") * this.accelerationSpeed / 2 * TimeEx.deltaTime));
+        }
+
+        if (InputEx.GetAxis("Horizontal") == 0 && InputEx.GetAxis("Vertical") == 0) {
+            this.deaccelerationSpeed = 0.5;
+        } else {
+            this.deaccelerationSpeed = 0.1;
         }
     }
 

@@ -112,7 +112,7 @@ export class GunScript extends Component {
 
     // Sensitvity of the gun
     public mouseSensitvity_notAiming: number = 4;
-    public mouseSensitvity_aiming: number = 5;
+    public mouseSensitvity_aiming: number = 1;
     public mouseSensitvity_running: number = 4;
 
     // Shooting setup - MUSTDO
@@ -178,7 +178,6 @@ export class GunScript extends Component {
         this.bulletInfo.string = `${this.bulletsIHave} - ${this.bulletsInTheGun}`
 
         this.currentGunPosition = this.restPlacePosition.clone();
-        this.PositionGun();
     }
 
     PositionGun() {
@@ -293,16 +292,19 @@ export class GunScript extends Component {
     Sprint() {
         if (InputEx.GetAxis("Vertical") > 0 && InputEx.GetAxis("Fire2") == 0 && this.meeleAttack == false && InputEx.GetAxis("Fire1") == 0) {
             // @ts-ignore
-            if (InputEx.GetKeyDown(KeyCode.KEY_LShift)) {
-                if (this.pmS.maxSpeed == this.walkingSpeed) {
-                    this.pmS.maxSpeed = this.runningSpeed;//sets player movement peed to max
-
-                } else {
-                    this.pmS.maxSpeed = this.walkingSpeed;
-                }
+            if (InputEx.GetKeyDown(KeyCode.SHIFT_LEFT)) {
+                //@ts-ignore
+                find("Player").getComponent("PlayerMovementScript").accelerationSpeed = PlayerMovementScript.speed * 2; 
+                this.pmS.maxSpeed = this.runningSpeed;//sets player movement peed to max
+            } else {
+                this.pmS.maxSpeed = this.walkingSpeed;
+                //@ts-ignore
+                find("Player").getComponent("PlayerMovementScript").accelerationSpeed = PlayerMovementScript.speed; 
             }
         } else {
             this.pmS.maxSpeed = this.walkingSpeed;
+            //@ts-ignore
+            find("Player").getComponent("PlayerMovementScript").accelerationSpeed = PlayerMovementScript.speed; 
         }
     }
 
@@ -411,22 +413,24 @@ export class GunScript extends Component {
     update(deltaTime: number) {
         this.Shooting();
         this.PositionGun();
+        this.RotationGun();
         this.bulletInfo.updateRenderData(true);
-        // @ts-ignore
+        // // @ts-ignore
         this.bulletInfo3D.getMaterial(0).setProperty("mainTexture", this.bulletInfo.spriteFrame._texture);
     }
 
     lateUpdate() {
         this.GiveCameraScriptMySensitvity();
-        //this.MeeleAttack();
+        this.MeeleAttack();
         this.LockCameraWhileMelee();
-        //this.Sprint();
-        //this.CrossHairExpansionWhenWalking();
+        this.Sprint();
+        this.CrossHairExpansionWhenWalking();
         this.Animations();
-        this.RotationGun();
+
         this.MeeleAnimationsStates();
 
         if (InputEx.GetAxis("Fire2") != 0 && !this.reloading && !this.meeleAttack) {
+            // find("Canvas/Crosshair").active = false;
             this.gunPrecision = this.gunPrecision_aiming;
             this.recoilAmount_x = this.recoilAmount_x_;
             this.recoilAmount_y = this.recoilAmount_y_;
@@ -436,6 +440,7 @@ export class GunScript extends Component {
             //this.secondCamera.fov = SmoothDamp(this.secondCamera.fov, this.secondCameraZoomRatio_aiming, this.secondCameraZoomVelocity, this.gunAimTime);
         }
         else {
+            // find("Canvas/Crosshair").active = true;
             this.gunPrecision = this.gunPrecision_notAiming;
             this.recoilAmount_x = this.recoilAmount_x_non;
             this.recoilAmount_y = this.recoilAmount_y_non;

@@ -222,42 +222,10 @@
         "magfilter": "linear",
         "mipfilter": "none",
         "anisotropy": 0,
-        "isUuid": true,
-        "imageUuidOrDatabaseUri": "1c935cf4-18cc-451a-a93d-762fdeedd147@fd73d"
+        "isUuid": false,
+        "imageUuidOrDatabaseUri": "db://assets/EasyFPS/Images/bluegrid.png"
       },
       "ver": "1.0.21",
-      "imported": true,
-      "files": [
-        ".json"
-      ],
-      "subMetas": {}
-    },
-    "75ae4": {
-      "importer": "gltf-material",
-      "uuid": "1c935cf4-18cc-451a-a93d-762fdeedd147@75ae4",
-      "displayName": "",
-      "id": "75ae4",
-      "name": "bluegrid.material",
-      "userData": {
-        "gltfIndex": 0
-      },
-      "ver": "1.0.14",
-      "imported": true,
-      "files": [
-        ".json"
-      ],
-      "subMetas": {}
-    },
-    "2deab": {
-      "importer": "gltf-material",
-      "uuid": "1c935cf4-18cc-451a-a93d-762fdeedd147@2deab",
-      "displayName": "",
-      "id": "2deab",
-      "name": "Default_Material.material",
-      "userData": {
-        "gltfIndex": 1
-      },
-      "ver": "1.0.14",
       "imported": true,
       "files": [
         ".json"
@@ -285,6 +253,7 @@
     "imageMetas": [
       {
         "name": "DiffuseColor_Texture",
+        "remap": "db://assets/EasyFPS/Images/bluegrid.png",
         "uri": "1c935cf4-18cc-451a-a93d-762fdeedd147@fd73d"
       }
     ],
@@ -309,12 +278,14 @@
         "1c935cf4-18cc-451a-a93d-762fdeedd147@4f17a"
       ],
       "materials": [
-        "1c935cf4-18cc-451a-a93d-762fdeedd147@75ae4",
-        "1c935cf4-18cc-451a-a93d-762fdeedd147@2deab"
+        "1ec53713-7056-40fc-8fe1-a049d7b1c272",
+        "f880a6ce-b843-4c1f-b64d-4b2b3901fe21"
       ],
       "scenes": [
         "1c935cf4-18cc-451a-a93d-762fdeedd147@c2064"
       ]
-    }
+    },
+    "dumpMaterials": true,
+    "materialDumpDir": "db://assets/EasyFPS/Prefabs/Materials_LevelProps"
   }
 }

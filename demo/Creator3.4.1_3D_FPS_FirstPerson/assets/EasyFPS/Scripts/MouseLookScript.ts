@@ -29,7 +29,7 @@ export class MouseLookScript extends Component {
     private zRotation: number = 0.0;
     private timerToRotateZ: number = 0.0;
 
-    public mouseSensitvity_notAiming: number = 4;
+    public mouseSensitvity_notAiming: number = 300;
     public mouseSensitvity_aiming: number = 50;
 
     private rotationYVelocity: number[] = [0];
@@ -77,9 +77,8 @@ export class MouseLookScript extends Component {
     }
 
     ApplyingStuff() {
-        this.currentYRotation = SmoothDamp(this.currentYRotation, this.wantedYRotation, this.rotationYVelocity, this.yRotationSpeed, Infinity, TimeEx.deltaTime);
-        this.currentCameraXRotation = SmoothDamp(this.currentCameraXRotation, this.wantedCameraXRotation, this.cameraXVelocity, this.xCameraSpeed, Infinity, TimeEx.deltaTime);
-        this.WeaponRotation();
+        this.currentYRotation = SmoothDamp(this.currentYRotation, this.wantedYRotation, this.rotationYVelocity, this.yRotationSpeed);
+        this.currentCameraXRotation = SmoothDamp(this.currentCameraXRotation, this.wantedCameraXRotation, this.cameraXVelocity, this.xCameraSpeed);
         // 左右视角使用相机
         this.node.setRotationFromEuler(0, this.currentYRotation, 0);
         // 左右视角使用相机
@@ -87,7 +86,10 @@ export class MouseLookScript extends Component {
     }
 
     update(dt: number) {
-
+        this.MouseInputMovement();
+        if (PlayerMovementScript.currentSpeed > 1) {
+            HeadMovement();
+        }
     }
 
     lateUpdate() {
@@ -100,7 +102,7 @@ export class MouseLookScript extends Component {
         else {
             this.mouseSensitvity = this.mouseSensitvity_notAiming;
         }
-        this.MouseInputMovement();
+
         this.ApplyingStuff();
     }
 }
