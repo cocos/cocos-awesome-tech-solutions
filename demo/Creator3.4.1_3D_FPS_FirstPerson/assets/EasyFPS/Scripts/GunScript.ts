@@ -24,6 +24,8 @@ export class GunScript extends Component {
     public reloadSound_source: AudioSource = null!;
     @property(AudioSource)
     public shoot_sound_source: AudioSource = null!;
+    @property(AudioSource)
+    public arm_hit_sound: AudioSource = null;
 
     @property({ type: GunStyles })
     public currentStyle: GunStyles = GunStyles.nonautomatic;
@@ -226,7 +228,8 @@ export class GunScript extends Component {
 
     async MeeleAttack() {
         if (InputEx.GetKeyDown(KeyCode.KEY_Q) && !this.meeleAttack) {
-            await this.AnimationMeeleAttack();;
+            this.arm_hit_sound.play();
+            await this.AnimationMeeleAttack();
         }
     }
 
@@ -415,7 +418,7 @@ export class GunScript extends Component {
         this.PositionGun();
         this.RotationGun();
         this.bulletInfo.updateRenderData(true);
-        // // @ts-ignore
+        // @ts-ignore
         this.bulletInfo3D.getMaterial(0).setProperty("mainTexture", this.bulletInfo.spriteFrame._texture);
     }
 

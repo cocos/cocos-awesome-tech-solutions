@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, input, Input, KeyCode, EventKeyboard, AudioSource, animation, resources, instantiate, CCObject, Prefab } from 'cc';
+import { _decorator, Component, Node, input, Input, KeyCode, EventKeyboard, AudioSource, animation, resources, instantiate, CCObject, Prefab, find } from 'cc';
 const { ccclass, property } = _decorator;
 
 import { GunScript } from './GunScript';
@@ -46,9 +46,14 @@ export class GunInventory extends Component {
     }
 
     async Spawn(idx: number) {
-        if (this.weaponChanging) {
+        if (!this.weaponChanging){
+            this.weaponChanging = find("_playerSounds/_waeponChangingSound", this.node).getComponent(AudioSource);
+        } else {
             this.weaponChanging.play();
         }
+        // if (this.weaponChanging) {
+            
+        // }
 
         if (this.currentGun) {
             if (this.currentGun.name.indexOf("Gun") >= 0) {

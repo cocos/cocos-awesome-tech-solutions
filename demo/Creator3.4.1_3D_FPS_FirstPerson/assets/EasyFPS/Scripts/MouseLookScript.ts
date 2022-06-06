@@ -87,8 +87,8 @@ export class MouseLookScript extends Component {
 
     update(dt: number) {
         this.MouseInputMovement();
-        if (PlayerMovementScript.currentSpeed > 1) {
-            HeadMovement();
+        if (PlayerMovementScript.prototype.currentSpeed > 1) {
+            this.HeadMovement();
         }
     }
 

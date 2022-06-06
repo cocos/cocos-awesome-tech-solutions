@@ -33,6 +33,8 @@ export class PlayerMovementScript extends Component {
     walkSound: AudioSource = null!;
     @property(AudioSource)
     runSound: AudioSource = null!;
+    @property(AudioSource)
+    jumpSound: AudioSource = null!;
 
     private slowdownV: Vec3 = new Vec3();
     private horizontalMovement: Vec3 = new Vec3();
@@ -88,7 +90,7 @@ export class PlayerMovementScript extends Component {
             this.rigidBody.applyForce(Vec3.UP.clone().multiplyScalar(this.jumpForce))
             this.walkSound.stop();
             this.runSound.stop();
-            //缺少音效
+            this.jumpSound.play();
         }
     }
 
