@@ -1,0 +1,78 @@
+// Effect Syntax Guide: https://github.com/cocos-creator/docs-3d/blob/master/zh/material-system/effect-syntax.md
+
+CCEffect %{
+  techniques:
+  - name: opaque
+    passes:
+    - vert: motion-vertext-vs:vert
+      frag: motion-vertext-fs:frag
+      properties: &props
+        mainTexture:    { value: white }
+        mainColor:      { value: [1, 1, 1, 1], editor: { type: color } }
+        direction:      { value: [0, 0, 0, 1] }
+  - name: transparent
+    passes:
+    - vert: motion-vertext-vs:vert
+      frag: motion-vertext-fs:frag
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: src_alpha
+          blendDst: one_minus_src_alpha
+          blendSrcAlpha: src_alpha
+          blendDstAlpha: one_minus_src_alpha
+      properties: *props
+}%
+
+CCProgram motion-vertext-vs %{
+  precision highp float;
+  #include <input-standard>
+  #include <decode-base>
+  #include <cc-local-batch>
+  #include <cc-global>
+
+  out vec2 v_uv;
+  out float factor;
+
+  uniform MotionVertexDir {
+    vec4 direction;
+  };
+
+  vec4 vert () {
+    v_uv = a_texCoord;
+
+    StandardVertInput In;
+    CCVertInput(In);
+
+    mat4 matWorld;
+    mat4 matWorldIT;
+    CCGetWorldMatrixFull(matWorld, matWorldIT);
+
+    vec3 worldNormal = normalize((matWorld * vec4(In.normal, 0.0)).xyz);
+    vec4 worldPostion = matWorld * In.position;
+    
+    factor = max(0.0, dot(worldNormal, direction.xyz));
+    float noise = fract(sin(dot(v_uv.xy, vec2(12.9898, 78.233))) * 43758.5453);
+    worldPostion.xyz += direction.xyz * direction.w * noise * factor;
+    return cc_matViewProj * worldPostion;
+  }
+}%
+
+CCProgram motion-vertext-fs %{
+  precision highp float;
+  #include <output>
+
+  in vec2 v_uv;
+  in float factor;
+  uniform sampler2D mainTexture;
+
+  uniform Constant {
+    vec4 mainColor;
+  };
+
+  vec4 frag () {
+    vec4 col = texture(mainTexture, v_uv);
+    col += factor * mainColor;
+    return col;
+  }
+}%
