@@ -412,3 +412,17 @@
   > https://github.com/kirikayakazuto/Cocos_RPG#cocos-creator--tilemap-%E8%87%AA%E5%8A%A8%E5%AF%BB%E8%B7%AF
 
   ![2022042402|690x346](https://forum.cocos.org/uploads/default/original/3X/3/6/3683684ff16aa9204293f0d23eb380027880eddf.gif)
+
+
+
+*论坛用户(jogi)提供，由技术支持团队升级至3.4.2版本*
+
+* (v3.4.2) Spine 骨骼控制
+
+  > 工程 git 仓库地址: 
+  >
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.2_2D_SpineDragController
+  >
+  > 素材来源: 
+  >
+  > https://forum.cocos.org/t/topic/126989
