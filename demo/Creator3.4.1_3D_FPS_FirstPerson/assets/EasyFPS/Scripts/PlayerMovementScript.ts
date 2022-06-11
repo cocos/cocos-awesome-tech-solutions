@@ -1,7 +1,7 @@
 
 import { SmoothDampV3 } from './Utils/MathEx'
 import { InputEx } from './Utils/InputEx';
-import { _decorator, Component, Node, Vec3, RigidBody, KeyCode, AudioSource, ICollisionEvent, BoxCollider, Label, PhysicsSystem } from 'cc';
+import { _decorator, Component, Node, Vec3, RigidBody, KeyCode, AudioSource, ICollisionEvent, BoxCollider, Label, PhysicsSystem, find } from 'cc';
 import { TimeEx } from './Utils/TimeEx';
 
 const { ccclass, property } = _decorator;
@@ -73,13 +73,22 @@ export class PlayerMovementScript extends Component {
      * 蹲下
      */
     Crouching() {
-        if (InputEx.GetKeyDown(KeyCode.KEY_C)) {
-            this.node.scale = this.node.scale.lerp(new Vec3(1, 0.6, 1), TimeEx.deltaTime * 15);
+        var gun = find("NewGun_semi") || find("NewGun_auto");
+        if (gun) {
+            var newPos = new Vec3();
+            var newCameraY = 0;
+            if (InputEx.GetKeyDown(KeyCode.KEY_C)) {
+                gun.getPosition(newPos);
+                newPos.lerp(new Vec3(gun.position.x, gun.position.y - 60, gun.position.z), 1);
+                newCameraY = -0.6;
+            } else {
+                newPos.lerp(new Vec3(gun.position.x, gun.position.y + 60, gun.position.z), 1);
+                newCameraY = 0;
+                
+            }
+            gun.setPosition(newPos);
+            this.cameraMain.setPosition(new Vec3(0, newCameraY, 0));
         }
-        else {
-            this.node.scale = this.node.scale.lerp(new Vec3(1, 1, 1), TimeEx.deltaTime * 15);
-        }
-        this.cameraMain.scale = new Vec3(1 / this.node.scale.x, 1 / this.node.scale.y, 1 / this.node.scale.z);
     }
 
     /**
