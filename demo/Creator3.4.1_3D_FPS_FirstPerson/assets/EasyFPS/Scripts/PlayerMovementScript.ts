@@ -43,6 +43,7 @@ export class PlayerMovementScript extends Component {
 
     private slowdownV: Vec3 = new Vec3();
     private horizontalMovement: Vec3 = new Vec3();
+    private initGunPos: Vec3 = null;
     private grounded: boolean = false;
     private preload: boolean = true;
     static speed = 0;
@@ -81,18 +82,24 @@ export class PlayerMovementScript extends Component {
     Crouching() {
         var gun = find("NewGun_semi") || find("NewGun_auto");
         if (gun) {
-            var newPos = new Vec3();
+            var newPos = null;
             var newCameraY = 0;
             if (InputEx.GetKeyDown(KeyCode.KEY_C)) {
-                gun.getPosition(newPos);
-                newPos.lerp(new Vec3(gun.position.x, gun.position.y - 60, gun.position.z), 1);
+                if (!this.initGunPos) {
+                    this.initGunPos = new Vec3();
+                    gun.getPosition(this.initGunPos);
+                }
+                newPos = new Vec3();
+                newPos.lerp(new Vec3(this.initGunPos.x, this.initGunPos.y - 60, this.initGunPos.z), 1);
                 newCameraY = -0.6;
             } else {
-                newPos.lerp(new Vec3(gun.position.x, gun.position.y + 60, gun.position.z), 1);
                 newCameraY = 0;
-                
             }
-            gun.setPosition(newPos);
+            if (newPos) {
+                gun.setPosition(newPos);
+            } else if (this.initGunPos && !gun.position.equals(this.initGunPos)){
+                gun.setPosition(this.initGunPos);
+            }
             this.cameraMain.setPosition(new Vec3(0, newCameraY, 0));
         }
     }

@@ -113,7 +113,7 @@ export class GunScript extends Component {
     public forwardRotationAmount: Vec2 = new Vec2(1, 1);
 
     // Sensitvity of the gun
-    public mouseSensitvity_notAiming: number = 4;
+    public mouseSensitvity_notAiming: number = 3;
     public mouseSensitvity_aiming: number = 1;
     public mouseSensitvity_running: number = 4;
 
