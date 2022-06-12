@@ -495,3 +495,5 @@
   > 效果演示
   >
   > ![20220612_181524 00_00_20-00_00_30|640x360](https://forum.cocos.org/uploads/default/original/3X/c/7/c7291a456569e70b9900d41b88f5524dd8626ade.gif) 
+  >
+  > 详细测试视频：https://download.cocos.org/CocosTest/zhefengzhang/NoDelete/20220612_181524.mp4
