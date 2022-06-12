@@ -317,7 +317,6 @@
   > 备注: 目前 3.0.0 ~ 3.4.1 版本在 ios 平台调用原生转屏功能后，点击位置会发生偏移，需要手动合并 pr: https://github.com/cocos-creator/engine-native/pull/4265, Demo 中有附带合并 pr 后的文件。
 
 
-
 *用户 **xjz1994** 提供开源方案，由技术支持团队升级至 3.4.1 版本*
 
 * (v3.4.1) 四叉树碰撞优化
@@ -332,8 +331,6 @@
   
   ![Image Text](https://forum.cocos.org/uploads/default/original/3X/3/e/3e2ee25fec90d566d76b2d7df63f593e6051f260.gif)
 
-
-
 *youyou提供，技术支持团队升级项目*
 
 * (v3.4.2) raphael (Graphics 拓展和 SVG 加载)
@@ -345,7 +342,38 @@
   > 需知：目前引擎有一处 bug，会导致 svg 场景渲染异常。详细问题描述可以看一下 [issues](https://github.com/cocos/cocos-engine/issues/10900)，解决问题的办法是参考下图中红色代码定制一下引擎：
 ![图片|549x500](https://forum.cocos.org/uploads/default/original/3X/7/3/7324f0b63f08a3d99ce3cc5b08360908fa541414.png) 
 
+*技术支持团队提供*
 
+* (v3.4.2) 模型动画残影效果（待定方案）
+
+  > 工程 git 仓库地址: 
+  >
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.2_3D_Model_Residual%20Shadows
+  >
+  > 效果展示：
+  >![Apr-29-2022 17-54-52|690x459, 75%](https://forum.cocos.org/uploads/default/original/3X/6/d/6dfe81d6b23bd950362b0685a456bb9addbc35cf.gif) 
+  >
+  > web 和 小游戏性能还可以，但是在原生平台上性能不好。
+
+*技术支持团队提供*
+
+* (v3.4.0) 3D 桌球联网同步
+  > 工程仓库地址：
+   https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.2_3D_NetworkBilliards
+  > 素材来自：
+https://sketchfab.com/search?features=downloadable&licenses=322a749bcfa841b29dff1e8a1bb74b0b&licenses=b9ddc40b93e34cdca1fc152f39b9f375&licenses=72360ff1740d419791934298b8b6d270&licenses=bbfe3f7dbcdd4122b966b85b9786a989&licenses=2628dbe5140a4e9592126c8df566c0b7&licenses=34b725081a6a4184957efaec2cb84ed3&licenses=7c23a1ba438d4306920229c12afcb5f9&licenses=783b685da9bf457d81e829fa283f3567&licenses=5b54cf13b1a4422ca439696eb152070d&q=Billiards&sort_by=-likeCount&type=models
+   > 客户端：CocosCreator 3.4.2
+      服务端：Node.js
+      联网方式：WebSocket
+      服务器启动方式：
+      项目文件夹下中执行命令行  cd AppServer，之后执行 node AppServer.js，看到输出 “Listen 8002” 即表示服务器启动正常。
+
+   > 客户端启动方式：
+      使用 Dashboard 导入本文件夹的工程，并测试。
+      目前已验证通过在 web、android、ios 等三个平台的同步效果是正常的，其余平台暂无验证。
+      此处提供一段 web 预览和编辑器模拟器预览时的同步测试录屏：
+![NetworkBilliards 00_00_00-00_00_58|640x360](https://forum.cocos.org/uploads/default/original/3X/f/3/f3d5403597dfccc5fb326ffb0c2d24261f3196b5.gif) 
+查看更多请点击链接观看：http://download.cocos.org/CocosTest/zhefengzhang/NoDelete/NetworkBilliards.mp4
 
 *技术支持团队提供*
 
@@ -386,18 +414,17 @@
   ![2022052602|690x459](https://forum.cocos.org/uploads/default/original/3X/7/4/745e7b80c83827f7843bbdb5fdd148a62ca179df.png) 
 
 
-
 *技术支持团队提供*
 
 * (v3.4.2) 声网视频流渲染 SDK 接入
-
   > 工程 git 仓库地址: 
-  >
   > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.2_AgoraMediaPlayer
-  >
-  > 需知：目前对接了 android 端。iOS 端 SDK 后续考虑接入。
-
-
+  > 效果演示
+  > ![agoraMediaPlayer_20220528 00_00_00-00_00_11|225x500](https://forum.cocos.org/uploads/default/original/3X/7/7/77a202b51d4cbc513680a5a8c74fc76898e3154e.gif) 
+  > 打开链接可查看测试视频：https://download.cocos.org/CocosTest/muxiandong/NoDelete/agoraMediaPlayer_20220528.mp4
+  > 需知：
+   > * 目前对接了 android 端。iOS 端 SDK 后续考虑接入。
+   > * 如果需要切换视频源，需要在 native/engine/common/Classes/MediaPlayer.cpp 的 MediaPlayer::open 接口，修改视频源，即可。
 
 *Github用户(kirikayakazuto)提供，由技术支持团队升级至3.5.0版本*
 
@@ -413,16 +440,29 @@
 
   ![2022042402|690x346](https://forum.cocos.org/uploads/default/original/3X/3/6/3683684ff16aa9204293f0d23eb380027880eddf.gif)
 
+*论坛用户 @jogi  提供，由技术支持团队升级至3.4.2 版本*
 
-
-*论坛用户(jogi)提供，由技术支持团队升级至3.4.2版本*
-
-* (v3.4.2) Spine 骨骼控制
+* (v3.4.2) Spine 骨骼控制 
 
   > 工程 git 仓库地址: 
   >
   > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.2_2D_SpineDragController
   >
-  > 素材来源: 
+  > 原帖地址：https://forum.cocos.org/t/topic/126989
+  > 效果演示
+  > ![GIF|418x500](https://forum.cocos.org/uploads/default/original/3X/0/2/028d6012a4b343aa3cd8985754805afc8e652706.gif) 
+
+*Unity assetstore 用户 [Mario Haberle](https://assetstore.unity.com/publishers/20994) 提供，由技术支持团队升级将游戏移植至 3.4.1 版本*
+
+* (v3.4.1) FPS 单机射击模拟
+
+  > 工程 git 仓库地址: 
   >
-  > https://forum.cocos.org/t/topic/126989
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.1_3D_FPS_FirstPerson
+  >
+  > **游戏操作键位：W=前进、A=左移、S=后退、D=右移、shift + W=加速跑、C=下蹲、鼠标右键=瞄准、空格=跳跃、Q=肘击、R=换弹夹**
+  >
+  > 素材来自：https://assetstore.unity.com/packages/3d/characters/humanoids/sci-fi/easy-fps-73776
+  >
+  > 效果演示
+  > ![20220612_181524 00_00_20-00_00_30|640x360](https://forum.cocos.org/uploads/default/original/3X/c/7/c7291a456569e70b9900d41b88f5524dd8626ade.gif) 

@@ -5,6 +5,10 @@
 
     Android
 
+### 效果演示
+> ![agoraMediaPlayer_20220528 00_00_00-00_00_11|225x500](https://forum.cocos.org/uploads/default/original/3X/7/7/77a202b51d4cbc513680a5a8c74fc76898e3154e.gif) 
+> 打开链接可查看测试视频：https://download.cocos.org/CocosTest/muxiandong/NoDelete/agoraMediaPlayer_20220528.mp4
+
 ### 使用方式
 - 本方案为接入声网视频流渲染 SDK（Agora）接入工程，接入 SDK 部分均定制在 native 目录下。
 - 本方案范例目前对接了 android 端。iOS 端 SDK 后续考虑接入。
