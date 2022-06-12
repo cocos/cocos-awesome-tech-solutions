@@ -1,7 +1,7 @@
 
 import { SmoothDampV3 } from './Utils/MathEx'
 import { InputEx } from './Utils/InputEx';
-import { _decorator, Component, Node, Vec3, RigidBody, KeyCode, AudioSource, ICollisionEvent, BoxCollider, Label, PhysicsSystem, find } from 'cc';
+import { _decorator, Component, Node, Vec3, RigidBody, KeyCode, AudioSource, ICollisionEvent, BoxCollider, Label, PhysicsSystem, find, geometry, Prefab, instantiate } from 'cc';
 import { TimeEx } from './Utils/TimeEx';
 
 const { ccclass, property } = _decorator;
@@ -36,9 +36,15 @@ export class PlayerMovementScript extends Component {
     @property(AudioSource)
     jumpSound: AudioSource = null!;
 
+    @property(Prefab)
+    public decalHitWall: Prefab = null!;
+    @property(Prefab)
+    public bloodEffect: Prefab = null!;
+
     private slowdownV: Vec3 = new Vec3();
     private horizontalMovement: Vec3 = new Vec3();
     private grounded: boolean = false;
+    private preload: boolean = true;
     static speed = 0;
 
     start() {
@@ -193,5 +199,20 @@ export class PlayerMovementScript extends Component {
     }
 
     lateUpdate() {
+        if (this.preload) {
+            let wpos = new Vec3();
+            let forward = new Vec3();
+            let ray = new geometry.Ray(wpos.x, wpos.y, wpos.z, forward.x, forward.y, forward.z);
+            PhysicsSystem.instance.raycastClosest(ray, 0xffffffff, 1000000, true);
+            var newTestNode0 = instantiate(this.decalHitWall);
+            newTestNode0.parent = this.node.parent;
+            newTestNode0.setPosition(0, 10000, 0);
+            newTestNode0.destroy();
+            var newTestNode1 = instantiate(this.bloodEffect);
+            newTestNode1.parent = this.node.parent;
+            newTestNode1.setPosition(0, 10000, 0);
+            newTestNode1.destroy();
+            this.preload = false;
+        }
     }
 }
