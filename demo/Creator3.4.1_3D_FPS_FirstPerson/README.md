@@ -6,7 +6,7 @@
   >
   > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.1_3D_FPS_FirstPerson
   >
-  > **游戏操作键位：W=前进、A=左移、S=后退、D=右移、shift + W=加速跑、C=下蹲、鼠标右键=瞄准、空格=跳跃、Q=肘击、R=换弹夹**
+  > **游戏操作键位：W=前进、A=左移、S=后退、D=右移、shift + W=加速跑、C=下蹲、鼠标左键=射击、鼠标右键=瞄准、空格=跳跃、Q=肘击、R=换弹夹、鼠标滑轮=切枪**
   >
   > 素材来自：https://assetstore.unity.com/packages/3d/characters/humanoids/sci-fi/easy-fps-73776
   >
