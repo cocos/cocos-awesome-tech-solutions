@@ -1,0 +1,55 @@
+{
+  "game": {
+    "name": "未知游戏",
+    "app_id": "UNKNOW",
+    "c_id": "0"
+  },
+  "appConfigMaps": [
+    {
+      "app_id": "UNKNOW",
+      "config_id": "915736"
+    },
+    {
+      "app_id": "646408289",
+      "config_id": "41b227"
+    }
+  ],
+  "configs": [
+    {
+      "app_id": "UNKNOW",
+      "config_id": "915736",
+      "config_name": "Default",
+      "config_remarks": "",
+      "services": [
+        {
+          "service_id": "316",
+          "enable": false,
+          "param": {}
+        },
+        {
+          "service_id": "235",
+          "enable": false,
+          "param": {}
+        }
+      ]
+    },
+    {
+      "app_id": "646408289",
+      "config_id": "41b227",
+      "config_name": "Default",
+      "config_remarks": "",
+      "services": [
+        {
+          "service_id": "316",
+          "enable": false,
+          "param": {}
+        },
+        {
+          "service_id": "314",
+          "enable": false,
+          "param": {}
+        }
+      ]
+    }
+  ]
+}
