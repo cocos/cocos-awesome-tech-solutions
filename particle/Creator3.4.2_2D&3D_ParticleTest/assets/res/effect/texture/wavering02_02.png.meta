@@ -1,0 +1,41 @@
+{
+  "ver": "1.0.22",
+  "importer": "image",
+  "imported": true,
+  "uuid": "f7db6a83-cf31-481f-9938-34d5574a4f57",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "f7db6a83-cf31-481f-9938-34d5574a4f57@6c48a",
+      "displayName": "wavering02_02",
+      "id": "6c48a",
+      "name": "texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "f7db6a83-cf31-481f-9938-34d5574a4f57"
+      },
+      "ver": "1.0.21",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "hasAlpha": true,
+    "type": "texture",
+    "redirect": "f7db6a83-cf31-481f-9938-34d5574a4f57@6c48a",
+    "fixAlphaTransparencyArtifacts": false
+  }
+}

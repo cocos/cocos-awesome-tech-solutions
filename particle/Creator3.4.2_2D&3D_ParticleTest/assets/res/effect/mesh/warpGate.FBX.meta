@@ -1,0 +1,62 @@
+{
+  "ver": "2.1.10",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "2961b396-3cee-45ed-9a9c-a39657e8fff4",
+  "files": [],
+  "subMetas": {
+    "95eda": {
+      "importer": "gltf-mesh",
+      "uuid": "2961b396-3cee-45ed-9a9c-a39657e8fff4@95eda",
+      "displayName": "",
+      "id": "95eda",
+      "name": "warpGate.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "0a739": {
+      "importer": "gltf-scene",
+      "uuid": "2961b396-3cee-45ed-9a9c-a39657e8fff4@0a739",
+      "displayName": "",
+      "id": "0a739",
+      "name": "warpGate.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "legacyFbxImporter": false,
+    "redirect": "2961b396-3cee-45ed-9a9c-a39657e8fff4@0a739",
+    "assetFinder": {
+      "meshes": [
+        "2961b396-3cee-45ed-9a9c-a39657e8fff4@95eda"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "2961b396-3cee-45ed-9a9c-a39657e8fff4@0a739"
+      ]
+    },
+    "fbx": {
+      "preferLocalTimeSpan": false,
+      "smartMaterialEnabled": false
+    }
+  }
+}
