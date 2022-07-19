@@ -1,0 +1,115 @@
+{
+  "__version__": "1.0.6",
+  "modules": {
+    "cache": {
+      "base": {
+        "_value": true
+      },
+      "graphcis": {
+        "_value": true
+      },
+      "gfx-webgl": {
+        "_value": true
+      },
+      "gfx-webgl2": {
+        "_value": false
+      },
+      "animation": {
+        "_value": false
+      },
+      "skeletal-animation": {
+        "_value": false
+      },
+      "3d": {
+        "_value": true
+      },
+      "2d": {
+        "_value": true
+      },
+      "ui": {
+        "_value": false
+      },
+      "particle": {
+        "_value": false
+      },
+      "physics": {
+        "_value": false,
+        "_option": "physics-ammo"
+      },
+      "physics-ammo": {
+        "_value": false
+      },
+      "physics-cannon": {
+        "_value": false
+      },
+      "physics-physx": {
+        "_value": false
+      },
+      "physics-builtin": {
+        "_value": false
+      },
+      "physics-2d": {
+        "_value": false,
+        "_option": "physics-2d-box2d"
+      },
+      "physics-2d-box2d": {
+        "_value": false
+      },
+      "physics-2d-builtin": {
+        "_value": false
+      },
+      "intersection-2d": {
+        "_value": false
+      },
+      "primitive": {
+        "_value": true
+      },
+      "profiler": {
+        "_value": false
+      },
+      "particle-2d": {
+        "_value": false
+      },
+      "audio": {
+        "_value": false
+      },
+      "video": {
+        "_value": false
+      },
+      "webview": {
+        "_value": false
+      },
+      "tween": {
+        "_value": false
+      },
+      "terrain": {
+        "_value": false
+      },
+      "tiled-map": {
+        "_value": false
+      },
+      "spine": {
+        "_value": true
+      },
+      "dragon-bones": {
+        "_value": false
+      },
+      "marionette": {
+        "_value": false
+      }
+    },
+    "flags": {},
+    "includeModules": [
+      "2d",
+      "3d",
+      "base",
+      "gfx-webgl",
+      "primitive",
+      "spine"
+    ],
+    "noDeprecatedFeatures": {
+      "value": false,
+      "version": ""
+    }
+  }
+}
