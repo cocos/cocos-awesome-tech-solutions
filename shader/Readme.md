@@ -74,3 +74,12 @@
   > *备注：本方案来源于论坛用户 @229508950 ，由技术支持团队升级至 3.4.2 版本*
 
   ![Jun-09-2022 17-35-48|480x314, 100%](https://forum.cocos.org/uploads/default/original/3X/0/3/031b6e006ee254c08f5c2774ba2ec1e0f16262c0.gif) 
+
+- (v3.5.2) 2D Fog
+
+  ---
+  > 参考: https://assetstore.unity.com/packages/vfx/shaders/fullscreen-camera-effects/simple-2d-fog-storm-smoke-115617 、https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/shader/Creator3.4.2_2D_TheBookOfShaders/
+  >
+  > 效果展示：
+  >
+  > ![Image Text](https://forum.cocos.org/uploads/default/original/3X/0/a/0a7a89395e55118d1c0e3233929e8cf84f6b08ef.gif)
