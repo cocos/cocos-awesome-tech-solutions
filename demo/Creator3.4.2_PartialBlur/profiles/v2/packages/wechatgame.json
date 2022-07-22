@@ -1,0 +1,9 @@
+{
+  "__version__": "1.0.1",
+  "options": {
+    "wechatgame": {
+      "appid": "wx8b0c533dc8d5baaa",
+      "orientation": "landscapeRight"
+    }
+  }
+}
