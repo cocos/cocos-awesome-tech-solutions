@@ -1,0 +1,123 @@
+CCEffect %{
+  techniques:
+  - name: opaque
+    passes:
+    - vert: unlit-vs:vert # builtin header
+      frag: unlit-fs:frag
+      properties: &props
+        texture0:    { value: white}
+        texture1:    { value: white}
+        mainColor:      { value: [1, 1, 1, 1], editor: { type: color } }
+  - name: transparent
+    passes:
+    - vert: general-vs:vert # builtin header
+      frag: unlit-fs:frag
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: src_alpha
+          blendDst: one_minus_src_alpha
+          blendSrcAlpha: src_alpha
+          blendDstAlpha: one_minus_src_alpha
+      properties: *props
+}%
+
+CCProgram unlit-vs %{
+  precision highp float;
+  #include <input-standard>
+  #include <cc-global>
+  #if USE_LOCAL
+    #include <cc-local-batch>
+    #include <cc-fog-vs>
+    #include <cc-shadow-map-vs>
+  #endif
+  
+  
+
+  in vec4 a_color;
+  #if HAS_SECOND_UV
+    in vec2 a_texCoord1;
+  #endif
+
+  out vec3 v_position;
+  out vec3 v_normal;
+  out vec3 v_tangent;
+  out vec3 v_bitangent;
+  out vec2 v_uv;
+  out vec2 v_uv1;
+  out vec4 v_color;
+
+  vec4 vert () {
+    StandardVertInput In;
+    CCVertInput(In);
+
+    #if USE_LOCAL
+      mat4 matWorld, matWorldIT;
+      CCGetWorldMatrixFull(matWorld, matWorldIT);
+
+      vec4 pos = matWorld * In.position;
+
+      v_position = pos.xyz;
+      v_normal = normalize((matWorldIT * vec4(In.normal, 0.0)).xyz);
+      v_tangent = normalize((matWorld * vec4(In.tangent.xyz, 0.0)).xyz);
+      v_bitangent = cross(v_normal, v_tangent) * In.tangent.w; // note the cross order
+    #endif
+
+    v_uv = a_texCoord;
+    #if HAS_SECOND_UV
+      v_uv1 = a_texCoord1;
+    #endif
+    v_color = a_color;
+
+    #if USE_LOCAL 
+      CC_TRANSFER_FOG(pos);
+      CC_TRANSFER_SHADOW(pos);
+
+      return cc_matProj * (cc_matView * matWorld) * In.position;
+    #else 
+      return cc_matViewProj * In.position;
+    #endif
+  }
+}%
+
+CCProgram unlit-fs %{
+  precision highp float;
+  #include <output>
+  #if USE_LOCAL
+    #include <cc-fog-fs>
+  #endif
+
+  in vec2 v_uv;
+  #if USE_LOCAL
+    in vec3 v_position;
+  #endif
+
+  uniform sampler2D texture0;
+  uniform sampler2D texture1;
+
+  uniform Constant {
+    vec4 mainColor;
+  };
+
+  vec4 frag () {
+    vec4 col = vec4(1, 1, 1, 1.0);
+    float y = texture(texture0, v_uv).r;
+    float u = texture(texture1, v_uv).r;
+    float v = texture(texture1, v_uv).g;
+
+      //绿色
+    mat4 YUV2RGB = mat4(
+      vec4(1.16438,  0.00000,  1.59603, -0.87079),
+      vec4(1.16438, -0.39176, -0.81297,  0.52959),
+      vec4(1.16438,  2.01723,  0.00000, -1.08139),
+      vec4(0, 0, 0, 1)
+    );
+    col = vec4(y, u, v, 1.0) * YUV2RGB;
+    col = mainColor * col;
+    
+    #if USE_LOCAL
+      CC_APPLY_FOG(col, v_position);
+    #endif
+    return CCFragOutput(col);
+  }
+}%
