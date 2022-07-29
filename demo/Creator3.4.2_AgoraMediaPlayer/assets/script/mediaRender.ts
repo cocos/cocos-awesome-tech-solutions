@@ -16,7 +16,6 @@ const { ccclass, property } = _decorator;
 
 @ccclass('mediaRender')
 export class mediaRender extends Component {
-    texture: Texture2D = null;
     raw: Uint8Array = null;
     width = 1920;
     height = 1080;
@@ -24,6 +23,9 @@ export class mediaRender extends Component {
     @property(Node)
     cubeNode !: Node;
     materials : Material[] = [];
+
+    img: ImageAsset = null;
+    tex: Texture2D = null;
 
     start() {
         this.raw = new Uint8Array(this.width * this.height * 4);
@@ -66,7 +68,7 @@ export class mediaRender extends Component {
 
     onOpen() {
         // @ts-ignore
-        jsb.MediaPlayer.getInstance().open();
+        jsb.MediaPlayer.getInstance().open("http://download.cocos.org/CocosTest/test-case/movie.mp4");
     }
 
     onPlay() {

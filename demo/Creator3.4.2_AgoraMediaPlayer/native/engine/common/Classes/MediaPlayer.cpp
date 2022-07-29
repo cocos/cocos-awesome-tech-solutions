@@ -48,10 +48,10 @@ void MediaPlayer::stop()
     media_player_->stop();
 }
 
-void MediaPlayer::open()
+void MediaPlayer::open(const char* url)
 {
     CC_LOG_INFO("MediaPlayer open");
-    media_player_->open("http://download.cocos.org/CocosTest/test-case/movie.mp4", 0);
+    media_player_->open(url, 0);
 }
 
 void MediaPlayer::play()

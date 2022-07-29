@@ -11,7 +11,7 @@ class MediaPlayer
 {
 public:
     void stop();
-    void open();
+    void open(const char* url);
     void play();
     void getFrameData(void* ptr, size_t len, int& width, int& height);
     static MediaPlayer* getInstance();

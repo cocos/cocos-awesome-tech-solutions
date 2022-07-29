@@ -69,11 +69,15 @@ static bool js_player_MediaPlayer_open(se::State& s) // NOLINT(readability-ident
     SE_PRECONDITION2(cobj, false, "js_player_MediaPlayer_open : Invalid Native Object");
     const auto& args = s.args();
     size_t argc = args.size();
-    if (argc == 0) {
-        cobj->open();
+    CC_UNUSED bool ok = true;
+    if (argc == 1) {
+        HolderType<const char*, false> arg0 = {};
+        ok &= sevalue_to_native(args[0], &arg0, s.thisObject());
+        SE_PRECONDITION2(ok, false, "js_player_MediaPlayer_open : Error processing arguments");
+        cobj->open(arg0.value());
         return true;
     }
-    SE_REPORT_ERROR("wrong number of arguments: %d, was expecting %d", (int)argc, 0);
+    SE_REPORT_ERROR("wrong number of arguments: %d, was expecting %d", (int)argc, 1);
     return false;
 }
 SE_BIND_FUNC(js_player_MediaPlayer_open)
