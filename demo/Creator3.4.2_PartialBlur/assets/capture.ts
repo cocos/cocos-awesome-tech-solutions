@@ -1,4 +1,4 @@
-import { _decorator, Component, director, Node, find, UITransform, RenderTexture, gfx, ImageAsset, Sprite, SpriteFrame, Texture2D, view, Color, Camera, Vec3, tween, Vec2, Canvas } from 'cc';
+import { _decorator, Component, director, Node, find, UITransform, RenderTexture, gfx, ImageAsset, Sprite, SpriteFrame, Texture2D, view, Color, Camera, Vec3, tween, Vec2, Canvas, Material } from 'cc';
 const { ccclass, property } = _decorator;
 
 @ccclass('NewComponent')
@@ -12,6 +12,13 @@ export class NewComponent extends Component {
     @property(Node)
     arrivedNode: Node | null = null;
 
+    @property(Material)
+    capNodeMat: Material | null = null;
+    @property(Material)
+    capScCircleMat: Material | null = null;
+
+    @property(Material)
+    capRectCircleMat: Material | null = null;
     renderTex: RenderTexture = null;
     _canvas: HTMLCanvasElement = null;
     _buffer: ArrayBufferView = null;
@@ -26,7 +33,31 @@ export class NewComponent extends Component {
         this.copyCamera.targetTexture = this.renderTex;
         this.tempPos = this.copyNode.getPosition();
     }
-    
+    //效果一
+    showDemo1() {
+        this.copyNode.getComponent(Sprite).spriteFrame = null;
+        find('Canvas/demo1').active = !find('Canvas/demo1').active;
+        find('Canvas/demo2').active = false;
+        find('Canvas/demo3').active = false;
+
+    }
+
+    //效果二
+    showDemo2() {
+        this.copyNode.getComponent(Sprite).spriteFrame = null;
+        find('Canvas/demo2').active = !find('Canvas/demo2').active;
+        find('Canvas/demo1').active = false;
+        find('Canvas/demo3').active = false;
+    }
+
+    //效果三
+    showDemo3() {
+        this.copyNode.getComponent(Sprite).spriteFrame = null;
+
+        find('Canvas/demo3').active = !find('Canvas/demo3').active;
+        find('Canvas/demo1').active = false;
+        find('Canvas/demo2').active = false;
+    }
     // 由于是单 Canvas 所以需要手动适配截图相机 copyCamera 的配置参数,避免相机视野大小不同,动态切换横竖屏需要自行手动进行相关适配
     // 多canvas 就不用
     onResizeCamera() {
@@ -39,7 +70,8 @@ export class NewComponent extends Component {
     }
 
     // 截图 全屏截图获取指定区域的像素，左下角为原点
-    capture() {
+    captureNode() {
+        this.copyNode.getComponent(Sprite).customMaterial = this.capNodeMat;
         let width = this.targetNode.getComponent(UITransform).contentSize.width;
         let height = this.targetNode.getComponent(UITransform).contentSize.height;
         let worldPos = this.targetNode.getWorldPosition();
@@ -61,12 +93,59 @@ export class NewComponent extends Component {
         this.showImage(width, height, boxWorld);
     }
 
+    // 截图 全屏截图获取指定区域的像素，左下角为原点
+    captureCircleShow() {
+        this.copyNode.getComponent(Sprite).customMaterial = this.capScCircleMat;
+        let width = view.getVisibleSize().width;
+        let height = view.getVisibleSize().height;
+        let worldPos = this.targetNode.getWorldPosition();
+
+        let rt = this.renderTex;
+        let texBuffers: ArrayBufferView[] = [];
+        // 设置显示区域大小
+        texBuffers[0] = new Uint8Array(width * height * 4);
+        let region = new gfx.BufferTextureCopy();
+        let boxWorld = this.targetNode.getComponent(UITransform).getBoundingBoxToWorld();
+        //相对原点偏移值
+        region.texOffset.x = 0; //Math.round(worldPos.x);
+        region.texOffset.y = 0; //Math.round(worldPos.y);
+        region.texExtent.width = width;
+        region.texExtent.height = height;
+        // @ts-ignore
+        director.root.device.copyTextureToBuffers(rt.getGFXTexture(), texBuffers, [region]);
+        this._buffer = texBuffers[0];
+        this.showImage(width, height, boxWorld);
+    }
+
+      // 截图 全屏截图获取指定区域的像素，左下角为原点
+    captureRectShow() {
+        this.copyNode.getComponent(Sprite).customMaterial = this.capRectCircleMat;
+        let width = view.getVisibleSize().width;
+        let height = view.getVisibleSize().height;
+        let worldPos = this.targetNode.getWorldPosition();
+
+        let rt = this.renderTex;
+        let texBuffers: ArrayBufferView[] = [];
+        // 设置显示区域大小
+        texBuffers[0] = new Uint8Array(width * height * 4);
+        let region = new gfx.BufferTextureCopy();
+        let boxWorld = this.targetNode.getComponent(UITransform).getBoundingBoxToWorld();
+        //相对原点偏移值
+        region.texOffset.x = 0; //Math.round(worldPos.x);
+        region.texOffset.y = 0; //Math.round(worldPos.y);
+        region.texExtent.width = width;
+        region.texExtent.height = height;
+        // @ts-ignore
+        director.root.device.copyTextureToBuffers(rt.getGFXTexture(), texBuffers, [region]);
+        this._buffer = texBuffers[0];
+        this.showImage(width, height, boxWorld);
+    }
     // 将获取到的图片数据赋给指定 sprite
     showImage(width: number, height: number, boxWorld) {
         let img = new ImageAsset();
         img.reset({
             _data: this._buffer,
-            width: (width),
+            width: width,
             height: height,
             format: Texture2D.PixelFormat.RGBA8888,
             _compressed: false
@@ -81,18 +160,41 @@ export class NewComponent extends Component {
         // sprite 的 sizeMode 设置为了 TRIMMED 就不需要设置 contentsize 
         // this.copyNode.getComponent(UITransform).setContentSize(width, height);
         this.copyNode.setPosition(new Vec3(0, 0, 0))
-        this.scheduleOnce(() => {
-            this.getShowPicRange(this.targetNode, find('Canvas/15'), boxWorld)
-        }, 3)
+        // this.scheduleOnce(() => {
+        //     this.getShowPicRange(this.targetNode, find('Canvas/15'), boxWorld)
+        // }, 3)
         // this.doCaptureAnim();
+    }
+
+    showRect(data){
+        // 获取材质实例对象进行设置
+        let mat = this.copyNode.getComponent(Sprite).getMaterialInstance(0);      
+       // 模糊比例
+       // mat.setProperty('texSize',new Vec2(width,height))
+       // 非模糊区域范围 （0 - 1）
+       mat.setProperty('minX', 0)
+       mat.setProperty('maxX', data.progress)
+       mat.setProperty('minY', 0)
+       mat.setProperty('maxY', 1)
+    }
+    // 设置显示区域
+    ShowRange(data) {
+         // 获取材质实例对象进行设置
+         let mat = this.copyNode.getComponent(Sprite).getMaterialInstance(0);      
+         
+         mat.setProperty('radius', data.progress)
+        //  mat.setProperty('texAlpha', 0)
+
     }
 
     // 设置显示区域
     getShowPicRange(capNode, targetNode, offset) {
-        let tWpos = targetNode.getWorldPosition();
-        let cWpos = capNode.getWorldPosition();
-        let capContentsize = capNode.getComponent(UITransform).contentSize;
-        let tarContentsize = targetNode.getComponent(UITransform).contentSize;
+        let boxWorld = this.targetNode.getComponent(UITransform).getBoundingBoxToWorld();
+
+        let tWpos = find('Canvas/15').getWorldPosition();
+        let cWpos = this.targetNode.getWorldPosition();
+        let capContentsize = this.targetNode.getComponent(UITransform).contentSize;
+        let tarContentsize = find('Canvas/15').getComponent(UITransform).contentSize;
         // 要显示的节点包围盒信息
         let tRect = {
             width: tarContentsize.width,
@@ -128,8 +230,8 @@ export class NewComponent extends Component {
 
         // 偏移比例
         let offsetRange = {
-            x: offset.x / cRect.width,
-            y: offset.y / cRect.height
+            x: boxWorld.x / cRect.width,
+            y: boxWorld.y / cRect.height
         }
 
         // 获取材质实例对象进行设置

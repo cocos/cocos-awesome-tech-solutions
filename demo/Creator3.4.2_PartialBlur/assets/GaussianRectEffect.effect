@@ -106,7 +106,8 @@ CCProgram sprite-fs %{
     float sum = 0.0;
    
     if(uv0.x > minX && uv0.x < maxX && uv0.y > minY && uv0.y < maxY){
-      col.a = color.a;
+      // col.a = color.a;/
+      discard;
     } else {
       for(float r = -rd; r <= rd; r++) {
             for(float c = -rd; c <= rd; c++) {

@@ -1,4 +1,4 @@
-// Copyright (c) 2017-2020 Xiamen Yaji Software Co., Ltd.
+
 CCEffect %{
   techniques:
   - passes:
@@ -17,11 +17,10 @@ CCEffect %{
         cullMode: none
       properties:
         alphaThreshold: { value: 0.5 }
-        texSize: {value: [500.0,500.0],editor: {tooltip: "节点尺寸"}}
-        maxY: { value: 0.5 }
-        minY: { value: 0.5 }
-        maxX: { value: 0.5 }
-        minX: { value: 0.5 }
+        radius: { value: 0.5 }
+        RangeX: {value: 0.5 }
+        RangeY: {value: 0.5 }
+        
 
 }%
 
@@ -68,19 +67,16 @@ CCProgram sprite-vs %{
 
 CCProgram sprite-fs %{
   precision highp float;
+  #include <cc-global>
   #include <embedded-alpha>
   #include <alpha-test>
-  #include <cc-global>
+  in vec4 color;
   uniform ARGS {
-    vec2 texSize;
-    float maxX;
-    float maxY;
-    float minX;
-    float minY;
+    float radius;
+    float RangeX;
+    float RangeY;
 
   };
-
-  in vec4 color;
   #if USE_TEXTURE
     in vec2 uv0;
     #pragma builtin(local)
@@ -89,7 +85,7 @@ CCProgram sprite-fs %{
 
   vec4 frag () {
     vec4 o = vec4(1, 1, 1, 1);
-
+   
     #if USE_TEXTURE
       o *= CCSampleWithAlphaSeparated(cc_spriteTexture, uv0);
       #if IS_GRAY
@@ -97,32 +93,15 @@ CCProgram sprite-fs %{
         o.r = o.g = o.b = gray;
       #endif
     #endif
+   vec2 uv = (gl_FragCoord.xy / cc_screenSize.xy);
+   uv -= 0.5;
+   uv.x *= 0.5;
+   uv.y *= 0.5;
+   float a = length(uv);
+   float c = smoothstep(radius,radius+0.1,a);
+    o = vec4(vec3(c), 0.5);
 
-    o *= color;
     ALPHA_TEST(o);
-
-    const mediump float rd = 5.0;
-    vec4 col = vec4(0.);
-    float sum = 0.0;
-   
-    if(uv0.x > minX && uv0.x < maxX && uv0.y > minY && uv0.y < maxY){
-      col.a = color.a;
-    } else {
-      for(float r = -rd; r <= rd; r++) {
-            for(float c = -rd; c <= rd; c++) {
-              vec2 target = uv0 + vec2(r / texSize.x,c / texSize.y);
-              float weight = (rd - abs(r)) * (rd - abs(c));
-              col += CCSampleWithAlphaSeparated(cc_spriteTexture,target) * weight;
-              sum += weight;
-            }
-          }
-      col = col/sum;
-      o = col;
-    }
-     
-    // col.a = color.a;
-    //  #if USE_TRAMSFORM
-    // #endif
     return o;
   }
 }%

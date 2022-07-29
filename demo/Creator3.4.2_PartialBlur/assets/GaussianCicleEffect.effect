@@ -18,11 +18,8 @@ CCEffect %{
       properties:
         alphaThreshold: { value: 0.5 }
         texSize: {value: [500.0,500.0],editor: {tooltip: "节点尺寸"}}
-        maxY: { value: 0.5 }
-        minY: { value: 0.5 }
-        maxX: { value: 0.5 }
-        minX: { value: 0.5 }
-
+        radius: {value: 0.0}
+        texAlpha: {value: 1.0}
 }%
 
 CCProgram sprite-vs %{
@@ -73,11 +70,8 @@ CCProgram sprite-fs %{
   #include <cc-global>
   uniform ARGS {
     vec2 texSize;
-    float maxX;
-    float maxY;
-    float minX;
-    float minY;
-
+    float radius;
+    float texAlpha;
   };
 
   in vec4 color;
@@ -88,7 +82,7 @@ CCProgram sprite-fs %{
   #endif
 
   vec4 frag () {
-    vec4 o = vec4(1, 1, 1, 1);
+    vec4 o = vec4(0, 0, 0, 0);
 
     #if USE_TEXTURE
       o *= CCSampleWithAlphaSeparated(cc_spriteTexture, uv0);
@@ -105,21 +99,28 @@ CCProgram sprite-fs %{
     vec4 col = vec4(0.);
     float sum = 0.0;
    
-    if(uv0.x > minX && uv0.x < maxX && uv0.y > minY && uv0.y < maxY){
-      col.a = color.a;
-    } else {
-      for(float r = -rd; r <= rd; r++) {
-            for(float c = -rd; c <= rd; c++) {
-              vec2 target = uv0 + vec2(r / texSize.x,c / texSize.y);
-              float weight = (rd - abs(r)) * (rd - abs(c));
-              col += CCSampleWithAlphaSeparated(cc_spriteTexture,target) * weight;
-              sum += weight;
-            }
-          }
-      col = col/sum;
-      o = col;
+  
+    float circle = radius * radius;
+    vec2 center = vec2(0.5);
+    float rx = (uv0.x - center.x);
+    float ry = uv0.y - center.y;
+    float dis = rx * rx + ry * ry;
+    // float a = smoothstep(dis, dis - 0.1, circle);
+    if (dis <= circle) {
+      discard;
     }
-     
+    for(float r = -rd; r <= rd; r++) {
+        for(float c = -rd; c <= rd; c++) {
+          vec2 target = uv0 + vec2(r / texSize.x,c / texSize.y);
+          float weight = (rd - abs(r)) * (rd - abs(c));
+          col += CCSampleWithAlphaSeparated(cc_spriteTexture,target) * weight;
+          sum += weight;
+        }
+      }
+    col = col/sum;
+    o = col;
+    o.a = texAlpha;
+    // }
     // col.a = color.a;
     //  #if USE_TRAMSFORM
     // #endif
