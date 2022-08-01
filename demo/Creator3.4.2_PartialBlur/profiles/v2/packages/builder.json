@@ -1,0 +1,294 @@
+{
+  "__version__": "1.3.1",
+  "log": {
+    "level": 1
+  },
+  "common": {
+    "outputName": "android",
+    "mainBundleCompressionType": "merge_dep",
+    "platform": "android",
+    "startScene": "7f04b470-61e3-4025-baff-22a71b4d9c65",
+    "scenes": [
+      {
+        "url": "db://assets/scene-001.scene",
+        "uuid": "7f04b470-61e3-4025-baff-22a71b4d9c65",
+        "inBundle": false
+      }
+    ],
+    "debug": true
+  },
+  "BuildTaskManager": {
+    "taskMap": {
+      "1658468398590": {
+        "id": "1658468398590",
+        "progress": 1,
+        "state": "success",
+        "message": "2022-7-22 14:00 Build success in 21832 ms!",
+        "options": {
+          "name": "NewProject_29",
+          "platform": "wechatgame",
+          "buildPath": "project://build",
+          "debug": false,
+          "md5Cache": false,
+          "skipCompressTexture": false,
+          "sourceMaps": false,
+          "replaceSplashScreen": false,
+          "mainBundleCompressionType": "merge_dep",
+          "mainBundleIsRemote": false,
+          "mergeStartScene": false,
+          "experimentalEraseModules": false,
+          "compressTexture": true,
+          "packAutoAtlas": true,
+          "startScene": "7f04b470-61e3-4025-baff-22a71b4d9c65",
+          "scenes": [
+            {
+              "url": "db://assets/scene-001.scene",
+              "uuid": "7f04b470-61e3-4025-baff-22a71b4d9c65",
+              "inBundle": false
+            }
+          ],
+          "outputName": "wechatgame",
+          "packages": {
+            "cocos-service": {
+              "configID": "04e1dd",
+              "services": [
+                {
+                  "service_id": "314",
+                  "service_component_name": "service-tradplusad",
+                  "builder": "C:\\Users\\Administrator\\.CocosCreator\\.service\\tradplusad\\src\\builder\\builder.js",
+                  "enable": false,
+                  "params": {}
+                }
+              ]
+            },
+            "wechatgame": {
+              "startSceneAssetBundle": false,
+              "orientation": "landscapeRight",
+              "appid": "wx8b0c533dc8d5baaa",
+              "separateEngine": false,
+              "wasm": "wasm",
+              "enabelWebGL2": "off"
+            }
+          }
+        },
+        "time": "2022-7-22 13:59",
+        "dirty": false
+      },
+      "1658469734635": {
+        "id": "1658469734635",
+        "progress": 1,
+        "state": "success",
+        "message": "2022-7-22 17:38 Build success in 49473 ms!",
+        "options": {
+          "name": "NewProject_29",
+          "platform": "web-mobile",
+          "buildPath": "project://build",
+          "debug": true,
+          "md5Cache": false,
+          "skipCompressTexture": false,
+          "sourceMaps": false,
+          "replaceSplashScreen": false,
+          "mainBundleCompressionType": "merge_dep",
+          "mainBundleIsRemote": false,
+          "mergeStartScene": false,
+          "experimentalEraseModules": false,
+          "compressTexture": true,
+          "packAutoAtlas": true,
+          "startScene": "7f04b470-61e3-4025-baff-22a71b4d9c65",
+          "scenes": [
+            {
+              "url": "db://assets/scene-001.scene",
+              "uuid": "7f04b470-61e3-4025-baff-22a71b4d9c65",
+              "inBundle": false
+            }
+          ],
+          "outputName": "web-mobile",
+          "packages": {
+            "web-mobile": {
+              "orientation": "landscape",
+              "polyfills": {
+                "asyncFunctions": true
+              }
+            },
+            "cocos-service": {
+              "configID": "04e1dd",
+              "services": [
+                {
+                  "service_id": "314",
+                  "service_component_name": "service-tradplusad",
+                  "builder": "C:\\Users\\Administrator\\.CocosCreator\\.service\\tradplusad\\src\\builder\\builder.js",
+                  "enable": false,
+                  "params": {}
+                }
+              ]
+            }
+          }
+        },
+        "time": "2022-7-22 17:37",
+        "dirty": false
+      },
+      "1658470555731": {
+        "id": "1658470555731",
+        "progress": 1,
+        "state": "success",
+        "message": "2022-7-22 14:17 Build success in 110800 ms!",
+        "options": {
+          "name": "NewProject_29",
+          "platform": "web-desktop",
+          "buildPath": "project://build",
+          "debug": false,
+          "md5Cache": false,
+          "skipCompressTexture": false,
+          "sourceMaps": false,
+          "replaceSplashScreen": false,
+          "mainBundleCompressionType": "merge_dep",
+          "mainBundleIsRemote": false,
+          "mergeStartScene": false,
+          "experimentalEraseModules": false,
+          "compressTexture": true,
+          "packAutoAtlas": true,
+          "startScene": "7f04b470-61e3-4025-baff-22a71b4d9c65",
+          "scenes": [
+            {
+              "url": "db://assets/main.scene",
+              "uuid": "1309b13c-530f-47d8-951a-12af605d4ccc",
+              "inBundle": false
+            },
+            {
+              "url": "db://assets/scene-001.scene",
+              "uuid": "7f04b470-61e3-4025-baff-22a71b4d9c65",
+              "inBundle": false
+            },
+            {
+              "url": "db://assets/scene.scene",
+              "uuid": "8356e46f-9092-4e30-8759-4efb7d797ccd",
+              "inBundle": false
+            }
+          ],
+          "outputName": "web-desktop",
+          "packages": {
+            "web-desktop": {
+              "resolution": {
+                "designWidth": 1280,
+                "designHeight": 960
+              },
+              "polyfills": {
+                "asyncFunctions": true
+              }
+            },
+            "cocos-service": {
+              "configID": "04e1dd",
+              "services": [
+                {
+                  "service_id": "314",
+                  "service_component_name": "service-tradplusad",
+                  "builder": "C:\\Users\\Administrator\\.CocosCreator\\.service\\tradplusad\\src\\builder\\builder.js",
+                  "enable": false,
+                  "params": {}
+                }
+              ]
+            }
+          }
+        },
+        "time": "2022-7-22 14:15",
+        "dirty": false
+      },
+      "1658472362463": {
+        "id": "1658472362463",
+        "progress": 1,
+        "state": "success",
+        "message": "2022-7-22 15:44 Build success in 9129 ms!",
+        "options": {
+          "name": "NewProject_29",
+          "platform": "android",
+          "buildPath": "project://build",
+          "debug": false,
+          "md5Cache": false,
+          "skipCompressTexture": false,
+          "sourceMaps": false,
+          "replaceSplashScreen": false,
+          "mainBundleCompressionType": "merge_dep",
+          "mainBundleIsRemote": false,
+          "mergeStartScene": false,
+          "experimentalEraseModules": false,
+          "compressTexture": true,
+          "packAutoAtlas": true,
+          "startScene": "7f04b470-61e3-4025-baff-22a71b4d9c65",
+          "scenes": [
+            {
+              "url": "db://assets/main.scene",
+              "uuid": "1309b13c-530f-47d8-951a-12af605d4ccc",
+              "inBundle": false
+            },
+            {
+              "url": "db://assets/scene-001.scene",
+              "uuid": "7f04b470-61e3-4025-baff-22a71b4d9c65",
+              "inBundle": false
+            },
+            {
+              "url": "db://assets/scene.scene",
+              "uuid": "8356e46f-9092-4e30-8759-4efb7d797ccd",
+              "inBundle": false
+            }
+          ],
+          "outputName": "android",
+          "packages": {
+            "android": {
+              "packageName": "com.ttrt.sss",
+              "orientation": {
+                "portrait": false,
+                "upsideDown": false,
+                "landscapeRight": true,
+                "landscapeLeft": true
+              },
+              "apiLevel": "android-26",
+              "appABIs": [
+                "arm64-v8a"
+              ],
+              "useDebugKeystore": true,
+              "keystorePath": "",
+              "keystorePassword": "",
+              "keystoreAlias": "",
+              "keystoreAliasPassword": "",
+              "appBundle": false,
+              "androidInstant": false,
+              "remoteUrl": "",
+              "sdkPath": "",
+              "ndkPath": "",
+              "renderBackEnd": {
+                "vulkan": false,
+                "gles3": true,
+                "gles2": true
+              },
+              "swappy": false
+            },
+            "cocos-service": {
+              "configID": "04e1dd",
+              "services": [
+                {
+                  "service_id": "314",
+                  "service_component_name": "service-tradplusad",
+                  "builder": "C:\\Users\\Administrator\\.CocosCreator\\.service\\tradplusad\\src\\builder\\builder.js",
+                  "enable": false,
+                  "params": {}
+                }
+              ]
+            },
+            "native": {
+              "polyfills": {
+                "asyncFunctions": true
+              },
+              "encrypted": false,
+              "xxteaKey": "c8aRc+P8xImpFRbN",
+              "compressZip": false,
+              "makeAfterBuild": false,
+              "JobSystem": "none"
+            }
+          }
+        },
+        "time": "2022-7-22 15:44",
+        "dirty": false
+      }
+    }
+  }
+}
