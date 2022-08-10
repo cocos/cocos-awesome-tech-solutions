@@ -1,0 +1,29 @@
+{
+  "__version__": "1.0.2",
+  "general": {
+    "designResolution": {
+      "fitHeight": true,
+      "width": 960,
+      "height": 640,
+      "fitWidth": true
+    }
+  },
+  "layer": [
+    {
+      "name": "Step0",
+      "value": 1
+    },
+    {
+      "name": "Step1",
+      "value": 2
+    },
+    {
+      "name": "Step2",
+      "value": 4
+    },
+    {
+      "name": "Step3",
+      "value": 8
+    }
+  ]
+}
