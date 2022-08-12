@@ -24,11 +24,17 @@ engine/pal/audio/web/player-web.ts
 engine/pal/audio/web/player.ts    
 engine/platforms/native/engine/jsb-videoplayer.js    
 
+engine-native/cocos/audio/android/sonic/sonic.c
+engine-native/cocos/audio/android/sonic/sonic.h
 engine-native/cocos/audio/android/AudioEngine-inl.cpp    
 engine-native/cocos/audio/android/AudioEngine-inl.h    
 engine-native/cocos/audio/android/AudioMixerController.cpp    
 engine-native/cocos/audio/android/AudioPlayerProvider.cpp    
 engine-native/cocos/audio/android/AudioPlayerProvider.h     
+engine-native/cocos/audio/android/AudioMixer.cpp  
+engine-native/cocos/audio/android/AudioMixer.h 
+engine-native/cocos/audio/android/BufferProviders.cpp
+engine-native/cocos/audio/android/BufferProviders.h
 engine-native/cocos/audio/android/IAudioPlayer.h    
 engine-native/cocos/audio/android/PcmAudioPlayer.cpp    
 engine-native/cocos/audio/android/PcmAudioPlayer.h    
@@ -44,6 +50,7 @@ engine-native/cocos/audio/apple/AudioPlayer.mm
 engine-native/cocos/audio/apple/AudioPlayer.h    
 engine-native/cocos/audio/AudioEngine.cpp    
 engine-native/cocos/audio/include/AudioEngine.h    
+engine-native/cocos/audio/include/AudioDef.h
 engine-native/cocos/audio/oalsoft/AudioEngine-soft.cpp    
 engine-native/cocos/bindings/auto/jsb_audio_auto.cpp    
 engine-native/cocos/bindings/auto/jsb_audio_auto.h    
@@ -53,4 +60,5 @@ engine-native/cocos/platform/android/java/src/com/cocos/lib/CocosVideoHelper.jav
 engine-native/cocos/platform/android/java/src/com/cocos/lib/CocosVideoView.java    
 engine-native/cocos/ui/videoplayer/VideoPlayer-ios.mm    
 engine-native/cocos/ui/videoplayer/VideoPlayer-java.cpp    
-engine-native/cocos/ui/videoplayer/VideoPlayer.h    
+engine-native/cocos/ui/videoplayer/VideoPlayer.h
+engine-native/CMakeLists.txt
