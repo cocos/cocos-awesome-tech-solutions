@@ -17,7 +17,7 @@ CCEffect %{
         cullMode: none
       properties:
         alphaThreshold: { value: 0.5 }
-        threshold: { value: 0.5, editor: { slide: true, range: [0, 1.0], step: 0.1 }  }
+        threshold: { value: 0.58, editor: { slide: true, range: [0, 1.0], step: 0.01 }  }
         srcTexture: { value: white, editor: { parent: USE_PASS2 } }
 }%
 
