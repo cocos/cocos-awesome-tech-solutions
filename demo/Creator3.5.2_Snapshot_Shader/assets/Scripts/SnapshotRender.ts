@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, Label, Camera, Sprite, RenderTexture, Material, gfx, SpriteFrame, UITransform, view, director, Director, ModelComponent } from 'cc';
+import { _decorator, Component, Node, Label, Camera, Sprite, RenderTexture, Material, gfx, SpriteFrame, UITransform, view, director, Director, ModelComponent, Size } from 'cc';
 import { SnapshotFilter } from './SnapshotFilter';
 const { ccclass, property } = _decorator;
 
@@ -34,11 +34,13 @@ export class SnapshotRender extends Component {
 
     setSnapshot(target: Camera) {
         this.snapshot = target;
-        target.targetTexture = this.temporary(screen.width * view.getDevicePixelRatio(), screen.height * view.getDevicePixelRatio(), gfx.Format.RGBA8);
+
+        let viewsize = new Size(view.getFrameSize().width * view.getDevicePixelRatio(), view.getFrameSize().height * view.getDevicePixelRatio());
+        target.targetTexture = this.temporary(viewsize.width, viewsize.height, gfx.Format.RGBA8);
 
         // 宽屏适配
 
-        let ratio = screen.width / screen.height
+        let ratio = viewsize.width / viewsize.height
         let trs = this.preview.getComponent(UITransform);
         trs.setContentSize(trs.contentSize.height * ratio, trs.contentSize.height);
 
@@ -47,9 +49,14 @@ export class SnapshotRender extends Component {
             trs.setContentSize(trs.contentSize.height * ratio, trs.contentSize.height);
         })
 
-        director.on(Director.EVENT_AFTER_DRAW, () => {
+        director.on(Director.EVENT_BEGIN_FRAME, () => {
             this.runners.forEach(cam => {
                 cam.enabled = false;
+                cam.targetTexture = null;
+            });
+
+            this.steps.forEach(step => {
+                step.spriteFrame = null;
             })
         })
     }
@@ -69,7 +76,11 @@ export class SnapshotRender extends Component {
 
             let frame = new SpriteFrame();
             frame.texture = src;
+
             this.steps[this.flow].spriteFrame = frame;
+
+            // this has error, alway swap to default effect.
+            // this.steps[this.flow].enabled = true;
 
             this.runners[this.flow].targetTexture = dst;
             this.runners[this.flow].enabled = true;

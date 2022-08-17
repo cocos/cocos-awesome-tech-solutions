@@ -95,6 +95,8 @@ export class BloomFilter extends SnapshotFilter {
             USE_TEXTURE: true,
             SAMPLE_FROM_RT: true
         }, 0);
+        this.pass0.setProperty('threshold', 0.58);
+
         this.pass1 = new renderer.MaterialInstance({ parent: this.mainMaterial });
         this.pass1.recompileShaders({
             USE_TEXTURE: true,
