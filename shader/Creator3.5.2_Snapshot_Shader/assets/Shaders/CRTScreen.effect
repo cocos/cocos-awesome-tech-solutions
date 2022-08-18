@@ -59,8 +59,8 @@ CCProgram sprite-vs %{
     #endif
     color = a_color;
 
-    screenPos.x = pos.x * cc_screenSize.x;
-    screenPos.y = pos.y * cc_screenSize.y;
+    screenPos.x = pos.x * cc_screenSize.x * 0.5;
+    screenPos.y = pos.y * cc_screenSize.y * 0.5;
 
     return pos;
   }
@@ -96,8 +96,8 @@ CCProgram sprite-fs %{
         /*	The values that are divided by 4 represent the 'colour
         bleed' as discussed.
         */
-        vec3 r = vec3(col.r,     col.g / 4.0, col.b / 4.0);
-        vec3 g = vec3(col.r / 4.0, col.g,     col.b / 4.0);
+        vec3 r = vec3(col.r,       col.g / 4.0, col.b / 4.0);
+        vec3 g = vec3(col.r / 4.0, col.g,       col.b / 4.0);
         vec3 b = vec3(col.r / 4.0, col.g / 4.0, col.b);
         mat3 colormap = mat3(r, g, b);
 
