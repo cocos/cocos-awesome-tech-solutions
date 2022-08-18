@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, Label, Material, Color, EffectAsset, RenderTexture, find, CCObject, gfx, Texture2D, builtinResMgr, renderer, director, Director, game } from 'cc';
+import { _decorator, Component, Node, Label, Material, Color, EffectAsset, RenderTexture, find, CCObject, gfx, Texture2D, builtinResMgr, renderer, director, Director, game, Vec4 } from 'cc';
 import { SnapshotRender } from './SnapshotRender';
 
 export abstract class SnapshotFilter {
@@ -67,6 +67,9 @@ export class BlurFilter extends SnapshotFilter {
         // Create a temporary RenderTexture to hold the first pass.
         let tmp: RenderTexture = render.temporary(src.width, src.height, src.getPixelFormat());
 
+        this.pass0.setProperty('_textureSize', new Vec4(1200, 800))
+        this.pass1.setProperty('_textureSize', new Vec4(1200, 800))
+
         // Perform both passes in order.
         render.blit(src, tmp, this.pass0);   // First pass.
         render.blit(tmp, dst, this.pass1);   // Second pass.
@@ -95,6 +98,8 @@ export class BloomFilter extends SnapshotFilter {
             USE_TEXTURE: true,
             SAMPLE_FROM_RT: true
         }, 0);
+        this.pass0.setProperty('threshold', 0.58);
+
         this.pass1 = new renderer.MaterialInstance({ parent: this.mainMaterial });
         this.pass1.recompileShaders({
             USE_TEXTURE: true,

@@ -17,6 +17,7 @@ CCEffect %{
         cullMode: none
       properties:
         alphaThreshold: { value: 0.5 }
+        _textureSize: { value: [0.0, 0.0, 0.0, 0.0] }
 }%
 
 CCProgram sprite-vs %{
@@ -34,7 +35,6 @@ CCProgram sprite-vs %{
 
   out vec4 color;
   out vec2 uv0;
-  out vec4 _textureSize;
 
   vec4 vert () {
     vec4 pos = vec4(a_position, 1);
@@ -56,7 +56,7 @@ CCProgram sprite-vs %{
       CC_HANDLE_RT_SAMPLE_FLIP(uv0);
     #endif
     color = a_color;
-    _textureSize = cc_screenSize;
+
     return pos;
   }
 }%
@@ -67,7 +67,6 @@ CCProgram sprite-fs %{
   #include <alpha-test>
 
   in vec4 color;
-  in vec4 _textureSize;
 
   #if USE_TEXTURE
     in vec2 uv0;
@@ -80,6 +79,10 @@ CCProgram sprite-fs %{
 
   const float kernelSize = 21.0;
   const float spread = 5.0;
+
+  uniform Constant {
+    vec4 _textureSize;
+  };
 
 	float gaussian(float x)
 	{
@@ -99,6 +102,9 @@ CCProgram sprite-fs %{
 
   vec4 frag () {
     vec4 o = vec4(1, 1, 1, 1);
+
+  #if USE_VERTICAL
+  #endif
 
     #if USE_TEXTURE
       vec3 col = vec3(0.0, 0.0, 0.0);
