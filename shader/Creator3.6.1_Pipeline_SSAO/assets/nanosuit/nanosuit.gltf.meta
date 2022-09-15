@@ -1,0 +1,253 @@
+{
+  "ver": "2.3.1",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "e6f7edbd-2aad-47a5-a532-9e1712146655",
+  "files": [],
+  "subMetas": {
+    "48e22": {
+      "importer": "gltf-mesh",
+      "uuid": "e6f7edbd-2aad-47a5-a532-9e1712146655@48e22",
+      "displayName": "",
+      "id": "48e22",
+      "name": "Visor.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "185a6": {
+      "importer": "gltf-mesh",
+      "uuid": "e6f7edbd-2aad-47a5-a532-9e1712146655@185a6",
+      "displayName": "",
+      "id": "185a6",
+      "name": "Legs.mesh",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "51e88": {
+      "importer": "gltf-mesh",
+      "uuid": "e6f7edbd-2aad-47a5-a532-9e1712146655@51e88",
+      "displayName": "",
+      "id": "51e88",
+      "name": "hands.mesh",
+      "userData": {
+        "gltfIndex": 2
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "41cc3": {
+      "importer": "gltf-mesh",
+      "uuid": "e6f7edbd-2aad-47a5-a532-9e1712146655@41cc3",
+      "displayName": "",
+      "id": "41cc3",
+      "name": "Arms.mesh",
+      "userData": {
+        "gltfIndex": 3
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "04293": {
+      "importer": "gltf-mesh",
+      "uuid": "e6f7edbd-2aad-47a5-a532-9e1712146655@04293",
+      "displayName": "",
+      "id": "04293",
+      "name": "Helmet.mesh",
+      "userData": {
+        "gltfIndex": 4
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "cbcd6": {
+      "importer": "gltf-mesh",
+      "uuid": "e6f7edbd-2aad-47a5-a532-9e1712146655@cbcd6",
+      "displayName": "",
+      "id": "cbcd6",
+      "name": "Body.mesh",
+      "userData": {
+        "gltfIndex": 5
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "2665e": {
+      "importer": "gltf-material",
+      "uuid": "e6f7edbd-2aad-47a5-a532-9e1712146655@2665e",
+      "displayName": "",
+      "id": "2665e",
+      "name": "Glass.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "80cca": {
+      "importer": "gltf-material",
+      "uuid": "e6f7edbd-2aad-47a5-a532-9e1712146655@80cca",
+      "displayName": "",
+      "id": "80cca",
+      "name": "Leg.material",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f14e7": {
+      "importer": "gltf-material",
+      "uuid": "e6f7edbd-2aad-47a5-a532-9e1712146655@f14e7",
+      "displayName": "",
+      "id": "f14e7",
+      "name": "Hand.material",
+      "userData": {
+        "gltfIndex": 2
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "02f74": {
+      "importer": "gltf-material",
+      "uuid": "e6f7edbd-2aad-47a5-a532-9e1712146655@02f74",
+      "displayName": "",
+      "id": "02f74",
+      "name": "Arm.material",
+      "userData": {
+        "gltfIndex": 3
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "c2dfa": {
+      "importer": "gltf-material",
+      "uuid": "e6f7edbd-2aad-47a5-a532-9e1712146655@c2dfa",
+      "displayName": "",
+      "id": "c2dfa",
+      "name": "Helmet.material",
+      "userData": {
+        "gltfIndex": 4
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f4b39": {
+      "importer": "gltf-material",
+      "uuid": "e6f7edbd-2aad-47a5-a532-9e1712146655@f4b39",
+      "displayName": "",
+      "id": "f4b39",
+      "name": "Body.material",
+      "userData": {
+        "gltfIndex": 5
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "037f3": {
+      "importer": "gltf-scene",
+      "uuid": "e6f7edbd-2aad-47a5-a532-9e1712146655@037f3",
+      "displayName": "",
+      "id": "037f3",
+      "name": "nanosuit.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "legacyFbxImporter": false,
+    "redirect": "e6f7edbd-2aad-47a5-a532-9e1712146655@037f3",
+    "assetFinder": {
+      "meshes": [
+        "e6f7edbd-2aad-47a5-a532-9e1712146655@48e22",
+        "e6f7edbd-2aad-47a5-a532-9e1712146655@185a6",
+        "e6f7edbd-2aad-47a5-a532-9e1712146655@51e88",
+        "e6f7edbd-2aad-47a5-a532-9e1712146655@41cc3",
+        "e6f7edbd-2aad-47a5-a532-9e1712146655@04293",
+        "e6f7edbd-2aad-47a5-a532-9e1712146655@cbcd6"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "e6f7edbd-2aad-47a5-a532-9e1712146655@2665e",
+        "e6f7edbd-2aad-47a5-a532-9e1712146655@80cca",
+        "e6f7edbd-2aad-47a5-a532-9e1712146655@f14e7",
+        "e6f7edbd-2aad-47a5-a532-9e1712146655@02f74",
+        "e6f7edbd-2aad-47a5-a532-9e1712146655@c2dfa",
+        "e6f7edbd-2aad-47a5-a532-9e1712146655@f4b39"
+      ],
+      "scenes": [
+        "e6f7edbd-2aad-47a5-a532-9e1712146655@037f3"
+      ]
+    },
+    "dumpMaterials": false,
+    "materialDumpDir": "db://assets/Materials_nanosuit"
+  }
+}

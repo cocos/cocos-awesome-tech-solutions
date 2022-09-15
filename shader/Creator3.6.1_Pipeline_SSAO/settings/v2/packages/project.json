@@ -1,0 +1,18 @@
+{
+  "__version__": "1.0.2",
+  "general": {
+    "designResolution": {
+      "width": 1920,
+      "height": 1080
+    },
+    "renderPipeline": "75a8cdd2-8227-45b7-b496-216331900894"
+  },
+  "script": {
+    "loose": false
+  },
+  "fbx": {
+    "legacyFbxImporter": {
+      "visible": true
+    }
+  }
+}
