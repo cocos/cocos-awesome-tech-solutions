@@ -1,0 +1,125 @@
+// Copyright (c) 2017-2020 Xiamen Yaji Software Co., Ltd.
+
+CCEffect %{
+  techniques:
+  - passes:
+    - vert: ssao-vs
+      frag: ssao-fs
+      phase: ssao
+      depthStencilState:
+        depthTest: false
+        depthWrite: false
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: src_alpha
+          blendDst: one_minus_src_alpha
+          blendSrcAlpha: src_alpha
+          blendDstAlpha: one_minus_src_alpha
+}%
+
+CCProgram ssao-vs %{
+  precision highp float;
+  #include <legacy/input-standard>
+  #include <builtin/uniforms/cc-global>
+  #include <common/common-define>
+
+  out vec2 v_uv;
+
+  void main () {
+    StandardVertInput In;
+    CCVertInput(In);
+    CC_HANDLE_GET_CLIP_FLIP(In.position.xy);
+    gl_Position = In.position;
+    gl_Position.y = gl_Position.y;
+    v_uv = a_texCoord;
+  }
+}%
+
+CCProgram ssao-fs %{
+  precision highp float;
+  #include <builtin/uniforms/cc-global>
+  #include <legacy/shadow-map-base>
+  #include <ssao-constant>
+
+  #pragma define SSAO_SAMPLES_SIZE 64
+
+  in vec2 v_uv;
+
+  layout(binding = 0) uniform sampler2D gbuffer_albedoMap;
+  layout(binding = 1) uniform sampler2D gbuffer_normalMap;
+  layout(binding = 2) uniform sampler2D gbuffer_emissiveMap;
+  layout(binding = 3) uniform sampler2D depth_stencil;
+
+  layout(location = 0) out vec4 fragColor;
+
+  float rand(vec2 uv, float dx, float dy)
+  {
+    uv += vec2(dx, dy);
+    return fract(sin(dot(uv,  vec2(12.9898, 78.233))) * 43758.5453);
+  }
+
+  vec3 getRandomVec(vec2 uv){
+    return vec3(
+      rand(uv, 0.0, 1.0) * 2.0 - 1.0,
+      rand(uv, 1.0, 0.0) * 2.0 - 1.0,
+      0.0
+    );
+  }
+
+  float getDepth(vec3 worldPos) {
+    vec3 viewPos = (cc_matView * vec4(worldPos.xyz, 1.0)).xyz;
+    float depth = -viewPos.z / cc_cameraNFLSInfo.y;
+    return depth;
+  }
+
+  vec4 screen2WS(vec3 coord) {
+    vec3 ndc = vec3(
+  	  2.0 * (coord.x - cc_viewPort.x) / cc_viewPort.z - 1.0,
+      2.0 * (coord.y - cc_viewPort.y) / cc_viewPort.w - 1.0,
+      #if __VERSION__ >= 450
+      coord.z);
+      #else
+      2.0 * coord.z - 1.0);
+      #endif
+  
+    return GetWorldPosFromNDCPosRH(ndc, cc_matProj, cc_matViewProjInv);
+  }
+
+  void main () {
+    float depth = texture(depth_stencil, v_uv).x;
+    vec3 worldPos = screen2WS(vec3(gl_FragCoord.xy, depth)).xyz;
+
+    vec3 normal = texture(gbuffer_normalMap, v_uv).xyz;
+    vec3 randomVec = getRandomVec(v_uv);
+
+    float fragDepth = -getDepth(worldPos);
+
+    vec3 tangent = normalize(randomVec - normal * dot(randomVec, normal));
+    vec3 bitangent = cross(normal, tangent);
+    mat3 TBN = mat3(tangent, bitangent, normal);
+
+    float radius = 1.0;
+    float occlusion = 0.0;
+    for(int i = 0; i < SSAO_SAMPLES_SIZE; ++i)
+    {
+      vec3 ssaoSample = TBN * ssao_samples[i].xyz;
+      ssaoSample = worldPos + ssaoSample * radius;
+      float aoDepth = -getDepth(ssaoSample);
+
+      vec4 offset = vec4(ssaoSample, 1.0);
+      offset      = (cc_matProj * cc_matView) * offset;        // 从视图到切割
+      offset.xyz /= offset.w;                                  // 透视除法
+      offset.xyz  = offset.xyz * 0.5 + 0.5;                    // 范围到 0.0 - 1.0
+
+      float depth2 = texture(depth_stencil,  offset.xy).x;
+      vec3 samplePos = screen2WS(vec3( offset.xy, depth2)).xyz;
+      
+      float sampleDepth = -getDepth(samplePos);
+      float rangeCheck = smoothstep(0.0, 1.0, radius / abs(fragDepth - sampleDepth));
+      occlusion += (sampleDepth >= aoDepth ? 1.0 : 0.0) * rangeCheck;
+    }
+    occlusion = 1.0 - (occlusion / float(SSAO_SAMPLES_SIZE));
+    fragColor = vec4(occlusion, 1.0, 1.0, 1.0);
+  }
+}%

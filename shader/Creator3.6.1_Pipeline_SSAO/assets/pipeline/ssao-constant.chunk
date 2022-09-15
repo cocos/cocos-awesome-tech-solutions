@@ -1,0 +1,5 @@
+#pragma builtin(global)
+layout (set = 0, binding = 12) uniform CCSsao {
+    lowp vec4 cc_cameraNFLSInfo;
+    highp vec4 ssao_samples[64];
+};
