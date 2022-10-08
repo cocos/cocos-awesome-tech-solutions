@@ -1,0 +1,157 @@
+// Copyright (c) 2017-2020 Xiamen Yaji Software Co., Ltd.
+
+CCEffect %{
+  techniques:
+  - name: opaque
+    passes:
+    - vert: ssr-vs
+      frag: ssr-fs
+      phase: ssr
+      depthStencilState:
+        depthTest: false
+        depthWrite: false
+      blendState:
+        targets:
+        - blend: false
+          blendSrc: src_alpha
+          blendDst: one_minus_src_alpha
+          blendSrcAlpha: src_alpha
+          blendDstAlpha: one_minus_src_alpha
+}%
+
+CCProgram ssr-vs %{
+  precision highp float;
+  #include <legacy/input-standard>
+  #include <builtin/uniforms/cc-global>
+  #include <legacy/decode-base>
+  #include <legacy/local-batch>
+  #include <legacy/fog-vs>
+  #include <legacy/shadow-map-vs>
+  
+  out vec3 v_position;
+  out mediump vec3 v_normal;
+  out vec2 v_uv;
+  
+  void main () {
+    StandardVertInput In;
+    CCVertInput(In);
+
+    mat4 matWorld, matWorldIT;
+    CCGetWorldMatrixFull(matWorld, matWorldIT);
+
+    vec4 pos = matWorld * In.position;
+
+    v_position = pos.xyz;
+    v_normal = normalize((matWorldIT * vec4(In.normal, 0.0)).xyz);
+
+    gl_Position = cc_matProj * cc_matView * vec4(v_position, 1.0);
+  }
+}%
+
+CCProgram ssr-fs %{
+  precision highp float;
+  #include <builtin/uniforms/cc-global>
+
+  in vec3 v_position;
+  in mediump vec3 v_normal;
+  in vec2 v_uv;
+
+  layout(binding = 0) uniform sampler2D gbuffer_albedoMap;
+  layout(binding = 1) uniform sampler2D gbuffer_normalMap;
+  layout(binding = 2) uniform sampler2D gbuffer_emissiveMap;
+  layout(binding = 3) uniform sampler2D depth_stencil;
+
+  layout(location = 0) out vec4 fragColor;
+
+  // 世界坐标沿着射线方向的检测步进大小
+  const float step1 = 0.0025;
+
+  // 步进次数，如果步进次数小于可视距离，则射线追踪会丢失那些未到达但可碰撞的像素
+  const float maxSteps = 180.0;
+
+  vec4 viewToScreen(vec4 position) {
+    vec4 hs = cc_matViewProj * position;
+
+    // 执行透视除法（Perspective division），转换成 NDC 坐标
+    hs = hs/hs.w;
+
+    // NDC 坐标转屏幕坐标，ndc [-1, 1] 转 screen [0, 1]
+    hs = hs * 0.5 + 0.5;
+    return hs;
+  }
+
+  bool traceScreenSpaceRay(
+      vec3 orig,
+      vec3 dir,
+      out vec2 hitPixel,
+      out vec3 hitPoint)
+  {
+      float found = 0.0;
+
+      for(float i = 0.0; i <= maxSteps; i++) {
+          vec3 samplePoint = orig + dir * step1 * i;
+          vec4 PS = viewToScreen(vec4(samplePoint, 1.0));
+
+          // 获取深度缓存 screen [0, 1]
+          float depthAtPS = texture(depth_stencil, PS.xy).x;
+
+          // 查找 z 值最近的点 (费劲，这个算法待优化)
+          if ( abs(depthAtPS - PS.z) < step1 ) {
+              hitPixel.xy = PS.xy;
+              hitPoint.xyz = PS.xyz;
+              found = 1.0;
+          }
+      }
+
+      if (found > 0.5) {
+        return true;
+      }
+
+      return false;
+  }
+
+  void main () {
+    if ( v_normal.xyz == vec3(0.0)) {
+        fragColor = vec4(0, 0, 0, 1);
+        return;
+    }
+
+    // 从 gbuff 中获取顶点坐标的深度值。
+    vec4 PS = viewToScreen(vec4(v_position, 1.0));
+    float depthAtPS = texture(depth_stencil, PS.xy).x;
+
+    if (PS.z > depthAtPS) {
+        // 如果该位置有物体覆盖在上面，则不需要做反射。
+        discard;
+    }
+
+    // 计算视口射线，即坐标点垂直于相机视口的射线。
+    vec4 viewPos = cc_matView * vec4(v_position, 1.0);
+    viewPos.z = 0.0;
+
+    // 世界坐标系下的视角射线
+    vec3 rayOriginVS = (cc_matViewInv * viewPos).xyz;
+
+    // 世界坐标系下的视角反射线
+    vec3 rayDirectionVS = normalize(reflect(v_position - rayOriginVS, v_normal.xyz));
+
+    vec2 hitPixel = vec2(0.0, 0.0);
+    vec3 hitPoint = vec3(0.0, 0.0, 0.0);
+
+    // 开始射线追踪有效像素点，传入射线的原点 (必须是世界坐标)，射线的方向
+
+    bool intersection = traceScreenSpaceRay(v_position, rayDirectionVS, hitPixel, hitPoint);
+    if (intersection) {
+      // 射线追踪碰撞到有效像素 (半透明标记)
+      fragColor = texture(gbuffer_albedoMap, hitPixel);
+      fragColor.a = 0.3;
+    } else {
+      // 没有碰撞到有效像素，保持原始
+      discard;
+
+      // 3. 没有找到有效的反射像素，使用原始的颜色点（非反射点）
+      // vec4 PS = viewToScreen(vec4(v_position, 1.0));
+      // fragColor = texture(gbuffer_albedoMap, PS.xy);
+    }
+  }
+}%

@@ -1,0 +1,11 @@
+{
+  "name": "ssr_361",
+  "uuid": "65941b0f-48f1-4789-bc7a-1238fe0710d1",
+  "version": "3.6.1",
+  "creator": {
+    "version": "3.6.1"
+  },
+  "dependencies": {
+    "zlibt2": "^0.5.2"
+  }
+}
