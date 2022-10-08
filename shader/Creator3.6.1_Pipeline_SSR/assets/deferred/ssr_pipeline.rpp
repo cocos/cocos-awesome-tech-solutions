@@ -1,0 +1,135 @@
+[
+  {
+    "__type__": "DeferredPipeline",
+    "_name": "",
+    "_objFlags": 0,
+    "_native": "",
+    "_tag": 0,
+    "_flows": [
+      {
+        "__id__": 1
+      },
+      {
+        "__id__": 3
+      }
+    ],
+    "renderTextures": []
+  },
+  {
+    "__type__": "ShadowFlow",
+    "_name": "ShadowFlow",
+    "_priority": 0,
+    "_tag": 0,
+    "_stages": [
+      {
+        "__id__": 2
+      }
+    ]
+  },
+  {
+    "__type__": "ShadowStage",
+    "_name": "ShadowStage",
+    "_priority": 0,
+    "_tag": 0
+  },
+  {
+    "__type__": "MainFlow",
+    "_name": "MainFlow",
+    "_priority": 1,
+    "_tag": 0,
+    "_stages": [
+      {
+        "__id__": 4
+      },
+      {
+        "__id__": 6
+      },
+      {
+        "__id__": 8
+      },
+      {
+        "__id__": 10
+      },
+      {
+        "__id__": 11
+      }
+    ]
+  },
+  {
+    "__type__": "GbufferStage",
+    "_name": "GbufferStage",
+    "_priority": 0,
+    "_tag": 0,
+    "renderQueues": [
+      {
+        "__id__": 5
+      }
+    ]
+  },
+  {
+    "__type__": "RenderQueueDesc",
+    "isTransparent": false,
+    "sortMode": 0,
+    "stages": [
+      "default"
+    ]
+  },
+  {
+    "__type__": "LightingStage",
+    "_name": "LightingStage",
+    "_priority": 0,
+    "_tag": 0,
+    "_deferredMaterial": null,
+    "renderQueues": [
+      {
+        "__id__": 7
+      }
+    ]
+  },
+  {
+    "__type__": "RenderQueueDesc",
+    "isTransparent": true,
+    "sortMode": 1,
+    "stages": [
+      "default"
+    ]
+  },
+  {
+    "__type__": "SSRStage",
+    "_name": "SSRStage",
+    "_priority": 0,
+    "_tag": 0,
+    "renderMaterial": {
+      "__uuid__": "996e48ae-6aef-4f90-a926-d492e61e054b",
+      "__expectedType__": "cc.Material"
+    },
+    "renderQueues": [
+      {
+        "__id__": 9
+      }
+    ]
+  },
+  {
+    "__type__": "RenderQueueDescEx",
+    "isTransparent": false,
+    "sortMode": 1,
+    "stages": [
+      "ssr"
+    ]
+  },
+  {
+    "__type__": "BloomStage",
+    "_name": "BloomStage",
+    "_priority": 0,
+    "_tag": 0,
+    "_bloomMaterial": null
+  },
+  {
+    "__type__": "PostProcessStage",
+    "_name": "PostProcessStage",
+    "_priority": 0,
+    "_tag": 0,
+    "_postProcessMaterial": null,
+    "renderQueues": []
+  }
+]

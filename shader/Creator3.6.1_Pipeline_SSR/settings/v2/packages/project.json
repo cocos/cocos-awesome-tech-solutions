@@ -1,0 +1,19 @@
+{
+  "general": {
+    "designResolution": {
+      "width": 1280,
+      "fitHeight": true
+    },
+    "renderPipeline": "5d45ba66-829a-46d3-948e-2ed3fa7ee421"
+  },
+  "layer": [
+    {
+      "name": "SSR",
+      "value": 1
+    },
+    {
+      "name": "SSR2",
+      "value": 2
+    }
+  ]
+}
