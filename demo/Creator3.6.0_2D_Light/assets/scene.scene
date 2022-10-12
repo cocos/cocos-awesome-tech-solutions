@@ -338,7 +338,6 @@
     },
     "_enabled": true,
     "__prefab": null,
-    "_visFlags": 0,
     "_customMaterial": null,
     "_srcBlendFactor": 2,
     "_dstBlendFactor": 4,
@@ -449,7 +448,6 @@
     },
     "_enabled": true,
     "__prefab": null,
-    "_visFlags": 0,
     "_customMaterial": {
       "__uuid__": "39e094b4-76c0-4ff1-b61f-c9eecc592455",
       "__expectedType__": "cc.Material"
@@ -650,7 +648,6 @@
     },
     "_enabled": true,
     "__prefab": null,
-    "_visFlags": 0,
     "_customMaterial": null,
     "_srcBlendFactor": 2,
     "_dstBlendFactor": 4,
@@ -672,6 +669,7 @@
     "_enableWrapText": true,
     "_font": null,
     "_isSystemFontUsed": true,
+    "_spacingX": 0,
     "_isItalic": false,
     "_isBold": false,
     "_isUnderline": false,
@@ -786,7 +784,6 @@
     },
     "_enabled": true,
     "__prefab": null,
-    "_visFlags": 0,
     "_customMaterial": {
       "__uuid__": "39647bae-d7d4-4235-bd82-d8c1f84ceb4d",
       "__expectedType__": "cc.Material"
@@ -895,7 +892,6 @@
     },
     "_enabled": true,
     "__prefab": null,
-    "_visFlags": 0,
     "_customMaterial": {
       "__uuid__": "24f15f4a-6d09-4e12-aaa5-9912ee4ca60d",
       "__expectedType__": "cc.Material"
@@ -1010,7 +1006,6 @@
     },
     "_enabled": true,
     "__prefab": null,
-    "_visFlags": 0,
     "_customMaterial": null,
     "_srcBlendFactor": 2,
     "_dstBlendFactor": 4,
@@ -1284,8 +1279,8 @@
   },
   {
     "__type__": "cc.ShadowsInfo",
-    "_type": 0,
     "_enabled": false,
+    "_type": 0,
     "_normal": {
       "__type__": "cc.Vec3",
       "x": 0,
@@ -1300,35 +1295,26 @@
       "b": 76,
       "a": 255
     },
-    "_firstSetCSM": false,
-    "_fixedArea": false,
-    "_pcf": 0,
-    "_bias": 0.00001,
-    "_normalBias": 0,
-    "_near": 1,
-    "_far": 30,
-    "_shadowDistance": 100,
-    "_invisibleOcclusionRange": 200,
-    "_orthoSize": 5,
     "_maxReceived": 4,
     "_size": {
       "__type__": "cc.Vec2",
       "x": 512,
       "y": 512
-    },
-    "_saturation": 0.75
+    }
   },
   {
     "__type__": "cc.SkyboxInfo",
-    "_applyDiffuseMap": false,
+    "_envLightingType": 0,
     "_envmapHDR": null,
     "_envmap": null,
     "_envmapLDR": null,
     "_diffuseMapHDR": null,
     "_diffuseMapLDR": null,
     "_enabled": false,
-    "_useIBL": false,
-    "_useHDR": true
+    "_useHDR": true,
+    "_editableMaterial": null,
+    "_reflectionHDR": null,
+    "_reflectionLDR": null
   },
   {
     "__type__": "cc.FogInfo",

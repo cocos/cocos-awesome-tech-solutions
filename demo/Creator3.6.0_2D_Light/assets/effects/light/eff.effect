@@ -28,12 +28,12 @@ CCEffect %{
 
 CCProgram light-vs %{
   precision highp float;
-  #include <cc-global>
+  #include <builtin/uniforms/cc-global>
   #if USE_LOCAL
-    #include <cc-local>
+    #include <builtin/uniforms/cc-local>
   #endif
   #if SAMPLE_FROM_RT
-    #include <common>
+    #include <common/common-define>
   #endif
   in vec3 a_position;
   in vec2 a_texCoord;
@@ -74,8 +74,8 @@ CCProgram light-vs %{
 
 CCProgram light-fs %{
   precision highp float;
-  #include <embedded-alpha>
-  #include <alpha-test>
+  #include <builtin/internal/embedded-alpha>
+  #include <builtin/internal/alpha-test>
 
   in vec4 color;
   in vec4 object_position;
