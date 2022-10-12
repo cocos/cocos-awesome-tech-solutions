@@ -11,9 +11,12 @@ for (let i = 0; i < 4; i++) {
 
 class AssemblerSplit implements IAssembler {
     createData(com: SplitRender) {
+        let vertexCount = 4;
+        let indexCount = 6;
+
         const renderData = com.requestRenderData();
-        renderData.dataLength = 4;
-        renderData.resize(4, 6);
+        renderData.dataLength = vertexCount;
+        renderData.resize(vertexCount, indexCount);
         return renderData;
     }
 
@@ -22,8 +25,11 @@ class AssemblerSplit implements IAssembler {
         if (!points || points.length < 3) return;
 
         let vertexCount = points.length;
+        let indexCount = vertexCount + (vertexCount - 3) * 2;
+
         com.renderData.clear();
-        com.renderData.resize(vertexCount, vertexCount + (vertexCount - 3) * 2);
+        com.renderData.dataLength = vertexCount;
+        com.renderData.resize(vertexCount, indexCount);
 
         let material = com.renderData.material;
         com.renderData.material = material;
@@ -88,8 +94,26 @@ class AssemblerSplit implements IAssembler {
     }
 
     updateVertexData(com: SplitRender) {
-        this.updateWorldVerts(com, com.renderData.chunk.vb);
-        com.renderData.vertDirty = false;
+        const renderData = com.renderData;
+        if (!renderData) {
+            return;
+        }
+        const dataList = renderData.data;
+
+        let polygon = com.polygon;
+        for (let i = 0; i < polygon.length; i++) {
+            dataList[i].x = polygon[i].x;
+            dataList[i].y = polygon[i].y;
+        }
+
+        const chunk = com.renderData.chunk;
+        const vid = chunk.vertexOffset;
+        const ib = chunk.ib as any;
+
+        let indicesArr = SplitHelper.splitPolygon(com.polygon);
+        for (let i = 0, l = indicesArr.length; i < l; i++) {
+            ib[i] = vid + indicesArr[i];
+        }
     }
 
     updateUvs(com: SplitRender) {
@@ -107,19 +131,19 @@ class AssemblerSplit implements IAssembler {
             vData[uvOffset + 1] = uvs[i].y;
             uvOffset += floatsPerVert;
         }
-
-        com.renderData.vertDirty = false;
     }
 
     updateColor(com: SplitRender) {
-        let colorOffset = 5, floatsPerVert = 9;
-        let vData = com.renderData.chunk.vb;
+        const renderData = com.renderData!;
+
+        let colorOffset = 5, floatsPerVert = renderData.floatStride;
+        let vData = renderData.chunk.vb;
 
         const color = com.color;
         const colorR = color.r / 255;
         const colorG = color.g / 255;
         const colorB = color.b / 255;
-        const colorA = com.node._uiProps.opacity;
+        const colorA = color.a / 255;
 
         let polygon = com.polygon;
         for (let i = 0; i < polygon.length; i++) {
@@ -200,6 +224,7 @@ export class SplitRender extends Renderable2D {
     }
 
     onLoad() {
+        this._renderEntity.setNode(this.node);
         this.node['_hitTest'] = this._hitTest.bind(this);
     }
 
@@ -214,6 +239,7 @@ export class SplitRender extends Renderable2D {
         //         this.node.position.y + e.getDeltaY(),
         //         this.node.position.z));
         // }, this);
+        console.log(this.node.uuid);
     }
 
     _hitTest(cameraPt: Vec2) {
@@ -290,7 +316,7 @@ export class SplitRender extends Renderable2D {
         if (this._customMaterial) {
             this.setMaterial(this._customMaterial, 0);
             // this._customMaterial.overridePipelineStates({ priority: 128 }, 0);
-            this._blendHash = -1;
+            // this._blendHash = -1;
             return;
         }
         const mat = this._updateBuiltinMaterial();
