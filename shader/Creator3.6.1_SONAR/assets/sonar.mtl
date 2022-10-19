@@ -1,0 +1,74 @@
+{
+  "__type__": "cc.Material",
+  "_name": "",
+  "_objFlags": 0,
+  "_native": "",
+  "_effectAsset": {
+    "__uuid__": "2250fc41-a482-475e-a914-300bca33347f",
+    "__expectedType__": "cc.EffectAsset"
+  },
+  "_techIdx": 0,
+  "_defines": [
+    {
+      "USE_SONAR": true
+    },
+    {},
+    {}
+  ],
+  "_states": [
+    {
+      "rasterizerState": {},
+      "depthStencilState": {},
+      "blendState": {
+        "targets": [
+          {}
+        ]
+      }
+    },
+    {
+      "rasterizerState": {},
+      "depthStencilState": {},
+      "blendState": {
+        "targets": [
+          {}
+        ]
+      }
+    },
+    {
+      "rasterizerState": {},
+      "depthStencilState": {},
+      "blendState": {
+        "targets": [
+          {}
+        ]
+      }
+    }
+  ],
+  "_props": [
+    {
+      "_RingColor": {
+        "__type__": "cc.Color",
+        "r": 171,
+        "g": 255,
+        "b": 255,
+        "a": 255
+      },
+      "_RingColorIntensity": 1,
+      "_RingWidth": 0.3,
+      "_RingIntensityScale": 2,
+      "_RingTex": {
+        "__uuid__": "b47a9c48-e959-4af1-994b-1a6d5406bee2@6c48a",
+        "__expectedType__": "cc.Texture2D"
+      },
+      "mainColor": {
+        "__type__": "cc.Color",
+        "r": 116,
+        "g": 74,
+        "b": 47,
+        "a": 255
+      }
+    },
+    {},
+    {}
+  ]
+}
