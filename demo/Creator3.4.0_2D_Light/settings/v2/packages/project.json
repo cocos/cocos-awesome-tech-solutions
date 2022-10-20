@@ -1,9 +1,0 @@
-{
-  "__version__": "1.0.1",
-  "general": {
-    "designResolution": {
-      "fitHeight": false,
-      "fitWidth": true
-    }
-  }
-}
