@@ -1,0 +1,70 @@
+{
+  "__type__": "cc.Material",
+  "_name": "",
+  "_objFlags": 0,
+  "_native": "",
+  "_effectAsset": {
+    "__uuid__": "46695a62-a04b-46ac-a0ea-e46b8ce7a916",
+    "__expectedType__": "cc.EffectAsset"
+  },
+  "_techIdx": "1",
+  "_defines": [
+    {
+      "USE_HOLOGRAM": true
+    },
+    {},
+    {}
+  ],
+  "_states": [
+    {
+      "rasterizerState": {},
+      "depthStencilState": {},
+      "blendState": {
+        "targets": [
+          {}
+        ]
+      }
+    },
+    {
+      "rasterizerState": {},
+      "depthStencilState": {},
+      "blendState": {
+        "targets": [
+          {}
+        ]
+      }
+    },
+    {
+      "rasterizerState": {},
+      "depthStencilState": {},
+      "blendState": {
+        "targets": [
+          {}
+        ]
+      }
+    }
+  ],
+  "_props": [
+    {
+      "mainColor": {
+        "__type__": "cc.Color",
+        "r": 41,
+        "g": 255,
+        "b": 0,
+        "a": 255
+      },
+      "glitchStrength": 0.045,
+      "holoColor": {
+        "__type__": "cc.Color",
+        "r": 255,
+        "g": 255,
+        "b": 255,
+        "a": 30
+      },
+      "holoValue": 5.689,
+      "holoDistance": 0.236
+    },
+    {},
+    {}
+  ]
+}
