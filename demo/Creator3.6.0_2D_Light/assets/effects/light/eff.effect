@@ -1,0 +1,203 @@
+// Copyright (c) 2017-2020 Xiamen Yaji Software Co., Ltd.
+CCEffect %{
+  techniques:
+  - passes:
+    - vert: light-vs:vert
+      frag: light-fs:frag
+      depthStencilState:
+        depthTest: false
+        depthWrite: false
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: src_alpha
+          blendDst: one_minus_src_alpha
+          blendDstAlpha: one_minus_src_alpha
+      rasterizerState:
+        cullMode: none
+      properties:
+        alphaThreshold:     { value: 0.5 }
+        light_normal:       { value: white }
+        light_worldpos:     { value: [255, 255, 255, 255], editor: { type: vec4 } }        
+        light_ambientColor: { value: [127, 127, 127, 127], editor: { type: color } }
+        light_lightColor:   { value: [255, 255, 255, 255], editor: { type: color } }        
+        light_brightness:   { value: 1.0 }
+        light_radius:       { value: 10.0 }
+        light_halfRadius:   { value: 0.5 }
+}%
+
+CCProgram light-vs %{
+  precision highp float;
+  #include <builtin/uniforms/cc-global>
+  #if USE_LOCAL
+    #include <builtin/uniforms/cc-local>
+  #endif
+  #if SAMPLE_FROM_RT
+    #include <common/common-define>
+  #endif
+  in vec3 a_position;
+  in vec2 a_texCoord;
+  in vec4 a_color;
+
+  out vec4 color;
+  out vec2 uv0;
+  out vec4 object_position;
+
+  vec4 vert () {
+    vec4 pos = vec4(a_position, 1);
+
+    // 不适用mvp矩阵计算成世界坐标，因为如果屏幕是横屏的时候，转成世界坐标后，x轴会出现拉伸。
+    // 这里使用的是UI的坐标系，参考light.ts获取世界坐标的代码。
+    object_position = pos;
+
+    #if USE_LOCAL
+      pos = cc_matWorld * pos;
+    #endif
+
+    #if USE_PIXEL_ALIGNMENT
+      pos = cc_matView * pos;
+      pos.xyz = floor(pos.xyz);
+      pos = cc_matProj * pos;
+    #else
+      pos = cc_matViewProj * pos;
+    #endif
+
+    uv0 = a_texCoord;
+    #if SAMPLE_FROM_RT
+      CC_HANDLE_RT_SAMPLE_FLIP(uv0);
+    #endif
+    color = a_color;
+
+    return pos;
+  }
+}%
+
+CCProgram light-fs %{
+  precision highp float;
+  #include <builtin/internal/embedded-alpha>
+  #include <builtin/internal/alpha-test>
+
+  in vec4 color;
+  in vec4 object_position;
+  
+  #if USE_TEXTURE
+    in vec2 uv0;
+    #pragma builtin(local)
+    layout(set = 2, binding = 11) uniform sampler2D cc_spriteTexture;
+  #endif
+
+  #if USE_2D_NORMAL
+    uniform sampler2D light_normal;
+  #endif
+
+  #if USE_2D_LIGHT
+    uniform Constant {
+      vec4  light_ambientColor;
+      vec4  light_lightColor;
+      vec4  light_worldpos;
+      float light_radius;
+      float light_halfRadius;
+      float light_brightness;
+      float light_unused;
+    };
+
+    /**
+     * 亮度计算, 按照距离远近衰减, 采取内外光圈叠加方式, 按照世界坐标计算 (0.0 ~ 1.0)
+     * @param dist 距离 (0.0 ~ 1.0)
+     * @param cutoff_r 外光圈半径 (> 0.0)
+     * @param half_r 内光圈半径, 使用cutoffRadius的半径占比 (0.0 ~ 1.0)
+     */
+    float light_bright(float dist, float cutoff_r, float half_r) {
+      float intercept = cutoff_r * half_r;
+      float dx_1 = 0.5 / intercept;
+      float dx_2 = 0.5 / (cutoff_r - intercept);
+      float offset = 0.5 + intercept * dx_2;
+
+      float falloffTermNear = clamp((1.0 - dist * dx_1), 0.0, 1.0);
+      float falloffTermFar  = clamp((offset - dist * dx_2), 0.0, 1.0);
+      float falloffSelect = step(intercept, dist);
+      float falloffTerm = (1.0 - falloffSelect) * falloffTermNear + falloffSelect * falloffTermFar;
+
+      return falloffTerm;
+    }
+
+    /**
+     * 计算灯光的颜色值
+     * @param dist 物体距离光源的距离, 世界单位 (> 0.0)
+     * @param radius 光源半径，世界单位 (> 0.0)
+     */
+    vec3 light_diffuse (float dist, float radius) {      
+      // 计算像素点所在光圈位置的亮度
+      float falloffTerm = light_bright(dist, radius, light_halfRadius);
+
+      // falloffTerm 为亮度值, light_lightColor 为灯光颜色
+      return falloffTerm * vec3(light_lightColor);
+    }
+
+    /**
+     * 计算光照颜色
+     * @param object_position 物体坐标, 世界坐标
+     * @param object_vertex_normal 顶点的法线向量, 归一化
+     */
+    vec3 light_color(vec3 col) {
+      // 计算光线方向, 这个方式不能直接用，打个比方纹理是正方形的，而世界坐标可能是长方形的(GL的坐标固定在-1.0到1.0之间, 而屏幕不一定是正方形)
+      vec4 object_direction = object_position - light_worldpos;
+      
+      // 计算物体与灯光的距离
+      float object_dist = length(vec3(object_direction));
+      
+      // 开启这个可以测试
+      // float object_dist = length(uv0 - 0.5);
+
+      // 计算物体与灯光的的距离, 占用直径的百分比
+      float object_dist_normal = object_dist / (light_radius * 2.0) ;
+
+      // 获取灯光漫反射颜色
+      vec3 diffuse = light_diffuse(object_dist_normal, light_radius);
+
+    #if USE_2D_NORMAL
+      // 获取法向量
+      vec3 normal = texture(light_normal, uv0).rgb;
+	    normal = normal * 2.0 - 1.0;
+
+      // 计算光照反射系数，向量点积
+	    float normalDot = max(0.0, dot(normal, -normalize(vec3(object_direction.x, object_direction.y, -60))));
+
+      // 反射光 * 法向量衰减 + 环境光      
+      return col * (diffuse * light_brightness * normalDot + vec3(light_ambientColor));
+    #else
+          // 反射光 * 法向量衰减 + 环境光 (没有法线的情况下需要 0.5 衰减)
+      return col * (diffuse * light_brightness + vec3(light_ambientColor));
+    #endif      
+    }
+
+    /**
+     * 计算光照颜色
+     * @param object_position 物体坐标, 世界坐标
+     * @param object_vertex_normal 顶点的法线向量, 归一化
+     */
+    vec4 light_dist() {
+    }
+  #endif
+
+  vec4 frag () {
+    vec4 o = vec4(1, 1, 1, 1);
+
+    #if USE_TEXTURE
+      o *= CCSampleWithAlphaSeparated(cc_spriteTexture, uv0);
+      #if IS_GRAY
+        float gray  = 0.2126 * o.r + 0.7152 * o.g + 0.0722 * o.b;
+        o.r = o.g = o.b = gray;
+      #endif
+    #endif
+
+    o *= color;
+    ALPHA_TEST(o);
+
+  #if USE_2D_LIGHT
+    return vec4(light_color(vec3(o)), o.a);
+  #else
+    return o;
+  #endif
+  }
+}%
