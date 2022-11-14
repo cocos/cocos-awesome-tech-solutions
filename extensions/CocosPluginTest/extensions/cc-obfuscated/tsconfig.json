@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "target": "ES2017",
+        "module": "commonjs",
+        "inlineSourceMap": false,
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "allowJs": true,
+        "lib": ["dom", "es7"],
+        "esModuleInterop": true,
+        "skipLibCheck": true
+    },
+    "exclude": ["./dist"],
+    "include": ["./src"]
+}

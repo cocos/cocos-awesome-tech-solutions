@@ -1,0 +1,3 @@
+#!/bin/bash
+
+$(yarn bin)/ts-node --type-check test/dev/dev.ts

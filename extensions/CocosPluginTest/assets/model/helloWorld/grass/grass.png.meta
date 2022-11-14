@@ -1,0 +1,43 @@
+{
+  "ver": "1.0.25",
+  "importer": "image",
+  "imported": true,
+  "uuid": "ae18deea-c6e0-4a3d-bf70-ee5533f9ba87",
+  "files": [
+    ".json",
+    ".png"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "ae18deea-c6e0-4a3d-bf70-ee5533f9ba87@6c48a",
+      "displayName": "grass",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "linear",
+        "premultiplyAlpha": false,
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "ae18deea-c6e0-4a3d-bf70-ee5533f9ba87",
+        "visible": true
+      }
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "redirect": "ae18deea-c6e0-4a3d-bf70-ee5533f9ba87@6c48a",
+    "hasAlpha": false,
+    "fixAlphaTransparencyArtifacts": false
+  }
+}

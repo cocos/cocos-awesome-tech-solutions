@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+    "target": "es2017",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "noImplicitThis": false,
+    "noUnusedLocals": true,
+    "removeComments": true,
+    "strict": true
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "compileOnSave": false,
+  "buildOnSave": false
+}

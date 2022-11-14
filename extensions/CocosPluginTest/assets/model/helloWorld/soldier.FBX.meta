@@ -1,0 +1,311 @@
+{
+  "ver": "2.3.1",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "e3553cad-2f15-4293-859a-8f43c780f289",
+  "files": [
+    "__original-animation-0.cconb"
+  ],
+  "subMetas": {
+    "18751": {
+      "importer": "gltf-mesh",
+      "uuid": "e3553cad-2f15-4293-859a-8f43c780f289@18751",
+      "displayName": "",
+      "id": "18751",
+      "name": "soldier.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "30732": {
+      "importer": "gltf-skeleton",
+      "uuid": "e3553cad-2f15-4293-859a-8f43c780f289@30732",
+      "displayName": "",
+      "id": "30732",
+      "name": "UnnamedSkeleton-0.skeleton",
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0,
+        "jointsLength": 22
+      }
+    },
+    "da6f3": {
+      "importer": "gltf-mesh",
+      "uuid": "e3553cad-2f15-4293-859a-8f43c780f289@da6f3",
+      "displayName": "",
+      "id": "da6f3",
+      "name": "shield.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 1
+      }
+    },
+    "4b929": {
+      "importer": "gltf-mesh",
+      "uuid": "e3553cad-2f15-4293-859a-8f43c780f289@4b929",
+      "displayName": "",
+      "id": "4b929",
+      "name": "sword.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 2
+      }
+    },
+    "39f7b": {
+      "importer": "gltf-mesh",
+      "uuid": "e3553cad-2f15-4293-859a-8f43c780f289@39f7b",
+      "displayName": "",
+      "id": "39f7b",
+      "name": "shield01.mesh",
+      "userData": {
+        "gltfIndex": 3
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "73b7f": {
+      "importer": "gltf-animation",
+      "uuid": "e3553cad-2f15-4293-859a-8f43c780f289@73b7f",
+      "displayName": "",
+      "id": "73b7f",
+      "name": "Take 001.animation",
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {},
+      "userData": {
+        "events": [],
+        "gltfIndex": 0,
+        "sample": 30,
+        "span": {
+          "from": 0.03333333333333333,
+          "to": 1.3333333730697632
+        },
+        "wrapMode": 2,
+        "speed": 1
+      }
+    },
+    "f1394": {
+      "importer": "gltf-skeleton",
+      "uuid": "e3553cad-2f15-4293-859a-8f43c780f289@f1394",
+      "displayName": "",
+      "id": "f1394",
+      "name": "UnnamedSkeleton-1.skeleton",
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 1,
+        "jointsLength": 1
+      }
+    },
+    "75ee4": {
+      "importer": "gltf-skeleton",
+      "uuid": "e3553cad-2f15-4293-859a-8f43c780f289@75ee4",
+      "displayName": "",
+      "id": "75ee4",
+      "name": "UnnamedSkeleton-2.skeleton",
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 2,
+        "jointsLength": 1
+      }
+    },
+    "a72ab": {
+      "importer": "gltf-skeleton",
+      "uuid": "e3553cad-2f15-4293-859a-8f43c780f289@a72ab",
+      "displayName": "",
+      "id": "a72ab",
+      "name": "UnnamedSkeleton-3.skeleton",
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 3,
+        "jointsLength": 1
+      }
+    },
+    "e94f1": {
+      "importer": "gltf-embeded-image",
+      "uuid": "e3553cad-2f15-4293-859a-8f43c780f289@e94f1",
+      "displayName": "",
+      "id": "e94f1",
+      "name": "shield.jpg.image",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".jpg",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f3caa": {
+      "importer": "texture",
+      "uuid": "e3553cad-2f15-4293-859a-8f43c780f289@f3caa",
+      "displayName": "",
+      "id": "f3caa",
+      "name": "soldier.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 0,
+        "isUuid": false,
+        "imageUuidOrDatabaseUri": "db://assets/model/helloWorld/soldier.png"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a2be1": {
+      "importer": "texture",
+      "uuid": "e3553cad-2f15-4293-859a-8f43c780f289@a2be1",
+      "displayName": "",
+      "id": "a2be1",
+      "name": "shield.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "e3553cad-2f15-4293-859a-8f43c780f289@e94f1"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "d252c": {
+      "importer": "gltf-scene",
+      "uuid": "e3553cad-2f15-4293-859a-8f43c780f289@d252c",
+      "displayName": "",
+      "id": "d252c",
+      "name": "soldier.prefab",
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "soldier",
+        "uri": "db://assets/model/helloWorld/soldier.png"
+      },
+      {
+        "name": "shield.jpg",
+        "uri": "e3553cad-2f15-4293-859a-8f43c780f289@e94f1"
+      }
+    ],
+    "redirect": "e3553cad-2f15-4293-859a-8f43c780f289@d252c",
+    "assetFinder": {
+      "meshes": [
+        "e3553cad-2f15-4293-859a-8f43c780f289@18751",
+        "e3553cad-2f15-4293-859a-8f43c780f289@da6f3",
+        "e3553cad-2f15-4293-859a-8f43c780f289@4b929",
+        "e3553cad-2f15-4293-859a-8f43c780f289@39f7b"
+      ],
+      "skeletons": [
+        "e3553cad-2f15-4293-859a-8f43c780f289@30732",
+        "e3553cad-2f15-4293-859a-8f43c780f289@f1394",
+        "e3553cad-2f15-4293-859a-8f43c780f289@75ee4",
+        "e3553cad-2f15-4293-859a-8f43c780f289@a72ab"
+      ],
+      "textures": [
+        "e3553cad-2f15-4293-859a-8f43c780f289@f3caa",
+        "e3553cad-2f15-4293-859a-8f43c780f289@a2be1"
+      ],
+      "materials": [
+        "8a58ddec-f437-40b9-8ec0-1fc87de97fb5",
+        "8e047178-f61c-4322-a2f6-d1adb28b6ae2"
+      ],
+      "scenes": [
+        "e3553cad-2f15-4293-859a-8f43c780f289@d252c"
+      ]
+    },
+    "dumpMaterials": true,
+    "materialDumpDir": "db://assets/material",
+    "animationImportSettings": [
+      {
+        "name": "Take 001",
+        "duration": 1.3333333730697632,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Take 001",
+            "from": 0.03333333333333333,
+            "to": 1.3333333730697632,
+            "wrapMode": 2
+          }
+        ]
+      }
+    ],
+    "legacyFbxImporter": true,
+    "fbx": {
+      "smartMaterialEnabled": false
+    }
+  }
+}

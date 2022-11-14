@@ -1,0 +1,352 @@
+{
+  "ver": "2.3.1",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "0ab3142a-6968-4073-95af-026bc3b23623",
+  "files": [],
+  "subMetas": {
+    "71919": {
+      "importer": "gltf-mesh",
+      "uuid": "0ab3142a-6968-4073-95af-026bc3b23623@71919",
+      "displayName": "",
+      "id": "71919",
+      "name": "tree1-6.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 6
+      }
+    },
+    "2b0a8": {
+      "importer": "gltf-mesh",
+      "uuid": "0ab3142a-6968-4073-95af-026bc3b23623@2b0a8",
+      "displayName": "",
+      "id": "2b0a8",
+      "name": "plane01-0.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "4a7d8": {
+      "importer": "gltf-mesh",
+      "uuid": "0ab3142a-6968-4073-95af-026bc3b23623@4a7d8",
+      "displayName": "",
+      "id": "4a7d8",
+      "name": "stone1-1.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 1
+      }
+    },
+    "0e750": {
+      "importer": "gltf-mesh",
+      "uuid": "0ab3142a-6968-4073-95af-026bc3b23623@0e750",
+      "displayName": "",
+      "id": "0e750",
+      "name": "tree1-2.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 2
+      }
+    },
+    "ef86b": {
+      "importer": "gltf-mesh",
+      "uuid": "0ab3142a-6968-4073-95af-026bc3b23623@ef86b",
+      "displayName": "",
+      "id": "ef86b",
+      "name": "tree1-3.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 3
+      }
+    },
+    "426f2": {
+      "importer": "gltf-mesh",
+      "uuid": "0ab3142a-6968-4073-95af-026bc3b23623@426f2",
+      "displayName": "",
+      "id": "426f2",
+      "name": "tree1-4.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 4
+      }
+    },
+    "754a2": {
+      "importer": "gltf-mesh",
+      "uuid": "0ab3142a-6968-4073-95af-026bc3b23623@754a2",
+      "displayName": "",
+      "id": "754a2",
+      "name": "tree1-5.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 5
+      }
+    },
+    "1332c": {
+      "importer": "gltf-mesh",
+      "uuid": "0ab3142a-6968-4073-95af-026bc3b23623@1332c",
+      "displayName": "",
+      "id": "1332c",
+      "name": "tree1-7.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 7
+      }
+    },
+    "4d16f": {
+      "importer": "gltf-mesh",
+      "uuid": "0ab3142a-6968-4073-95af-026bc3b23623@4d16f",
+      "displayName": "",
+      "id": "4d16f",
+      "name": "tree1-8.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 8
+      }
+    },
+    "efe84": {
+      "importer": "gltf-mesh",
+      "uuid": "0ab3142a-6968-4073-95af-026bc3b23623@efe84",
+      "displayName": "",
+      "id": "efe84",
+      "name": "tree1-9.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 9
+      }
+    },
+    "eeccb": {
+      "importer": "gltf-embeded-image",
+      "uuid": "0ab3142a-6968-4073-95af-026bc3b23623@eeccb",
+      "displayName": "",
+      "id": "eeccb",
+      "name": "stone.jpg.image",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".jpg",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "3b6f8": {
+      "importer": "gltf-embeded-image",
+      "uuid": "0ab3142a-6968-4073-95af-026bc3b23623@3b6f8",
+      "displayName": "",
+      "id": "3b6f8",
+      "name": "tree.png.image",
+      "userData": {
+        "gltfIndex": 2
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json",
+        ".png"
+      ],
+      "subMetas": {}
+    },
+    "2df3a": {
+      "importer": "texture",
+      "uuid": "0ab3142a-6968-4073-95af-026bc3b23623@2df3a",
+      "displayName": "",
+      "id": "2df3a",
+      "name": "seafloor.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 0,
+        "isUuid": false,
+        "imageUuidOrDatabaseUri": "db://assets/model/helloWorld/seafloor.jpg"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "91a84": {
+      "importer": "texture",
+      "uuid": "0ab3142a-6968-4073-95af-026bc3b23623@91a84",
+      "displayName": "",
+      "id": "91a84",
+      "name": "stone.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "0ab3142a-6968-4073-95af-026bc3b23623@eeccb"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "0595c": {
+      "importer": "texture",
+      "uuid": "0ab3142a-6968-4073-95af-026bc3b23623@0595c",
+      "displayName": "",
+      "id": "0595c",
+      "name": "tree.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "0ab3142a-6968-4073-95af-026bc3b23623@3b6f8"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "cc8e5": {
+      "importer": "gltf-scene",
+      "uuid": "0ab3142a-6968-4073-95af-026bc3b23623@cc8e5",
+      "displayName": "",
+      "id": "cc8e5",
+      "name": "islands.prefab",
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "seafloor",
+        "uri": "db://assets/model/helloWorld/seafloor.jpg"
+      },
+      {
+        "name": "stone.jpg",
+        "uri": "0ab3142a-6968-4073-95af-026bc3b23623@eeccb"
+      },
+      {
+        "name": "tree.png",
+        "uri": "0ab3142a-6968-4073-95af-026bc3b23623@3b6f8"
+      }
+    ],
+    "redirect": "0ab3142a-6968-4073-95af-026bc3b23623@cc8e5",
+    "assetFinder": {
+      "meshes": [
+        "0ab3142a-6968-4073-95af-026bc3b23623@2b0a8",
+        "0ab3142a-6968-4073-95af-026bc3b23623@4a7d8",
+        "0ab3142a-6968-4073-95af-026bc3b23623@0e750",
+        "0ab3142a-6968-4073-95af-026bc3b23623@ef86b",
+        "0ab3142a-6968-4073-95af-026bc3b23623@426f2",
+        "0ab3142a-6968-4073-95af-026bc3b23623@754a2",
+        "0ab3142a-6968-4073-95af-026bc3b23623@71919",
+        "0ab3142a-6968-4073-95af-026bc3b23623@1332c",
+        "0ab3142a-6968-4073-95af-026bc3b23623@4d16f",
+        "0ab3142a-6968-4073-95af-026bc3b23623@efe84"
+      ],
+      "skeletons": [],
+      "textures": [
+        "0ab3142a-6968-4073-95af-026bc3b23623@2df3a",
+        "0ab3142a-6968-4073-95af-026bc3b23623@91a84",
+        "0ab3142a-6968-4073-95af-026bc3b23623@0595c"
+      ],
+      "materials": [
+        "70d33758-1c1e-424d-b0ab-eac7410559bf",
+        "a155f93b-7769-4ca4-b75f-b13e52193859",
+        "7bf9df40-4bc9-4e25-8cb0-9a500f949102"
+      ],
+      "scenes": [
+        "0ab3142a-6968-4073-95af-026bc3b23623@cc8e5"
+      ]
+    },
+    "dumpMaterials": true,
+    "materialDumpDir": "db://assets/material",
+    "legacyFbxImporter": true,
+    "fbx": {
+      "smartMaterialEnabled": false
+    }
+  }
+}

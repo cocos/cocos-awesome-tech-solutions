@@ -1,0 +1,20 @@
+sudo: false
+language: node_js
+
+node_js:
+  - "10"
+  - "12"
+  - "13"
+  - "14"
+  - "stable"
+
+cache:
+  yarn: true
+  directories:
+    - node_modules
+
+script: "yarn run travis"
+
+after_success:
+  - yarn run test:coveralls
+  - rm -rf ./coverage

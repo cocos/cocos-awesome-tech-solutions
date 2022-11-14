@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "ES6",
+        "noUnusedParameters": false,
+        "strict": false,
+        "noImplicitAny": false,
+    }
+}
