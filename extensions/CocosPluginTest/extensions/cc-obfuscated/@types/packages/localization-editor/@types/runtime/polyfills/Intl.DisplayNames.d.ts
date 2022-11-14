@@ -1,1 +1,0 @@
-import '@formatjs/intl-displaynames';
