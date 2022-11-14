@@ -1,0 +1,67 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.unload = exports.load = exports.methods = void 0;
+// @ts-ignore
+const package_json_1 = __importDefault(require("../package.json"));
+const path_1 = require("path");
+module.paths.push((0, path_1.join)(Editor.App.path, 'node_modules'));
+const options = {
+    name: package_json_1.default.name,
+    method: 'rotateCamera',
+    args: []
+};
+/**
+ * @en
+ * @zh 为扩展的主进程的注册方法
+ */
+exports.methods = {
+    openPanel() {
+        Editor.Panel.open(package_json_1.default.name);
+    },
+    log() {
+        console.warn("Test Cocos");
+    },
+    async queryNode() {
+        const info = await Editor.Message.request('scene', 'query-node', "7c3e7fab-7b1e-4865-ba84-3cf81b48b9fb");
+        console.warn(info);
+    },
+    initData() {
+        console.warn("The scene is already loaded");
+    },
+    async broadcast() {
+        await Editor.Message.broadcast('simple-1667547732624:ready');
+    },
+    listenBroadcast(message) {
+        if (message) {
+            console.warn(message);
+        }
+        else {
+            console.warn("The broadcast has been sent");
+        }
+    },
+    sendByCode() {
+        Editor.Message.send("simple-1667547732624", "simple-1667547732624:ready");
+    },
+    async callEngineAPI() {
+        const result = await Editor.Message.request('scene', 'execute-scene-script', options);
+    }
+};
+/**
+ * @en Hooks triggered after extension loading is complete
+ * @zh 扩展加载完成后触发的钩子
+ */
+function load() {
+    console.warn("Hello Cocos");
+}
+exports.load = load;
+/**
+ * @en Hooks triggered after extension uninstallation is complete
+ * @zh 扩展卸载完成后触发的钩子
+ */
+function unload() {
+    console.warn("goodBye Cocos");
+}
+exports.unload = unload;

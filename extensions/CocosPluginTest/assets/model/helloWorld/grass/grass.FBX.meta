@@ -1,0 +1,157 @@
+{
+  "ver": "2.3.1",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "aade09ee-8f9d-413c-a9e8-8c686ea5e160",
+  "files": [
+    "__original-animation-0.cconb"
+  ],
+  "subMetas": {
+    "ef5e1": {
+      "importer": "gltf-mesh",
+      "uuid": "aade09ee-8f9d-413c-a9e8-8c686ea5e160@ef5e1",
+      "displayName": "",
+      "id": "ef5e1",
+      "name": "grass.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "73b7f": {
+      "importer": "gltf-animation",
+      "uuid": "aade09ee-8f9d-413c-a9e8-8c686ea5e160@73b7f",
+      "displayName": "",
+      "id": "73b7f",
+      "name": "Take 001.animation",
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {},
+      "userData": {
+        "events": [],
+        "gltfIndex": 0,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 3.3333332538604736
+        },
+        "wrapMode": 2,
+        "speed": 1
+      }
+    },
+    "438fe": {
+      "importer": "gltf-skeleton",
+      "uuid": "aade09ee-8f9d-413c-a9e8-8c686ea5e160@438fe",
+      "displayName": "",
+      "id": "438fe",
+      "name": "UnnamedSkeleton.skeleton",
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0,
+        "jointsLength": 6
+      }
+    },
+    "9787f": {
+      "importer": "texture",
+      "uuid": "aade09ee-8f9d-413c-a9e8-8c686ea5e160@9787f",
+      "displayName": "",
+      "id": "9787f",
+      "name": "grass.texture",
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 0,
+        "isUuid": false,
+        "imageUuidOrDatabaseUri": "db://assets/model/helloWorld/grass/grass.png"
+      }
+    },
+    "3022b": {
+      "importer": "gltf-scene",
+      "uuid": "aade09ee-8f9d-413c-a9e8-8c686ea5e160@3022b",
+      "displayName": "",
+      "id": "3022b",
+      "name": "grass.prefab",
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "grass",
+        "uri": "db://assets/model/helloWorld/grass/grass.png"
+      }
+    ],
+    "animationImportSettings": [
+      {
+        "name": "Take 001",
+        "duration": 3.3333332538604736,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Take 001",
+            "from": 0,
+            "to": 3.3333332538604736,
+            "wrapMode": 2
+          }
+        ]
+      }
+    ],
+    "redirect": "aade09ee-8f9d-413c-a9e8-8c686ea5e160@3022b",
+    "assetFinder": {
+      "meshes": [
+        "aade09ee-8f9d-413c-a9e8-8c686ea5e160@ef5e1"
+      ],
+      "skeletons": [
+        "aade09ee-8f9d-413c-a9e8-8c686ea5e160@438fe"
+      ],
+      "textures": [
+        "aade09ee-8f9d-413c-a9e8-8c686ea5e160@9787f"
+      ],
+      "materials": [
+        "b698e55a-b00b-4987-a8b4-af83cddc59f7"
+      ],
+      "scenes": [
+        "aade09ee-8f9d-413c-a9e8-8c686ea5e160@3022b"
+      ]
+    },
+    "useVertexColors": true,
+    "dumpMaterials": true,
+    "materialDumpDir": "db://assets/model/helloWorld/grass",
+    "legacyFbxImporter": true,
+    "fbx": {
+      "smartMaterialEnabled": false
+    }
+  }
+}

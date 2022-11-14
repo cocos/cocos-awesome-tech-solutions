@@ -1,0 +1,113 @@
+{
+  "ver": "2.3.1",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "929e58ce-66a4-4e04-9036-4244456a1220",
+  "files": [],
+  "subMetas": {
+    "f6832": {
+      "importer": "gltf-mesh",
+      "uuid": "929e58ce-66a4-4e04-9036-4244456a1220@f6832",
+      "displayName": "",
+      "id": "f6832",
+      "name": "hdcSky.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "7f40d": {
+      "importer": "gltf-embeded-image",
+      "uuid": "929e58ce-66a4-4e04-9036-4244456a1220@7f40d",
+      "displayName": "",
+      "id": "7f40d",
+      "name": "hdcSky.image",
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json",
+        ".png"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "d6067": {
+      "importer": "texture",
+      "uuid": "929e58ce-66a4-4e04-9036-4244456a1220@d6067",
+      "displayName": "",
+      "id": "d6067",
+      "name": "hdcSky.texture",
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "929e58ce-66a4-4e04-9036-4244456a1220@7f40d"
+      }
+    },
+    "bfc57": {
+      "importer": "gltf-scene",
+      "uuid": "929e58ce-66a4-4e04-9036-4244456a1220@bfc57",
+      "displayName": "",
+      "id": "bfc57",
+      "name": "hdcSky.prefab",
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "hdcSky",
+        "uri": "929e58ce-66a4-4e04-9036-4244456a1220@7f40d"
+      }
+    ],
+    "redirect": "929e58ce-66a4-4e04-9036-4244456a1220@bfc57",
+    "assetFinder": {
+      "meshes": [
+        "929e58ce-66a4-4e04-9036-4244456a1220@f6832"
+      ],
+      "skeletons": [],
+      "textures": [
+        "929e58ce-66a4-4e04-9036-4244456a1220@d6067"
+      ],
+      "materials": [
+        "482a5162-dad9-446c-b548-8486c7598ee1"
+      ],
+      "scenes": [
+        "929e58ce-66a4-4e04-9036-4244456a1220@bfc57"
+      ]
+    },
+    "dumpMaterials": true,
+    "materialDumpDir": "db://assets/material",
+    "legacyFbxImporter": true,
+    "fbx": {
+      "smartMaterialEnabled": false
+    }
+  }
+}
