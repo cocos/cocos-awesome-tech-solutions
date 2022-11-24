@@ -1,0 +1,257 @@
+{
+  "ver": "2.3.1",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "74a2d32b-4771-4f65-8390-558bebd33fa7",
+  "files": [
+    "__original-animation-0.cconb"
+  ],
+  "subMetas": {
+    "30732": {
+      "importer": "gltf-skeleton",
+      "uuid": "74a2d32b-4771-4f65-8390-558bebd33fa7@30732",
+      "displayName": "",
+      "id": "30732",
+      "name": "UnnamedSkeleton-0.skeleton",
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0,
+        "jointsLength": 52
+      }
+    },
+    "72704": {
+      "importer": "gltf-mesh",
+      "uuid": "74a2d32b-4771-4f65-8390-558bebd33fa7@72704",
+      "displayName": "",
+      "id": "72704",
+      "name": "cocosfinish_02.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 1
+      }
+    },
+    "a865e": {
+      "importer": "gltf-mesh",
+      "uuid": "74a2d32b-4771-4f65-8390-558bebd33fa7@a865e",
+      "displayName": "",
+      "id": "a865e",
+      "name": "cocosfinish_01.mesh",
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "73b7f": {
+      "importer": "gltf-animation",
+      "uuid": "74a2d32b-4771-4f65-8390-558bebd33fa7@73b7f",
+      "displayName": "",
+      "id": "73b7f",
+      "name": "Take 001.animation",
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.0416666269302368
+        },
+        "events": []
+      }
+    },
+    "f1394": {
+      "importer": "gltf-skeleton",
+      "uuid": "74a2d32b-4771-4f65-8390-558bebd33fa7@f1394",
+      "displayName": "",
+      "id": "f1394",
+      "name": "UnnamedSkeleton-1.skeleton",
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 1,
+        "jointsLength": 1
+      }
+    },
+    "1cdc4": {
+      "importer": "gltf-embeded-image",
+      "uuid": "74a2d32b-4771-4f65-8390-558bebd33fa7@1cdc4",
+      "displayName": "",
+      "id": "1cdc4",
+      "name": "贴图 #3.image",
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json",
+        ".png"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    },
+    "181cb": {
+      "importer": "gltf-embeded-image",
+      "uuid": "74a2d32b-4771-4f65-8390-558bebd33fa7@181cb",
+      "displayName": "",
+      "id": "181cb",
+      "name": "贴图 #4.image",
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json",
+        ".png"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 1
+      }
+    },
+    "bfae8": {
+      "importer": "texture",
+      "uuid": "74a2d32b-4771-4f65-8390-558bebd33fa7@bfae8",
+      "displayName": "",
+      "id": "bfae8",
+      "name": "贴图 #3.texture",
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 0,
+        "isUuid": false,
+        "imageUuidOrDatabaseUri": "db://assets/cocosfinish_01_baseColor.png"
+      }
+    },
+    "442db": {
+      "importer": "texture",
+      "uuid": "74a2d32b-4771-4f65-8390-558bebd33fa7@442db",
+      "displayName": "",
+      "id": "442db",
+      "name": "贴图 #4.texture",
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 0,
+        "isUuid": false,
+        "imageUuidOrDatabaseUri": "db://assets/cocosfinish_02_baseColor.png"
+      }
+    },
+    "65d80": {
+      "importer": "gltf-scene",
+      "uuid": "74a2d32b-4771-4f65-8390-558bebd33fa7@65d80",
+      "displayName": "",
+      "id": "65d80",
+      "name": "cocosWalk.prefab",
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "gltfIndex": 0
+      }
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "贴图 #3",
+        "remap": "db://assets/cocosfinish_01_baseColor.png",
+        "uri": "74a2d32b-4771-4f65-8390-558bebd33fa7@1cdc4"
+      },
+      {
+        "name": "贴图 #4",
+        "remap": "db://assets/cocosfinish_02_baseColor.png",
+        "uri": "74a2d32b-4771-4f65-8390-558bebd33fa7@181cb"
+      }
+    ],
+    "animationImportSettings": [
+      {
+        "name": "Take 001",
+        "duration": 1.0416666269302368,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Take 001",
+            "from": 0,
+            "to": 1.0416666269302368,
+            "wrapMode": 2
+          }
+        ]
+      }
+    ],
+    "redirect": "74a2d32b-4771-4f65-8390-558bebd33fa7@65d80",
+    "assetFinder": {
+      "meshes": [
+        "74a2d32b-4771-4f65-8390-558bebd33fa7@a865e",
+        "74a2d32b-4771-4f65-8390-558bebd33fa7@72704"
+      ],
+      "skeletons": [
+        "74a2d32b-4771-4f65-8390-558bebd33fa7@30732",
+        "74a2d32b-4771-4f65-8390-558bebd33fa7@f1394"
+      ],
+      "textures": [
+        "74a2d32b-4771-4f65-8390-558bebd33fa7@bfae8",
+        "74a2d32b-4771-4f65-8390-558bebd33fa7@442db"
+      ],
+      "materials": [
+        "28a63d10-c434-430a-a64f-ad1e543e319b",
+        "2c160eff-a631-4260-b6c9-aeb6bc890f6b"
+      ],
+      "scenes": [
+        "74a2d32b-4771-4f65-8390-558bebd33fa7@65d80"
+      ]
+    },
+    "dumpMaterials": true,
+    "materialDumpDir": "db://assets/model-animation/model/cocosWalk",
+    "legacyFbxImporter": true,
+    "fbx": {
+      "smartMaterialEnabled": false
+    }
+  }
+}

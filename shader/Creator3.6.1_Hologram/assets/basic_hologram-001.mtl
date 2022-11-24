@@ -10,7 +10,8 @@
   "_techIdx": "1",
   "_defines": [
     {
-      "USE_HOLOGRAM": true
+      "USE_HOLOGRAM": true,
+      "USE_ALBEDO_MAP": true
     },
     {},
     {}
@@ -46,12 +47,9 @@
   ],
   "_props": [
     {
-      "mainColor": {
-        "__type__": "cc.Color",
-        "r": 79,
-        "g": 201,
-        "b": 231,
-        "a": 255
+      "mainTexture": {
+        "__uuid__": "91df1da7-e4c4-4b4b-b595-e1728722d88a@6c48a",
+        "__expectedType__": "cc.Texture2D"
       },
       "glitchStrength": 0.05,
       "glitchDensity": 15,
@@ -65,12 +63,12 @@
       },
       "holoSpeed": 0.5,
       "holoValue": 5,
-      "holoDistance": 0.25,
+      "holoDistance": 0.2,
       "holoDirection": {
         "__type__": "cc.Vec4",
-        "x": 1,
+        "x": 0,
         "y": 1,
-        "z": 1,
+        "z": 0,
         "w": 0
       }
     },
