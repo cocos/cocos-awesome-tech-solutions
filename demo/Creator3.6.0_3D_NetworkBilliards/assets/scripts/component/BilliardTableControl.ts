@@ -51,6 +51,9 @@ export class BilliardTableControl extends Component {
         if (Main.loginData && Main.loginData.ballsData) {
             this.doBallsSync(Main.loginData.ballsData, null, true);
         }
+        if (Main.loginData && Main.loginData.cueData) {
+            this.doCueSync(Main.loginData.cueData);
+        }
     }
 
     onDestroy() {

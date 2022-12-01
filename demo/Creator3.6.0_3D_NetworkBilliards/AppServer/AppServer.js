@@ -8,6 +8,10 @@ function Table() {
     this.data.playerList = [];
     this.data.watcherList = [];
     this.data.ballsData = null;
+    this.data.cueData = {
+        direction: null,
+        power: null
+    };
 }
 
 Table.prototype.isPlayer = function (userId) {
@@ -83,6 +87,12 @@ let server = ws.createServer(conn => {
                 broadcast(SCmd.S2C.HIT_BALL_COMPLETE_SYNC, _data);
                 break;
             case SCmd.C2S.INITIATE_CUE_SYNC:
+                if (_data.direction) {
+                    table.data.cueData.direction = _data.direction;
+                }
+                if (_data.power) {
+                    table.data.cueData.power = _data.power;
+                }
                 broadcast(SCmd.S2C.REQUEST_CUE_SYNC, _data);
                 break;
         }
