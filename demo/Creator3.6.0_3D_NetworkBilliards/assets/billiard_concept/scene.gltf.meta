@@ -1,10 +1,26 @@
 {
-  "ver": "2.1.10",
+  "ver": "2.3.1",
   "importer": "gltf",
   "imported": true,
   "uuid": "0ed9ed40-c25b-4c9c-81fa-692eacca754c",
   "files": [],
   "subMetas": {
+    "41896": {
+      "importer": "gltf-embeded-image",
+      "uuid": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@41896",
+      "displayName": "",
+      "id": "41896",
+      "name": "UnnamedImage-7.image",
+      "userData": {
+        "gltfIndex": 7
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
     "41899": {
       "importer": "gltf-mesh",
       "uuid": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@41899",
@@ -22,6 +38,22 @@
       ],
       "subMetas": {}
     },
+    "47354": {
+      "importer": "gltf-embeded-image",
+      "uuid": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@47354",
+      "displayName": "",
+      "id": "47354",
+      "name": "UnnamedImage-10.image",
+      "userData": {
+        "gltfIndex": 10
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
     "50743": {
       "importer": "texture",
       "uuid": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@50743",
@@ -35,10 +67,10 @@
         "magfilter": "linear",
         "mipfilter": "linear",
         "anisotropy": 0,
-        "isUuid": false,
-        "imageUuidOrDatabaseUri": "db://assets/billiard_concept/textures/Triangle_specularGlossiness.png"
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@932e8"
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -61,7 +93,23 @@
         "isUuid": false,
         "imageUuidOrDatabaseUri": "db://assets/billiard_concept/textures/Cue_Balls_diffuse.png"
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "68747": {
+      "importer": "gltf-embeded-image",
+      "uuid": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@68747",
+      "displayName": "",
+      "id": "68747",
+      "name": "UnnamedImage-2.image",
+      "userData": {
+        "gltfIndex": 2
+      },
+      "ver": "1.0.3",
       "imported": true,
       "files": [
         ".json"
@@ -391,6 +439,182 @@
       ],
       "subMetas": {}
     },
+    "e6ff4": {
+      "importer": "gltf-embeded-image",
+      "uuid": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@e6ff4",
+      "displayName": "",
+      "id": "e6ff4",
+      "name": "UnnamedImage-1.image",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "fb88e": {
+      "importer": "gltf-embeded-image",
+      "uuid": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@fb88e",
+      "displayName": "",
+      "id": "fb88e",
+      "name": "UnnamedImage-3.image",
+      "userData": {
+        "gltfIndex": 3
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "9739b": {
+      "importer": "gltf-embeded-image",
+      "uuid": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@9739b",
+      "displayName": "",
+      "id": "9739b",
+      "name": "UnnamedImage-4.image",
+      "userData": {
+        "gltfIndex": 4
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "932e8": {
+      "importer": "gltf-embeded-image",
+      "uuid": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@932e8",
+      "displayName": "",
+      "id": "932e8",
+      "name": "UnnamedImage-5.image",
+      "userData": {
+        "gltfIndex": 5
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "5800d": {
+      "importer": "gltf-embeded-image",
+      "uuid": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@5800d",
+      "displayName": "",
+      "id": "5800d",
+      "name": "UnnamedImage-6.image",
+      "userData": {
+        "gltfIndex": 6
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "d8a4a": {
+      "importer": "gltf-embeded-image",
+      "uuid": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@d8a4a",
+      "displayName": "",
+      "id": "d8a4a",
+      "name": "UnnamedImage-9.image",
+      "userData": {
+        "gltfIndex": 9
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "67efc": {
+      "importer": "gltf-embeded-image",
+      "uuid": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@67efc",
+      "displayName": "",
+      "id": "67efc",
+      "name": "UnnamedImage-11.image",
+      "userData": {
+        "gltfIndex": 11
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "4037d": {
+      "importer": "gltf-embeded-image",
+      "uuid": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@4037d",
+      "displayName": "",
+      "id": "4037d",
+      "name": "UnnamedImage-12.image",
+      "userData": {
+        "gltfIndex": 12
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "3096c": {
+      "importer": "gltf-embeded-image",
+      "uuid": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@3096c",
+      "displayName": "",
+      "id": "3096c",
+      "name": "UnnamedImage-13.image",
+      "userData": {
+        "gltfIndex": 13
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "b60b4": {
+      "importer": "gltf-embeded-image",
+      "uuid": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@b60b4",
+      "displayName": "",
+      "id": "b60b4",
+      "name": "UnnamedImage-14.image",
+      "userData": {
+        "gltfIndex": 14
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "8c22d": {
+      "importer": "gltf-embeded-image",
+      "uuid": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@8c22d",
+      "displayName": "",
+      "id": "8c22d",
+      "name": "UnnamedImage-15.image",
+      "userData": {
+        "gltfIndex": 15
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
     "3effa": {
       "importer": "texture",
       "uuid": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@3effa",
@@ -407,7 +631,7 @@
         "isUuid": false,
         "imageUuidOrDatabaseUri": "db://assets/billiard_concept/textures/Billiard_Table_diffuse.png"
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -427,10 +651,10 @@
         "magfilter": "linear",
         "mipfilter": "linear",
         "anisotropy": 0,
-        "isUuid": false,
-        "imageUuidOrDatabaseUri": "db://assets/billiard_concept/textures/Billiard_Table_specularGlossiness.png"
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@e6ff4"
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -450,10 +674,10 @@
         "magfilter": "linear",
         "mipfilter": "linear",
         "anisotropy": 0,
-        "isUuid": false,
-        "imageUuidOrDatabaseUri": "db://assets/billiard_concept/textures/Billiard_Table_normal.png"
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@68747"
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -473,10 +697,10 @@
         "magfilter": "linear",
         "mipfilter": "linear",
         "anisotropy": 0,
-        "isUuid": false,
-        "imageUuidOrDatabaseUri": "db://assets/billiard_concept/textures/Billiard_Table_occlusion.png"
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@fb88e"
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -496,10 +720,10 @@
         "magfilter": "linear",
         "mipfilter": "linear",
         "anisotropy": 0,
-        "isUuid": false,
-        "imageUuidOrDatabaseUri": "db://assets/billiard_concept/textures/Triangle_diffuse.png"
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@9739b"
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -519,10 +743,10 @@
         "magfilter": "linear",
         "mipfilter": "linear",
         "anisotropy": 0,
-        "isUuid": false,
-        "imageUuidOrDatabaseUri": "db://assets/billiard_concept/textures/Triangle_normal.png"
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@5800d"
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -542,10 +766,10 @@
         "magfilter": "linear",
         "mipfilter": "linear",
         "anisotropy": 0,
-        "isUuid": false,
-        "imageUuidOrDatabaseUri": "db://assets/billiard_concept/textures/Triangle_occlusion.png"
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@41896"
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -568,7 +792,7 @@
         "isUuid": false,
         "imageUuidOrDatabaseUri": "db://assets/billiard_concept/textures/material_diffuse.png"
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -588,10 +812,10 @@
         "magfilter": "linear",
         "mipfilter": "linear",
         "anisotropy": 0,
-        "isUuid": false,
-        "imageUuidOrDatabaseUri": "db://assets/billiard_concept/textures/material_specularGlossiness.png"
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@d8a4a"
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -611,10 +835,10 @@
         "magfilter": "linear",
         "mipfilter": "linear",
         "anisotropy": 0,
-        "isUuid": false,
-        "imageUuidOrDatabaseUri": "db://assets/billiard_concept/textures/material_normal.png"
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@47354"
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -634,10 +858,10 @@
         "magfilter": "linear",
         "mipfilter": "linear",
         "anisotropy": 0,
-        "isUuid": false,
-        "imageUuidOrDatabaseUri": "db://assets/billiard_concept/textures/material_occlusion.png"
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@67efc"
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -657,10 +881,10 @@
         "magfilter": "linear",
         "mipfilter": "linear",
         "anisotropy": 0,
-        "isUuid": false,
-        "imageUuidOrDatabaseUri": "db://assets/billiard_concept/textures/Cue_Balls_specularGlossiness.png"
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@3096c"
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -680,10 +904,10 @@
         "magfilter": "linear",
         "mipfilter": "linear",
         "anisotropy": 0,
-        "isUuid": false,
-        "imageUuidOrDatabaseUri": "db://assets/billiard_concept/textures/Cue_Balls_normal.png"
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@b60b4"
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -703,10 +927,10 @@
         "magfilter": "linear",
         "mipfilter": "linear",
         "anisotropy": 0,
-        "isUuid": false,
-        "imageUuidOrDatabaseUri": "db://assets/billiard_concept/textures/Cue_Balls_occlusion.png"
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@8c22d"
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -736,50 +960,50 @@
         "uri": "db://assets/billiard_concept/textures/Billiard_Table_diffuse.png"
       },
       {
-        "uri": "db://assets/billiard_concept/textures/Billiard_Table_specularGlossiness.png"
+        "uri": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@e6ff4"
       },
       {
-        "uri": "db://assets/billiard_concept/textures/Billiard_Table_normal.png"
+        "uri": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@68747"
       },
       {
-        "uri": "db://assets/billiard_concept/textures/Billiard_Table_occlusion.png"
+        "uri": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@fb88e"
       },
       {
-        "uri": "db://assets/billiard_concept/textures/Triangle_diffuse.png"
+        "uri": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@9739b"
       },
       {
-        "uri": "db://assets/billiard_concept/textures/Triangle_specularGlossiness.png"
+        "uri": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@932e8"
       },
       {
-        "uri": "db://assets/billiard_concept/textures/Triangle_normal.png"
+        "uri": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@5800d"
       },
       {
-        "uri": "db://assets/billiard_concept/textures/Triangle_occlusion.png"
+        "uri": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@41896"
       },
       {
         "uri": "db://assets/billiard_concept/textures/material_diffuse.png"
       },
       {
-        "uri": "db://assets/billiard_concept/textures/material_specularGlossiness.png"
+        "uri": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@d8a4a"
       },
       {
-        "uri": "db://assets/billiard_concept/textures/material_normal.png"
+        "uri": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@47354"
       },
       {
-        "uri": "db://assets/billiard_concept/textures/material_occlusion.png"
+        "uri": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@67efc"
       },
       {
         "remap": "db://assets/billiard_concept/textures/Cue_Balls_diffuse.png",
-        "uri": "db://assets/billiard_concept/textures/Cue_Balls_diffuse.png"
+        "uri": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@4037d"
       },
       {
-        "uri": "db://assets/billiard_concept/textures/Cue_Balls_specularGlossiness.png"
+        "uri": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@3096c"
       },
       {
-        "uri": "db://assets/billiard_concept/textures/Cue_Balls_normal.png"
+        "uri": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@b60b4"
       },
       {
-        "uri": "db://assets/billiard_concept/textures/Cue_Balls_occlusion.png"
+        "uri": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@8c22d"
       }
     ],
     "legacyFbxImporter": false,
@@ -828,9 +1052,9 @@
       ],
       "materials": [
         "fdd8ec2c-2cca-486a-ac2f-20f0829dbd2e",
-        "a21af3de-1b2b-4d90-ac98-b4940eecf6e9",
-        "74efb0f5-bd07-4d48-ac8f-0092ecfa56ea",
-        "871d1890-588f-45b5-a454-64fd01ddb8f6"
+        "4aa62bf1-9d31-4af9-a3f6-8be8da134975",
+        "976b7bff-e309-4026-b933-7418e0c87b3a",
+        "bd63d79c-3e32-4acd-a299-d9617198b223"
       ],
       "scenes": [
         "0ed9ed40-c25b-4c9c-81fa-692eacca754c@d1932"

@@ -6,7 +6,7 @@ export default class EventDispatch {
 
     private static _instance : EventDispatch;
 
-    public static instance(){
+    public static get inst(){
         if (null == EventDispatch._instance) {
             EventDispatch._instance = new EventDispatch();
         }

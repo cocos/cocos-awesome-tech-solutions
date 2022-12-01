@@ -10,7 +10,7 @@
   },
   {
     "__type__": "cc.Scene",
-    "_name": "scene",
+    "_name": "gameplay",
     "_objFlags": 0,
     "_parent": null,
     "_children": [
@@ -169,7 +169,21 @@
     "_illuminanceHDR": 65000,
     "_illuminance": 65000,
     "_illuminanceLDR": 1.6927083333333335,
-    "_id": "597uMYCbhEtJQc0ffJlcgA"
+    "_id": "597uMYCbhEtJQc0ffJlcgA",
+    "_shadowEnabled": true,
+    "_shadowPcf": 2,
+    "_shadowBias": 0.00001,
+    "_shadowNormalBias": 0,
+    "_shadowSaturation": 1,
+    "_shadowDistance": 377.4,
+    "_shadowInvisibleOcclusionRange": 2000,
+    "_shadowFixedArea": false,
+    "_shadowNear": 0.1,
+    "_shadowFar": 1,
+    "_shadowOrthoSize": 5,
+    "_csmLevel": 1,
+    "_csmLayerLambda": 0.75,
+    "_csmOptimizationMode": 2
   },
   {
     "__type__": "cc.StaticLightSettings",
@@ -234,19 +248,19 @@
     "_priority": 0,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 25,
+    "_orthoHeight": 18,
     "_near": 1,
     "_far": 300,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
+      "r": 0,
+      "g": 0,
+      "b": 0,
       "a": 255
     },
     "_depth": 1,
     "_stencil": 0,
-    "_clearFlags": 6,
+    "_clearFlags": 7,
     "_rect": {
       "__type__": "cc.Rect",
       "x": 0,
@@ -2827,7 +2841,7 @@
       "__uuid__": "0ed9ed40-c25b-4c9c-81fa-692eacca754c@6b542",
       "__expectedType__": "cc.Mesh"
     },
-    "_shadowCastingMode": 0,
+    "_shadowCastingMode": 1,
     "_shadowReceivingMode": 1,
     "_enableMorph": true,
     "_id": "16XgqmGiVCdac/c88lBD4e"
@@ -5534,8 +5548,8 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 480,
-      "y": 320,
+      "x": 640,
+      "y": 360,
       "z": 0
     },
     "_lrot": {
@@ -5614,10 +5628,10 @@
     "_enabled": true,
     "__prefab": null,
     "_projection": 0,
-    "_priority": 0,
+    "_priority": 255,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 320,
+    "_orthoHeight": 373.048128342246,
     "_near": 1,
     "_far": 2000,
     "_color": {
@@ -5629,7 +5643,7 @@
     },
     "_depth": 1,
     "_stencil": 0,
-    "_clearFlags": 7,
+    "_clearFlags": 6,
     "_rect": {
       "__type__": "cc.Rect",
       "x": 0,
@@ -5675,7 +5689,7 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -441.35900000000004,
+      "x": -601.359,
       "y": 0,
       "z": 0
     },
@@ -6014,7 +6028,7 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 439.515,
+      "x": 599.515,
       "y": 0,
       "z": 0
     },
@@ -6346,8 +6360,8 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -381.075,
-      "y": 274.8,
+      "x": -541.075,
+      "y": 314.8,
       "z": 0
     },
     "_lrot": {
@@ -7414,8 +7428,8 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -379.2,
-      "y": -261.399,
+      "x": -539.2,
+      "y": -301.399,
       "z": 0
     },
     "_lrot": {
@@ -9174,8 +9188,8 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 960,
-      "height": 640
+      "width": 1280,
+      "height": 720
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -9244,6 +9258,9 @@
     },
     "directionSlider": {
       "__id__": 204
+    },
+    "hitButton": {
+      "__id__": 241
     },
     "cue": {
       "__id__": 89
@@ -9338,7 +9355,7 @@
   },
   {
     "__type__": "cc.ShadowsInfo",
-    "_type": 1,
+    "_type": 0,
     "_enabled": true,
     "_normal": {
       "__type__": "cc.Vec3",
@@ -9346,43 +9363,31 @@
       "y": 1,
       "z": 0
     },
-    "_distance": 0,
+    "_distance": -7.55,
     "_shadowColor": {
       "__type__": "cc.Color",
-      "r": 76,
-      "g": 76,
-      "b": 76,
-      "a": 255
+      "r": 0,
+      "g": 0,
+      "b": 0,
+      "a": 87
     },
-    "_firstSetCSM": false,
-    "_fixedArea": false,
-    "_pcf": 2,
-    "_bias": 0.00001,
-    "_normalBias": 0,
-    "_near": 0.1,
-    "_far": 1,
-    "_shadowDistance": 377.4,
-    "_invisibleOcclusionRange": 2000,
-    "_orthoSize": 5,
     "_maxReceived": 4,
     "_size": {
       "__type__": "cc.Vec2",
       "x": 512,
       "y": 512
-    },
-    "_saturation": 0.75
+    }
   },
   {
     "__type__": "cc.SkyboxInfo",
-    "_applyDiffuseMap": false,
     "_envmapHDR": null,
     "_envmap": null,
     "_envmapLDR": null,
     "_diffuseMapHDR": null,
     "_diffuseMapLDR": null,
     "_enabled": false,
-    "_useIBL": false,
-    "_useHDR": true
+    "_useHDR": true,
+    "_envLightingType": 0
   },
   {
     "__type__": "cc.FogInfo",

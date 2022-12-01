@@ -8,7 +8,7 @@ const { ccclass, property } = _decorator;
 @ccclass
 export default class NetWork {
     // websocket 连接地址
-    public static wssLink: string = "ws://192.168.0.107:8002";
+    public static wssLink: string = "ws://192.168.50.79:8002";
     // public static wssLink: string = "ws://172.16.68.160:8002";
     // public static wssLink: string = "ws://192.168.52.170:8002";
     // public static wssLink: string = "ws://172.16.68.135:8002";
@@ -16,7 +16,7 @@ export default class NetWork {
     public static _wsiSendBinary: WebSocket;
 
     public static initNetWorkListen = function (wsObj: WebSocket) {
-        
+
         wsObj.onmessage = function (event) {
             var msgObj = JSON.parse(event.data);
             if (msgObj.data) {
@@ -25,17 +25,20 @@ export default class NetWork {
             // console.log(`s2c: ${msgObj.command}`, _data);
 
             switch (msgObj.command) {
-                case GCmd.ServerCmd.USER_LOGIN_SUCCESS:
-                    EventDispatch.instance().emit(GEvent.USER_LOGIN_SUCCESS, _data);
+                case GCmd.S2C.USER_LOGIN_SUCCESS:
+                    EventDispatch.inst.emit(GEvent.USER_LOGIN_SUCCESS, _data);
                     break;
-                case GCmd.ServerCmd.USER_LOGIN_FAIL:
-                    EventDispatch.instance().emit(GEvent.USER_LOGIN_FAIL);
+                case GCmd.S2C.USER_LOGIN_FAIL:
+                    EventDispatch.inst.emit(GEvent.USER_LOGIN_FAIL);
                     break;
-                case GCmd.ServerCmd.REQUEST_BALLS_SYNC:
-                    EventDispatch.instance().emit(GEvent.BALLS_SYNC, _data);
+                case GCmd.S2C.HIT_BALL_SYNC:
+                    EventDispatch.inst.emit(GEvent.HIT_BALL_SYNC, _data);
                     break;
-                case GCmd.ServerCmd.REQUEST_CUE_SYNC:
-                    EventDispatch.instance().emit(GEvent.CUE_SYNC, _data)
+                case GCmd.S2C.HIT_BALL_COMPLETE_SYNC:
+                    EventDispatch.inst.emit(GEvent.HIT_BALL_COMPLETE_SYNC, _data);
+                    break;
+                case GCmd.S2C.REQUEST_CUE_SYNC:
+                    EventDispatch.inst.emit(GEvent.CUE_SYNC, _data)
             }
         }
     }

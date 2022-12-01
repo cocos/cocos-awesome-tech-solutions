@@ -1,5 +1,5 @@
 {
-  "__version__": "1.0.1",
+  "__version__": "1.0.2",
   "custom_joint_texture_layouts": [],
   "layer": [
     {
@@ -29,5 +29,16 @@
     },
     "autoSimulation": false,
     "fixedTimeStep": 0.0166667
+  },
+  "general": {
+    "designResolution": {
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "fbx": {
+    "legacyFbxImporter": {
+      "visible": true
+    }
   }
 }
