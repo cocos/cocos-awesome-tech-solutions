@@ -44,14 +44,14 @@
   
   ![2021120903|690x445, 80%](https://forum.cocos.org/uploads/default/original/3X/4/a/4a343400630f2c1806ad69fd9d406fdda2a774d3.gif) 
 
-- (v3.4.1) 3D 噪声消融
+- (v3.6.2) 3D 噪声消融
 
   ---
-  > 工程 git 仓库地址: https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.6.0-release/shader/Creator3.4.1_3D_NoiseAbatement
+  > 工程 git 仓库地址: https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.6.0-release/shader/Creator3.6.2_3D_NoiseAbatement
   >
   > 素材来自: https://gitee.com/carlosyzy/Creator3D_Shader_Noise_Dissolve
   >
-  > *备注：本方案来源于 Gitee 用户(carlosyzy)，由技术支持团队升级至 3.4.1 版本*
+  > *备注：本方案来源于 Gitee 用户(carlosyzy)，由技术支持团队升级至 3.6.2 版本*
 
   ![2021121001|690x459, 80%](https://forum.cocos.org/uploads/default/original/3X/7/4/74560146179fd9aeb89ef8a338a0951b72c4119d.gif) 
 
