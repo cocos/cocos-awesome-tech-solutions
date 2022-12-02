@@ -1,11 +1,11 @@
 {
-  "ver": "1.0.22",
+  "ver": "1.0.25",
   "importer": "image",
   "imported": true,
   "uuid": "74490132-2297-4033-b930-9093f8ddb8ae",
   "files": [
-    ".png",
-    ".json"
+    ".json",
+    ".png"
   ],
   "subMetas": {
     "icon": {
@@ -50,9 +50,10 @@
         "mipfilter": "none",
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "74490132-2297-4033-b930-9093f8ddb8ae"
+        "imageUuidOrDatabaseUri": "74490132-2297-4033-b930-9093f8ddb8ae",
+        "visible": false
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -84,9 +85,67 @@
         "packable": false,
         "isUuid": true,
         "imageUuidOrDatabaseUri": "74490132-2297-4033-b930-9093f8ddb8ae@6c48a",
-        "atlasUuid": ""
+        "atlasUuid": "",
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [
+            -44,
+            -44,
+            0,
+            44,
+            -44,
+            0,
+            -44,
+            44,
+            0,
+            44,
+            44,
+            0
+          ],
+          "indexes": [
+            0,
+            1,
+            2,
+            2,
+            1,
+            3
+          ],
+          "uv": [
+            0,
+            88,
+            88,
+            88,
+            0,
+            0,
+            88,
+            0
+          ],
+          "nuv": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "minPos": [
+            -44,
+            -44,
+            0
+          ],
+          "maxPos": [
+            44,
+            44,
+            0
+          ]
+        }
       },
-      "ver": "1.0.9",
+      "ver": "1.0.11",
       "imported": true,
       "files": [
         ".json"
@@ -97,6 +156,7 @@
   "userData": {
     "hasAlpha": true,
     "type": "sprite-frame",
-    "redirect": "74490132-2297-4033-b930-9093f8ddb8ae@f9941"
+    "redirect": "74490132-2297-4033-b930-9093f8ddb8ae@f9941",
+    "fixAlphaTransparencyArtifacts": false
   }
 }

@@ -29,20 +29,39 @@
     "enableAcceleration": true,
     "far2D": 10000,
     "near2D": 1,
-    "wheelSpeed2D": 6
+    "wheelSpeed2D": 6,
+    "size": "__default_design__"
   },
   "camera-infos": {
     "f46876e4-e81b-4931-b493-6d367be385e7": {
       "position": {
-        "x": 50,
-        "y": 50,
-        "z": 50
+        "x": 480,
+        "y": 320,
+        "z": 5000
       },
       "rotation": {
-        "x": -0.27984814233312133,
-        "y": 0.3647051996310009,
-        "z": 0.11591689595929514,
-        "w": 0.8804762392171493
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "45dce3ff-b979-47cd-a4f0-37169983b4ef": {
+      "position": {
+        "x": 480,
+        "y": 320,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
       },
       "viewCenter": {
         "x": 0,
@@ -52,6 +71,9 @@
     }
   },
   "camera-uuids": [
-    "f46876e4-e81b-4931-b493-6d367be385e7"
-  ]
+    "45dce3ff-b979-47cd-a4f0-37169983b4ef"
+  ],
+  "scene": {
+    "native": false
+  }
 }

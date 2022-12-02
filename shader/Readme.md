@@ -55,14 +55,14 @@
 
   ![2021121001|690x459, 80%](https://forum.cocos.org/uploads/default/original/3X/7/4/74560146179fd9aeb89ef8a338a0951b72c4119d.gif) 
 
-- (v3.4.1) 镜面光泽
+- (v3.6.2) 镜面光泽
 
   ---
-  > 工程 git 仓库地址: https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.6.0-release/shader/Creator3.4.1_2D_Sprite_MirrorShine
+  > 工程 git 仓库地址: https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.6.0-release/shader/Creator3.6.2_2D_Sprite_MirrorShine
   >
   > 素材来自: https://github.com/ifengzp/cocos-awesome/tree/master/assets/Scene/Specular_gloss
   >
-  > *备注：本方案来源于 Github 用户(ifengzp)，由技术支持团队升级至 3.4.1 版本*
+  > *备注：本方案来源于 Github 用户(ifengzp)，由技术支持团队升级至 3.6.2 版本*
 
   ![2022030201|690x410, 80%](https://forum.cocos.org/uploads/default/optimized/3X/3/7/3785394c42e2ca3849b943bf1288785aa8d2edae_2_1104x656.gif) 
 
