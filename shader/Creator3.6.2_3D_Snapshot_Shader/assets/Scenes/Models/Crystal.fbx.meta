@@ -1,0 +1,61 @@
+{
+  "ver": "2.3.1",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "de0539e4-db9b-4d70-a437-adbbe9e2fb1d",
+  "files": [],
+  "subMetas": {
+    "1e446": {
+      "importer": "gltf-mesh",
+      "uuid": "de0539e4-db9b-4d70-a437-adbbe9e2fb1d@1e446",
+      "displayName": "",
+      "id": "1e446",
+      "name": "Icosphere.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "8209b": {
+      "importer": "gltf-scene",
+      "uuid": "de0539e4-db9b-4d70-a437-adbbe9e2fb1d@8209b",
+      "displayName": "",
+      "id": "8209b",
+      "name": "Crystal.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "legacyFbxImporter": false,
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "redirect": "de0539e4-db9b-4d70-a437-adbbe9e2fb1d@8209b",
+    "assetFinder": {
+      "meshes": [
+        "de0539e4-db9b-4d70-a437-adbbe9e2fb1d@1e446"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "de0539e4-db9b-4d70-a437-adbbe9e2fb1d@8209b"
+      ]
+    }
+  }
+}

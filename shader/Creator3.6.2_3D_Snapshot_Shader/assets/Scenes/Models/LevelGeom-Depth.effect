@@ -1,0 +1,80 @@
+// Effect Syntax Guide: https://github.com/cocos-creator/docs-3d/blob/master/zh/material-system/effect-syntax.md
+
+CCEffect %{
+  techniques:
+  - name: depth-8bits
+    passes:
+    - vert: unlit-vs:vert
+      frag: unlit-fs:depth_8bits
+      properties: &props
+
+  - name: depth-32bits
+    passes:
+    - vert: unlit-vs:vert
+      frag: unlit-fs:depth_32bits
+      properties: &props
+  - name: linear-01-depth-8bits
+    passes:
+    - vert: unlit-vs:vert
+      frag: unlit-fs:linear01_depth_8bits
+      properties: &props
+}%
+
+CCProgram unlit-vs %{  
+  precision highp float;
+  #include <legacy/input-standard>
+  #include <builtin/uniforms/cc-global>
+  #include <legacy/decode-base>
+  #include <legacy/local-batch>
+  #include <legacy/input-standard>
+
+  out vec4 v_screenPos;
+  out vec4 v_bufferParams;
+
+  vec4 vert () {
+    StandardVertInput In;
+    CCVertInput(In);
+
+    mat4 matWorld, matWorldIT;
+    CCGetWorldMatrixFull(matWorld, matWorldIT);
+
+    float near = cc_nearFar.x;
+    float far = cc_nearFar.y;
+    float zc0 = (near - far)/(near); // equals to 1 - far/near
+    float zc1 = far/near;
+    v_bufferParams = vec4(zc0, zc1, zc0/far, zc1/far);
+
+    v_screenPos = cc_matProj * (cc_matView * matWorld) * In.position;
+    return v_screenPos;
+  }
+}%
+
+
+CCProgram unlit-fs %{
+  precision highp float;
+  #include <legacy/output>
+  #include <common/data/packing>
+  in vec4 v_screenPos;
+  in vec4 v_bufferParams;
+  
+  vec4 depth_8bits () {
+    float depth = v_screenPos.z / v_screenPos.w * 0.5 + 0.5;
+    vec4 col = vec4(depth,depth,depth,1.0);
+    return CCFragOutput(col);
+  }
+
+  vec4 linear01_depth_8bits(){
+
+    float depth = v_screenPos.z / v_screenPos.w * 0.5 + 0.5;
+    float linear01Depth = 1.0 / (v_bufferParams.x * depth + v_bufferParams.y);
+    vec4 col = vec4(linear01Depth,linear01Depth,linear01Depth,1.0);
+
+    return CCFragOutput(col);
+  }
+
+  vec4 depth_32bits () {
+    float depth = v_screenPos.z / v_screenPos.w * 0.5 + 0.5;
+    vec4 col = packDepthToRGBA(depth);
+    return CCFragOutput(col);
+  }
+}%

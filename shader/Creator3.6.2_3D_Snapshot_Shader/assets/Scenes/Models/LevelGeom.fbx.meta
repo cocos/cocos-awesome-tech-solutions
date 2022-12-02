@@ -1,0 +1,111 @@
+{
+  "ver": "2.3.1",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "323101ca-95c8-4e99-b1a3-2fb90b6b1217",
+  "files": [],
+  "subMetas": {
+    "a62fe": {
+      "importer": "gltf-mesh",
+      "uuid": "323101ca-95c8-4e99-b1a3-2fb90b6b1217@a62fe",
+      "displayName": "",
+      "id": "a62fe",
+      "name": "Scene.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "4f17a": {
+      "importer": "texture",
+      "uuid": "323101ca-95c8-4e99-b1a3-2fb90b6b1217@4f17a",
+      "displayName": "",
+      "id": "4f17a",
+      "name": "DiffuseColor_Texture.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": false,
+        "imageUuidOrDatabaseUri": "db://assets/Scenes/Models/GridBox_Default.png"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a36c4": {
+      "importer": "gltf-material",
+      "uuid": "323101ca-95c8-4e99-b1a3-2fb90b6b1217@a36c4",
+      "displayName": "",
+      "id": "a36c4",
+      "name": "ProBuilderDefault.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "020be": {
+      "importer": "gltf-scene",
+      "uuid": "323101ca-95c8-4e99-b1a3-2fb90b6b1217@020be",
+      "displayName": "",
+      "id": "020be",
+      "name": "LevelGeom.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "DiffuseColor_Texture",
+        "uri": "db://assets/Scenes/Models/GridBox_Default.png"
+      }
+    ],
+    "legacyFbxImporter": false,
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "redirect": "323101ca-95c8-4e99-b1a3-2fb90b6b1217@020be",
+    "assetFinder": {
+      "meshes": [
+        "323101ca-95c8-4e99-b1a3-2fb90b6b1217@a62fe"
+      ],
+      "skeletons": [],
+      "textures": [
+        "323101ca-95c8-4e99-b1a3-2fb90b6b1217@4f17a"
+      ],
+      "materials": [
+        "323101ca-95c8-4e99-b1a3-2fb90b6b1217@a36c4"
+      ],
+      "scenes": [
+        "323101ca-95c8-4e99-b1a3-2fb90b6b1217@020be"
+      ]
+    },
+    "normals": 2,
+    "tangents": 2
+  }
+}
