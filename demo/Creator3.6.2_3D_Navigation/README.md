@@ -33,7 +33,7 @@
   > 
   > 使用连接线 link 爬坡
   ![Image Text](https://forum.cocos.org/uploads/default/original/3X/8/9/8923769b5dcbb446f4c01f9f443dee9971188302.gif)
-  需注意目前 3.4.x 版本引擎还不支持加载 obj 格式模型资源，所以需要使用第三方 DCC 工具重新导出成 fbx 方可使用。
+  需注意目前 3.6.x 版本引擎还不支持加载 obj 格式模型资源，所以需要使用第三方 DCC 工具重新导出成 fbx 方可使用。
 
 # TODO List
 
