@@ -1,6 +1,6 @@
 *技术支持团队提供*
 
-* (v3.5.2) 2D Fog
+* (v3.6.2) 2D Fog
 
   > 参考: https://assetstore.unity.com/packages/vfx/shaders/fullscreen-camera-effects/simple-2d-fog-storm-smoke-115617 、https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/shader/Creator3.4.2_2D_TheBookOfShaders/
   >
