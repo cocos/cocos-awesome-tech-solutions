@@ -3,7 +3,7 @@
 - (v3.6.2) 圆形头像
   
   ---
-  > 工程 git 仓库地址: https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/shader/Creator3.6.2_2D_Sprite_CircularAvatar
+  > 工程 git 仓库地址: https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.6.0-release/shader/Creator3.6.2_2D_Sprite_CircularAvatar
   >
   > 素材来自: https://github.com/ifengzp/cocos-awesome/tree/master/assets/Scene/Circle_avatar
   >
@@ -14,7 +14,7 @@
 - (v3.4.1) 人物护盾
   
   ---
-  > 工程 git 仓库地址:  https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/shader/Creator3.4.1_3D_CharacterShield
+  > 工程 git 仓库地址:  https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.6.0-release/shader/Creator3.4.1_3D_CharacterShield
   >
   > 素材来自:  https://forum.cocos.org/t/creator3d-shader/100123
   >
@@ -25,7 +25,7 @@
 - (v3.4.1) 水面波纹
 
   ---
-  > 工程 git 仓库地址: https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/shader/Creator3.4.1_2D_Sprite_WaterRipple
+  > 工程 git 仓库地址: https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.6.0-release/shader/Creator3.4.1_2D_Sprite_WaterRipple
   >
   > 素材来自: https://github.com/ifengzp/cocos-awesome/tree/master/assets/Scene/Water_spread
   >
@@ -33,21 +33,21 @@
 
   ![2021120902|480x320, 115%](https://forum.cocos.org/uploads/default/original/3X/d/b/db75ce757091c6fddea2c140cceb9df411867362.gif) 
 
-- (v3.4.1) 植物受风摆动
+- (v3.6.2) 植物受风摆动
 
   ---
-  > 工程 git 仓库地址: https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/shader/Creator3.4.1_2D_Sprite_PlantsBlownByTheWind
+  > 工程 git 仓库地址: https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.6.0-release/shader/Creator3.6.2_2D_Sprite_PlantsBlownByTheWind
   >
   > 素材来自: https://forum.cocos.org/t/topic/123866
   >
-  > *备注：本方案来源于 CocosCreator 中文论坛用户 @468179984 由技术支持团队升级至 3.4.1 版本*
+  > *备注：本方案来源于 CocosCreator 中文论坛用户 @468179984 由技术支持团队升级至 3.6.2 版本*
   
   ![2021120903|690x445, 80%](https://forum.cocos.org/uploads/default/original/3X/4/a/4a343400630f2c1806ad69fd9d406fdda2a774d3.gif) 
 
 - (v3.4.1) 3D 噪声消融
 
   ---
-  > 工程 git 仓库地址: https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/shader/Creator3.4.1_3D_NoiseAbatement
+  > 工程 git 仓库地址: https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.6.0-release/shader/Creator3.4.1_3D_NoiseAbatement
   >
   > 素材来自: https://gitee.com/carlosyzy/Creator3D_Shader_Noise_Dissolve
   >
@@ -58,7 +58,7 @@
 - (v3.4.1) 镜面光泽
 
   ---
-  > 工程 git 仓库地址: https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/shader/Creator3.4.1_2D_Sprite_MirrorShine
+  > 工程 git 仓库地址: https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.6.0-release/shader/Creator3.4.1_2D_Sprite_MirrorShine
   >
   > 素材来自: https://github.com/ifengzp/cocos-awesome/tree/master/assets/Scene/Specular_gloss
   >
@@ -69,7 +69,7 @@
 - (v3.4.2) 顶点偏移
 
   ---
-  > 工程 git 仓库地址: https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/shader/Creator3.4.2_3D_MotionVertex
+  > 工程 git 仓库地址: https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.6.0-release/shader/Creator3.4.2_3D_MotionVertex
   >
   > *备注：本方案来源于论坛用户 @229508950 ，由技术支持团队升级至 3.4.2 版本*
 
@@ -78,7 +78,7 @@
 - (v3.5.2) 2D Fog
 
   ---
-  > 参考: https://assetstore.unity.com/packages/vfx/shaders/fullscreen-camera-effects/simple-2d-fog-storm-smoke-115617 、https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/shader/Creator3.4.2_2D_TheBookOfShaders/
+  > 参考: https://assetstore.unity.com/packages/vfx/shaders/fullscreen-camera-effects/simple-2d-fog-storm-smoke-115617 、https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.6.0-release/shader/Creator3.4.2_2D_TheBookOfShaders/
   >
   > 效果展示：
   >
