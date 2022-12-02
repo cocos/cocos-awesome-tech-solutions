@@ -30,9 +30,9 @@ CCEffect %{
 
 CCProgram sprite-vs %{
   precision highp float;
-  #include <cc-global>
+  #include <builtin/uniforms/cc-global>
   #if USE_LOCAL
-    #include <cc-local>
+    #include <builtin/uniforms/cc-local>
   #endif
 
   in vec3 a_position;
@@ -74,9 +74,9 @@ CCProgram sprite-vs %{
 
 CCProgram sprite-fs %{
   precision highp float;
-  #include <embedded-alpha>
-  #include <alpha-test>
-  #include <cc-global>
+  #include <builtin/internal/embedded-alpha>
+  #include <builtin/internal/alpha-test>
+  #include <builtin/uniforms/cc-global>
 
   in vec4 v_color;
 
