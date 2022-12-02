@@ -26,12 +26,12 @@ CCEffect %{
 
 CCProgram sprite-vs %{
   precision highp float;
-  #include <cc-global>
+  #include <builtin/uniforms/cc-global>
   #if USE_LOCAL
-    #include <cc-local>
+    #include <builtin/uniforms/cc-local>
   #endif
   #if SAMPLE_FROM_RT
-    #include <common>
+    #include <common/common-define>
   #endif
   in vec3 a_position;
   in vec2 a_texCoord;
@@ -67,9 +67,9 @@ CCProgram sprite-vs %{
 
 CCProgram sprite-fs %{
   precision highp float;
-  #include <embedded-alpha>
-  #include <alpha-test>
-  #include <cc-global>
+  #include <builtin/internal/embedded-alpha>
+  #include <builtin/internal/alpha-test>
+  #include <builtin/uniforms/cc-global>
   uniform ARGS {
     vec2 texSize;
     float radius;
@@ -79,13 +79,13 @@ CCProgram sprite-fs %{
   };
 
     // 定义无理数
-    #define e 2.718281828459045
+    #pragma define e 2.718281828459045
 
     // 定义标准方差值（方差值越大，越模糊，但是需要计算的高斯矩阵范围会变大，从而带来巨大的计算量
-    #define stDev 1.5
+    #pragma define stDev 1.5
 
     // 定义π
-    #define pi 3.141592653589793
+    #pragma define pi 3.141592653589793
   in vec4 color;
   #if USE_TEXTURE
     in vec2 uv0;

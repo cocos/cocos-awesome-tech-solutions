@@ -1,5 +1,5 @@
 {
-  "__version__": "1.0.5",
+  "__version__": "1.0.7",
   "macroConfig": {
     "CLEANUP_IMAGE_CACHE": true,
     "BATCHER2D_MEM_INCREMENT": 2303
@@ -106,6 +106,7 @@
     "includeModules": [
       "2d",
       "3d",
+      "animation",
       "audio",
       "base",
       "dragon-bones",
@@ -119,13 +120,15 @@
       "physics-ammo",
       "primitive",
       "profiler",
+      "skeletal-animation",
       "spine",
       "terrain",
       "tiled-map",
       "tween",
       "ui",
       "video",
-      "webview"
+      "webview",
+      "xr"
     ],
     "noDeprecatedFeatures": {
       "value": false,
