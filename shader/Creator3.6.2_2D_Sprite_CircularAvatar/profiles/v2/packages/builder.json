@@ -1,5 +1,5 @@
 {
-  "__version__": "1.3.0",
+  "__version__": "1.3.3",
   "log": {
     "level": 4
   },
@@ -63,7 +63,8 @@
                 "vulkan": false,
                 "gles3": true,
                 "gles2": false
-              }
+              },
+              "__version__": "1.0.0"
             },
             "native": {
               "polyfills": {
@@ -72,13 +73,19 @@
               "encrypted": false,
               "xxteaKey": "1e8JAL8n1EBK0cL8",
               "compressZip": false,
-              "makeAfterBuild": true,
-              "JobSystem": "taskFlow"
+              "JobSystem": "taskFlow",
+              "__version__": "1.0.0"
             },
             "cocos-service": {
               "configID": "37768e",
-              "services": []
+              "services": [],
+              "__version__": "1.0.0"
             }
+          },
+          "buildStageGroup": {
+            "build": [
+              "make"
+            ]
           }
         },
         "time": "2021-12-8 17:24",

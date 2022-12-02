@@ -1,13 +1,13 @@
 #### *方案将会随着 CocosCreator 更新迭代，保证在最新版本的 CocosCreator 中可运行。*
 ---
-- (v3.4.1) 圆形头像
+- (v3.6.2) 圆形头像
   
   ---
-  > 工程 git 仓库地址: https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/shader/Creator3.4.1_2D_Sprite_CircularAvatar
+  > 工程 git 仓库地址: https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.4.0-release/shader/Creator3.6.2_2D_Sprite_CircularAvatar
   >
   > 素材来自: https://github.com/ifengzp/cocos-awesome/tree/master/assets/Scene/Circle_avatar
   >
-  > *备注: 本方案来源于 Github 用户(ifengzp)，由技术支持团队升级至 3.4.1 版本*
+  > *备注: 本方案来源于 Github 用户(ifengzp)，由技术支持团队升级至 3.6.2 版本*
 
   ![2021120801|690x458, 80%](https://forum.cocos.org/uploads/default/original/3X/4/d/4d0d4612d4c77e6b020309c84ddaec348ccf5008.jpeg) 
 
