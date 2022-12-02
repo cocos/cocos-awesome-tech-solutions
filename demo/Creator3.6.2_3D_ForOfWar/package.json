@@ -1,0 +1,12 @@
+{
+  "creator": {
+    "version": "3.6.2"
+  },
+  "dependencies": {
+    "cocos-recast": "^1.1.0"
+  },
+  "name": "recastnavigation",
+  "type": "3d",
+  "uuid": "aa300257-ec6b-4485-a1d4-fff5ea73aea3",
+  "version": "3.6.2"
+}
