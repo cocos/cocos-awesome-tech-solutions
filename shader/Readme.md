@@ -11,14 +11,14 @@
 
   ![2021120801|690x458, 80%](https://forum.cocos.org/uploads/default/original/3X/4/d/4d0d4612d4c77e6b020309c84ddaec348ccf5008.jpeg) 
 
-- (v3.4.1) 人物护盾
+- (v3.6.2) 人物护盾
   
   ---
-  > 工程 git 仓库地址:  https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.6.0-release/shader/Creator3.4.1_3D_CharacterShield
+  > 工程 git 仓库地址:  https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.6.0-release/shader/Creator3.6.2_3D_CharacterShield
   >
   > 素材来自:  https://forum.cocos.org/t/creator3d-shader/100123
   >
-  > *备注: 本方案来源于 Gitee 用户(carlosyzy)，由技术支持团队升级至 3.4.1 版本*
+  > *备注: 本方案来源于 Gitee 用户(carlosyzy)，由技术支持团队升级至 3.6.2 版本*
 
   ![2021120901|690x483, 80%](https://forum.cocos.org/uploads/default/original/3X/4/d/4df55a68f56fc5ea903d3e5926124853e9e08f13.gif) 
 
