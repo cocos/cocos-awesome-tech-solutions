@@ -1,0 +1,109 @@
+// Copyright (c) 2017-2020 Xiamen Yaji Software Co., Ltd.
+CCEffect %{
+  techniques:
+  - passes:
+    - vert: sprite-vs:vert
+      frag: sprite-fs:frag
+      depthStencilState:
+        depthTest: false
+        depthWrite: false
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: src_alpha
+          blendDst: one_minus_src_alpha
+          blendDstAlpha: one_minus_src_alpha
+      rasterizerState:
+        cullMode: none
+      properties:
+        u_resolution : { value: [640, 640] }
+}%
+
+CCProgram sprite-vs %{
+  precision highp float;
+  #include <builtin/uniforms/cc-global>
+  #if USE_LOCAL
+    #include <builtin/uniforms/cc-local>
+  #endif
+  #if SAMPLE_FROM_RT
+    #include <common/common-define>
+  #endif
+  in vec3 a_position;
+  in vec2 a_texCoord;
+  in vec4 a_color;
+
+  out vec4 color;
+  out vec2 uv0;
+
+  vec4 vert () {
+    vec4 pos = vec4(a_position, 1);
+
+    #if USE_LOCAL
+      pos = cc_matWorld * pos;
+    #endif
+
+    #if USE_PIXEL_ALIGNMENT
+      pos = cc_matView * pos;
+      pos.xyz = floor(pos.xyz);
+      pos = cc_matProj * pos;
+    #else
+      pos = cc_matViewProj * pos;
+    #endif
+
+    uv0 = a_texCoord;
+    #if SAMPLE_FROM_RT
+      CC_HANDLE_RT_SAMPLE_FLIP(uv0);
+    #endif
+    color = a_color;
+
+    return pos;
+  }
+}%
+
+CCProgram sprite-fs %{
+  precision highp float;
+  #include <builtin/uniforms/cc-global>
+
+  uniform ARGS{
+    vec2 u_resolution;
+  };
+
+  #pragma define PI 3.14159265359
+
+  vec2 rotate2d(vec2 _st, float _angle) {
+    _st -= 0.5;
+    _st = mat2(cos(_angle), -sin(_angle), sin(_angle), cos(_angle)) * _st;
+    _st += 0.5;
+    return _st;
+  }
+
+  vec2 tile(vec2 _st, float _zoom) {
+    _st *= _zoom;
+    return fract(_st);
+  }
+
+  float box(vec2 _st, vec2 _size, float _smoothEdges) {
+    _size = vec2(0.5) - _size*0.5;
+    vec2 aa = vec2(_smoothEdges*0.5);
+    vec2 uv = smoothstep(_size, _size+aa, _st);
+    uv *= smoothstep(_size, _size+aa, vec2(1.0)-_st);
+    return uv.x*uv.y;
+  }
+
+  vec4 frag () {
+    vec2 st = gl_FragCoord.xy / u_resolution;
+    vec3 color = vec3(0.0);
+    
+    // Divide the space in 4
+    st = tile(st, 4.);
+
+    // Use a matrix to rotate the space 45 degrees
+    st = rotate2d(st, PI*0.25);
+
+    // Draw a square
+    color = vec3(box(st, vec2(0.7), 0.01));
+    //color = vec3(circle(st, 0.2));
+
+    return vec4(color, 1);
+  }
+}%
