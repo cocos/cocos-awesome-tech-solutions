@@ -66,12 +66,12 @@
 
   ![2022030201|690x410, 80%](https://forum.cocos.org/uploads/default/optimized/3X/3/7/3785394c42e2ca3849b943bf1288785aa8d2edae_2_1104x656.gif) 
 
-- (v3.4.2) 顶点偏移
+- (v3.6.2) 顶点偏移
 
   ---
-  > 工程 git 仓库地址: https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.6.0-release/shader/Creator3.4.2_3D_MotionVertex
+  > 工程 git 仓库地址: https://github.com/cocos-creator/CococsCreator-public-technology-solutions/tree/3.6.0-release/shader/Creator3.6.2_3D_MotionVertex
   >
-  > *备注：本方案来源于论坛用户 @229508950 ，由技术支持团队升级至 3.4.2 版本*
+  > *备注：本方案来源于论坛用户 @229508950 ，由技术支持团队升级至 3.6.2 版本*
 
   ![Jun-09-2022 17-35-48|480x314, 100%](https://forum.cocos.org/uploads/default/original/3X/0/3/031b6e006ee254c08f5c2774ba2ec1e0f16262c0.gif) 
 
