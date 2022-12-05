@@ -1,0 +1,143 @@
+// Copyright (c) 2017-2020 Xiamen Yaji Software Co., Ltd.
+CCEffect %{
+  techniques:
+  - passes:
+    - vert: sprite-vs:vert
+      frag: sprite-fs:frag
+      depthStencilState:
+        depthTest: false
+        depthWrite: false
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: src_alpha
+          blendDst: one_minus_src_alpha
+          blendDstAlpha: one_minus_src_alpha
+      rasterizerState:
+        cullMode: none
+      properties:
+        alphaThreshold: { value: 0.5 }
+        _Brightness: { value: 0.0 }
+        _Contrast: { value: 0.0 }
+}%
+
+CCProgram sprite-vs %{
+  precision highp float;
+  #include <builtin/uniforms/cc-global>
+  #if USE_LOCAL
+    #include <builtin/uniforms/cc-local>
+  #endif
+  #if SAMPLE_FROM_RT
+    #include <common/common-define>
+  #endif
+  in vec3 a_position;
+  in vec2 a_texCoord;
+  in vec4 a_color;
+
+  out vec4 color;
+  out vec2 uv0;
+  out vec2 screenPos;
+
+  vec4 vert () {
+    vec4 pos = vec4(a_position, 1);
+
+    #if USE_LOCAL
+      pos = cc_matWorld * pos;
+    #endif
+
+    #if USE_PIXEL_ALIGNMENT
+      pos = cc_matView * pos;
+      pos.xyz = floor(pos.xyz);
+      pos = cc_matProj * pos;
+    #else
+      pos = cc_matViewProj * pos;
+    #endif
+
+    uv0 = a_texCoord;
+    #if SAMPLE_FROM_RT
+      CC_HANDLE_RT_SAMPLE_FLIP(uv0);
+    #endif
+    color = a_color;
+
+    screenPos.x = pos.x * cc_screenSize.x * 0.5;
+    screenPos.y = pos.y * cc_screenSize.y * 0.5;
+
+    return pos;
+  }
+}%
+
+CCProgram sprite-fs %{
+  precision highp float;
+  #include <builtin/internal/embedded-alpha>
+  #include <builtin/internal/alpha-test>
+
+  in vec4 color;
+  in vec2 screenPos;
+
+  #if USE_TEXTURE
+    in vec2 uv0;
+    #pragma builtin(local)
+    layout(set = 2, binding = 11) uniform sampler2D cc_spriteTexture;
+  #endif
+
+  uniform CONSTANT {
+    float _Brightness;
+    float _Contrast;
+  };
+
+  vec4 frag () {
+    vec4 o = vec4(1, 1, 1, 1);
+
+    #if USE_TEXTURE
+        vec4 col = texture(cc_spriteTexture, uv0);
+
+        vec2 sp = screenPos.xy;
+
+        /*	The values that are divided by 4 represent the 'colour
+        bleed' as discussed.
+        */
+        vec3 r = vec3(col.r,       col.g / 4.0, col.b / 4.0);
+        vec3 g = vec3(col.r / 4.0, col.g,       col.b / 4.0);
+        vec3 b = vec3(col.r / 4.0, col.g / 4.0, col.b);
+        mat3 colormap = mat3(r, g, b);
+
+        vec3 wh = vec3(1.0);
+        vec3 bl = vec3(0.0);
+
+        mat3 scanlineMap = mat3(wh, wh, bl);
+
+        int row = int(mod(sp.x, 3.0));
+        int column = int(mod(sp.y, 3.0));
+        /*	The matrices are being accessed like arrays here:
+
+          colormap[0] = r = (col.r, col.g / 4, col.b / 4)
+          scanlineMap[2] = bl = (0.0, 0.0, 0.0)
+
+        The pixel rows and columns are used (with modulo (i.e. %) 
+        arithmetic) to determine the 'array index'.
+        */
+
+        vec3 returnVal = vec3(0.0);
+
+        if (row < 1) returnVal = colormap[0];
+        else if(row < 2) returnVal = colormap[1];
+        else if(row < 3) returnVal = colormap[2];
+
+        if (column < 1) returnVal *= scanlineMap[0];
+        else if(column < 2) returnVal *= scanlineMap[1];
+        else if(column < 3) returnVal *= scanlineMap[2];
+
+        /*	Apply the brightness and contrast modifiers.
+        */
+        returnVal += (_Brightness / 255.0);
+        returnVal = clamp(returnVal, 0.0, 1.0);
+        returnVal = returnVal - _Contrast * (returnVal - 1.0) * returnVal * (returnVal - 0.5);
+
+				o = vec4(returnVal, 1.0);
+    #endif
+
+    o *= color;
+    ALPHA_TEST(o);
+    return o;
+  }
+}%

@@ -1,0 +1,119 @@
+// Copyright (c) 2017-2020 Xiamen Yaji Software Co., Ltd.
+CCEffect %{
+  techniques:
+  - passes:
+    - vert: sprite-vs:vert
+      frag: sprite-fs:frag
+      depthStencilState:
+        depthTest: false
+        depthWrite: false
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: src_alpha
+          blendDst: one_minus_src_alpha
+          blendDstAlpha: one_minus_src_alpha
+      rasterizerState:
+        cullMode: none
+      properties:
+        alphaThreshold: { value: 0.5 }
+}%
+
+CCProgram sprite-vs %{
+  precision highp float;
+  #include <builtin/uniforms/cc-global>
+  #if USE_LOCAL
+    #include <builtin/uniforms/cc-local>
+  #endif
+  #if SAMPLE_FROM_RT
+    #include <common/common-define>
+  #endif
+  in vec3 a_position;
+  in vec2 a_texCoord;
+  in vec4 a_color;
+
+  out vec4 color;
+  out vec2 uv0;
+  out vec4 _textureSize;
+
+  vec4 vert () {
+    vec4 pos = vec4(a_position, 1);
+
+    #if USE_LOCAL
+      pos = cc_matWorld * pos;
+    #endif
+
+    #if USE_PIXEL_ALIGNMENT
+      pos = cc_matView * pos;
+      pos.xyz = floor(pos.xyz);
+      pos = cc_matProj * pos;
+    #else
+      pos = cc_matViewProj * pos;
+    #endif
+
+    uv0 = a_texCoord;
+    #if SAMPLE_FROM_RT
+      CC_HANDLE_RT_SAMPLE_FLIP(uv0);
+    #endif
+    color = a_color;
+    _textureSize = cc_screenSize;
+    return pos;
+  }
+}%
+
+CCProgram sprite-fs %{
+  precision highp float;
+  #include <builtin/internal/embedded-alpha>
+  #include <builtin/internal/alpha-test>
+
+  in vec4 color;
+  in vec4 _textureSize;
+
+  #if USE_TEXTURE
+    in vec2 uv0;
+    #pragma builtin(local)
+    layout(set = 2, binding = 11) uniform sampler2D cc_spriteTexture;
+  #endif
+
+  #define _MainTex_TexelSize_y (1.0 / _textureSize.y)
+  #define _MainTex_TexelSize_x (1.0 / _textureSize.x)
+
+  vec3 sobel(vec2 uv)
+  {
+    vec3 x = vec3(0.0, 0.0, 0.0);
+    vec3 y = vec3(0.0, 0.0, 0.0);
+
+    #if USE_TEXTURE
+      x += texture(cc_spriteTexture, uv + vec2(-_MainTex_TexelSize_x, -_MainTex_TexelSize_y)).rgb * -1.0;
+      x += texture(cc_spriteTexture, uv + vec2(-_MainTex_TexelSize_x,                   0.0)).rgb * -2.0;
+      x += texture(cc_spriteTexture, uv + vec2(-_MainTex_TexelSize_x,  _MainTex_TexelSize_y)).rgb * -1.0;
+
+      x += texture(cc_spriteTexture, uv + vec2( _MainTex_TexelSize_x, -_MainTex_TexelSize_y)).rgb *  1.0;
+      x += texture(cc_spriteTexture, uv + vec2( _MainTex_TexelSize_x,                   0.0)).rgb *  2.0;
+      x += texture(cc_spriteTexture, uv + vec2( _MainTex_TexelSize_x,  _MainTex_TexelSize_y)).rgb *  1.0;
+
+      y += texture(cc_spriteTexture, uv + vec2(-_MainTex_TexelSize_x, -_MainTex_TexelSize_y)).rgb * -1.0;
+      y += texture(cc_spriteTexture, uv + vec2(                  0.0, -_MainTex_TexelSize_y)).rgb * -2.0;
+      y += texture(cc_spriteTexture, uv + vec2( _MainTex_TexelSize_x, -_MainTex_TexelSize_y)).rgb * -1.0;
+
+      y += texture(cc_spriteTexture, uv + vec2(-_MainTex_TexelSize_x,  _MainTex_TexelSize_y)).rgb *  1.0;
+      y += texture(cc_spriteTexture, uv + vec2(                  0.0,  _MainTex_TexelSize_y)).rgb *  2.0;
+      y += texture(cc_spriteTexture, uv + vec2( _MainTex_TexelSize_x,  _MainTex_TexelSize_y)).rgb *  1.0;
+    #endif
+
+    return sqrt(x * x + y * y);
+  }
+  
+  vec4 frag () {
+    vec4 o = vec4(1, 1, 1, 1);
+
+    #if USE_TEXTURE
+      vec3 col = sobel(uv0);
+      o = vec4(col, 1.0);
+    #endif
+
+    o *= color;
+    ALPHA_TEST(o);
+    return o;
+  }
+}%

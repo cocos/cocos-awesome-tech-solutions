@@ -1,0 +1,105 @@
+// Copyright (c) 2017-2020 Xiamen Yaji Software Co., Ltd.
+CCEffect %{
+  techniques:
+  - passes:
+    - vert: sprite-vs:vert
+      frag: sprite-fs:frag
+      depthStencilState:
+        depthTest: false
+        depthWrite: false
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: src_alpha
+          blendDst: one_minus_src_alpha
+          blendDstAlpha: one_minus_src_alpha
+      rasterizerState:
+        cullMode: none
+      properties:
+        u_resolution : { value: [640, 640] }
+}%
+
+CCProgram sprite-vs %{
+  precision highp float;
+  #include <builtin/uniforms/cc-global>
+  #if USE_LOCAL
+    #include <builtin/uniforms/cc-local>
+  #endif
+  #if SAMPLE_FROM_RT
+    #include <common/common-define>
+  #endif
+  in vec3 a_position;
+  in vec2 a_texCoord;
+  in vec4 a_color;
+
+  out vec4 color;
+  out vec2 uv0;
+
+  vec4 vert () {
+    vec4 pos = vec4(a_position, 1);
+
+    #if USE_LOCAL
+      pos = cc_matWorld * pos;
+    #endif
+
+    #if USE_PIXEL_ALIGNMENT
+      pos = cc_matView * pos;
+      pos.xyz = floor(pos.xyz);
+      pos = cc_matProj * pos;
+    #else
+      pos = cc_matViewProj * pos;
+    #endif
+
+    uv0 = a_texCoord;
+    #if SAMPLE_FROM_RT
+      CC_HANDLE_RT_SAMPLE_FLIP(uv0);
+    #endif
+    color = a_color;
+
+    return pos;
+  }
+}%
+
+CCProgram sprite-fs %{
+  precision highp float;
+  #include <builtin/uniforms/cc-global>
+
+  uniform ARGS{
+    vec2 u_resolution;
+  };
+
+  vec3 colorA = vec3(0.149, 0.141, 0.912);
+  vec3 colorB = vec3(1.000, 0.833, 0.224);
+
+  vec4 frag () {
+    vec2 st = gl_FragCoord.xy / u_resolution;
+    st.x *= u_resolution.x / u_resolution.y;
+    vec3 color = vec3(.0);
+
+    // Cell position
+    vec2 point[5];
+    point[0] = vec2(0.83,0.75);
+    point[1] = vec2(0.60,0.07);
+    point[2] = vec2(0.28,0.64);
+    point[3] = vec2(0.31,0.26);
+    point[4] = vec2(cc_time.x,0)/u_resolution;
+
+    float m_dist = 1.;
+    vec2 m_point;
+
+    for (int i=0; i<5; i++) {
+      float dist = distance(st, point[i]);
+      if (dist < m_dist) {
+        m_dist = dist;
+        m_point = point[i];
+      }
+    }
+
+    color += m_dist*2.;
+    color.rg = m_point;
+    color -= abs(sin(80.0*m_dist))*0.07;
+    color += 1. - step(.02, m_dist);
+
+    return vec4(color, 1);
+  }
+}%

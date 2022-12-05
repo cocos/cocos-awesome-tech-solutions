@@ -1,0 +1,19 @@
+{
+  "__version__": "1.0.2",
+  "layer": [
+    {
+      "name": "capture",
+      "value": 1
+    }
+  ],
+  "fbx": {
+    "legacyFbxImporter": {
+      "visible": true
+    }
+  },
+  "general": {
+    "designResolution": {
+      "fitHeight": true
+    }
+  }
+}

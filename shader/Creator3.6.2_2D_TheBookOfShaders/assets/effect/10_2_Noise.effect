@@ -1,0 +1,132 @@
+// Copyright (c) 2017-2020 Xiamen Yaji Software Co., Ltd.
+CCEffect %{
+  techniques:
+  - passes:
+    - vert: sprite-vs:vert
+      frag: sprite-fs:frag
+      depthStencilState:
+        depthTest: false
+        depthWrite: false
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: src_alpha
+          blendDst: one_minus_src_alpha
+          blendDstAlpha: one_minus_src_alpha
+      rasterizerState:
+        cullMode: none
+      properties:
+        u_resolution : { value: [640, 640] }
+}%
+
+CCProgram sprite-vs %{
+  precision highp float;
+  #include <builtin/uniforms/cc-global>
+  #if USE_LOCAL
+    #include <builtin/uniforms/cc-local>
+  #endif
+  #if SAMPLE_FROM_RT
+    #include <common/common-define>
+  #endif
+  in vec3 a_position;
+  in vec2 a_texCoord;
+  in vec4 a_color;
+
+  out vec4 color;
+  out vec2 uv0;
+
+  vec4 vert () {
+    vec4 pos = vec4(a_position, 1);
+
+    #if USE_LOCAL
+      pos = cc_matWorld * pos;
+    #endif
+
+    #if USE_PIXEL_ALIGNMENT
+      pos = cc_matView * pos;
+      pos.xyz = floor(pos.xyz);
+      pos = cc_matProj * pos;
+    #else
+      pos = cc_matViewProj * pos;
+    #endif
+
+    uv0 = a_texCoord;
+    #if SAMPLE_FROM_RT
+      CC_HANDLE_RT_SAMPLE_FLIP(uv0);
+    #endif
+    color = a_color;
+
+    return pos;
+  }
+}%
+
+CCProgram sprite-fs %{
+  precision highp float;
+  #include <builtin/uniforms/cc-global>
+
+  uniform ARGS{
+    vec2 u_resolution;
+  };
+
+  float random(vec2 st) {
+    return fract(sin(dot(st.xy, vec2(12.9898,78.233)))*43758.5453123);
+  }
+
+  float noise(vec2 st) {
+    vec2 i = floor(st);
+    vec2 f = fract(st);
+
+    // Four corners in 2D of a tile
+    float a = random(i);
+    float b = random(i+vec2(1.0,0.0));
+    float c = random(i+vec2(0.0,1.0));
+    float d = random(i+vec2(1.0,1.0));
+
+    vec2 u = f * f * (3.0 - 2.0 * f);
+    return mix(a,b,u.x) + (c-a)*u.y*(1.0-u.x) + (d-b)*u.x*u.y;
+  }
+
+  #pragma define OCTAVES 6
+
+  float fbm(vec2 st) {
+    float v = 0.0;
+    float a = 0.5;
+    vec2 shift = vec2(100.0);
+    // Rotate to reduce axial bias
+    mat2 rot = mat2(cos(0.5),sin(0.5),-sin(0.5),cos(0.5));
+
+    for (int i=0; i<OCTAVES; i++) {
+      v += a * noise(st);
+      st = rot * st * 2.0 + shift;
+      a *= .5;
+    }
+
+    return v;
+  }
+
+  vec4 frag () {
+    vec2 st = gl_FragCoord.xy / u_resolution * 3.0;
+    //st.x *= u_resolution.x / u_resolution.y;
+
+    vec3 color = vec3(.0);
+    //color = texture2D(texture, v_uv0).rgb;
+
+    vec2 q = vec2(0.);
+    q.x = fbm(st + 0.0*cc_time.x);
+    q.y = fbm(st + vec2(1.0));
+
+    vec2 r = vec2(0.);
+    r.x = fbm(st + 1.0*q + vec2(1.7,9.2) + 0.15*cc_time.x);
+    r.y = fbm(st + 1.0*q + vec2(8.3,2.8) + 0.126*cc_time.x);
+
+    float f = fbm(st+r);
+
+    color = mix(vec3(0.101961,0.619608,0.666667), 
+                vec3(0.666667,0.666667,0.498039),
+                clamp((f*f)*4.0,0.0,1.0));
+    color = mix(color, vec3(0,0,0.164706), clamp(length(q),0.0,1.0));
+    color = mix(color, vec3(0.666667,1,1), clamp(length(r.x),0.0,1.0));
+
+    return vec4((f*f*f+.6*f*f+.5*f)*color, 1.0);
+  }
+}%

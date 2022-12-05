@@ -1,0 +1,192 @@
+// Copyright (c) 2017-2020 Xiamen Yaji Software Co., Ltd.
+CCEffect %{
+  techniques:
+  - passes:
+    - vert: sprite-vs:vert
+      frag: sprite-fs:frag
+      depthStencilState:
+        depthTest: false
+        depthWrite: false
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: src_alpha
+          blendDst: one_minus_src_alpha
+          blendDstAlpha: one_minus_src_alpha
+      rasterizerState:
+        cullMode: none
+      properties:
+        alphaThreshold: { value: 0.5 }
+        texSize: {value: [500.0,500.0],editor: {tooltip: "节点尺寸"}}
+        radius: {value: 0.0}
+        texAlpha: {value: 1.0}
+        x_count: {value: 1.0}
+        y_count: {value: 1.0}
+}%
+
+CCProgram sprite-vs %{
+  precision highp float;
+  #include <builtin/uniforms/cc-global>
+  #if USE_LOCAL
+    #include <builtin/uniforms/cc-local>
+  #endif
+  #if SAMPLE_FROM_RT
+    #include <common/common-define>
+  #endif
+  in vec3 a_position;
+  in vec2 a_texCoord;
+  in vec4 a_color;
+
+  out vec4 color;
+  out vec2 uv0;
+
+  vec4 vert () {
+    vec4 pos = vec4(a_position, 1);
+
+    #if USE_LOCAL
+      pos = cc_matWorld * pos;
+    #endif
+
+    #if USE_PIXEL_ALIGNMENT
+      pos = cc_matView * pos;
+      pos.xyz = floor(pos.xyz);
+      pos = cc_matProj * pos;
+    #else
+      pos = cc_matViewProj * pos;
+    #endif
+
+    uv0 = a_texCoord;
+    #if SAMPLE_FROM_RT
+      CC_HANDLE_RT_SAMPLE_FLIP(uv0);
+    #endif
+    color = a_color;
+
+    return pos;
+  }
+}%
+
+CCProgram sprite-fs %{
+  precision highp float;
+  #include <builtin/internal/embedded-alpha>
+  #include <builtin/internal/alpha-test>
+  #include <builtin/uniforms/cc-global>
+  uniform ARGS {
+    vec2 texSize;
+    float radius;
+    float texAlpha;
+    float x_count;
+    float y_count;
+  };
+
+    // 定义无理数
+    #pragma define e 2.718281828459045
+
+    // 定义标准方差值（方差值越大，越模糊，但是需要计算的高斯矩阵范围会变大，从而带来巨大的计算量
+    #pragma define stDev 1.5
+
+    // 定义π
+    #pragma define pi 3.141592653589793
+  in vec4 color;
+  #if USE_TEXTURE
+    in vec2 uv0;
+    #pragma builtin(local)
+    layout(set = 2, binding = 11) uniform sampler2D cc_spriteTexture;
+  #endif
+
+  /**
+  * 获取权重(对应二维高斯函数公式，见 https://zh.wikipedia.org/wiki/%E9%AB%98%E6%96%AF%E6%A8%A1%E7%B3%8A )
+  */
+  float getWeight(float x, float y) {
+    return (1.0 / (2.0 * pi * pow(stDev, 2.0))) * pow(1.0 / e, (pow(x, 2.0) + pow(y, 2.0)) / (2.0 * pow(stDev, 2.0)));
+  }
+
+   vec2 getUvMapPos() {
+      float block_w = 1.0 / x_count;
+      float block_x_idx = floor(uv0.x / block_w);
+
+      float block_h = 1.0 / y_count;
+      float block_y_idx = floor(uv0.y / block_h);
+
+      return vec2(block_w * (block_x_idx + 0.5), block_h * (block_y_idx + 0.5));
+    }
+  vec4 frag () {
+    vec4 o = vec4(0, 0, 0, 0);
+
+    #if USE_TEXTURE
+      o *= CCSampleWithAlphaSeparated(cc_spriteTexture, uv0);
+      #if IS_GRAY
+        float gray  = 0.2126 * o.r + 0.7152 * o.g + 0.0722 * o.b;
+        o.r = o.g = o.b = gray;
+      #endif
+    #endif
+
+    // o *= color;
+    // ALPHA_TEST(o);
+
+    // const mediump float rd = 10.0;
+    vec4 col = vec4(0.);
+    // float sum = 0.0;
+   
+  
+    float circle = radius * radius;
+    vec2 center = vec2(0.5);
+    float rx = (uv0.x - center.x);
+    float ry = uv0.y - center.y;
+    float dis = rx * rx + ry * ry;
+    // float a = smoothstep(dis, dis - 0.1, circle);
+    if (dis <= circle) {
+      discard;
+    }
+    
+    // 根据高斯分布（也叫正态分布），在3个标准差范围内的分布比例占到99%的权重，因此我们只需要计算矩阵范围 [6 * stDev + 1, 6 * stDev +1] 上的权重
+
+    const highp float size = floor(stDev * 6.0 + 1.0);
+    const highp float halfSize = floor(size / 2.0);
+
+      //计算高斯矩阵上所有权重的和
+
+      // 原点
+      float totalWeight = getWeight(0.0, 0.0);
+
+      // X轴正方向上的权重 * 2.0 就是整个X轴上的权重
+      for(float x = 1.0; x <= halfSize; x++) {
+          totalWeight += getWeight(x, 0.0) * 2.0;
+      } 
+      // Y轴正方向上的权重 * 2.0 就是整个Y轴上的权重
+      for(float y = 1.0; y <= halfSize; y++) {
+          totalWeight += getWeight(0.0, y) * 2.0;
+      } 
+      // 第一象限的权重 * 4.0 就是4个象限的权重
+      for(float x = 1.0; x <= halfSize; x++) {
+        for (float y = 1.0; y<= halfSize; y++) {
+          totalWeight += getWeight(x, y) * 4.0;
+        }
+      }
+
+      // 采样周边像素并应用加权平均值，得出最终像素值
+      vec4 finalColor = vec4(0.0, 0.0, 0.0, 0.0);
+      // float divider = 0.01; 
+      float onePxWidth = 1.0 / texSize.x;
+      float onePxHeight = 1.0 / texSize.y;
+      //  vec2 realPos = getUvMapPos();
+      // o *= CCSampleWithAlphaSeparated(cc_spriteTexture, realPos);
+      for(float x = -halfSize; x<= halfSize; x++) {
+        for (float y = -halfSize; y<= halfSize; y++) {
+          // 求出对应坐标的真正权重（对应权重矩阵）
+          float weight = getWeight(x, y) / totalWeight;
+
+          // 求出对应坐标像素颜色值的加权值
+          finalColor += CCSampleWithAlphaSeparated(cc_spriteTexture, uv0 + vec2(onePxWidth * x, onePxHeight * y)) * weight;
+        }
+      }
+     
+      // o *= finalColor;
+      o = finalColor;
+      o.a *= texAlpha;
+    // }
+    // col.a = color.a;
+    //  #if USE_TRAMSFORM
+    // #endif
+    return o;
+  }
+}%

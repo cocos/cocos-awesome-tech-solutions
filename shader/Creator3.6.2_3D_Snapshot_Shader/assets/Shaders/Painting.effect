@@ -1,0 +1,256 @@
+// Copyright (c) 2017-2020 Xiamen Yaji Software Co., Ltd.
+CCEffect %{
+  techniques:
+  - passes:
+    - vert: sprite-vs:vert
+      frag: sprite-fs:frag
+      depthStencilState:
+        depthTest: false
+        depthWrite: false
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: src_alpha
+          blendDst: one_minus_src_alpha
+          blendDstAlpha: one_minus_src_alpha
+      rasterizerState:
+        cullMode: none
+      properties:
+        alphaThreshold: { value: 0.5 }
+}%
+
+CCProgram sprite-vs %{
+  precision highp float;
+  #include <builtin/uniforms/cc-global>
+  #if USE_LOCAL
+    #include <builtin/uniforms/cc-local>
+  #endif
+  #if SAMPLE_FROM_RT
+    #include <common/common-define>
+  #endif
+  in vec3 a_position;
+  in vec2 a_texCoord;
+  in vec4 a_color;
+
+  out vec4 color;
+  out vec2 uv0;
+  out vec4 _textureSize;
+
+  vec4 vert () {
+    vec4 pos = vec4(a_position, 1);
+
+    #if USE_LOCAL
+      pos = cc_matWorld * pos;
+    #endif
+
+    #if USE_PIXEL_ALIGNMENT
+      pos = cc_matView * pos;
+      pos.xyz = floor(pos.xyz);
+      pos = cc_matProj * pos;
+    #else
+      pos = cc_matViewProj * pos;
+    #endif
+
+    uv0 = a_texCoord;
+    #if SAMPLE_FROM_RT
+      CC_HANDLE_RT_SAMPLE_FLIP(uv0);
+    #endif
+    color = a_color;
+    _textureSize = cc_screenSize;
+    return pos;
+  }
+}%
+
+CCProgram sprite-fs %{
+  precision highp float;
+  #include <builtin/internal/embedded-alpha>
+  #include <builtin/internal/alpha-test>
+
+  in vec4 color;
+  in vec4 _textureSize;
+
+  #if USE_TEXTURE
+    in vec2 uv0;
+    #pragma builtin(local)
+    layout(set = 2, binding = 11) uniform sampler2D cc_spriteTexture;
+  #endif
+
+  struct region
+  {
+    vec3 mean;
+    float variance;
+  };
+
+  #define _MainTex_TexelSize_y (1.0 / _textureSize.y)
+  #define _MainTex_TexelSize_x (1.0 / _textureSize.x)
+
+  const float _KernelSize = 17.0;
+
+  region calcRegionA(float samples, vec2 uv)
+  {
+    region r;
+    vec3 sum = vec3(0.0);
+    vec3 squareSum = vec3(0.0);
+
+    const float upper_f = (_KernelSize - 1.0) / 2.0;
+    const float lower_f = -upper_f;
+    
+    const vec2 lower = vec2(lower_f, lower_f);
+    const vec2 upper = vec2(0.0, 0.0);
+
+#if USE_TEXTURE
+    for (float x = lower.x; x <= upper.x; ++x)
+    {
+      for (float y = lower.y; y <= upper.y; ++y)
+      {
+        vec2 offset = vec2(_MainTex_TexelSize_x * x, _MainTex_TexelSize_y * y);
+        vec3 tex = texture(cc_spriteTexture, uv + offset).rgb;
+        sum += tex;
+        squareSum += tex * tex;
+      }
+    }
+    r.mean = sum / samples;
+
+    vec3 variance = abs((squareSum / samples) - (r.mean * r.mean));
+    r.variance = length(variance);
+#endif
+
+    return r;
+  }
+
+  region calcRegionB(float samples, vec2 uv)
+  {
+    region r;
+    vec3 sum = vec3(0.0);
+    vec3 squareSum = vec3(0.0);
+
+    const float upper_f = (_KernelSize - 1.0) / 2.0;
+    const float lower_f = -upper_f;
+
+    const vec2 lower = vec2(0.0,lower_f);
+    const vec2 upper = vec2(upper_f,0.0);
+
+#if USE_TEXTURE
+    for (float x = lower.x; x <= upper.x; ++x)
+    {
+      for (float y = lower.y; y <= upper.y; ++y)
+      {
+        vec2 offset = vec2(_MainTex_TexelSize_x * x, _MainTex_TexelSize_y * y);
+        vec3 tex = texture(cc_spriteTexture, uv + offset).rgb;
+        sum += tex;
+        squareSum += tex * tex;
+      }
+    }
+    r.mean = sum / samples;
+
+    vec3 variance = abs((squareSum / samples) - (r.mean * r.mean));
+    r.variance = length(variance);
+#endif
+
+    return r;
+  }
+
+  region calcRegionC(float samples, vec2 uv)
+  {
+    region r;
+    vec3 sum = vec3(0.0);
+    vec3 squareSum = vec3(0.0);
+
+    const float upper_f = (_KernelSize - 1.0) / 2.0;
+    const float lower_f = -upper_f;
+
+    const vec2 lower = vec2(lower_f, 0.0);
+    const vec2 upper = vec2(0.0,  upper_f);
+
+#if USE_TEXTURE
+    for (float x = lower.x; x <= upper.x; ++x)
+    {
+      for (float y = lower.y; y <= upper.y; ++y)
+      {
+        vec2 offset = vec2(_MainTex_TexelSize_x * x, _MainTex_TexelSize_y * y);
+        vec3 tex = texture(cc_spriteTexture, uv + offset).rgb;
+        sum += tex;
+        squareSum += tex * tex;
+      }
+    }
+    r.mean = sum / samples;
+
+    vec3 variance = abs((squareSum / samples) - (r.mean * r.mean));
+    r.variance = length(variance);
+#endif
+
+    return r;
+  }
+
+  region calcRegionD(float samples, vec2 uv)
+  {
+    region r;
+    vec3 sum = vec3(0.0);
+    vec3 squareSum = vec3(0.0);
+
+    const float upper_f = (_KernelSize - 1.0) / 2.0;
+    const float lower_f = -upper_f;
+
+    const vec2 lower = vec2(0.0,0.0);
+    const vec2 upper = vec2(upper_f,upper_f);
+
+#if USE_TEXTURE
+    for (float x = lower.x; x <= upper.x; ++x)
+    {
+      for (float y = lower.y; y <= upper.y; ++y)
+      {
+        vec2 offset = vec2(_MainTex_TexelSize_x * x, _MainTex_TexelSize_y * y);
+        vec3 tex = texture(cc_spriteTexture, uv + offset).rgb;
+        sum += tex;
+        squareSum += tex * tex;
+      }
+    }
+    r.mean = sum / samples;
+
+    vec3 variance = abs((squareSum / samples) - (r.mean * r.mean));
+    r.variance = length(variance);
+#endif
+
+    return r;
+  }
+
+  vec4 frag () {
+    vec4 o = vec4(1, 1, 1, 1);
+
+    #if USE_TEXTURE
+      float upper = (_KernelSize - 1.0) / 2.0;
+      float samples = (upper + 1.0) * (upper + 1.0);
+
+      // Calculate the four regional parameters as discussed.
+      region regionA = calcRegionA(samples, uv0);
+      region regionB = calcRegionB(samples, uv0);
+      region regionC = calcRegionC(samples, uv0);
+      region regionD = calcRegionD(samples, uv0);
+
+      vec3 col = regionA.mean;
+      float minVar = regionA.variance;
+
+      /*	Cascade through each region and compare variances - the end
+        result will be the that the correct mean is picked for col.
+      */
+      float testVal;
+
+      testVal = step(regionB.variance, minVar);
+      col = mix(col, regionB.mean, testVal);
+      minVar = mix(minVar, regionB.variance, testVal);
+
+      testVal = step(regionC.variance, minVar);
+      col = mix(col, regionC.mean, testVal);
+      minVar = mix(minVar, regionC.variance, testVal);
+
+      testVal = step(regionD.variance, minVar);
+      col = mix(col, regionD.mean, testVal);
+
+      o = vec4(col, 1.0);
+    #endif
+
+    o *= color;
+    ALPHA_TEST(o);
+    return o;
+  }
+}%

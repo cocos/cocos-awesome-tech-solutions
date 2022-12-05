@@ -1,0 +1,147 @@
+// Copyright (c) 2017-2020 Xiamen Yaji Software Co., Ltd.
+CCEffect %{
+  techniques:
+  - passes:
+    - vert: sprite-vs:vert
+      frag: sprite-fs:frag
+      depthStencilState:
+        depthTest: false
+        depthWrite: false
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: src_alpha
+          blendDst: one_minus_src_alpha
+          blendDstAlpha: one_minus_src_alpha
+      rasterizerState:
+        cullMode: none
+      properties:
+        alphaThreshold: { value: 0.5 }
+        _textureSize: { value: [0.0, 0.0, 0.0, 0.0] }        
+}%
+
+CCProgram sprite-vs %{
+  precision highp float;
+  #include <builtin/uniforms/cc-global>
+  #if USE_LOCAL
+    #include <builtin/uniforms/cc-local>
+  #endif
+  #if SAMPLE_FROM_RT
+    #include <common/common-define>
+  #endif
+  in vec3 a_position;
+  in vec2 a_texCoord;
+  in vec4 a_color;
+
+  out vec4 color;
+  out vec2 uv0;
+
+  vec4 vert () {
+    vec4 pos = vec4(a_position, 1);
+
+    #if USE_LOCAL
+      pos = cc_matWorld * pos;
+    #endif
+
+    #if USE_PIXEL_ALIGNMENT
+      pos = cc_matView * pos;
+      pos.xyz = floor(pos.xyz);
+      pos = cc_matProj * pos;
+    #else
+      pos = cc_matViewProj * pos;
+    #endif
+
+    uv0 = a_texCoord;
+    #if SAMPLE_FROM_RT
+      CC_HANDLE_RT_SAMPLE_FLIP(uv0);
+    #endif
+    color = a_color;
+
+    return pos;
+  }
+}%
+
+CCProgram sprite-fs %{
+  precision highp float;
+  #include <builtin/internal/embedded-alpha>
+  #include <builtin/internal/alpha-test>
+
+  in vec4 color;
+
+  #if USE_TEXTURE
+    in vec2 uv0;
+    #pragma builtin(local)
+    layout(set = 2, binding = 11) uniform sampler2D cc_spriteTexture;
+  #endif
+
+  #define TWO_PI 6.28319
+  #define E 2.71828
+
+  const float kernelSize = 21.0;
+  const float spread = 5.0;
+
+  uniform Constant {
+    vec4 _textureSize;
+  };
+
+	float gaussian(float x, float sigma)
+	{
+		float sigmaSqu = sigma * sigma;
+		return (1.0 / sqrt(TWO_PI * sigmaSqu)) * pow(E, -(x * x) / (2.0 * sigmaSqu));
+	}
+
+	float getSigma(vec2 uv)
+	{
+		float len = sqrt(pow(abs(uv.x - 0.5) * 2.0, 2.0) + pow(abs(uv.y - 0.5) * 2.0, 2.0));
+		return min(len * 1.25, 1.0);
+	}
+
+  float _MainTex_TexelSize_y(float tex_height)
+  {
+    return (1.0 / tex_height);
+  }
+
+  float _MainTex_TexelSize_x(float tex_width)
+  {
+    return (1.0 / tex_width);
+  }
+
+  vec4 frag () {
+    vec4 o = vec4(1, 1, 1, 1);
+
+    #if USE_TEXTURE
+      vec3 col = vec3(0.0, 0.0, 0.0);
+      float kernelSum = 0.0;
+
+      const float upper = ((kernelSize - 1.0) / 2.0);
+      const float lower = -upper;
+
+  #if USE_VERTICAL
+      for (float y = lower; y <= upper; ++y)
+      {
+        float sigma = getSigma(uv0) * spread;
+        float gauss = gaussian(y, sigma);
+
+        kernelSum += gauss;
+        col += gauss * texture(cc_spriteTexture, uv0 + vec2(0.0, _MainTex_TexelSize_y(_textureSize.y) * y)).rgb;    
+      }
+  #else
+      for (float x = lower; x <= upper; ++x)
+      {
+        float sigma = getSigma(uv0) * spread;
+        float gauss = gaussian(x, sigma);
+      
+        kernelSum += gauss;  
+        col += gauss * texture(cc_spriteTexture, uv0 + vec2(_MainTex_TexelSize_x(_textureSize.x) * x, 0.0)).rgb;
+      }
+  #endif
+  
+      col /= kernelSum;
+      o = vec4(col, 1.0);
+    #endif
+
+    o *= color;
+    ALPHA_TEST(o);
+    return o;
+  }
+}%

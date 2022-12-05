@@ -1,0 +1,105 @@
+// Copyright (c) 2017-2020 Xiamen Yaji Software Co., Ltd.
+CCEffect %{
+  techniques:
+  - passes:
+    - vert: sprite-vs:vert
+      frag: sprite-fs:frag
+      depthStencilState:
+        depthTest: false
+        depthWrite: false
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: src_alpha
+          blendDst: one_minus_src_alpha
+          blendDstAlpha: one_minus_src_alpha
+      rasterizerState:
+        cullMode: none
+      properties:
+        alphaThreshold: { value: 0.5 }
+        _GBDarkest: { value:  [0.06, 0.22, 0.06, 1.0], editor: {type: color} }
+        _GBDark: { value: [0.19, 0.38, 0.19, 1.0], editor: {type: color} }
+        _GBLight: { value: [0.54, 0.67, 0.06, 1.0], editor: {type: color} }
+        _GBLightest: { value: [0.61, 0.73, 0.06, 1.0], editor: {type: color} }
+}%
+
+CCProgram sprite-vs %{
+  precision highp float;
+  #include <builtin/uniforms/cc-global>
+  #if USE_LOCAL
+    #include <builtin/uniforms/cc-local>
+  #endif
+  #if SAMPLE_FROM_RT
+    #include <common/common-define>
+  #endif
+  in vec3 a_position;
+  in vec2 a_texCoord;
+  in vec4 a_color;
+
+  out vec4 color;
+  out vec2 uv0;
+
+  vec4 vert () {
+    vec4 pos = vec4(a_position, 1);
+
+    #if USE_LOCAL
+      pos = cc_matWorld * pos;
+    #endif
+
+    #if USE_PIXEL_ALIGNMENT
+      pos = cc_matView * pos;
+      pos.xyz = floor(pos.xyz);
+      pos = cc_matProj * pos;
+    #else
+      pos = cc_matViewProj * pos;
+    #endif
+
+    uv0 = a_texCoord;
+    #if SAMPLE_FROM_RT
+      CC_HANDLE_RT_SAMPLE_FLIP(uv0);
+    #endif
+    color = a_color;
+    return pos;
+  }
+}%
+
+CCProgram sprite-fs %{
+  precision highp float;
+  #include <builtin/internal/embedded-alpha>
+  #include <builtin/internal/alpha-test>
+
+  in vec4 color;
+
+  #if USE_TEXTURE
+    in vec2 uv0;
+    #pragma builtin(local)
+    layout(set = 2, binding = 11) uniform sampler2D cc_spriteTexture;
+  #endif
+
+  uniform CONSTANT {
+    vec4 _GBDarkest;
+    vec4 _GBDark;
+    vec4 _GBLight;
+    vec4 _GBLightest;
+  };
+
+  vec4 frag () {
+    vec4 o = vec4(1, 1, 1, 1);
+
+    #if USE_TEXTURE
+      vec4 tex = texture(cc_spriteTexture, uv0);
+      float lum = dot(tex.rgb, vec3(0.3, 0.59, 0.11));
+      float gb = lum * 3.0;
+
+      vec4 col = mix(_GBDarkest, _GBDark, clamp(gb, 0.0, 1.0));
+      col = mix(col, _GBLight, clamp((gb - 1.0), 0.0, 1.0));
+      col = mix(col, _GBLightest, clamp((gb - 2.0), 0.0, 1.0));
+
+      o = vec4(col.rgb, 1.0);
+    #endif
+
+    o *= color;
+    ALPHA_TEST(o);
+    return o;
+  }
+}%

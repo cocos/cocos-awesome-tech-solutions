@@ -1,0 +1,90 @@
+// Copyright (c) 2017-2020 Xiamen Yaji Software Co., Ltd.
+CCEffect %{
+  techniques:
+  - passes:
+    - vert: sprite-vs:vert
+      frag: sprite-fs:frag
+      depthStencilState:
+        depthTest: false
+        depthWrite: false
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: src_alpha
+          blendDst: one_minus_src_alpha
+          blendDstAlpha: one_minus_src_alpha
+      rasterizerState:
+        cullMode: none
+      properties:
+        u_resolution : { value: [640, 640] }
+}%
+
+CCProgram sprite-vs %{
+  precision highp float;
+  #include <builtin/uniforms/cc-global>
+  #if USE_LOCAL
+    #include <builtin/uniforms/cc-local>
+  #endif
+  #if SAMPLE_FROM_RT
+    #include <common/common-define>
+  #endif
+  in vec3 a_position;
+  in vec2 a_texCoord;
+  in vec4 a_color;
+
+  out vec4 color;
+  out vec2 uv0;
+
+  vec4 vert () {
+    vec4 pos = vec4(a_position, 1);
+
+    #if USE_LOCAL
+      pos = cc_matWorld * pos;
+    #endif
+
+    #if USE_PIXEL_ALIGNMENT
+      pos = cc_matView * pos;
+      pos.xyz = floor(pos.xyz);
+      pos = cc_matProj * pos;
+    #else
+      pos = cc_matViewProj * pos;
+    #endif
+
+    uv0 = a_texCoord;
+    #if SAMPLE_FROM_RT
+      CC_HANDLE_RT_SAMPLE_FLIP(uv0);
+    #endif
+    color = a_color;
+
+    return pos;
+  }
+}%
+
+CCProgram sprite-fs %{
+  precision highp float;
+  #include <builtin/uniforms/cc-global>
+
+  uniform ARGS{
+    vec2 u_resolution;
+  };
+
+  float circle(vec2 _st, float _radius) {
+    vec2 l = _st - vec2(0.5);
+    return 1.0 - smoothstep(_radius-(_radius*0.01), _radius+(_radius*0.01), dot(1.,1.)*4.0);
+  }
+
+  vec4 frag () {
+    vec2 st = gl_FragCoord.xy / u_resolution;
+    vec3 color = vec3(0.0);
+    
+    st *= 3.0;
+    st = fract(st);
+
+    // we pass st as the y & z values of a three dimensional vector to be
+    // properly multiply by a 3x3 matrix
+    color = vec3(st, 0.0);
+    //color = vec3(circle(st, 0.2));
+
+    return vec4(color, 1);
+  }
+}%
