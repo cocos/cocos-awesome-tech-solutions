@@ -6,7 +6,7 @@
   >
   > **因为 github 单文件上传大小有 100m 限制，所以自定义引擎部分需要打开链接 http://download.cocos.org/CocosTest/zhefengzhang/NoDelete/3.6.2-videoTexture-native-folder/native.zip 下载并解压到项目中**
   >
-  > **Because there is a 100m limit on the size of a single file upload on github, you need to open the link http://download.cocos.org/CocosTest/zhefengzhang/NoDelete/native.zip to download and unzip the custom engine part into the project**
+  > **Because there is a 100m limit on the size of a single file upload on github, you need to open the link http://download.cocos.org/CocosTest/zhefengzhang/NoDelete/3.6.2-videoTexture-native-folder/native.zip to download and unzip the custom engine part into the project**
   >
   > **不支持微信浏览器、微信小游戏**
   > 除了常规的本地视频和远程视频外，原生平台还支持支持播放直播流。直播流测试链接：rtmp://mobliestream.c3tv.com:554/live/goodtv.sdp （注意把 MediaVieo 组件的 clip 设置为 null，否则不会使用 url 播放）
