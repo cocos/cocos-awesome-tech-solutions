@@ -113,9 +113,7 @@ export class Screenshot2D extends Component {
             //@ts-ignore
             if (jsb.saveImageData) {
                 //@ts-ignore
-                let success = jsb.saveImageData(this._buffer, width, height, filePath);
-                if (success) {
-                    // 用于测试图片是否正确保存到本地设备路径下
+                jsb.saveImageData(this._buffer, width, height, filePath).then(()=>{
                     assetManager.loadRemote<ImageAsset>(filePath, (err, imageAsset)=> {
                         if (err) {
                             console.log("show image error")
@@ -140,11 +138,10 @@ export class Screenshot2D extends Component {
                     });
                     log("save image data success, file: " + filePath);
                     this.tips.string = `成功保存在设备目录: ${filePath}`;
-                }
-                else {
+                }).catch(()=>{
                     error("save image data failed!");
                     this.tips.string = `保存图片失败`;
-                }
+                });
             }
         } else if (sys.platform === sys.Platform.WECHAT_GAME) {
             if (!this._canvas) {
