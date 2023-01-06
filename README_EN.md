@@ -182,11 +182,11 @@
   >
   > ![Image Text](https://forum.cocos.org/uploads/default/original/3X/e/b/ebe87bcf41c23c1b16884f40e3a0f10bacd38b8b.gif) 
   >
-  > 目前 3.0.0 ~ 3.6.0 版本还不支持 jsb.saveImageData , 引擎计划在 3.6.1 支持
+  > Currently, jsb.saveImageData is not supported in 3.0.0 ~ 3.6.0, and the engine plans to support it in 3.6.1.
   > 
-  > 提供一个在 3.6.1 版本之前可以使用 jsb.saveImageData 的方案 https://gitee.com/zzf2019/engine-native/commit/4af67e64a1caeb951016a9920efb7ee46d479ae5 ，目前此方案仅支持在 android 和 ios 上将 imageData 保存为本地 png 文件
+  > Provides a solution that can use jsb.saveImageData until version 3.6.1 https://gitee.com/zzf2019/engine-native/commit/4af67e64a1caeb951016a9920efb7ee46d479ae5, which currently solution only supports saving imageData as native png files on android and ios
 
-  > 更完善的支持请参考 3.6.1 上的 pr：https://github.com/cocos/cocos-engine/pull/12503/files
+  > For more complete support, please refer to pr on 3.6.1: https://github.com/cocos/cocos-engine/pull/12503/files
 
 
 *Technical support team provides*
