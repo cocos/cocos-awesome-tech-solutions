@@ -8,11 +8,12 @@
       "__id__": 1
     },
     "optimizationPolicy": 0,
-    "asyncLoadAssets": false
+    "asyncLoadAssets": false,
+    "persistent": false
   },
   {
     "__type__": "cc.Node",
-    "_name": "Pen",
+    "_name": "Erase",
     "_objFlags": 0,
     "_parent": null,
     "_children": [
@@ -917,7 +918,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 180,
+      "width": 210,
       "height": 37.8
     },
     "_anchorPoint": {
@@ -953,7 +954,7 @@
       "b": 0,
       "a": 255
     },
-    "_string": "调整笔触大小",
+    "_string": "调整橡皮擦大小",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 30,
@@ -1022,7 +1023,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "pen",
+    "_name": "erase",
     "_objFlags": 0,
     "_parent": {
       "__id__": 1
@@ -1081,7 +1082,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 26,
+      "width": 50,
       "height": 42
     },
     "_anchorPoint": {
@@ -1118,7 +1119,7 @@
       "a": 255
     },
     "_spriteFrame": {
-      "__uuid__": "be9d5f7c-2f5f-4c99-b53d-973f2e93435e@f9941",
+      "__uuid__": "de9cf7cf-1c90-46b0-8958-6336ba4e25c8@f9941",
       "__expectedType__": "cc.SpriteFrame"
     },
     "_type": 0,
