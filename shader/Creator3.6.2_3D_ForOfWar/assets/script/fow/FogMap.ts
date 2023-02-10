@@ -18,7 +18,7 @@ export class FogMap {
     {
         this.width = 100;
         this.height = 100;
-        this.beginPosition = new Vec3(-50, 0, -50);
+        this.beginPosition = new Vec3(0, 0, 0);
         this.maskTexture = new MaskTexture(this.width, this.height);
         
         if (Main._fogEffectType === GameEnum.FogMaskType.Circular) {

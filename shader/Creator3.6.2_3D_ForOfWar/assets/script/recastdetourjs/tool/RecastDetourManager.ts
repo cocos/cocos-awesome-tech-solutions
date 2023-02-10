@@ -8,6 +8,7 @@
 import {_decorator, Vec3, Node, Material, MeshRenderer, Line, Color, director, isValid, UIMeshRenderer, v3} from "cc";
 import { RecastConfig, RecastJSCrowd, RecastJSPlugin } from "../../navigation/recastJsPlugin";
 import { INavMeshParameters, IObstacle, OffMeshLinkConfig } from "../../navigation/INavigationEngine";
+import { Main } from "../../Main";
 
 const {ccclass, property} = _decorator;
 let CON_LINK_ID = 1000;
@@ -147,7 +148,7 @@ export default class RecastDetourManager{
         instance.debugMaterial = debugMaterial!;
         instance.debugLayer = debugLayer!;
         let navigationPlugin : RecastJSPlugin;
-        await new Promise(resolve => {
+        await new Promise<void>(resolve => {
             navigationPlugin = new RecastJSPlugin(()=>{
                 resolve();
             });
@@ -170,7 +171,11 @@ export default class RecastDetourManager{
         let scene = director.getScene()!;
         let crowd = this.navigationPlugin.createCrowd(100, 1, scene);
         this.crowd = crowd as RecastJSCrowd;
-        this.updateNavMeshDebug();
+        if (Main._debugMeshShow) this.updateNavMeshDebug();
+    }
+    
+    removeAllAgents() {
+        throw new Error("Method not implemented.");
     }
 
     updateNavMeshDebug(){

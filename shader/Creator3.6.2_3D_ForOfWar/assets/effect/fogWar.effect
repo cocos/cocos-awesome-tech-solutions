@@ -161,7 +161,7 @@ CCProgram sprite-fs %{
 
     vec3 col = mix(fog_color.rgb, vec3(1, 1, 1), tex.r * fog_color.a);
 
-    float visual = mix(tex.b, tex.g, 0.1);
+    float visual = mix(tex.b, tex.g, 0.3);
     col.rgb = mix(col.rgb, vec3(1, 1, 1), visual);
 
     o.rgb *= col.rgb;

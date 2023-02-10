@@ -1,0 +1,87 @@
+{
+  "__type__": "cc.Material",
+  "_name": "enemy",
+  "_objFlags": 0,
+  "_native": "",
+  "_effectAsset": {
+    "__uuid__": "cd9673d8-f9df-4ee3-a516-f580c9c76316",
+    "__expectedType__": "cc.EffectAsset"
+  },
+  "_techIdx": 0,
+  "_defines": [
+    {
+      "USE_ALBEDO_MAP": false,
+      "USE_METAL_SMOOTH_MAP": false,
+      "USE_NORMAL_MAP": false,
+      "USE_OCCLUSION_MAP": false,
+      "USE_EMISSIVE_MAP": false,
+      "USE_SMOOTH_CHANNEL": "0",
+      "USE_LIGHTMAP": false,
+      "HAS_SECOND_UV": false,
+      "USE_INSTANCING": true,
+      "USE_ALPHA_TEST": false
+    },
+    {
+      "USE_ALBEDO_MAP": false,
+      "USE_METAL_SMOOTH_MAP": false,
+      "USE_NORMAL_MAP": false,
+      "USE_OCCLUSION_MAP": false,
+      "USE_EMISSIVE_MAP": false,
+      "USE_SMOOTH_CHANNEL": "0",
+      "USE_LIGHTMAP": false,
+      "HAS_SECOND_UV": false,
+      "USE_INSTANCING": true,
+      "USE_ALPHA_TEST": false
+    },
+    {
+      "USE_ALBEDO_MAP": false,
+      "USE_METAL_SMOOTH_MAP": false,
+      "USE_NORMAL_MAP": false,
+      "USE_OCCLUSION_MAP": false,
+      "USE_EMISSIVE_MAP": false,
+      "USE_SMOOTH_CHANNEL": "0",
+      "USE_LIGHTMAP": false,
+      "HAS_SECOND_UV": false,
+      "USE_INSTANCING": true,
+      "USE_ALPHA_TEST": false
+    }
+  ],
+  "_states": [
+    {
+      "blendState": {
+        "targets": [
+          {}
+        ]
+      },
+      "depthStencilState": {},
+      "rasterizerState": {}
+    },
+    {},
+    {}
+  ],
+  "_props": [
+    {
+      "mainColor": {
+        "__type__": "cc.Color",
+        "r": 255,
+        "g": 0,
+        "b": 0,
+        "a": 255
+      },
+      "alphaThreshold": 0.5,
+      "smoothness": 0.5,
+      "metallic": 0,
+      "normalStrenth": 1,
+      "occlusion": 1,
+      "emissive": {
+        "__type__": "cc.Color",
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0
+      }
+    },
+    {},
+    {}
+  ]
+}

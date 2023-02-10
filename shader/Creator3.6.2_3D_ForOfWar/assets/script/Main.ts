@@ -22,6 +22,11 @@ export class Main extends Component {
     @property(Material)
     debugMaterial: Material = null!;
 
+    @property
+    debugMeshShow: boolean = false;
+
+    public static _debugMeshShow: boolean = false;
+
     fogMap: FogMap = null!;
 
     fieldData: FieldData = null!;
@@ -29,70 +34,24 @@ export class Main extends Component {
     @property({ type: Sprite, tooltip: "迷雾渲染器" })
     fogWar: Sprite = null!;
 
-    @property({ tooltip: "迷雾纹理宽度" })
-    fogTextureWidth: number = 960;
-
-    @property({ tooltip: "迷雾纹理长度" })
-    fogTextureHeight: number = 640;
-
-    @property(Node)
-
-    // @property({ tooltip: "迷雾区域宽度" })
-    // fogXSize: number = 0;
-
-    // @property({ tooltip: "迷雾区域高度" })
-    // fogZSize: number = 0;
-
-    // @property({ tooltip: "迷雾区域中心坐标" })
-    // centerPosition: Vec3 = new Vec3(0, 0, 0);
-
-    // @property
-    // heightRange: number = 0;
-
     public static _fogEffectType = GameEnum.FogMaskType.Circular;
 
     @property({ type: GameEnum.FogMaskType, tooltip: "迷雾蒙版类型" })
     fogEffectType = GameEnum.FogMaskType.Circular;
 
-    // @property({ tooltip: "战争迷雾颜色（RGB 迷雾颜色，Alpha 为已探索的区域透明度）" })
-    // fogColor: Color = new Color();
-
-    // @property({ tooltip: "模糊偏移量" })
-    // blurOffset: number = 0;
-
-    // @property({ tooltip: "模糊迭代次数" })
-    // blurInteration: number = 0;
-
-    private fogImageAsset: ImageAsset = null!;
-
-    private fogTexture: Texture2D = null!;
-    /**存储像素数据的内存块 */
-    private buffer: ArrayBuffer = null!;
-    /**颜色分量一维数组，供渲染使用 */
-    private pixelColor: Uint8Array = null!;
-
-    private radius = 5;
+    private radius = 3;
 
     private isFieldDataUpdated = false;
 
     private mixTime = 0;
     private refreshTime = 0;
 
-    private DeltaX = 0;
-    private DeltaZ = 0;
-    private invDeltaX = 0;
-    private invDeltaZ = 0;
-
     private dispearSpeed = 100;
     private refreshTextureSpeed = 10;
 
-    private mapPosition: Vec2 = new Vec2();
-    private beginPos: Vec3 = new Vec3();
-
-    private isFiledDatasUpdated: boolean = false;
-
     onLoad () {
         Main._fogEffectType = this.fogEffectType;
+        Main._debugMeshShow = this.debugMeshShow;
     }
 
     async start() {
@@ -100,7 +59,7 @@ export class Main extends Component {
 
         this.node.on(Node.EventType.TOUCH_END, this.onTouch, this);
 
-        let id = this.recastDetourManager.addAgents(new Vec3(0, 0, 0));
+        let id = this.recastDetourManager.addAgents(new Vec3(30, 0, 40));
 
         let comp = this.roleNode.getComponent(RenderableComponent)!;
         comp.unscheduleAllCallbacks();
@@ -113,14 +72,6 @@ export class Main extends Component {
     }
 
     init() {
-        // if (this.fogXSize <= 0 || this.fogZSize <=0 || this.fogTextureWidth <=0 || this.fogTextureHeight <= 0) {
-        //     return false;
-        // }
-        // this.DeltaX = this.fogXSize / this.fogTextureWidth;
-        // this.DeltaZ = this.fogZSize / this.fogTextureHeight;
-        // this.invDeltaX = 1.0 / this.DeltaX;
-        // this.invDeltaZ = 1.0 / this.DeltaZ;
-        // this.beginPos = this.centerPosition.subtract(new Vec3(this.fogXSize * 0.5, 0, this.fogZSize * 0.5));
         this.fogMap = new FogMap();
         this.fieldData = new FieldData(this.node.position, this.radius);
         this.fogWar.customMaterial?.setProperty('fowTexture', this.fogMap.getMaskTexture());
@@ -153,7 +104,6 @@ export class Main extends Component {
 
         if (this.fogMap) {
             let pos = this.fogMap.getPosition(this.roleNode.position);
-            this.mapPosition = pos;
             this.updateFog(deltaTime);
         }
 
@@ -190,11 +140,5 @@ export class Main extends Component {
             // this.setFogFade(this.mixTime);
         }
     }
-
-    // setFogFade(fade: number) {
-    //     if (fade < 1) {
-    //         this.fogWar.customMaterial?.setProperty('mixValue', fade);
-    //     }
-    // }
 
 }
