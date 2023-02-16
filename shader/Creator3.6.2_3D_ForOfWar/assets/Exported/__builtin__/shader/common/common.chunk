@@ -1,5 +1,0 @@
-
-float lerpOneTo(float b, float t) {
-    float oneMinusT = 1. - t;
-    return oneMinusT + b * t;
-}

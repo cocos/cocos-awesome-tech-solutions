@@ -1,4 +1,0 @@
-
-vec3 RGBE2Linear (vec4 rgbe) {
-    return rgbe.rgb * pow(1.1, rgbe.a * 255.0 - 128.0);
-}

@@ -1,0 +1,57 @@
+{
+  "ver": "2.3.1",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "8828c32d-e3d0-4a07-b8b3-37c84e189ce0",
+  "files": [],
+  "subMetas": {
+    "8e866": {
+      "importer": "gltf-mesh",
+      "uuid": "8828c32d-e3d0-4a07-b8b3-37c84e189ce0@8e866",
+      "displayName": "",
+      "id": "8e866",
+      "name": "Capsule.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "9d156": {
+      "importer": "gltf-scene",
+      "uuid": "8828c32d-e3d0-4a07-b8b3-37c84e189ce0@9d156",
+      "displayName": "",
+      "id": "9d156",
+      "name": "capsule.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "8828c32d-e3d0-4a07-b8b3-37c84e189ce0@9d156",
+    "assetFinder": {
+      "meshes": [
+        "8828c32d-e3d0-4a07-b8b3-37c84e189ce0@8e866"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "8828c32d-e3d0-4a07-b8b3-37c84e189ce0@9d156"
+      ]
+    }
+  }
+}
