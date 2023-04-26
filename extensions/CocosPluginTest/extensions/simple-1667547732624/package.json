@@ -10,7 +10,8 @@
     "devDependencies": {
         "@types/node": "^16.0.1",
         "@types/fs-extra": "^9.0.5",
-        "typescript": "^4.3.4"
+        "typescript": "^4.3.4",
+        "fs-extra": "^10.0.0"
     },
     "panels": {
         "default": {
@@ -112,6 +113,11 @@
                 "methods": [
                     "default.hello"
                 ]
+            },
+            "asset-db:asset-add": {
+                "methods": [
+                    "createPrefab"
+                ]
             }
         },
         "asset-db": {
@@ -166,19 +172,19 @@
             "editor": {
                 "foo": {
                     "default": 1,
-                    "label":"foo"
+                    "label": "foo"
                 },
                 "foo1": {
                     "default": 1,
-                    "label":"foo1"
+                    "label": "foo1"
                 },
                 "foo2": {
                     "default": false,
-                    "label":"foo2"
+                    "label": "foo2"
                 },
                 "foo3": {
                     "default": 0,
-                    "label":"foo3"
+                    "label": "foo3"
                 }
             }
         },
@@ -259,7 +265,9 @@
                     ]
                 }
             },
-            "laboratory": ["foo"]
+            "laboratory": [
+                "foo"
+            ]
         }
     },
     "author": "zhefeng.zhang",

@@ -3,6 +3,7 @@ import packageJSON from '../package.json';
 import { ExecuteSceneScriptMethodOptions } from '../@types/packages/scene/@types/public';
 import { join } from 'path';
 import { request } from 'http';
+const Fs = require('fs');
 module.paths.push(join(Editor.App.path, 'node_modules'));
 
 const options: ExecuteSceneScriptMethodOptions = {
@@ -25,6 +26,7 @@ export const methods: { [key: string]: (...any: any) => any } = {
     async queryNode () {
         const info = await Editor.Message.request('scene', 'query-node', "7c3e7fab-7b1e-4865-ba84-3cf81b48b9fb");
         console.warn(info);
+        
     },
     initData () {
         console.warn("The scene is already loaded");
@@ -44,6 +46,22 @@ export const methods: { [key: string]: (...any: any) => any } = {
     },
     async callEngineAPI() {
         const result = await Editor.Message.request('scene', 'execute-scene-script', options);
+    },
+    async createPrefab (assetUUID) {
+        var defaultPrefabInfo = await Editor.Message.request("asset-db", "query-asset-info", assetUUID);
+       if (defaultPrefabInfo?.importer === "gltf" || defaultPrefabInfo?.importer === "fbx") {
+            if (defaultPrefabInfo) {
+                for (var value in defaultPrefabInfo.subAssets) {
+                    if (defaultPrefabInfo.subAssets[value].type === "cc.Prefab") {
+                        var prefabInfo = defaultPrefabInfo.subAssets[value];
+                        var jsonUrl = prefabInfo.library[".json"];
+                        const sourceCode = Fs.readFileSync(jsonUrl, 'utf8');
+                        const info = await Editor.Message.request("asset-db", "create-asset", `db://assets/${defaultPrefabInfo.name}.prefab`, sourceCode, {overwrite: false, rename: true});
+                        await Editor.Message.request("asset-db", "open-asset", info!.uuid);
+                    }
+                }
+            }
+       }
     }
 };
 

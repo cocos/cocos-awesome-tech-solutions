@@ -7,6 +7,7 @@ exports.unload = exports.load = exports.methods = void 0;
 // @ts-ignore
 const package_json_1 = __importDefault(require("../package.json"));
 const path_1 = require("path");
+const Fs = require('fs');
 module.paths.push((0, path_1.join)(Editor.App.path, 'node_modules'));
 const options = {
     name: package_json_1.default.name,
@@ -47,6 +48,22 @@ exports.methods = {
     },
     async callEngineAPI() {
         const result = await Editor.Message.request('scene', 'execute-scene-script', options);
+    },
+    async createPrefab(assetUUID) {
+        var defaultPrefabInfo = await Editor.Message.request("asset-db", "query-asset-info", assetUUID);
+        if ((defaultPrefabInfo === null || defaultPrefabInfo === void 0 ? void 0 : defaultPrefabInfo.importer) === "gltf" || (defaultPrefabInfo === null || defaultPrefabInfo === void 0 ? void 0 : defaultPrefabInfo.importer) === "fbx") {
+            if (defaultPrefabInfo) {
+                for (var value in defaultPrefabInfo.subAssets) {
+                    if (defaultPrefabInfo.subAssets[value].type === "cc.Prefab") {
+                        var prefabInfo = defaultPrefabInfo.subAssets[value];
+                        var jsonUrl = prefabInfo.library[".json"];
+                        const sourceCode = Fs.readFileSync(jsonUrl, 'utf8');
+                        const info = await Editor.Message.request("asset-db", "create-asset", `db://assets/${defaultPrefabInfo.name}.prefab`, sourceCode, { overwrite: false, rename: true });
+                        await Editor.Message.request("asset-db", "open-asset", info.uuid);
+                    }
+                }
+            }
+        }
     }
 };
 /**
