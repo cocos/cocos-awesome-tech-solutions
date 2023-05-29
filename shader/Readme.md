@@ -83,3 +83,10 @@
   > 效果展示：
   >
   > ![Image Text](https://forum.cocos.org/uploads/default/original/3X/0/a/0a7a89395e55118d1c0e3233929e8cf84f6b08ef.gif)
+
+  - (v3.6.2) 2D EarthGlobe
+
+  ---
+  > 参考:https://www.lazyun.cn/Unity/67.html
+  >
+  

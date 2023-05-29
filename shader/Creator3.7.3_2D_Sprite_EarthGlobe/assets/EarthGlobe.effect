@@ -1,0 +1,155 @@
+// Copyright (c) 2017-2020 Xiamen Yaji Software Co., Ltd.
+CCEffect %{
+  techniques:
+  - passes:
+    - vert: sprite-vs:vert
+      frag: sprite-fs:frag
+      depthStencilState:
+        depthTest: false
+        depthWrite: false
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: src_alpha
+          blendDst: one_minus_src_alpha
+          blendDstAlpha: one_minus_src_alpha
+      rasterizerState:
+        cullMode: none
+      properties:
+        alphaThreshold: { value: 0.5 }
+        speed: { value: 0.5 }
+        inAngle: { value: 0.5 }
+        textureGlobe: { value: white, editor: { tooltip: "贴图"}}
+
+}%
+
+CCProgram sprite-vs %{
+  precision highp float;
+  #include <builtin/uniforms/cc-global>
+  #if USE_LOCAL
+    #include <builtin/uniforms/cc-local>
+  #endif
+
+  in vec3 a_position;
+  in vec2 a_texCoord;
+  in vec4 a_color;
+
+  out vec4 v_light;
+  out vec2 uv0;
+
+  #if TWO_COLORED
+    in vec4 a_color2;
+    out vec4 v_dark;
+  #endif
+
+  vec4 vert () {
+    vec4 pos = vec4(a_position, 1);
+
+    #if USE_LOCAL
+      pos = cc_matWorld * pos;
+    #endif
+
+    pos = cc_matViewProj * pos;
+
+    uv0 = a_texCoord;
+
+    v_light = a_color;
+    #if TWO_COLORED
+      v_dark = a_color2;
+    #endif
+
+    return pos;
+  }
+}%
+
+CCProgram sprite-fs %{
+  precision highp float;
+  #include <builtin/internal/alpha-test>
+  #include <builtin/uniforms/cc-global>
+  #include <common/math/transform>
+  #include <common/common-define>
+  #include <builtin/internal/embedded-alpha>
+
+  in vec4 v_light;
+  #if TWO_COLORED
+    in vec4 v_dark;
+  #endif
+  in vec2 uv0;
+  #pragma builtin(local)
+  layout(set = 2, binding = 12) uniform sampler2D cc_spriteTexture;
+
+  uniform sampler2D textureGlobe;
+
+  uniform ARGS {
+    float speed;
+    float inAngle;
+  };
+
+  vec4 frag () {
+
+    vec4 o = vec4(0, 0, 0, 0.0);
+
+    // // 将UV原点换到图片中央
+    // vec2 uv = uv0 - 0.5;
+    
+    // // 根据勾股定理计算 z = sqrt( r*r - (x*x + y*y ))
+    // vec3 pos = vec3(uv.x, uv.y, sqrt(0.25 - (uv.x * uv.x + uv.y * uv.y)));
+    
+    // // 将得到的点坐标转换到球面坐标系，得到phi角度并转到(-1,1)
+    // float p = atan2(pos.x, pos.z) * INV_PI;
+    
+    // // 结合 cc_time.x 和 输入参数转动速度
+    // vec2 suv = vec2(fract(p + (speed * cc_time.x)), uv0.y);
+    
+    // // 使用distance确定出圆的范围，结合smoothstep获得平滑的圆边缘
+    // if(sqrt( uv.x * uv.x + uv.y*uv.y)<0.5){
+    //   o = texture(textureGlobe, suv) * smoothstep(0.51, 0.49, distance(uv0.y, 0.5));
+    // }
+
+// -------------------------------------------
+
+    // 球的半径为UV范围的一半
+    float r = 0.5;
+    // 半径的平方
+    float rr = r * r;
+    
+    // 移动UV原点到画布中心
+    vec2 uv = uv0 - r;
+    
+    // 将角度转为弧度
+    float angle = radians(inAngle);
+
+    float x = uv.x;
+    float xx = x * x;
+    
+    // 根据勾股定理算出当前点在笛卡尔坐标相对x轴的距离
+    float le = sqrt(rr - xx);
+    
+    // 计算当前点所在YZ平面确定的圆上旋转角度
+    float angleY = asin(uv.y/le);
+
+    // 当前旋转角度加上给定的地轴旋转角度就是当前点的最终角度
+    // 根据该角度计算当前点的最终坐标
+    float y = sin(angleY + angle) * le;
+    float z = sqrt(rr - (xx + y * y));
+
+    // 当前点如果位于背面，因为地轴旋转导致显示出现的情况，则需要将z值反转
+    if(HALF_PI - angleY < angle){
+        z = -z;
+    }
+
+    // 将最终坐标转成球面坐标系，然后映射到UV的范围
+    float p = atan2(x, z) * INV_PI * 0.5;
+    float t = (asin(y / r) * INV_PI + 0.5);
+    
+    // 最终经过球面映射的UV
+    vec2 suv = vec2(fract(p  + (speed * cc_time.x)), t);
+    if(sqrt( uv.x * uv.x + uv.y*uv.y)<0.5){
+     o = CCSampleWithAlphaSeparated(textureGlobe, suv) * smoothstep(0.51, 0.49, distance(uv0.y, 0.5));
+    }
+   
+// -------------------------------------------
+    ALPHA_TEST(o);
+    return o;
+  }
+}%
