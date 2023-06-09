@@ -5,11 +5,11 @@
 ---
 *技术支持团队提供*
 
-* (v3.4.0) 2D 光照
+* (v3.6.0) 2D 光照
 
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_Light
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.6.x-release/demo/Creator3.6.0_2D_Light
   >
   > 素材来自: 
   >
@@ -38,11 +38,11 @@
 
 *技术支持团队提供*
 
-* (v3.4.0) spine 使用非图集纹理进行局部换装
+* (v3.6.0) spine 使用非图集纹理进行局部换装
 
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_spine_changeSlot_with_texture
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.6.x-release/demo/Creator3.6.0_2D_SpineChangeSlotWithTexture
   >
   > 素材来自: 
   > 
@@ -52,13 +52,13 @@
 
 
 
-*Gitee用户(skyxu123 随风)提供，由技术支持团队升级至3.4.0版本并补充功能*
+*Gitee用户(skyxu123 随风)提供，由技术支持团队升级至3.6.2版本并补充功能*
 
-* (v3.4.0) 画板
+* (v3.6.2) 画板
 
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_DrawingBoard
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.6.x-release/demo/Creator3.6.2_2D_DrawingBoard
   >
   > 素材来自: 
   >
@@ -91,13 +91,13 @@
 
 
 
-*Github用户(zhangyizhang)提供，由技术支持团队升级至3.4.0版本*
+*Github用户(zhangyizhang)提供，由技术支持团队升级至3.6.0版本*
 
-* (v3.4.0) 3D 寻路
+* (v3.6.2) 3D 寻路
 
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.0_3D_Navigation
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.6.x-release/demo/Creator3.6.2_3D_Navigation
   >
   > 素材来自: 
   >
@@ -115,17 +115,17 @@
   >
   > ![Image Text](https://forum.cocos.org/uploads/default/original/3X/8/9/8923769b5dcbb446f4c01f9f443dee9971188302.gif)
   >
-  > 需注意目前 3.4.x 版本引擎还不支持加载 obj 格式模型资源，所以需要使用第三方 DCC 工具重新导出成 fbx 方可使用。
+  > 需注意目前 3.6.x 版本引擎还不支持加载 obj 格式模型资源，所以需要使用第三方 DCC 工具重新导出成 fbx 方可使用。
 
 
 
-*Github用户(kirikayakazuto)提供，由技术支持团队升级至3.4.0版本*
+*Github用户(kirikayakazuto)提供，由技术支持团队升级至3.6.0版本*
 
-* (v3.4.0) 图片分割
+* (v3.6.0) 图片分割
 
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_SpriteSplit
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.6.x-release/demo/Creator3.6.0_2D_SpriteSplit
   >
   > 素材来自: 
   >
@@ -136,13 +136,13 @@
 
 
 
-*Github用户(shachaf、baibai2013、newGy、2van、waiter)提供，由技术支持团队升级至3.4.0版本*
+*Github用户(shachaf、baibai2013、newGy、2van、waiter)提供，由技术支持团队升级至 3.6.0 版本*
 
-* (v3.4.0) Gif图片资源加载
+* (v3.6.0) Gif图片资源加载
 
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_GifResourceLoading
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.6.x-release/demo/Creator3.6.0_2D_GifResourceLoading
   >
   > 素材来自: 
   >
@@ -172,16 +172,30 @@
 
 
 
+*技术支持团队提供*
+
+* （v3.6.2）区域截图、截图保存
+
+  > 工程 git 仓库地址: https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.6.x-release/demo/Creator3.6.2_PartialScreenshot
+  >
+  > ![Image Text](https://forum.cocos.org/uploads/default/original/3X/e/b/ebe87bcf41c23c1b16884f40e3a0f10bacd38b8b.gif) 
+  >
+  > 目前 3.0.0 ~ 3.6.0 版本还不支持 jsb.saveImageData , 引擎计划在 3.6.1 支持
+  > 
+  > 提供一个在 3.6.1 版本之前可以使用 jsb.saveImageData 的方案 https://gitee.com/zzf2019/engine-native/commit/4af67e64a1caeb951016a9920efb7ee46d479ae5 ，目前此方案仅支持在 android 和 ios 上将 imageData 保存为本地 png 文件
+
+  > 更完善的支持请参考 3.6.1 上的 pr：https://github.com/cocos/cocos-engine/pull/12503/files
+
 
 *技术支持团队提供*
 
-* (v3.4.0) 动画指定帧播放
+* (v3.6.0) 动画指定帧播放
 
   > **骨骼动画**
   >
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.0_3D_SkeletalAnimationSpecifiedFrame
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.6.x-release/demo/Creator3.6.0_3D_SkeletalAnimationSpecifiedFrame
   >
   > 素材来自: 
   >
@@ -193,7 +207,7 @@
   >
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_DragonBonesSpecifiedFrame
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.6.x-release/demo/Creator3.6.0_2D_DragonBonesSpecifiedFrame
   > 
   > ![Image Text](https://forum.cocos.org/uploads/default/optimized/3X/3/5/35d18d921f1130344f454ad2ad05a829fe7e2ba2_2_1034x678.gif)
   >
@@ -201,33 +215,19 @@
   >
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_SpineSpecifiedFrame
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.6.x-release/demo/Creator3.6.0_2D_SpineSpecifiedFrame
   > 
   > ![Image Text](https://forum.cocos.org/uploads/default/optimized/3X/0/d/0dc16cd4edb15b5e1ae36a413f943ed44b977dc9_2_1034x682.gif)
 
 
 
-*技术支持团队提供*
-
-* （v3.4.0）区域截图、截图保存
-
-  > 工程 git 仓库地址: https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.0_PartialScreenshot
-  >
-  > ![Image Text](https://forum.cocos.org/uploads/default/original/3X/e/b/ebe87bcf41c23c1b16884f40e3a0f10bacd38b8b.gif) 
-  >
-  > 备注: 目前 3.0.0 ~ 3.4.0 版本还不支持 jsb.saveImageData , 引擎计划在 3.5.0 支持, 要保存 imageData 为本地 png 文件需要参考下方的 pr 定制引擎 https://gitee.com/zzf2019/engine-native/commit/1ddb6ec9627a8320cd3545d353d8861da33282a8 （此 pr 只支持保存 png ，且只支持 ios、android）
-  > 
-  > 3.4.0 也还存在一个 readPixels 的 bug ，记得手动合并下 pr : https://github.com/cocos-creator/engine/pull/9900/files
-
-
-
 *网络游戏防沉迷实名认证系统 SDK 接入由 Github 用户(zihuyishi)提供，技术支持团队负责接入调试、实名认证客户端制作以及文档撰写*
 
-* (v3.4.0) 实名认证接入
+* (v3.6.0) 实名认证接入
 
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.0_RealNameAuthentication
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.6.x-release/demo/Creator3.6.0_RealNameAuthentication
   >
   > 素材来自: 
   >
@@ -241,11 +241,11 @@
 
 *技术支持团队提供*
 
-* (v3.4.0) 列表视图扩展
+* (v3.6.0) 列表视图扩展
 
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_ListViewExtension
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.6.x-release/demo/Creator3.6.0_2D_ListViewExtension
   >
   > ![Image Text](https://forum.cocos.org/uploads/default/original/3X/a/9/a99a9348a5bca7a104b1a1eea5acab0503db619a.gif)
   >
@@ -255,11 +255,11 @@
 
 *技术支持团队提供*
 
-* (v3.4.0) 3D 模型切割
+* (v3.6.0) 3D 模型切割
 
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.0_3D_MeshCutter
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.6.x-release/demo/Creator3.6.0_3D_MeshCutter
   >
   > 素材来自:
   >
@@ -278,13 +278,13 @@
 
 
 
-*Github用户(kirikayakazuto)提供，由技术支持团队升级至3.4.0版本*
+*Github用户(kirikayakazuto)提供，由技术支持团队升级至3.6.0版本*
 
-* (v3.4.0) 自定义形状遮罩
+* (v3.6.0) 自定义形状遮罩
 
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_Mask_Polygon
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.6.x-release/demo/Creator3.6.0_2D_Mask_Polygon
   >
   > 素材来自:
   >
@@ -296,11 +296,11 @@
 
 *技术支持团队提供*
 
-* (3.4.1) tween 执行贝塞尔运动以及运动变速
+* (3.6.0) tween 执行贝塞尔运动以及运动变速
 
   > 工程 git 仓库地址:
   >
-  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.0_GameTimeScale
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.6.x-release/demo/Creator3.6.0_GameTimeScale
   >
   > 素材来自:
   >
@@ -310,13 +310,13 @@
 
 
 
-*论坛用户(tuyazuo)提供，由技术支持团队升级至3.4.0版本*
+*论坛用户(tuyazuo)提供，由技术支持团队升级至3.6.2版本*
 
-* (v3.4.0) 横竖屏切换
+* (v3.6.2) 横竖屏切换
 
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.0_2D_ScreenSwitch
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.6.x-release/demo/Creator3.6.2_2D_ScreenSwitch
   >
   > Demo 来自: 
   >
@@ -327,13 +327,13 @@
   > 备注: 目前 3.0.0 ~ 3.4.1 版本在 ios 平台调用原生转屏功能后，点击位置会发生偏移，需要手动合并 pr: https://github.com/cocos-creator/engine-native/pull/4265, Demo 中有附带合并 pr 后的文件。
 
 
-*用户 **xjz1994** 提供开源方案，由技术支持团队升级至 3.4.1 版本*
+*用户 **xjz1994** 提供开源方案，由技术支持团队升级至 3.6.0 版本*
 
-* (v3.4.1) 四叉树碰撞优化
+* (v3.6.0) 四叉树碰撞优化
 
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.1_2D_QuadtreeCollision
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.6.x-release/demo/Creator3.6.0_2D_QuadtreeCollision
   >
   > Demo 来自: 
   >
@@ -341,43 +341,17 @@
   >
   > ![Image Text](https://forum.cocos.org/uploads/default/original/3X/3/e/3e2ee25fec90d566d76b2d7df63f593e6051f260.gif)
 
-*引擎团队 youyou 提供，技术支持团队升级项目*
-
-* (v3.4.2) raphael (Graphics 拓展和 SVG 加载)
-
-  > 工程 git 仓库地址: 
-  >
-  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.2_Raphael
-  >
-  > 需知：目前引擎有一处 bug，会导致 svg 场景渲染异常。详细问题描述可以看一下 [issues](https://github.com/cocos/cocos-engine/issues/10900)，解决问题的办法是参考下图中红色代码定制一下引擎：
-  >
-  > ![图片|549x500](https://forum.cocos.org/uploads/default/original/3X/7/3/7324f0b63f08a3d99ce3cc5b08360908fa541414.png) 
-
 *技术支持团队提供*
 
-* (v3.4.2) 模型动画残影效果（待定方案）
-
-  > 工程 git 仓库地址: 
-  >
-  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.2_3D_Model_Residual%20Shadows
-  >
-  > 效果展示：
-  >
-  >![Apr-29-2022 17-54-52|690x459, 75%](https://forum.cocos.org/uploads/default/original/3X/6/d/6dfe81d6b23bd950362b0685a456bb9addbc35cf.gif) 
-  >
-  > web 和 小游戏性能还可以，但是在原生平台上性能不好。
-
-*技术支持团队提供*
-
-* (v3.4.0) 3D 桌球联网同步
+* (v3.6.0) 3D 桌球联网同步
   > 工程仓库地址：
-  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.2_3D_NetworkBilliards
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.6.x-release/demo/Creator3.6.0_3D_NetworkBilliards
   >
   > 素材来自：
   >
   > https://sketchfab.com/search?features=downloadable&licenses=322a749bcfa841b29dff1e8a1bb74b0b&licenses=b9ddc40b93e34cdca1fc152f39b9f375&licenses=72360ff1740d419791934298b8b6d270&licenses=bbfe3f7dbcdd4122b966b85b9786a989&licenses=2628dbe5140a4e9592126c8df566c0b7&licenses=34b725081a6a4184957efaec2cb84ed3&licenses=7c23a1ba438d4306920229c12afcb5f9&licenses=783b685da9bf457d81e829fa283f3567&licenses=5b54cf13b1a4422ca439696eb152070d&q=Billiards&sort_by=-likeCount&type=models
   >
-  > 客户端：CocosCreator 3.4.2、服务端：Node.js、联网方式：WebSocket、服务器启动方式：项目文件夹下中执行命令行  cd AppServer，之后执行 node AppServer.js，看到输出 “Listen 8002” 即表示服务器启动正常。
+  > 客户端：CocosCreator 3.6.0、服务端：Node.js、联网方式：WebSocket、服务器启动方式：项目文件夹下中执行命令行  cd AppServer，之后执行 node AppServer.js，看到输出 “Listen 8002” 即表示服务器启动正常。
   >
   > 客户端启动方式：使用 Dashboard 导入本文件夹的工程，并测试。
   >
@@ -391,11 +365,11 @@
 
 *技术支持团队提供*
 
-* (v3.4.2) 检测模型是否具有第二套 UV 的插件
+* (v3.6.0) 检测模型是否具有第二套 UV 的插件
 
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.2_LightmapUV
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.6.x-release/demo/Creator3.6.0_LightmapUV
   >
   > 背景: 
   >
@@ -411,15 +385,40 @@
   >
   > ![2022042402|690x346](https://forum.cocos.org/uploads/default/original/3X/a/3/a3951f8fa963a75535650c43be84be60a098a0f5.png) 
 
+*引擎团队 youyou 提供，技术支持团队升级项目*
+
+* (v3.6.0) raphael (Graphics 拓展和 SVG 加载)
+
+  > 工程 git 仓库地址: 
+  >
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.6.x-release/demo/Creator3.6.0_Raphael
+  >
+  > 需知：目前引擎有一处 bug，会导致 svg 场景渲染异常。详细问题描述可以看一下 [issues](https://github.com/cocos/cocos-engine/issues/10900)，解决问题的办法是参考下图中红色代码定制一下引擎：
+  >
+  > ![图片|549x500](https://forum.cocos.org/uploads/default/original/3X/7/3/7324f0b63f08a3d99ce3cc5b08360908fa541414.png) 
+
+*技术支持团队提供*
+
+* (v3.6.0) 模型动画残影效果（待定方案）
+
+  > 工程 git 仓库地址: 
+  >
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.6.x-release/demo/Creator3.6.0_3D_Model_Residual%20Shadows
+  >
+  > 效果展示：
+  >
+  >![Apr-29-2022 17-54-52|690x459, 75%](https://forum.cocos.org/uploads/default/original/3X/6/d/6dfe81d6b23bd950362b0685a456bb9addbc35cf.gif) 
+  >
+  > web 和 小游戏性能还可以，但是在原生平台上性能不好。
 
 
 *技术支持团队提供*
 
-* (v3.4.2) 音视频倍数播放
+* (v3.6.2) 音视频倍数播放
 
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.2_MediaPlaybackRate
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.6.x-release/demo/Creator3.6.2_MediaPlaybackRate
   >
   > 素材来自:
   > 
@@ -436,29 +435,13 @@
 
 *技术支持团队提供*
 
-* (v3.4.2) 声网视频流渲染 SDK 接入
-  > 工程 git 仓库地址: 
-  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.2_AgoraMediaPlayer
-  >
-  > 效果演示
-  >
-  > ![agoraMediaPlayer_20220528 00_00_00-00_00_11|225x500](https://forum.cocos.org/uploads/default/original/3X/7/7/77a202b51d4cbc513680a5a8c74fc76898e3154e.gif) 
-  >
-  > 打开链接可查看测试视频：https://download.cocos.org/CocosTest/muxiandong/NoDelete/agoraMediaPlayer_20220528.mp4
-  >
-  > 需知：
-  >
-  > * 目前对接了 android 端。iOS 端 SDK 后续考虑接入。
-  >
-  > * 如果需要切换视频源，需要在 native/engine/common/Classes/MediaPlayer.cpp 的 MediaPlayer::open 接口，修改视频源，即可。
+*Github用户(kirikayakazuto)提供，由技术支持团队升级至3.6.0版本*
 
-*Github用户(kirikayakazuto)提供，由技术支持团队升级至3.5.0版本*
-
-* (v3.5.0) TiledMap 自动寻路
+* (v3.6.0) TiledMap 自动寻路
 
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.5.0_2D_TileMap_PathFinding
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.6.x-release/demo/Creator3.6.0_2D_TileMap_PathFinding
   >
   > 素材来源: 
   >
@@ -466,9 +449,9 @@
   >
   > ![2022042402|690x346](https://forum.cocos.org/uploads/default/original/3X/3/6/3683684ff16aa9204293f0d23eb380027880eddf.gif)
 
-*论坛用户 @jogi  提供，由技术支持团队升级至3.4.2 版本*
+*论坛用户 @jogi  提供，由技术支持团队升级至3.6.0 版本*
 
-* (v3.4.2) Spine 骨骼控制 
+* (v3.6.0) Spine 骨骼控制 
 
   > 工程 git 仓库地址: 
   >
@@ -480,13 +463,13 @@
   >
   > ![GIF|418x500](https://forum.cocos.org/uploads/default/original/3X/0/2/028d6012a4b343aa3cd8985754805afc8e652706.gif) 
 
-*Unity assetstore 用户 [Mario Haberle](https://assetstore.unity.com/publishers/20994) 提供，由技术支持团队升级将游戏移植至 3.4.1 版本*
+*Unity assetstore 用户 [Mario Haberle](https://assetstore.unity.com/publishers/20994) 提供，由技术支持团队升级将游戏移植至 3.6.2 版本*
 
-* (v3.4.1) FPS 单机射击模拟
+* (v3.6.2) FPS 单机射击模拟
 
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.1_3D_FPS_FirstPerson
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.6.x-release/demo/Creator3.6.2_3D_FPS_FirstPerson
   >
   > **游戏操作键位：W=前进、A=左移、S=后退、D=右移、shift + W=加速跑、C=下蹲、鼠标左键=射击、鼠标右键=瞄准、空格=跳跃、Q=肘击、R=换弹夹、鼠标滑轮=切枪**
   >
@@ -497,3 +480,39 @@
   > ![20220612_181524 00_00_20-00_00_30|640x360](https://forum.cocos.org/uploads/default/original/3X/c/7/c7291a456569e70b9900d41b88f5524dd8626ade.gif) 
   >
   > 详细测试视频：https://download.cocos.org/CocosTest/zhefengzhang/NoDelete/20220612_181524.mp4
+
+*内容研发团队提供，由技术支持团队修正一些游戏表现*
+
+* (v3.6.2) VideoTexture
+
+  > 工程 git 仓库地址: 
+  >
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.6.x-release/demo/Creator3.6.2_VideoTexture
+  >
+  > **因为 github 单文件上传大小有 100m 限制，所以自定义引擎部分需要打开链接 http://download.cocos.org/CocosTest/zhefengzhang/NoDelete/3.6.2-videoTexture-native-folder/native.zip 下载并解压到项目中**
+  >
+  > **Because there is a 100m limit on the size of a single file upload on github, you need to open the link http://download.cocos.org/CocosTest/zhefengzhang/NoDelete/3.6.2-videoTexture-native-folder/native.zip to download and unzip the custom engine part into the project**
+  >
+  > **不支持微信浏览器、微信小游戏**
+  > 除了常规的本地视频和远程视频外，原生平台还支持支持播放直播流。直播流测试链接：rtmp://mobliestream.c3tv.com:554/live/goodtv.sdp （注意把 MediaVieo 组件的 clip 设置为 null，否则不会使用 url 播放）
+  > ios 使用了硬解码，android 使用了软解码
+  > 
+  > 效果演示 - web
+  > ![web_videoPlayer|668x444](https://forum.cocos.org/uploads/default/original/3X/e/8/e8904d910ed29571a795312c7334b247ad72b559.gif)  
+  >
+  > 效果演示 - android
+  > ![android_texture|700x430](https://forum.cocos.org/uploads/default/original/3X/5/6/568c6df2d0258eff4c6a58313f1f0bb5a2865884.gif) 
+  >
+  > 效果演示 - ios
+  > ![7wcgm-vsl46|480x220](https://forum.cocos.org/uploads/default/original/3X/b/d/bd98170291567818544ade76d400386929917684.gif) 
+
+
+*由 cocos 论坛用户 @moli3663 提供，技术支持团队升级至 3.6.2*
+
+* (v3.6.0) 2D 物理浮力
+  > 工程仓库地址：
+   https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.6.x-release/demo/Creator3.6.0_2D_buoyancy
+  >
+  > 原帖地址：https://forum.cocos.org/t/topic/112948
+  > 
+  > 效果展示：![Sep-06-2022 11-35-27|690x457, 100%](https://forum.cocos.org/uploads/default/original/3X/9/8/98bb9aa7cc37760ac9ef8341f532d123a15c4805.gif) 

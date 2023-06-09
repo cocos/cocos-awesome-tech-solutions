@@ -103,13 +103,7 @@ export class Screenshot2D extends Component {
             this.canvas2image.saveAsPNG(this._canvas, width, height);
             this.tips.string = `保存图片成功`;
         } else if (sys.isNative) {
-            // console.log("原生平台暂不支持图片下载");
-            // return;
             let filePath = jsb.fileUtils.getWritablePath() + 'render_to_sprite_image.png';
-
-            // 目前 3.0.0 ~ 3.4.0 版本还不支持 jsb.saveImageData ,引擎计划在 3.5.0 支持, 要保存 imageData 为本地 png 文件需要参考下方的 pr 定制引擎
-            // https://gitee.com/zzf2019/engine-native/commit/1ddb6ec9627a8320cd3545d353d8861da33282a8
-
             //@ts-ignore
             if (jsb.saveImageData) {
                 //@ts-ignore
