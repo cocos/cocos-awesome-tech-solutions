@@ -371,7 +371,7 @@ export class MediaVideo extends Component {
      * 更新材质
      */
     protected _updateMaterial(): void {
-        let material = this.render.getMaterial(0);
+        let material = this.render.getMaterialInstance(0);
         if (material) {
             material.setProperty('texture0', this._texture0);
             switch (this._pixelFormat) {

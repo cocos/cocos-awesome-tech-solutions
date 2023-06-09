@@ -1,9 +1,10 @@
 {
-  "__version__": "1.0.5",
+  "__version__": "1.0.7",
   "modules": {
     "includeModules": [
       "2d",
       "3d",
+      "animation",
       "audio",
       "base",
       "dragon-bones",
@@ -17,6 +18,7 @@
       "physics-ammo",
       "primitive",
       "profiler",
+      "skeletal-animation",
       "spine",
       "terrain",
       "tiled-map",

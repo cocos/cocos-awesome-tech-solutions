@@ -27,9 +27,9 @@ export class NavAgent extends Component {
 
     nav_to_map (dst_wpos: any) {
         var src_wpos = this.node.getComponent(UITransform).convertToWorldSpaceAR(this.center);
-        console.log(src_wpos);
+        // console.log(src_wpos);
         this.road_set = this.game_map.astar_search(src_wpos, dst_wpos);
-        console.log(this.road_set);
+        // console.log(this.road_set);
         if(!this.road_set || this.road_set.length <= 1) {
            this.state = State.Idle;
            return;

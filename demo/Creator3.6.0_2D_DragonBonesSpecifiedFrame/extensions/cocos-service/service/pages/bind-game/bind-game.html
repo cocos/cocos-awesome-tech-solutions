@@ -1,0 +1,30 @@
+<popup-container :mw="300" @popup-close="handleClose">
+    <div class="section" style="margin-top: 10px;">
+        <div style="font-size: 24px; color: var(--color-normal-contrast-normal);">
+            <ui-label value="i18n:cocos-service.bind_appid"></ui-label>
+        </div>
+        <div style="margin-top: 10px;">
+            <ui-label value="i18n:cocos-service.bind_tips"></ui-label>
+        </div>
+    </div>
+    <!-- <div v-if="!isLogin" style='color:red;'>{{utils_t("nologin_tips")}}</div> -->
+    <div class="div-no-wrap">
+        <ui-select ref="select" class="large" style="width: calc(100% - 30px);" @confirm="handleSelectChange" :value="defaultSelected">
+            <option selected="selected" :value="defaultSelected">{{ tr('select_game_please') }}</option>
+            <template v-for="item in games">
+                <optgroup :label="item.type" v-if="item.list.length > 0">
+                    <option v-for="game of item.list" :value="game.app_id">{{ game.game_name }}</option>
+                </optgroup>
+            </template>
+        </ui-select>
+        <ui-button @click="handleRefreshGame" class="black" style="margin-top: 0px; height:26px; width:28px;">
+            <ui-icon value="refresh" style="margin: 1px 0px 0px -4px;"></ui-icon>
+        </ui-button>
+    </div>
+    <div style="text-align: right;">
+        <ui-button @click="handleBindGame" style="width:100px; margin-top:15px;" class="blue"><ui-label value="i18n:cocos-service.associate"></ui-label></ui-button>
+    </div>
+    <div @click="handleCreateGame" style="text-align:right; height:28px; line-height:28px; overflow:hidden; margin-top:10px; cursor: pointer;">
+        <ui-label value="i18n:cocos-service.create_game"></ui-label><ui-icon value="link"></ui-icon>
+    </div>
+</popup-container>

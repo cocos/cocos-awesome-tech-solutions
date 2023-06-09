@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, find, SystemEventType, Graphics, Vec2, Touch, PhysicsSystem2D, ERaycast2DType, RaycastResult2D, Intersection2D, director, RigidBody2D, PolygonCollider2D, Vec3, EPhysics2DDrawFlags } from 'cc';
+import { _decorator, Component, Node, find, Graphics, Vec2, Touch, PhysicsSystem2D, ERaycast2DType, RaycastResult2D, Intersection2D, director, RigidBody2D, PolygonCollider2D, Vec3, EPhysics2DDrawFlags } from 'cc';
 const { ccclass, type } = _decorator;
 
 // http://www.emanueleferonato.com/2011/08/05/slicing-splitting-and-cutting-objects-with-box2d-part-4-using-real-graphics/
@@ -40,9 +40,9 @@ export class CuttingObjects extends Component {
     results: RaycastResult2D[] = []
 
     start () {
-        this.node.on(SystemEventType.TOUCH_START, this.onTouchStart, this);
-        this.node.on(SystemEventType.TOUCH_END, this.onTouchEnd, this);
-        this.node.on(SystemEventType.TOUCH_MOVE, this.onTouchMove, this);
+        this.node.on(Node.EventType.TOUCH_START, this.onTouchStart, this);
+        this.node.on(Node.EventType.TOUCH_END, this.onTouchEnd, this);
+        this.node.on(Node.EventType.TOUCH_MOVE, this.onTouchMove, this);
 
         this.ctx.node.worldPosition = Vec3.ZERO;
     }

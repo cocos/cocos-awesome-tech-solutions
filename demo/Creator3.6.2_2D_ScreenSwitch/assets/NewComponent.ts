@@ -58,7 +58,10 @@ export class NewComponent extends Component {
             view.setDesignResolutionSize(1280, 720, ResolutionPolicy.FIXED_WIDTH);
 
         }
-
+        // 手机浏览器切换
+        if (sys.platform == sys.Platform.MOBILE_BROWSER) {
+            window.dispatchEvent(new Event('resize'));
+        }
 
     }
 

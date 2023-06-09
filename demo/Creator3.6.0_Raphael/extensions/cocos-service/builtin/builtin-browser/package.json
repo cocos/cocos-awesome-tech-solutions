@@ -1,0 +1,13 @@
+{
+    "name": "builtin-browser",
+    "version": "3.0.0",
+    "author": "mx2913@qq.com",
+    "contents": {
+        "popup": {
+            "main": "./popup/popup.js",
+            "title": "标题测试",
+            "height": 300,
+            "width": 400
+        }
+    }
+}

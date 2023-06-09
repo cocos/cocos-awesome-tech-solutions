@@ -1,5 +1,5 @@
 {
-  "ver": "2.1.10",
+  "ver": "2.3.4",
   "importer": "fbx",
   "imported": true,
   "uuid": "d61e0754-1f2a-4f4f-8b06-9f39b709ea7a",
@@ -50,13 +50,16 @@
       "skeletons": [],
       "textures": [],
       "materials": [
-        "5953632f-a07e-4313-8b54-3fdd9e64419e"
+        "6ff41fc1-4b74-4565-8462-2e2f141310eb"
       ],
       "scenes": [
         "d61e0754-1f2a-4f4f-8b06-9f39b709ea7a@bdc76"
       ]
     },
     "dumpMaterials": true,
-    "materialDumpDir": "db://assets/models/lemon/Materials_Lemon"
+    "materialDumpDir": "db://assets/models/lemon/Materials_Lemon",
+    "fbx": {
+      "smartMaterialEnabled": false
+    }
   }
 }

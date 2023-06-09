@@ -1,11 +1,11 @@
 {
-  "ver": "1.0.22",
+  "ver": "1.0.25",
   "importer": "image",
   "imported": true,
   "uuid": "918eab94-e349-4954-9f92-25cd383008a9",
   "files": [
-    ".png",
-    ".json"
+    ".json",
+    ".png"
   ],
   "subMetas": {
     "Triangle40": {
@@ -42,7 +42,7 @@
       "displayName": "Triangle40",
       "id": "6c48a",
       "name": "texture",
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -56,7 +56,8 @@
         "mipfilter": "none",
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "918eab94-e349-4954-9f92-25cd383008a9"
+        "imageUuidOrDatabaseUri": "918eab94-e349-4954-9f92-25cd383008a9",
+        "visible": false
       }
     },
     "f9941": {
@@ -65,7 +66,7 @@
       "displayName": "Triangle40",
       "id": "f9941",
       "name": "spriteFrame",
-      "ver": "1.0.9",
+      "ver": "1.0.11",
       "imported": true,
       "files": [
         ".json"
@@ -90,13 +91,72 @@
         "isUuid": true,
         "imageUuidOrDatabaseUri": "918eab94-e349-4954-9f92-25cd383008a9@6c48a",
         "atlasUuid": "",
-        "packable": true
+        "packable": true,
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [
+            -20,
+            -20,
+            0,
+            20,
+            -20,
+            0,
+            -20,
+            20,
+            0,
+            20,
+            20,
+            0
+          ],
+          "indexes": [
+            0,
+            1,
+            2,
+            2,
+            1,
+            3
+          ],
+          "uv": [
+            0,
+            40,
+            40,
+            40,
+            0,
+            0,
+            40,
+            0
+          ],
+          "nuv": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "minPos": [
+            -20,
+            -20,
+            0
+          ],
+          "maxPos": [
+            20,
+            20,
+            0
+          ]
+        }
       }
     }
   },
   "userData": {
     "hasAlpha": true,
     "type": "sprite-frame",
-    "redirect": "918eab94-e349-4954-9f92-25cd383008a9@f9941"
+    "redirect": "918eab94-e349-4954-9f92-25cd383008a9@f9941",
+    "fixAlphaTransparencyArtifacts": false
   }
 }

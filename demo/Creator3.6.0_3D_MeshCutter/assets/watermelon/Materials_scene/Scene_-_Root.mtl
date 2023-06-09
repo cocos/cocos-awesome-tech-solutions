@@ -48,7 +48,8 @@
         "__uuid__": "4d15c433-a03e-4e66-88e8-118be247b84b@0089c",
         "__expectedType__": "cc.Texture2D"
       },
-      "normalStrenth": 1
+      "normalStrenth": 1,
+      "normalStrength": 1
     }
   ]
 }

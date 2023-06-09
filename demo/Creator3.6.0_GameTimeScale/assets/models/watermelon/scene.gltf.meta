@@ -1,5 +1,5 @@
 {
-  "ver": "2.1.10",
+  "ver": "2.3.4",
   "importer": "gltf",
   "imported": true,
   "uuid": "4d15c433-a03e-4e66-88e8-118be247b84b",
@@ -38,7 +38,7 @@
         "isUuid": false,
         "imageUuidOrDatabaseUri": "db://assets/models/watermelon/textures/Scene_-_Root_baseColor.png"
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -61,7 +61,7 @@
         "isUuid": false,
         "imageUuidOrDatabaseUri": "db://assets/models/watermelon/textures/Scene_-_Root_metallicRoughness.png"
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -84,7 +84,7 @@
         "isUuid": false,
         "imageUuidOrDatabaseUri": "db://assets/models/watermelon/textures/Scene_-_Root_normal.png"
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -133,7 +133,7 @@
         "4d15c433-a03e-4e66-88e8-118be247b84b@0089c"
       ],
       "materials": [
-        "db7ebd97-7de5-489c-8142-1d042a901948"
+        "17b1581c-3394-4619-9215-d59666face1c"
       ],
       "scenes": [
         "4d15c433-a03e-4e66-88e8-118be247b84b@d1932"

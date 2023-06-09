@@ -11,14 +11,14 @@
  * are sure there is no conflict
  */
 
-import { _decorator, Node, director, Director, game, BaseNode, Canvas, Camera } from 'cc';
+import { _decorator, Node, director, Director, Canvas, Camera } from 'cc';
 import { EDITOR } from 'cc/env';
 
 const customLayerMask = 0x000fffff;
 const builtinLayerMask = 0xfff00000;
 
 director.on(Director.EVENT_AFTER_SCENE_LAUNCH, () => {
-    const roots = director.getScene()?.children as BaseNode[];
+    const roots = director.getScene()?.children as Node[];
     let allCanvases = director.getScene()?.getComponentsInChildren(Canvas) as Canvas[];
     if (allCanvases.length <= 1) return;
     allCanvases = allCanvases.filter(x => !!x.cameraComponent);
@@ -30,7 +30,8 @@ director.on(Director.EVENT_AFTER_SCENE_LAUNCH, () => {
     const persistCanvas: Canvas[] = [];
     for (let i = 0, l = roots.length; i < l; i++) {
         const root = roots[i];
-        if (!game.isPersistRootNode(root)) continue;
+        
+        if (!director.isPersistRootNode(root)) continue;
         const canvases = root.getComponentsInChildren(Canvas);
         if (canvases.length === 0) continue;
         persistCanvas.push(...canvases.filter(x => !!x.cameraComponent));

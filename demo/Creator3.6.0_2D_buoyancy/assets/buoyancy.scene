@@ -1,7 +1,7 @@
 [
   {
     "__type__": "cc.SceneAsset",
-    "_name": "",
+    "_name": "buoyancy",
     "_objFlags": 0,
     "_native": "",
     "scene": {
@@ -180,7 +180,7 @@
     "_priority": -1,
     "_fov": 60,
     "_fovAxis": 0,
-    "_orthoHeight": 321.4050493962678,
+    "_orthoHeight": 320,
     "_near": 1,
     "_far": 4096,
     "_color": {

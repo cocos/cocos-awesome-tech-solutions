@@ -4,7 +4,7 @@
 @date 2021/3/31
 @desc
 **/
-import {_decorator,systemEvent, Touch, Node,Component, geometry, math, Camera, Material, NodePool, Vec3, v3, EventKeyboard, macro, resources, Toggle, Asset, MeshRenderer, RenderableComponent, Vec2, instantiate, SystemEventType} from 'cc';
+import {_decorator, Touch, Node,Component, geometry, math, Camera, Material, NodePool, Vec3, v3, EventKeyboard, macro, resources, Toggle, Asset, MeshRenderer, RenderableComponent, Vec2, instantiate, input, Input, KeyCode} from 'cc';
 import RecastDetourManager from "./recastdetourjs/tool/RecastDetourManager";
 import {IObstacle} from "./navigation/INavigationEngine";
 import {RecastJSPlugin} from "./navigation/recastJsPlugin";
@@ -46,8 +46,8 @@ export class Test extends Component {
 
         this.node.on(Node.EventType.TOUCH_END,this.onTouch,this);
         this.node.on(Node.EventType.TOUCH_MOVE,this.onMove,this);
-        systemEvent.on(SystemEventType.KEY_DOWN, this.onKeyDown,this);
-        systemEvent.on(SystemEventType.KEY_UP,this.onKeyUp,this);
+        input.on(Input.EventType.KEY_DOWN, this.onKeyDown,this);
+        input.on(Input.EventType.KEY_UP,this.onKeyUp,this);
         this.cylinderObstaclePool = new NodePool();
         this.boxObstaclePool = new NodePool();
         //this.node.children[0].active = false;
@@ -59,12 +59,12 @@ export class Test extends Component {
 
     onKeyDown(event : EventKeyboard){
         switch (event.keyCode) {
-            case macro.KEY.w:
-            case macro.KEY.s:
+            case KeyCode.KEY_W:
+            case KeyCode.KEY_S:
                 this.yKey = event.keyCode;
                 break;
-            case macro.KEY.a:
-            case macro.KEY.d:
+            case KeyCode.KEY_A:
+            case KeyCode.KEY_D:
                 this.xKey = event.keyCode;
                 break;
         }

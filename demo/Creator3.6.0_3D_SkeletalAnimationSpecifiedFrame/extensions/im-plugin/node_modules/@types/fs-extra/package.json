@@ -1,0 +1,67 @@
+{
+    "name": "@types/fs-extra",
+    "version": "9.0.12",
+    "description": "TypeScript definitions for fs-extra",
+    "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/fs-extra",
+    "license": "MIT",
+    "contributors": [
+        {
+            "name": "Alan Agius",
+            "url": "https://github.com/alan-agius4",
+            "githubUsername": "alan-agius4"
+        },
+        {
+            "name": "midknight41",
+            "url": "https://github.com/midknight41",
+            "githubUsername": "midknight41"
+        },
+        {
+            "name": "Brendan Forster",
+            "url": "https://github.com/shiftkey",
+            "githubUsername": "shiftkey"
+        },
+        {
+            "name": "Mees van Dijk",
+            "url": "https://github.com/mees-",
+            "githubUsername": "mees-"
+        },
+        {
+            "name": "Justin Rockwood",
+            "url": "https://github.com/jrockwood",
+            "githubUsername": "jrockwood"
+        },
+        {
+            "name": "Sang Dang",
+            "url": "https://github.com/sangdth",
+            "githubUsername": "sangdth"
+        },
+        {
+            "name": "Florian Keller",
+            "url": "https://github.com/ffflorian",
+            "githubUsername": "ffflorian"
+        },
+        {
+            "name": "Piotr Błażejewicz",
+            "url": "https://github.com/peterblazejewicz",
+            "githubUsername": "peterblazejewicz"
+        },
+        {
+            "name": "Tiger Oakes",
+            "url": "https://github.com/NotWoods",
+            "githubUsername": "NotWoods"
+        }
+    ],
+    "main": "",
+    "types": "index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+        "directory": "types/fs-extra"
+    },
+    "scripts": {},
+    "dependencies": {
+        "@types/node": "*"
+    },
+    "typesPublisherContentHash": "9bc4fb8dfda235a6c4103ad110f7a7dab7244633116bfa15b3dfa2c91cef0f39",
+    "typeScriptVersion": "3.9"
+}

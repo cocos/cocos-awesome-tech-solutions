@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, Vec2, Vec3, Mat4, systemEvent, SystemEventType, Touch, CameraComponent, geometry, PhysicsSystem, ModelComponent, instantiate, utils, ColliderComponent, BoxColliderComponent, MeshColliderComponent, RigidBodyComponent, MeshRenderer, Mesh, assetManager, resources, Material } from 'cc';
+import { _decorator, Component, Node, Vec3, Mat4, CameraComponent, geometry, PhysicsSystem, utils, ColliderComponent, BoxColliderComponent, MeshColliderComponent, RigidBodyComponent, MeshRenderer, Mesh, assetManager, resources, Material, input, Input, EventTouch } from 'cc';
 import { FastHull } from './FastHull'
 
 const { ccclass, property } = _decorator;
@@ -29,11 +29,11 @@ export class TouchSplit extends Component {
         this.startPos = new Vec3(0, 0, 0);
         this.endPos = new Vec3(0, 0, 0);
 
-        systemEvent.on(SystemEventType.TOUCH_START, this.onTouchStart, this);
-        systemEvent.on(SystemEventType.TOUCH_END, this.onTouchEnd, this);
+        input.on(Input.EventType.TOUCH_START, this.onTouchStart, this);
+        input.on(Input.EventType.TOUCH_END, this.onTouchEnd, this);
     }
 
-    onTouchStart(touch: Touch) {
+    onTouchStart(touch: EventTouch) {
 
         this.near = this.cameraCom.near;
 
@@ -42,7 +42,7 @@ export class TouchSplit extends Component {
         this.started = true;
     }
 
-    onTouchEnd(touch: Touch) {
+    onTouchEnd(touch: EventTouch) {
 
         if (!this.started) return;
 
@@ -62,7 +62,7 @@ export class TouchSplit extends Component {
             if (this.physicsSystem.raycast(ray)) {
                 let results = this.physicsSystem.raycastResults;
                 results.forEach((result) => {
-                    let splitPlane = geometry.plane.fromNormalAndPoint(new geometry.plane(), Vec3.cross(new Vec3(), line, ray.d).normalize(), result.hitPoint);
+                    let splitPlane = geometry.Plane.fromNormalAndPoint(new geometry.Plane(), Vec3.cross(new Vec3(), line, ray.d).normalize(), result.hitPoint);
                     let splitNode = result.collider.node;
                     let splitMesh = { splitNode: splitNode, plane: splitPlane };
 
@@ -79,7 +79,7 @@ export class TouchSplit extends Component {
 
     }
 
-    splitMesh(splitNode: Node, plane: geometry.plane) {
+    splitMesh(splitNode: Node, plane: geometry.Plane) {
         let meshRender = splitNode.getComponent(MeshRenderer);
         let modelMesh = meshRender?.mesh as Mesh;
 
@@ -104,7 +104,7 @@ export class TouchSplit extends Component {
         let hullArray = hull.Split(localPoint, localNormal, true);
 
         hullArray.forEach((meshData, index) => {
-            let mesh = utils.createMesh(meshData, new Mesh(), { calculateBounds: true });;
+            let mesh = utils.MeshUtils.createMesh(meshData, new Mesh(), { calculateBounds: true });;
             let node = new Node();
             let model = node.addComponent(MeshRenderer);
 

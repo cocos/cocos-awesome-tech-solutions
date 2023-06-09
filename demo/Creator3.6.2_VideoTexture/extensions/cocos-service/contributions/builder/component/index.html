@@ -1,0 +1,58 @@
+<div id="cocos-service-builder" v-if="refresh">
+    <ui-prop>
+        <ui-label slot="label" i18n value="cocos-service.builder.config_set.service_config_set"></ui-label>
+        <div slot="content" class="ui-prop-content">
+            
+            <ui-select @confirm="config_id = $event.target.value" :value="configs.length !== 0 ? config_id : 'not_used_service'">
+                <option v-if="configs.length === 0" value="not_used_service" selected> {{ tr('builder.not_used_service') }} </option>
+                <template v-for="config in configs">
+                    <option :key="config.config_id" :value="config.config_id" :selected="config.config_id === config_id"> {{ config.config_name }} </option>
+                </template>
+            </ui-select>
+            <div class="service-list-container">
+                <div class="service-list-content">
+                    <template v-for="srv in enableServices">
+                        <ui-checkbox class="service-list-item" :key="srv.service_id" value="true" readonly> {{ srv.service_name }} </ui-checkbox>
+                    </template>
+                </div>
+                <div v-if="configs.length === 0">{{ tr('builder.use_service_tips') }}</div>
+                <div class="service-list-tips">
+                    <span>{{ serviceTips }}</span>
+                    <span class="text-underline" :style="goToStyle" @click="handleGotoService">{{ tr('builder.goto_service') }}</span>
+                </div>
+            </div>
+        </div>
+    </ui-prop>
+    <ui-prop>
+        <ui-label slot="label" value="Cocos Analytics"></ui-label>
+        <div slot="content" class="ui-prop-content div-no-wrap layout-left">
+            <ui-checkbox ref="enableAnalytics" @confirm="handleEnableAnalytics" :value="showAnalyticsProtocol"></ui-checkbox>
+            <div v-if="showAnalyticsProtocol" style="margin-top: 1px;" v-html="tr('builder.analytics_protocol')" @click="handleTplEvent"></div>
+        </div>
+    </ui-prop>
+    <ui-prop v-if="showSDKHub && supportSDKHub">
+        <ui-label slot="label" i18n value="cocos-service.builder.config_set.sdkhub_config_set"></ui-label>
+        <div slot="content" class="ui-prop-content">
+            <ui-select @confirm="sdkhub_config_id = $event.target.value" :value="sdkhub_config_id">
+                <template v-for="conf in sdkHubConfigs">
+                    <option :key="conf.id" :value="conf.id" :selected="conf.id === sdkhub_config_id"> {{ conf.name }} </option>
+                </template>
+            </ui-select>
+            <table v-if="showSDKHubPlugins">
+                <tr>
+                    <td>{{ tr("builder.sdkhub.plugin_name") }}</td>
+                    <td style="width: 90px;">{{ tr("builder.sdkhub.plugin_version") }}</td>
+                    <td style="width: 90px;">{{ tr("builder.sdkhub.plugin_param") }}</td>
+                </tr>
+                <tr v-for="plugin in sdkHubConfig.plugins" :key="plugin.pId" class="param-hover">
+                    <td>{{plugin.pName}} {{ getTypeStr(plugin.pUseType) }}</td>
+                    <td style="width: 90px;"> <div> {{ plugin.pVersion }}</div></td>
+                    <td style="width: 90px;">
+                        <div v-if="plugin.hasParam">{{ tr("builder.sdkhub.param_configured") }}</div>
+                        <div v-else style="color: #E64646;">{{ tr("builder.sdkhub.param_not_configured") }}</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </ui-prop>
+</div>

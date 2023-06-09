@@ -1,0 +1,5 @@
+{
+  "presets": [
+    ["@forrestjs/babel-preset-package", { "browser": true }]
+  ]
+}

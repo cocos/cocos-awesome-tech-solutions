@@ -1,6 +1,6 @@
 {
   "game": {
-    "name": "UNKNOW GAME",
+    "name": "未知游戏",
     "app_id": "UNKNOW",
     "c_id": "0"
   },
@@ -18,5 +18,6 @@
       "config_remarks": "",
       "services": []
     }
-  ]
+  ],
+  "__version__": "3.0.5"
 }

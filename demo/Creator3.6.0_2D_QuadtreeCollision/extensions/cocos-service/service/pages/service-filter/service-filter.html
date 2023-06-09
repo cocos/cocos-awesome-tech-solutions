@@ -1,0 +1,25 @@
+<div class="pop-mask" style="background-color: #00000000;" ref="mask" @click="handleClose">
+    <div class="filter-container" style="width: 205px; padding: 10px;" @click="$event.stopPropagation()" v-if="refresh">
+        <!-- status -->
+        <div>
+            <div style="font-size: 16px; margin: 10px 0px;" class="section">{{ tr("filter.enable_status") }}</div>
+            <ui-button class="filter-button" :pressed="status === 0" @click="handleStatusClick" status="0" style="margin-right: 5px;">{{ tr("filter.all") }}</ui-button>
+            <ui-button class="filter-button" :pressed="status === 1" @click="handleStatusClick" status="1" style="margin-right: 5px;">{{ tr("filter.enable") }}</ui-button>
+            <ui-button class="filter-button" :pressed="status === 2" @click="handleStatusClick" status="2" style="margin-right: 5px;">{{ tr("filter.disable") }}</ui-button>
+        </div>
+        <!-- platform -->
+        <div style="font-size: 16px; margin: 10px 0px;" class="section">{{ tr("filter.platform") }}</div>
+        <div class="filter-platform">
+            <ui-button v-for="platform in platforms" 
+                :pressed="platformSet.has(platform)"
+                @click="handlePlatformClick" 
+                :key="platform" 
+                class="filter-button" 
+                style="margin-right: 5px; margin-bottom: 10px;">{{ platform }}</ui-button>
+        </div>
+        <div class="wrapper layout horizontal around-justified" id='bottom-button' style="margin: 10px 0px 4px 0px" >
+            <ui-button @click="handleConfirm" class="blue" style="width:80px; white-space: nowrap;">{{ tr("btn_ok") }}</ui-button>
+            <ui-button @click="handleClose" class="gray" style="width:80px; white-space: nowrap;">{{ tr("btn_cancel") }}</ui-button>
+        </div>
+    </div>
+</div>

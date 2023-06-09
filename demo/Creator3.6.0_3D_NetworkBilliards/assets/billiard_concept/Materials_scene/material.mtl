@@ -40,11 +40,10 @@
       },
       "occlusion": 0,
       "emissiveScale": {
-        "__type__": "cc.Vec4",
+        "__type__": "cc.Vec3",
         "x": 0,
         "y": 0,
-        "z": 0,
-        "w": 1
+        "z": 0
       },
       "normalStrength": 1
     }

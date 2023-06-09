@@ -1,0 +1,8 @@
+<div class="pop-mask" @click="$emit('popup-close')">
+    <div class="popup-rectangle" :style="rectangleStyle" @click="$event.stopPropagation();">
+        <ui-icon v-if='closed' value="close" class="icon-close" @click="$emit('popup-close')"></ui-icon>
+        <div v-if="html.length !== 0" v-html="html"></div>
+        <service-panel v-else-if="src.length !== 0" :src="src" :pdata="pdata"></service-panel>
+        <div v-else id="main-container"><slot></slot></div>
+    </div>
+</div>

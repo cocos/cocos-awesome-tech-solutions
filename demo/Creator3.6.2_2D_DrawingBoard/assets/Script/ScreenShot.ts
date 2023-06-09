@@ -113,6 +113,9 @@ export class ScreenShot extends Component {
     }
 
     saveAsImage (width: number, height: number, arrayBuffer: ArrayBufferView | number[]) {
+        width = Math.ceil(width);
+        height = Math.ceil(height);
+
         if (sys.isBrowser) {
             if (!this._canvas) {
                 this._canvas = document.createElement('canvas');
@@ -181,7 +184,7 @@ export class ScreenShot extends Component {
                     // @ts-ignore
                     wx.showToast({ title: "截图成功" });
                     // @ts-ignore
-                    wx.saveImageToPhotoaAlbum({
+                    wx.saveImageToPhotosAlbum({
                         filePath: res.tempFilePath,
                         success: function (res) {
                             // @ts-ignore

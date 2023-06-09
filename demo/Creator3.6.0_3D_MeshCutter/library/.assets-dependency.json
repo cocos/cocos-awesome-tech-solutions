@@ -1,0 +1,102 @@
+{
+  "uuid": {
+    "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\materials\\Banana_PBR.mtl": [
+      "a3cd009f-0ab0-420d-9278-b9fdab939bbc"
+    ],
+    "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\materials\\Corset_O.mtl": [
+      "a3cd009f-0ab0-420d-9278-b9fdab939bbc"
+    ],
+    "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\materials\\Lemon PBR.mtl": [
+      "a3cd009f-0ab0-420d-9278-b9fdab939bbc"
+    ],
+    "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\materials\\Material.001.mtl": [
+      "a3cd009f-0ab0-420d-9278-b9fdab939bbc"
+    ],
+    "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\materials\\material.mtl": [
+      "a3cd009f-0ab0-420d-9278-b9fdab939bbc"
+    ],
+    "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\materials\\Mushroom_PBR.mtl": [
+      "1baf0fc9-befa-459c-8bdd-af1a450a0319"
+    ],
+    "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\materials\\orange.mtl": [
+      "a3cd009f-0ab0-420d-9278-b9fdab939bbc"
+    ],
+    "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\materials\\watermelon.mtl": [
+      "a3cd009f-0ab0-420d-9278-b9fdab939bbc"
+    ],
+    "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\banana_game_ready__2k_pbr\\Materials_scene\\Banana_PBR.mtl": [
+      "1baf0fc9-befa-459c-8bdd-af1a450a0319"
+    ],
+    "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\watermelon\\Materials_scene\\Scene_-_Root.mtl": [
+      "1baf0fc9-befa-459c-8bdd-af1a450a0319"
+    ],
+    "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\mango\\Materials_scene\\Material.001.mtl": [
+      "1baf0fc9-befa-459c-8bdd-af1a450a0319"
+    ],
+    "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\res\\corset\\Materials_Corset\\Corset_O.mtl": [
+      "1baf0fc9-befa-459c-8bdd-af1a450a0319"
+    ]
+  },
+  "path": {
+    "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\corset\\Corset.gltf": [
+      "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\corset\\Corset.bin"
+    ],
+    "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\corset\\Corset.gltf@3effa": [
+      "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\corset\\Corset_baseColor.png"
+    ],
+    "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\corset\\Corset.gltf@221a5": [
+      "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\corset\\Corset_occlusionRoughnessMetallic.png"
+    ],
+    "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\corset\\Corset.gltf@0089c": [
+      "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\corset\\Corset_normal.png"
+    ],
+    "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\orange\\scene.gltf": [
+      "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\orange\\scene.bin"
+    ],
+    "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\orange\\scene.gltf@3effa": [
+      "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\orange\\textures\\fr_caraOrange_diffuse.jpeg"
+    ],
+    "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\orange\\scene.gltf@221a5": [
+      "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\orange\\textures\\fr_caraOrange_specularGlossiness.png"
+    ],
+    "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\orange\\scene.gltf@0089c": [
+      "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\orange\\textures\\fr_caraOrange_normal.jpeg"
+    ],
+    "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\banana\\scene.gltf": [
+      "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\banana\\scene.bin"
+    ],
+    "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\banana\\scene.gltf@3effa": [
+      "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\banana\\textures\\Banana_PBR_baseColor.jpeg"
+    ],
+    "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\banana\\scene.gltf@221a5": [
+      "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\banana\\textures\\Banana_PBR_metallicRoughness.png"
+    ],
+    "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\banana\\scene.gltf@0089c": [
+      "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\banana\\textures\\Banana_PBR_normal.jpeg"
+    ],
+    "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\mango\\scene.gltf": [
+      "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\mango\\scene.bin"
+    ],
+    "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\mango\\scene.gltf@3effa": [
+      "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\mango\\textures\\Material.001_baseColor.jpeg"
+    ],
+    "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\mango\\scene.gltf@221a5": [
+      "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\mango\\textures\\Material.001_metallicRoughness.png"
+    ],
+    "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\mango\\scene.gltf@0089c": [
+      "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\mango\\textures\\Material.001_normal.jpeg"
+    ],
+    "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\watermelon\\scene.gltf": [
+      "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\watermelon\\scene.bin"
+    ],
+    "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\watermelon\\scene.gltf@3effa": [
+      "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\watermelon\\textures\\Scene_-_Root_baseColor.png"
+    ],
+    "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\watermelon\\scene.gltf@221a5": [
+      "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\watermelon\\textures\\Scene_-_Root_metallicRoughness.png"
+    ],
+    "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\watermelon\\scene.gltf@0089c": [
+      "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\watermelon\\textures\\Scene_-_Root_normal.png"
+    ]
+  }
+}

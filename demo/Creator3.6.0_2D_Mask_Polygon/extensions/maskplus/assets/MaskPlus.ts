@@ -50,7 +50,7 @@ export class MaskPlus extends Mask {
         this.markForUpdateRenderData(false);
         this._updateMaterial();
 
-        if (this._type !== Mask.Type.IMAGE_STENCIL) {
+        if (this._type !== Mask.Type.SPRITE_STENCIL) {
             this._spriteFrame = null;
             this._updateGraphics();
             if (this._renderData) {
@@ -75,7 +75,7 @@ export class MaskPlus extends Mask {
     }
 
     _updateGraphics() {
-        if (!this._graphics || (this._type !== Mask.Type.RECT && this._type !== Mask.Type.ELLIPSE && this.type !== <any>Polygon)) {
+        if (!this._graphics || (this._type !== Mask.Type.GRAPHICS_RECT && this._type !== Mask.Type.GRAPHICS_ELLIPSE && this.type !== <any>Polygon)) {
             return;
         }
 
@@ -90,9 +90,9 @@ export class MaskPlus extends Mask {
         const ap = uiTrans.anchorPoint;
         const x = -width * ap.x;
         const y = -height * ap.y;
-        if (this._type === Mask.Type.RECT) {
+        if (this._type === Mask.Type.GRAPHICS_RECT) {
             graphics.rect(x, y, width, height);
-        } else if (this._type === Mask.Type.ELLIPSE) {
+        } else if (this._type === Mask.Type.GRAPHICS_ELLIPSE) {
             const center = new Vec3(x + width / 2, y + height / 2, 0);
             const radius = new Vec3(width / 2, height / 2, 0);
             const points = _calculateCircle(center, radius, this._segments);
@@ -135,9 +135,9 @@ export class MaskPlus extends Mask {
         testPt.y += ap.y * h;
 
         let result = false;
-        if (this.type === Mask.Type.RECT || this.type === Mask.Type.GRAPHICS_STENCIL) {
+        if (this.type === Mask.Type.GRAPHICS_RECT || this.type === Mask.Type.GRAPHICS_STENCIL) {
             result = testPt.x >= 0 && testPt.y >= 0 && testPt.x <= w && testPt.y <= h;
-        } else if (this.type === Mask.Type.ELLIPSE) {
+        } else if (this.type === Mask.Type.GRAPHICS_ELLIPSE) {
             const rx = w / 2;
             const ry = h / 2;
             const px = testPt.x - 0.5 * w;

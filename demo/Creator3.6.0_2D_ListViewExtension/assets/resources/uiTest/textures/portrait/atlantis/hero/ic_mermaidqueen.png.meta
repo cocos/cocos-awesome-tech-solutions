@@ -1,11 +1,11 @@
 {
-  "ver": "1.0.22",
+  "ver": "1.0.25",
   "importer": "image",
   "imported": true,
   "uuid": "9f76084f-009a-4f33-aa6c-d08bd9a29c01",
   "files": [
-    ".png",
-    ".json"
+    ".json",
+    ".png"
   ],
   "subMetas": {
     "6c48a": {
@@ -22,9 +22,10 @@
         "mipfilter": "none",
         "imageUuidOrDatabaseUri": "9f76084f-009a-4f33-aa6c-d08bd9a29c01",
         "anisotropy": 0,
-        "isUuid": true
+        "isUuid": true,
+        "visible": false
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -57,9 +58,67 @@
         "imageUuidOrDatabaseUri": "9f76084f-009a-4f33-aa6c-d08bd9a29c01@6c48a",
         "packable": true,
         "isUuid": true,
-        "atlasUuid": ""
+        "atlasUuid": "",
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [
+            -48,
+            -54.5,
+            0,
+            48,
+            -54.5,
+            0,
+            -48,
+            54.5,
+            0,
+            48,
+            54.5,
+            0
+          ],
+          "indexes": [
+            0,
+            1,
+            2,
+            2,
+            1,
+            3
+          ],
+          "uv": [
+            24,
+            131,
+            120,
+            131,
+            24,
+            22,
+            120,
+            22
+          ],
+          "nuv": [
+            0.16,
+            0.14666666666666667,
+            0.8,
+            0.14666666666666667,
+            0.16,
+            0.8733333333333333,
+            0.8,
+            0.8733333333333333
+          ],
+          "minPos": [
+            -48,
+            -54.5,
+            0
+          ],
+          "maxPos": [
+            48,
+            54.5,
+            0
+          ]
+        }
       },
-      "ver": "1.0.9",
+      "ver": "1.0.11",
       "imported": true,
       "files": [
         ".json"
@@ -70,6 +129,7 @@
   "userData": {
     "type": "sprite-frame",
     "hasAlpha": true,
-    "redirect": "9f76084f-009a-4f33-aa6c-d08bd9a29c01@f9941"
+    "redirect": "9f76084f-009a-4f33-aa6c-d08bd9a29c01@f9941",
+    "fixAlphaTransparencyArtifacts": false
   }
 }

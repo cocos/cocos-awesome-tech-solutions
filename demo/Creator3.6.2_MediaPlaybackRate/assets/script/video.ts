@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, AudioSource, SystemEvent, EventMouse, log, EventKeyboard, KeyCode, ToggleComponent, AssetManager, assetManager, resources, AudioClip, Slider, Label, VideoPlayer, sys } from 'cc';
+import { _decorator, Component, Node,  Slider, Label, VideoPlayer, sys } from 'cc';
 import { NATIVE } from 'cc/env';
 const { ccclass, property } = _decorator;
 

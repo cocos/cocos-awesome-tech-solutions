@@ -1,0 +1,237 @@
+{
+    "name": "cocos-service",
+    "title": "Cocos Service",
+    "version": "3.0.5",
+    "description": "Cocos Service Package, is the developer's importance service integration center.",
+    "author": "Cocos Service",
+    "package_version": 2,
+    "main": "./browser/browser.js",
+    "scripts": {
+        "release": "cross-env NODE_ENV=production gulp publish"
+    },
+    "panels": {
+        "default": {
+            "title": "i18n:cocos-service.service",
+            "main": "./service/panel.js",
+            "icon": "./service/assets/icon-2x.png",
+            "type": "dockable",
+            "size": {
+                "width": 300,
+                "height": 700,
+                "min-width": 300,
+                "min-height": 530
+            }
+        },
+        "simple": {
+            "title": "i18n:cocos-service.service",
+            "main": "./popup/panel.js",
+            "icon": "./service/assets/icon.png",
+            "type": "simple",
+            "flags": {
+                "multiple": true
+            },
+            "size": {
+                "width": 800,
+                "height": 600
+            }
+        },
+        "dockable": {
+            "title": "i18n:cocos-service.service",
+            "main": "./popup/panel.js",
+            "icon": "./service/assets/icon.png",
+            "type": "dockable",
+            "flags": {
+                "multiple": true
+            },
+            "size": {
+                "width": 800,
+                "height": 600
+            }
+        }
+    },
+    "contributions": {
+        "builder": "./contributions/builder/builder",
+        "server": "./contributions/server/index.js",
+        "preview": {
+            "browser": {
+                "methods": "./contributions/preview/index.js",
+                "hooks": {
+                    "settings": "onSettingsBrowser"
+                }
+            },
+            "simulator": {
+                "methods": "./contributions/preview/index.js",
+                "hooks": {
+                    "settings": "onSettingsSimulator"
+                }
+            }
+        },
+        "menu": [
+            {
+                "path": "i18n:menu.panel",
+                "label": "i18n:cocos-service.service",
+                "message": "open-service-panel",
+                "icon": "./service/assets/icon.png"
+            }
+        ],
+        "shortcuts": [
+            {
+                "message": "open-service-panel",
+                "win": "ctrl+8",
+                "mac": "cmd+8"
+            }
+        ],
+        "extension": {
+            "download": [
+                {
+                    "id": 35,
+                    "name": "cloud-component",
+                    "module": "./contributions/extension/extension.js",
+                    "install": "install"
+                }
+            ]
+        },
+        "node-library": [
+            {
+                "name": "i18n:cocos-service.component.title",
+                "module": "./contributions/node-library/node-library.js",
+                "data": "getCloudGroups",
+                "refresh": "cloud-component:update-library"
+            }
+        ],
+        "hierarchy": {
+            "drop": [
+                {
+                    "type": "CloudComponent",
+                    "message": "drop-hierarchy"
+                }
+            ]
+        },
+        "assets": {
+            "drop": [
+                {
+                    "type": "CloudComponent",
+                    "message": "drop-assets"
+                }
+            ]
+        },
+        "scene": {
+            "drop": [
+                {
+                    "type": "CloudComponent",
+                    "message": "drop-scene"
+                }
+            ]
+        },
+        "messages": {
+            "open-service-panel": {
+                "methods": [
+                    "openServicePanel"
+                ]
+            },
+            "enable-service": {
+                "methods": [
+                    "enableService"
+                ]
+            },
+            "open-popup": {
+                "methods": [
+                    "openPopup"
+                ]
+            },
+            "close-popup": {
+                "methods": [
+                    "closePopup"
+                ]
+            },
+            "print-log": {
+                "methods": [
+                    "printLog"
+                ]
+            },
+            "api-request": {
+                "methods": [
+                    "apiRequest"
+                ]
+            },
+            "popup-show": {
+                "methods": [
+                    "popupShow"
+                ]
+            },
+            "plugin-msg": {
+                "methods": [
+                    "pluginMsg"
+                ]
+            },
+            "plugin-msg-service": {
+                "methods": [
+                    "default.pluginMsg"
+                ]
+            },
+            "plugin-msg-popup": {
+                "methods": [
+                    "simple.pluginMsg",
+                    "dockable.pluginMsg"
+                ]
+            },
+            "service-ready": {
+                "methods": [
+                    "serviceReady"
+                ]
+            },
+            "i18n:change": {
+                "methods": [
+                    "i18nChange"
+                ]
+            },
+            "service-status-changed": {
+                "methods": [
+                    "onServiceStatusChanged"
+                ]
+            },
+            "drop-scene": {
+                "methods": [
+                    "dropScene"
+                ]
+            },
+            "drop-hierarchy": {
+                "methods": [
+                    "dropHierarchy"
+                ]
+            },
+            "drop-assets": {
+                "methods": [
+                    "dropAssets"
+                ]
+            }
+        }
+    },
+    "dependencies": {
+        "compare-versions": "^3.6.0",
+        "compressing": "^1.5.1",
+        "fs-extra": "^9.0.1",
+        "md5": "^2.3.0",
+        "request": "^2.88.2",
+        "watch": "^1.0.2"
+    },
+    "devDependencies": {
+        "@types/electron": "^1.6.10",
+        "@types/fs-extra": "^9.0.2",
+        "@types/node": "^14.14.3",
+        "@types/request": "^2.48.5",
+        "@types/watch": "^1.0.1",
+        "cross-env": "^7.0.3",
+        "gulp": "^4.0.2",
+        "gulp-clean-css": "^4.3.0",
+        "gulp-if": "^3.0.0",
+        "gulp-javascript-obfuscator": "^1.1.6",
+        "gulp-replace": "^1.0.0",
+        "gulp-shell": "^0.8.0",
+        "gulp-terser": "^2.0.0",
+        "gulp-typescript": "^6.0.0-alpha.1",
+        "gulp-watch": "^5.0.1",
+        "gulp-zip": "^5.0.2",
+        "typescript": "^4.0.5"
+    }
+}

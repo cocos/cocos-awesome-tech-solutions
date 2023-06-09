@@ -13,6 +13,7 @@
       "gfx-webgl",
       "gfx-webgl2",
       "intersection-2d",
+      "light-probe",
       "marionette",
       "particle",
       "particle-2d",
@@ -27,6 +28,7 @@
       "tween",
       "ui",
       "video",
+      "websocket",
       "webview",
       "xr"
     ],
@@ -147,5 +149,6 @@
       "value": false,
       "version": ""
     }
-  }
+  },
+  "__version__": "1.0.7"
 }

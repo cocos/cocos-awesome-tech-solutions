@@ -1,0 +1,17 @@
+<div>
+    <div v-if="title !== ''" :class="['groupItem',  !unfolded && 'unfolded']" @click="handleFoldClick">
+        <div class="div-no-wrap" style="padding: 8px;">
+            <img :src="icon" :style="imageStyle" class='img[src=""],img:not([src]){opacity: 0;}"' />
+            <div class="flex-1 group-title"> {{ title }} </div>
+            <ui-icon value="arrow-triangle" :class="[!unfolded && 'right']" style="font-size: 16px;"></ui-icon>
+        </div>
+        <div id="service-item" style="padding: 0 5px;" v-show="unfolded" @click="$event.stopPropagation()">
+            <service-item v-for="service in group.services" style="margin-top: 5px;" @item-click="handleItemClick"
+                          @mouseenter.self="isHover = false" @mouseleave.self="isHover = true" :key="service.service_id" :service="service" />
+        </div>
+        <div v-show="!unfolded" class="group-folded-tips" v-html="hideTips"></div>
+    </div>
+    <div v-else>
+        <service-item style="margin-top: 5px;" v-for="service in group.services" @item-click="handleItemClick" :key="service.service_id" :service="service" />
+    </div>
+</div>

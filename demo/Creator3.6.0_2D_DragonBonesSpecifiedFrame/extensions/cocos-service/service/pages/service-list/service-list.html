@@ -1,0 +1,32 @@
+<div style="margin: 10px 0px 0px 10px; height: 100%; overflow: hidden; table-layout: fixed;">
+    <div style="margin-top: 10px; padding-bottom: 0px; margin-right: 10px;" class="section">
+        <div style="display: flex; justify-content: flex-start; width: 100%;">
+            <div class="flex-1" style="color: var(--color-normal-contrast-weaker); font-size: 24px; text-overflow: ellipsis; overflow: hidden; ">{{ game.name }}</div>
+            <div style="margin: 4px; height: 14px; width: 14px; color: var(--color-normal-contrast-important);" @click="handleShowMenu">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="fill: var(--color-normal-contrast); font-size: 16px;">
+                    <path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path>
+                </svg>
+            </div>
+            <ui-icon value="filter" color=normal style="font-size: 16px; margin: 1px 4px;" @click="handleShowFilter"></ui-icon> 
+        </div>
+        <div style="margin-top:4px; color: var(--color-normal-contrast-important); display: flex; width: 100%; line-height: 24px;">
+            <div class="flex-1" style="min-width: 110px;">{{`AppID: ${game.app_id}`}}</div>
+            <template v-if="game.app_id !== 'UNKNOW'">
+                <div style="margin:0 3px;">{{ tr("config_set.config_title") }}:</div>
+                <div class="select flex-1">
+                    <select ref="select" :value="config.config_id" @change="handleConfigChange">
+                        <option v-for="item in configs" :selected="item.config_id === config.config_id" :key="item.config_id" :value="item.config_id">{{ item.config_name }}</option>
+                        <option value="config_set_add">{{ tr("config_set.add") }}</option>
+                    </select>
+                </div>
+            </template>
+        </div>
+        <ui-label style="margin-top:10px; color: var(--color-normal-contrast-important);" value="i18n:cocos-service.integrate_tips"></ui-label>
+    </div>
+    <div v-if="emptyResult" style="margin-right: 10px;">{{ tr('filter.empty_result') }}</div>
+    <div style="height: calc(100% - 110px); overflow-y: scroll;">
+        <div v-for="group in groups" style="margin-bottom: 10px;" :key="group.services[0].service_id">
+            <group-item @item-click="handleItemClick" :group="group" />
+        </div>
+    </div>
+</div>

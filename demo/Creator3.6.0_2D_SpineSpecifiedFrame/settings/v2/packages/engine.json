@@ -1,5 +1,5 @@
 {
-  "__version__": "1.0.5",
+  "__version__": "1.0.7",
   "modules": {
     "cache": {
       "base": {
@@ -69,30 +69,43 @@
       },
       "dragon-bones": {
         "_value": true
+      },
+      "animation": {
+        "_value": true
+      },
+      "skeletal-animation": {
+        "_value": true
+      },
+      "marionette": {
+        "_value": true
       }
     },
     "includeModules": [
-      "base",
-      "gfx-webgl",
-      "3d",
       "2d",
-      "ui",
-      "particle",
-      "physics-cannon",
-      "physics-2d-box2d",
+      "3d",
+      "animation",
+      "audio",
+      "base",
+      "dragon-bones",
+      "gfx-webgl",
       "intersection-2d",
+      "light-probe",
+      "marionette",
+      "particle",
+      "particle-2d",
+      "physics-2d-box2d",
+      "physics-cannon",
       "primitive",
       "profiler",
-      "particle-2d",
-      "audio",
-      "video",
-      "webview",
-      "tween",
+      "skeletal-animation",
+      "spine",
       "terrain",
       "tiled-map",
-      "spine",
-      "dragon-bones",
-      "marionette"
+      "tween",
+      "ui",
+      "video",
+      "websocket",
+      "webview"
     ],
     "noDeprecatedFeatures": {
       "value": false,

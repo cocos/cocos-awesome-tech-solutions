@@ -1,5 +1,5 @@
 {
-  "ver": "2.1.10",
+  "ver": "2.3.4",
   "importer": "gltf",
   "imported": true,
   "uuid": "26f2a632-2cc4-4d1e-9bb3-288199cf2b4f",
@@ -38,7 +38,7 @@
         "isUuid": false,
         "imageUuidOrDatabaseUri": "db://assets/model/mango/textures/Material.001_baseColor.jpeg"
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -61,7 +61,7 @@
         "isUuid": false,
         "imageUuidOrDatabaseUri": "db://assets/model/mango/textures/Material.001_metallicRoughness.png"
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -84,7 +84,7 @@
         "isUuid": false,
         "imageUuidOrDatabaseUri": "db://assets/model/mango/textures/Material.001_normal.jpeg"
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -133,7 +133,7 @@
         "26f2a632-2cc4-4d1e-9bb3-288199cf2b4f@0089c"
       ],
       "materials": [
-        "8191542d-1f23-475b-a3d2-548adaa5ab5c"
+        "a72232fa-28eb-46ab-9333-19ad74fea915"
       ],
       "scenes": [
         "26f2a632-2cc4-4d1e-9bb3-288199cf2b4f@d1932"

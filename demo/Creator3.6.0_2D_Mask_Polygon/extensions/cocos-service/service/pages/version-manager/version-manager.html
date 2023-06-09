@@ -1,0 +1,24 @@
+<popup-container :mw="300" @popup-close="handleClose">
+    <div style="font-size: 20px; color: var(--color-normal-contrast-normal); margin-top: 10px;">{{ srv.service_name }}</div>
+    <div class="section" style="padding-bottom: 0px; color: var(--color-normal-contrast-emphasis);"> {{ versionStr }} </div>
+    <div id="content" style="word-wrap: break-word; line-height: 18px; overflow-y: auto; max-height: 250px; min-height: 100px;">
+        <ui-markdown v-html="upgradeStr" style="width: 100%; color: var(--color-normal-contrast-normal);"></ui-markdown>
+    </div>
+    <div v-if="action === 'switch'">
+        <div class="section" style="font-size: 20px; color: var(--color-normal-contrast-normal); margin-top: 10px;">{{ tr("history_ver") }}</div>
+        <div class="div-no-wrap">
+            <ui-select ref="select" class="large" style="width: calc(100% - 60px);" @confirm="handleSelectChange" :value="tr('select_version_please')">
+                <option selected="selected" :value="tr('select_version_please')">{{ tr('select_version_please') }}</option>
+                <option v-for="version of service.package_versions" :value="version">{{ version }}</option>
+            </ui-select>
+            <ui-button @click="handleSwitch" class="blue" :disabled="!enableSwitch" style="width:60px; white-space: nowrap; color: var(--color-normal-contrast-weaker);">{{ tr("btn_switch") }}</ui-button>
+        </div>
+    </div>
+    <div v-else-if="action === 'update'">
+        <div class="wrapper layout horizontal around-justified" id='bottom-button' style="margin: 10px 0px 4px 0px" >
+            <ui-button @click="handleUpdate" :disabled="!enableUpdate" class="blue" >{{ tr("update_now") }}</ui-button>
+            <ui-button @click="handleClose" class="gray">{{ tr("btn_cancel") }}</ui-button>
+        </div>
+    </div>
+    <div style="margin: 10px 0px 5px 0px;; line-height: 15px;">{{ tr("switch_tips") }}</div>
+</popup-container>

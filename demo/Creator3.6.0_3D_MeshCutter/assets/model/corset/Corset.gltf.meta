@@ -1,5 +1,5 @@
 {
-  "ver": "2.1.10",
+  "ver": "2.3.4",
   "importer": "gltf",
   "imported": true,
   "uuid": "c8e79217-7978-4900-b7de-2987723f4a92",
@@ -23,7 +23,7 @@
       "displayName": ""
     },
     "3effa": {
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "importer": "texture",
       "uuid": "c8e79217-7978-4900-b7de-2987723f4a92@3effa",
       "imported": true,
@@ -47,7 +47,7 @@
       "displayName": ""
     },
     "221a5": {
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "importer": "texture",
       "uuid": "c8e79217-7978-4900-b7de-2987723f4a92@221a5",
       "imported": true,
@@ -71,7 +71,7 @@
       "displayName": ""
     },
     "0089c": {
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "importer": "texture",
       "uuid": "c8e79217-7978-4900-b7de-2987723f4a92@0089c",
       "imported": true,

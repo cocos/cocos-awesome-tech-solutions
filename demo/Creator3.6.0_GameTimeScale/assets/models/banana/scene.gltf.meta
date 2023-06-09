@@ -1,5 +1,5 @@
 {
-  "ver": "2.1.10",
+  "ver": "2.3.4",
   "importer": "gltf",
   "imported": true,
   "uuid": "0c641418-350d-4e11-a5fa-fb3933d106d7",
@@ -38,7 +38,7 @@
         "isUuid": false,
         "imageUuidOrDatabaseUri": "db://assets/models/banana/textures/Banana_PBR_baseColor.jpeg"
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -61,7 +61,7 @@
         "isUuid": false,
         "imageUuidOrDatabaseUri": "db://assets/models/banana/textures/Banana_PBR_metallicRoughness.png"
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -84,7 +84,7 @@
         "isUuid": false,
         "imageUuidOrDatabaseUri": "db://assets/models/banana/textures/Banana_PBR_normal.jpeg"
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -133,7 +133,7 @@
         "0c641418-350d-4e11-a5fa-fb3933d106d7@0089c"
       ],
       "materials": [
-        "0b1d62d3-4493-495f-b5a9-3755eef1c104"
+        "7a0abe93-8dbb-4b32-bb79-ca5e4247bd01"
       ],
       "scenes": [
         "0c641418-350d-4e11-a5fa-fb3933d106d7@d1932"

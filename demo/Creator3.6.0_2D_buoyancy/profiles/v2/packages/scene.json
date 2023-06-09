@@ -30,13 +30,14 @@
     "enableAcceleration": true,
     "far2D": 10000,
     "near2D": 1,
-    "wheelSpeed2D": 6
+    "wheelSpeed2D": 6,
+    "size": "__default_design__"
   },
   "camera-infos": {
     "f46876e4-e81b-4931-b493-6d367be385e7": {
       "position": {
-        "x": 480,
-        "y": 320,
+        "x": 587.9999999999999,
+        "y": 180.5,
         "z": 5000
       },
       "rotation": {
@@ -53,8 +54,8 @@
     },
     "fa8d8075-453f-42ba-8ea3-3100507a19a7": {
       "position": {
-        "x": 477.58535666706973,
-        "y": 402.9916226640139,
+        "x": 480.5,
+        "y": 320.5,
         "z": 5000
       },
       "rotation": {
@@ -107,7 +108,7 @@
     }
   },
   "camera-uuids": [
-    "f46876e4-e81b-4931-b493-6d367be385e7"
+    "fa8d8075-453f-42ba-8ea3-3100507a19a7"
   ],
   "float-window": {
     "position": {
@@ -121,5 +122,9 @@
         }
       }
     }
+  },
+  "builder": {},
+  "": {
+    "sculpt_brush_rotate": 0
   }
 }

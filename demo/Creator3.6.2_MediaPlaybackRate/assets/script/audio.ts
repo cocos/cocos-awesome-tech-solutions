@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, AudioSource, SystemEvent, EventMouse, log, EventKeyboard, KeyCode, ToggleComponent, AssetManager, assetManager, resources, AudioClip, Slider, Label, sys } from 'cc';
+import { _decorator, Component, Node, AudioSource, resources, AudioClip, Slider, Label, sys, Toggle } from 'cc';
 import { NATIVE } from 'cc/env';
 const { ccclass, property } = _decorator;
 
@@ -73,7 +73,7 @@ export class Audio extends Component {
         this.audioSource.play();
     }
 
-    onToggleSoundSize (toggle: ToggleComponent) {
+    onToggleSoundSize (toggle: Toggle) {
         this.audioSource.stop();
         resources.load(toggle.node.name, AudioClip, (err, clip) => {
             console.log(clip);

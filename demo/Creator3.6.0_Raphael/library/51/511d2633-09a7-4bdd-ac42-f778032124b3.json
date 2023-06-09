@@ -1,0 +1,634 @@
+{
+  "__type__": "cc.EffectAsset",
+  "_name": "pipeline/skybox",
+  "_objFlags": 0,
+  "_native": "",
+  "techniques": [
+    {
+      "passes": [
+        {
+          "rasterizerState": {
+            "cullMode": 0
+          },
+          "program": "pipeline/skybox|sky-vs:vert|sky-fs:frag",
+          "priority": 245,
+          "depthStencilState": {
+            "depthTest": true,
+            "depthWrite": false
+          },
+          "properties": {
+            "environmentMap": {
+              "value": "grey",
+              "type": 31
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "shaders": [
+    {
+      "blocks": [],
+      "samplerTextures": [
+        {
+          "name": "environmentMap",
+          "type": 31,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 16,
+          "binding": 0
+        }
+      ],
+      "samplers": [],
+      "textures": [],
+      "buffers": [],
+      "images": [],
+      "subpassInputs": [],
+      "attributes": [
+        {
+          "name": "a_position",
+          "defines": [],
+          "format": 32,
+          "location": 0
+        },
+        {
+          "name": "a_normal",
+          "defines": [],
+          "format": 32,
+          "location": 1
+        },
+        {
+          "name": "a_texCoord",
+          "defines": [],
+          "format": 21,
+          "location": 2
+        },
+        {
+          "name": "a_tangent",
+          "defines": [],
+          "format": 44,
+          "location": 3
+        },
+        {
+          "name": "a_joints",
+          "defines": [
+            "CC_USE_SKINNING"
+          ],
+          "location": 4
+        },
+        {
+          "name": "a_weights",
+          "defines": [
+            "CC_USE_SKINNING"
+          ],
+          "format": 44,
+          "location": 5
+        },
+        {
+          "name": "a_jointAnimInfo",
+          "defines": [
+            "USE_INSTANCING",
+            "CC_USE_BAKED_ANIMATION"
+          ],
+          "format": 44,
+          "isInstanced": true,
+          "location": 6
+        },
+        {
+          "name": "a_matWorld0",
+          "defines": [
+            "USE_INSTANCING"
+          ],
+          "format": 44,
+          "isInstanced": true,
+          "location": 7
+        },
+        {
+          "name": "a_matWorld1",
+          "defines": [
+            "USE_INSTANCING"
+          ],
+          "format": 44,
+          "isInstanced": true,
+          "location": 8
+        },
+        {
+          "name": "a_matWorld2",
+          "defines": [
+            "USE_INSTANCING"
+          ],
+          "format": 44,
+          "isInstanced": true,
+          "location": 9
+        },
+        {
+          "name": "a_lightingMapUVParam",
+          "defines": [
+            "USE_INSTANCING",
+            "CC_USE_LIGHTMAP"
+          ],
+          "format": 44,
+          "isInstanced": true,
+          "location": 10
+        },
+        {
+          "name": "a_localShadowBiasAndProbeId",
+          "defines": [
+            "USE_INSTANCING"
+          ],
+          "format": 44,
+          "isInstanced": true,
+          "location": 11
+        },
+        {
+          "name": "a_sh_linear_const_r",
+          "defines": [
+            "USE_INSTANCING",
+            "CC_USE_LIGHT_PROBE"
+          ],
+          "format": 44,
+          "isInstanced": true,
+          "location": 12
+        },
+        {
+          "name": "a_sh_linear_const_g",
+          "defines": [
+            "USE_INSTANCING",
+            "CC_USE_LIGHT_PROBE"
+          ],
+          "format": 44,
+          "isInstanced": true,
+          "location": 13
+        },
+        {
+          "name": "a_sh_linear_const_b",
+          "defines": [
+            "USE_INSTANCING",
+            "CC_USE_LIGHT_PROBE"
+          ],
+          "format": 44,
+          "isInstanced": true,
+          "location": 14
+        },
+        {
+          "name": "a_vertexId",
+          "defines": [
+            "CC_USE_MORPH"
+          ],
+          "format": 11,
+          "location": 15
+        }
+      ],
+      "varyings": [
+        {
+          "name": "viewDir",
+          "type": 16,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 17,
+          "location": 0
+        }
+      ],
+      "fragColors": [
+        {
+          "name": "cc_FragColor",
+          "typename": "vec4",
+          "type": 16,
+          "count": 1,
+          "defines": [],
+          "stageFlags": 16,
+          "location": 0
+        }
+      ],
+      "descriptors": [
+        {
+          "rate": 0,
+          "blocks": [],
+          "samplerTextures": [],
+          "samplers": [],
+          "textures": [],
+          "buffers": [],
+          "images": [],
+          "subpassInputs": []
+        },
+        {
+          "rate": 1,
+          "blocks": [],
+          "samplerTextures": [
+            {
+              "name": "environmentMap",
+              "type": 31,
+              "count": 1,
+              "defines": [],
+              "stageFlags": 16,
+              "binding": 0
+            }
+          ],
+          "samplers": [],
+          "textures": [],
+          "buffers": [],
+          "images": [],
+          "subpassInputs": []
+        },
+        {
+          "rate": 2,
+          "blocks": [],
+          "samplerTextures": [],
+          "samplers": [],
+          "textures": [],
+          "buffers": [],
+          "images": [],
+          "subpassInputs": []
+        },
+        {
+          "rate": 3,
+          "blocks": [
+            {
+              "tags": {
+                "builtin": "global"
+              },
+              "name": "CCGlobal",
+              "members": [
+                {
+                  "name": "cc_time",
+                  "typename": "vec4",
+                  "type": 16,
+                  "count": 1,
+                  "precision": "highp "
+                },
+                {
+                  "name": "cc_screenSize",
+                  "typename": "vec4",
+                  "type": 16,
+                  "count": 1,
+                  "precision": "mediump "
+                },
+                {
+                  "name": "cc_nativeSize",
+                  "typename": "vec4",
+                  "type": 16,
+                  "count": 1,
+                  "precision": "mediump "
+                },
+                {
+                  "name": "cc_probeInfo",
+                  "typename": "vec4",
+                  "type": 16,
+                  "count": 1,
+                  "precision": "mediump "
+                },
+                {
+                  "name": "cc_debug_view_mode",
+                  "typename": "vec4",
+                  "type": 16,
+                  "count": 1,
+                  "precision": "mediump "
+                }
+              ],
+              "defines": [],
+              "stageFlags": 17
+            },
+            {
+              "tags": {
+                "builtin": "global"
+              },
+              "name": "CCCamera",
+              "members": [
+                {
+                  "name": "cc_matView",
+                  "typename": "mat4",
+                  "type": 25,
+                  "count": 1,
+                  "precision": "highp "
+                },
+                {
+                  "name": "cc_matViewInv",
+                  "typename": "mat4",
+                  "type": 25,
+                  "count": 1,
+                  "precision": "highp "
+                },
+                {
+                  "name": "cc_matProj",
+                  "typename": "mat4",
+                  "type": 25,
+                  "count": 1,
+                  "precision": "highp "
+                },
+                {
+                  "name": "cc_matProjInv",
+                  "typename": "mat4",
+                  "type": 25,
+                  "count": 1,
+                  "precision": "highp "
+                },
+                {
+                  "name": "cc_matViewProj",
+                  "typename": "mat4",
+                  "type": 25,
+                  "count": 1,
+                  "precision": "highp "
+                },
+                {
+                  "name": "cc_matViewProjInv",
+                  "typename": "mat4",
+                  "type": 25,
+                  "count": 1,
+                  "precision": "highp "
+                },
+                {
+                  "name": "cc_cameraPos",
+                  "typename": "vec4",
+                  "type": 16,
+                  "count": 1,
+                  "precision": "highp "
+                },
+                {
+                  "name": "cc_surfaceTransform",
+                  "typename": "vec4",
+                  "type": 16,
+                  "count": 1,
+                  "precision": "mediump "
+                },
+                {
+                  "name": "cc_screenScale",
+                  "typename": "vec4",
+                  "type": 16,
+                  "count": 1,
+                  "precision": "mediump "
+                },
+                {
+                  "name": "cc_exposure",
+                  "typename": "vec4",
+                  "type": 16,
+                  "count": 1,
+                  "precision": "mediump "
+                },
+                {
+                  "name": "cc_mainLitDir",
+                  "typename": "vec4",
+                  "type": 16,
+                  "count": 1,
+                  "precision": "mediump "
+                },
+                {
+                  "name": "cc_mainLitColor",
+                  "typename": "vec4",
+                  "type": 16,
+                  "count": 1,
+                  "precision": "mediump "
+                },
+                {
+                  "name": "cc_ambientSky",
+                  "typename": "vec4",
+                  "type": 16,
+                  "count": 1,
+                  "precision": "mediump "
+                },
+                {
+                  "name": "cc_ambientGround",
+                  "typename": "vec4",
+                  "type": 16,
+                  "count": 1,
+                  "precision": "mediump "
+                },
+                {
+                  "name": "cc_fogColor",
+                  "typename": "vec4",
+                  "type": 16,
+                  "count": 1,
+                  "precision": "mediump "
+                },
+                {
+                  "name": "cc_fogBase",
+                  "typename": "vec4",
+                  "type": 16,
+                  "count": 1,
+                  "precision": "mediump "
+                },
+                {
+                  "name": "cc_fogAdd",
+                  "typename": "vec4",
+                  "type": 16,
+                  "count": 1,
+                  "precision": "mediump "
+                },
+                {
+                  "name": "cc_nearFar",
+                  "typename": "vec4",
+                  "type": 16,
+                  "count": 1,
+                  "precision": "mediump "
+                },
+                {
+                  "name": "cc_viewPort",
+                  "typename": "vec4",
+                  "type": 16,
+                  "count": 1,
+                  "precision": "mediump "
+                }
+              ],
+              "defines": [],
+              "stageFlags": 17
+            }
+          ],
+          "samplerTextures": [
+            {
+              "tags": {
+                "builtin": "global"
+              },
+              "name": "cc_environment",
+              "typename": "samplerCube",
+              "type": 31,
+              "count": 1,
+              "defines": [],
+              "stageFlags": 16
+            }
+          ],
+          "samplers": [],
+          "textures": [],
+          "buffers": [],
+          "images": [],
+          "subpassInputs": []
+        }
+      ],
+      "hash": 2824156779,
+      "glsl4": {
+        "vert": "\nprecision highp float;\nlayout(set = 0, binding = 0) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n  mediump vec4 cc_probeInfo;\n  mediump vec4 cc_debug_view_mode;\n};\nlayout(set = 0, binding = 1) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_surfaceTransform;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\n#define QUATER_PI         0.78539816340\n#define HALF_PI           1.57079632679\n#define PI                3.14159265359\n#define PI2               6.28318530718\n#define PI4               12.5663706144\n#define INV_QUATER_PI     1.27323954474\n#define INV_HALF_PI       0.63661977237\n#define INV_PI            0.31830988618\n#define INV_PI2           0.15915494309\n#define INV_PI4           0.07957747155\n#define EPSILON           1e-6\n#define EPSILON_LOWP      1e-4\n#define LOG2              1.442695\n#define EXP_VALUE         2.71828183f\n#define FP_MAX            65504.0\n#define FP_SCALE          0.0009765625\n#define FP_SCALE_INV      1024.0\n#define GRAY_VECTOR       vec3(0.299, 0.587, 0.114)\n#define LIGHT_MAP_TYPE_DISABLED 0\n#define LIGHT_MAP_TYPE_ALL_IN_ONE 1\n#define LIGHT_MAP_TYPE_INDIRECT_OCCLUSION 2\n#define REFLECTION_PROBE_TYPE_NONE 0\n#define REFLECTION_PROBE_TYPE_CUBE 1\n#define REFLECTION_PROBE_TYPE_PLANAR 2\n#define LIGHT_TYPE_DIRECTIONAL 0.0\n#define LIGHT_TYPE_POINT 1.0\n#define LIGHT_TYPE_SPOT 2.0\n#define LIGHT_TYPE_SPHERE 3.0\n#define LIGHT_TYPE_RANGED_DIRECTIONAL 4.0\n#define IS_DIRECTIONAL_LIGHT(light_type) (abs(float(light_type) - float(LIGHT_TYPE_DIRECTIONAL)) < EPSILON_LOWP)\n#define IS_SPHERE_LIGHT(light_type) (abs(float(light_type) - float(LIGHT_TYPE_SPHERE)) < EPSILON_LOWP)\n#define IS_SPOT_LIGHT(light_type) (abs(float(light_type) - float(LIGHT_TYPE_SPOT)) < EPSILON_LOWP)\n#define IS_POINT_LIGHT(light_type) (abs(float(light_type) - float(LIGHT_TYPE_POINT)) < EPSILON_LOWP)\n#define IS_RANGED_DIRECTIONAL_LIGHT(light_type) (abs(float(light_type) - float(LIGHT_TYPE_RANGED_DIRECTIONAL)) < EPSILON_LOWP)\n#define TONE_MAPPING_ACES 0\n#define TONE_MAPPING_LINEAR 1\n#define SURFACES_MAX_TRANSMIT_DEPTH_VALUE 999999.0\nstruct StandardVertInput {\n  highp vec4 position;\n  vec3 normal;\n  vec4 tangent;\n};\nlayout(location = 0) in vec3 a_position;\nlayout(location = 1) in vec3 a_normal;\nlayout(location = 2) in vec2 a_texCoord;\nlayout(location = 3) in vec4 a_tangent;\n#if CC_USE_SKINNING\n    layout(location = 4) in u32vec4 a_joints;\n  layout(location = 5) in vec4 a_weights;\n#endif\n#if USE_INSTANCING\n  #if CC_USE_BAKED_ANIMATION\n    layout(location = 6) in highp vec4 a_jointAnimInfo;\n  #endif\n  layout(location = 7) in vec4 a_matWorld0;\n  layout(location = 8) in vec4 a_matWorld1;\n  layout(location = 9) in vec4 a_matWorld2;\n  #if CC_USE_LIGHTMAP\n    layout(location = 10) in vec4 a_lightingMapUVParam;\n  #endif\n  #if CC_USE_REFLECTION_PROBE || CC_RECEIVE_SHADOW\n    #if CC_RECEIVE_SHADOW\n    #endif\n    layout(location = 11) in vec4 a_localShadowBiasAndProbeId;\n  #endif\n  #if CC_USE_LIGHT_PROBE\n    layout(location = 12) in vec4 a_sh_linear_const_r;\n    layout(location = 13) in vec4 a_sh_linear_const_g;\n    layout(location = 14) in vec4 a_sh_linear_const_b;\n  #endif\n#endif\n#if CC_USE_MORPH\n#endif\nlayout(location = 0) out mediump vec4 viewDir;\nvec4 vert () {\n    viewDir = vec4(a_position, 1.0);\n  mat4 matViewRotOnly = mat4(mat3(cc_matView));\n  vec4 pos = matViewRotOnly * viewDir;\n  if (cc_matProj[3].w > 0.0) {\n    mat4 matProj = cc_matProj;\n    matProj[0].x = 5.2;\n    matProj[1].y = 2.6;\n    matProj[2].zw = vec2(-1.0);\n    matProj[3].zw = vec2(0.0);\n    pos = matProj * pos;\n  } else {\n    pos = cc_matProj * pos;\n  }\n  pos.z = 0.99999 * pos.w;\n  return pos;\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision mediump float;\nlayout(set = 0, binding = 0) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n  mediump vec4 cc_probeInfo;\n  mediump vec4 cc_debug_view_mode;\n};\nlayout(set = 0, binding = 1) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_surfaceTransform;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nlayout(set = 0, binding = 5) uniform samplerCube cc_environment;\nvec4 fragTextureLod (sampler2D tex, vec2 coord, float lod) {\n    return textureLod(tex, coord, lod);\n}\nvec4 fragTextureLod (samplerCube tex, vec3 coord, float lod) {\n    return textureLod(tex, coord, lod);\n}\nvec4 packRGBE (vec3 rgb) {\n  highp float maxComp = max(max(rgb.r, rgb.g), rgb.b);\n  highp float e = 128.0;\n  if (maxComp > 0.0001) {\n    e = log(maxComp) / log(1.1);\n    e = ceil(e);\n    e = clamp(e + 128.0, 0.0, 255.0);\n  }\n  highp float sc = 1.0 / pow(1.1, e - 128.0);\n  vec3 encode = clamp(rgb * sc, vec3(0.0), vec3(1.0)) * 255.0;\n  vec3 encode_rounded = floor(encode) + step(encode - floor(encode), vec3(0.5));\n  return vec4(encode_rounded, e) / 255.0;\n}\nvec3 unpackRGBE (vec4 rgbe) {\n  return rgbe.rgb * pow(1.1, rgbe.a * 255.0 - 128.0);\n}\n#define CC_SURFACES_DEBUG_VIEW_VERTEX_COLOR 1\n#define CC_SURFACES_DEBUG_VIEW_VERTEX_NORMAL CC_SURFACES_DEBUG_VIEW_VERTEX_COLOR + 1\n#define CC_SURFACES_DEBUG_VIEW_VERTEX_TANGENT CC_SURFACES_DEBUG_VIEW_VERTEX_NORMAL + 1\n#define CC_SURFACES_DEBUG_VIEW_WORLD_POS CC_SURFACES_DEBUG_VIEW_VERTEX_TANGENT + 1\n#define CC_SURFACES_DEBUG_VIEW_VERTEX_MIRROR CC_SURFACES_DEBUG_VIEW_WORLD_POS + 1\n#define CC_SURFACES_DEBUG_VIEW_FACE_SIDE CC_SURFACES_DEBUG_VIEW_VERTEX_MIRROR + 1\n#define CC_SURFACES_DEBUG_VIEW_UV0 CC_SURFACES_DEBUG_VIEW_FACE_SIDE + 1\n#define CC_SURFACES_DEBUG_VIEW_UV1 CC_SURFACES_DEBUG_VIEW_UV0 + 1\n#define CC_SURFACES_DEBUG_VIEW_UVLIGHTMAP CC_SURFACES_DEBUG_VIEW_UV1 + 1\n#define CC_SURFACES_DEBUG_VIEW_PROJ_DEPTH CC_SURFACES_DEBUG_VIEW_UVLIGHTMAP + 1\n#define CC_SURFACES_DEBUG_VIEW_LINEAR_DEPTH CC_SURFACES_DEBUG_VIEW_PROJ_DEPTH + 1\n#define CC_SURFACES_DEBUG_VIEW_FRAGMENT_NORMAL CC_SURFACES_DEBUG_VIEW_LINEAR_DEPTH + 1\n#define CC_SURFACES_DEBUG_VIEW_FRAGMENT_TANGENT CC_SURFACES_DEBUG_VIEW_FRAGMENT_NORMAL + 1\n#define CC_SURFACES_DEBUG_VIEW_FRAGMENT_BINORMAL CC_SURFACES_DEBUG_VIEW_FRAGMENT_TANGENT + 1\n#define CC_SURFACES_DEBUG_VIEW_BASE_COLOR CC_SURFACES_DEBUG_VIEW_FRAGMENT_BINORMAL + 1\n#define CC_SURFACES_DEBUG_VIEW_DIFFUSE_COLOR CC_SURFACES_DEBUG_VIEW_BASE_COLOR + 1\n#define CC_SURFACES_DEBUG_VIEW_SPECULAR_COLOR CC_SURFACES_DEBUG_VIEW_DIFFUSE_COLOR + 1\n#define CC_SURFACES_DEBUG_VIEW_TRANSPARENCY CC_SURFACES_DEBUG_VIEW_SPECULAR_COLOR + 1\n#define CC_SURFACES_DEBUG_VIEW_METALLIC CC_SURFACES_DEBUG_VIEW_TRANSPARENCY + 1\n#define CC_SURFACES_DEBUG_VIEW_ROUGHNESS CC_SURFACES_DEBUG_VIEW_METALLIC + 1\n#define CC_SURFACES_DEBUG_VIEW_SPECULAR_INTENSITY CC_SURFACES_DEBUG_VIEW_ROUGHNESS + 1\n#define CC_SURFACES_DEBUG_VIEW_IOR CC_SURFACES_DEBUG_VIEW_SPECULAR_INTENSITY + 1\n#define CC_SURFACES_DEBUG_VIEW_DIRECT_DIFFUSE CC_SURFACES_DEBUG_VIEW_IOR + 1\n#define CC_SURFACES_DEBUG_VIEW_DIRECT_SPECULAR CC_SURFACES_DEBUG_VIEW_DIRECT_DIFFUSE + 1\n#define CC_SURFACES_DEBUG_VIEW_DIRECT_ALL CC_SURFACES_DEBUG_VIEW_DIRECT_SPECULAR + 1\n#define CC_SURFACES_DEBUG_VIEW_ENV_DIFFUSE CC_SURFACES_DEBUG_VIEW_DIRECT_ALL + 1\n#define CC_SURFACES_DEBUG_VIEW_ENV_SPECULAR CC_SURFACES_DEBUG_VIEW_ENV_DIFFUSE + 1\n#define CC_SURFACES_DEBUG_VIEW_ENV_ALL CC_SURFACES_DEBUG_VIEW_ENV_SPECULAR + 1\n#define CC_SURFACES_DEBUG_VIEW_EMISSIVE CC_SURFACES_DEBUG_VIEW_ENV_ALL + 1\n#define CC_SURFACES_DEBUG_VIEW_LIGHT_MAP CC_SURFACES_DEBUG_VIEW_EMISSIVE + 1\n#define CC_SURFACES_DEBUG_VIEW_SHADOW CC_SURFACES_DEBUG_VIEW_LIGHT_MAP + 1\n#define CC_SURFACES_DEBUG_VIEW_AO CC_SURFACES_DEBUG_VIEW_SHADOW + 1\n#define CC_SURFACES_DEBUG_VIEW_FRESNEL CC_SURFACES_DEBUG_VIEW_AO + 1\n#define CC_SURFACES_DEBUG_VIEW_TRANSMIT_DIRECT_DIFFUSE CC_SURFACES_DEBUG_VIEW_FRESNEL + 1\n#define CC_SURFACES_DEBUG_VIEW_TRANSMIT_DIRECT_SPECULAR CC_SURFACES_DEBUG_VIEW_TRANSMIT_DIRECT_DIFFUSE + 1\n#define CC_SURFACES_DEBUG_VIEW_TRANSMIT_ENV_DIFFUSE CC_SURFACES_DEBUG_VIEW_TRANSMIT_DIRECT_SPECULAR + 1\n#define CC_SURFACES_DEBUG_VIEW_TRANSMIT_ENV_SPECULAR CC_SURFACES_DEBUG_VIEW_TRANSMIT_ENV_DIFFUSE + 1\n#define CC_SURFACES_DEBUG_VIEW_TRANSMIT_ALL CC_SURFACES_DEBUG_VIEW_TRANSMIT_ENV_SPECULAR + 1\n#define CC_SURFACES_DEBUG_VIEW_DIRECT_2ND_SPECULAR CC_SURFACES_DEBUG_VIEW_TRANSMIT_ALL + 1\n#define CC_SURFACES_DEBUG_VIEW_ENVIRONMENT_2ND_SPECULAR CC_SURFACES_DEBUG_VIEW_DIRECT_2ND_SPECULAR + 1\n#define CC_SURFACES_DEBUG_VIEW_2ND_SPECULAR_ALL CC_SURFACES_DEBUG_VIEW_ENVIRONMENT_2ND_SPECULAR + 1\n#define CC_SURFACES_DEBUG_VIEW_FOG CC_SURFACES_DEBUG_VIEW_2ND_SPECULAR_ALL + 1\n#define CC_SURFACES_DEBUG_VIEW_SINGLE 1\n#define CC_SURFACES_DEBUG_VIEW_COMPOSITE_AND_MISC 2\n#define IS_DEBUG_VIEW_ENABLE_WITH_CAMERA (cc_surfaceTransform.y != 3.0)\n#define IS_DEBUG_VIEW_LIGHTING_ENABLE_WITH_ALBEDO (UnpackBitFromFloat(cc_debug_view_mode.w, 6) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_MISC_ENABLE_CSM_LAYER_COLORATION (UnpackBitFromFloat(cc_debug_view_mode.w, 7) && IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_DIRECT_DIFFUSE (UnpackBitFromFloat(cc_debug_view_mode.y, 0) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_DIRECT_SPECULAR (UnpackBitFromFloat(cc_debug_view_mode.y, 1) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_ENV_DIFFUSE (UnpackBitFromFloat(cc_debug_view_mode.y, 2) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_ENV_SPECULAR (UnpackBitFromFloat(cc_debug_view_mode.y, 3) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_EMISSIVE (UnpackBitFromFloat(cc_debug_view_mode.y, 4) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_LIGHT_MAP (UnpackBitFromFloat(cc_debug_view_mode.y, 5) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_SHADOW (UnpackBitFromFloat(cc_debug_view_mode.y, 6) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_AO (UnpackBitFromFloat(cc_debug_view_mode.y, 7) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_NORMAL_MAP (UnpackBitFromFloat(cc_debug_view_mode.z, 0) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_FOG (UnpackBitFromFloat(cc_debug_view_mode.z, 1) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_TONE_MAPPING (UnpackBitFromFloat(cc_debug_view_mode.z, 2) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_GAMMA_CORRECTION (UnpackBitFromFloat(cc_debug_view_mode.z, 3) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_FRESNEL (UnpackBitFromFloat(cc_debug_view_mode.z, 4) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_TRANSMIT_DIFFUSE (UnpackBitFromFloat(cc_debug_view_mode.z, 5) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_TRANSMIT_SPECULAR (UnpackBitFromFloat(cc_debug_view_mode.z, 6) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_2ND_SPECULAR (UnpackBitFromFloat(cc_debug_view_mode.z, 7) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_TT (UnpackBitFromFloat(cc_debug_view_mode.w, 0) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\nvec3 SRGBToLinear (vec3 gamma) {\n#ifdef CC_USE_SURFACE_SHADER\n  #if CC_USE_DEBUG_VIEW == CC_SURFACES_DEBUG_VIEW_COMPOSITE_AND_MISC && CC_SURFACES_ENABLE_DEBUG_VIEW\n    if (!IS_DEBUG_VIEW_COMPOSITE_ENABLE_GAMMA_CORRECTION) {\n      return gamma;\n    }\n  #endif\n#endif\n  return gamma * gamma;\n}\nvec3 LinearToSRGB(vec3 linear) {\n#ifdef CC_USE_SURFACE_SHADER\n  #if CC_USE_DEBUG_VIEW == CC_SURFACES_DEBUG_VIEW_COMPOSITE_AND_MISC && CC_SURFACES_ENABLE_DEBUG_VIEW\n    if (!IS_DEBUG_VIEW_COMPOSITE_ENABLE_GAMMA_CORRECTION) {\n      return linear;\n    }\n  #endif\n#endif\n  return sqrt(linear);\n}\nvec3 ACESToneMap (vec3 color) {\n  color = min(color, vec3(8.0));\n  const float A = 2.51;\n  const float B = 0.03;\n  const float C = 2.43;\n  const float D = 0.59;\n  const float E = 0.14;\n  return (color * (A * color + B)) / (color * (C * color + D) + E);\n}\nvec4 CCFragOutput (vec4 color) {\n  #if CC_USE_RGBE_OUTPUT\n    color = packRGBE(color.rgb);\n  #elif !CC_USE_FLOAT_OUTPUT\n    #if CC_USE_HDR && CC_TONE_MAPPING_TYPE == HDR_TONE_MAPPING_ACES\n      color.rgb = ACESToneMap(color.rgb);\n    #endif\n    color.rgb = LinearToSRGB(color.rgb);\n  #endif\n  return color;\n}\nvec3 RotationVecFromAxisY(vec3 v, float cosTheta, float sinTheta)\n{\n    vec3 result;\n    result.x = dot(v, vec3(cosTheta, 0.0, -sinTheta));\n    result.y = v.y;\n    result.z = dot(v, vec3(sinTheta, 0.0,  cosTheta));\n    return result;\n}\nvec3 RotationVecFromAxisY(vec3 v, float rotateAngleArc)\n{\n  return RotationVecFromAxisY(v, cos(rotateAngleArc), sin(rotateAngleArc));\n}\nlayout(location = 0) in mediump vec4 viewDir;\nlayout(set = 1, binding = 0) uniform samplerCube environmentMap;\nvec4 frag () {\n  vec3 rotationDir = RotationVecFromAxisY(viewDir.xyz, cc_surfaceTransform.z, cc_surfaceTransform.w);\n  #if USE_RGBE_CUBEMAP\n    vec3 c = unpackRGBE(fragTextureLod(environmentMap, rotationDir.xyz, 0.0));\n  #else\n    vec3 c = SRGBToLinear(fragTextureLod(environmentMap, rotationDir.xyz, 0.0).rgb);\n  #endif\n  vec4 color = CCFragOutput(vec4(c * cc_ambientSky.w, 1.0));\n  return color;\n}\nlayout(location = 0) out vec4 cc_FragColor;\nvoid main() { cc_FragColor = frag(); }"
+      },
+      "glsl3": {
+        "vert": "\nprecision highp float;\nlayout(std140) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n  mediump vec4 cc_probeInfo;\n  mediump vec4 cc_debug_view_mode;\n};\nlayout(std140) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_surfaceTransform;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\n#define QUATER_PI         0.78539816340\n#define HALF_PI           1.57079632679\n#define PI                3.14159265359\n#define PI2               6.28318530718\n#define PI4               12.5663706144\n#define INV_QUATER_PI     1.27323954474\n#define INV_HALF_PI       0.63661977237\n#define INV_PI            0.31830988618\n#define INV_PI2           0.15915494309\n#define INV_PI4           0.07957747155\n#define EPSILON           1e-6\n#define EPSILON_LOWP      1e-4\n#define LOG2              1.442695\n#define EXP_VALUE         2.71828183f\n#define FP_MAX            65504.0\n#define FP_SCALE          0.0009765625\n#define FP_SCALE_INV      1024.0\n#define GRAY_VECTOR       vec3(0.299, 0.587, 0.114)\n#define LIGHT_MAP_TYPE_DISABLED 0\n#define LIGHT_MAP_TYPE_ALL_IN_ONE 1\n#define LIGHT_MAP_TYPE_INDIRECT_OCCLUSION 2\n#define REFLECTION_PROBE_TYPE_NONE 0\n#define REFLECTION_PROBE_TYPE_CUBE 1\n#define REFLECTION_PROBE_TYPE_PLANAR 2\n#define LIGHT_TYPE_DIRECTIONAL 0.0\n#define LIGHT_TYPE_POINT 1.0\n#define LIGHT_TYPE_SPOT 2.0\n#define LIGHT_TYPE_SPHERE 3.0\n#define LIGHT_TYPE_RANGED_DIRECTIONAL 4.0\n#define IS_DIRECTIONAL_LIGHT(light_type) (abs(float(light_type) - float(LIGHT_TYPE_DIRECTIONAL)) < EPSILON_LOWP)\n#define IS_SPHERE_LIGHT(light_type) (abs(float(light_type) - float(LIGHT_TYPE_SPHERE)) < EPSILON_LOWP)\n#define IS_SPOT_LIGHT(light_type) (abs(float(light_type) - float(LIGHT_TYPE_SPOT)) < EPSILON_LOWP)\n#define IS_POINT_LIGHT(light_type) (abs(float(light_type) - float(LIGHT_TYPE_POINT)) < EPSILON_LOWP)\n#define IS_RANGED_DIRECTIONAL_LIGHT(light_type) (abs(float(light_type) - float(LIGHT_TYPE_RANGED_DIRECTIONAL)) < EPSILON_LOWP)\n#define TONE_MAPPING_ACES 0\n#define TONE_MAPPING_LINEAR 1\n#define SURFACES_MAX_TRANSMIT_DEPTH_VALUE 999999.0\nstruct StandardVertInput {\n  highp vec4 position;\n  vec3 normal;\n  vec4 tangent;\n};\nin vec3 a_position;\nin vec3 a_normal;\nin vec2 a_texCoord;\nin vec4 a_tangent;\n#if CC_USE_SKINNING\n    in vec4 a_joints;\n  in vec4 a_weights;\n#endif\n#if USE_INSTANCING\n  #if CC_USE_BAKED_ANIMATION\n    in highp vec4 a_jointAnimInfo;\n  #endif\n  in vec4 a_matWorld0;\n  in vec4 a_matWorld1;\n  in vec4 a_matWorld2;\n  #if CC_USE_LIGHTMAP\n    in vec4 a_lightingMapUVParam;\n  #endif\n  #if CC_USE_REFLECTION_PROBE || CC_RECEIVE_SHADOW\n    #if CC_RECEIVE_SHADOW\n    #endif\n    in vec4 a_localShadowBiasAndProbeId;\n  #endif\n  #if CC_USE_LIGHT_PROBE\n    in vec4 a_sh_linear_const_r;\n    in vec4 a_sh_linear_const_g;\n    in vec4 a_sh_linear_const_b;\n  #endif\n#endif\n#if CC_USE_MORPH\n    in float a_vertexId;\n#endif\nout mediump vec4 viewDir;\nvec4 vert () {\n    viewDir = vec4(a_position, 1.0);\n  mat4 matViewRotOnly = mat4(mat3(cc_matView));\n  vec4 pos = matViewRotOnly * viewDir;\n  if (cc_matProj[3].w > 0.0) {\n    mat4 matProj = cc_matProj;\n    matProj[0].x = 5.2;\n    matProj[1].y = 2.6;\n    matProj[2].zw = vec2(-1.0);\n    matProj[3].zw = vec2(0.0);\n    pos = matProj * pos;\n  } else {\n    pos = cc_matProj * pos;\n  }\n  pos.z = 0.99999 * pos.w;\n  return pos;\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\nprecision mediump float;\nlayout(std140) uniform CCGlobal {\n  highp   vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_nativeSize;\n  mediump vec4 cc_probeInfo;\n  mediump vec4 cc_debug_view_mode;\n};\nlayout(std140) uniform CCCamera {\n  highp   mat4 cc_matView;\n  highp   mat4 cc_matViewInv;\n  highp   mat4 cc_matProj;\n  highp   mat4 cc_matProjInv;\n  highp   mat4 cc_matViewProj;\n  highp   mat4 cc_matViewProjInv;\n  highp   vec4 cc_cameraPos;\n  mediump vec4 cc_surfaceTransform;\n  mediump vec4 cc_screenScale;\n  mediump vec4 cc_exposure;\n  mediump vec4 cc_mainLitDir;\n  mediump vec4 cc_mainLitColor;\n  mediump vec4 cc_ambientSky;\n  mediump vec4 cc_ambientGround;\n  mediump vec4 cc_fogColor;\n  mediump vec4 cc_fogBase;\n  mediump vec4 cc_fogAdd;\n  mediump vec4 cc_nearFar;\n  mediump vec4 cc_viewPort;\n};\nuniform samplerCube cc_environment;\nvec4 fragTextureLod (sampler2D tex, vec2 coord, float lod) {\n    return textureLod(tex, coord, lod);\n}\nvec4 fragTextureLod (samplerCube tex, vec3 coord, float lod) {\n    return textureLod(tex, coord, lod);\n}\nvec4 packRGBE (vec3 rgb) {\n  highp float maxComp = max(max(rgb.r, rgb.g), rgb.b);\n  highp float e = 128.0;\n  if (maxComp > 0.0001) {\n    e = log(maxComp) / log(1.1);\n    e = ceil(e);\n    e = clamp(e + 128.0, 0.0, 255.0);\n  }\n  highp float sc = 1.0 / pow(1.1, e - 128.0);\n  vec3 encode = clamp(rgb * sc, vec3(0.0), vec3(1.0)) * 255.0;\n  vec3 encode_rounded = floor(encode) + step(encode - floor(encode), vec3(0.5));\n  return vec4(encode_rounded, e) / 255.0;\n}\nvec3 unpackRGBE (vec4 rgbe) {\n  return rgbe.rgb * pow(1.1, rgbe.a * 255.0 - 128.0);\n}\n#define CC_SURFACES_DEBUG_VIEW_VERTEX_COLOR 1\n#define CC_SURFACES_DEBUG_VIEW_VERTEX_NORMAL CC_SURFACES_DEBUG_VIEW_VERTEX_COLOR + 1\n#define CC_SURFACES_DEBUG_VIEW_VERTEX_TANGENT CC_SURFACES_DEBUG_VIEW_VERTEX_NORMAL + 1\n#define CC_SURFACES_DEBUG_VIEW_WORLD_POS CC_SURFACES_DEBUG_VIEW_VERTEX_TANGENT + 1\n#define CC_SURFACES_DEBUG_VIEW_VERTEX_MIRROR CC_SURFACES_DEBUG_VIEW_WORLD_POS + 1\n#define CC_SURFACES_DEBUG_VIEW_FACE_SIDE CC_SURFACES_DEBUG_VIEW_VERTEX_MIRROR + 1\n#define CC_SURFACES_DEBUG_VIEW_UV0 CC_SURFACES_DEBUG_VIEW_FACE_SIDE + 1\n#define CC_SURFACES_DEBUG_VIEW_UV1 CC_SURFACES_DEBUG_VIEW_UV0 + 1\n#define CC_SURFACES_DEBUG_VIEW_UVLIGHTMAP CC_SURFACES_DEBUG_VIEW_UV1 + 1\n#define CC_SURFACES_DEBUG_VIEW_PROJ_DEPTH CC_SURFACES_DEBUG_VIEW_UVLIGHTMAP + 1\n#define CC_SURFACES_DEBUG_VIEW_LINEAR_DEPTH CC_SURFACES_DEBUG_VIEW_PROJ_DEPTH + 1\n#define CC_SURFACES_DEBUG_VIEW_FRAGMENT_NORMAL CC_SURFACES_DEBUG_VIEW_LINEAR_DEPTH + 1\n#define CC_SURFACES_DEBUG_VIEW_FRAGMENT_TANGENT CC_SURFACES_DEBUG_VIEW_FRAGMENT_NORMAL + 1\n#define CC_SURFACES_DEBUG_VIEW_FRAGMENT_BINORMAL CC_SURFACES_DEBUG_VIEW_FRAGMENT_TANGENT + 1\n#define CC_SURFACES_DEBUG_VIEW_BASE_COLOR CC_SURFACES_DEBUG_VIEW_FRAGMENT_BINORMAL + 1\n#define CC_SURFACES_DEBUG_VIEW_DIFFUSE_COLOR CC_SURFACES_DEBUG_VIEW_BASE_COLOR + 1\n#define CC_SURFACES_DEBUG_VIEW_SPECULAR_COLOR CC_SURFACES_DEBUG_VIEW_DIFFUSE_COLOR + 1\n#define CC_SURFACES_DEBUG_VIEW_TRANSPARENCY CC_SURFACES_DEBUG_VIEW_SPECULAR_COLOR + 1\n#define CC_SURFACES_DEBUG_VIEW_METALLIC CC_SURFACES_DEBUG_VIEW_TRANSPARENCY + 1\n#define CC_SURFACES_DEBUG_VIEW_ROUGHNESS CC_SURFACES_DEBUG_VIEW_METALLIC + 1\n#define CC_SURFACES_DEBUG_VIEW_SPECULAR_INTENSITY CC_SURFACES_DEBUG_VIEW_ROUGHNESS + 1\n#define CC_SURFACES_DEBUG_VIEW_IOR CC_SURFACES_DEBUG_VIEW_SPECULAR_INTENSITY + 1\n#define CC_SURFACES_DEBUG_VIEW_DIRECT_DIFFUSE CC_SURFACES_DEBUG_VIEW_IOR + 1\n#define CC_SURFACES_DEBUG_VIEW_DIRECT_SPECULAR CC_SURFACES_DEBUG_VIEW_DIRECT_DIFFUSE + 1\n#define CC_SURFACES_DEBUG_VIEW_DIRECT_ALL CC_SURFACES_DEBUG_VIEW_DIRECT_SPECULAR + 1\n#define CC_SURFACES_DEBUG_VIEW_ENV_DIFFUSE CC_SURFACES_DEBUG_VIEW_DIRECT_ALL + 1\n#define CC_SURFACES_DEBUG_VIEW_ENV_SPECULAR CC_SURFACES_DEBUG_VIEW_ENV_DIFFUSE + 1\n#define CC_SURFACES_DEBUG_VIEW_ENV_ALL CC_SURFACES_DEBUG_VIEW_ENV_SPECULAR + 1\n#define CC_SURFACES_DEBUG_VIEW_EMISSIVE CC_SURFACES_DEBUG_VIEW_ENV_ALL + 1\n#define CC_SURFACES_DEBUG_VIEW_LIGHT_MAP CC_SURFACES_DEBUG_VIEW_EMISSIVE + 1\n#define CC_SURFACES_DEBUG_VIEW_SHADOW CC_SURFACES_DEBUG_VIEW_LIGHT_MAP + 1\n#define CC_SURFACES_DEBUG_VIEW_AO CC_SURFACES_DEBUG_VIEW_SHADOW + 1\n#define CC_SURFACES_DEBUG_VIEW_FRESNEL CC_SURFACES_DEBUG_VIEW_AO + 1\n#define CC_SURFACES_DEBUG_VIEW_TRANSMIT_DIRECT_DIFFUSE CC_SURFACES_DEBUG_VIEW_FRESNEL + 1\n#define CC_SURFACES_DEBUG_VIEW_TRANSMIT_DIRECT_SPECULAR CC_SURFACES_DEBUG_VIEW_TRANSMIT_DIRECT_DIFFUSE + 1\n#define CC_SURFACES_DEBUG_VIEW_TRANSMIT_ENV_DIFFUSE CC_SURFACES_DEBUG_VIEW_TRANSMIT_DIRECT_SPECULAR + 1\n#define CC_SURFACES_DEBUG_VIEW_TRANSMIT_ENV_SPECULAR CC_SURFACES_DEBUG_VIEW_TRANSMIT_ENV_DIFFUSE + 1\n#define CC_SURFACES_DEBUG_VIEW_TRANSMIT_ALL CC_SURFACES_DEBUG_VIEW_TRANSMIT_ENV_SPECULAR + 1\n#define CC_SURFACES_DEBUG_VIEW_DIRECT_2ND_SPECULAR CC_SURFACES_DEBUG_VIEW_TRANSMIT_ALL + 1\n#define CC_SURFACES_DEBUG_VIEW_ENVIRONMENT_2ND_SPECULAR CC_SURFACES_DEBUG_VIEW_DIRECT_2ND_SPECULAR + 1\n#define CC_SURFACES_DEBUG_VIEW_2ND_SPECULAR_ALL CC_SURFACES_DEBUG_VIEW_ENVIRONMENT_2ND_SPECULAR + 1\n#define CC_SURFACES_DEBUG_VIEW_FOG CC_SURFACES_DEBUG_VIEW_2ND_SPECULAR_ALL + 1\n#define CC_SURFACES_DEBUG_VIEW_SINGLE 1\n#define CC_SURFACES_DEBUG_VIEW_COMPOSITE_AND_MISC 2\n#define IS_DEBUG_VIEW_ENABLE_WITH_CAMERA (cc_surfaceTransform.y != 3.0)\n#define IS_DEBUG_VIEW_LIGHTING_ENABLE_WITH_ALBEDO (UnpackBitFromFloat(cc_debug_view_mode.w, 6) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_MISC_ENABLE_CSM_LAYER_COLORATION (UnpackBitFromFloat(cc_debug_view_mode.w, 7) && IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_DIRECT_DIFFUSE (UnpackBitFromFloat(cc_debug_view_mode.y, 0) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_DIRECT_SPECULAR (UnpackBitFromFloat(cc_debug_view_mode.y, 1) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_ENV_DIFFUSE (UnpackBitFromFloat(cc_debug_view_mode.y, 2) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_ENV_SPECULAR (UnpackBitFromFloat(cc_debug_view_mode.y, 3) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_EMISSIVE (UnpackBitFromFloat(cc_debug_view_mode.y, 4) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_LIGHT_MAP (UnpackBitFromFloat(cc_debug_view_mode.y, 5) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_SHADOW (UnpackBitFromFloat(cc_debug_view_mode.y, 6) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_AO (UnpackBitFromFloat(cc_debug_view_mode.y, 7) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_NORMAL_MAP (UnpackBitFromFloat(cc_debug_view_mode.z, 0) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_FOG (UnpackBitFromFloat(cc_debug_view_mode.z, 1) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_TONE_MAPPING (UnpackBitFromFloat(cc_debug_view_mode.z, 2) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_GAMMA_CORRECTION (UnpackBitFromFloat(cc_debug_view_mode.z, 3) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_FRESNEL (UnpackBitFromFloat(cc_debug_view_mode.z, 4) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_TRANSMIT_DIFFUSE (UnpackBitFromFloat(cc_debug_view_mode.z, 5) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_TRANSMIT_SPECULAR (UnpackBitFromFloat(cc_debug_view_mode.z, 6) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_2ND_SPECULAR (UnpackBitFromFloat(cc_debug_view_mode.z, 7) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_TT (UnpackBitFromFloat(cc_debug_view_mode.w, 0) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\nvec3 SRGBToLinear (vec3 gamma) {\n#ifdef CC_USE_SURFACE_SHADER\n  #if CC_USE_DEBUG_VIEW == CC_SURFACES_DEBUG_VIEW_COMPOSITE_AND_MISC && CC_SURFACES_ENABLE_DEBUG_VIEW\n    if (!IS_DEBUG_VIEW_COMPOSITE_ENABLE_GAMMA_CORRECTION) {\n      return gamma;\n    }\n  #endif\n#endif\n  return gamma * gamma;\n}\nvec3 LinearToSRGB(vec3 linear) {\n#ifdef CC_USE_SURFACE_SHADER\n  #if CC_USE_DEBUG_VIEW == CC_SURFACES_DEBUG_VIEW_COMPOSITE_AND_MISC && CC_SURFACES_ENABLE_DEBUG_VIEW\n    if (!IS_DEBUG_VIEW_COMPOSITE_ENABLE_GAMMA_CORRECTION) {\n      return linear;\n    }\n  #endif\n#endif\n  return sqrt(linear);\n}\nvec3 ACESToneMap (vec3 color) {\n  color = min(color, vec3(8.0));\n  const float A = 2.51;\n  const float B = 0.03;\n  const float C = 2.43;\n  const float D = 0.59;\n  const float E = 0.14;\n  return (color * (A * color + B)) / (color * (C * color + D) + E);\n}\nvec4 CCFragOutput (vec4 color) {\n  #if CC_USE_RGBE_OUTPUT\n    color = packRGBE(color.rgb);\n  #elif !CC_USE_FLOAT_OUTPUT\n    #if CC_USE_HDR && CC_TONE_MAPPING_TYPE == HDR_TONE_MAPPING_ACES\n      color.rgb = ACESToneMap(color.rgb);\n    #endif\n    color.rgb = LinearToSRGB(color.rgb);\n  #endif\n  return color;\n}\nvec3 RotationVecFromAxisY(vec3 v, float cosTheta, float sinTheta)\n{\n    vec3 result;\n    result.x = dot(v, vec3(cosTheta, 0.0, -sinTheta));\n    result.y = v.y;\n    result.z = dot(v, vec3(sinTheta, 0.0,  cosTheta));\n    return result;\n}\nvec3 RotationVecFromAxisY(vec3 v, float rotateAngleArc)\n{\n  return RotationVecFromAxisY(v, cos(rotateAngleArc), sin(rotateAngleArc));\n}\nin mediump vec4 viewDir;\nuniform samplerCube environmentMap;\nvec4 frag () {\n  vec3 rotationDir = RotationVecFromAxisY(viewDir.xyz, cc_surfaceTransform.z, cc_surfaceTransform.w);\n  #if USE_RGBE_CUBEMAP\n    vec3 c = unpackRGBE(fragTextureLod(environmentMap, rotationDir.xyz, 0.0));\n  #else\n    vec3 c = SRGBToLinear(fragTextureLod(environmentMap, rotationDir.xyz, 0.0).rgb);\n  #endif\n  vec4 color = CCFragOutput(vec4(c * cc_ambientSky.w, 1.0));\n  return color;\n}\nlayout(location = 0) out vec4 cc_FragColor;\nvoid main() { cc_FragColor = frag(); }"
+      },
+      "glsl1": {
+        "vert": "\nprecision highp float;\nuniform highp mat4 cc_matView;\n  uniform highp mat4 cc_matProj;\n#define QUATER_PI         0.78539816340\n#define HALF_PI           1.57079632679\n#define PI                3.14159265359\n#define PI2               6.28318530718\n#define PI4               12.5663706144\n#define INV_QUATER_PI     1.27323954474\n#define INV_HALF_PI       0.63661977237\n#define INV_PI            0.31830988618\n#define INV_PI2           0.15915494309\n#define INV_PI4           0.07957747155\n#define EPSILON           1e-6\n#define EPSILON_LOWP      1e-4\n#define LOG2              1.442695\n#define EXP_VALUE         2.71828183f\n#define FP_MAX            65504.0\n#define FP_SCALE          0.0009765625\n#define FP_SCALE_INV      1024.0\n#define GRAY_VECTOR       vec3(0.299, 0.587, 0.114)\n#define LIGHT_MAP_TYPE_DISABLED 0\n#define LIGHT_MAP_TYPE_ALL_IN_ONE 1\n#define LIGHT_MAP_TYPE_INDIRECT_OCCLUSION 2\n#define REFLECTION_PROBE_TYPE_NONE 0\n#define REFLECTION_PROBE_TYPE_CUBE 1\n#define REFLECTION_PROBE_TYPE_PLANAR 2\n#define LIGHT_TYPE_DIRECTIONAL 0.0\n#define LIGHT_TYPE_POINT 1.0\n#define LIGHT_TYPE_SPOT 2.0\n#define LIGHT_TYPE_SPHERE 3.0\n#define LIGHT_TYPE_RANGED_DIRECTIONAL 4.0\n#define IS_DIRECTIONAL_LIGHT(light_type) (abs(float(light_type) - float(LIGHT_TYPE_DIRECTIONAL)) < EPSILON_LOWP)\n#define IS_SPHERE_LIGHT(light_type) (abs(float(light_type) - float(LIGHT_TYPE_SPHERE)) < EPSILON_LOWP)\n#define IS_SPOT_LIGHT(light_type) (abs(float(light_type) - float(LIGHT_TYPE_SPOT)) < EPSILON_LOWP)\n#define IS_POINT_LIGHT(light_type) (abs(float(light_type) - float(LIGHT_TYPE_POINT)) < EPSILON_LOWP)\n#define IS_RANGED_DIRECTIONAL_LIGHT(light_type) (abs(float(light_type) - float(LIGHT_TYPE_RANGED_DIRECTIONAL)) < EPSILON_LOWP)\n#define TONE_MAPPING_ACES 0\n#define TONE_MAPPING_LINEAR 1\n#define SURFACES_MAX_TRANSMIT_DEPTH_VALUE 999999.0\nstruct StandardVertInput {\n  highp vec4 position;\n  vec3 normal;\n  vec4 tangent;\n};\nattribute vec3 a_position;\nattribute vec3 a_normal;\nattribute vec2 a_texCoord;\nattribute vec4 a_tangent;\n#if CC_USE_SKINNING\n    attribute vec4 a_joints;\n  attribute vec4 a_weights;\n#endif\n#if USE_INSTANCING\n  #if CC_USE_BAKED_ANIMATION\n    attribute highp vec4 a_jointAnimInfo;\n  #endif\n  attribute vec4 a_matWorld0;\n  attribute vec4 a_matWorld1;\n  attribute vec4 a_matWorld2;\n  #if CC_USE_LIGHTMAP\n    attribute vec4 a_lightingMapUVParam;\n  #endif\n  #if CC_USE_REFLECTION_PROBE || CC_RECEIVE_SHADOW\n    #if CC_RECEIVE_SHADOW\n    #endif\n    attribute vec4 a_localShadowBiasAndProbeId;\n  #endif\n  #if CC_USE_LIGHT_PROBE\n    attribute vec4 a_sh_linear_const_r;\n    attribute vec4 a_sh_linear_const_g;\n    attribute vec4 a_sh_linear_const_b;\n  #endif\n#endif\n#if CC_USE_MORPH\n    attribute float a_vertexId;\n#endif\nvarying mediump vec4 viewDir;\nvec4 vert () {\n    viewDir = vec4(a_position, 1.0);\n  mat4 matViewRotOnly = mat4(mat3(cc_matView));\n  vec4 pos = matViewRotOnly * viewDir;\n  if (cc_matProj[3].w > 0.0) {\n    mat4 matProj = cc_matProj;\n    matProj[0].x = 5.2;\n    matProj[1].y = 2.6;\n    matProj[2].zw = vec2(-1.0);\n    matProj[3].zw = vec2(0.0);\n    pos = matProj * pos;\n  } else {\n    pos = cc_matProj * pos;\n  }\n  pos.z = 0.99999 * pos.w;\n  return pos;\n}\nvoid main() { gl_Position = vert(); }",
+        "frag": "\n#ifdef GL_EXT_shader_texture_lod\n#extension GL_EXT_shader_texture_lod: enable\n#endif\nprecision mediump float;\nuniform mediump vec4 cc_debug_view_mode;\nuniform mediump vec4 cc_surfaceTransform;\n  uniform mediump vec4 cc_ambientSky;\nuniform samplerCube cc_environment;\nvec4 fragTextureLod (sampler2D tex, vec2 coord, float lod) {\n    #ifdef GL_EXT_shader_texture_lod\n      return texture2DLodEXT(tex, coord, lod);\n    #else\n      return texture2D(tex, coord, lod);\n    #endif\n}\nvec4 fragTextureLod (samplerCube tex, vec3 coord, float lod) {\n    #ifdef GL_EXT_shader_texture_lod\n      return textureCubeLodEXT(tex, coord, lod);\n    #else\n      return textureCube(tex, coord, lod);\n    #endif\n}\nvec4 packRGBE (vec3 rgb) {\n  highp float maxComp = max(max(rgb.r, rgb.g), rgb.b);\n  highp float e = 128.0;\n  if (maxComp > 0.0001) {\n    e = log(maxComp) / log(1.1);\n    e = ceil(e);\n    e = clamp(e + 128.0, 0.0, 255.0);\n  }\n  highp float sc = 1.0 / pow(1.1, e - 128.0);\n  vec3 encode = clamp(rgb * sc, vec3(0.0), vec3(1.0)) * 255.0;\n  vec3 encode_rounded = floor(encode) + step(encode - floor(encode), vec3(0.5));\n  return vec4(encode_rounded, e) / 255.0;\n}\nvec3 unpackRGBE (vec4 rgbe) {\n  return rgbe.rgb * pow(1.1, rgbe.a * 255.0 - 128.0);\n}\n#define CC_SURFACES_DEBUG_VIEW_VERTEX_COLOR 1\n#define CC_SURFACES_DEBUG_VIEW_VERTEX_NORMAL CC_SURFACES_DEBUG_VIEW_VERTEX_COLOR + 1\n#define CC_SURFACES_DEBUG_VIEW_VERTEX_TANGENT CC_SURFACES_DEBUG_VIEW_VERTEX_NORMAL + 1\n#define CC_SURFACES_DEBUG_VIEW_WORLD_POS CC_SURFACES_DEBUG_VIEW_VERTEX_TANGENT + 1\n#define CC_SURFACES_DEBUG_VIEW_VERTEX_MIRROR CC_SURFACES_DEBUG_VIEW_WORLD_POS + 1\n#define CC_SURFACES_DEBUG_VIEW_FACE_SIDE CC_SURFACES_DEBUG_VIEW_VERTEX_MIRROR + 1\n#define CC_SURFACES_DEBUG_VIEW_UV0 CC_SURFACES_DEBUG_VIEW_FACE_SIDE + 1\n#define CC_SURFACES_DEBUG_VIEW_UV1 CC_SURFACES_DEBUG_VIEW_UV0 + 1\n#define CC_SURFACES_DEBUG_VIEW_UVLIGHTMAP CC_SURFACES_DEBUG_VIEW_UV1 + 1\n#define CC_SURFACES_DEBUG_VIEW_PROJ_DEPTH CC_SURFACES_DEBUG_VIEW_UVLIGHTMAP + 1\n#define CC_SURFACES_DEBUG_VIEW_LINEAR_DEPTH CC_SURFACES_DEBUG_VIEW_PROJ_DEPTH + 1\n#define CC_SURFACES_DEBUG_VIEW_FRAGMENT_NORMAL CC_SURFACES_DEBUG_VIEW_LINEAR_DEPTH + 1\n#define CC_SURFACES_DEBUG_VIEW_FRAGMENT_TANGENT CC_SURFACES_DEBUG_VIEW_FRAGMENT_NORMAL + 1\n#define CC_SURFACES_DEBUG_VIEW_FRAGMENT_BINORMAL CC_SURFACES_DEBUG_VIEW_FRAGMENT_TANGENT + 1\n#define CC_SURFACES_DEBUG_VIEW_BASE_COLOR CC_SURFACES_DEBUG_VIEW_FRAGMENT_BINORMAL + 1\n#define CC_SURFACES_DEBUG_VIEW_DIFFUSE_COLOR CC_SURFACES_DEBUG_VIEW_BASE_COLOR + 1\n#define CC_SURFACES_DEBUG_VIEW_SPECULAR_COLOR CC_SURFACES_DEBUG_VIEW_DIFFUSE_COLOR + 1\n#define CC_SURFACES_DEBUG_VIEW_TRANSPARENCY CC_SURFACES_DEBUG_VIEW_SPECULAR_COLOR + 1\n#define CC_SURFACES_DEBUG_VIEW_METALLIC CC_SURFACES_DEBUG_VIEW_TRANSPARENCY + 1\n#define CC_SURFACES_DEBUG_VIEW_ROUGHNESS CC_SURFACES_DEBUG_VIEW_METALLIC + 1\n#define CC_SURFACES_DEBUG_VIEW_SPECULAR_INTENSITY CC_SURFACES_DEBUG_VIEW_ROUGHNESS + 1\n#define CC_SURFACES_DEBUG_VIEW_IOR CC_SURFACES_DEBUG_VIEW_SPECULAR_INTENSITY + 1\n#define CC_SURFACES_DEBUG_VIEW_DIRECT_DIFFUSE CC_SURFACES_DEBUG_VIEW_IOR + 1\n#define CC_SURFACES_DEBUG_VIEW_DIRECT_SPECULAR CC_SURFACES_DEBUG_VIEW_DIRECT_DIFFUSE + 1\n#define CC_SURFACES_DEBUG_VIEW_DIRECT_ALL CC_SURFACES_DEBUG_VIEW_DIRECT_SPECULAR + 1\n#define CC_SURFACES_DEBUG_VIEW_ENV_DIFFUSE CC_SURFACES_DEBUG_VIEW_DIRECT_ALL + 1\n#define CC_SURFACES_DEBUG_VIEW_ENV_SPECULAR CC_SURFACES_DEBUG_VIEW_ENV_DIFFUSE + 1\n#define CC_SURFACES_DEBUG_VIEW_ENV_ALL CC_SURFACES_DEBUG_VIEW_ENV_SPECULAR + 1\n#define CC_SURFACES_DEBUG_VIEW_EMISSIVE CC_SURFACES_DEBUG_VIEW_ENV_ALL + 1\n#define CC_SURFACES_DEBUG_VIEW_LIGHT_MAP CC_SURFACES_DEBUG_VIEW_EMISSIVE + 1\n#define CC_SURFACES_DEBUG_VIEW_SHADOW CC_SURFACES_DEBUG_VIEW_LIGHT_MAP + 1\n#define CC_SURFACES_DEBUG_VIEW_AO CC_SURFACES_DEBUG_VIEW_SHADOW + 1\n#define CC_SURFACES_DEBUG_VIEW_FRESNEL CC_SURFACES_DEBUG_VIEW_AO + 1\n#define CC_SURFACES_DEBUG_VIEW_TRANSMIT_DIRECT_DIFFUSE CC_SURFACES_DEBUG_VIEW_FRESNEL + 1\n#define CC_SURFACES_DEBUG_VIEW_TRANSMIT_DIRECT_SPECULAR CC_SURFACES_DEBUG_VIEW_TRANSMIT_DIRECT_DIFFUSE + 1\n#define CC_SURFACES_DEBUG_VIEW_TRANSMIT_ENV_DIFFUSE CC_SURFACES_DEBUG_VIEW_TRANSMIT_DIRECT_SPECULAR + 1\n#define CC_SURFACES_DEBUG_VIEW_TRANSMIT_ENV_SPECULAR CC_SURFACES_DEBUG_VIEW_TRANSMIT_ENV_DIFFUSE + 1\n#define CC_SURFACES_DEBUG_VIEW_TRANSMIT_ALL CC_SURFACES_DEBUG_VIEW_TRANSMIT_ENV_SPECULAR + 1\n#define CC_SURFACES_DEBUG_VIEW_DIRECT_2ND_SPECULAR CC_SURFACES_DEBUG_VIEW_TRANSMIT_ALL + 1\n#define CC_SURFACES_DEBUG_VIEW_ENVIRONMENT_2ND_SPECULAR CC_SURFACES_DEBUG_VIEW_DIRECT_2ND_SPECULAR + 1\n#define CC_SURFACES_DEBUG_VIEW_2ND_SPECULAR_ALL CC_SURFACES_DEBUG_VIEW_ENVIRONMENT_2ND_SPECULAR + 1\n#define CC_SURFACES_DEBUG_VIEW_FOG CC_SURFACES_DEBUG_VIEW_2ND_SPECULAR_ALL + 1\n#define CC_SURFACES_DEBUG_VIEW_SINGLE 1\n#define CC_SURFACES_DEBUG_VIEW_COMPOSITE_AND_MISC 2\n#define IS_DEBUG_VIEW_ENABLE_WITH_CAMERA (cc_surfaceTransform.y != 3.0)\n#define IS_DEBUG_VIEW_LIGHTING_ENABLE_WITH_ALBEDO (UnpackBitFromFloat(cc_debug_view_mode.w, 6) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_MISC_ENABLE_CSM_LAYER_COLORATION (UnpackBitFromFloat(cc_debug_view_mode.w, 7) && IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_DIRECT_DIFFUSE (UnpackBitFromFloat(cc_debug_view_mode.y, 0) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_DIRECT_SPECULAR (UnpackBitFromFloat(cc_debug_view_mode.y, 1) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_ENV_DIFFUSE (UnpackBitFromFloat(cc_debug_view_mode.y, 2) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_ENV_SPECULAR (UnpackBitFromFloat(cc_debug_view_mode.y, 3) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_EMISSIVE (UnpackBitFromFloat(cc_debug_view_mode.y, 4) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_LIGHT_MAP (UnpackBitFromFloat(cc_debug_view_mode.y, 5) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_SHADOW (UnpackBitFromFloat(cc_debug_view_mode.y, 6) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_AO (UnpackBitFromFloat(cc_debug_view_mode.y, 7) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_NORMAL_MAP (UnpackBitFromFloat(cc_debug_view_mode.z, 0) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_FOG (UnpackBitFromFloat(cc_debug_view_mode.z, 1) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_TONE_MAPPING (UnpackBitFromFloat(cc_debug_view_mode.z, 2) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_GAMMA_CORRECTION (UnpackBitFromFloat(cc_debug_view_mode.z, 3) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_FRESNEL (UnpackBitFromFloat(cc_debug_view_mode.z, 4) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_TRANSMIT_DIFFUSE (UnpackBitFromFloat(cc_debug_view_mode.z, 5) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_TRANSMIT_SPECULAR (UnpackBitFromFloat(cc_debug_view_mode.z, 6) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_2ND_SPECULAR (UnpackBitFromFloat(cc_debug_view_mode.z, 7) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\n#define IS_DEBUG_VIEW_COMPOSITE_ENABLE_TT (UnpackBitFromFloat(cc_debug_view_mode.w, 0) || !IS_DEBUG_VIEW_ENABLE_WITH_CAMERA)\nvec3 SRGBToLinear (vec3 gamma) {\n#ifdef CC_USE_SURFACE_SHADER\n  #if CC_USE_DEBUG_VIEW == CC_SURFACES_DEBUG_VIEW_COMPOSITE_AND_MISC && CC_SURFACES_ENABLE_DEBUG_VIEW\n    if (!IS_DEBUG_VIEW_COMPOSITE_ENABLE_GAMMA_CORRECTION) {\n      return gamma;\n    }\n  #endif\n#endif\n  return gamma * gamma;\n}\nvec3 LinearToSRGB(vec3 linear) {\n#ifdef CC_USE_SURFACE_SHADER\n  #if CC_USE_DEBUG_VIEW == CC_SURFACES_DEBUG_VIEW_COMPOSITE_AND_MISC && CC_SURFACES_ENABLE_DEBUG_VIEW\n    if (!IS_DEBUG_VIEW_COMPOSITE_ENABLE_GAMMA_CORRECTION) {\n      return linear;\n    }\n  #endif\n#endif\n  return sqrt(linear);\n}\nvec3 ACESToneMap (vec3 color) {\n  color = min(color, vec3(8.0));\n  const float A = 2.51;\n  const float B = 0.03;\n  const float C = 2.43;\n  const float D = 0.59;\n  const float E = 0.14;\n  return (color * (A * color + B)) / (color * (C * color + D) + E);\n}\nvec4 CCFragOutput (vec4 color) {\n  #if CC_USE_RGBE_OUTPUT\n    color = packRGBE(color.rgb);\n  #elif !CC_USE_FLOAT_OUTPUT\n    #if CC_USE_HDR && CC_TONE_MAPPING_TYPE == HDR_TONE_MAPPING_ACES\n      color.rgb = ACESToneMap(color.rgb);\n    #endif\n    color.rgb = LinearToSRGB(color.rgb);\n  #endif\n  return color;\n}\nvec3 RotationVecFromAxisY(vec3 v, float cosTheta, float sinTheta)\n{\n    vec3 result;\n    result.x = dot(v, vec3(cosTheta, 0.0, -sinTheta));\n    result.y = v.y;\n    result.z = dot(v, vec3(sinTheta, 0.0,  cosTheta));\n    return result;\n}\nvec3 RotationVecFromAxisY(vec3 v, float rotateAngleArc)\n{\n  return RotationVecFromAxisY(v, cos(rotateAngleArc), sin(rotateAngleArc));\n}\nvarying mediump vec4 viewDir;\nuniform samplerCube environmentMap;\nvec4 frag () {\n  vec3 rotationDir = RotationVecFromAxisY(viewDir.xyz, cc_surfaceTransform.z, cc_surfaceTransform.w);\n  #if USE_RGBE_CUBEMAP\n    vec3 c = unpackRGBE(fragTextureLod(environmentMap, rotationDir.xyz, 0.0));\n  #else\n    vec3 c = SRGBToLinear(fragTextureLod(environmentMap, rotationDir.xyz, 0.0).rgb);\n  #endif\n  vec4 color = CCFragOutput(vec4(c * cc_ambientSky.w, 1.0));\n  return color;\n}\nvoid main() { gl_FragColor = frag(); }"
+      },
+      "builtins": {
+        "globals": {
+          "blocks": [
+            {
+              "name": "CCGlobal",
+              "defines": []
+            },
+            {
+              "name": "CCCamera",
+              "defines": []
+            }
+          ],
+          "samplerTextures": [
+            {
+              "name": "cc_environment",
+              "defines": []
+            }
+          ],
+          "buffers": [],
+          "images": []
+        },
+        "locals": {
+          "blocks": [],
+          "samplerTextures": [],
+          "buffers": [],
+          "images": []
+        },
+        "statistics": {
+          "CC_EFFECT_USED_VERTEX_UNIFORM_VECTORS": 42,
+          "CC_EFFECT_USED_FRAGMENT_UNIFORM_VECTORS": 42
+        }
+      },
+      "defines": [
+        {
+          "name": "USE_INSTANCING",
+          "type": "boolean",
+          "defines": [],
+          "editor": {
+            "elevated": true
+          }
+        },
+        {
+          "name": "CC_USE_SKINNING",
+          "type": "boolean",
+          "defines": []
+        },
+        {
+          "name": "CC_USE_BAKED_ANIMATION",
+          "type": "boolean",
+          "defines": [
+            "USE_INSTANCING"
+          ]
+        },
+        {
+          "name": "CC_USE_LIGHTMAP",
+          "type": "boolean",
+          "defines": [
+            "USE_INSTANCING"
+          ]
+        },
+        {
+          "name": "CC_USE_REFLECTION_PROBE",
+          "type": "boolean",
+          "defines": [
+            "USE_INSTANCING"
+          ]
+        },
+        {
+          "name": "CC_RECEIVE_SHADOW",
+          "type": "boolean",
+          "defines": [
+            "USE_INSTANCING"
+          ]
+        },
+        {
+          "name": "CC_USE_LIGHT_PROBE",
+          "type": "boolean",
+          "defines": [
+            "USE_INSTANCING"
+          ]
+        },
+        {
+          "name": "CC_USE_MORPH",
+          "type": "boolean",
+          "defines": []
+        },
+        {
+          "name": "CC_USE_IBL",
+          "type": "number",
+          "defines": [],
+          "range": [
+            0,
+            2
+          ]
+        },
+        {
+          "name": "CC_USE_DEBUG_VIEW",
+          "type": "number",
+          "defines": [],
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "CC_SURFACES_ENABLE_DEBUG_VIEW",
+          "type": "boolean",
+          "defines": [
+            "CC_USE_DEBUG_VIEW",
+            "CC_SURFACES_DEBUG_VIEW_COMPOSITE_AND_MISC"
+          ]
+        },
+        {
+          "name": "CC_USE_RGBE_OUTPUT",
+          "type": "boolean",
+          "defines": []
+        },
+        {
+          "name": "CC_USE_FLOAT_OUTPUT",
+          "type": "boolean",
+          "defines": [
+            "!CC_USE_RGBE_OUTPUT"
+          ]
+        },
+        {
+          "name": "CC_USE_HDR",
+          "type": "boolean",
+          "defines": [
+            "!CC_USE_RGBE_OUTPUT",
+            "!CC_USE_FLOAT_OUTPUT"
+          ]
+        },
+        {
+          "name": "CC_TONE_MAPPING_TYPE",
+          "type": "number",
+          "defines": [
+            "CC_USE_HDR",
+            "!CC_USE_RGBE_OUTPUT",
+            "!CC_USE_FLOAT_OUTPUT"
+          ],
+          "range": [
+            0,
+            3
+          ]
+        },
+        {
+          "name": "HDR_TONE_MAPPING_ACES",
+          "type": "boolean",
+          "defines": [
+            "CC_USE_HDR",
+            "CC_TONE_MAPPING_TYPE",
+            "!CC_USE_RGBE_OUTPUT",
+            "!CC_USE_FLOAT_OUTPUT"
+          ]
+        },
+        {
+          "name": "USE_RGBE_CUBEMAP",
+          "type": "boolean",
+          "defines": []
+        }
+      ],
+      "name": "pipeline/skybox|sky-vs:vert|sky-fs:frag"
+    }
+  ],
+  "combinations": [],
+  "hideInEditor": false
+}

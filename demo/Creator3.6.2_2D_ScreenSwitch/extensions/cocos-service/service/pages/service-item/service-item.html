@@ -1,0 +1,22 @@
+<div @mouseenter.self='setItemHover(true)'
+     @mouseleave.self='setItemHover(false)'>
+    <div v-if="!hasCustomItem" :class="['serviceItem', service.hovered && 'hovered', hasGroup && 'hasGroup']" @click="handleItemClick">
+        <div class="div-no-wrap" :style='headerStyle'>
+            <div class="div-no-wrap" style="flex: 1;">
+                <img v-if="!hasGroup" :src="service.service_icon" :style="imgStyle" class='img[src=""],img:not([src]){opacity: 0;}"' />
+                <div class="service-item-title" :style="titleStyle" :title="nameTitle"> {{ service.service_name }} </div>
+            </div>
+            <div v-if="service.enable && hasUpdate" class="icon-update" style="margin: 4px 2px 0 0;">
+                <svg class="icon" width="16px" height="16.00px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#fd942b" d="M960 458.666667c0 23.466667-19.2 42.666667-42.666667 42.666667l-128 0 0 213.333333c0 23.466667-19.2 42.666667-42.666667 42.666667L277.333333 757.333333c-23.466667 0-42.666667-19.2-42.666667-42.666667l0-213.333333L106.666667 501.333333c-23.466667 0-42.666667-19.2-42.666667-42.666667 0-12.8 4.266667-23.466667 12.8-29.866667l0 0 405.333333-405.333333 0 0c8.533333-8.533333 19.2-12.8 29.866667-12.8s23.466667 4.266667 29.866667 12.8l0 0 405.333333 405.333333 0 0C955.733333 435.2 960 445.866667 960 458.666667zM512 113.066667 209.066667 416 277.333333 416c23.466667 0 42.666667 19.2 42.666667 42.666667l0 213.333333 384 0 0-213.333333c0-23.466667 19.2-42.666667 42.666667-42.666667l68.266667 0L512 113.066667zM277.333333 800l469.333333 0c23.466667 0 42.666667 19.2 42.666667 42.666667 0 23.466667-19.2 42.666667-42.666667 42.666667L277.333333 885.333333c-23.466667 0-42.666667-19.2-42.666667-42.666667C234.666667 819.2 253.866667 800 277.333333 800zM277.333333 928l469.333333 0c23.466667 0 42.666667 19.2 42.666667 42.666667s-19.2 42.666667-42.666667 42.666667L277.333333 1013.333333c-23.466667 0-42.666667-19.2-42.666667-42.666667S253.866667 928 277.333333 928z" />
+                </svg>
+            </div>
+            <div class="service-item-enable-status">
+                <ui-label v-if="service.enable" style="color: var(--color-hover-contrast);" i18n value="cocos-service.enable"></ui-label>
+                <ui-label v-else style="color: var(--color-normal-contrast-important);" i18n value="cocos-service.disenable"></ui-label>
+            </div>
+        </div>
+        <div :style="contentStyle"> {{ content }} </div>
+    </div>
+    <div v-else ref="item" class="serviceItem"></div>
+</div>

@@ -31,8 +31,8 @@
   "camera-infos": {
     "aaea360b-d68e-477f-a1f4-d53f0810e3a0": {
       "position": {
-        "x": 480,
-        "y": 320,
+        "x": 480.5,
+        "y": 320.5,
         "z": 5000
       },
       "rotation": {
@@ -49,8 +49,8 @@
     },
     "f46876e4-e81b-4931-b493-6d367be385e7": {
       "position": {
-        "x": 480,
-        "y": 320,
+        "x": 587.9999999999999,
+        "y": 180.5,
         "z": 5000
       },
       "rotation": {
@@ -85,6 +85,11 @@
     "enableAcceleration": true,
     "far2D": 10000,
     "near2D": 1,
-    "wheelSpeed2D": 6
+    "wheelSpeed2D": 6,
+    "size": "__default_design__"
+  },
+  "builder": {},
+  "": {
+    "sculpt_brush_rotate": 0
   }
 }

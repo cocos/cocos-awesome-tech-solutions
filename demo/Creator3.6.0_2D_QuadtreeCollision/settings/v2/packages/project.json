@@ -4,5 +4,11 @@
       "name": "default",
       "value": 1
     }
-  ]
+  ],
+  "__version__": "1.0.4",
+  "fbx": {
+    "legacyFbxImporter": {
+      "visible": true
+    }
+  }
 }

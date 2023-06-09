@@ -69,7 +69,7 @@ export class Light extends Component {
         //spr.getMaterial(0).setProperty('light_radius', 15);
 
         // 灯光位置
-        spr.getMaterial(0).setProperty('light_worldpos', new Vec4(lightPos.x, lightPos.y, lightPos.z, 1));
+        spr.getSharedMaterial(0).setProperty('light_worldpos', new Vec4(lightPos.x, lightPos.y, lightPos.z, 1));
     }
 
     updateLight() {

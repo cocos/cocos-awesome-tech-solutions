@@ -1,5 +1,5 @@
 {
-  "ver": "2.1.10",
+  "ver": "2.3.4",
   "importer": "gltf",
   "imported": true,
   "uuid": "d57d20a7-11cf-4992-8058-040027e99b2e",
@@ -97,7 +97,7 @@
         "isUuid": false,
         "imageUuidOrDatabaseUri": "db://assets/ninja/textures/Scene_-_Root_baseColor.png"
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -120,7 +120,7 @@
         "isUuid": false,
         "imageUuidOrDatabaseUri": "db://assets/ninja/textures/Scene_-_Root_metallicRoughness.png"
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -143,7 +143,7 @@
         "isUuid": false,
         "imageUuidOrDatabaseUri": "db://assets/ninja/textures/Scene_-_Root_normal.png"
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -216,10 +216,9 @@
         "d57d20a7-11cf-4992-8058-040027e99b2e@635cd"
       ]
     },
-    "meshOptimizer": true,
-    "meshOptimizerOptions": {
-      "sa": true,
-      "si": 0.1
+    "meshOptimizer": {
+      "algorithm": "gltfpack",
+      "enable": true
     },
     "dumpMaterials": true,
     "materialDumpDir": "db://assets/ninja/Materials_scene-001",

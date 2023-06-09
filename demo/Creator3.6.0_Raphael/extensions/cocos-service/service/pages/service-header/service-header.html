@@ -1,0 +1,10 @@
+<div class="div-no-wrap" style="margin: 0 5px; background: var(--color-normal-fill-important); height: 24px;">
+    <div @click="backHome" style="cursor: pointer;">
+        <ui-icon value="prev-play"></ui-icon> 
+        <ui-label value="i18n:cocos-service.back"></ui-label>
+    </div>
+    <div @click="gotoService" v-if="showToLink" style="cursor: pointer;">
+        <ui-label value="i18n:cocos-service.service_center"></ui-label>
+        <ui-icon value="link"></ui-icon>
+    </div>
+</div>

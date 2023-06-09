@@ -1,0 +1,90 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "default_scrollbar_vertical_bg",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 15,
+      "height": 30
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 15,
+      "height": 30
+    },
+    "rotated": false,
+    "capInsets": [
+      4,
+      10,
+      4,
+      10
+    ],
+    "vertices": {
+      "rawPosition": [
+        -7.5,
+        -15,
+        0,
+        7.5,
+        -15,
+        0,
+        -7.5,
+        15,
+        0,
+        7.5,
+        15,
+        0
+      ],
+      "indexes": [
+        0,
+        1,
+        2,
+        2,
+        1,
+        3
+      ],
+      "uv": [
+        0,
+        30,
+        15,
+        30,
+        0,
+        0,
+        15,
+        0
+      ],
+      "nuv": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "minPos": {
+        "x": -7.5,
+        "y": -15,
+        "z": 0
+      },
+      "maxPos": {
+        "x": 7.5,
+        "y": 15,
+        "z": 0
+      }
+    },
+    "texture": "ffb88a8f-af62-48f4-8f1d-3cb606443a43@6c48a",
+    "packable": true,
+    "pixelsToUnit": 100,
+    "pivot": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "meshType": 0
+  }
+}

@@ -1,0 +1,25 @@
+<popup-container :mh="400" :mw="300" @popup-close="handleClose">
+    <div style="font-size: 24px; color: var(--color-normal-contrast-normal); margin-top: 10px;">{{ title }}</div>
+    <div id="content" class="config-set-content">
+        <ui-prop>
+            <ui-label slot="label" i18n value="cocos-service.config_set.name"></ui-label>
+            <div slot="content" class="div-no-wrap">
+                <ui-input @change="configName = $event.target.value" :value="configName"></ui-input>
+                <div style="width: 12px; font-size: 20px; top: 3px; padding: 0 2px; position: relative; color: var(--color-focus-contrast);">*</div>
+            </div>
+        </ui-prop>
+        <div style="height: 10px;"></div>
+        <ui-prop>
+            <ui-label slot="label" i18n value="cocos-service.config_set.description"></ui-label>
+            <div slot="content" class="div-no-wrap">
+                <ui-textarea @change="configRemarks = $event.target.value" :value="configRemarks"></ui-textarea>
+                <div style="width: 16px;"></div>
+            </div>
+        </ui-prop>
+    </div>
+   
+    <div class="wrapper layout horizontal around-justified" id='bottom-button' style="margin: 10px 0px 3px 0px;" >
+        <ui-button @click="handleConfirm" :disabled="!enableConfirm" class="blue" style="width:80px; white-space: nowrap;">{{ tr("btn_ok") }}</ui-button>
+        <ui-button @click="handleClose" class="gray" style="width:80px; white-space: nowrap;">{{ tr("btn_cancel") }}</ui-button>
+    </div>
+</popup-container>

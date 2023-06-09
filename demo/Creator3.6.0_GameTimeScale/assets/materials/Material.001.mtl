@@ -56,14 +56,14 @@
         "__uuid__": "26f2a632-2cc4-4d1e-9bb3-288199cf2b4f@221a5",
         "__expectedType__": "cc.Texture2D"
       },
-      "occlusion": 1,
+      "occlusion": 0,
       "emissiveScale": {
-        "__type__": "cc.Vec4",
+        "__type__": "cc.Vec3",
         "x": 0,
         "y": 0,
-        "z": 0,
-        "w": 1
-      }
+        "z": 0
+      },
+      "normalStrength": 1
     }
   ]
 }

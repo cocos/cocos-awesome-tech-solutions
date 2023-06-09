@@ -1,0 +1,70 @@
+<div style="height: 100%;">
+    <!-- 顶部工具条 -->
+    <div style="width: 100%; top: 0px; z-index: 99; background: var(--color-normal-fill-important);">
+        <service-header :show-to-link="service.service_type!=0" @back-home="$emit('back-home')"></service-header>
+    </div>
+    <div style="margin: 10px 0px 0px 10px;  overflow: hidden scroll; height: calc(100% - 44px)">
+        <div v-if="shows.all">
+            <!-- 服务名称以及开启按钮 -->
+            <div v-if="shows.name">
+                <div class="div-no-wrap" style="height: 24px;">
+                    <div style="font-size: 20px; color: var(--color-normal-contrast-normal)"> {{ service.service_name }}<br /> </div>
+                    <input class="switch switch-anim" type="checkbox" style="margin-top: 2px;" @change="handleEnabelService" :checked="enable" />
+                </div>
+            </div>
+            <!-- 服务版本管理 -->
+            <div v-if="shows.version">
+                <div style="display: flex; font-size: 12px; color: var(--color-normal-contrast-emphasis);">
+                    <div @click="versionClick" style="cursor: pointer;" :title="tr('current_ver_upgrade')">
+                      ver : {{ serviceVersion }}
+                    </div>
+                    <div @click="updateClick" v-if="hasUpdate" class="div-no-wrap" style="margin:4px 0 0 5px; cursor: pointer;">
+                        <div style="line-height: 15px; margin-left: 3px; color:#fd942b; ">{{ tr("have_new") }}</div>
+                        <div class="icon-update">
+                            <svg class="icon" width="16px" height="16.00px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="#fd942b" d="M960 458.666667c0 23.466667-19.2 42.666667-42.666667 42.666667l-128 0 0 213.333333c0 23.466667-19.2 42.666667-42.666667 42.666667L277.333333 757.333333c-23.466667 0-42.666667-19.2-42.666667-42.666667l0-213.333333L106.666667 501.333333c-23.466667 0-42.666667-19.2-42.666667-42.666667 0-12.8 4.266667-23.466667 12.8-29.866667l0 0 405.333333-405.333333 0 0c8.533333-8.533333 19.2-12.8 29.866667-12.8s23.466667 4.266667 29.866667 12.8l0 0 405.333333 405.333333 0 0C955.733333 435.2 960 445.866667 960 458.666667zM512 113.066667 209.066667 416 277.333333 416c23.466667 0 42.666667 19.2 42.666667 42.666667l0 213.333333 384 0 0-213.333333c0-23.466667 19.2-42.666667 42.666667-42.666667l68.266667 0L512 113.066667zM277.333333 800l469.333333 0c23.466667 0 42.666667 19.2 42.666667 42.666667 0 23.466667-19.2 42.666667-42.666667 42.666667L277.333333 885.333333c-23.466667 0-42.666667-19.2-42.666667-42.666667C234.666667 819.2 253.866667 800 277.333333 800zM277.333333 928l469.333333 0c23.466667 0 42.666667 19.2 42.666667 42.666667s-19.2 42.666667-42.666667 42.666667L277.333333 1013.333333c-23.466667 0-42.666667-19.2-42.666667-42.666667S253.866667 928 277.333333 928z" />
+                            </svg>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+            <!-- 服务详情介绍 -->
+            <div v-if="service.service_desc.length > 0 && shows.description">
+                <div class="service-detail-text" style="margin-top: 10px;" v-html="service.service_desc"></div>
+            </div>
+            <!-- 服务跳转相关 -->
+            <div v-if="(service.service_guide_url || service.service_dev_url || service.service_sample_url) && shows.jump">
+                <div style="margin: 10px -5px 0px -5px; font-size: 11px; color: var(--color-normal-contrast-weaker);" class="section div-no-wrap">
+                    <ui-button class="service-detail-jump-button" @click="handleGotoLink('guide')" v-if="service.service_guide_url">
+                        <ui-label value="i18n:cocos-service.use_guide"></ui-label><ui-icon value="link"></ui-icon>
+                    </ui-button>
+                    <ui-button class="service-detail-jump-button" @click="handleGotoLink('sample')" v-if="service.service_sample_url">
+                        <ui-label value="i18n:cocos-service.demo_project"></ui-label><ui-icon value="link"></ui-icon>
+                    </ui-button>
+                    <ui-button class="service-detail-jump-button" @click="handleGotoLink('dev')" v-if="service.service_dev_url">
+                        <ui-label value="i18n:cocos-service.dashboard"></ui-label><ui-icon value="link"></ui-icon>
+                    </ui-button>
+                </div>
+            </div>
+            <!-- 计费规则 -->
+            <div v-if="service.service_price.length > 0 && shows.price">
+                <div class="service-detail-section-line section" style="padding-bottom: 5px;"><ui-label value="i18n:cocos-service.service_price"></ui-label></div>
+                <div class="service-detail-text" v-html="service_price"></div>
+            </div>
+            <!-- 支持平台 -->
+            <div v-if="service.support_platform.length > 0 && shows.platform">
+                <div class="service-detail-section-line section" style="padding-bottom: 5px;"><ui-label value="i18n:cocos-service.support_platform"></ui-label></div>
+                <div class="group" style="color:var(--color-normal-contrast-emphasis);">
+                    <div v-for="item in service.support_platform" :key="item" style="margin: 0 5px;">
+                         <!-- {{ item }} -->
+                        <ui-tooltip arrow="left" style="font-size: 10px;">{{ item }}</ui-tooltip>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 服务自定义显示页面 -->
+        <div v-if="hasSwitch">
+            <div ref="detail" v-show="enable"></div>
+        </div>
+    </div>
+</div>

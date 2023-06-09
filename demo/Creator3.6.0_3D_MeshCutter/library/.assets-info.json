@@ -1,0 +1,594 @@
+{
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\banana_game_ready__2k_pbr": {
+    "time": 1685352982874.441,
+    "uuid": "a9789a7a-372e-4497-b859-7696a4df4784",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\materials": {
+    "time": 1685352982882.42,
+    "uuid": "e559a295-80d7-4cb8-8ded-0a673bde39e9",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model": {
+    "time": 1685352983056.9617,
+    "uuid": "c5e3f82b-8551-4500-b137-4b43e9eb37d7",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\res": {
+    "time": 1685352983076.9092,
+    "uuid": "9f631baf-b68f-444c-b3dd-402f6eb4d49d",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\script": {
+    "time": 1685352983080.8977,
+    "uuid": "cf60a0e0-5d17-4b4c-907c-72871531b055",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\watermelon": {
+    "time": 1685352983083.8896,
+    "uuid": "680ada6e-4ad9-4af1-a4cb-b452ea1301a2",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\banana_game_ready__2k_pbr\\Materials_scene": {
+    "time": 1685352982874.441,
+    "uuid": "156fc6e3-5a0c-4b59-b590-85a0a13fb50e",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\banana": {
+    "time": 1685352982890.408,
+    "uuid": "c4783442-988b-46f8-9877-9b36886e4ea7",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\corset": {
+    "time": 1685352982973.185,
+    "uuid": "25c374ec-7c3c-47a4-bd11-69bfb608c946",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\lemon": {
+    "time": 1685352982976.1775,
+    "uuid": "48f74362-f1af-4042-8165-2ba6521347a2",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\mango": {
+    "time": 1685352982990.1409,
+    "uuid": "a9f8bff1-8c02-48d8-8dbd-ddef5c144294",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\orange": {
+    "time": 1685352983015.0735,
+    "uuid": "9daf32ac-e8b1-45de-bf46-d54914b13a08",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\watermelon": {
+    "time": 1685352983060.9514,
+    "uuid": "7fb7afb8-5081-447c-92fd-5639d36cae50",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\res\\corset": {
+    "time": 1685352983077.906,
+    "uuid": "8e6a8944-9db3-490c-9e27-791bb84de0d8",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\script\\shatter": {
+    "time": 1685352983082.8926,
+    "uuid": "b68ed17d-4079-4652-b850-aa33d6ba813f",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\watermelon\\Materials_scene": {
+    "time": 1685352983084.8872,
+    "uuid": "cd1d5b3c-0d34-460c-a079-27df7ab241d1",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\banana\\textures": {
+    "time": 1685352982954.238,
+    "uuid": "7f539f3c-5a14-470f-ad06-95584413bc85",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\lemon\\textures": {
+    "time": 1685352982985.1538,
+    "uuid": "c6f5c9ad-7dbd-4291-a8f9-142d8a2675ac",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\mango\\textures": {
+    "time": 1685352983011.0852,
+    "uuid": "604fe1a3-84e2-4f99-8316-0336b7455a1b",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\orange\\textures": {
+    "time": 1685352983055.9897,
+    "uuid": "5382b93b-212a-4ac8-9dce-f2fba92d37a6",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\watermelon\\textures": {
+    "time": 1685352983074.9424,
+    "uuid": "f8c5cb9d-7e4f-461a-9490-6158748ea603",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\res\\corset\\Materials_Corset": {
+    "time": 1685352983078.903,
+    "uuid": "c01a8f5d-31ab-4e62-a839-062e7a9055ea",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\migrate-canvas.ts": {
+    "time": 1686032733234.3748,
+    "uuid": "ebe6c6c4-4eee-4249-b7c4-9ab3998339fc",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\script\\cameraMove.ts": {
+    "time": 1686032774429.723,
+    "uuid": "8257b45d-704b-448a-a43a-55cb5defec72",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\script\\shatter\\FastHull.ts": {
+    "time": 1685352983081.8955,
+    "uuid": "16b9011d-7862-4b19-ac8e-d913b64f1cc2",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\script\\shatter\\TouchSplit.ts": {
+    "time": 1686033149808.104,
+    "uuid": "dddd9e79-8450-42a2-adbc-6b5ba49d4d1e",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\banana_game_ready__2k_pbr.meta": {
+    "time": 1685352982872.446
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\materials.meta": {
+    "time": 1685352982875.438
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model.meta": {
+    "time": 1685352982885.4207
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\res.meta": {
+    "time": 1685352983075.9116
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\script.meta": {
+    "time": 1685352983078.903
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\watermelon.meta": {
+    "time": 1685352983082.8926
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\banana_game_ready__2k_pbr\\Materials_scene.meta": {
+    "time": 1685352982873.4434
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\banana.meta": {
+    "time": 1685352982886.4175
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\corset.meta": {
+    "time": 1685352982955.235
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\lemon.meta": {
+    "time": 1685352982974.1829
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\mango.meta": {
+    "time": 1685352982986.1511
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\orange.meta": {
+    "time": 1685352983012.0823
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\watermelon.meta": {
+    "time": 1685352983056.9617
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\res\\corset.meta": {
+    "time": 1685352983075.9116
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\script\\shatter.meta": {
+    "time": 1685352983080.8977
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\watermelon\\Materials_scene.meta": {
+    "time": 1685352983083.8896
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\banana\\textures.meta": {
+    "time": 1685352982889.4097
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\lemon\\textures.meta": {
+    "time": 1685352982976.1775
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\mango\\textures.meta": {
+    "time": 1685352982989.1763
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\orange\\textures.meta": {
+    "time": 1685352983015.0735
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\watermelon\\textures.meta": {
+    "time": 1685352983060.9514
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\res\\corset\\Materials_Corset.meta": {
+    "time": 1685352983076.9092
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\migrate-canvas.ts.meta": {
+    "time": 1685352982885.4207
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\script\\cameraMove.ts.meta": {
+    "time": 1685352983079.9004
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\script\\shatter\\FastHull.ts.meta": {
+    "time": 1685352983081.8955
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\script\\shatter\\TouchSplit.ts.meta": {
+    "time": 1685352983082.8926
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\meshCut.scene": {
+    "time": 1686033247260.1719,
+    "uuid": "8f8e1be2-54dc-4142-86c3-af02805f57be",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\materials\\Banana_PBR.mtl": {
+    "time": 1686031617486.6704,
+    "uuid": "8481382f-ff11-4ec8-a247-21906cdd9ee1",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\materials\\Corset_O.mtl": {
+    "time": 1686031617486.6704,
+    "uuid": "1d6ef7fa-adc4-44e4-ae5f-d86fdd9b7728",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\materials\\Lemon PBR.mtl": {
+    "time": 1686031617486.6704,
+    "uuid": "c9819128-2015-4629-a166-6dd3afe7477d",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\materials\\Material.001.mtl": {
+    "time": 1686031617486.6704,
+    "uuid": "d040ac5d-a2cc-4f30-9f16-b6249a6adff1",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\materials\\material.mtl": {
+    "time": 1686031617510.6062,
+    "uuid": "277d6e61-cbdf-4cd5-80c8-21bc73bd29f6",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\materials\\Mushroom_PBR.mtl": {
+    "time": 1686031617519.583,
+    "uuid": "6e2e8883-79dc-423f-9b94-cc14b7b1712b",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\materials\\orange.mtl": {
+    "time": 1686031617535.5393,
+    "uuid": "3bb5029d-5d83-436d-aeb8-1a91198ac38a",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\materials\\watermelon.mtl": {
+    "time": 1686031617535.5393,
+    "uuid": "37fac951-6e93-4122-b681-45a3359398ea",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\banana_game_ready__2k_pbr\\Materials_scene\\Banana_PBR.mtl": {
+    "time": 1686031617545.513,
+    "uuid": "6c9080e6-357f-4b1f-a692-516b2ba909a2",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\banana\\license.txt": {
+    "time": 1685352982886.4175,
+    "uuid": "881670ff-1735-4bc9-8d79-d378fc28c620",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\banana\\scene.bin": {
+    "time": 1685352982887.4143,
+    "uuid": "d3d8ac52-375e-4222-9685-1d47629d2ed0",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\banana\\scene.gltf": {
+    "time": 1685352982888.412,
+    "uuid": "0c641418-350d-4e11-a5fa-fb3933d106d7",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\corset\\Corset.bin": {
+    "time": 1685352982963.2324,
+    "uuid": "57a9d5c3-e8b5-4282-b3fb-58b5e3a48058",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\corset\\Corset.gltf": {
+    "time": 1685352982965.2083,
+    "uuid": "c8e79217-7978-4900-b7de-2987723f4a92",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\corset\\Corset_baseColor.png": {
+    "time": 1685352982968.1985,
+    "uuid": "1cd5498e-3745-48c3-beba-73ed195e5aba",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\corset\\Corset_normal.png": {
+    "time": 1685352982970.2134,
+    "uuid": "16726576-7124-46c8-a259-0c53524fb826",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\corset\\Corset_occlusionRoughnessMetallic.png": {
+    "time": 1685352982973.185,
+    "uuid": "e9d71021-2965-419c-8046-bbfe440e9e3d",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\lemon\\Lemon.fbx": {
+    "time": 1685352982975.2043,
+    "uuid": "d61e0754-1f2a-4f4f-8b06-9f39b709ea7a",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\mango\\license.txt": {
+    "time": 1685352982986.1511,
+    "uuid": "a0684c0c-e640-4669-a24a-7a01f078965e",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\mango\\scene.bin": {
+    "time": 1685352982988.1458,
+    "uuid": "c1356153-cd1d-4e4c-bc29-6b00a0593200",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\mango\\scene.gltf": {
+    "time": 1685352982988.1458,
+    "uuid": "26f2a632-2cc4-4d1e-9bb3-288199cf2b4f",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\orange\\scene.bin": {
+    "time": 1685352983013.1086,
+    "uuid": "7828c717-79d6-40ff-8f1f-a2dcb1fca392",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\orange\\scene.gltf": {
+    "time": 1685352983014.077,
+    "uuid": "8dddbce3-645c-4b65-9d40-5c8c922658e0",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\watermelon\\license.txt": {
+    "time": 1685352983057.9592,
+    "uuid": "183d9069-c35f-4fa4-b7e9-2b973f36c883",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\watermelon\\scene.bin": {
+    "time": 1685352983058.9846,
+    "uuid": "3938e688-afe5-4193-8e76-fbf28c8745e7",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\watermelon\\scene.gltf": {
+    "time": 1685352983059.9543,
+    "uuid": "4d15c433-a03e-4e66-88e8-118be247b84b",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\watermelon\\Materials_scene\\Scene_-_Root.mtl": {
+    "time": 1686031617898.0786,
+    "uuid": "6c62823c-2e10-46dc-be0c-bf584b6163c0",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\banana\\textures\\Banana_PBR_baseColor.jpeg": {
+    "time": 1685352982897.389,
+    "uuid": "663b898c-ede6-4ce0-b12c-0747edb4e63d",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\banana\\textures\\Banana_PBR_metallicRoughness.png": {
+    "time": 1685352982910.3545,
+    "uuid": "f682732d-36e5-45db-a1a2-fee424e6b20c",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\banana\\textures\\Banana_PBR_normal.jpeg": {
+    "time": 1685352982953.2405,
+    "uuid": "0644e1ee-7699-466a-b87e-e0ca327655dc",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\lemon\\textures\\Albedo.jpg": {
+    "time": 1685352982979.1938,
+    "uuid": "d66593ac-22f6-4d22-8436-5594e2de1c44",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\lemon\\textures\\internal_ground_ao_texture.jpeg": {
+    "time": 1685352982985.1538,
+    "uuid": "816864c2-9111-49ba-9e94-7a723cef245b",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\lemon\\textures\\Normal.jpg": {
+    "time": 1685352982981.1653,
+    "uuid": "116787ec-e91d-47e4-8928-e009b3e85715",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\lemon\\textures\\Occlusion.jpg": {
+    "time": 1685352982983.1594,
+    "uuid": "6e5e6f31-9459-4f05-bae5-32cdbf19ffb4",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\mango\\textures\\Material.001_baseColor.jpeg": {
+    "time": 1685352982997.1213,
+    "uuid": "65587f99-cad1-4d5a-98ba-5dbd74c2d11e",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\mango\\textures\\Material.001_metallicRoughness.png": {
+    "time": 1685352983000.1428,
+    "uuid": "d2d3761e-1f99-4973-9a8a-79422c44fc78",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\mango\\textures\\Material.001_normal.jpeg": {
+    "time": 1685352983011.0852,
+    "uuid": "0b3ba10f-67fd-42bb-887e-9d6a7d3b0ebb",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\orange\\textures\\fr_caraOrange_diffuse.jpeg": {
+    "time": 1685352983028.067,
+    "uuid": "b608836e-48a3-4c39-ba86-b72cd8ecdcd2",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\orange\\textures\\fr_caraOrange_normal.jpeg": {
+    "time": 1685352983042.999,
+    "uuid": "a43d130e-98d7-407e-9aac-a29ee71d6fc3",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\orange\\textures\\fr_caraOrange_specularGlossiness.png": {
+    "time": 1685352983055.9897,
+    "uuid": "c22bb2d4-eb06-46a5-af07-786e6b1d9f47",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\watermelon\\textures\\Scene_-_Root_baseColor.png": {
+    "time": 1685352983065.938,
+    "uuid": "7fd58d97-cb6e-467e-a768-fb22c4c6fc16",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\watermelon\\textures\\Scene_-_Root_metallicRoughness.png": {
+    "time": 1685352983068.9297,
+    "uuid": "cca41d70-7466-4788-9892-5366d0f26d18",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\watermelon\\textures\\Scene_-_Root_normal.png": {
+    "time": 1685352983074.9424,
+    "uuid": "648a5d74-7aa6-4410-a272-4106d84ffa63",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\res\\corset\\Materials_Corset\\Corset_O.mtl": {
+    "time": 1686031618365.829,
+    "uuid": "746050b8-421f-490e-9fec-802f9539c376",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\materials\\Lemon PBR.mtl.meta": {
+    "time": 1686031617498.6384
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\materials\\Corset_O.mtl.meta": {
+    "time": 1686031617499.6355
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\materials\\Material.001.mtl.meta": {
+    "time": 1686031617511.6035
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\materials\\Banana_PBR.mtl.meta": {
+    "time": 1686031617513.5986
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\materials\\material.mtl.meta": {
+    "time": 1686031617524.5688
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\meshCut.scene.meta": {
+    "time": 1686031617537.5347
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\materials\\Mushroom_PBR.mtl.meta": {
+    "time": 1686031617545.513
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\materials\\orange.mtl.meta": {
+    "time": 1686031617553.4917
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\materials\\watermelon.mtl.meta": {
+    "time": 1686031617555.486
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\banana_game_ready__2k_pbr\\Materials_scene\\Banana_PBR.mtl.meta": {
+    "time": 1686031617566.9636
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\banana\\license.txt.meta": {
+    "time": 1685352982887.4143
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\banana\\scene.bin.meta": {
+    "time": 1686031617599.8782
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\corset\\Corset.bin.meta": {
+    "time": 1686031617610.8464
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\corset\\Corset_baseColor.png.meta": {
+    "time": 1686031617676.6719
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\corset\\Corset_normal.png.meta": {
+    "time": 1686031617678.666
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\corset\\Corset_occlusionRoughnessMetallic.png.meta": {
+    "time": 1686031617685.6477
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\banana\\scene.gltf.meta": {
+    "time": 1686031617700.607
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\mango\\license.txt.meta": {
+    "time": 1685352982987.1484
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\mango\\scene.bin.meta": {
+    "time": 1686031617822.2812
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\corset\\Corset.gltf.meta": {
+    "time": 1686031617824.2756
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\mango": {
+    "time": 1686031617837.241,
+    "uuid": "58edb11a-4852-4792-b8b8-3630b45cd451",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\mango\\Materials_scene": {
+    "time": 1686031617840.2334,
+    "uuid": "13fc7940-c1e3-47ec-a1d0-b029ff9a42bc",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\mango\\Materials_scene\\Material.001.mtl": {
+    "time": 1686031617833.2522,
+    "uuid": "a72232fa-28eb-46ab-9333-19ad74fea915",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\orange\\scene.bin.meta": {
+    "time": 1686031617843.2273
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\watermelon\\license.txt.meta": {
+    "time": 1685352983057.9592
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\watermelon\\scene.bin.meta": {
+    "time": 1686031617887.108
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\mango\\scene.gltf.meta": {
+    "time": 1686031617920.021
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\watermelon\\Materials_scene\\Scene_-_Root.mtl.meta": {
+    "time": 1686031617923.0134
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\orange\\scene.gltf.meta": {
+    "time": 1686031617956.921
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\watermelon\\scene.gltf.meta": {
+    "time": 1686031618029.7263
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\banana\\textures\\Banana_PBR_baseColor.jpeg.meta": {
+    "time": 1686031618075.6033
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\banana\\textures\\Banana_PBR_metallicRoughness.png.meta": {
+    "time": 1686031618105.5234
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\lemon\\textures\\Albedo.jpg.meta": {
+    "time": 1686031618129.4595
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\lemon\\textures\\internal_ground_ao_texture.jpeg.meta": {
+    "time": 1686031618142.4248
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\lemon\\textures\\Normal.jpg.meta": {
+    "time": 1686031618168.3547
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\banana\\textures\\Banana_PBR_normal.jpeg.meta": {
+    "time": 1686031618172.3447
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\lemon\\textures\\Occlusion.jpg.meta": {
+    "time": 1686031618180.323
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\mango\\textures\\Material.001_baseColor.jpeg.meta": {
+    "time": 1686031618227.1985
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\mango\\textures\\Material.001_metallicRoughness.png.meta": {
+    "time": 1686031618231.1868
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\lemon\\Lemon.fbx.meta": {
+    "time": 1686031618238.1687
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\mango\\textures\\Material.001_normal.jpeg.meta": {
+    "time": 1686031618267.0916
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\orange\\textures\\fr_caraOrange_diffuse.jpeg.meta": {
+    "time": 1686031618294.0193
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\watermelon\\textures\\Scene_-_Root_baseColor.png.meta": {
+    "time": 1686031618347.8745
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\watermelon\\textures\\Scene_-_Root_metallicRoughness.png.meta": {
+    "time": 1686031618349.87
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\mango.meta": {
+    "time": 1686031618352.8616
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\mango\\Materials_scene.meta": {
+    "time": 1686031618355.8535
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\orange\\textures\\fr_caraOrange_normal.jpeg.meta": {
+    "time": 1686031618366.8262
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\orange\\textures\\fr_caraOrange_specularGlossiness.png.meta": {
+    "time": 1686031618368.8213
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\mango\\Materials_scene\\Material.001.mtl.meta": {
+    "time": 1686031618369.816
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\res\\corset\\Materials_Corset\\Corset_O.mtl.meta": {
+    "time": 1686031618417.6892
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_MeshCutter\\assets\\model\\watermelon\\textures\\Scene_-_Root_normal.png.meta": {
+    "time": 1686031618418.6855
+  }
+}

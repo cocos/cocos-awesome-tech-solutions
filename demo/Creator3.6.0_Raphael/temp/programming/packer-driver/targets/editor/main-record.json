@@ -1,0 +1,3278 @@
+{
+  "modules": {
+    "cce:/internal/x/cc": {
+      "mTimestamp": 20689.261500000022,
+      "chunkId": "cee638a986ad8fae09398db255647defcaa6612a",
+      "imports": [
+        {
+          "value": "cce:/internal/x/cc-fu/base",
+          "resolved": "__unresolved_0",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 14
+            },
+            "end": {
+              "line": 1,
+              "column": 42
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/x/cc-fu/gfx-webgl",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 14
+            },
+            "end": {
+              "line": 2,
+              "column": 47
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/x/cc-fu/gfx-webgl2",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 14
+            },
+            "end": {
+              "line": 3,
+              "column": 48
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/x/cc-fu/gfx-empty",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 14
+            },
+            "end": {
+              "line": 4,
+              "column": 47
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/x/cc-fu/3d",
+          "resolved": "__unresolved_4",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 14
+            },
+            "end": {
+              "line": 5,
+              "column": 40
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/x/cc-fu/animation",
+          "resolved": "__unresolved_5",
+          "loc": {
+            "start": {
+              "line": 6,
+              "column": 14
+            },
+            "end": {
+              "line": 6,
+              "column": 47
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/x/cc-fu/skeletal-animation",
+          "resolved": "__unresolved_6",
+          "loc": {
+            "start": {
+              "line": 7,
+              "column": 14
+            },
+            "end": {
+              "line": 7,
+              "column": 56
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/x/cc-fu/2d",
+          "resolved": "__unresolved_7",
+          "loc": {
+            "start": {
+              "line": 8,
+              "column": 14
+            },
+            "end": {
+              "line": 8,
+              "column": 40
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/x/cc-fu/sorting",
+          "resolved": "__unresolved_8",
+          "loc": {
+            "start": {
+              "line": 9,
+              "column": 14
+            },
+            "end": {
+              "line": 9,
+              "column": 45
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/x/cc-fu/ui",
+          "resolved": "__unresolved_9",
+          "loc": {
+            "start": {
+              "line": 10,
+              "column": 14
+            },
+            "end": {
+              "line": 10,
+              "column": 40
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/x/cc-fu/particle",
+          "resolved": "__unresolved_10",
+          "loc": {
+            "start": {
+              "line": 11,
+              "column": 14
+            },
+            "end": {
+              "line": 11,
+              "column": 46
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/x/cc-fu/particle-2d",
+          "resolved": "__unresolved_11",
+          "loc": {
+            "start": {
+              "line": 12,
+              "column": 14
+            },
+            "end": {
+              "line": 12,
+              "column": 49
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/x/cc-fu/physics-framework",
+          "resolved": "__unresolved_12",
+          "loc": {
+            "start": {
+              "line": 13,
+              "column": 14
+            },
+            "end": {
+              "line": 13,
+              "column": 55
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/x/cc-fu/physics-2d-framework",
+          "resolved": "__unresolved_13",
+          "loc": {
+            "start": {
+              "line": 14,
+              "column": 14
+            },
+            "end": {
+              "line": 14,
+              "column": 58
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/x/cc-fu/intersection-2d",
+          "resolved": "__unresolved_14",
+          "loc": {
+            "start": {
+              "line": 15,
+              "column": 14
+            },
+            "end": {
+              "line": 15,
+              "column": 53
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/x/cc-fu/primitive",
+          "resolved": "__unresolved_15",
+          "loc": {
+            "start": {
+              "line": 16,
+              "column": 14
+            },
+            "end": {
+              "line": 16,
+              "column": 47
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/x/cc-fu/profiler",
+          "resolved": "__unresolved_16",
+          "loc": {
+            "start": {
+              "line": 17,
+              "column": 14
+            },
+            "end": {
+              "line": 17,
+              "column": 46
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/x/cc-fu/geometry-renderer",
+          "resolved": "__unresolved_17",
+          "loc": {
+            "start": {
+              "line": 18,
+              "column": 14
+            },
+            "end": {
+              "line": 18,
+              "column": 55
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/x/cc-fu/audio",
+          "resolved": "__unresolved_18",
+          "loc": {
+            "start": {
+              "line": 19,
+              "column": 14
+            },
+            "end": {
+              "line": 19,
+              "column": 43
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/x/cc-fu/video",
+          "resolved": "__unresolved_19",
+          "loc": {
+            "start": {
+              "line": 20,
+              "column": 14
+            },
+            "end": {
+              "line": 20,
+              "column": 43
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/x/cc-fu/xr",
+          "resolved": "__unresolved_20",
+          "loc": {
+            "start": {
+              "line": 21,
+              "column": 14
+            },
+            "end": {
+              "line": 21,
+              "column": 40
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/x/cc-fu/light-probe",
+          "resolved": "__unresolved_21",
+          "loc": {
+            "start": {
+              "line": 22,
+              "column": 14
+            },
+            "end": {
+              "line": 22,
+              "column": 49
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/x/cc-fu/terrain",
+          "resolved": "__unresolved_22",
+          "loc": {
+            "start": {
+              "line": 23,
+              "column": 14
+            },
+            "end": {
+              "line": 23,
+              "column": 45
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/x/cc-fu/webview",
+          "resolved": "__unresolved_23",
+          "loc": {
+            "start": {
+              "line": 24,
+              "column": 14
+            },
+            "end": {
+              "line": 24,
+              "column": 45
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/x/cc-fu/tween",
+          "resolved": "__unresolved_24",
+          "loc": {
+            "start": {
+              "line": 25,
+              "column": 14
+            },
+            "end": {
+              "line": 25,
+              "column": 43
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/x/cc-fu/tiled-map",
+          "resolved": "__unresolved_25",
+          "loc": {
+            "start": {
+              "line": 26,
+              "column": 14
+            },
+            "end": {
+              "line": 26,
+              "column": 47
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/x/cc-fu/spine",
+          "resolved": "__unresolved_26",
+          "loc": {
+            "start": {
+              "line": 27,
+              "column": 14
+            },
+            "end": {
+              "line": 27,
+              "column": 43
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/x/cc-fu/dragon-bones",
+          "resolved": "__unresolved_27",
+          "loc": {
+            "start": {
+              "line": 28,
+              "column": 14
+            },
+            "end": {
+              "line": 28,
+              "column": 50
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/x/cc-fu/custom-pipeline",
+          "resolved": "__unresolved_28",
+          "loc": {
+            "start": {
+              "line": 29,
+              "column": 14
+            },
+            "end": {
+              "line": 29,
+              "column": 53
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/base"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/gfx-webgl"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/gfx-webgl2"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/gfx-empty"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/3d"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/animation"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/skeletal-animation"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/2d"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/sorting"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/ui"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/particle"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/particle-2d"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/physics-framework"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/physics-2d-framework"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/intersection-2d"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/primitive"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/profiler"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/geometry-renderer"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/audio"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/video"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/xr"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/light-probe"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/terrain"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/webview"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/tween"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/tiled-map"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/spine"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/dragon-bones"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/custom-pipeline"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "cce:/internal/x/prerequisite-imports": {
+      "mTimestamp": 29089.314499999397,
+      "chunkId": "3da5c602a2424370fccd798e09dc140ebc8ae04c",
+      "imports": [
+        {
+          "value": "file:///D:/cocos-dashboard-editors/Creator/3.7.3/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts",
+          "resolved": "__unresolved_0",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 35
+            },
+            "end": {
+              "line": 5,
+              "column": 165
+            }
+          }
+        },
+        {
+          "value": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/demo/animate-dash-line.ts",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 181
+            },
+            "end": {
+              "line": 5,
+              "column": 287
+            }
+          }
+        },
+        {
+          "value": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/demo/animate.ts",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 303
+            },
+            "end": {
+              "line": 5,
+              "column": 399
+            }
+          }
+        },
+        {
+          "value": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/demo/nardove/jelly.ts",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 415
+            },
+            "end": {
+              "line": 5,
+              "column": 517
+            }
+          }
+        },
+        {
+          "value": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/demo/nardove/nardove.ts",
+          "resolved": "__unresolved_4",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 533
+            },
+            "end": {
+              "line": 5,
+              "column": 637
+            }
+          }
+        },
+        {
+          "value": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/demo/nardove/tentacle.ts",
+          "resolved": "__unresolved_5",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 653
+            },
+            "end": {
+              "line": 5,
+              "column": 758
+            }
+          }
+        },
+        {
+          "value": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/example/dash-line.ts",
+          "resolved": "__unresolved_6",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 774
+            },
+            "end": {
+              "line": 5,
+              "column": 875
+            }
+          }
+        },
+        {
+          "value": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/example/group.ts",
+          "resolved": "__unresolved_7",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 891
+            },
+            "end": {
+              "line": 5,
+              "column": 988
+            }
+          }
+        },
+        {
+          "value": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/example/make-path/c.ts",
+          "resolved": "__unresolved_8",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 1004
+            },
+            "end": {
+              "line": 5,
+              "column": 1107
+            }
+          }
+        },
+        {
+          "value": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/example/make-path/circle.ts",
+          "resolved": "__unresolved_9",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 1123
+            },
+            "end": {
+              "line": 5,
+              "column": 1231
+            }
+          }
+        },
+        {
+          "value": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/example/make-path/ellipse.ts",
+          "resolved": "__unresolved_10",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 1247
+            },
+            "end": {
+              "line": 5,
+              "column": 1356
+            }
+          }
+        },
+        {
+          "value": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/example/make-path/l.ts",
+          "resolved": "__unresolved_11",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 1372
+            },
+            "end": {
+              "line": 5,
+              "column": 1475
+            }
+          }
+        },
+        {
+          "value": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/example/make-path/q.ts",
+          "resolved": "__unresolved_12",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 1491
+            },
+            "end": {
+              "line": 5,
+              "column": 1594
+            }
+          }
+        },
+        {
+          "value": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/example/make-path/rect.ts",
+          "resolved": "__unresolved_13",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 1610
+            },
+            "end": {
+              "line": 5,
+              "column": 1716
+            }
+          }
+        },
+        {
+          "value": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/example/simplify.ts",
+          "resolved": "__unresolved_14",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 1732
+            },
+            "end": {
+              "line": 5,
+              "column": 1832
+            }
+          }
+        },
+        {
+          "value": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/example/smooth.ts",
+          "resolved": "__unresolved_15",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 1848
+            },
+            "end": {
+              "line": 5,
+              "column": 1946
+            }
+          }
+        },
+        {
+          "value": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/example/svg.ts",
+          "resolved": "__unresolved_16",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 1962
+            },
+            "end": {
+              "line": 5,
+              "column": 2057
+            }
+          }
+        },
+        {
+          "value": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/GlobalUtils.ts",
+          "resolved": "__unresolved_17",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 2073
+            },
+            "end": {
+              "line": 5,
+              "column": 2176
+            }
+          }
+        },
+        {
+          "value": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/RGroup.ts",
+          "resolved": "__unresolved_18",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 2192
+            },
+            "end": {
+              "line": 5,
+              "column": 2290
+            }
+          }
+        },
+        {
+          "value": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/RPath.ts",
+          "resolved": "__unresolved_19",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 2306
+            },
+            "end": {
+              "line": 5,
+              "column": 2403
+            }
+          }
+        },
+        {
+          "value": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/utils/R.curve.ts",
+          "resolved": "__unresolved_20",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 2419
+            },
+            "end": {
+              "line": 5,
+              "column": 2524
+            }
+          }
+        },
+        {
+          "value": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/utils/R.dash.ts",
+          "resolved": "__unresolved_21",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 2540
+            },
+            "end": {
+              "line": 5,
+              "column": 2644
+            }
+          }
+        },
+        {
+          "value": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/utils/R.find.ts",
+          "resolved": "__unresolved_22",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 2660
+            },
+            "end": {
+              "line": 5,
+              "column": 2764
+            }
+          }
+        },
+        {
+          "value": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/utils/R.length.ts",
+          "resolved": "__unresolved_23",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 2780
+            },
+            "end": {
+              "line": 5,
+              "column": 2886
+            }
+          }
+        },
+        {
+          "value": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/utils/R.tesselateBezier.ts",
+          "resolved": "__unresolved_24",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 2902
+            },
+            "end": {
+              "line": 5,
+              "column": 3017
+            }
+          }
+        },
+        {
+          "value": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/utils/R.utils.ts",
+          "resolved": "__unresolved_25",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 3033
+            },
+            "end": {
+              "line": 5,
+              "column": 3138
+            }
+          }
+        },
+        {
+          "value": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/start-scene/scripts/Global/ListItem.ts",
+          "resolved": "__unresolved_26",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 3154
+            },
+            "end": {
+              "line": 5,
+              "column": 3273
+            }
+          }
+        },
+        {
+          "value": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/start-scene/scripts/Global/Menu.ts",
+          "resolved": "__unresolved_27",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 3289
+            },
+            "end": {
+              "line": 5,
+              "column": 3404
+            }
+          }
+        },
+        {
+          "value": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/start-scene/scripts/Global/SceneList.ts",
+          "resolved": "__unresolved_28",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 3420
+            },
+            "end": {
+              "line": 5,
+              "column": 3540
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocos-dashboard-editors/Creator/3.7.3/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/demo/animate-dash-line.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/demo/animate.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/demo/nardove/jelly.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/demo/nardove/nardove.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/demo/nardove/tentacle.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/example/dash-line.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/example/group.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/example/make-path/c.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/example/make-path/circle.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/example/make-path/ellipse.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/example/make-path/l.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/example/make-path/q.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/example/make-path/rect.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/example/simplify.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/example/smooth.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/example/svg.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/GlobalUtils.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/RGroup.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/RPath.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/utils/R.curve.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/utils/R.dash.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/utils/R.find.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/utils/R.length.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/utils/R.tesselateBezier.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/utils/R.utils.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/start-scene/scripts/Global/ListItem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/start-scene/scripts/Global/Menu.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/start-scene/scripts/Global/SceneList.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocos-dashboard-editors/Creator/3.7.3/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts": {
+      "mTimestamp": {
+        "mtime": 1685528343984.9634,
+        "uuid": "b2bd1fa7-8d7c-49c5-a158-df29a6d3a594"
+      },
+      "chunkId": "1bbef4c0178e6cddc740d35aec4db80f8a19d055",
+      "imports": [
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 220
+            },
+            "end": {
+              "line": 1,
+              "column": 224
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/demo/animate-dash-line.ts": {
+      "mTimestamp": {
+        "mtime": 1685352983653.267,
+        "uuid": "50ae1931-e620-40d0-9300-045e24de72ee"
+      },
+      "chunkId": "9b929d8af64b45bacf19adbeb691e32d2a17851e",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 67
+            },
+            "end": {
+              "line": 1,
+              "column": 71
+            }
+          }
+        },
+        {
+          "value": "../raphael/RPath",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 22
+            },
+            "end": {
+              "line": 3,
+              "column": 40
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/RPath.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "cce:/internal/code-quality/cr.mjs": {
+      "mTimestamp": 1686046233603,
+      "chunkId": "be027f973d8ff1c6fe3dcfebbc993118a793ec1b",
+      "imports": [],
+      "type": "esm",
+      "resolutions": []
+    },
+    "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/RPath.ts": {
+      "mTimestamp": {
+        "mtime": 1685352983685.1807,
+        "uuid": "c89f092d-8a2d-449c-86af-67e9b28898ef"
+      },
+      "chunkId": "57c604953eacd1e2f8dd0ab12f3ebecbeaf106cc",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 94
+            },
+            "end": {
+              "line": 2,
+              "column": 98
+            }
+          }
+        },
+        {
+          "value": "./utils/R.tesselateBezier",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 28
+            },
+            "end": {
+              "line": 4,
+              "column": 55
+            }
+          }
+        },
+        {
+          "value": "./utils/R.curve",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 42
+            },
+            "end": {
+              "line": 5,
+              "column": 59
+            }
+          }
+        },
+        {
+          "value": "./utils/R.dash",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 6,
+              "column": 27
+            },
+            "end": {
+              "line": 6,
+              "column": 43
+            }
+          }
+        },
+        {
+          "value": "./GlobalUtils",
+          "resolved": "__unresolved_4",
+          "loc": {
+            "start": {
+              "line": 7,
+              "column": 24
+            },
+            "end": {
+              "line": 7,
+              "column": 39
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/utils/R.tesselateBezier.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/utils/R.curve.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/utils/R.dash.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/GlobalUtils.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/utils/R.tesselateBezier.ts": {
+      "mTimestamp": {
+        "mtime": 1685352983690.1677,
+        "uuid": "27740b9f-3513-4a80-b4e8-9b217cd6d4de"
+      },
+      "chunkId": "a36a71221e6414d8fef7d6d68effca671ab0a550",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/utils/R.curve.ts": {
+      "mTimestamp": {
+        "mtime": 1685352983687.176,
+        "uuid": "3fbad5c6-364b-4b50-af54-479f7dbf86a3"
+      },
+      "chunkId": "a869ac48d125d0334a21d0df9596aa0a4a9fc987",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/utils/R.dash.ts": {
+      "mTimestamp": {
+        "mtime": 1685352983688.1733,
+        "uuid": "3ed44642-4f66-4996-816a-11a483296170"
+      },
+      "chunkId": "405f382d06c85d7dd5d4cdbf5be9c36b36b7d44a",
+      "imports": [
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 38
+            },
+            "end": {
+              "line": 2,
+              "column": 42
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/GlobalUtils.ts": {
+      "mTimestamp": {
+        "mtime": 1685352983683.1865,
+        "uuid": "43a79cb6-37a7-4140-872e-1825ababce66"
+      },
+      "chunkId": "525c84623c726544e0273a812d10a5e26be5c441",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/demo/animate.ts": {
+      "mTimestamp": {
+        "mtime": 1685352983655.2607,
+        "uuid": "37fb8c41-2500-4dee-aed5-bab9c10c3919"
+      },
+      "chunkId": "50580fbf7c4c86fb472a7e32a611b7ced75044e7",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 61
+            },
+            "end": {
+              "line": 1,
+              "column": 65
+            }
+          }
+        },
+        {
+          "value": "../raphael/RPath",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 22
+            },
+            "end": {
+              "line": 3,
+              "column": 40
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/RPath.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/demo/nardove/jelly.ts": {
+      "mTimestamp": {
+        "mtime": 1685352983658.2534,
+        "uuid": "04ff51f4-6f7f-4679-a39c-1b445d3535e8"
+      },
+      "chunkId": "6cb7a40800ce6953226a8a66d7afa27049bb7555",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 63
+            },
+            "end": {
+              "line": 1,
+              "column": 67
+            }
+          }
+        },
+        {
+          "value": "./tentacle",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 25
+            },
+            "end": {
+              "line": 2,
+              "column": 37
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/demo/nardove/tentacle.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/demo/nardove/tentacle.ts": {
+      "mTimestamp": {
+        "mtime": 1685352983659.2505,
+        "uuid": "06e14d20-7b08-46f6-996e-af226a486132"
+      },
+      "chunkId": "4a26db4994911791d19a7f919ff348ed2ad80424",
+      "imports": [
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 54
+            },
+            "end": {
+              "line": 1,
+              "column": 58
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/demo/nardove/nardove.ts": {
+      "mTimestamp": {
+        "mtime": 1685352983658.2534,
+        "uuid": "85d5527d-8fc9-4a7b-94de-2e1e18a91c0a"
+      },
+      "chunkId": "298d1bfc18d6439f8656aec088dc93c55cd7cad9",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 48
+            },
+            "end": {
+              "line": 1,
+              "column": 52
+            }
+          }
+        },
+        {
+          "value": "../../raphael/RGroup",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 23
+            },
+            "end": {
+              "line": 2,
+              "column": 45
+            }
+          }
+        },
+        {
+          "value": "./jelly",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 22
+            },
+            "end": {
+              "line": 3,
+              "column": 31
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/RGroup.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/demo/nardove/jelly.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/RGroup.ts": {
+      "mTimestamp": {
+        "mtime": 1685352983684.1843,
+        "uuid": "041f658b-868c-4ff9-aeaf-7020a4a30e80"
+      },
+      "chunkId": "c33d409b3a72b9cbe7befca74ddc0b4d0cda1861",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 101
+            },
+            "end": {
+              "line": 2,
+              "column": 105
+            }
+          }
+        },
+        {
+          "value": "./RPath",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 22
+            },
+            "end": {
+              "line": 4,
+              "column": 31
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/RPath.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/example/dash-line.ts": {
+      "mTimestamp": {
+        "mtime": 1685352983662.2427,
+        "uuid": "61ffd474-1076-456f-85b0-690fd0563125"
+      },
+      "chunkId": "ac82f97d1bd809dafc1149e963b50c2377f20c2a",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 48
+            },
+            "end": {
+              "line": 1,
+              "column": 52
+            }
+          }
+        },
+        {
+          "value": "../raphael/RPath",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 22
+            },
+            "end": {
+              "line": 3,
+              "column": 40
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/RPath.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/example/group.ts": {
+      "mTimestamp": {
+        "mtime": 1685352983664.2366,
+        "uuid": "6aad7309-2832-46b6-9d4f-52734c719122"
+      },
+      "chunkId": "4023fbf35256d44c3830ff63f86a66f07058f07a",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 48
+            },
+            "end": {
+              "line": 1,
+              "column": 52
+            }
+          }
+        },
+        {
+          "value": "../raphael/RGroup",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 23
+            },
+            "end": {
+              "line": 3,
+              "column": 42
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/RGroup.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/example/make-path/c.ts": {
+      "mTimestamp": {
+        "mtime": 1685352983666.2317,
+        "uuid": "0c7fabc6-7d50-4371-ad45-181196696f6b"
+      },
+      "chunkId": "92a4de577ce202f10f96fa2a4642f9ff906509f3",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 48
+            },
+            "end": {
+              "line": 1,
+              "column": 52
+            }
+          }
+        },
+        {
+          "value": "../../raphael/RPath",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 22
+            },
+            "end": {
+              "line": 3,
+              "column": 43
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/RPath.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/example/make-path/circle.ts": {
+      "mTimestamp": {
+        "mtime": 1685352983668.226,
+        "uuid": "4a71f525-9ac8-4636-a033-06555ad81c06"
+      },
+      "chunkId": "9f32d4e74de6043d328f35ca58c7ec9d6d125b0a",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 48
+            },
+            "end": {
+              "line": 1,
+              "column": 52
+            }
+          }
+        },
+        {
+          "value": "../../raphael/RPath",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 22
+            },
+            "end": {
+              "line": 3,
+              "column": 43
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/RPath.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/example/make-path/ellipse.ts": {
+      "mTimestamp": {
+        "mtime": 1685352983670.2217,
+        "uuid": "11fa0f5f-33b2-4de3-b4ef-13f717f7051d"
+      },
+      "chunkId": "3908b8206f7122827c238d2ea4f21288d01f6a0f",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 48
+            },
+            "end": {
+              "line": 1,
+              "column": 52
+            }
+          }
+        },
+        {
+          "value": "../../raphael/RPath",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 22
+            },
+            "end": {
+              "line": 3,
+              "column": 43
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/RPath.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/example/make-path/l.ts": {
+      "mTimestamp": {
+        "mtime": 1685352983672.216,
+        "uuid": "c3530a67-8ed4-4d55-91de-ebfa28561bb6"
+      },
+      "chunkId": "670693b6691b2a40d66b8356b75318e11249e55b",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 48
+            },
+            "end": {
+              "line": 1,
+              "column": 52
+            }
+          }
+        },
+        {
+          "value": "../../raphael/RPath",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 22
+            },
+            "end": {
+              "line": 3,
+              "column": 43
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/RPath.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/example/make-path/q.ts": {
+      "mTimestamp": {
+        "mtime": 1685352983674.2112,
+        "uuid": "dd2ec4c8-d40c-48dc-8711-78c0c0c80a22"
+      },
+      "chunkId": "f0a2aad9a5ac28741f9c582fc9c56208ca33e935",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 48
+            },
+            "end": {
+              "line": 1,
+              "column": 52
+            }
+          }
+        },
+        {
+          "value": "../../raphael/RPath",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 22
+            },
+            "end": {
+              "line": 3,
+              "column": 43
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/RPath.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/example/make-path/rect.ts": {
+      "mTimestamp": {
+        "mtime": 1685352983676.2058,
+        "uuid": "c1fbb0ba-1943-49a1-b685-966c827c803c"
+      },
+      "chunkId": "4033d7f7639d6df6e9943bb27f1b6dc6d413da62",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 48
+            },
+            "end": {
+              "line": 1,
+              "column": 52
+            }
+          }
+        },
+        {
+          "value": "../../raphael/RPath",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 22
+            },
+            "end": {
+              "line": 3,
+              "column": 43
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/RPath.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/example/simplify.ts": {
+      "mTimestamp": {
+        "mtime": 1685352983678.2,
+        "uuid": "c8703858-206e-4d4e-b3da-488fedf410a9"
+      },
+      "chunkId": "ea91b19ee13e73c01b136fd00033e187e22178ea",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 72
+            },
+            "end": {
+              "line": 1,
+              "column": 76
+            }
+          }
+        },
+        {
+          "value": "../raphael/RPath",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 22
+            },
+            "end": {
+              "line": 3,
+              "column": 40
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/RPath.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/example/smooth.ts": {
+      "mTimestamp": {
+        "mtime": 1685352983679.198,
+        "uuid": "e25cb958-5426-4516-b9fc-f070f1459417"
+      },
+      "chunkId": "dbc46378fa218d612f0818192677049d07ec16aa",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 48
+            },
+            "end": {
+              "line": 1,
+              "column": 52
+            }
+          }
+        },
+        {
+          "value": "../raphael/RPath",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 22
+            },
+            "end": {
+              "line": 3,
+              "column": 40
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/RPath.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/example/svg.ts": {
+      "mTimestamp": {
+        "mtime": 1685352983681.192,
+        "uuid": "fb53b32d-d0c9-491e-a693-aaac5d0d07e6"
+      },
+      "chunkId": "d42eb7736a99519335357ff8dda0fd97a8b8377f",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 73
+            },
+            "end": {
+              "line": 1,
+              "column": 77
+            }
+          }
+        },
+        {
+          "value": "../raphael/RGroup",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 23
+            },
+            "end": {
+              "line": 3,
+              "column": 42
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/RGroup.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/utils/R.find.ts": {
+      "mTimestamp": {
+        "mtime": 1685352983688.1733,
+        "uuid": "cc7c1dff-b5ee-42db-8fc7-71aa76c4a5c9"
+      },
+      "chunkId": "f883526986293cca7b1ff20c61448b1c2f75adf7",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/utils/R.length.ts": {
+      "mTimestamp": {
+        "mtime": 1685352983690.1677,
+        "uuid": "aac33bcf-98f8-4261-9380-30e72ef03923"
+      },
+      "chunkId": "30cd2d3db7ba8bff63be04c6ff3f44fb9133d9bc",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/raphael/utils/R.utils.ts": {
+      "mTimestamp": {
+        "mtime": 1685352983691.1653,
+        "uuid": "58892f69-6426-48a4-8b68-db67c39d501b"
+      },
+      "chunkId": "72bb08bb50d1e4da571dc9cb569604c2bb8611eb",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/start-scene/scripts/Global/ListItem.ts": {
+      "mTimestamp": {
+        "mtime": 1685352983713.107,
+        "uuid": "aa63b58d-13c8-417f-83f8-4a9d17dae4f4"
+      },
+      "chunkId": "d47a52ba36138acbdbf5f583dae3cf54ec00afa7",
+      "imports": [
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 67
+            },
+            "end": {
+              "line": 1,
+              "column": 71
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/start-scene/scripts/Global/Menu.ts": {
+      "mTimestamp": {
+        "mtime": 1685352983714.1033,
+        "uuid": "04525a72-6019-4ddb-a496-6b0694177740"
+      },
+      "chunkId": "378ef14fd45d6fff80f78238bd9e9d47d4cceeb5",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 87
+            },
+            "end": {
+              "line": 1,
+              "column": 91
+            }
+          }
+        },
+        {
+          "value": "./SceneList",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 26
+            },
+            "end": {
+              "line": 2,
+              "column": 39
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/start-scene/scripts/Global/SceneList.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/start-scene/scripts/Global/SceneList.ts": {
+      "mTimestamp": {
+        "mtime": 1685352983715.1008,
+        "uuid": "473b8c31-b39e-4eb0-9be8-c557580b34c5"
+      },
+      "chunkId": "0cc154655c22104cd6fcdddff675afaa2d4cfdbf",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 128
+            },
+            "end": {
+              "line": 1,
+              "column": 132
+            }
+          }
+        },
+        {
+          "value": "./ListItem",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 25
+            },
+            "end": {
+              "line": 2,
+              "column": 37
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/cocos/cocos-awesome-tech-solutions/demo/Creator3.6.0_Raphael/assets/start-scene/scripts/Global/ListItem.ts"
+          },
+          "messages": []
+        }
+      ]
+    }
+  }
+}

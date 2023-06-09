@@ -1,0 +1,578 @@
+{
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\demo": {
+    "time": 1685352983657.2576,
+    "uuid": "90a2d446-1fa6-4b6a-9973-fadec721bef2",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example": {
+    "time": 1685352983681.192,
+    "uuid": "10011cd9-9d89-4478-9a62-fe154b285f48",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\raphael": {
+    "time": 1685352983686.1787,
+    "uuid": "b9ca24e8-724a-441e-818b-c50e8d0c1a4e",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\resources": {
+    "time": 1685352983694.1575,
+    "uuid": "ee6b8fdc-2676-43aa-968c-4536ea597c7a",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene": {
+    "time": 1685352983712.1106,
+    "uuid": "c65f445c-440f-462e-b072-82c40d99d08e",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\demo\\nardove": {
+    "time": 1685352983660.248,
+    "uuid": "3b7ddd4d-2c61-4fa0-be8f-46c62476bc3a",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\make-path": {
+    "time": 1685352983676.2058,
+    "uuid": "ef1d1d02-72df-464c-ad76-2ed5dc3a804d",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\raphael\\utils": {
+    "time": 1685352983692.1636,
+    "uuid": "aededce7-a0dc-4d27-aa83-8a518b122992",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\resources\\svg": {
+    "time": 1685352983696.1516,
+    "uuid": "b4b134cb-f8f4-4c60-9485-0cc396f81cbc",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene\\res": {
+    "time": 1685352983704.1306,
+    "uuid": "6a82aa1b-c37e-450d-b49d-73f7e7d915da",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene\\scripts": {
+    "time": 1685352983713.107,
+    "uuid": "1dc99614-e1c7-4c6c-aae4-53d11244a00a",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene\\res\\sliced": {
+    "time": 1685352983712.1106,
+    "uuid": "ffe5431e-3853-4509-8a50-e62bae1f0fc9",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene\\scripts\\Global": {
+    "time": 1685352983716.098,
+    "uuid": "b55fadda-07ef-4b0b-a28d-ac5392d4bd7e",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\demo\\animate-dash-line.ts": {
+    "time": 1685352983653.267,
+    "uuid": "50ae1931-e620-40d0-9300-045e24de72ee",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\demo\\animate.ts": {
+    "time": 1685352983655.2607,
+    "uuid": "37fb8c41-2500-4dee-aed5-bab9c10c3919",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\dash-line.ts": {
+    "time": 1685352983662.2427,
+    "uuid": "61ffd474-1076-456f-85b0-690fd0563125",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\group.ts": {
+    "time": 1685352983664.2366,
+    "uuid": "6aad7309-2832-46b6-9d4f-52734c719122",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\simplify.ts": {
+    "time": 1685352983678.2,
+    "uuid": "c8703858-206e-4d4e-b3da-488fedf410a9",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\smooth.ts": {
+    "time": 1685352983679.198,
+    "uuid": "e25cb958-5426-4516-b9fc-f070f1459417",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\svg.ts": {
+    "time": 1685352983681.192,
+    "uuid": "fb53b32d-d0c9-491e-a693-aaac5d0d07e6",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\raphael\\GlobalUtils.ts": {
+    "time": 1685352983683.1865,
+    "uuid": "43a79cb6-37a7-4140-872e-1825ababce66",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\raphael\\RGroup.ts": {
+    "time": 1685352983684.1843,
+    "uuid": "041f658b-868c-4ff9-aeaf-7020a4a30e80",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\raphael\\RPath.ts": {
+    "time": 1685352983685.1807,
+    "uuid": "c89f092d-8a2d-449c-86af-67e9b28898ef",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\demo\\nardove\\jelly.ts": {
+    "time": 1685352983658.2534,
+    "uuid": "04ff51f4-6f7f-4679-a39c-1b445d3535e8",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\demo\\nardove\\nardove.ts": {
+    "time": 1685352983658.2534,
+    "uuid": "85d5527d-8fc9-4a7b-94de-2e1e18a91c0a",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\demo\\nardove\\tentacle.ts": {
+    "time": 1685352983659.2505,
+    "uuid": "06e14d20-7b08-46f6-996e-af226a486132",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\make-path\\c.ts": {
+    "time": 1685352983666.2317,
+    "uuid": "0c7fabc6-7d50-4371-ad45-181196696f6b",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\make-path\\circle.ts": {
+    "time": 1685352983668.226,
+    "uuid": "4a71f525-9ac8-4636-a033-06555ad81c06",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\make-path\\ellipse.ts": {
+    "time": 1685352983670.2217,
+    "uuid": "11fa0f5f-33b2-4de3-b4ef-13f717f7051d",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\make-path\\l.ts": {
+    "time": 1685352983672.216,
+    "uuid": "c3530a67-8ed4-4d55-91de-ebfa28561bb6",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\make-path\\q.ts": {
+    "time": 1685352983674.2112,
+    "uuid": "dd2ec4c8-d40c-48dc-8711-78c0c0c80a22",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\make-path\\rect.ts": {
+    "time": 1685352983676.2058,
+    "uuid": "c1fbb0ba-1943-49a1-b685-966c827c803c",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\raphael\\utils\\R.curve.ts": {
+    "time": 1685352983687.176,
+    "uuid": "3fbad5c6-364b-4b50-af54-479f7dbf86a3",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\raphael\\utils\\R.dash.ts": {
+    "time": 1685352983688.1733,
+    "uuid": "3ed44642-4f66-4996-816a-11a483296170",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\raphael\\utils\\R.find.ts": {
+    "time": 1685352983688.1733,
+    "uuid": "cc7c1dff-b5ee-42db-8fc7-71aa76c4a5c9",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\raphael\\utils\\R.length.ts": {
+    "time": 1685352983690.1677,
+    "uuid": "aac33bcf-98f8-4261-9380-30e72ef03923",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\raphael\\utils\\R.tesselateBezier.ts": {
+    "time": 1685352983690.1677,
+    "uuid": "27740b9f-3513-4a80-b4e8-9b217cd6d4de",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\raphael\\utils\\R.utils.ts": {
+    "time": 1685352983691.1653,
+    "uuid": "58892f69-6426-48a4-8b68-db67c39d501b",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene\\scripts\\Global\\ListItem.ts": {
+    "time": 1685352983713.107,
+    "uuid": "aa63b58d-13c8-417f-83f8-4a9d17dae4f4",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene\\scripts\\Global\\Menu.ts": {
+    "time": 1685352983714.1033,
+    "uuid": "04525a72-6019-4ddb-a496-6b0694177740",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene\\scripts\\Global\\SceneList.ts": {
+    "time": 1685352983715.1008,
+    "uuid": "473b8c31-b39e-4eb0-9be8-c557580b34c5",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\demo.meta": {
+    "time": 1685352983651.272
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example.meta": {
+    "time": 1685352983660.248
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\raphael.meta": {
+    "time": 1685352983682.1895
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\resources.meta": {
+    "time": 1685352983692.1636
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene.meta": {
+    "time": 1685352983696.1516
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\demo\\nardove.meta": {
+    "time": 1685352983656.2588
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\make-path.meta": {
+    "time": 1685352983665.235
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\raphael\\utils.meta": {
+    "time": 1685352983686.1787
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\resources\\svg.meta": {
+    "time": 1685352983693.1611
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene\\res.meta": {
+    "time": 1685352983698.1462
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene\\scripts.meta": {
+    "time": 1685352983712.1106
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene\\res\\sliced.meta": {
+    "time": 1685352983703.1328
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene\\scripts\\Global.meta": {
+    "time": 1685352983713.107
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\demo\\animate-dash-line.ts.meta": {
+    "time": 1685352983653.267
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\demo\\animate.ts.meta": {
+    "time": 1685352983655.2607
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\dash-line.ts.meta": {
+    "time": 1685352983663.2393
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\group.ts.meta": {
+    "time": 1685352983664.2366
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\simplify.ts.meta": {
+    "time": 1685352983678.2
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\smooth.ts.meta": {
+    "time": 1685352983680.194
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\svg.ts.meta": {
+    "time": 1685352983681.192
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\raphael\\GlobalUtils.ts.meta": {
+    "time": 1685352983684.1843
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\raphael\\RGroup.ts.meta": {
+    "time": 1685352983684.1843
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\raphael\\RPath.ts.meta": {
+    "time": 1685352983685.1807
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\demo\\nardove\\jelly.ts.meta": {
+    "time": 1685352983658.2534
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\demo\\nardove\\nardove.ts.meta": {
+    "time": 1685352983659.2505
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\demo\\nardove\\tentacle.ts.meta": {
+    "time": 1685352983660.248
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\make-path\\c.ts.meta": {
+    "time": 1685352983667.2295
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\make-path\\circle.ts.meta": {
+    "time": 1685352983669.2246
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\make-path\\ellipse.ts.meta": {
+    "time": 1685352983671.2188
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\make-path\\l.ts.meta": {
+    "time": 1685352983672.216
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\make-path\\q.ts.meta": {
+    "time": 1685352983674.2112
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\make-path\\rect.ts.meta": {
+    "time": 1685352983676.2058
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\raphael\\utils\\R.curve.ts.meta": {
+    "time": 1685352983687.176
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\raphael\\utils\\R.dash.ts.meta": {
+    "time": 1685352983688.1733
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\raphael\\utils\\R.find.ts.meta": {
+    "time": 1685352983689.1707
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\raphael\\utils\\R.length.ts.meta": {
+    "time": 1685352983690.1677
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\raphael\\utils\\R.tesselateBezier.ts.meta": {
+    "time": 1685352983691.1653
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\raphael\\utils\\R.utils.ts.meta": {
+    "time": 1685352983692.1636
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene\\scripts\\Global\\ListItem.ts.meta": {
+    "time": 1685352983714.1033
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene\\scripts\\Global\\Menu.ts.meta": {
+    "time": 1685352983715.1008
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene\\scripts\\Global\\SceneList.ts.meta": {
+    "time": 1685352983716.098
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\cheerio.js": {
+    "time": 1685352983650.275,
+    "uuid": "51f42e20-82b8-48c1-8a6a-d4342707a89e",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\demo\\animate-dash-line.scene": {
+    "time": 1686046260428.9294,
+    "uuid": "ff2ba758-7ea4-40a9-8b2a-6448529595e6",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\demo\\animate.scene": {
+    "time": 1686046260428.9294,
+    "uuid": "bbde841f-ec60-4118-ad7b-59df9bdff895",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\demo\\nardove.scene": {
+    "time": 1686046260428.9294,
+    "uuid": "7ce1ef47-b07a-4a9c-9a6e-78af7f6f4ae8",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\dash-line.scene": {
+    "time": 1686046260429.9268,
+    "uuid": "8fd5e26e-bd6c-49eb-bb9c-6ebd74c076b3",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\group.scene": {
+    "time": 1686046260441.895,
+    "uuid": "29d26a5b-ea16-4b3e-b95a-a1aaecd094a2",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\simplify.scene": {
+    "time": 1686046260460.8438,
+    "uuid": "16588bb6-b75b-4826-8307-775822c5b63d",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\smooth.scene": {
+    "time": 1686046260460.8438,
+    "uuid": "2a38a219-a97a-460a-903e-02d406077f14",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\svg.scene": {
+    "time": 1686046260461.8418,
+    "uuid": "a79b2707-151a-42ad-870c-8bceec69fc66",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene\\TestList.scene": {
+    "time": 1686046260463.836,
+    "uuid": "d13475c7-b37e-45d6-b6c5-25929e8a0925",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\make-path\\c.scene": {
+    "time": 1686046260478.796,
+    "uuid": "2ea50c9e-b065-4c16-add3-79b57a655db9",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\make-path\\circle.scene": {
+    "time": 1686046260487.7732,
+    "uuid": "949894d8-e60c-4d97-96ed-99e56dab1bd9",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\make-path\\ellipse.scene": {
+    "time": 1686046260490.7644,
+    "uuid": "951c9c63-912d-4365-921d-4cbb58a373b6",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\make-path\\l.scene": {
+    "time": 1686046260490.7644,
+    "uuid": "88957095-0c85-4771-bdd2-c9cf1b1e0337",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\make-path\\q.scene": {
+    "time": 1686046260490.7644,
+    "uuid": "9abe12a0-21a2-4017-8cad-6bd98ddec154",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\make-path\\rect.scene": {
+    "time": 1686046260502.7322,
+    "uuid": "d217f607-c8da-41e9-a1a5-9d2325b67817",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\resources\\svg\\dribbble.txt": {
+    "time": 1685352983694.1575,
+    "uuid": "c70d3b1a-0d9a-47c9-b1af-d0246304d438",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\resources\\svg\\tiger.txt": {
+    "time": 1685352983695.1548,
+    "uuid": "af32b53a-ce84-4802-bc51-38919b9a99e8",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene\\res\\Background.prefab": {
+    "time": 1686046260534.6467,
+    "uuid": "b8392351-be97-4f01-985e-3e7d2118f3c9",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene\\res\\Button.prefab": {
+    "time": 1686046260533.6506,
+    "uuid": "f124f43c-2df9-49bf-8e1c-ff7a3a746ffe",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene\\res\\ListItem.prefab": {
+    "time": 1686046260534.6467,
+    "uuid": "1ea21a34-ca68-4880-8df6-05abb19079fd",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene\\res\\panelBG.png": {
+    "time": 1685352983702.16,
+    "uuid": "3229feab-b062-4c75-ad91-b962602def21",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene\\res\\singleColor.png": {
+    "time": 1685352983703.1328,
+    "uuid": "1b6a0b3c-2a0e-410a-95ab-53dc9a03a360",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene\\res\\sliced\\button_empty.png": {
+    "time": 1685352983704.1306,
+    "uuid": "dadab157-3ee8-4617-a29c-54d5b4fb7aa8",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene\\res\\sliced\\button_green.png": {
+    "time": 1685352983705.1282,
+    "uuid": "c82179a5-676d-423c-8de2-22874b5f4a6d",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene\\res\\sliced\\button_green_p2.png": {
+    "time": 1685352983706.1252,
+    "uuid": "87589cb6-1ba7-4961-83ec-bb8e7edb1991",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene\\res\\sliced\\button_green_un2.png": {
+    "time": 1685352983707.1235,
+    "uuid": "ca4be22c-42c0-4632-9225-cd95960fdd79",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene\\res\\sliced\\panel_bg.png": {
+    "time": 1685352983708.1206,
+    "uuid": "6fd1ec90-efab-41ec-ab6b-4cd6a085951d",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene\\res\\sliced\\panel_black.png": {
+    "time": 1685352983709.1172,
+    "uuid": "993f03a1-0964-4c0e-913b-344be7363e8c",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene\\res\\sliced\\panel_highlight.png": {
+    "time": 1685352983710.115,
+    "uuid": "5b540dd3-1633-495a-9c83-4e62cdd75faa",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene\\res\\sliced\\ui_panel.png": {
+    "time": 1685352983711.1138,
+    "uuid": "e2f89568-b554-41b7-a21a-b3a03b3c5431",
+    "missing": false
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\cheerio.js.meta": {
+    "time": 1685352983651.272
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\demo\\animate-dash-line.scene.meta": {
+    "time": 1686046260434.9148
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\demo\\animate.scene.meta": {
+    "time": 1686046260436.909
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\demo\\nardove.scene.meta": {
+    "time": 1686046260439.9001
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\dash-line.scene.meta": {
+    "time": 1686046260440.8982
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\group.scene.meta": {
+    "time": 1686046260459.8467
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\smooth.scene.meta": {
+    "time": 1686046260465.8313
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\simplify.scene.meta": {
+    "time": 1686046260467.8262
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\svg.scene.meta": {
+    "time": 1686046260469.82
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene\\TestList.scene.meta": {
+    "time": 1686046260471.816
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\make-path\\c.scene.meta": {
+    "time": 1686046260488.7715
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\make-path\\ellipse.scene.meta": {
+    "time": 1686046260495.7505
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\make-path\\circle.scene.meta": {
+    "time": 1686046260497.7454
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\make-path\\l.scene.meta": {
+    "time": 1686046260499.7405
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\make-path\\q.scene.meta": {
+    "time": 1686046260501.7344
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\resources\\svg\\dribbble.txt.meta": {
+    "time": 1685352983694.1575
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\example\\make-path\\rect.scene.meta": {
+    "time": 1686046260524.6743
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\resources\\svg\\tiger.txt.meta": {
+    "time": 1685352983696.1516
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene\\res\\Button.prefab.meta": {
+    "time": 1686046260537.64
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene\\res\\Background.prefab.meta": {
+    "time": 1686046260540.631
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene\\res\\ListItem.prefab.meta": {
+    "time": 1686046260545.6177
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene\\res\\singleColor.png.meta": {
+    "time": 1686046260563.569
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene\\res\\sliced\\button_empty.png.meta": {
+    "time": 1686046260566.5608
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene\\res\\sliced\\button_green.png.meta": {
+    "time": 1686046260568.5557
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene\\res\\panelBG.png.meta": {
+    "time": 1686046260573.5425
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene\\res\\sliced\\button_green_p2.png.meta": {
+    "time": 1686046260575.5369
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene\\res\\sliced\\panel_bg.png.meta": {
+    "time": 1686046260591.4944
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene\\res\\sliced\\button_green_un2.png.meta": {
+    "time": 1686046260593.489
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene\\res\\sliced\\panel_black.png.meta": {
+    "time": 1686046260594.486
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene\\res\\sliced\\panel_highlight.png.meta": {
+    "time": 1686046260595.484
+  },
+  "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_Raphael\\assets\\start-scene\\res\\sliced\\ui_panel.png.meta": {
+    "time": 1686046260601.468
+  }
+}

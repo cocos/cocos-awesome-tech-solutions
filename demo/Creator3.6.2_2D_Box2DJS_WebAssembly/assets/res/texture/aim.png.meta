@@ -1,11 +1,11 @@
 {
-  "ver": "1.0.22",
+  "ver": "1.0.25",
   "importer": "image",
   "imported": true,
   "uuid": "897f04e9-876d-40fc-89ec-230765d6bdde",
   "files": [
-    ".png",
-    ".json"
+    ".json",
+    ".png"
   ],
   "subMetas": {
     "6c48a": {
@@ -22,9 +22,10 @@
         "mipfilter": "none",
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "897f04e9-876d-40fc-89ec-230765d6bdde"
+        "imageUuidOrDatabaseUri": "897f04e9-876d-40fc-89ec-230765d6bdde",
+        "visible": false
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -56,9 +57,67 @@
         "packable": true,
         "isUuid": true,
         "imageUuidOrDatabaseUri": "897f04e9-876d-40fc-89ec-230765d6bdde@6c48a",
-        "atlasUuid": ""
+        "atlasUuid": "",
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [
+            -100.5,
+            -100,
+            0,
+            100.5,
+            -100,
+            0,
+            -100.5,
+            100,
+            0,
+            100.5,
+            100,
+            0
+          ],
+          "indexes": [
+            0,
+            1,
+            2,
+            2,
+            1,
+            3
+          ],
+          "uv": [
+            0,
+            200,
+            201,
+            200,
+            0,
+            0,
+            201,
+            0
+          ],
+          "nuv": [
+            0,
+            0,
+            0.9178082191780822,
+            0,
+            0,
+            1,
+            0.9178082191780822,
+            1
+          ],
+          "minPos": [
+            -100.5,
+            -100,
+            0
+          ],
+          "maxPos": [
+            100.5,
+            100,
+            0
+          ]
+        }
       },
-      "ver": "1.0.9",
+      "ver": "1.0.11",
       "imported": true,
       "files": [
         ".json"
@@ -69,6 +128,7 @@
   "userData": {
     "hasAlpha": true,
     "type": "sprite-frame",
-    "redirect": "897f04e9-876d-40fc-89ec-230765d6bdde@f9941"
+    "redirect": "897f04e9-876d-40fc-89ec-230765d6bdde@f9941",
+    "fixAlphaTransparencyArtifacts": false
   }
 }

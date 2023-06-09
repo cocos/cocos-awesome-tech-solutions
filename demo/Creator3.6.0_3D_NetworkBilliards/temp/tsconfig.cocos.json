@@ -6,16 +6,16 @@
     "strict": true,
     "types": [
       "./temp/declarations/cc.custom-macro",
-      "./temp/declarations/cc",
       "./temp/declarations/jsb",
+      "./temp/declarations/cc",
       "./temp/declarations/cc.env"
     ],
     "paths": {
       "db://internal/*": [
-        "/Applications/CocosCreator/Creator/3.6.2/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/*"
+        "D:\\cocos-dashboard-editors\\Creator\\3.7.3\\resources\\resources\\3d\\engine\\editor\\assets\\*"
       ],
       "db://assets/*": [
-        "/Users/zzf520/Documents/GitHub/cocos-awesome-tech-solutions/demo/Creator3.6.0_3D_NetworkBilliards/assets/*"
+        "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_3D_NetworkBilliards\\assets\\*"
       ]
     },
     "experimentalDecorators": true,

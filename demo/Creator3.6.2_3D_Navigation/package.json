@@ -1,6 +1,6 @@
 {
   "creator": {
-    "version": "3.6.2"
+    "version": "3.7.3"
   },
   "dependencies": {
     "cocos-recast": "^1.1.0"

@@ -1,0 +1,12 @@
+{
+  "disable-packages": {
+    "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3": {
+      "6": {
+        "0_2D_SpineDragController\\extensions\\cocos-service": {
+          "name": "cocos-service",
+          "time": 1686030748837
+        }
+      }
+    }
+  }
+}

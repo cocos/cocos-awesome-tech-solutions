@@ -1,5 +1,5 @@
 {
-  "ver": "2.1.10",
+  "ver": "2.3.4",
   "importer": "gltf",
   "imported": true,
   "uuid": "8dddbce3-645c-4b65-9d40-5c8c922658e0",
@@ -38,7 +38,7 @@
         "isUuid": false,
         "imageUuidOrDatabaseUri": "db://assets/models/orange/textures/fr_caraOrange_diffuse.jpeg"
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -61,7 +61,7 @@
         "isUuid": false,
         "imageUuidOrDatabaseUri": "db://assets/models/orange/textures/fr_caraOrange_specularGlossiness.png"
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -84,7 +84,7 @@
         "isUuid": false,
         "imageUuidOrDatabaseUri": "db://assets/models/orange/textures/fr_caraOrange_normal.jpeg"
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -133,7 +133,7 @@
         "8dddbce3-645c-4b65-9d40-5c8c922658e0@0089c"
       ],
       "materials": [
-        "57699f95-442c-4cb9-bca8-4419aab2f60d"
+        "682fe5c0-eecd-49b6-b19b-eb028b148a82"
       ],
       "scenes": [
         "8dddbce3-645c-4b65-9d40-5c8c922658e0@d1932"

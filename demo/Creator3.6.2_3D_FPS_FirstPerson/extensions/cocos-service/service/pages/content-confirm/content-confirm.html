@@ -1,0 +1,10 @@
+<popup-container :mh="400" :mw="300" @popup-close="handleClose">
+    <div style="font-size: 24px; color: var(--color-normal-contrast-normal); margin-top: 10px;">{{ title }}</div>
+    <div id="content" :style="contentStyle">
+        <ui-markdown v-html="msg" style="width: 100%; color: var(--color-normal-contrast-normal);"></ui-markdown>
+    </div>
+   
+    <div class="wrapper layout horizontal around-justified" id='bottom-button' style="margin: 10px 0px 4px 0px" >
+        <ui-button v-for="btn in buttons" :key="btn.index" @click="btnClick(btn.index)" :class="[btn.index === high ? 'blue' : 'standard']" > {{ btn.text }} </ui-button>
+    </div>
+</popup-container>

@@ -213,7 +213,7 @@ export class astar {
             return path;  
         } 
     
-        console.log(src_x, src_y, dst_x, dst_y);
+        // console.log(src_x, src_y, dst_x, dst_y);
     
         astar_init(map);
     
@@ -264,7 +264,7 @@ export class astar {
       
             while( top >= 0 )        // 下面是输出路径看看~  
             {  
-                console.log(path_stack[top].s_y, path_stack[top].s_x);
+                // console.log(path_stack[top].s_y, path_stack[top].s_x);
                 path.push(new Vec3(path_stack[top].s_y, path_stack[top].s_x));
                 top --;
             }  

@@ -1,0 +1,31 @@
+<div class='body'>
+    <div id="loader-wrapper" style="background: var(--color-normal-fill); z-index: 999;">
+        <div id="loader"></div>
+        <div class="load-title" style="margin-top: 60px;">
+            <ui-label value="i18n:cocos-service.load_cocos_service"></ui-label> <br>
+            <span> V ${cc_version}</span>
+        </div>
+    </div>
+    <div id="cocos-service" style="overflow: hidden; height: 100%;" onselectstart="return false;">
+        <div v-if="!isLogin" style="display: flex;justify-content: center;">
+            <div style='color:red;font-size:medium;margin-top: 20px;'>{{nologinTips}}</div>
+        </div>
+        <div v-if="refresh" style="height: 100%;">
+            <!-- 弹出页 -->
+            <service-filter v-if="filterInfo.show" :filter="filterInfo.filter" :services="services"></service-filter>
+            <config-set v-if="configSetInfo.show" :action="configSetInfo.action" :config="config" :configs="configs" @save-config="handleSaveConfig"></config-set>
+            <content-menu v-if="menuInfo.show" :position="menuInfo.position" :items="menuInfo.items" :callback="menuInfo.callback"></content-menu>
+            <content-confirm v-if="confirmInfo.show" :title="confirmInfo.title" :msg="confirmInfo.msg" :btns="confirmInfo.btns" :high="confirmInfo.high" :callback="confirmInfo.callback"></content-confirm>
+            <popup-container v-if="popupInfo.show" :mh="popupInfo.mh" :mw="popupInfo.mw" :html="popupInfo.html" :src="popupInfo.src" :pdata="popupInfo.data" :closed="popupInfo.closed" @popup-close="popupInfo.show = false"></popup-container>
+            <version-manager v-if="vermInfo.show" :service="service" :action="vermInfo.action"></version-manager>
+            <bind-game v-if="isShowBindGame" :islogin="isLogin" @back-home="backHome" @bind-game="handleBindGame"></bind-game>
+            <div id="loading" v-if="loading" class="fit"><ui-loading></ui-loading><div>{{ message }}</div></div>
+            <!-- 一下为逻辑页面 -->
+            <!-- 服务列表 -->
+            <service-list v-if="isShowServiceList" :game="game" :services="services" :config="config" :configs="configs" :filter="filterInfo.filter" @item-click="handleItemClick" @confirm-config="handleConfirmConfig"></service-list>
+            <!-- 服务详情页 -->
+            <service-detail v-if="isShowServiceDetail" @back-home="backHome" @enable-service="enableService" :service="service" :game="game"></service-detail>
+            
+        </div>
+    </div>
+</div>

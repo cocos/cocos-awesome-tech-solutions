@@ -1,0 +1,86 @@
+{
+  "__version__": "3.0.5",
+  "builder": {
+    "options": {
+      "web-desktop": {
+        "configID": "182cd8",
+        "services": [
+          {
+            "service_id": "316",
+            "service_component_name": "service-vunglead",
+            "builder": "C:\\Users\\Administrator\\.CocosCreator\\.service\\vunglead\\builder\\builder.js",
+            "enable": false,
+            "params": {}
+          },
+          {
+            "service_id": "278",
+            "service_component_name": "service-sdkhub",
+            "builder": "C:\\Users\\Administrator\\.CocosCreator\\.service\\sdkhub\\builder\\builder.js",
+            "enable": false,
+            "params": {}
+          }
+        ]
+      },
+      "wechatgame": {
+        "configID": "182cd8",
+        "services": [
+          {
+            "service_id": "316",
+            "service_component_name": "service-vunglead",
+            "builder": "C:\\Users\\Administrator\\.CocosCreator\\.service\\vunglead\\builder\\builder.js",
+            "enable": false,
+            "params": {}
+          },
+          {
+            "service_id": "278",
+            "service_component_name": "service-sdkhub",
+            "builder": "C:\\Users\\Administrator\\.CocosCreator\\.service\\sdkhub\\builder\\builder.js",
+            "enable": false,
+            "params": {}
+          }
+        ]
+      }
+    },
+    "taskOptionsMap": {
+      "1686020608890": {
+        "configID": "182cd8",
+        "services": [
+          {
+            "service_id": "316",
+            "service_component_name": "service-vunglead",
+            "builder": "C:\\Users\\Administrator\\.CocosCreator\\.service\\vunglead\\builder\\builder.js",
+            "enable": false,
+            "params": {}
+          },
+          {
+            "service_id": "278",
+            "service_component_name": "service-sdkhub",
+            "builder": "C:\\Users\\Administrator\\.CocosCreator\\.service\\sdkhub\\builder\\builder.js",
+            "enable": false,
+            "params": {}
+          }
+        ]
+      }
+    },
+    "__version__": "1.3.5"
+  },
+  "builder-options": {
+    "configID": "182cd8",
+    "services": [
+      {
+        "service_id": "316",
+        "service_component_name": "service-vunglead",
+        "builder": "C:\\Users\\Administrator\\.CocosCreator\\.service\\vunglead\\builder\\builder.js",
+        "enable": false,
+        "params": {}
+      },
+      {
+        "service_id": "278",
+        "service_component_name": "service-sdkhub",
+        "builder": "C:\\Users\\Administrator\\.CocosCreator\\.service\\sdkhub\\builder\\builder.js",
+        "enable": false,
+        "params": {}
+      }
+    ]
+  }
+}

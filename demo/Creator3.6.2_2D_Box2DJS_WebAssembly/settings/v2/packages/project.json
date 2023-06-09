@@ -1,5 +1,5 @@
 {
-  "__version__": "1.0.1",
+  "__version__": "1.0.4",
   "physics": {
     "collisionGroups": [
       {
@@ -25,6 +25,11 @@
       "2": 2,
       "3": 16,
       "4": 24
+    }
+  },
+  "fbx": {
+    "legacyFbxImporter": {
+      "visible": true
     }
   }
 }

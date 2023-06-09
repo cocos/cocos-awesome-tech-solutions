@@ -1,0 +1,34 @@
+{
+  "name": "flushwritable",
+  "version": "1.0.0",
+  "description": "A Writable stream that flushes before emitting finish",
+  "main": "lib/FlushWritable.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha -R spec test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/TomFrost/FlushWritable"
+  },
+  "keywords": [
+    "stream",
+    "streams",
+    "writable",
+    "flush",
+    "transform",
+    "wrapper"
+  ],
+  "author": "Tom Frost <tom@frosteddesign.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TomFrost/FlushWritable/issues"
+  },
+  "homepage": "https://github.com/TomFrost/FlushWritable",
+  "devDependencies": {
+    "mocha": "^2.0.1",
+    "should": "^4.3.0"
+  }
+}

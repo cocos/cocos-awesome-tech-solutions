@@ -1,0 +1,36 @@
+<div class="pop-mask" style="background-color: #00000000;" @click="itemClick('', $event)" ref="mask">
+    <div class="pop-menu-container" :style="menuStyle" ref="menu" v-if="show" @click="$event.stopPropagation()">
+        <template v-for="item in items">
+            <div class="pop-menu-item"
+                 v-if="!item.subMenu"
+                 :key="item.id"
+                 @click.stop="itemClick(item, $event)">
+                 {{ item.name }}
+            </div>
+            <div v-else
+                 style="position: relative; overflow: visible;"
+                 class="pop-menu-item"
+                 :key="item.id"
+                 @click.stop="itemClick(item, $event)"
+                 @mouseenter="onSubMenuItemEnter(item)"
+                 @mouseleave="onSubMenuItemLeave(item)">
+                 {{ item.name }}
+
+                 <span style="position: absolute; right: 0; padding-right: 0.5em; font-size: 0.8em;">&#9654;</span>
+
+                 <div :style="positionContainerStyle" @click="$event.stopPropagation()">
+                    <div v-if="item.id === curSubMenuItemId"
+                        class="pop-sub-menu-container"
+                        :style="subMenuStyle">
+                        <div v-for="subItem in item.subMenu"
+                            :key="subItem.id"
+                            :class="['pop-menu-item', subItem.isTop && 'top', subItem.isBottom && 'bottom']"
+                            @click.stop="itemClick(subItem, $event)">
+                            {{ subItem.name }}
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </template>
+    </div>
+</div>

@@ -1,0 +1,90 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "panel_bg",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 20,
+      "height": 20
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 20,
+      "height": 20
+    },
+    "rotated": false,
+    "capInsets": [
+      5,
+      4,
+      5,
+      6
+    ],
+    "vertices": {
+      "rawPosition": [
+        -10,
+        -10,
+        0,
+        10,
+        -10,
+        0,
+        -10,
+        10,
+        0,
+        10,
+        10,
+        0
+      ],
+      "indexes": [
+        0,
+        1,
+        2,
+        2,
+        1,
+        3
+      ],
+      "uv": [
+        0,
+        20,
+        20,
+        20,
+        0,
+        0,
+        20,
+        0
+      ],
+      "nuv": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "minPos": {
+        "x": -10,
+        "y": -10,
+        "z": 0
+      },
+      "maxPos": {
+        "x": 10,
+        "y": 10,
+        "z": 0
+      }
+    },
+    "texture": "6fd1ec90-efab-41ec-ab6b-4cd6a085951d@6c48a",
+    "packable": true,
+    "pixelsToUnit": 100,
+    "pivot": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "meshType": 0
+  }
+}

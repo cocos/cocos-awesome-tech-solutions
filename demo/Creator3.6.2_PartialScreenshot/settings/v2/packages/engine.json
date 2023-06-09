@@ -1,5 +1,5 @@
 {
-  "__version__": "1.0.5",
+  "__version__": "1.0.7",
   "modules": {
     "cache": {
       "base": {
@@ -87,18 +87,31 @@
       },
       "dragon-bones": {
         "_value": false
+      },
+      "animation": {
+        "_value": true
+      },
+      "skeletal-animation": {
+        "_value": true
+      },
+      "marionette": {
+        "_value": true
       }
     },
     "includeModules": [
+      "2d",
+      "3d",
+      "animation",
       "base",
       "gfx-webgl",
       "gfx-webgl2",
-      "3d",
-      "2d",
-      "ui",
+      "light-probe",
+      "marionette",
       "primitive",
       "profiler",
-      "marionette"
+      "skeletal-animation",
+      "ui",
+      "websocket"
     ],
     "noDeprecatedFeatures": {
       "value": false,

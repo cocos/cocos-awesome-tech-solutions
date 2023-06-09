@@ -1,7 +1,7 @@
 [
   {
     "__type__": "cc.Prefab",
-    "_name": "",
+    "_name": "copyNinja",
     "_objFlags": 0,
     "_native": "",
     "data": {
@@ -4106,7 +4106,7 @@
     "fileId": "c5OfxnPdhO0bvQYXtRo8wb"
   },
   {
-    "__type__": "cc.ModelLightmapSettings",
+    "__type__": "cc.ModelBakeSettings",
     "texture": null,
     "uvParam": {
       "__type__": "cc.Vec4",
@@ -4391,9 +4391,7 @@
       }
     ],
     "_visFlags": 0,
-    "lightmapSettings": {
-      "__id__": 161
-    },
+    "lightmapSettings": null,
     "_mesh": {
       "__uuid__": "bc7d8a48-bf60-4fe1-a514-28133127d914@e6e4b",
       "__expectedType__": "cc.Mesh"
@@ -4401,14 +4399,17 @@
     "_shadowCastingMode": 0,
     "_shadowReceivingMode": 1,
     "_enableMorph": true,
-    "_id": ""
+    "_id": "",
+    "bakeSettings": {
+      "__id__": 161
+    }
   },
   {
     "__type__": "cc.CompPrefabInfo",
     "fileId": "b4lKUTu/FFqIRLojCvF817"
   },
   {
-    "__type__": "cc.ModelLightmapSettings",
+    "__type__": "cc.ModelBakeSettings",
     "texture": null,
     "uvParam": {
       "__type__": "cc.Vec4",

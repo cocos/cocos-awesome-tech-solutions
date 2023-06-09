@@ -8,9 +8,9 @@ const { ccclass, property } = _decorator;
 @ccclass
 export default class NetWork {
     // websocket 连接地址
-    public static wssLink: string = "ws://192.168.50.79:8002";
+    // public static wssLink: string = "ws://192.168.50.79:8002";
     // public static wssLink: string = "ws://172.16.68.160:8002";
-    // public static wssLink: string = "ws://192.168.52.170:8002";
+    public static wssLink: string = "ws://192.168.52.170:8002";
     // public static wssLink: string = "ws://172.16.68.135:8002";
 
     public static _wsiSendBinary: WebSocket;
