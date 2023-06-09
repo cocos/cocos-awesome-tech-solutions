@@ -1,861 +1,0 @@
-2023-6-6 18:10:38-debug: asset-db:worker-init (1348ms)
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunksbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default-terrainbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_file_contentbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_materialsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_cubemapbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_renderpipelinebackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_skyboxbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_fontsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_uibackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\dependenciesbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effectsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\gizmobackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\toolsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\builtinbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\physicsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\lighting-modelsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\legacybackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\post-processbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\commonbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\shading-entriesbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_file_content\animbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\surfacesbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_file_content\animaskbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_file_content\animgraphbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_file_content\animgraphvaribackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_file_content\chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_file_content\effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_file_content\effect-surfacebackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_file_content\flowbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_file_content\forward-pipelinebackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_file_content\jsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_file_content\mtlbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_file_content\pacbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_file_content\pmtlbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_file_content\prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_file_content\rppbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_file_content\rtbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_file_content\scenebackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_file_content\scene-2dbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_file_content\scene-qualitybackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_file_content\stgbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_file_content\terrainbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_file_content\tsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_file_content\ts-animation-graphbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_file_content\ts-render-flowbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_file_content\ts-render-pipelinebackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_file_content\ts-render-stagebackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_fonts\builtin-bitmapbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_fonts\builtin-freetypebackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\2dbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\3dbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\effectsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\uibackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\lightbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\dependencies\texturesbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\advancedbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\for2dbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\legacybackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\internalbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\particlesbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\utilbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\builtin\functionalitiesbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\builtin\internalbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\common\colorbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\builtin\uniformsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\pipelinebackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\common\databackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\common\effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\common\debugbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\common\graph-expressionbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\common\mathbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\common\shadowbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\common\texturebackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\common\lightingbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\common\meshbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\legacy\main-functionsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\lighting-models\data-structuresbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\lighting-models\default-functionsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\lighting-models\includesbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\lighting-models\lighting-flowbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\shading-entries\data-structuresbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\shading-entries\main-functionsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\lighting-models\model-functionsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\surfaces\data-structuresbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\surfaces\default-functionsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\surfaces\effect-macrosbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\surfaces\module-functionsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\2d\uibackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\shading-entries\main-functions\miscbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\util\dccbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\shading-entries\main-functions\render-to-reflectmapbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\surfaces\includesbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\internal\editorbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\shading-entries\main-functions\render-to-scenebackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\shading-entries\main-functions\render-to-scene\pipelinebackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\shading-entries\main-functions\render-to-shadowmapbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\legacy\decode-base.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\common\common-define.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\legacy\decode-standard.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\legacy\fog-base.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\legacy\fog-fs.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\legacy\decode.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\deprecated.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\legacy\fog-vs.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\legacy\input-standard.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\legacy\lighting.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\legacy\input.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\legacy\lightingmap-fs.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\legacy\morph.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\legacy\output-standard.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\legacy\lightingmap-vs.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\legacy\local-batch.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\legacy\output.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\legacy\sh-fs.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\legacy\shading-standard-additive.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\legacy\sh-vs.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\legacy\shading-cluster-additive.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\legacy\shading-standard-base.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\legacy\shadow-map-base.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\legacy\shading-standard.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\legacy\shading-toon.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\legacy\shadow-map-vs.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\legacy\shadow-map-fs.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\legacy\skinning.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\post-process\fxaa-hq.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\post-process\anti-aliasing.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\legacy\standard-surface-entry.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\post-process\fxaa.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\advanced\eye.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\builtin\functionalities\morph-animation.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\builtin\functionalities\fog.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\builtin\functionalities\probe.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\advanced\common-functions.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\builtin\functionalities\sh.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\builtin\functionalities\shadow-map.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\builtin\functionalities\skinning-animation-dqs.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\builtin\functionalities\world-transform.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\builtin\internal\alpha-test.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\builtin\functionalities\skinning-animation-lbs.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\builtin\internal\embedded-alpha.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\builtin\internal\particle-vs-gpu.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\builtin\internal\particle-trail.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\builtin\internal\particle-common.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\builtin\internal\particle-vs-legacy.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\builtin\internal\sprite-texture.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\builtin\uniforms\cc-csm.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\builtin\internal\sprite-common.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\builtin\uniforms\cc-global.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\builtin\uniforms\cc-diffusemap.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\builtin\uniforms\cc-light-map.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\builtin\uniforms\cc-forward-light.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\builtin\uniforms\cc-environment.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\builtin\uniforms\cc-local-batched.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\builtin\uniforms\cc-local.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\builtin\uniforms\cc-reflection-probe.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\builtin\uniforms\cc-shadow-map.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\builtin\uniforms\cc-shadow.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\builtin\uniforms\cc-skinning.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\builtin\uniforms\cc-morph.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\builtin\uniforms\cc-world-bound.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\common\color\aces.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\common\color\gamma.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\builtin\uniforms\cc-sh.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\common\color\tone-mapping.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\common\data\packing.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\common\debug\debug-view-define.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\common\data\unpack.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\common\effect\fog.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\common\effect\special-effects.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\common\graph-expression\base.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\common\lighting\brdf.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\common\lighting\attenuation.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\common\lighting\bxdf.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\common\lighting\functions.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\common\lighting\rect-area-light.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\common\lighting\light-map.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\common\math\coordinates.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\common\math\transform.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\common\math\number.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\common\mesh\material.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\common\mesh\vat-animation.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\common\math\octahedron-transform.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\common\shadow\native-pcf.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\common\texture\cubemap.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\common\texture\texture-lod.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\legacy\main-functions\general-vs.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\common\texture\texture-misc.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\legacy\main-functions\outline-fs.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\legacy\main-functions\outline-vs.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\lighting-models\data-structures\lighting-misc-data.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\lighting-models\data-structures\lighting-intermediate-data.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\lighting-models\data-structures\lighting-result.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\lighting-models\default-functions\simple-skin.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\lighting-models\default-functions\toon.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\lighting-models\default-functions\standard.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\lighting-models\includes\standard.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\lighting-models\lighting-flow\common-flow.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\lighting-models\model-functions\standard-common.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\lighting-models\model-functions\standard.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\lighting-models\includes\common.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\lighting-models\model-functions\toon.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\shading-entries\data-structures\fs-input.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\lighting-models\includes\toon.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\shading-entries\data-structures\vs-fs.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\shading-entries\data-structures\vs-intermediate.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\shading-entries\data-structures\vs-input.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\shading-entries\data-structures\vs-output.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\surfaces\data-structures\standard.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\surfaces\default-functions\common-vs.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\surfaces\default-functions\standard-fs.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\surfaces\effect-macros\common-macros.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\surfaces\data-structures\toon.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\surfaces\default-functions\toon-fs.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\surfaces\effect-macros\render-to-shadowmap.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\surfaces\effect-macros\silhouette-edge.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\surfaces\effect-macros\sky.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\surfaces\includes\common-vs.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\surfaces\effect-macros\terrain.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\surfaces\includes\standard-fs.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\surfaces\includes\standard-vs.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\surfaces\includes\toon-vs.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\surfaces\includes\common-fs.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\surfaces\includes\toon-fs.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\surfaces\module-functions\debug-view.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\surfaces\module-functions\common-vs.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\surfaces\module-functions\standard-fs.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\shading-entries\main-functions\misc\silhouette-edge-fs.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\shading-entries\main-functions\misc\silhouette-edge-vs.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\surfaces\module-functions\toon-fs.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\shading-entries\main-functions\misc\sky-fs.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\shading-entries\main-functions\misc\sky-vs.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\shading-entries\main-functions\render-to-reflectmap\fs.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\shading-entries\main-functions\render-to-scene\fs.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\shading-entries\main-functions\render-to-scene\vs.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\shading-entries\main-functions\render-to-shadowmap\fs.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\shading-entries\main-functions\render-to-scene\pipeline\deferred-fs.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\shading-entries\main-functions\render-to-shadowmap\vs.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\chunks\shading-entries\main-functions\render-to-scene\pipeline\forward-fs.chunkbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:39-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\builtin-standard.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:40-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\builtin-terrain.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:41-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\builtin-toon.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:41-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\builtin-unlit.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:41-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\advanced\eye.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:43-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\advanced\hair.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:44-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\advanced\simple-skin.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:45-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\advanced\sky.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:45-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\advanced\water.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:46-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\for2d\builtin-spine.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:46-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\for2d\builtin-sprite-renderer.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:46-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\for2d\builtin-sprite.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:46-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\internal\builtin-camera-texture.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:46-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\internal\builtin-clear-stencil.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:46-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\internal\builtin-debug-renderer.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:46-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\internal\builtin-geometry-renderer.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:46-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\internal\builtin-graphics.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:46-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\internal\builtin-occlusion-query.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:46-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\internal\builtin-reflection-deferred.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:46-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\internal\builtin-wireframe.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:46-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\legacy\standard.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:47-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\legacy\terrain.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:47-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\legacy\toon.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:47-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\particles\builtin-billboard.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:48-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\particles\builtin-particle-gpu.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:48-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\particles\builtin-particle-trail.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:49-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\particles\builtin-particle-xr-trail.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:49-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\particles\builtin-particle.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:49-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\pipeline\bloom.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:49-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\pipeline\deferred-lighting.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:49-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\pipeline\fxaa-hq.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:49-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\pipeline\planar-shadow.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:49-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\pipeline\post-process.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:50-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\pipeline\skybox.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:50-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\pipeline\smaa.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:50-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\pipeline\tonemap.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:50-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\util\batched-unlit.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:50-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\util\profiler.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:50-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\util\sequence-anim.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:50-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\util\splash-screen.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:50-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\internal\editor\box-height-light.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:50-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\internal\editor\gizmo.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:50-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\internal\editor\grid-2d.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:50-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\internal\editor\grid-stroke.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:50-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\internal\editor\grid.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:50-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\internal\editor\light-probe-visualization.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:51-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\internal\editor\light.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:51-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\internal\editor\terrain-circle-brush.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:51-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\internal\editor\terrain-image-brush.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:51-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\internal\editor\terrain-select-brush.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:51-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\util\dcc\imported-metallic-roughness.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:51-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\effects\util\dcc\imported-specular-glossiness.effectbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\tools\debug-view-runtime-control.tsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: Preimport db internal success
-2023-6-6 18:10:52-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\demobackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\examplebackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scenebackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\raphaelbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\demo\nardovebackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\resourcesbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\raphael\utilsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\resbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-pathbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\resources\svgbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\scriptsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\scripts\Globalbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\demo\animate-dash-line.tsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\demo\animate.tsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\dash-line.tsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\slicedbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\simplify.tsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\group.tsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\smooth.tsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\svg.tsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\raphael\RGroup.tsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\raphael\GlobalUtils.tsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\demo\nardove\jelly.tsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\raphael\RPath.tsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\demo\nardove\tentacle.tsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\c.tsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\circle.tsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\demo\nardove\nardove.tsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\ellipse.tsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\l.tsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\rect.tsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\raphael\utils\R.curve.tsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\raphael\utils\R.dash.tsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\q.tsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\raphael\utils\R.find.tsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\raphael\utils\R.length.tsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\raphael\utils\R.tesselateBezier.tsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\raphael\utils\R.utils.tsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\scripts\Global\ListItem.tsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\scripts\Global\Menu.tsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\scripts\Global\SceneList.tsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:52-debug: Preimport db assets success
-2023-6-6 18:10:52-debug: asset-db:worker-effect-data-processing (186ms)
-2023-6-6 18:10:58-debug: Set detail map pack:///resolution-detail-map.json: {}
-2023-6-6 18:10:58-debug: Start up the 'internal' database...
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default-video.mp4background: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\Default-Particle.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default-terrain\default-layer-texture.jpgbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_cubemap\back.jpgbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\primitives.fbxbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: asset-db:worker-init-script (6ms)
-2023-6-6 18:10:58-debug: Status file E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\temp\asset-db\internal\fbx.FBX-glTF-conv\1263d74c-8167-4928-91a6-4e2672411f47\status.json: Error: ENOENT: no such file or directory, open 'E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\temp\asset-db\internal\fbx.FBX-glTF-conv\1263d74c-8167-4928-91a6-4e2672411f47\status.json'
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\Default-Particle.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_cubemap\bottom.jpgbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_cubemap\back.jpg@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default-terrain\default-layer-texture.jpg@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_cubemap\front.jpgbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_cubemap\left.jpgbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_cubemap\right.jpgbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_cubemap\bottom.jpg@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_cubemap\top.jpgbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_cubemap\front.jpg@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_cubemap\left.jpg@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_cubemap\right.jpg@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_materials\default-billboard-material.mtlbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_materials\default-clear-stencil.mtlbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_materials\default-material-transparent.mtlbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_materials\default-material.mtlbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_cubemap\top.jpg@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_materials\default-particle-gpu-material.mtlbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_materials\default-particle-material.mtlbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_materials\default-spine-material.mtlbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_materials\default-sprite-renderer-material.mtlbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_materials\default-trail-material.mtlbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_materials\missing-effect-material.mtlbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_materials\missing-material.mtlbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_materials\particle-add.mtlbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_materials\standard-material.mtlbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_materials\ui-alpha-test-material.mtlbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_materials\ui-base-material.mtlbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_materials\ui-graphics-material.mtlbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_materials\ui-sprite-alpha-sep-material.mtlbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_materials\ui-sprite-gray-alpha-sep-material.mtlbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_materials\ui-sprite-gray-material.mtlbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_materials\ui-sprite-material.mtlbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\Camera.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\Terrain.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_renderpipeline\builtin-deferred.rppbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_renderpipeline\builtin-forward.rppbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_renderpipeline\deferred-lighting.mtlbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_renderpipeline\post-process.mtlbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_renderpipeline\tonemap.mtlbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_skybox\default_skybox.hdrbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: Start to conver asset {asset[d032ac98-05e1-4090-88bb-eb640dcb5fc1](d032ac98-05e1-4090-88bb-eb640dcb5fc1)}
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_skybox\default_skybox.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\atom.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\atom.plistbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_skybox\default_skybox.png@b47c0background: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\atom.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\atom_new.plistbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\atom.png@f9941background: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_btn_disabled.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:58-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_btn_normal.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:59-debug: Conver assetD:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_skybox\default_skybox.hdr -> PNG success.
-2023-6-6 18:10:59-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_btn_disabled.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:59-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_btn_disabled.png@f9941background: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:59-debug: Frame rate: 24 [{asset(1263d74c-8167-4928-91a6-4e2672411f47)}]
-2023-6-6 18:10:59-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_btn_normal.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:59-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_btn_normal.png@f9941background: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:59-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\primitives.fbx@17020background: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:59-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_skybox\default_skybox.hdr@b47c0background: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:59-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_btn_pressed.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:59-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_editbox_bg.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:59-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\primitives.fbx@801ecbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:59-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_skybox\default_skybox.png@b47c0@74afdbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:59-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_editbox_bg.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:59-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_btn_pressed.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:59-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\primitives.fbx@2e76ebackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:59-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_editbox_bg.png@f9941background: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:59-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_btn_pressed.png@f9941background: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:59-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_skybox\default_skybox.png@b47c0@8fd34background: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:59-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_panel.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:59-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\primitives.fbx@38fd2background: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:59-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_progressbar.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:59-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_skybox\default_skybox.png@b47c0@bb97fbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:10:59-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\primitives.fbx@40ecebackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_skybox\default_skybox.png@b47c0@7d38fbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_panel.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_progressbar.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\primitives.fbx@fc873background: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_panel.png@f9941background: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_skybox\default_skybox.png@b47c0@e9a6dbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_progressbar.png@f9941background: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\primitives.fbx@8abdcbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_skybox\default_skybox.png@b47c0@40c10background: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_progressbar_bg.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\primitives.fbx@a804abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_radio_button_off.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_radio_button_on.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\primitives.fbx@8d883background: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\primitives.fbx@aae0fbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_skybox\default_skybox.hdr@b47c0@74afdbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_progressbar_bg.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_radio_button_on.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_radio_button_off.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_scrollbar.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_progressbar_bg.png@f9941background: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_radio_button_on.png@f9941background: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_radio_button_off.png@f9941background: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_skybox\default_skybox.hdr@b47c0@8fd34background: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_scrollbar_bg.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_scrollbar.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_scrollbar_vertical.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_skybox\default_skybox.hdr@b47c0@bb97fbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_scrollbar_vertical_bg.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_scrollbar.png@f9941background: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_skybox\default_skybox.hdr@b47c0@7d38fbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_scrollbar_bg.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_scrollbar_vertical_bg.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_scrollbar_vertical.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_scrollbar_bg.png@f9941background: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_sprite.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_skybox\default_skybox.hdr@b47c0@e9a6dbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_scrollbar_vertical_bg.png@f9941background: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_scrollbar_vertical.png@f9941background: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_sprite_splash.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_skybox\default_skybox.hdr@b47c0@40c10background: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_toggle_checkmark.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_toggle_disabled.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_sprite.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_toggle_normal.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_sprite.png@f9941background: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_sprite_splash.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_sprite_splash.png@f9941background: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_toggle_disabled.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_toggle_checkmark.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_toggle_checkmark.png@f9941background: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_toggle_pressed.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\gizmo\camera.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_toggle_normal.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\gizmo\directional-light.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_toggle_normal.png@f9941background: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\gizmo\light-probe.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_toggle_pressed.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\gizmo\directional-light.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\gizmo\particle-system.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\default_toggle_pressed.png@f9941background: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\gizmo\reflection-probe.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\gizmo\camera.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\gizmo\light-probe.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\gizmo\scene-gizmo.mtlbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\gizmo\sphere-light.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\gizmo\spot-light.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\gizmo\webview.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\gizmo\particle-system.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\gizmo\reflection-probe.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\gizmo\sphere-light.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\gizmo\x.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\gizmo\webview.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\gizmo\y.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\gizmo\z.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\physics\default-physics-material.pmtlbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\gizmo\spot-light.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\tools\debug-view-runtime-control.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\tools\parsed-effect-info.jsonbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\gizmo\x.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\gizmo\x.png@f9941background: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\gizmo\y.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_fonts\builtin-bitmap\OpenSans-Bold.fntbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_fonts\builtin-bitmap\OpenSans-BoldItalic.fntbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\gizmo\z.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\gizmo\y.png@f9941background: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_fonts\builtin-bitmap\OpenSans-BoldItalic_0.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\gizmo\z.png@f9941background: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_fonts\builtin-bitmap\OpenSans-Bold_0.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_fonts\builtin-bitmap\OpenSans-Italic.fntbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_fonts\builtin-bitmap\OpenSans-Italic_0.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_fonts\builtin-bitmap\OpenSans-Regular.fntbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_fonts\builtin-bitmap\OpenSans-BoldItalic_0.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_fonts\builtin-bitmap\OpenSans-Bold_0.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_fonts\builtin-bitmap\OpenSans-Regular_0.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_fonts\builtin-bitmap\OpenSans-BoldItalic_0.png@f9941background: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_fonts\builtin-bitmap\OpenSans-Italic_0.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_fonts\builtin-bitmap\OpenSans-Bold_0.png@f9941background: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_fonts\builtin-bitmap\OpenSans-Italic_0.png@f9941background: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_fonts\builtin-freetype\OpenSans-Bold.ttfbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_fonts\builtin-bitmap\OpenSans-Regular_0.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_fonts\builtin-bitmap\OpenSans-Regular_0.png@f9941background: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_fonts\builtin-freetype\OpenSans-BoldItalic.ttfbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_fonts\builtin-freetype\OpenSans-Italic.ttfbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_fonts\builtin-freetype\OpenSans-Regular.ttfbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\2d\Camera.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\3d\Capsule.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\3d\Cone.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\3d\Cube.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\3d\Cylinder.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\3d\Plane.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\3d\Quad.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\3d\Sphere.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\3d\Torus.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\effects\Particle System.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\light\Directional Light.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\light\Light Probe Group.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\light\Reflection Probe.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\light\Sphere Light.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\light\Spot Light.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\ui\Button.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\ui\Canvas.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\ui\EditBox.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\ui\Graphics.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\ui\Label.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\ui\Layout.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\ui\Mask.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\ui\pageView.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\ui\ParticleSystem2D.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\ui\ProgressBar.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\ui\RichText.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\ui\ScrollView.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\ui\Slider.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\ui\Sprite.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\ui\SpriteRenderer.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\ui\SpriteSplash.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\ui\TiledMap.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\ui\Toggle.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\ui\ToggleContainer.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\ui\VideoPlayer.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\ui\WebView.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\ui\Widget.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\dependencies\textures\preintegrated-skin.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_prefab\2d\ui\Canvas.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\dependencies\textures\preintegrated-skin.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: start asset-db with asset: 419
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_fonts\builtin-bitmap\OpenSans-Bold.fntbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_fonts\builtin-bitmap\OpenSans-Italic.fntbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_fonts\builtin-bitmap\OpenSans-BoldItalic.fntbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\atom.plistbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_ui\atom_new.plistbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: D:\cocos-dashboard-editors\Creator\3.7.3\resources\resources\3d\engine\editor\assets\default_fonts\builtin-bitmap\OpenSans-Regular.fntbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: Start up the 'assets' database...
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\cheerio.jsbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: asset-db:worker-startup-database[internal] (21508ms)
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\demo\animate-dash-line.scene(1.1.36)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\demo\animate-dash-line.scene(1.1.37)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\demo\animate-dash-line.scene(1.1.38)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\demo\animate-dash-line.scene(1.1.39)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\demo\animate-dash-line.scene(1.1.42)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\demo\animate-dash-line.scene(1.1.40)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\demo\animate-dash-line.scene(1.1.41)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\demo\animate-dash-line.scene(1.1.43)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\demo\animate.scene(1.1.36)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\demo\animate.scene(1.1.37)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\demo\animate.scene(1.1.38)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\demo\animate.scene(1.1.39)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\demo\animate.scene(1.1.40)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\demo\animate.scene(1.1.41)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\demo\animate.scene(1.1.43)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\demo\animate.scene(1.1.42)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\demo\nardove.scene(1.1.37)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\demo\nardove.scene(1.1.36)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\demo\nardove.scene(1.1.39)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\demo\nardove.scene(1.1.40)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\demo\nardove.scene(1.1.41)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\demo\nardove.scene(1.1.42)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\demo\nardove.scene(1.1.43)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\demo\nardove.scene(1.1.38)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\dash-line.scene(1.1.36)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\dash-line.scene(1.1.37)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\dash-line.scene(1.1.38)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\dash-line.scene(1.1.39)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\dash-line.scene(1.1.40)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\dash-line.scene(1.1.42)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\dash-line.scene(1.1.43)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\dash-line.scene(1.1.41)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\demo\animate-dash-line.scenebackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\demo\animate.scenebackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\demo\nardove.scenebackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\dash-line.scenebackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\group.scene(1.1.36)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\group.scene(1.1.37)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\group.scene(1.1.38)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\group.scene(1.1.39)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\group.scene(1.1.40)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\group.scene(1.1.41)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\group.scene(1.1.42)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\group.scene(1.1.43)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\group.scenebackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\simplify.scene(1.1.36)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\simplify.scene(1.1.38)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\simplify.scene(1.1.39)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\simplify.scene(1.1.40)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\simplify.scene(1.1.41)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\simplify.scene(1.1.42)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\simplify.scene(1.1.43)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\smooth.scene(1.1.36)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\simplify.scene(1.1.37)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\smooth.scene(1.1.37)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\smooth.scene(1.1.38)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\smooth.scene(1.1.40)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\smooth.scene(1.1.39)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\smooth.scene(1.1.42)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\smooth.scene(1.1.41)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\smooth.scene(1.1.43)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\svg.scene(1.1.36)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\svg.scene(1.1.38)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\svg.scene(1.1.39)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\svg.scene(1.1.40)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\svg.scene(1.1.41)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\svg.scene(1.1.42)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\svg.scene(1.1.43)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\svg.scene(1.1.37)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\simplify.scenebackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\TestList.scene(1.1.36)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\TestList.scene(1.1.37)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\TestList.scene(1.1.40)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\TestList.scene(1.1.38)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\TestList.scene(1.1.39)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\TestList.scene(1.1.42)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\TestList.scene(1.1.41)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\TestList.scene(1.1.43)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\smooth.scenebackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\svg.scenebackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\TestList.scenebackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\c.scene(1.1.36)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\c.scene(1.1.37)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\c.scene(1.1.38)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\c.scene(1.1.39)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\c.scene(1.1.40)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\c.scene(1.1.41)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\c.scene(1.1.43)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\c.scene(1.1.42)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\c.scenebackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\circle.scene(1.1.36)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\circle.scene(1.1.37)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\circle.scene(1.1.38)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\circle.scene(1.1.39)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\circle.scene(1.1.40)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\circle.scene(1.1.42)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\circle.scene(1.1.43)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\ellipse.scene(1.1.36)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\ellipse.scene(1.1.37)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\ellipse.scene(1.1.38)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\ellipse.scene(1.1.39)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\ellipse.scene(1.1.40)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\circle.scene(1.1.41)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\ellipse.scene(1.1.41)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\ellipse.scene(1.1.42)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\ellipse.scene(1.1.43)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\l.scene(1.1.36)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\l.scene(1.1.37)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\l.scene(1.1.40)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\l.scene(1.1.39)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\l.scene(1.1.42)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\l.scene(1.1.41)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\l.scene(1.1.38)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\l.scene(1.1.43)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\q.scene(1.1.36)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\q.scene(1.1.38)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\q.scene(1.1.37)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\q.scene(1.1.39)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\q.scene(1.1.40)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\q.scene(1.1.41)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\q.scene(1.1.42)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\q.scene(1.1.43)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\circle.scenebackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\ellipse.scenebackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\l.scenebackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\q.scenebackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\rect.scene(1.1.36)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\rect.scene(1.1.37)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\rect.scene(1.1.38)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\rect.scene(1.1.40)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\rect.scene(1.1.41)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\rect.scene(1.1.42)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\rect.scene(1.1.43)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\rect.scene(1.1.39)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\resources\svg\dribbble.txtbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\example\make-path\rect.scenebackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\resources\svg\tiger.txtbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\Button.prefab(1.1.36)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\Button.prefab(1.1.38)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\Button.prefab(1.1.39)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\Button.prefab(1.1.41)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\Button.prefab(1.1.40)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\Button.prefab(1.1.42)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\Button.prefab(1.1.43)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\Background.prefab(1.1.36)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\Background.prefab(1.1.38)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\Button.prefab(1.1.37)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\Background.prefab(1.1.39)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\Background.prefab(1.1.40)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\Background.prefab(1.1.37)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\Background.prefab(1.1.43)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\Background.prefab(1.1.41)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\Background.prefab(1.1.42)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\panelBG.png(1.0.23)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\panelBG.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\Button.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\ListItem.prefab(1.1.36)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\ListItem.prefab(1.1.37)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\ListItem.prefab(1.1.38)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\ListItem.prefab(1.1.39)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\ListItem.prefab(1.1.40)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\ListItem.prefab(1.1.41)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\ListItem.prefab(1.1.42)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\ListItem.prefab(1.1.43)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\Background.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\singleColor.png(1.0.23)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\singleColor.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\ListItem.prefabbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\sliced\button_empty.png(1.0.23)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\sliced\button_empty.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\sliced\button_green.png(1.0.23)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\sliced\button_green.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\panelBG.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\sliced\button_green_p2.png(1.0.23)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\sliced\button_green_p2.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\singleColor.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\panelBG.png@f9941background: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\singleColor.png@f9941background: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\sliced\button_empty.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\sliced\button_green.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\sliced\button_green_p2.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\sliced\button_empty.png@f9941background: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\sliced\button_green.png@f9941background: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\sliced\button_green_p2.png@f9941background: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\sliced\button_green_un2.png(1.0.23)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\sliced\button_green_un2.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\sliced\panel_bg.png(1.0.23)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\sliced\panel_bg.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\sliced\panel_black.png(1.0.23)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\sliced\panel_black.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\sliced\panel_highlight.png(1.0.23)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\sliced\panel_highlight.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cMigrate%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\sliced\ui_panel.png(1.0.23)background: #fbe5b5; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\sliced\ui_panel.pngbackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\sliced\button_green_un2.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\sliced\panel_bg.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\sliced\panel_black.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\sliced\panel_highlight.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\sliced\ui_panel.png@6c48abackground: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\sliced\panel_bg.png@f9941background: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\sliced\button_green_un2.png@f9941background: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\sliced\panel_black.png@f9941background: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\sliced\panel_highlight.png@f9941background: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: %cImport%c: E:\cocos\cocos-awesome-tech-solutions\demo\Creator3.6.0_Raphael\assets\start-scene\res\sliced\ui_panel.png@f9941background: #aaff85; color: #000;color: #000;
-2023-6-6 18:11:00-debug: start asset-db with asset: 72
-2023-6-6 18:11:00-debug: Asset DB is ready!
-2023-6-6 18:11:00-debug: asset-db:worker-startup-database[assets] (8316ms)
-2023-6-6 18:11:00-debug: init worker message success
-2023-6-6 18:11:02-debug: builder:worker-init (1976ms)
-2023-6-6 18:11:02-debug: programming:execute-script (4ms)
-2023-6-6 18:11:42-debug: Query all assets info in project
-2023-6-6 18:11:42-debug: BuildAssetLibrary query-assets with assets 521
-2023-6-6 18:11:42-debug: init custom config: keepNodeUuid: false, useCache: true
-2023-6-6 18:11:42-debug: 查询 Asset Bundle start0%
-2023-6-6 18:11:42-debug: // ---- build task 查询 Asset Bundle ----
-2023-6-6 18:11:42-debug:   Number of all scenes: 15
-2023-6-6 18:11:42-debug:   Number of all scripts: 30
-2023-6-6 18:11:42-debug:   Number of other assets: 333
-2023-6-6 18:11:42-debug: Process: heapTotal 206.32MB heapUsed 191.19MB rss 530.63MB
-2023-6-6 18:11:42-debug: // ---- build task 查询 Asset Bundle ---- (15ms)
-2023-6-6 18:11:42-debug: run build task 查询 Asset Bundle success in 15 ms √3%
-2023-6-6 18:11:42-debug: 查询使用的资源以及资源包配置 start3%
-2023-6-6 18:11:42-debug: // ---- build task 查询使用的资源以及资源包配置 ----
-2023-6-6 18:11:42-debug: init bundle assets
-2023-6-6 18:11:42-debug: Process: heapTotal 206.32MB heapUsed 191.45MB rss 531.22MB
-2023-6-6 18:11:42-debug: Query preload assets from cc.config.json: 60f7195c-ec2a-45eb-ba94-8955f60e81d0,1c02ae6f-4492-4915-b8f8-7492a3b1e4cd,810e96e4-e456-4468-9b59-f4e8f39732c0,efe8e2a3-eace-427b-b4f1-cb8a937ec77d,e9aa9a3e-5b2b-4ac7-a2c7-073de2b2b24f,8bbdbcdd-5cd4-4100-b6d5-b7c9625b6107,50f4348b-c883-4e2f-8f11-ce233b859fa1,fda095cb-831d-4601-ad94-846013963de8,f92806d7-1768-443f-afe8-12bcde84d0f0,dd3a144d-ab7f-41f0-82b8-2e43a090d496,f0416e68-0200-4b77-a926-4f9d16e494da,1baf0fc9-befa-459c-8bdd-af1a450a0319,511d2633-09a7-4bdd-ac42-f778032124b3,5d45aa00-e064-4938-b314-4265f0c2258c,28d6d6b8-3f66-4a73-9795-17a0852ba2d4,ec8106fe-05bf-4e94-943c-e0d3b7bb5e45,620b6bf3-0369-4560-837f-2a2c00b73c26,2df0a40b-26c2-47ce-be0d-4d3cd4164737,ff9be190-20a4-4e48-b68c-76e3c7cff085,970b0598-bcb0-4714-91fb-2e81440dccd8,bcd64cc6-2dd9-43f6-abbe-66318d332032,d930590d-bb92-4cc8-8bd1-23cd027f9edf,a3cd009f-0ab0-420d-9278-b9fdab939bbc,9361fd90-ba52-4f84-aa93-6e878fd576ca,c27215d8-6835-4b68-bfbb-bdeac6100c04,b5d6115f-0370-4d7c-aad3-c194cc71cf98,d1346436-ac96-4271-b863-1f4fdead95b0,971bdb23-3ff6-43eb-b422-1c30165a3663,17debcc3-0a6b-4b8a-b00b-dc58b885581e,711ebe11-f673-4cd9-9a83-63c60ba54c5b,c0143906-9aed-447e-9436-2ae8512d1b6e,14da1725-c4c2-42b4-ab08-ee0aeb6898b3,081cab31-dccd-428e-8652-f2404cc81c47,78e0584a-4343-4727-8f37-e14e65c2a2db,ba21476f-2866-4f81-9c4d-6e359316e448,871c3b6c-7379-419d-bda3-794b239ab90d,1d08ef62-a503-4ce2-8b9a-46c90873f7d3
-2023-6-6 18:11:42-debug: Number of scenes: 15
-2023-6-6 18:11:42-debug: // ---- build task 查询使用的资源以及资源包配置 ---- (10ms)
-2023-6-6 18:11:42-debug: run build task 查询使用的资源以及资源包配置 success in 10 ms √7%
-2023-6-6 18:11:42-debug: 整理脚本分组与脚本数据 start7%
-2023-6-6 18:11:42-debug: // ---- build task 整理脚本分组与脚本数据 ----
-2023-6-6 18:11:42-debug: Process: heapTotal 206.32MB heapUsed 191.62MB rss 532.90MB
-2023-6-6 18:11:42-debug: sort script group...
-2023-6-6 18:11:42-debug: // ---- build task 整理脚本分组与脚本数据 ---- (7ms)
-2023-6-6 18:11:42-debug: run build task 整理脚本分组与脚本数据 success in 7 ms √10%
-2023-6-6 18:11:42-debug: // ---- build task 初始化 settings.json 与 config.json ----
-2023-6-6 18:11:42-debug: 初始化 settings.json 与 config.json start10%
-2023-6-6 18:11:42-debug: Process: heapTotal 206.32MB heapUsed 191.68MB rss 532.64MB
-2023-6-6 18:11:42-debug: // ---- build task 初始化 settings.json 与 config.json ---- (1ms)
-2023-6-6 18:11:42-debug: run build task 初始化 settings.json 与 config.json success in 1 ms √11%
-2023-6-6 18:11:42-debug: // ---- build task builder.tasks.settings.macro ----
-2023-6-6 18:11:42-debug: builder.tasks.settings.macro 字段未在编辑器多语言内定义
-2023-6-6 18:11:42-debug: Process: heapTotal 206.32MB heapUsed 191.87MB rss 530.63MB
-2023-6-6 18:11:42-debug: builder.tasks.settings.macro start11%
-2023-6-6 18:11:42-debug: run build task builder.tasks.settings.macro success in 15 ms √11%
-2023-6-6 18:11:42-debug: Process: heapTotal 206.32MB heapUsed 191.90MB rss 530.48MB
-2023-6-6 18:11:42-debug: // ---- build task 整理部分构建选项内数据到 settings.json ----
-2023-6-6 18:11:42-debug: // ---- build task builder.tasks.settings.macro ---- (15ms)
-2023-6-6 18:11:42-debug: 整理部分构建选项内数据到 settings.json start11%
-2023-6-6 18:11:42-debug: // ---- build task 整理部分构建选项内数据到 settings.json ---- (4ms)
-2023-6-6 18:11:42-debug: run build task 整理部分构建选项内数据到 settings.json success in 4 ms √12%
-2023-6-6 18:11:42-debug: // ---- build task custom joint texture layouts ----
-2023-6-6 18:11:42-debug: custom joint texture layouts start12%
-2023-6-6 18:11:42-debug: Process: heapTotal 206.32MB heapUsed 191.97MB rss 530.31MB
-2023-6-6 18:11:42-debug: // ---- build task custom joint texture layouts ---- (2ms)
-2023-6-6 18:11:42-debug: run build task custom joint texture layouts success in 2 ms √12%
-2023-6-6 18:11:42-debug: custom joint physics start12%
-2023-6-6 18:11:42-debug: // ---- build task custom joint physics ----
-2023-6-6 18:11:42-debug: Process: heapTotal 206.32MB heapUsed 192.01MB rss 530.34MB
-2023-6-6 18:11:42-debug: // ---- build task custom joint physics ---- (1ms)
-2023-6-6 18:11:42-debug: run build task custom joint physics success in 1 ms √13%
-2023-6-6 18:11:42-debug: // ---- build task 填充脚本数据到 settings.json ----
-2023-6-6 18:11:42-debug: 填充脚本数据到 settings.json start13%
-2023-6-6 18:11:42-debug: Process: heapTotal 206.32MB heapUsed 191.38MB rss 529.70MB
-2023-6-6 18:11:42-debug: // ---- build task 填充脚本数据到 settings.json ---- (1ms)
-2023-6-6 18:11:42-debug: run build task 填充脚本数据到 settings.json success in 1 ms √13%
-2023-6-6 18:11:42-debug: // ---- build task 填充场景数据到 settings.json ----
-2023-6-6 18:11:42-debug: 填充场景数据到 settings.json start13%
-2023-6-6 18:11:42-debug: Process: heapTotal 206.32MB heapUsed 191.41MB rss 529.75MB
-2023-6-6 18:11:42-debug: // ---- build task 填充场景数据到 settings.json ---- (1ms)
-2023-6-6 18:11:42-debug: // ---- build task 整理资源分组，生成 packedAssets 以及 rawAssets 数据 ----
-2023-6-6 18:11:42-debug: 整理资源分组，生成 packedAssets 以及 rawAssets 数据 start14%
-2023-6-6 18:11:42-debug: run build task 填充场景数据到 settings.json success in 1 ms √14%
-2023-6-6 18:11:42-debug: Process: heapTotal 206.32MB heapUsed 191.45MB rss 529.71MB
-2023-6-6 18:11:42-debug: // ---- build task 整理资源分组，生成 packedAssets 以及 rawAssets 数据 ---- (4ms)
-2023-6-6 18:11:42-debug: run build task 整理资源分组，生成 packedAssets 以及 rawAssets 数据 success in 4 ms √14%
-2023-6-6 18:11:42-debug: Process: heapTotal 206.32MB heapUsed 191.50MB rss 529.77MB
-2023-6-6 18:11:42-debug: // ---- build task 从 suffixMap 生成 md5AssetsMap 到 settings.json ----
-2023-6-6 18:11:42-debug: 从 suffixMap 生成 md5AssetsMap 到 settings.json start14%
-2023-6-6 18:11:42-debug: options.md5Cache is false.
-2023-6-6 18:11:42-debug: // ---- build task 从 suffixMap 生成 md5AssetsMap 到 settings.json ---- (1ms)
-2023-6-6 18:11:42-debug: run build task 从 suffixMap 生成 md5AssetsMap 到 settings.json success in 1 ms √15%
-2023-6-6 18:12:45-debug: refresh db internal success
-2023-6-6 18:12:45-debug: asset-db:worker-effect-data-processing (245ms)
-2023-6-6 18:12:45-debug: refresh db assets success
-2023-6-6 18:12:45-debug: asset-db:refresh-all-database (502ms)
