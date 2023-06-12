@@ -1,0 +1,142 @@
+{
+  "ver": "1.0.25",
+  "importer": "image",
+  "imported": true,
+  "uuid": "ef1ece82-46e5-43f3-b7ae-f8ca066eb041",
+  "files": [
+    ".json",
+    ".png"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "ef1ece82-46e5-43f3-b7ae-f8ca066eb041@6c48a",
+      "displayName": "exitLeft",
+      "id": "6c48a",
+      "name": "texture",
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "clamp-to-edge",
+        "wrapModeT": "clamp-to-edge",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "ef1ece82-46e5-43f3-b7ae-f8ca066eb041",
+        "visible": false
+      }
+    },
+    "f9941": {
+      "ver": "1.0.11",
+      "importer": "sprite-frame",
+      "name": "spriteFrame",
+      "id": "f9941",
+      "displayName": "exitLeft",
+      "uuid": "ef1ece82-46e5-43f3-b7ae-f8ca066eb041@f9941",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 1,
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": -1,
+        "offsetY": -4,
+        "trimX": 18,
+        "trimY": 26,
+        "width": 62,
+        "height": 56,
+        "rawWidth": 100,
+        "rawHeight": 100,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "ef1ece82-46e5-43f3-b7ae-f8ca066eb041@6c48a",
+        "atlasUuid": "",
+        "packable": true,
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [
+            -31,
+            -28,
+            0,
+            31,
+            -28,
+            0,
+            -31,
+            28,
+            0,
+            31,
+            28,
+            0
+          ],
+          "indexes": [
+            0,
+            1,
+            2,
+            2,
+            1,
+            3
+          ],
+          "uv": [
+            18,
+            74,
+            80,
+            74,
+            18,
+            18,
+            80,
+            18
+          ],
+          "nuv": [
+            0.18,
+            0.18,
+            0.8,
+            0.18,
+            0.18,
+            0.74,
+            0.8,
+            0.74
+          ],
+          "minPos": [
+            -31,
+            -28,
+            0
+          ],
+          "maxPos": [
+            31,
+            28,
+            0
+          ]
+        }
+      }
+    }
+  },
+  "userData": {
+    "type": "sprite-frame",
+    "redirect": "ef1ece82-46e5-43f3-b7ae-f8ca066eb041@f9941",
+    "hasAlpha": true,
+    "fixAlphaTransparencyArtifacts": false
+  }
+}

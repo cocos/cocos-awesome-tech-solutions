@@ -1,0 +1,18 @@
+{
+  "disable-packages": {
+    "E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3": {
+      "6": {
+        "2_3D_Navigation\\extensions\\cocos-service": {
+          "name": "cocos-service",
+          "time": 1686048180525
+        }
+      }
+    },
+    "C:\\Users\\Administrator\\": {
+      "CocosCreator\\extensions\\im-plugin": {
+        "name": "im-plugin",
+        "time": 1686047976971
+      }
+    }
+  }
+}

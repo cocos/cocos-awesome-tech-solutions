@@ -1,0 +1,34 @@
+{
+  "modules": {
+    "cache": {},
+    "includeModules": [
+      "2d",
+      "3d",
+      "animation",
+      "audio",
+      "base",
+      "dragon-bones",
+      "gfx-webgl",
+      "gfx-webgl2",
+      "intersection-2d",
+      "light-probe",
+      "marionette",
+      "particle",
+      "particle-2d",
+      "physics-2d-box2d",
+      "physics-ammo",
+      "primitive",
+      "profiler",
+      "skeletal-animation",
+      "spine",
+      "terrain",
+      "tiled-map",
+      "tween",
+      "ui",
+      "video",
+      "websocket",
+      "webview"
+    ]
+  },
+  "__version__": "1.0.7"
+}

@@ -1,0 +1,14 @@
+{
+  "__version__": "1.0.4",
+  "general": {
+    "designResolution": {
+      "width": 640,
+      "height": 960
+    }
+  },
+  "fbx": {
+    "legacyFbxImporter": {
+      "visible": true
+    }
+  }
+}

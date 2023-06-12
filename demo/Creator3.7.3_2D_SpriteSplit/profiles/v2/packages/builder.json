@@ -1,0 +1,57 @@
+{
+  "__version__": "1.3.5",
+  "log": {
+    "level": 4
+  },
+  "common": {
+    "buildPath": "project://build",
+    "outputName": "wechatgame",
+    "mainBundleCompressionType": "merge_dep",
+    "platform": "wechatgame"
+  },
+  "BuildTaskManager": {
+    "taskMap": {
+      "1686020608890": {
+        "type": "build",
+        "id": "1686020608890",
+        "progress": 1,
+        "state": "success",
+        "stage": "run",
+        "message": "2023-6-6 11:04:57 run package E:\\cocos\\cocos-awesome-tech-solutions\\demo\\Creator3.6.0_2D_SpriteSplit\\build\\wechatgame success!",
+        "options": {
+          "name": "SpriteSplit",
+          "platform": "wechatgame",
+          "buildPath": "project://build",
+          "debug": false,
+          "md5Cache": false,
+          "skipCompressTexture": false,
+          "sourceMaps": false,
+          "polyfills": {
+            "asyncFunctions": false
+          },
+          "experimentalEraseModules": false,
+          "useBuiltinServer": false,
+          "mainBundleIsRemote": false,
+          "mainBundleCompressionType": "merge_dep",
+          "useSplashScreen": true,
+          "packAutoAtlas": true,
+          "startScene": "18dd5ccc-650c-40b2-ab49-5ffee355a99a",
+          "outputName": "wechatgame",
+          "scenes": [
+            {
+              "url": "db://assets/scene.scene",
+              "uuid": "18dd5ccc-650c-40b2-ab49-5ffee355a99a",
+              "inBundle": false
+            }
+          ],
+          "web-desktop": [],
+          "packages": {},
+          "__version__": "1.3.5",
+          "wechatgame": []
+        },
+        "time": "2023-6-6 11:03",
+        "dirty": false
+      }
+    }
+  }
+}

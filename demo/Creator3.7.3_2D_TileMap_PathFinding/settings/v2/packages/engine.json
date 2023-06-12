@@ -1,0 +1,129 @@
+{
+  "__version__": "1.0.7",
+  "modules": {
+    "cache": {
+      "base": {
+        "_value": true
+      },
+      "graphcis": {
+        "_value": true
+      },
+      "gfx-webgl": {
+        "_value": true
+      },
+      "gfx-webgl2": {
+        "_value": true
+      },
+      "3d": {
+        "_value": false
+      },
+      "2d": {
+        "_value": true
+      },
+      "ui": {
+        "_value": true
+      },
+      "particle": {
+        "_value": false
+      },
+      "physics": {
+        "_value": false,
+        "_option": "physics-ammo"
+      },
+      "physics-ammo": {
+        "_value": false
+      },
+      "physics-cannon": {
+        "_value": false
+      },
+      "physics-physx": {
+        "_value": false
+      },
+      "physics-builtin": {
+        "_value": false
+      },
+      "physics-2d": {
+        "_value": true,
+        "_option": "physics-2d-box2d"
+      },
+      "physics-2d-box2d": {
+        "_value": false
+      },
+      "physics-2d-builtin": {
+        "_value": false
+      },
+      "intersection-2d": {
+        "_value": true
+      },
+      "primitive": {
+        "_value": false
+      },
+      "profiler": {
+        "_value": true
+      },
+      "particle-2d": {
+        "_value": true
+      },
+      "audio": {
+        "_value": true
+      },
+      "video": {
+        "_value": true
+      },
+      "webview": {
+        "_value": true
+      },
+      "tween": {
+        "_value": true
+      },
+      "terrain": {
+        "_value": false
+      },
+      "tiled-map": {
+        "_value": true
+      },
+      "spine": {
+        "_value": true
+      },
+      "dragon-bones": {
+        "_value": true
+      },
+      "animation": {
+        "_value": true
+      },
+      "skeletal-animation": {
+        "_value": true
+      },
+      "marionette": {
+        "_value": true
+      }
+    },
+    "includeModules": [
+      "2d",
+      "animation",
+      "audio",
+      "base",
+      "dragon-bones",
+      "gfx-webgl",
+      "gfx-webgl2",
+      "intersection-2d",
+      "light-probe",
+      "marionette",
+      "particle-2d",
+      "physics-2d-box2d",
+      "profiler",
+      "skeletal-animation",
+      "spine",
+      "tiled-map",
+      "tween",
+      "ui",
+      "video",
+      "websocket",
+      "webview"
+    ],
+    "noDeprecatedFeatures": {
+      "value": false,
+      "version": ""
+    }
+  }
+}

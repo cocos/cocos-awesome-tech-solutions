@@ -1,0 +1,48 @@
+{
+  "__version__": "1.3.5",
+  "log": {
+    "level": 4
+  },
+  "common": {
+    "outputName": "wechatgame",
+    "mainBundleCompressionType": "merge_dep",
+    "platform": "wechatgame"
+  },
+  "BuildTaskManager": {
+    "taskMap": {
+      "1660728910413": {
+        "id": "1660728910413",
+        "progress": 1,
+        "state": "success",
+        "message": "2022-8-17 19:09 Build success in 3668 ms!",
+        "options": {
+          "name": "buoyancy-3.x",
+          "platform": "wechatgame",
+          "buildPath": "project://build",
+          "debug": false,
+          "md5Cache": false,
+          "skipCompressTexture": false,
+          "sourceMaps": false,
+          "mainBundleCompressionType": "merge_dep",
+          "mainBundleIsRemote": false,
+          "mergeStartScene": false,
+          "experimentalEraseModules": false,
+          "compressTexture": true,
+          "packAutoAtlas": true,
+          "startScene": "fa8d8075-453f-42ba-8ea3-3100507a19a7",
+          "scenes": [
+            {
+              "url": "db://assets/buoyancy.scene",
+              "uuid": "fa8d8075-453f-42ba-8ea3-3100507a19a7",
+              "inBundle": false
+            }
+          ],
+          "outputName": "wechatgame",
+          "useSplashScreen": true
+        },
+        "time": "2022-8-17 19:09",
+        "dirty": false
+      }
+    }
+  }
+}
