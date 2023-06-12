@@ -1,0 +1,13 @@
+{
+  "__version__": "1.0.4",
+  "script": {
+    "useDefineForClassFields": false,
+    "allowDeclareFields": false
+  },
+  "layer": [],
+  "fbx": {
+    "legacyFbxImporter": {
+      "visible": true
+    }
+  }
+}

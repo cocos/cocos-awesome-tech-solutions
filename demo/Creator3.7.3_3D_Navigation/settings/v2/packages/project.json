@@ -1,0 +1,22 @@
+{
+  "__version__": "1.0.4",
+  "layer": [
+    {
+      "name": "RECAST_DEBUG",
+      "value": 1
+    }
+  ],
+  "general": {
+    "designResolution": {
+      "fitHeight": true,
+      "fitWidth": false,
+      "width": 960,
+      "height": 640
+    }
+  },
+  "fbx": {
+    "legacyFbxImporter": {
+      "visible": true
+    }
+  }
+}

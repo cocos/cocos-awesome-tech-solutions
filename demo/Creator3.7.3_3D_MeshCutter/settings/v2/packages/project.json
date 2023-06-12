@@ -1,0 +1,14 @@
+{
+  "layer": [
+    {
+      "name": "canvas_19",
+      "value": 524288
+    }
+  ],
+  "__version__": "1.0.4",
+  "fbx": {
+    "legacyFbxImporter": {
+      "visible": true
+    }
+  }
+}

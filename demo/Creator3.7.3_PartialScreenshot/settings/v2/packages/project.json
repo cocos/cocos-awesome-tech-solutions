@@ -1,0 +1,14 @@
+{
+  "__version__": "1.0.4",
+  "layer": [
+    {
+      "name": "copy",
+      "value": 1
+    }
+  ],
+  "fbx": {
+    "legacyFbxImporter": {
+      "visible": true
+    }
+  }
+}

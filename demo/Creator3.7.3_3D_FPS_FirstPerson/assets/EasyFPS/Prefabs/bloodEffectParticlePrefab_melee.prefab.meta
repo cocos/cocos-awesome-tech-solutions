@@ -1,0 +1,13 @@
+{
+  "ver": "1.1.43",
+  "importer": "prefab",
+  "imported": true,
+  "uuid": "97403b5d-6e52-4d1b-a18d-1c2a15ef6d5b",
+  "files": [
+    ".json"
+  ],
+  "subMetas": {},
+  "userData": {
+    "syncNodeName": "bloodEffectParticlePrefab_melee"
+  }
+}
