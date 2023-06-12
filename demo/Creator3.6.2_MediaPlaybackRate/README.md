@@ -17,7 +17,3 @@
 
 ### 引擎代码修改的提交记录
 https://github.com/zhefengzhang/engine/commit/572eac9d2ae70ad7f648639f540c6688d245cb8b
-
-https://github.com/zhefengzhang/engine/commit/a5a62463c49c96c1b1e8a2719331b377615c2863
-
-https://github.com/zhefengzhang/engine/commit/4647e3198288083d8d66b28ef29a5568c21c0922
