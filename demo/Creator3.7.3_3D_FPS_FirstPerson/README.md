@@ -1,10 +1,10 @@
-*Unity assetstore 用户 [Mario Haberle](https://assetstore.unity.com/publishers/20994) 提供，由技术支持团队升级将游戏移植至 3.4.1 版本*
+*Unity assetstore 用户 [Mario Haberle](https://assetstore.unity.com/publishers/20994) 提供，由技术支持团队升级将游戏移植至 3.7.3 版本*
 
-* (v3.4.1) FPS 单机射击模拟
+* (v3.7.3) FPS 单机射击模拟
 
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.4.1_3D_FPS_FirstPerson
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.7.x-release/demo/Creator3.7.3_3D_FPS_FirstPerson
   >
   > **游戏操作键位：W=前进、A=左移、S=后退、D=右移、shift + W=加速跑、C=下蹲、鼠标左键=射击、鼠标右键=瞄准、空格=跳跃、Q=肘击、R=换弹夹、鼠标滑轮=切枪**
   >
