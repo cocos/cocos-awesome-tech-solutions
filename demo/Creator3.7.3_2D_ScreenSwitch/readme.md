@@ -1,4 +1,4 @@
-This solution is based on CocosCreator version 3.4.0.
+This solution is based on CocosCreator version 3.7.3.
 
 - android
     - After building out the android package, modify the code in the `AppActivity.java` file to add the `setOrientation` function.

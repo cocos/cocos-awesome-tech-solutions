@@ -1,4 +1,4 @@
-- 此方案受 github 社区开源方案 [mesh-cutter](https://github.com/hugoscurti/mesh-cutter) 所启发，使用 ts 语言在 CocosCreator 3.4.0 版本上实现相似功能。
+- 此方案受 github 社区开源方案 [mesh-cutter](https://github.com/hugoscurti/mesh-cutter) 所启发，使用 ts 语言在 CocosCreator 3.7.3 版本上实现相似功能。
 
 当前方案需要注意的点:
 - 目前只支持切割使用了 builtin-unlit 材质的模型；

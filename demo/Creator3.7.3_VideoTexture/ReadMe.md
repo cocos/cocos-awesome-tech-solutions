@@ -1,8 +1,8 @@
-* (v3.6.2) VideoTexture
+* (v3.7.3) VideoTexture
 
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.6.x-release/demo/Creator3.6.2_VideoTexture
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.7.x-release/demo/Creator3.7.3_VideoTexture
   >
   > **因为 github 单文件上传大小有 100m 限制，所以自定义引擎部分需要打开链接 http://download.cocos.org/CocosTest/zhefengzhang/NoDelete/3.6.2-videoTexture-native-folder/native.zip 下载并解压到项目中**
   >

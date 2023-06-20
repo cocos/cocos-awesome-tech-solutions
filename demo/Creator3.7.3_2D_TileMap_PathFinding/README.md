@@ -1,10 +1,10 @@
 *Github用户(kirikayakazuto)提供，由技术支持团队升级至3.5.0版本*
 
-* (v3.5.0) TiledMap 自动寻路
+* (v3.7.3) TiledMap 自动寻路
 
   > 工程 git 仓库地址: 
   >
-  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.4.0-release/demo/Creator3.5.0_2D_TileMap_PathFinding
+  > https://github.com/cocos/cocos-awesome-tech-solutions/tree/3.7.x-release/demo/Creator3.7.3_2D_TileMap_PathFinding
   >
   > 素材来源: 
   >
