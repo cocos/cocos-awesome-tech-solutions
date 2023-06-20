@@ -109,8 +109,17 @@ export class b2Shape2D implements IBaseShape {
             for (let j = 0; j < count; j++) {
                 const aabb = fixture.GetAABB(j);
                 if (fixture.GetShape().m_type === 2) { //b2ShapeType.e_polygonShape
-                    aabb.lowerBound.SelfAddXY(fixture.GetShape().m_radius, fixture.GetShape().m_radius);
-                    aabb.upperBound.SelfSubXY(fixture.GetShape().m_radius, fixture.GetShape().m_radius);
+                    if(window['BOX2D_WASM']){
+                        aabb.lowerBound.x = aabb.lowerBound.x + fixture.GetShape().m_radius;
+                        aabb.lowerBound.y = aabb.lowerBound.x + fixture.GetShape().m_radius;
+                        aabb.upperBound.x = aabb.upperBound.x + fixture.GetShape().m_radius;
+                        aabb.upperBound.y = aabb.upperBound.x + fixture.GetShape().m_radius;
+
+                    }else{
+                        aabb.lowerBound.SelfAddXY(fixture.GetShape().m_radius, fixture.GetShape().m_radius);
+                        aabb.upperBound.SelfSubXY(fixture.GetShape().m_radius, fixture.GetShape().m_radius);
+
+                    }
                 }
                 if (aabb.lowerBound.x < minX) minX = aabb.lowerBound.x;
                 if (aabb.lowerBound.y < minY) minY = aabb.lowerBound.y;
