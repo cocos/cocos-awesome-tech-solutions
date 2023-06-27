@@ -902,6 +902,7 @@ const cacheManager = require('./jsb-cache-manager');
         const spineSkeletonData = cc.internal.SpineSkeletonData.prototype;
         const textureIdx = spineSkeletonData.recordTexture(tex2d);
         const spTex = new middleware.Texture2D();
+        spTex.setRealTexture(tex2d);
         spTex.setRealTextureIndex(textureIdx);
         spTex.setPixelsWide(tex2d.width);
         spTex.setPixelsHigh(tex2d.height);
