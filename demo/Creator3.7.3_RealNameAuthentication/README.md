@@ -1,5 +1,5 @@
 # 简介
-基于 CocosCreator 3.4.0 版本创建的 **实名认证** 测试工程。本测试工程接入了实名认证、实名认证查询、数据上报等功能，目前只测试了实名认证功能，实名认证查询和数据上报功能，需要自行测试。
+基于 CocosCreator 3.7.3 版本创建的 **实名认证** 测试工程。本测试工程接入了实名认证、实名认证查询、数据上报等功能，目前只测试了实名认证功能，实名认证查询和数据上报功能，需要自行测试。
 
 ## 网络游戏防沉迷实名认证系统
 网络游戏防沉迷实名认证系统主要的任务是实现全国网络游戏运营平台接入与管理、完成全国网络游戏用户实名认证、采集分析游戏用户时长数据。
@@ -25,7 +25,7 @@
 我们模拟操作一下测试工具接口测试，选择`实名认证`, 填写`{"ai": "1000000000010"}`点击生成报文，发送请求。 会得到`报文消息密文`以及`反馈 (Response)`。
 ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/image/20220110/2022011003.png)    
 
-4. 进行接口测试之前，我们先了解一下本次方案需要的工程。`RealNameAuthentication`为基于`Cocos Creator 3.4.0`版本创建的工程，作为客户端。`websocketServer`为基于`Android Studio`创建的工程，用于模拟服务端(本地搭建的 WebSocket 服务器)。
+4. 进行接口测试之前，我们先了解一下本次方案需要的工程。`RealNameAuthentication`为基于`Cocos Creator 3.7.3`版本创建的工程，作为客户端。`websocketServer`为基于`Android Studio`创建的工程，用于模拟服务端(本地搭建的 WebSocket 服务器)。
 
 5. 测试服务器。使用`Android Studio`打开`websocketServer`工程。先确保一下需要导入的 jar 依赖库是否导入成功。
 ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/image/20220110/2022011005.png) 
@@ -46,14 +46,14 @@
 运行 `EchoServer`, 本地服务器搭建完成
 ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/image/20220110/2022011009.png)
 
-8. 测试客户端。使用`Cocos Creator 3.4.0`打开`RealNameAuthentication`工程。在 NewComponent 脚本中需要修改一下本地的 IP
+8. 测试客户端。使用`Cocos Creator 3.7.3`打开`RealNameAuthentication`工程。在 NewComponent 脚本中需要修改一下本地的 IP
 ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/image/20220110/2022011010.png)
 测试客户端
 ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/image/20220110/2022011011.png)
 ![Image Text](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/image/20220110/2022011012.png)
 *备注: 目前是模拟接口测试测试客户端，因为使用的测试码是过期的，所以提示`TEST TASK NOT EXIST`, 这个是正常的*
 
-9. 使用`Cocos Creator 3.4.0`构建发布，发布 Android 和 iOS 平台。
+9. 使用`Cocos Creator 3.7.3`构建发布，发布 Android 和 iOS 平台。
 
 10. 进行接口测试。在`网络游戏防沉迷实名认证系统 -> 数据共享 -> 接口测试 -> 开始测试`可以获取测试码，修改`android studio`工程下的配置，进行测试。详情查看：[网络游戏防沉迷实名认证系统测试系统说明](https://github.com/cocos/cocos-awesome-tech-solutions/blob/3.4.0-release/demo/Creator3.4.0_RealNameAuthentication/file/%E7%BD%91%E7%BB%9C%E6%B8%B8%E6%88%8F%E9%98%B2%E6%B2%89%E8%BF%B7%E5%AE%9E%E5%90%8D%E8%AE%A4%E8%AF%81%E7%B3%BB%E7%BB%9F%E6%B5%8B%E8%AF%95%E7%B3%BB%E7%BB%9F%E8%AF%B4%E6%98%8E.pdf)
 
