@@ -33,37 +33,3 @@ This solution is based on CocosCreator version 3.7.3.
         }
     }
     ```
-
-    Continue to modify the ViewController.mm file
-    ```
-    namespace {
-        cc::Device::Orientation _lastOrientation;
-    }
-    ```
-    Then modify the code of the viewWillTransitionToSize function as follows:
-    ```
-    cc::Device::Orientation orientation = _lastOrientation;
-    // reference: https://developer.apple.com/documentation/uikit/uiinterfaceorientation?language=objc
-    // UIInterfaceOrientationLandscapeRight = UIDeviceOrientationLandscapeLeft
-    // UIInterfaceOrientationLandscapeLeft = UIDeviceOrientationLandscapeRight
-    switch ([UIDevice currentDevice].orientation) {
-        case UIDeviceOrientationPortrait:
-            orientation = cc::Device::Orientation::PORTRAIT;
-            break;
-        case UIDeviceOrientationLandscapeRight:
-            orientation = cc::Device::Orientation::LANDSCAPE_LEFT;
-            break;
-        case UIDeviceOrientationPortraitUpsideDown:
-            orientation = cc::Device::Orientation::PORTRAIT_UPSIDE_DOWN;
-            break;
-        case UIDeviceOrientationLandscapeLeft:
-            orientation = cc::Device::Orientation::LANDSCAPE_RIGHT;
-            break;
-        default:
-            break;
-    }
-    if (_lastOrientation != orientation) {
-        cc::EventDispatcher::dispatchOrientationChangeEvent((int) orientation);
-        _lastOrientation = orientation;
-    }
-    ```
