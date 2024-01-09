@@ -1,0 +1,239 @@
+{
+    "importBase": "import",
+    "nativeBase": "native",
+    "name": "internal",
+    "deps": [],
+    "uuids": [
+        "06efdbec0",
+        "081cab31-dccd-428e-8652-f2404cc81c47",
+        "14da1725-c4c2-42b4-ab08-ee0aeb6898b3",
+        "17debcc3-0a6b-4b8a-b00b-dc58b885581e",
+        "1baf0fc9-befa-459c-8bdd-af1a450a0319",
+        "1c02ae6f-4492-4915-b8f8-7492a3b1e4cd",
+        "1d08ef62-a503-4ce2-8b9a-46c90873f7d3",
+        "28d6d6b8-3f66-4a73-9795-17a0852ba2d4",
+        "50f4348b-c883-4e2f-8f11-ce233b859fa1",
+        "511d2633-09a7-4bdd-ac42-f778032124b3",
+        "5d45aa00-e064-4938-b314-4265f0c2258c",
+        "60f7195c-ec2a-45eb-ba94-8955f60e81d0",
+        "620b6bf3-0369-4560-837f-2a2c00b73c26",
+        "711ebe11-f673-4cd9-9a83-63c60ba54c5b",
+        "78e0584a-4343-4727-8f37-e14e65c2a2db",
+        "810e96e4-e456-4468-9b59-f4e8f39732c0",
+        "871c3b6c-7379-419d-bda3-794b239ab90d",
+        "8bbdbcdd-5cd4-4100-b6d5-b7c9625b6107",
+        "9361fd90-ba52-4f84-aa93-6e878fd576ca",
+        "970b0598-bcb0-4714-91fb-2e81440dccd8",
+        "971bdb23-3ff6-43eb-b422-1c30165a3663",
+        "a3cd009f-0ab0-420d-9278-b9fdab939bbc",
+        "b5d6115f-0370-4d7c-aad3-c194cc71cf98",
+        "ba21476f-2866-4f81-9c4d-6e359316e448",
+        "bcd64cc6-2dd9-43f6-abbe-66318d332032",
+        "c0143906-9aed-447e-9436-2ae8512d1b6e",
+        "c27215d8-6835-4b68-bfbb-bdeac6100c04",
+        "d1346436-ac96-4271-b863-1f4fdead95b0",
+        "d930590d-bb92-4cc8-8bd1-23cd027f9edf",
+        "dd3a144d-ab7f-41f0-82b8-2e43a090d496",
+        "e9aa9a3e-5b2b-4ac7-a2c7-073de2b2b24f",
+        "ec8106fe-05bf-4e94-943c-e0d3b7bb5e45",
+        "efe8e2a3-eace-427b-b4f1-cb8a937ec77d",
+        "f0416e68-0200-4b77-a926-4f9d16e494da",
+        "f92806d7-1768-443f-afe8-12bcde84d0f0",
+        "fda095cb-831d-4601-ad94-846013963de8",
+        "ff9be190-20a4-4e48-b68c-76e3c7cff085"
+    ],
+    "paths": {
+        "60f7195c-ec2a-45eb-ba94-8955f60e81d0": [
+            "db:/internal/effects/builtin-sprite",
+            "cc.EffectAsset"
+        ],
+        "1c02ae6f-4492-4915-b8f8-7492a3b1e4cd": [
+            "db:/internal/effects/builtin-graphics",
+            "cc.EffectAsset"
+        ],
+        "810e96e4-e456-4468-9b59-f4e8f39732c0": [
+            "db:/internal/effects/builtin-clear-stencil",
+            "cc.EffectAsset"
+        ],
+        "efe8e2a3-eace-427b-b4f1-cb8a937ec77d": [
+            "db:/internal/default_materials/ui-sprite-gray-material",
+            "cc.Material"
+        ],
+        "e9aa9a3e-5b2b-4ac7-a2c7-073de2b2b24f": [
+            "db:/internal/default_materials/ui-base-material",
+            "cc.Material"
+        ],
+        "8bbdbcdd-5cd4-4100-b6d5-b7c9625b6107": [
+            "db:/internal/default_materials/default-clear-stencil",
+            "cc.Material"
+        ],
+        "50f4348b-c883-4e2f-8f11-ce233b859fa1": [
+            "db:/internal/default_materials/ui-alpha-test-material",
+            "cc.Material"
+        ],
+        "fda095cb-831d-4601-ad94-846013963de8": [
+            "db:/internal/default_materials/ui-sprite-material",
+            "cc.Material"
+        ],
+        "f92806d7-1768-443f-afe8-12bcde84d0f0": [
+            "db:/internal/default_materials/ui-sprite-alpha-sep-material",
+            "cc.Material"
+        ],
+        "dd3a144d-ab7f-41f0-82b8-2e43a090d496": [
+            "db:/internal/default_materials/ui-sprite-gray-alpha-sep-material",
+            "cc.Material"
+        ],
+        "f0416e68-0200-4b77-a926-4f9d16e494da": [
+            "db:/internal/default_materials/ui-graphics-material",
+            "cc.Material"
+        ],
+        "1baf0fc9-befa-459c-8bdd-af1a450a0319": [
+            "db:/internal/effects/builtin-standard",
+            "cc.EffectAsset"
+        ],
+        "511d2633-09a7-4bdd-ac42-f778032124b3": [
+            "db:/internal/effects/pipeline/skybox",
+            "cc.EffectAsset"
+        ],
+        "5d45aa00-e064-4938-b314-4265f0c2258c": [
+            "db:/internal/effects/pipeline/deferred-lighting",
+            "cc.EffectAsset"
+        ],
+        "28d6d6b8-3f66-4a73-9795-17a0852ba2d4": [
+            "db:/internal/effects/pipeline/bloom",
+            "cc.EffectAsset"
+        ],
+        "ec8106fe-05bf-4e94-943c-e0d3b7bb5e45": [
+            "db:/internal/effects/pipeline/post-process",
+            "cc.EffectAsset"
+        ],
+        "620b6bf3-0369-4560-837f-2a2c00b73c26": [
+            "db:/internal/default_materials/standard-material",
+            "cc.Material"
+        ],
+        "ff9be190-20a4-4e48-b68c-76e3c7cff085": [
+            "db:/internal/effects/builtin-debug-renderer",
+            "cc.EffectAsset"
+        ],
+        "970b0598-bcb0-4714-91fb-2e81440dccd8": [
+            "db:/internal/effects/util/splash-screen",
+            "cc.EffectAsset"
+        ],
+        "bcd64cc6-2dd9-43f6-abbe-66318d332032": [
+            "db:/internal/default_materials/missing-effect-material",
+            "cc.Material"
+        ],
+        "d930590d-bb92-4cc8-8bd1-23cd027f9edf": [
+            "db:/internal/default_materials/missing-material",
+            "cc.Material"
+        ],
+        "a3cd009f-0ab0-420d-9278-b9fdab939bbc": [
+            "db:/internal/effects/builtin-unlit",
+            "cc.EffectAsset"
+        ],
+        "9361fd90-ba52-4f84-aa93-6e878fd576ca": [
+            "db:/internal/effects/pipeline/planar-shadow",
+            "cc.EffectAsset"
+        ],
+        "d1346436-ac96-4271-b863-1f4fdead95b0": [
+            "db:/internal/effects/builtin-particle",
+            "cc.EffectAsset"
+        ],
+        "971bdb23-3ff6-43eb-b422-1c30165a3663": [
+            "db:/internal/effects/builtin-particle-gpu",
+            "cc.EffectAsset"
+        ],
+        "17debcc3-0a6b-4b8a-b00b-dc58b885581e": [
+            "db:/internal/effects/builtin-particle-trail",
+            "cc.EffectAsset"
+        ],
+        "711ebe11-f673-4cd9-9a83-63c60ba54c5b": [
+            "db:/internal/effects/builtin-billboard",
+            "cc.EffectAsset"
+        ],
+        "c0143906-9aed-447e-9436-2ae8512d1b6e": [
+            "db:/internal/default_materials/default-particle-material",
+            "cc.Material"
+        ],
+        "14da1725-c4c2-42b4-ab08-ee0aeb6898b3": [
+            "db:/internal/default_materials/default-particle-gpu-material",
+            "cc.Material"
+        ],
+        "081cab31-dccd-428e-8652-f2404cc81c47": [
+            "db:/internal/default_materials/default-trail-material",
+            "cc.Material"
+        ],
+        "78e0584a-4343-4727-8f37-e14e65c2a2db": [
+            "db:/internal/default_materials/default-billboard-material",
+            "cc.Material"
+        ],
+        "ba21476f-2866-4f81-9c4d-6e359316e448": [
+            "db:/internal/physics/default-physics-material",
+            "cc.PhysicsMaterial"
+        ],
+        "871c3b6c-7379-419d-bda3-794b239ab90d": [
+            "db:/internal/effects/util/profiler",
+            "cc.EffectAsset"
+        ],
+        "c27215d8-6835-4b68-bfbb-bdeac6100c04": [
+            "db:/internal/effects/builtin-spine",
+            "cc.EffectAsset"
+        ],
+        "b5d6115f-0370-4d7c-aad3-c194cc71cf98": [
+            "db:/internal/default_materials/default-spine-material",
+            "cc.Material"
+        ],
+        "1d08ef62-a503-4ce2-8b9a-46c90873f7d3": [
+            "db:/internal/effects/builtin-terrain",
+            "cc.EffectAsset"
+        ]
+    },
+    "scenes": {},
+    "packs": {
+        "06efdbec0": [
+            "081cab31-dccd-428e-8652-f2404cc81c47",
+            "14da1725-c4c2-42b4-ab08-ee0aeb6898b3",
+            "17debcc3-0a6b-4b8a-b00b-dc58b885581e",
+            "1baf0fc9-befa-459c-8bdd-af1a450a0319",
+            "1c02ae6f-4492-4915-b8f8-7492a3b1e4cd",
+            "1d08ef62-a503-4ce2-8b9a-46c90873f7d3",
+            "28d6d6b8-3f66-4a73-9795-17a0852ba2d4",
+            "50f4348b-c883-4e2f-8f11-ce233b859fa1",
+            "511d2633-09a7-4bdd-ac42-f778032124b3",
+            "5d45aa00-e064-4938-b314-4265f0c2258c",
+            "60f7195c-ec2a-45eb-ba94-8955f60e81d0",
+            "620b6bf3-0369-4560-837f-2a2c00b73c26",
+            "711ebe11-f673-4cd9-9a83-63c60ba54c5b",
+            "78e0584a-4343-4727-8f37-e14e65c2a2db",
+            "810e96e4-e456-4468-9b59-f4e8f39732c0",
+            "871c3b6c-7379-419d-bda3-794b239ab90d",
+            "8bbdbcdd-5cd4-4100-b6d5-b7c9625b6107",
+            "9361fd90-ba52-4f84-aa93-6e878fd576ca",
+            "970b0598-bcb0-4714-91fb-2e81440dccd8",
+            "971bdb23-3ff6-43eb-b422-1c30165a3663",
+            "a3cd009f-0ab0-420d-9278-b9fdab939bbc",
+            "b5d6115f-0370-4d7c-aad3-c194cc71cf98",
+            "ba21476f-2866-4f81-9c4d-6e359316e448",
+            "bcd64cc6-2dd9-43f6-abbe-66318d332032",
+            "c0143906-9aed-447e-9436-2ae8512d1b6e",
+            "c27215d8-6835-4b68-bfbb-bdeac6100c04",
+            "d1346436-ac96-4271-b863-1f4fdead95b0",
+            "d930590d-bb92-4cc8-8bd1-23cd027f9edf",
+            "dd3a144d-ab7f-41f0-82b8-2e43a090d496",
+            "e9aa9a3e-5b2b-4ac7-a2c7-073de2b2b24f",
+            "ec8106fe-05bf-4e94-943c-e0d3b7bb5e45",
+            "efe8e2a3-eace-427b-b4f1-cb8a937ec77d",
+            "f0416e68-0200-4b77-a926-4f9d16e494da",
+            "f92806d7-1768-443f-afe8-12bcde84d0f0",
+            "fda095cb-831d-4601-ad94-846013963de8",
+            "ff9be190-20a4-4e48-b68c-76e3c7cff085"
+        ]
+    },
+    "versions": {
+        "import": [],
+        "native": []
+    },
+    "redirect": [],
+    "debug": true,
+    "extensionMap": {}
+}
