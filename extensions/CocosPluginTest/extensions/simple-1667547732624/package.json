@@ -51,6 +51,11 @@
             },
             {
                 "path": "Develop",
+                "label": "queryAsset",
+                "message": "query-asset"
+            },
+            {
+                "path": "Develop",
                 "label": "broadcastTest",
                 "message": "broadcast"
             },
@@ -63,6 +68,16 @@
                 "path": "Develop",
                 "label": "sendToPanelTest",
                 "message": "sendToPanel"
+            },
+            {
+                "path": "Develop",
+                "label": "callEngineAPI",
+                "message": "callEngineAPITest"
+            },
+            {
+                "path": "Develop",
+                "label": "selectNodeTest",
+                "message": "selectNodeTest"
             }
         ],
         "scene": {
@@ -85,6 +100,16 @@
             "query-node": {
                 "methods": [
                     "queryNode"
+                ]
+            },
+            "query-asset": {
+                "methods": [
+                    "queryAsset"
+                ]
+            },
+            "selectNodeTest": {
+                "methods": [
+                    "selectNode"
                 ]
             },
             "scene:ready": {
@@ -118,6 +143,11 @@
                 "methods": [
                     "createPrefab"
                 ]
+            },
+            "callEngineAPITest": {
+                "methods": [
+                    "callEngineAPI"
+                ]
             }
         },
         "asset-db": {
@@ -140,6 +170,15 @@
                     "message": "drop-asset"
                 }
             ]
+        },
+        "hierarchy": {
+            "menu": {
+                "methods": "./dist/node-menu.js",
+                "createMenu": "onCreateMenu",
+                "nodeMenu": "onNodeMenu",
+                "rootMenu": "onRootMenu",
+                "panelMenu": "onPanelMenu"
+            }
         },
         "inspector": {
             "section": {

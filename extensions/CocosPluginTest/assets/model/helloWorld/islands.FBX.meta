@@ -175,6 +175,23 @@
         "gltfIndex": 9
       }
     },
+    "baeab": {
+      "importer": "gltf-embeded-image",
+      "uuid": "0ab3142a-6968-4073-95af-026bc3b23623@baeab",
+      "displayName": "",
+      "id": "baeab",
+      "name": "seafloor.jpg.image",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".jpg",
+        ".json"
+      ],
+      "subMetas": {}
+    },
     "eeccb": {
       "importer": "gltf-embeded-image",
       "uuid": "0ab3142a-6968-4073-95af-026bc3b23623@eeccb",
@@ -223,8 +240,8 @@
         "mipfilter": "none",
         "premultiplyAlpha": false,
         "anisotropy": 0,
-        "isUuid": false,
-        "imageUuidOrDatabaseUri": "db://assets/model/helloWorld/seafloor.jpg"
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "0ab3142a-6968-4073-95af-026bc3b23623@baeab"
       },
       "ver": "1.0.22",
       "imported": true,
@@ -301,8 +318,8 @@
   "userData": {
     "imageMetas": [
       {
-        "name": "seafloor",
-        "uri": "db://assets/model/helloWorld/seafloor.jpg"
+        "name": "seafloor.jpg",
+        "uri": "0ab3142a-6968-4073-95af-026bc3b23623@baeab"
       },
       {
         "name": "stone.jpg",

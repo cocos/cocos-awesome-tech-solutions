@@ -29,6 +29,23 @@ exports.methods = {
         const info = await Editor.Message.request('scene', 'query-node', "7c3e7fab-7b1e-4865-ba84-3cf81b48b9fb");
         console.warn(info);
     },
+    async queryAsset() {
+        const info = await Editor.Message.request("asset-db", "query-assets", {
+            pattern: "db://assets/spineRaptor/**",
+            ccType: "sp.SkeletonData",
+            // extname: "",
+            // importer: "",
+            // isBundle: ""
+        });
+        console.warn(info);
+    },
+    selectNode() {
+        var lastSekectedNodeUUID = Editor.Selection.getLastSelected("node");
+        if (lastSekectedNodeUUID.length > 0) {
+            Editor.Selection.unselect("node", lastSekectedNodeUUID);
+        }
+        Editor.Selection.select("node", "24lnHBK1BLEqnU8Kyw5GD4");
+    },
     initData() {
         console.warn("The scene is already loaded");
     },

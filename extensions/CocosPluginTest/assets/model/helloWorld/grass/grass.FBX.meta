@@ -65,6 +65,23 @@
         "jointsLength": 6
       }
     },
+    "80e0c": {
+      "importer": "gltf-embeded-image",
+      "uuid": "aade09ee-8f9d-413c-a9e8-8c686ea5e160@80e0c",
+      "displayName": "",
+      "id": "80e0c",
+      "name": "grass.png.image",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json",
+        ".png"
+      ],
+      "subMetas": {}
+    },
     "9787f": {
       "importer": "texture",
       "uuid": "aade09ee-8f9d-413c-a9e8-8c686ea5e160@9787f",
@@ -85,8 +102,8 @@
         "mipfilter": "none",
         "premultiplyAlpha": false,
         "anisotropy": 0,
-        "isUuid": false,
-        "imageUuidOrDatabaseUri": "db://assets/model/helloWorld/grass/grass.png"
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "aade09ee-8f9d-413c-a9e8-8c686ea5e160@80e0c"
       }
     },
     "3022b": {
@@ -109,8 +126,8 @@
   "userData": {
     "imageMetas": [
       {
-        "name": "grass",
-        "uri": "db://assets/model/helloWorld/grass/grass.png"
+        "name": "grass.png",
+        "uri": "aade09ee-8f9d-413c-a9e8-8c686ea5e160@80e0c"
       }
     ],
     "animationImportSettings": [

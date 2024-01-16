@@ -61,9 +61,6 @@ module.exports = Editor.Panel.define({
     ready() {
         var _a, _b;
         console.warn('panel is ready');
-        // window.addEventListener('message',function(e){
-        //     alert(e.data);
-        // },false);
         if (this.$.app) {
             this.$.app.innerHTML = 'Hello Cocos.';
             (_a = this.$.button) === null || _a === void 0 ? void 0 : _a.addEventListener("click", this.click.bind(this));
