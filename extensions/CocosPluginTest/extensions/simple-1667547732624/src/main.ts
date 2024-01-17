@@ -38,9 +38,9 @@ export const methods: { [key: string]: (...any: any) => any } = {
         console.warn(info);
     },
     selectNode () {
-        var lastSekectedNodeUUID = Editor.Selection.getLastSelected("node");
-        if (lastSekectedNodeUUID.length > 0) {
-            Editor.Selection.unselect("node",lastSekectedNodeUUID);
+        var lastSelectedNodeUUID = Editor.Selection.getLastSelected("node");
+        if (lastSelectedNodeUUID.length > 0) {
+            Editor.Selection.unselect("node",lastSelectedNodeUUID);
         }
         Editor.Selection.select("node", "24lnHBK1BLEqnU8Kyw5GD4");
     },

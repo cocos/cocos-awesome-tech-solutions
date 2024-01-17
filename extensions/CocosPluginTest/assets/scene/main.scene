@@ -27,20 +27,20 @@
         "__id__": 44
       },
       {
-        "__id__": 61
+        "__id__": 62
       },
       {
-        "__id__": 126
+        "__id__": 127
       }
     ],
     "_active": true,
     "_components": [],
     "_prefab": {
-      "__id__": 128
+      "__id__": 129
     },
     "autoReleaseAssets": false,
     "_globals": {
-      "__id__": 129
+      "__id__": 130
     },
     "_id": "7c3e7fab-7b1e-4865-ba84-3cf81b48b9fb"
   },
@@ -157,10 +157,10 @@
     },
     "_lrot": {
       "__type__": "cc.Quat",
-      "x": -0.07212993726965299,
-      "y": 0.08692698332350494,
-      "z": 0.006310551811930676,
-      "w": 0.9935799659089247
+      "x": -0.0724054619120349,
+      "y": -6.280172728387574e-20,
+      "z": 8.650851562571315e-19,
+      "w": 0.9973752799650214
     },
     "_lscale": {
       "__type__": "cc.Vec3",
@@ -172,7 +172,7 @@
     "_euler": {
       "__type__": "cc.Vec3",
       "x": -8.304321541008003,
-      "y": 10,
+      "y": 0,
       "z": 9.93923337957349e-17
     },
     "_id": "c9DMICJLFO5IeO07EPon7U"
@@ -712,6 +712,9 @@
       },
       {
         "__id__": 59
+      },
+      {
+        "__id__": 61
       }
     ],
     "removedComponents": []
@@ -874,19 +877,34 @@
     ]
   },
   {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 60
+    },
+    "propertyPath": [
+      "_lscale"
+    ],
+    "value": {
+      "__type__": "cc.Vec3",
+      "x": 0.8,
+      "y": 0.8,
+      "z": 0.8
+    }
+  },
+  {
     "__type__": "cc.Node",
     "_objFlags": 0,
     "_parent": {
       "__id__": 1
     },
     "_prefab": {
-      "__id__": 62
+      "__id__": 63
     }
   },
   {
     "__type__": "cc.PrefabInfo",
     "root": {
-      "__id__": 61
+      "__id__": 62
     },
     "asset": {
       "__uuid__": "5e4d48c4-0e34-45af-a268-89485197e8bc",
@@ -894,7 +912,7 @@
     },
     "fileId": "e5Peksu5tL9peMeABb8/JC",
     "instance": {
-      "__id__": 63
+      "__id__": 64
     }
   },
   {
@@ -905,79 +923,79 @@
     "mountedComponents": [],
     "propertyOverrides": [
       {
-        "__id__": 64
+        "__id__": 65
       },
       {
-        "__id__": 67
+        "__id__": 68
       },
       {
-        "__id__": 69
+        "__id__": 70
       },
       {
-        "__id__": 72
+        "__id__": 73
       },
       {
-        "__id__": 74
+        "__id__": 75
       },
       {
-        "__id__": 77
+        "__id__": 78
       },
       {
-        "__id__": 79
+        "__id__": 80
       },
       {
-        "__id__": 82
+        "__id__": 83
       },
       {
-        "__id__": 84
+        "__id__": 85
       },
       {
-        "__id__": 86
+        "__id__": 87
       },
       {
-        "__id__": 89
+        "__id__": 90
       },
       {
-        "__id__": 91
+        "__id__": 92
       },
       {
-        "__id__": 94
+        "__id__": 95
       },
       {
-        "__id__": 96
+        "__id__": 97
       },
       {
-        "__id__": 99
+        "__id__": 100
       },
       {
-        "__id__": 101
+        "__id__": 102
       },
       {
-        "__id__": 104
+        "__id__": 105
       },
       {
-        "__id__": 106
+        "__id__": 107
       },
       {
-        "__id__": 109
+        "__id__": 110
       },
       {
-        "__id__": 111
+        "__id__": 112
       },
       {
-        "__id__": 114
+        "__id__": 115
       },
       {
-        "__id__": 116
+        "__id__": 117
       },
       {
-        "__id__": 119
+        "__id__": 120
       },
       {
-        "__id__": 121
+        "__id__": 122
       },
       {
-        "__id__": 124
+        "__id__": 125
       }
     ],
     "removedComponents": []
@@ -985,13 +1003,13 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 65
-    },
-    "propertyPath": [
-      "lightmapSettings"
-    ],
-    "value": {
       "__id__": 66
+    },
+    "propertyPath": [
+      "lightmapSettings"
+    ],
+    "value": {
+      "__id__": 67
     }
   },
   {
@@ -1019,7 +1037,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 68
+      "__id__": 69
     },
     "propertyPath": [
       "_shadowReceivingMode"
@@ -1035,13 +1053,13 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 70
-    },
-    "propertyPath": [
-      "lightmapSettings"
-    ],
-    "value": {
       "__id__": 71
+    },
+    "propertyPath": [
+      "lightmapSettings"
+    ],
+    "value": {
+      "__id__": 72
     }
   },
   {
@@ -1069,7 +1087,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 73
+      "__id__": 74
     },
     "propertyPath": [
       "_shadowReceivingMode"
@@ -1085,13 +1103,13 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 75
-    },
-    "propertyPath": [
-      "lightmapSettings"
-    ],
-    "value": {
       "__id__": 76
+    },
+    "propertyPath": [
+      "lightmapSettings"
+    ],
+    "value": {
+      "__id__": 77
     }
   },
   {
@@ -1119,7 +1137,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 78
+      "__id__": 79
     },
     "propertyPath": [
       "_shadowReceivingMode"
@@ -1135,13 +1153,13 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 80
+      "__id__": 81
     },
     "propertyPath": [
       "lightmapSettings"
     ],
     "value": {
-      "__id__": 81
+      "__id__": 82
     }
   },
   {
@@ -1169,7 +1187,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 83
+      "__id__": 84
     },
     "propertyPath": [
       "_shadowCastingMode"
@@ -1185,7 +1203,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 85
+      "__id__": 86
     },
     "propertyPath": [
       "_shadowReceivingMode"
@@ -1201,13 +1219,13 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 87
-    },
-    "propertyPath": [
-      "lightmapSettings"
-    ],
-    "value": {
       "__id__": 88
+    },
+    "propertyPath": [
+      "lightmapSettings"
+    ],
+    "value": {
+      "__id__": 89
     }
   },
   {
@@ -1235,7 +1253,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 90
+      "__id__": 91
     },
     "propertyPath": [
       "_shadowReceivingMode"
@@ -1251,13 +1269,13 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 92
-    },
-    "propertyPath": [
-      "lightmapSettings"
-    ],
-    "value": {
       "__id__": 93
+    },
+    "propertyPath": [
+      "lightmapSettings"
+    ],
+    "value": {
+      "__id__": 94
     }
   },
   {
@@ -1285,7 +1303,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 95
+      "__id__": 96
     },
     "propertyPath": [
       "_shadowReceivingMode"
@@ -1301,13 +1319,13 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 97
-    },
-    "propertyPath": [
-      "lightmapSettings"
-    ],
-    "value": {
       "__id__": 98
+    },
+    "propertyPath": [
+      "lightmapSettings"
+    ],
+    "value": {
+      "__id__": 99
     }
   },
   {
@@ -1335,7 +1353,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 100
+      "__id__": 101
     },
     "propertyPath": [
       "_shadowReceivingMode"
@@ -1351,13 +1369,13 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 102
-    },
-    "propertyPath": [
-      "lightmapSettings"
-    ],
-    "value": {
       "__id__": 103
+    },
+    "propertyPath": [
+      "lightmapSettings"
+    ],
+    "value": {
+      "__id__": 104
     }
   },
   {
@@ -1385,7 +1403,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 105
+      "__id__": 106
     },
     "propertyPath": [
       "_shadowReceivingMode"
@@ -1401,13 +1419,13 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 107
-    },
-    "propertyPath": [
-      "lightmapSettings"
-    ],
-    "value": {
       "__id__": 108
+    },
+    "propertyPath": [
+      "lightmapSettings"
+    ],
+    "value": {
+      "__id__": 109
     }
   },
   {
@@ -1435,7 +1453,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 110
+      "__id__": 111
     },
     "propertyPath": [
       "_shadowReceivingMode"
@@ -1451,13 +1469,13 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 112
-    },
-    "propertyPath": [
-      "lightmapSettings"
-    ],
-    "value": {
       "__id__": 113
+    },
+    "propertyPath": [
+      "lightmapSettings"
+    ],
+    "value": {
+      "__id__": 114
     }
   },
   {
@@ -1485,7 +1503,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 115
+      "__id__": 116
     },
     "propertyPath": [
       "_shadowReceivingMode"
@@ -1501,13 +1519,13 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 117
-    },
-    "propertyPath": [
-      "lightmapSettings"
-    ],
-    "value": {
       "__id__": 118
+    },
+    "propertyPath": [
+      "lightmapSettings"
+    ],
+    "value": {
+      "__id__": 119
     }
   },
   {
@@ -1535,7 +1553,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 120
+      "__id__": 121
     },
     "propertyPath": [
       "_shadowReceivingMode"
@@ -1551,13 +1569,13 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 122
+      "__id__": 123
     },
     "propertyPath": [
       "lightmapSettings"
     ],
     "value": {
-      "__id__": 123
+      "__id__": 124
     }
   },
   {
@@ -1585,7 +1603,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 125
+      "__id__": 126
     },
     "propertyPath": [
       "_shadowReceivingMode"
@@ -1609,7 +1627,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 127
+        "__id__": 128
       }
     ],
     "_prefab": null,
@@ -1646,7 +1664,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 126
+      "__id__": 127
     },
     "_enabled": true,
     "__prefab": null,
@@ -1664,26 +1682,26 @@
         "__id__": 44
       },
       {
-        "__id__": 61
+        "__id__": 62
       }
     ]
   },
   {
     "__type__": "cc.SceneGlobals",
     "ambient": {
-      "__id__": 130
-    },
-    "shadows": {
       "__id__": 131
     },
-    "_skybox": {
+    "shadows": {
       "__id__": 132
     },
-    "fog": {
+    "_skybox": {
       "__id__": 133
     },
-    "octree": {
+    "fog": {
       "__id__": 134
+    },
+    "octree": {
+      "__id__": 135
     }
   },
   {

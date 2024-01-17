@@ -12,6 +12,16 @@ module.paths.push((0, path_1.join)(Editor.App.path, 'node_modules'));
 exports.methods = {
     rotateCamera() {
         const { director } = require('cc');
+        var lastSelectedNodeUUID = Editor.Selection.getLastSelected("node");
+        director.getScene().walk((target) => {
+            if (target.uuid == lastSelectedNodeUUID) {
+                var targetComp = target.getComponent("NewComponent");
+                if (targetComp) {
+                    targetComp.test();
+                }
+                return;
+            }
+        });
         let mainCamera = director.getScene().getChildByName("Main Camera");
         if (mainCamera) {
             let euler = mainCamera.eulerAngles;

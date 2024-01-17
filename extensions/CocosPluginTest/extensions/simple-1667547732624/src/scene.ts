@@ -2,7 +2,6 @@
 // @ts-ignore
 
 import { join } from 'path';
-import { request } from 'http';
 module.paths.push(join(Editor.App.path, 'node_modules'));
 
 /**
@@ -12,6 +11,18 @@ module.paths.push(join(Editor.App.path, 'node_modules'));
 export const methods: { [key: string]: (...any: any) => any } = {
     rotateCamera () {
         const { director } = require('cc');
+
+        var lastSelectedNodeUUID = Editor.Selection.getLastSelected("node");
+        director.getScene().walk((target: any)=>{
+            if (target.uuid == lastSelectedNodeUUID) {
+                    var targetComp = target.getComponent("NewComponent");
+                    if (targetComp) {
+                        targetComp.test();
+                    }
+                return;
+            }
+        });
+
         let mainCamera = director.getScene().getChildByName("Main Camera");
         if (mainCamera) {
             let euler = mainCamera.eulerAngles;
