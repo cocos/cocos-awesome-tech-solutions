@@ -23,4 +23,14 @@ export class NewComponent extends Component {
         var testNode = find("soldier");
         testNode.setScale(new Vec3(testNode.scale.x - 0.1, testNode.scale.y - 0.1, testNode.scale.z - 0.1))
     }
+
+    onFocusInEditor(): void {
+        this.testCreatePrefab();
+    }
+
+    async testCreatePrefab () {
+        const targetNode = find("soldier");
+        const ret = await cce.Prefab.generatePrefabDataFromNode(targetNode.uuid);
+        await Editor.Message.request('asset-db', 'create-asset', `db://assets/${targetNode.name}.prefab`, ret, { overwrite: true });
+    }
 }
