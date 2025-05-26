@@ -79,12 +79,12 @@ export class WasmOrAsmLoad extends Component {
         }
     }
 
-    loadWasmOrAsm (bundleName, fileName, editorWasmUuid): Promise<void> {
+    loadWasmOrAsm (bundleName, fileName, editorWasmOrAsmUuid): Promise<void> {
         return new Promise<void>((resolve, reject) => {
             if (EDITOR) {
                 //编辑器内通过 uuid 加载资源比较便捷，无法通过 bundle 加载
-                if (editorWasmUuid) {
-                    assetManager.loadAny(editorWasmUuid, (err, file: Asset)=> {
+                if (editorWasmOrAsmUuid) {
+                    assetManager.loadAny(editorWasmOrAsmUuid, (err, file: Asset)=> {
                         if (!err) {
                             //@ts-ignore
                             resolve(file);
