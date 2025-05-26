@@ -36,15 +36,15 @@ const MEMORYSIZE = PAGESIZE * PAGECOUNT; // 32 MiB
 
 let Effekseer: any = null;
 
-@ccclass('WasmLoadTest')
+@ccclass('WasmOrAsmLoad')
 @executeInEditMode
-export class WasmLoadTest extends Component {
+export class WasmOrAsmLoad extends Component {
 
     onLoad () {
-        this.wasmLoadTest();
+        this.wasmOrAsmLoadTest();
     }
 
-    wasmLoadTest () {
+    wasmOrAsmLoadTest () {
         if (sys.hasFeature(sys.Feature.WASM) || sys.os !== sys.OS.IOS) {
             import('./effekseer.js').then(({ default: wasmFactory })=> {
                 this.loadWasmOrAsm("wasmFiles", "effekseer", "44cacb3c-e901-455d-b3e1-1c38a69718e1").then((wasmFile)=>{
