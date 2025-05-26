@@ -1,0 +1,208 @@
+{
+  "__version__": "1.0.12",
+  "modules": {
+    "configs": {
+      "defaultConfig": {
+        "name": "默认配置",
+        "cache": {
+          "base": {
+            "_value": true
+          },
+          "gfx-webgl": {
+            "_value": true
+          },
+          "gfx-webgl2": {
+            "_value": false
+          },
+          "gfx-webgpu": {
+            "_value": false
+          },
+          "animation": {
+            "_value": false
+          },
+          "skeletal-animation": {
+            "_value": false
+          },
+          "3d": {
+            "_value": false
+          },
+          "meshopt": {
+            "_value": false
+          },
+          "2d": {
+            "_value": true
+          },
+          "xr": {
+            "_value": false
+          },
+          "rich-text": {
+            "_value": false
+          },
+          "mask": {
+            "_value": false
+          },
+          "graphics": {
+            "_value": false
+          },
+          "ui-skew": {
+            "_value": false
+          },
+          "affine-transform": {
+            "_value": false
+          },
+          "ui": {
+            "_value": true
+          },
+          "particle": {
+            "_value": false
+          },
+          "physics": {
+            "_value": false,
+            "_option": "physics-ammo"
+          },
+          "physics-ammo": {
+            "_value": true,
+            "_flags": {
+              "LOAD_BULLET_MANUALLY": false
+            }
+          },
+          "physics-cannon": {
+            "_value": false
+          },
+          "physics-physx": {
+            "_value": false,
+            "_flags": {
+              "LOAD_PHYSX_MANUALLY": false
+            }
+          },
+          "physics-builtin": {
+            "_value": false
+          },
+          "physics-2d": {
+            "_value": true,
+            "_option": "physics-2d-box2d-wasm"
+          },
+          "physics-2d-box2d": {
+            "_value": true
+          },
+          "physics-2d-box2d-wasm": {
+            "_value": false,
+            "_flags": {
+              "LOAD_BOX2D_MANUALLY": false
+            }
+          },
+          "physics-2d-builtin": {
+            "_value": false
+          },
+          "physics-2d-box2d-jsb": {
+            "_value": false
+          },
+          "intersection-2d": {
+            "_value": false
+          },
+          "primitive": {
+            "_value": false
+          },
+          "profiler": {
+            "_value": false
+          },
+          "occlusion-query": {
+            "_value": false
+          },
+          "geometry-renderer": {
+            "_value": false
+          },
+          "debug-renderer": {
+            "_value": false
+          },
+          "particle-2d": {
+            "_value": false
+          },
+          "audio": {
+            "_value": false
+          },
+          "video": {
+            "_value": false
+          },
+          "webview": {
+            "_value": false
+          },
+          "tween": {
+            "_value": false
+          },
+          "websocket": {
+            "_value": false
+          },
+          "websocket-server": {
+            "_value": false
+          },
+          "terrain": {
+            "_value": false
+          },
+          "light-probe": {
+            "_value": false
+          },
+          "tiled-map": {
+            "_value": false
+          },
+          "vendor-google": {
+            "_value": false
+          },
+          "spine": {
+            "_value": false,
+            "_option": "spine-3.8"
+          },
+          "spine-3.8": {
+            "_value": true,
+            "_flags": {
+              "LOAD_SPINE_MANUALLY": false
+            }
+          },
+          "spine-4.2": {
+            "_value": false,
+            "_flags": {
+              "LOAD_SPINE_MANUALLY": false
+            }
+          },
+          "dragon-bones": {
+            "_value": false
+          },
+          "marionette": {
+            "_value": false
+          },
+          "procedural-animation": {
+            "_value": false
+          },
+          "custom-pipeline-post-process": {
+            "_value": false
+          },
+          "render-pipeline": {
+            "_value": true,
+            "_option": "custom-pipeline"
+          },
+          "custom-pipeline": {
+            "_value": true
+          },
+          "legacy-pipeline": {
+            "_value": false
+          }
+        },
+        "flags": {
+          "LOAD_BOX2D_MANUALLY": false
+        },
+        "includeModules": [
+          "2d",
+          "base",
+          "custom-pipeline",
+          "gfx-webgl",
+          "physics-2d-box2d-wasm",
+          "ui"
+        ],
+        "noDeprecatedFeatures": {
+          "value": false,
+          "version": ""
+        }
+      }
+    }
+  }
+}

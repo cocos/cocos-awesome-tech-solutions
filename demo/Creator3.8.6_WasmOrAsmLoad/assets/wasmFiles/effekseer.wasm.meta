@@ -1,0 +1,12 @@
+{
+  "ver": "1.0.0",
+  "importer": "*",
+  "imported": true,
+  "uuid": "44cacb3c-e901-455d-b3e1-1c38a69718e1",
+  "files": [
+    ".json",
+    ".wasm"
+  ],
+  "subMetas": {},
+  "userData": {}
+}
